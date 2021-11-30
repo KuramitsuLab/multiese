@@ -1,0 +1,21 @@
+x == 0  @@if
+xが0かどうか
+xが0と等しいかどうか
+zが1以上かどうか
+
+a % 2 == 0   @@not.if
+aが偶数かどうか
+aが奇数でないかどうか
+
+a == 0   @@not @@andor @@not.andor @@andor.if
+aが0かどうか
+# aが0と等しいかどうか
+
+a != 0   @@not
+aが0でないかどうか
+
+a < 100  @@if @@not.if @@while @@not.while @@let
+aが100より小さいかどうか
+
+df['A']  @@check @@get
+@type(df, データフレーム)のカラム'A'

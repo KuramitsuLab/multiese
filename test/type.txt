@@ -1,0 +1,11 @@
+df.head()
+@type(df, データフレーム)の先頭を見る
+
+df.tail()
+@type(df)の末尾を見る
+
+a = 1
+@type(a, 変数)に1を代入する
+
+print(a)
+@type(a)を表示する

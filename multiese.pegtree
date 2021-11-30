@@ -1,0 +1,109 @@
+// Multiese
+// tokibi
+
+Chunk = Term {^ Term+ #Seq }?
+
+Term = 
+  / Block
+  / Choice
+  / Code
+  / Annotation
+  / Number
+  / Name
+  / Token
+  / Symbol
+
+// 
+
+Block = { "{" Chunk  {^ ("|" Chunk)+ #Choice }? "}" #Block }
+
+Choice = 
+  { "[" ChoiceChunk ("|" ChoiceChunk)* ("|" ChoiceEmpty)? "]" #Choice }
+
+ChoiceChunk = ChoiceTerm {^ ChoiceTerm+ #Seq }?
+
+ChoiceEmpty = { &"]" #Chunk }
+
+ChoiceTerm =
+  / Choice
+  / { (![\[\]|] .)+ #Chunk }
+
+Code = 
+  / { Expression #Expression }
+  / "`" { { (!'`' . )* } #Expression } "`" _
+
+Token = { W+ #Chunk } TEN?
+Symbol = { (!W !SP .)+ #Symbol } TEN?
+
+TEN = [ 、，]
+SP = [\[{}|@]
+
+Annotation = {
+  '@' Name
+  "("
+  AnnotationContent ("," AnnotationContent)*
+  ")"
+  #Annotation
+} 
+
+AnnotationContent = AnnotationTerm {^ AnnotationTerm+ #Seq }?
+
+AnnotationTerm =
+  / Block
+  / Choice
+  / Code
+  / Annotation
+  / Name
+  / Number
+  / Token
+
+example Chunk 望遠鏡で{子犬が泳ぐ}様子を見たら、math.pi+1を実行する
+example Chunk @type(df, データフレーム)を[降順に|]ソートする
+example Chunk エクセルファイル'file.xlsx'の@type('sheet1', シート名)を読み込む
+
+W = HIRA/KATA/KANJI
+
+HIRA = [ぁ-ん]
+KATA = [ァ-ヶー・]
+KANJI = [㐀-䶵一-龠々〇〻]
+
+/* Expression */
+
+Expression = Suffix {^ OP Suffix #Binary }*
+
+OP =
+  / "==" / "!=" / "<=" / ">=" / "<>"
+  / "**" / "//" / ">>" / "<<<" / ">>"
+  / "+" / "-" / "*" / "/" / "%" / "="
+
+Suffix = Primary _Postfix*
+
+_Postfix =
+  / {^ "(" Expression? ("," Expression )* ")" #App}
+  / {^ "[" Expression? (":" Expression )* "]" #Index}
+
+Primary =
+  / Group
+  / Name
+  / String
+  / Number
+
+Group = 
+  / "(" Expression ")"
+  / { "[" Expression? ("," Expression)* ","? "]"  #List }
+  / { "(" Expression? ("," Expression)* ","? ")"  #Tuple }
+
+
+Name = 
+  { [A-Za-z_] [A-Za-z_.0-9]* #Name } _
+
+Number = 
+  / { [0-9]+ ('.' [0-9]*)? #Number } _
+  / { '.' [0-9]+ #Number } _
+
+String =
+  / '"' { (!'"' .) #String } '"' _
+  / "'" { (!"'" .) #String } "'" _
+
+example Expression a+1.2
+example Expression (1,2)
