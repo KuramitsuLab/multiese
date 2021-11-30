@@ -2,6 +2,7 @@ import itertools
 from janome.tokenizer import Tokenizer
 import argparse
 import random
+from choice import alt
 import sys
 
 # オプション
@@ -195,12 +196,15 @@ class Annotation(ノード):  # 本来ならアノテーションごとに作っ
         return f"[{self.__class__.__name__} {self.name} {s}]"
 
 
-TypeDic = {}
+## 型情報
+# --type-prefix
+# --type-suffix
+# --type-none
+# --type-random  (default) ユーザはどう書くかわからない
 
-
-def update_type_dic(name, desc):
-    if desc != '' and name not in TypeDic:
-        TypeDic[name] = desc
+TypeDic = {
+    's': '文字列', 'df': 'データフレーム|表データ'
+}
 
 class 型情報(ノード):  # 本来ならアノテーションごとに作った方がよい
     name: str  # 変数名
@@ -208,23 +212,25 @@ class 型情報(ノード):  # 本来ならアノテーションごとに作っ�
 
     def __init__(self, name, desc):
         self.name = name
-        self.desc = desc
+        self.desc = deChoiceString(desc)
 
     def emit(self, out, option):
-        type_choice = []
-        type_choice.append(f'{self.name}')
-        if option.get('nontype', True):
-            pass
-        elif self.desc != '':
-            update_type_dic(self.name, self.desc)
-            type_choice.append(f'{self.name}{self.desc}')
-            type_choice.append(f'{self.desc}{self.name}')
-        elif self.name in TypeDic:
-            type_choice.append(f'{self.name}{TypeDic[self.name]}')
-            type_choice.append(f'{TypeDic[self.name]}{self.name}')
-        r = int(option.get('random', random.random()) * 10)
-        idx = r % len(type_choice)
-        out.append(type_choice[idx])
+        # type_choice = [] # you は何を
+        # type_choice.append(self.name)
+        name = self.name
+        if self.desc != '':
+            TypeDic[name] = self.desc  # 更新
+        desc = alt(TypeDic[name], option, factor=1)  # 複数バージョンに対応
+
+        if option.get('type-none', False) or option.get('nontype', False):
+            out.append(name)
+        elif option.get('type-prefix', False):
+            out.append(f'{desc}{name}')
+        elif option.get('type-suffix', False):
+            out.append(f'{name}{desc}')
+        else:
+            ss = [name, f'{desc}{name}', f'{name}{desc}']
+            out.append(alt(ss, option, factor=2))
 
     def __repr__(self):  # repr
         return f"[{self.__class__.__name__} {self.name} {self.desc}]"
@@ -258,6 +264,8 @@ class 助詞(字句):
     def emit(self, out, option):
         if option.get('change_subject', True):
             out.append(change_sub(self.w, option))
+        else:
+            out.append(self.w)
         
 class 助動詞(字句):
     pass
