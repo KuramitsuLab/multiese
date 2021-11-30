@@ -81,6 +81,7 @@ if __name__ == '__main__':
     parser.add_argument('--max', type=int, default=3)
     parser.add_argument('--nontype', action='store_true')
     parser.add_argument('--partial', action='store_true')
+    parser.add_argument('--change_subject', action='store_true')
     #parser.add_argument('--files', nargs='*')
     args = parser.parse_args()
     option = vars(args)   # vars(args) => dict
