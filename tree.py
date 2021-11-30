@@ -146,6 +146,15 @@ def choice_dic(w, option):
     else:
         return w   # ChoiceDic に登録されていなければ、そのまま返す
 
+def change_sub(w, option):
+    ChangeSub=['が','は']
+    if w in ChangeSub:
+        r = option.get('random', random.random())
+        idx = int(len(ChangeSub) * r)
+        return ChangeSub[idx]
+    else:
+        return w   # ChangeSub に登録されていなければ、そのまま返す
+
 class Choice(ノード):  # 系列が入っている字句として扱えるが、中には系列が入っている
     nodes: list
 
@@ -246,9 +255,10 @@ class 名詞(字句):
 
 
 class 助詞(字句):
-    pass
-
-
+    def emit(self, out, option):
+        if option.get('change_subject', True):
+            out.append(change_sub(self.w, option))
+        
 class 助動詞(字句):
     pass
 
