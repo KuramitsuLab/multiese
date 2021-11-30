@@ -220,8 +220,11 @@ class 型情報(ノード):  # 本来ならアノテーションごとに作っ�
         name = self.name
         if self.desc != '':
             TypeDic[name] = self.desc  # 更新
-        desc = alt(TypeDic[name], option, factor=1)  # 複数バージョンに対応
-
+        if name in TypeDic:
+            desc = alt(TypeDic[name], option, factor=1)  # 複数バージョンに対応
+        else:
+            desc = ''
+            
         if option.get('type-none', False) or option.get('nontype', False):
             out.append(name)
         elif option.get('type-prefix', False):
