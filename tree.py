@@ -206,6 +206,11 @@ TypeDic = {
     's': '文字列', 'df': 'データフレーム|表データ'
 }
 
+def name_key(s):
+    if len(s) > 1 and (s[-1].isdigit() or s[-1] == '_'):
+        return s[:-1]
+    return s
+
 class 型情報(ノード):  # 本来ならアノテーションごとに作った方がよい
     name: str  # 変数名
     desc: str  # 型情報
@@ -218,13 +223,14 @@ class 型情報(ノード):  # 本来ならアノテーションごとに作っ�
         # type_choice = [] # you は何を
         # type_choice.append(self.name)
         name = self.name
+        key = name_key(name)  # df2 => df を読みにくいく
         if self.desc != '':
-            TypeDic[name] = self.desc  # 更新
-        if name in TypeDic:
-            desc = alt(TypeDic[name], option, factor=1)  # 複数バージョンに対応
+            TypeDic[key] = self.desc  # 更新
+        if key in TypeDic:
+            desc = alt(TypeDic[key], option, factor=1)  # 複数バージョンに対応
         else:
             desc = ''
-            
+
         if option.get('type-none', False) or option.get('nontype', False):
             out.append(name)
         elif option.get('type-prefix', False):

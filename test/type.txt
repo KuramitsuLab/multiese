@@ -4,6 +4,9 @@ df.head()
 df.tail()
 @type(df)の末尾を見る
 
+df2.tail()
+@type(df2)の末尾を見る
+
 a = 1
 @type(a, [変数|定数])に1を代入する
 
