@@ -1,6 +1,7 @@
 import pegtree as pg
 from pegtree import ParseTree
 from pegtree.visitor import ParseTreeVisitor
+from choice import update_choice_dic
 import tree as ntree
 import pprint
 
@@ -51,7 +52,8 @@ class MultieseParser(ParseTreeVisitor):
             ns.append(self.visit(t))
         node = ntree.Choice(ns)
         if ns[0].__class__.__name__ != '助詞':
-            ntree.update_choice_dic(node.stringfy())  # 類義語辞書を更新する
+            # ntree.update_choice_dic(node.stringfy())  # 類義語辞書を更新する
+            update_choice_dic(node.stringfy())  # 類義語辞書を更新する
         return node
 
     def acceptExpression(self, tree: ParseTree):

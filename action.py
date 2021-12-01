@@ -1,4 +1,5 @@
 import random
+from choice import alt, random_seed, optional_choice
 
 Functions = globals()
 
@@ -31,10 +32,18 @@ def perform_not(pairs, option):
     for sentence, code in pairs:
         code_not = transform_not(code)
         sentence, whether = remove_whether(sentence)
-        if 'でない' in sentence:
-            sentence_not = sentence.replace('でない', '') + whether
+        if sentence[-1] == 'い':
+            # e.g.: a が 0 と等しい
+            if 'くない' in sentence:
+                sentence_not = sentence.replace('くない', 'い') + whether
+            else:
+                sentence_not = sentence[:-1] + 'くない' + whether
         else:
-            sentence_not = sentence + 'でない' + whether
+            # e.g.: a が偶数
+            if 'でない' in sentence:
+                sentence_not = sentence.replace('でない', '') + whether
+            else:
+                sentence_not = sentence + 'でない' + whether
         pairs_not.append((sentence_not, code_not))
     return pairs_not
 
@@ -51,16 +60,16 @@ def perform_andor(pairs, option):
             pairs_andor.append((sentence_or, code_or))
     return pairs_andor
 
-def alt(s, random_seed):
-    choice = s.split('|') if isinstance(s, str) else s
-    return choice[random_seed % len(choice)]
+# def alt(s, random_seed):
+#     choice = s.split('|') if isinstance(s, str) else s
+#     return choice[random_seed % len(choice)]
 
-def random_seed(option, seed=0):
-    r = option.get('random', random.random())
-    return int(seed + 100 * r)
+# def random_seed(option, seed=0):
+#     r = option.get('random', random.random())
+#     return int(seed + 100 * r)
 
-def optional_choice(option, s, seed=0):
-    return alt(s, random_seed(option, seed))
+# def optional_choice(option, s, seed=0):
+#     return alt(s, random_seed(option, seed))
 
 def perform_if(pairs, option):
     ## pairs.extends(perform_not(pairs, option)) # @@not を加える
@@ -93,6 +102,7 @@ def isGroup2Verb(s):
         return s[-2] in 'けせてねれえげべ'
     return False
 
+# TODO: alt 関数を書き換え
 def transform_verb_and_then(s, random_seed):
     if s.endswith('する'):
         return s[:-2]+alt('して、|し、', random_seed)
@@ -120,6 +130,35 @@ def transform_verb_and_then(s, random_seed):
         return s[:-1]+alt('び、|んで、', random_seed)
     return None
 
+# TODO: alt 関数を書き換え
+def transform_verb_and_then(s, random_seed):
+    if s.endswith('する'):
+        return s[:-2]+alt('して、|し、', random_seed)
+    if s.endswith('ずる'): #論ずる　
+        return s[:-2]+alt('じて、|じ、', random_seed)
+    if isGroup2Verb(s):  # グループ２ # ラ行と区別が難しい
+        return s[:-1]+alt('、|、|て、', random_seed)
+    if s.endswith('く'):  # 書く 
+        return s[:-1]+alt('き、|いて、', random_seed)
+    if s.endswith('す'):  # 探す 
+        return s[:-1]+alt('し、|して、', random_seed)
+    if s.endswith('つ'):  # 勝つ 
+        return s[:-1]+alt('ち、|って、', random_seed)
+    if s.endswith('ぬ'):  # 死ぬ 
+        return s[:-1]+alt('に、|んて、', random_seed)
+    if s.endswith('む'):  # 読む 
+        return s[:-1]+alt('み、|んで、', random_seed)
+    if s.endswith('る'):  # 切る   ラ行
+        return s[:-1]+alt('り、|って、', random_seed)
+    if s.endswith('う'):  # 笑う 
+        return s[:-1]+alt('い、|って、', random_seed)
+    if s.endswith('ぐ'):  # 防ぐ 
+        return s[:-1]+alt('ぎ、|いで、', random_seed)
+    if s.endswith('ぶ'):  # 遊ぶ 
+        return s[:-1]+alt('び、|んで、', random_seed)
+    return None
+
+# TODO: alt 関数を書き換え
 def transform_verb_and_noun(s, noun, random_seed=0):
     if s.endswith('する'):
         return s[:-2]+alt('した|された', random_seed) + noun
@@ -178,18 +217,50 @@ def perform_let(pairs, option):  # 代入文に変える
 
 def perform_let_self(pairs, option):
     pairs_let_self = []
-    return pairs
+    for sentence, code in pairs:
+        name = code[:code.find('.')]
+        code_let_self = f'{name} = {code}'
+        sentence_and_then = transform_verb_and_then(sentence, random_seed(option))
+        if sentence_and_then:
+            sentence_let_self = sentence_and_then + name + optional_choice(option, 'にする|とする|に代入する')
+            pairs_let_self.append((sentence_let_self, code_let_self))
+            sentence_let_self = sentence_and_then + optional_choice(option, '置き換える|再代入する')
+            pairs_let_self.append((sentence_let_self, code_let_self))
+            sentence = transform_verb_and_noun(sentence, '結果', 0)
+        sentence_let_self = sentence + 'を' + name + optional_choice(option, 'にする|とする|に代入する')
+        pairs_let_self.append((sentence_let_self, code_let_self))
+        sentence_let_self = sentence + optional_choice(option, 'を置き換える|を再代入する')
+        pairs_let_self.append((sentence_let_self, code_let_self))
+    return pairs_let_self
 
 def perform_inplace(pairs, option):
     pairs_inplace = []
-    return pairs
+    for sentence, code in pairs:
+        if code[-2] == '(':
+            # e.g.: df.dropna()
+            code_inplace = code[:-1] + 'inplace=True)'
+        else:
+            # e.g.: df.drop('price', axis=1)
+            code_inplace = code[:-1] + ', inplace=True)'
+        sentence_and_then = transform_verb_and_then(sentence, random_seed(option))
+        if sentence_and_then:
+            sentence_inplace = sentence_and_then + optional_choice(option, 'インプレースする|置き換える')
+            pairs_inplace.append((sentence_inplace, code_inplace))
+            sentence = transform_verb_and_noun(sentence, '結果', 0)
+        sentence_inplace = sentence + optional_choice(option, 'でインプレースする|で置き換える')
+        pairs_inplace.append((sentence_inplace, code_inplace))
+    return pairs_inplace
 
 def perform_dot(pairs, option):
     pairs_dot = []
+    if option.get('partial', True):
+        pass
     return pairs
 
 def perform_it(pairs, option):
     pairs_it = []
+    if option.get('partial', True):
+        pass
     return pairs
 
 def perform_option(pairs, option):
