@@ -1,6 +1,6 @@
 # noun 名詞化
 
-s.split() @@noun[文字列リスト|リスト|値].let
+s.split() @@noun[文字列リスト|リスト|値]?.let
 sを分割する
 sを切る
 sを調べる

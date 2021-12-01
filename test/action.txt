@@ -7,9 +7,9 @@ a % 2 == 0   @@not.if
 aが偶数かどうか
 aが奇数でないかどうか
 
-a == 0   @@not @@andor @@not.andor @@andor.if
+a == 0   @@not @@not?.andor
 aが0かどうか
-# aが0と等しいかどうか
+aが0と等しいかどうか
 
 a != 0   @@not
 aが0でないかどうか
