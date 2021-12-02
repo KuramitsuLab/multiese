@@ -3,8 +3,8 @@
 
 pd.set_option('display.max_columns', 160)
 160番目までの列を表示させる
-最大表示列数を160列に設定する
-160番[目|]まで列[を|が]表示できるように[設定する|セットする|変更する|する]
+最大表示列数を160列に[設定する|セットする|変更する|する]
+160番[目|]まで列[を|が]表示できるように設定する
 
 # option
 # TODO: @@optionの付与
@@ -17,15 +17,15 @@ encoding = 'shift_jis'
 header = None
 ヘッダーを[指定しない|含まない]
 ヘッダー[は|][なし|無し]
-[先頭行|0行目]をヘッダー[としない|として認識しない]
+[先頭行|0行目]をヘッダー[として認識しない|としない]
 列名[なし|いらない|不要]
 
 color = 'red'
 色を'red'とする
 
 fontsize = 20
-[文字の大きさ|フォントサイズ]を20とする
-[文字の大きさ|フォントサイズ]を20にする
+[フォントサイズ|文字の大きさ]を20とする
+フォントサイズを20にする
 
 # read
 # TODO: @@letの付与
@@ -103,6 +103,7 @@ pd.read_csv('file.csv', encoding='shift_jis')
 エンコーディングをシフトJISとして、@type('file.csv')を読み込む
 文字コードがシフトJISのファイル'file.csv'を読み込む
 
+
 # write
 
 df.to_excel('out.xlsx')
@@ -122,3 +123,399 @@ df.to_csv('out.csv')
 @type(df)を@type('out.csv')にして保存する
 @type(df)から@type('out.csv')という名前でCSVファイルに[変換する|する]
 
+
+# 確認系
+
+df.head()
+@type(df)の[先頭の|先頭|最初の|上|]5行
+[とりあえず|]@type(df)の内容を[確認する|チェックする|確認|チェック]
+
+df.head(10)
+@type(df)の先頭の10行
+
+df.tail()
+@type(df)の[末尾の|末尾|最後の|下]5行
+
+df.tail(10)
+@type(df)の末尾の10行
+
+df[100:106]
+@type(df)の100行目から106行目まで
+
+df[100:]
+@type(df)の100行目から[末尾|最後]まで
+@type(df)の100行目[以降|より後ろ]
+
+df[:100]
+@type(df)の[先頭|最初]から100行目まで
+@type(df)の100行目[まで|より前]
+
+df['age']
+@type(df)の@type('age', [カラム|コラム|列])を[抽出する|選択する]
+
+df[['name','age']]
+@type(df)の@type('name', カラム)[と|、]@type('age', カラム)を抽出する
+
+df[['name','age','GPA']]
+@type(df)の@type('name', カラム)[と|、]@type('age', カラム)[と|、]@type('GPA', カラム)を抽出する
+
+df[['name','age','GPA', 'addr']]
+@type(df)の@type('name', カラム)[と|、]@type('age', カラム)[と|、]@type('GPA', カラム)[と|、]@type('addr', カラム)を抽出する
+
+df.loc[100]
+@type(df)[内|中|の中]のインデックスが100の行
+
+df.iloc[[1,2,4],[0,2]]
+@type(df)内の1,2,4行目の0,2列目
+
+df.info()
+@type(df)の[データの詳細|データの性質]
+
+df.describe()
+@type(df)の[要約統計量|統計情報]
+
+df.describe(include='O')
+@type(df)の[オブジェクトデータ|数値データ以外]の[要約統計量|統計情報]
+
+df['age'].describe()
+@type(df)の@type('age')についての要約統計量
+(df['age'])の要約統計量
+
+df['age'].mean()
+@type(df)の@type('age')についての平均値
+(df['age'])の[平均値|平均]
+
+df['age'].median()
+@type(df)の@type('age')についての中央値
+(df['age'])の中央値
+
+df['age'].mode()
+@type(df)の@type('age')についての最頻値
+(df['age'])の最頻値
+
+df['age'].std()
+@type(df)の@type('age')についての標準偏差
+(df['age'])の標準偏差
+
+df['age'].var()
+@type(df)の@type('age')についての分散
+(df['age'])の分散
+
+df.columns
+@type(df)の[カラム名|列の名前|列名]
+
+df.index
+@type(df)の[インデックス名|行の名前|行名]
+
+df.values
+@type(df)の[バリュー|要素]
+
+df['G3'].values
+@type(df)の@type('G3', カラム)の[バリュー]
+
+df.dtypes
+@type(df)のデータ型
+
+df.shape
+@type(df)の[行数や列数|行数と列数|形状]
+
+df['weather'].value_counts()
+@type(df)の@type('weather', カラム)の[各要素の|それぞれのデータの|][出現頻度|出現回数]
+
+df['remarks'].unique()
+@type(df)の@type('remarks', カラム)の[ユニーク値|一意の値|データの種類|ユニークな要素]
+
+df['remarks'].nunique()
+@type(df)の@type('remarks', カラム)の[ユニークな要素の数|ユニークな要素の個数|ユニークな要素数|データの種類の数]
+
+
+# 設定系
+
+df.rename(columns={'sale': 'sales'})
+@type(df)のカラム名を'sale'から'sales'に[リネームする|変更する]
+@type(df)の@type('sale', カラム)の名前を'sales'に[変更する|リネームする]
+
+df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+@type(df)のカラム名を'sale'から'sales'に、'prof'から'profit'にリネームする
+@type(df)の@type('sale')の名前を'sales'に、@type('prof', カラム)の名前を'profit'にリネームする
+
+df.rename(index={'ONE': 'Row_1'})
+@type(df)のインデックス名を'ONE'から'Row_1'にリネームする
+@type(df)の@type('ONE', インデックス)の名前を'Row_1'にリネームする
+
+df.set_index('datetime')
+@type(df)の@type('datetime', カラム)をインデックス[に|として]設定する
+
+df.reset_index()
+@type(df)のインデックスを[リセットする|振り直す]
+
+df.reset_index(drop=True)
+@type(df)の元のインデックスをリセットする
+@type(df)の[リセットして|振り直して]、元のインデックスを削除する
+
+
+# datetime
+
+pd.to_datetime(df['date'])
+@type(df)の@type('date', カラム)を[datetime型|年月日の形式|日付型]に変換する
+
+pd.to_datetime(df['date'], format='%Y-%m-%d')
+フォーマットを指定して、@type(df)の@type('date')をdatetime型に変換する
+
+df['date'].dt.year
+@type(df)の@type('date')の年
+
+df['date'].dt.month
+@type(df)の@type('date')の月
+
+df['date'].dt.day
+@type(df)の@type('date')の日にち
+
+df['date'].dt.hour
+@type(df)の@type('date')の時間
+
+df['date'].dt.minute
+@type(df)の@type('date')の分
+
+df['date'].dt.second
+@type(df)の@type('date')の秒
+
+df['date'].dt.weekday_name
+@type(df)の@type('date')の曜日
+
+df['date'].dt.dayofweek
+@type(df)の@type('date')の曜日の数値型
+
+
+# 演算処理系
+
+df['temperature'].diff(periods=1)
+@type(df)の@type('temperature', カラム)内の前後の行の差分
+
+df.corr()
+@type(df)の[相関係数|相関]
+
+df[['kcal', 'sales']].corr()
+@type(df)の@type('kcal', カラム)と@type('sales', カラム)の相関係数
+
+
+# 行列操作
+
+df.T
+@type(df)の[行と列|行列]を入れ替える
+@type(df)を転置する
+
+
+# フィルター
+
+df[df['city'] == 'Tokyo']
+@type(df)の@type('city', カラム)が'Tokyo'のデータ
+
+df[df['year'] > 1990]
+@type(df)の@type('year')が1990より[大きい|多い]データ
+
+df[df['year'] >= 1990]
+@type(df)の@type('year')が1990以上のデータ
+
+df[df['year'] < 1990]
+@type(df)の@type('year')が1990より[小さい|少ない]データ
+
+df[df['year'] <= 1990]
+@type(df)の@type('year')が1990以下のデータ
+
+df[df['city'].isin(['Tokyo', 'Osaka'])]
+@type(df)の@type('city')が'Tokyo'[もしくは|または|か]'Osaka'のデータ
+
+
+# ドロップ・欠損値処理
+
+df.drop(0)
+@type(df)の0行目を[ドロップする|削除する|消す|落とす|取り除く]
+
+df.drop('price', axis=1)
+@type(df)の@type('price', カラム)をドロップする
+
+df.drop(['price', 'year'], axis=1)
+@type(df)の@type('price')と@type('year')をドロップする
+
+df.dropna()
+@type(df)内の[欠損値|欠損|NaN|未記入の値|未入力の値]が[存在する|ある]行をドロップする
+@type(df)内の欠損値[を含む行|]をドロップする
+
+df.fillna(symbol)
+@type(df)内の欠損値をsymbol[に|で][置換する|置き換える]
+@type(df)内の欠損値をsymbol[で埋める|とする]
+
+df.fillna(method='ffill')
+@type(df)内の欠損値を直前の行の値で[埋める|補う]
+
+df.fillna(df.mean())
+@type(df)内の欠損値を@type(df)の平均値で埋める
+
+df.replace('?', np.nan).dropna()
+@type(df)内の'?'を欠損値に置換し、欠損値が存在する行をドロップする
+
+df.replace('?', np.nan)
+@type(df)内に存在する'?'を欠損値[に|で]置換する
+@type(df)内に存在する'?'を欠損値[で埋める|とする]
+
+
+# マージ (TODO: 絶対こんな入力しない)
+
+pd.merge(df1, df2)
+@type(df1)と@type(df2)を[横方向に|横に|][マージする|結合する|一つにまとめる|くっつける]
+
+pd.merge(df1, df2, on='id')
+@type('id', カラム)をキーとして、@type(df1)と@type(df2)をマージする
+@type(df1)と@type(df2)に対して、@type('id')をキーとしてデータをマージする
+
+pd.merge(df1, df2, how='outer')
+[全結合で|両方の列を使って|片方のテーブルにしかないデータも全て残して]@type(df1)と@type(df2)をマージする
+
+pd.merge(df1, df2, left_index=True, right_on='index_num')
+左側のデータのインデックスと[右側のデータの|]@type('index_num', カラム)をキーとして、@type(df1)と@type(df2)をマージする
+
+pd.merge(df1, df2, how='left')
+[左外部結合で|左側のデータフレームに合わせて]@type(df1)と@type(df2)をマージする
+
+pd.concat([df1, df2])
+@type(df1)と@type(df2)を[縦方向|縦向き|縦][に|で]マージする
+@type(df1)と@type(df2)を縦結合する
+
+
+# ピボットテーブル (TODO: 大変難しい、aggfuncなど)
+
+df.pivot_table(index='Pclass', columns='Sex')
+@type(df)の@type('Pclass', カラム)をインデックス、@type('Sex', カラム)をカラムとしたピボットテーブルを作成する
+
+df.pivot_table(index='Pclass', columns='Sex', values='Age')
+@type(df)の@type('Age', カラム)について、@type('Pclass')をインデックス、@type('Sex')をカラムとしたピボットテーブルを作成する
+
+
+# ピボット操作 (TODO:転置との違いがひっかかる)
+
+df.stack()
+ピボット操作で@type(df)の列を行に[入れ替える|変更する]
+
+df.unstack()
+ピボット操作で@type(df)の行を列に入れ替える
+
+
+# 重複
+
+df.duplicated()
+@type(df)内に重複[が|は][あるのかどうか|あるかどうか|あるのか|あるか|存在するのか][判定する|確認する|検出する]
+@type(df)内の重複を判定する
+@type(df)に重複があるのかどうか
+@type(df)に重複があるのかどうかを[真偽値|TF]で返す
+@type(df)の[重複行|行の重複]を判定する
+
+df.duplicated().sum() 
+@type(df)内[で|の]重複した[行数|行の数|行][の合計|]
+
+df[df.duplicated()] 
+@type(df)内[で|の][重複した|重複している|重複する]データ
+
+df.duplicated(subset='state') 
+@type(df)内の@type('state', カラム)に重複[が|は]あるのかどうか判定する
+@type(df)内の@type('state', カラム)に重複[が|は]あるのかどうか
+
+df.duplicated(subset=['state', 'point']) 
+@type(df)内の@type('state', カラム)と@type('point', カラム)に重複[が|は]あるのかどうか判定する
+@type(df)内の@type('state', カラム)と@type('point', カラム)に重複[が|は]あるのかどうか
+
+df.drop_duplicates()
+@type(df)内の重複した行をドロップする
+@type(df)内の重複要素がある行をドロップする
+
+df.drop_duplicates(keep=False)
+重複した最後の行を残して@type(df)内の重複している行をドロップする
+
+df.drop_duplicates(subset='state')
+@type(df)内の@type('state')の重複した行をドロップする
+@type(df)内の@type('state')に重複がある行をドロップする
+
+
+# ビン (TODO:なんか冗長)
+
+pd.cut(df['birth_year'], data_bins)
+境界値を@type(data_bins, リスト)として、@type(df)の@type('birth_year', カラム)を[ビン分割する|分割する]
+
+pd.cut(df['birth_year'], bins_num)
+[ビン数|分割数]をbins_numとして、@type(df)の@type('birth_year')をビン分割する
+
+pd.cut(df['birth_year'], bins_num, label=group_names)
+ビン数をbins_num、ビンの[ラベル|名前]を@type(group_names, リスト)として、@type(df)の@type('birth_year')をビン分割する
+
+pd.cut(df['birth_year'], bins_num, label=False)
+ビン数をbins_num、ビンのラベルを[0始まりの連番|インデックス|整数値]として、@type(df)の@type('birth_year')をビン分割する
+
+pd.qcut(df['birth_year'], 2)
+@type(df)の@type('birth_year')を中央値でビン分割する
+
+pd.qcut(df['birth_year'], 4)
+@type(df)の@type('birth_year')を四分位数ごとでビン分割する
+
+pd.qcut(df['birth_year'], bins_num)
+ビン数をbins_numとして、@type(df)の@type('birth_year')を[ビンに含まれる個数|要素数]が等しくなるようにビン分割する
+
+
+# グループ化
+
+df.groupby('flg-50K').size()
+@type(df)の@type('flg-50K', カラム)をグループ化したときの値ごとの[データ数|データの数|データ件数|データの件数]
+
+df.groupby(['month', 'period'])['sales'].sum()
+@type(df)の@type('month', カラム)と@type('period', カラム)ごとの@type('sales', カラム)の値の[合計|合計値|和|数]
+
+df.groupby(['weather'])['temperature'].mean()
+@type(df)の@type('weather', カラム)ごとの@type('temperature', カラム)の[平均値|平均]
+
+df.groupby(['week'])['soldout'].count()
+@type(df)のtype('week', カラム)ごとの@type('soldout', カラム)の[個数|数]
+
+
+# ソート
+
+降順に=逆順に|大きい順に|大から小へと|値が大きい順に
+昇順に=順に|順番になるように|小さい順に|小から大へと|値が小さい順に
+
+df.sort_index()
+@type(df)[全体|]をインデックスで[昇順に|][ソートする|ソート|並び替える]
+@type(df)[全体|]をインデックスを[軸に|元に][昇順で|]ソートする
+@type(df)[全体|]をインデックス[に基づいて|に沿って][昇順で|]ソートする
+
+df.sort_values(['sales', 'temperature'], ascending=False)
+@type(df)[全体|]を@type('sales', カラム)と@type('temperature', カラム)で[昇順に|]ソートする
+@type(df)[全体|]を@type('sales')と@type('temperature')を[軸に|元に][昇順で|]ソートする
+@type(df)[全体|]を@type('sales')と@type('temperature')[に基づいて|に沿って][昇順で|]ソートする
+@type(df)の@type('sales', カラム)と@type('temperature', カラム)を[降順に|逆順に]ソートする
+
+df.sort_values('sales')
+@type(df)[全体|]を@type('sales')で[昇順に|]ソートする
+@type(df)[全体|]を@type('sales')を[軸に|元に][昇順で|]ソートする
+@type(df)[全体|]を@type('sales')[に基づいて|に沿って][昇順で|]ソートする
+@type(df)の@type('sales', カラム)を[降順に|逆順に]ソートする
+
+
+# null判定
+
+df.isnull().sum()
+@type(df)内の欠損値の合計
+@type(df)内にいくつ欠損値が[あるのか|あるか][カウントする|確認する]
+
+df.isin(['?']).sum()
+@type(df)内のそれぞれのカラムに[存在する|ある]'?'の個数[の合計|]
+@type(df)内のカラム[それぞれ|]に存在する'?'の個数[の合計|]
+
+
+# ダミー処理
+
+pd.get_dummies(df)
+@type(df)内のカテゴリ変数を[ダミー変数化する|one-hot表現に変換する|one-hot表現にする|ダミー変数にする|ダミー変数に変換する|数値データで置き換える|数値データに変換する|数値データにする]
+@type(df)についてダミー変数を[生成する|作成する|作る|つくる]
+@type(df)をダミー変数化する
+
+pd.get_dummies(df['sex'])
+@type(df)の@type('sex', カラム)をダミー変数化する
+@type(df)の@type('sex')についてダミー変数を生成する
