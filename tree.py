@@ -230,7 +230,7 @@ class 型情報(ノード):  # 本来ならアノテーションごとに作っ�
             TypeDic[key] = self.desc  # 更新
         if key in TypeDic:
             desc = alt(TypeDic[key], option, factor=3)  # 複数バージョンに対応
-            print('@@', TypeDic[key], desc, option['random'])
+            # print('@@', TypeDic[key], desc, option['random'])
         else:
             desc = ''
 
