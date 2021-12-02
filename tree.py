@@ -165,7 +165,7 @@ class Choice(ノード):  # 系列が入っている字句として扱えるが�
 
     def emit(self, out, option):
         s = deChoiceString(self.stringfy())
-        out.append(alt(s, option, factor=3))
+        out.append(alt(s, option, factor=2))
 
         # s = deChoiceString(self.stringfy())
         # s_choice = s.split('|')
@@ -229,7 +229,7 @@ class 型情報(ノード):  # 本来ならアノテーションごとに作っ�
         if self.desc != '':
             TypeDic[key] = self.desc  # 更新
         if key in TypeDic:
-            desc = alt(TypeDic[key], option, factor=2)  # 複数バージョンに対応
+            desc = alt(TypeDic[key], option, factor=3)  # 複数バージョンに対応
             print('@@', TypeDic[key], desc, option['random'])
         else:
             desc = ''
@@ -242,7 +242,7 @@ class 型情報(ノード):  # 本来ならアノテーションごとに作っ�
             out.append(f'{name}{desc}')
         else:
             ss = [name, f'{desc}{name}', f'{name}{desc}']
-            out.append(alt(ss, option, factor=2))
+            out.append(alt(ss, option, factor=4))
 
     def __repr__(self):  # repr
         return f"[{self.__class__.__name__} {self.name} {self.desc}]"
@@ -273,7 +273,7 @@ class 名詞(字句):
             w = ChoiceDic[self.w]
         else:
             w = self.w
-        out.append(alt(w, option, factor=4))
+        out.append(alt(w, option, factor=5))
         # out.append(choice_dic(self.w, option))
 
 
@@ -310,7 +310,7 @@ class 動詞(字句):
             w = ChoiceDic[self.w]
         else:
             w = self.w
-        out.append(alt(w, option, factor=4))
+        out.append(alt(w, option, factor=5))
         # out.append(choice_dic(self.w, option))
 
 class コード(字句):
