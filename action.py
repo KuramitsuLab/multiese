@@ -244,10 +244,10 @@ def perform_inplace(pairs, option):
             code_inplace = code[:-1] + ', inplace=True)'
         sentence_and_then = transform_verb_and_then(sentence, random_seed(option))
         if sentence_and_then:
-            sentence_inplace = sentence_and_then + optional_choice(option, 'インプレースする|置き換える')
+            sentence_inplace = sentence_and_then + optional_choice(option, 'インプレースする|置き換える|書き換える')
             pairs_inplace.append((sentence_inplace, code_inplace))
             sentence = transform_verb_and_noun(sentence, '結果', 0)
-        sentence_inplace = sentence + optional_choice(option, 'でインプレースする|で置き換える')
+        sentence_inplace = sentence + optional_choice(option, 'でインプレースする|で置き換える|で書き換える')
         pairs_inplace.append((sentence_inplace, code_inplace))
     return pairs_inplace
 
