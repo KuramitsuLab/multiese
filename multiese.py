@@ -58,7 +58,8 @@ def generate_multiese(pairs, option={}):
         node = multiese_parser(sentence)
         # print('@@', repr(node))
         for action in actions:
-            generated = generate_node(node, code, option.get('max', 3), option)   # max 個 generate する
+            generated = generate_node(node, code, option.get(
+                'max', 3), option)   # max 個 generate する
             generated = perform_filter(action, generated, option)
             generated_pairs.extend(generated)
     return generated_pairs
@@ -78,13 +79,18 @@ if __name__ == '__main__':
     parser.add_argument('files', nargs='+', help='files')
     parser.add_argument('--pyfirst', action='store_true')
     parser.add_argument('-o', '--out', default=None)
+    parser.add_argument('-a', '--append', default=None)  # 既存のファイルに追記する
     parser.add_argument('--max', type=int, default=3)
     parser.add_argument('--type-none', action='store_true')    # 型情報をつけない
-    parser.add_argument('--type-prefix', action='store_true')  # 型情報を先頭につける (e.g.: データフレームdf)
-    parser.add_argument('--type-suffix', action='store_true')  # 型情報を後ろにつける (e.g.: dfデータフレーム)
+    # 型情報を先頭につける (e.g.: データフレームdf)
+    parser.add_argument('--type-prefix', action='store_true')
+    # 型情報を後ろにつける (e.g.: dfデータフレーム)
+    parser.add_argument('--type-suffix', action='store_true')
     parser.add_argument('--partial', action='store_true')      # partial
-    parser.add_argument('--change-ga', action='store_true')    # 助詞の「が」と「は」をランダムに入れ替える
-    # parser.add_argument('--multi-tasking', action='store_true')
+    # 助詞の「が」と「は」をランダムに入れ替える
+    parser.add_argument('--change-ga', action='store_true')
+    parser.add_argument('--prefix', default=None)
+    parser.add_argument('--context', action='store_true')
     # parser.add_argument('--files', nargs='*')
     args = parser.parse_args()
     option = vars(args)   # vars(args) => dict
@@ -93,7 +99,10 @@ if __name__ == '__main__':
         pairs = []
         read_multiese_file(filename, pairs)
     pairs = generate_multiese(pairs, option)
-    if args.out is not None:
+    if args.append is not None:
+        with open(args.append, 'a') as f:
+            write_multiese_tsv(pairs, option, file=f)
+    elif args.out is not None:
         with open(args.out, 'w') as f:
             write_multiese_tsv(pairs, option, file=f)
     else:

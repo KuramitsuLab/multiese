@@ -1,0 +1,3 @@
+end=''
+@prefix(option) 改行なし
+@prefix(option) @context(print) 改行なし

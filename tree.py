@@ -149,13 +149,14 @@ def toChoiceTuple(s):
 #         return w   # ChoiceDic に登録されていなければ、そのまま返す
 
 def change_sub(w, option):
-    ChangeSub=['が','は']
+    ChangeSub = ['が', 'は']
     if w in ChangeSub:
         r = option.get('random', random.random())
         idx = int(len(ChangeSub) * r)
         return ChangeSub[idx]
     else:
         return w   # ChangeSub に登録されていなければ、そのまま返す
+
 
 class Choice(ノード):  # 系列が入っている字句として扱えるが、中には系列が入っている
     nodes: list
@@ -200,7 +201,7 @@ class Annotation(ノード):  # 本来ならアノテーションごとに作っ
         return f"[{self.__class__.__name__} {self.name} {s}]"
 
 
-## 型情報
+# 型情報
 # --type-prefix
 # --type-suffix
 # --type-none
@@ -210,12 +211,14 @@ TypeDic = {
     's': '文字列', 'df': 'データフレーム|表データ'
 }
 
+
 def name_key(s):
     if len(s) > 1 and (s[-1].isdigit() or s[-1] == '_'):
         return s[:-1]
     return s
 
-class 型情報(ノード):  # 本来ならアノテーションごとに作った方がよい
+
+class 型情報(ノード):
     name: str  # 変数名
     desc: str  # 型情報
 
@@ -247,12 +250,50 @@ class 型情報(ノード):  # 本来ならアノテーションごとに作っ�
     def __repr__(self):  # repr
         return f"[{self.__class__.__name__} {self.name} {self.desc}]"
 
+# Prefix
+
+
+class Prefix(ノード):
+    name: str  # 変数名
+
+    def __init__(self, name=''):
+        self.name = name
+
+    def emit(self, out, option):
+        if self.name != '':
+            out.append(self.name + ': ')
+        if 'prefix' in option and option['prefix'] != None:
+            out.append(option['prefix'] + ': ')
+
+
+class Context(ノード):
+    name: str  # 変数名
+
+    def __init__(self, name=''):
+        self.name = name
+
+    def emit(self, out, option):
+        if option.get('context', True):
+            out.append('#' + self.name + ' ')
+
+
+DefaultPrefix = Prefix('')
+
+# アノテーション
+
+
 def annotation(name: str, nodes):
     if name == 'type':
         if len(nodes) == 1:
             return 型情報(nodes[0].stringfy(), '')
         return 型情報(nodes[0].stringfy(), nodes[1].stringfy())
+    if name == 'prefix':
+        return Prefix(nodes[0].stringfy())
+    if name == 'context':
+        return Context(nodes[0].stringfy())
+
     return Annotation(name, nodes)
+
 
 class 文(系列):
     def emit(self, out, option):
@@ -283,7 +324,8 @@ class 助詞(字句):
             out.append(change_sub(self.w, option))
         else:
             out.append(self.w)
-        
+
+
 class 助動詞(字句):
     pass
 
@@ -312,6 +354,7 @@ class 動詞(字句):
             w = self.w
         out.append(alt(w, option, factor=5))
         # out.append(choice_dic(self.w, option))
+
 
 class コード(字句):
     pass
