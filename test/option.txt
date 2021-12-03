@@ -1,3 +1,6 @@
+print()
+空行を表示する
+
 end=''
-@prefix(option) 改行なし
-@prefix(option) @context(print) 改行なし
+@context(option) @context(print) 改行なし
+

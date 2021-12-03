@@ -27,7 +27,13 @@ class MultieseParser(ParseTreeVisitor):
     def parse(self, s: str):
         tree = parser(s)
         node = self.visit(tree)
-        return node
+        # 先頭にDefaultTaskを追加する
+        if isinstance(node, ntree.系列):
+            if not isinstance(node.ws[0], ntree.Task):
+                return ntree.系列(ntree.DefaultTask, *node.ws)
+            return node
+        else:
+            return ntree.系列(ntree.DefaultTask, node)
 
     def acceptChunk(self, tree: ParseTree):
         s = str(tree)
@@ -75,19 +81,3 @@ mult = MultieseParser()
 
 def multiese_parser(s: str):
     return mult.parse(s)
-
-
-def test_for_nobu(s):
-    print(s)
-    print('=>', repr(mult.parse(s)))
-    print()
-
-
-if __name__ == '__main__':
-    test_for_nobu('データフレームdfを降順にソートする')
-    test_for_nobu('望遠鏡で泳ぐ子犬を見た')
-    test_for_nobu('望遠鏡で{泳ぐ子犬}を見た')
-    test_for_nobu('望遠鏡で[子犬|とうきび]を見た')
-    test_for_nobu('@type(df, データフレーム)について、望遠鏡で子犬を見てない')  # 否 見た 80%
-    test_for_nobu('@type(df)の先頭を見る')  # Keyword
-    test_for_nobu('望遠鏡で{子犬が泳ぐ}様子を見たら、math.pi+1を実行する')

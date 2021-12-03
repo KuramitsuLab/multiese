@@ -1,16 +1,20 @@
 import random
 
+
 def optional_random(option, factor=0):
     r = option.get('random', random.random())
     factor = 10**(factor+1)
     return (int(r * factor) % 1000) / 1000
 
+
 def random_seed(option, seed=0):
     r = option.get('random', random.random())
     return int(seed + 100 * r)
 
+
 def optional_choice(option, s, seed=0):
     return alt(s, option, random_seed(option, seed))
+
 
 def alt(s, option=None, factor=0):  # alternative の略
     choice = s.split('|') if isinstance(s, str) else s
@@ -22,10 +26,13 @@ def alt(s, option=None, factor=0):  # alternative の略
         r = optional_random(option, factor)
     return choice[int(r * len(choice)) % len(choice)]
 
+
 ChoiceDic = {}
+
 
 def isChoiceString(s):
     return s.startswith('[') and s.endswith(']')
+
 
 def update_choice_dic(choice):
     if isChoiceString(choice):
@@ -37,10 +44,12 @@ def update_choice_dic(choice):
         else:
             ChoiceDic[s] = ChoiceDic[s] + '|' + choice
 
+
 if __name__ == '__main__':
     option = {
         'random': random.random()
     }
     print(option)
     for i in range(10):
-        print(f'factor={i}', alt("A|B|C", option, factor=i), optional_random(option, factor=i))
+        print(f'factor={i}', alt("A|B|C", option, factor=i),
+              optional_random(option, factor=i))

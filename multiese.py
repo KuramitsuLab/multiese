@@ -90,7 +90,9 @@ if __name__ == '__main__':
     # 助詞の「が」と「は」をランダムに入れ替える
     parser.add_argument('--change-ga', action='store_true')
     parser.add_argument('--prefix', default=None)
+    parser.add_argument('--task', default=None)
     parser.add_argument('--context', action='store_true')
+    parser.add_argument('--context-random', action='store_true')
     # parser.add_argument('--files', nargs='*')
     args = parser.parse_args()
     option = vars(args)   # vars(args) => dict

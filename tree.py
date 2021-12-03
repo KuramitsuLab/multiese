@@ -253,17 +253,25 @@ class 型情報(ノード):
 # Prefix
 
 
-class Prefix(ノード):
+class Task(ノード):
     name: str  # 変数名
 
     def __init__(self, name=''):
         self.name = name
 
     def emit(self, out, option):
-        if self.name != '':
-            out.append(self.name + ': ')
+        task = option['task'] if option.get(
+            'task', None) != None else self.name
         if 'prefix' in option and option['prefix'] != None:
-            out.append(option['prefix'] + ': ')
+            if task == '':
+                task = option['prefix']
+            else:
+                task = option['prefix'] + '-' + task
+        if task != '':
+            out.append(task + ': ')
+
+
+DefaultTask = Task('')
 
 
 class Context(ノード):
@@ -273,11 +281,12 @@ class Context(ノード):
         self.name = name
 
     def emit(self, out, option):
-        if option.get('context', True):
+        if option.get('context_random', True):
+            if random.random() < 0.5:
+                out.append('#' + self.name + ' ')
+        elif option.get('context', True):
             out.append('#' + self.name + ' ')
 
-
-DefaultPrefix = Prefix('')
 
 # アノテーション
 
@@ -287,8 +296,8 @@ def annotation(name: str, nodes):
         if len(nodes) == 1:
             return 型情報(nodes[0].stringfy(), '')
         return 型情報(nodes[0].stringfy(), nodes[1].stringfy())
-    if name == 'prefix':
-        return Prefix(nodes[0].stringfy())
+    if name == 'task':
+        return Task(nodes[0].stringfy())
     if name == 'context':
         return Context(nodes[0].stringfy())
 
