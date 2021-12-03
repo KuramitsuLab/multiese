@@ -2,7 +2,7 @@ import itertools
 from janome.tokenizer import Tokenizer
 import argparse
 import random
-from choice import alt
+from choice import ChoiceDic, alt
 import sys
 
 # オプション
@@ -118,34 +118,35 @@ def toChoiceTuple(s):
     return (s,)
 
 
-ChoiceDic = {}
+# ChoiceDic = {}
 
 
-def update_choice_dic(choice):
-    if isChoiceString(choice):
-        choice = choice[1:-1]
-        ss = choice.split('|')
-        # print('@', ss, choice)
-        for s in ss:
-            if s == '':
-                continue
-            if s not in ChoiceDic:
-                ChoiceDic[s] = choice
-            else:
-                ChoiceDic[s] = ChoiceDic[s] + '|' + choice
+# def update_choice_dic(choice):
+#     if isChoiceString(choice):
+#         choice = choice[1:-1]
+#         ss = choice.split('|')
+#         # print('@', ss, choice)
+#         for s in ss:
+#             if s == '':
+#                 continue
+#             if s not in ChoiceDic:
+#                 ChoiceDic[s] = choice
+#             else:
+#                 ChoiceDic[s] = ChoiceDic[s] + '|' + choice
 
-def choice_dic(w, option):
-    '''
-    ChoiceDic に登録されている候補を読んで
-    字句列を返す
-    '''
-    if w in ChoiceDic:
-        s_choice = ChoiceDic[w].split('|')
-        r = option.get('random', random.random())
-        idx = int(len(s_choice) * r)
-        return s_choice[idx]
-    else:
-        return w   # ChoiceDic に登録されていなければ、そのまま返す
+# def choice_dic(w, option):
+#     '''
+#     ChoiceDic に登録されている候補を読んで
+#     字句列を返す
+#     '''
+#     if w in ChoiceDic:
+#         s_choice = ChoiceDic[w].split('|')
+#         print(s_choice)
+#         r = option.get('random', random.random())
+#         idx = int(len(s_choice) * r)
+#         return s_choice[idx]
+#     else:
+#         return w   # ChoiceDic に登録されていなければ、そのまま返す
 
 def change_sub(w, option):
     ChangeSub=['が','は']
@@ -164,10 +165,13 @@ class Choice(ノード):  # 系列が入っている字句として扱えるが�
 
     def emit(self, out, option):
         s = deChoiceString(self.stringfy())
-        s_choice = s.split('|')
-        r = option.get('random', random.random())
-        s_idx = int(len(s_choice) * r)
-        out.append(s_choice[s_idx % len(s_choice)])
+        out.append(alt(s, option, factor=2))
+
+        # s = deChoiceString(self.stringfy())
+        # s_choice = s.split('|')
+        # r = option.get('random', random.random())
+        # s_idx = int(len(s_choice) * r)
+        # out.append(s_choice[s_idx % len(s_choice)])
 
     def stringfy(self):
         ss = [deChoiceString(node.stringfy()) for node in self.nodes]
@@ -220,26 +224,25 @@ class 型情報(ノード):  # 本来ならアノテーションごとに作っ�
         self.desc = deChoiceString(desc)
 
     def emit(self, out, option):
-        # type_choice = [] # you は何を
-        # type_choice.append(self.name)
         name = self.name
-        key = name_key(name)  # df2 => df を読みにくいく
+        key = name_key(name)  # df2 => df を読みにいく
         if self.desc != '':
             TypeDic[key] = self.desc  # 更新
         if key in TypeDic:
-            desc = alt(TypeDic[key], option, factor=1)  # 複数バージョンに対応
+            desc = alt(TypeDic[key], option, factor=3)  # 複数バージョンに対応
+            # print('@@', TypeDic[key], desc, option['random'])
         else:
             desc = ''
 
-        if option.get('type-none', False) or option.get('nontype', False):
+        if option.get('type_none', False) or option.get('nontype', False):
             out.append(name)
-        elif option.get('type-prefix', False):
+        elif option.get('type_prefix', False):
             out.append(f'{desc}{name}')
-        elif option.get('type-suffix', False):
+        elif option.get('type_suffix', False):
             out.append(f'{name}{desc}')
         else:
             ss = [name, f'{desc}{name}', f'{name}{desc}']
-            out.append(alt(ss, option, factor=2))
+            out.append(alt(ss, option, factor=4))
 
     def __repr__(self):  # repr
         return f"[{self.__class__.__name__} {self.name} {self.desc}]"
@@ -266,12 +269,17 @@ class 文節(系列):
 
 class 名詞(字句):
     def emit(self, out, option):
-        out.append(choice_dic(self.w, option))
+        if self.w in ChoiceDic:
+            w = ChoiceDic[self.w]
+        else:
+            w = self.w
+        out.append(alt(w, option, factor=5))
+        # out.append(choice_dic(self.w, option))
 
 
 class 助詞(字句):
     def emit(self, out, option):
-        if option.get('change_subject', True):
+        if option.get('change_ga', True):
             out.append(change_sub(self.w, option))
         else:
             out.append(self.w)
@@ -298,7 +306,12 @@ class 接続詞(字句):
 
 class 動詞(字句):
     def emit(self, out, option):
-        out.append(choice_dic(self.w, option))
+        if self.w in ChoiceDic:
+            w = ChoiceDic[self.w]
+        else:
+            w = self.w
+        out.append(alt(w, option, factor=5))
+        # out.append(choice_dic(self.w, option))
 
 class コード(字句):
     pass

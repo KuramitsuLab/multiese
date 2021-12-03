@@ -3,4 +3,5 @@ sを分割する
 sを切る
 sを調べる
 
-
+df.dropna()  @@let_self @@inplace
+dfの欠損値を削除する
