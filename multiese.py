@@ -81,6 +81,7 @@ if __name__ == '__main__':
     parser.add_argument('-o', '--out', default=None)
     parser.add_argument('-a', '--append', default=None)  # 既存のファイルに追記する
     parser.add_argument('--max', type=int, default=3)
+    parser.add_argument('--verbose', action='store_true')    # デバッグ用の出力
     parser.add_argument('--type-none', action='store_true')    # 型情報をつけない
     # 型情報を先頭につける (e.g.: データフレームdf)
     parser.add_argument('--type-prefix', action='store_true')
@@ -89,14 +90,18 @@ if __name__ == '__main__':
     parser.add_argument('--partial', action='store_true')      # partial
     # 助詞の「が」と「は」をランダムに入れ替える
     parser.add_argument('--change-ga', action='store_true')
-    parser.add_argument('--prefix', default=None)
+    parser.add_argument('--prefix', default=None)  # 強制的にタスクをつける
     parser.add_argument('--task', default=None)
-    parser.add_argument('--context', action='store_true')
-    parser.add_argument('--context-random', action='store_true')
+    parser.add_argument('--without-context', action='store_true')  # コンテストをつけない
+    parser.add_argument('--without-reorder', action='store_true')  # 順序を入れ替えない
+    parser.add_argument('--drop-rate', type=float,
+                        default=0.1)  # 0.0 にするとドロップしない
+
     # parser.add_argument('--files', nargs='*')
     args = parser.parse_args()
     option = vars(args)   # vars(args) => dict
-    print(option)
+    if args.verbose:
+        print(option)
     for filename in args.files:
         pairs = []
         read_multiese_file(filename, pairs)

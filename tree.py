@@ -35,6 +35,12 @@ class ノード(object):  # 抽象的なトップクラス
         """
         return self
 
+    def isOrderedChunking(self):
+        return False
+
+    def isMovable(self):
+        return False
+
 
 class 字句(ノード):  # 抽象的な字句
     w: str
@@ -56,8 +62,11 @@ class 系列(ノード):  # 系列
         self.ws = ws
 
     def emit(self, out, option):
-        for w in self.ws:
-            w.emit(out, option)
+        if option.get('without_reorder', True):
+            for w in self.ws:
+                w.emit(out, option)
+        else:
+            out.extend(reorder(self.ws, option))
 
     def stringfy(self):
         ss = [w.stringfy() for w in self.ws]
@@ -259,6 +268,9 @@ class Task(ノード):
     def __init__(self, name=''):
         self.name = name
 
+    def isOrderedChunking(self):
+        return True
+
     def emit(self, out, option):
         task = option['task'] if option.get(
             'task', None) != None else self.name
@@ -270,6 +282,12 @@ class Task(ノード):
         if task != '':
             out.append(task + ': ')
 
+    def isOrderedChunking(self):
+        return True
+
+    def __repr__(self):  # repr
+        return f"[{self.__class__.__name__} {self.name}]"
+
 
 DefaultTask = Task('')
 
@@ -280,12 +298,66 @@ class Context(ノード):
     def __init__(self, name=''):
         self.name = name
 
+    def isOrderedChunking(self):
+        return True
+
     def emit(self, out, option):
-        if option.get('context_random', True):
-            if random.random() < 0.5:
-                out.append('#' + self.name + ' ')
-        elif option.get('context', True):
+        if option.get('without_context', True):
+            return
+        if option['random'] < 0.5:
             out.append('#' + self.name + ' ')
+
+    def __repr__(self):  # repr
+        return f"[{self.__class__.__name__} {self.name}]"
+
+# 移動可能な系列
+
+
+def join_ws(ws, option):
+    out = []
+    for w in ws:
+        w.emit(out, option)
+    return ''.join(out)
+
+
+def reorder(ws, option):
+    # print(repr(ws))
+    chunks_prefix = []
+    chunks_move = []
+    chunks_suffix = []
+    chunks = chunks_prefix
+    chunk = []
+    for w in ws:
+        chunk.append(w)
+        if w.isOrderedChunking():
+            if w.isMovable() and id(chunks) == id(chunks_prefix):
+                chunks = chunks_move
+            if not w.isMovable() and id(chunks) == id(chunks_move):
+                chunks = chunks_suffix
+            chunks.append(join_ws(chunk, option))
+            chunk = []
+    chunks = chunks_suffix
+    chunks.append(join_ws(chunk, option))
+    if len(chunks_move) > 1 and option['random'] > 0.1:  # 必ず、オリジナルの語順は出力する
+        random.shuffle(chunks_move)
+    if len(chunks_move) > 0 and option['random'] < 0.25 and random.random() < option.get('drop_rate', 0.5):
+        chunks_move.pop()  # 移動可能な要素はドロップもする
+    if option.get('verbose', False):
+        print('<reorder>', chunks_prefix, chunks_move, chunks_suffix)
+    return chunks_prefix + chunks_move + chunks_suffix
+
+
+class Move(系列):  # 移動可能な系列
+    ws: list  # 変数名
+
+    def __init__(self, nodes):
+        self.ws = nodes
+
+    def isOrderedChunking(self):
+        return True
+
+    def isMovable(self):
+        return True
 
 
 # アノテーション
@@ -300,6 +372,8 @@ def annotation(name: str, nodes):
         return Task(nodes[0].stringfy())
     if name == 'context':
         return Context(nodes[0].stringfy())
+    if name == 'move':
+        return Move(nodes)
 
     return Annotation(name, nodes)
 
@@ -328,6 +402,13 @@ class 名詞(字句):
 
 
 class 助詞(字句):
+
+    def isOrderedChunking(self):
+        return self.w in ['を', 'に', 'として']
+
+    def isMovable(self):
+        return self.isOrderedChunking()
+
     def emit(self, out, option):
         if option.get('change_ga', True):
             out.append(change_sub(self.w, option))
@@ -348,11 +429,19 @@ class 連体詞(字句):
 
 
 class 副詞(字句):
-    pass
+    def isOrderedChunking(self):
+        return True
+
+    def isMovable(self):
+        return True
 
 
 class 接続詞(字句):
-    pass
+    def isOrderedChunking(self):
+        return self.w in ['で', 'が']
+
+    def isMovable(self):
+        return self.isOrderedChunking()
 
 
 class 動詞(字句):
@@ -375,6 +464,9 @@ class 記号(字句):
 
 class 未定義(字句):
     pass
+
+# 並び替え
+
 
 # post_processing
 

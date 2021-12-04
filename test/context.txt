@@ -1,0 +1,8 @@
+## context によるオプションの追加例
+
+print()
+空行を[プリントする|表示する]
+
+end=''
+@context(option) @context(print) 改行なし
+

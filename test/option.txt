@@ -1,6 +1,0 @@
-print()
-空行を表示する
-
-end=''
-@context(option) @context(print) 改行なし
-
