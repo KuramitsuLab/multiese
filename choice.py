@@ -1,9 +1,11 @@
 import random
 
 
-def optional_random(option, factor=0):
+def optional_random(option, factor=-1):
     r = option.get('random', random.random())
-    factor = 10**(factor+1)
+    if factor == -1:
+        factor = random.randint(0, 5)
+    factor = 10**(factor+3)
     return (int(r * factor) % 1000) / 1000
 
 
@@ -16,7 +18,7 @@ def optional_choice(option, s, seed=0):
     return alt(s, option, random_seed(option, seed))
 
 
-def alt(s, option=None, factor=0):  # alternative の略
+def alt(s, option=None, factor=-1):  # alternative の略
     choice = s.split('|') if isinstance(s, str) else s
     if len(choice) == 1:
         return choice[0]

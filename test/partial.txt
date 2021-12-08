@@ -1,0 +1,5 @@
+# partial 
+
+df.head() @@check?.it @@check?.then
+@type(df,データフレーム)の先頭
+@type(df,データフレーム)を表示する
