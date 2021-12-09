@@ -173,7 +173,7 @@ def perform_let(pairs, option):  # 代入文に変える
             sentence_let = sentence_and_then + 'X' + alt('にする|とする|に代入する')
             pairs_let.append((sentence_let, code_let))
             noun = alt(option.get('action-with', '結果'))
-            sentence = transform_verb_and_noun(sentence, option, 3) + noun
+            sentence = transform_verb_and_noun(sentence) + noun
         sentence_let = sentence + 'をX' + alt('にする|とする|に代入する')
         pairs_let.append((sentence_let, code_let))
         if sentence.endswith('かどうか'):
@@ -195,7 +195,7 @@ def perform_let_self(pairs, option):
             pairs_let_self.append((sentence_let_self, code_let_self))
             sentence_let_self = sentence_and_then + alt('置き換える|再代入する')
             pairs_let_self.append((sentence_let_self, code_let_self))
-            sentence = transform_verb_and_noun(sentence, '結果', 0)
+            sentence = transform_verb_and_noun(sentence)
         sentence_let_self = sentence + 'を' + name + alt('にする|とする|に代入する')
         pairs_let_self.append((sentence_let_self, code_let_self))
         sentence_let_self = sentence + alt('を置き換える|を再代入する')
@@ -216,7 +216,7 @@ def perform_inplace(pairs, option):
         if sentence_and_then:
             sentence_inplace = sentence_and_then + alt('インプレースする|置き換える|書き換える')
             pairs_inplace.append((sentence_inplace, code_inplace))
-            sentence = transform_verb_and_noun(sentence, '結果', 0)
+            sentence = transform_verb_and_noun(sentence)
         sentence_inplace = sentence + alt('でインプレースする|で置き換える|で書き換える')
         pairs_inplace.append((sentence_inplace, code_inplace))
     return pairs_inplace
