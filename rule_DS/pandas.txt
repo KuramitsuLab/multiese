@@ -161,7 +161,7 @@ df[['name','age','GPA', 'addr']]   @@check @@then
 @type(df)の@type('name', カラム)[と|、]@type('age', カラム)[と|、]@type('GPA', カラム)[と|、]@type('addr', カラム)を抽出する
 
 df.loc[100]   @@get @@it
-@type(df)[内|中|の中]のインデックスが100の行
+@type(df)[内|中|の中|]のインデックスが100の行
 
 df.iloc[[1,2,4],[0,2]]   @@get @@it
 @type(df)内の1,2,4行目の0,2列目
@@ -170,18 +170,18 @@ df.info()   @@check @@it
 @type(df)の[データの詳細|データの性質|データの概要|データの内容|データ|要約情報|概要|要約][について知りたい|を知りたい|を表示|]
 
 df.describe()   @@check @@it
-@type(df)の[要約統計量|統計情報]
+@type(df)の[要約統計量|統計情報|統計的な情報|統計的情報]について知りたい
 
 df.describe(include='O')   @@check @@it
-@type(df)の[オブジェクトデータ|数値データ以外]の[要約統計量|統計情報]
+@type(df)の[オブジェクトデータ|数値データ以外]の要約統計量
 
 df['age'].describe()   @@check @@get @@it
 @type(df)の@type('age')についての要約統計量
 (df['age'])の要約統計量
 
 df['age'].mean()   @@check @@get @@it
-@type(df)の@type('age')についての平均値
-(df['age'])の[平均値|平均]
+@type(df)の@type('age')についての[平均値|平均]
+(df['age'])の平均値
 
 df['age'].median()   @@check @@get @@it
 @type(df)の@type('age')についての中央値
@@ -230,7 +230,7 @@ df['remarks'].nunique()  @@check @@it
 # 設定系
 
 df.rename(columns={'sale': 'sales'})   @@let @@let_self @@inplace @@it
-@type(df)のカラム名を'sale'から'sales'に[リネームする|変更する]
+@type(df)のカラム名を'sale'から'sales'に[リネームする|変更する|変える]
 @type(df)の@type('sale', カラム)の名前を'sales'にリネームする
 
 df.rename(columns={'sale': 'sales', 'prof': 'profit'})   @@let @@let_self @@inplace @@it
@@ -243,6 +243,7 @@ df.rename(index={'ONE': 'Row_1'})   @@let @@let_self @@inplace @@it
 
 df.set_index('datetime')   @@let @@let_self @@inplace @@it
 @type(df)の@type('datetime', カラム)をインデックス[に|として]設定する
+@type(df)の@type('datetime', カラム)をインデックス[にする]
 
 df.reset_index()   @@let @@let_self @@inplace @@it
 @type(df)のインデックスを[リセットする|振り直す]
@@ -394,6 +395,7 @@ df.pivot_table(index='Pclass', columns='Sex', values='Age')   @@let
 
 df.stack()
 ピボット操作で@type(df)の列を行に[入れ替える|変更する]
+ピボット操作で@type(df)の列を行と逆にする
 
 df.unstack()
 ピボット操作で@type(df)の行を列に入れ替える
@@ -477,8 +479,8 @@ df.groupby(['week'])['soldout'].count()   @@calc
 
 df.sort_index()   @@let @@let_self @@inplace
 @type(df)[全体|]をインデックスで[昇順に|順に|順番になるように|小さい順に|値が小さい順に|][ソートする|ソート|並び替える]
-@type(df)[全体|]をインデックスを[軸に|元に][昇順で|小さい順で|]ソートする
-@type(df)[全体|]をインデックス[に基づいて|に沿って]昇順でソートする
+@type(df)[全体|]をインデックスを[軸に|元に][昇順で|小さい順で|小さい順に|小さい順で|小さい方から|]ソートする
+@type(df)[全体|]をインデックス[に基づいて|に沿って|にそって|通りに|どおりに]昇順でソートする
 
 df.sort_values(['sales', 'temperature'], ascending=False)   @@let @@let_self @@inplace
 @type(df)[全体|]を@type('sales', カラム)と@type('temperature', カラム)で[降順に|逆順に|値が大きい順に]ソートする
@@ -497,12 +499,13 @@ df.sort_values('sales')   @@let @@let_self @@inplace
 
 df.isnull().sum()   @@check
 @type(df)内の欠損値の合計
-@type(df)内にいくつ欠損値が[あるのか|あるか][カウントする|確認する]
+@type(df)内にいくつ欠損値が[あるのか|あるか][カウントする|確認する|数える]
+@type(df)にある欠損値の数
 
 df.isin(['?']).sum()   @@check
 @type(df)内のそれぞれのカラムに[存在する|ある]'?'の個数[の合計|]
 @type(df)内のカラム[それぞれ|]に存在する'?'の個数[の合計|]
-
+@type(df)内のそれぞれのカラムに[存在する|ある]'?'の合計
 
 # ダミー処理
 
