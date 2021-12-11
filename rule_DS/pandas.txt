@@ -475,25 +475,22 @@ df.groupby(['week'])['soldout'].count()   @@calc
 
 # ソート
 
-降順に=逆順に|大きい順に|大から小へと|値が大きい順に
-昇順に=順に|順番になるように|小さい順に|小から大へと|値が小さい順に
-
 df.sort_index()   @@let @@let_self @@inplace
-@type(df)[全体|]をインデックスで[昇順に|][ソートする|ソート|並び替える]
-@type(df)[全体|]をインデックスを[軸に|元に][昇順で|]ソートする
-@type(df)[全体|]をインデックス[に基づいて|に沿って][昇順で|]ソートする
+@type(df)[全体|]をインデックスで[昇順に|順に|順番になるように|小さい順に|値が小さい順に|][ソートする|ソート|並び替える]
+@type(df)[全体|]をインデックスを[軸に|元に][昇順で|小さい順で|]ソートする
+@type(df)[全体|]をインデックス[に基づいて|に沿って]昇順でソートする
 
 df.sort_values(['sales', 'temperature'], ascending=False)   @@let @@let_self @@inplace
-@type(df)[全体|]を@type('sales', カラム)と@type('temperature', カラム)で[昇順に|]ソートする
-@type(df)[全体|]を@type('sales')と@type('temperature')を[軸に|元に][昇順で|]ソートする
-@type(df)[全体|]を@type('sales')と@type('temperature')[に基づいて|に沿って][昇順で|]ソートする
-@type(df)の@type('sales', カラム)と@type('temperature', カラム)を[降順に|逆順に]ソートする
+@type(df)[全体|]を@type('sales', カラム)と@type('temperature', カラム)で[降順に|逆順に|値が大きい順に]ソートする
+@type(df)[全体|]を@type('sales')と@type('temperature')を軸に[降順で|逆順で|値が大きい順で]ソートする
+@type(df)[全体|]を@type('sales')と@type('temperature')に基づいて降順でソートする
+@type(df)の@type('sales', カラム)と@type('temperature', カラム)を降順にソートする
 
 df.sort_values('sales')   @@let @@let_self @@inplace
-@type(df)[全体|]を@type('sales')で[昇順に|]ソートする
-@type(df)[全体|]を@type('sales')を[軸に|元に][昇順で|]ソートする
-@type(df)[全体|]を@type('sales')[に基づいて|に沿って][昇順で|]ソートする
-@type(df)の@type('sales', カラム)を[降順に|逆順に]ソートする
+@type(df)[全体|]を@type('sales')で昇順にソートする
+@type(df)[全体|]を@type('sales')を[軸に|元に]昇順でソートする
+@type(df)[全体|]を@type('sales')に基づいて昇順でソートする
+@type(df)の@type('sales', カラム)を昇順にソートする
 
 
 # null判定
