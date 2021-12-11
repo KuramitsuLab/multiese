@@ -4,7 +4,7 @@
 pd.set_option('display.max_columns', 160)
 160番目までの列を表示させる
 最大表示列数を160列に[設定する|セットする|変更する|指定する|する]
-160番[目|]まで列[を|が]表示できるように設定する
+160番[目|]まで列[を|が]表示[できるように設定する|するように設定する]
 
 # option
 
@@ -17,13 +17,13 @@ header = None
 ヘッダーを[指定しない|含まない]
 ヘッダー[は|][なし|無し]
 [先頭行|0行目]をヘッダー[として認識しない|としない]
-列名[なし|いらない|不要]
+列名[なし|いらない|不要|は不要]
 
 color = 'red'
-色を'red'とする
+色を['red'|赤]にする
 
 fontsize = 20
-[フォントサイズ|文字の大きさ]を20とする
+[フォントサイズ|文字の大きさ|文字サイズ]を20にする
 フォントサイズを20にする
 
 # read
@@ -98,7 +98,7 @@ pd.read_csv('file.csv', index_col=0)   @@let
 列番号0をインデックス[と|に]して、@type('file.csv')を[データフレームに|]格納する
 
 pd.read_csv('file.csv', encoding='shift_jis')   @@let
-エンコーディングをシフトJISとして、@type('file.csv')を読み込む
+エンコーディングを[シフトJISとして|シフトJISで]、@type('file.csv')を読み込む
 文字コードがシフトJISのファイル'file.csv'を読み込む
 
 
@@ -209,7 +209,7 @@ df.values   @@let @@check @@it
 @type(df)の[バリュー|要素]
 
 df['G3'].values   @@check
-@type(df)の@type('G3', カラム)の[バリュー]
+@type(df)の@type('G3', カラム)のバリュー
 
 df.dtypes  @@check @@it
 @type(df)のデータ型
@@ -246,12 +246,12 @@ df.set_index('datetime')   @@let @@let_self @@inplace @@it
 @type(df)の@type('datetime', カラム)をインデックス[にする]
 
 df.reset_index()   @@let @@let_self @@inplace @@it
-@type(df)のインデックスを[リセットする|振り直す]
+@type(df)のインデックスを[リセットする|振り直す|リセット]
 
 df.reset_index(drop=True)   @@let @@let_self @@inplace @@it
 @type(df)の元のインデックスをリセットする
 @type(df)の[リセットして|振り直して]、元のインデックスを削除する
-
+元のインデックスを[削除し、|削除してから、]@type(df)のリセット
 
 # datetime
 
@@ -356,13 +356,13 @@ df.replace('?', np.nan).dropna()   @@let @@let_self @@inplace
 
 df.replace('?', np.nan)   @@let @@let_self @@inplace
 @type(df)内に存在する'?'を欠損値[に|で]置換する
-@type(df)内に存在する'?'を欠損値[で埋める|とする]
+@type(df)内に存在する'?'を欠損値[で埋める|とする|にする]
 
 
 # マージ
 
 pd.merge(df1, df2)   @@let
-@type(df1)と@type(df2)を[横方向に|横に|][マージする|結合する|一つにまとめる|くっつける]
+@type(df1)と@type(df2)を[横方向に|横に|][マージする|結合する|結合|一つにまとめる|1つにする|一つにする|1つにまとめる|くっつける|合わせる]
 
 pd.merge(df1, df2, on='id')   @@let
 @type('id', カラム)をキーとして、@type(df1)と@type(df2)をマージする
@@ -490,7 +490,7 @@ df.sort_values(['sales', 'temperature'], ascending=False)   @@let @@let_self @@i
 
 df.sort_values('sales')   @@let @@let_self @@inplace
 @type(df)[全体|]を@type('sales')で昇順にソートする
-@type(df)[全体|]を@type('sales')を[軸に|元に]昇順でソートする
+@type(df)[全体|]を@type('sales')を[軸に|元に|使って]昇順でソートする
 @type(df)[全体|]を@type('sales')に基づいて昇順でソートする
 @type(df)の@type('sales', カラム)を昇順にソートする
 
@@ -500,12 +500,12 @@ df.sort_values('sales')   @@let @@let_self @@inplace
 df.isnull().sum()   @@check
 @type(df)内の欠損値の合計
 @type(df)内にいくつ欠損値が[あるのか|あるか][カウントする|確認する|数える]
-@type(df)にある欠損値の数
+@type(df)にある欠損値の個数
 
 df.isin(['?']).sum()   @@check
 @type(df)内のそれぞれのカラムに[存在する|ある]'?'の個数[の合計|]
 @type(df)内のカラム[それぞれ|]に存在する'?'の個数[の合計|]
-@type(df)内のそれぞれのカラムに[存在する|ある]'?'の合計
+@type(df)内のそれぞれのカラムに存在する'?'の合計
 
 # ダミー処理
 
