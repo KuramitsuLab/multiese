@@ -249,7 +249,7 @@ df.reset_index()   @@let @@let_self @@inplace @@it
 
 df.reset_index(drop=True)   @@let @@let_self @@inplace @@it
 @type(df)の元のインデックスをリセットする
-@type(df)の[リセットして|振り直して]、元のインデックスを削除する
+@type(df)のインデックスを[リセットして|振り直して]、元のインデックスを削除する
 
 
 # datetime
