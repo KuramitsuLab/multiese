@@ -149,7 +149,7 @@ df[:100]   @@check @@then
 @type(df)の100行目[まで|より前]
 
 df['age']   @@check @@then
-@type(df)の@type('age', [カラム|コラム|列])を[抽出する|選択する]
+@type(df)の@type('age', [カラム|コラム|列])を[抽出する|選択する|選ぶ]
 
 df[['name','age']]   @@check @@then
 @type(df)の@type('name', カラム)[と|、]@type('age', カラム)を抽出する
@@ -167,7 +167,7 @@ df.iloc[[1,2,4],[0,2]]   @@get @@it
 @type(df)内の1,2,4行目の0,2列目
 
 df.info()   @@check @@it
-@type(df)の[データの詳細|データの性質]
+@type(df)の[データの詳細|データの性質|データの概要|データの内容|データ|要約情報|概要|要約][について知りたい|を知りたい|を表示|]
 
 df.describe()   @@check @@it
 @type(df)の[要約統計量|統計情報]
