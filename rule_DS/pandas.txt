@@ -32,32 +32,32 @@ pd.read_excel('file.xlsx')   @@let
 エクセル[ファイル|データ|]'file.xlsx'を[データフレーム|表|表データ][に|として][読み込む|読む]
 エクセルファイル'file.xlsx'から[データフレームを|]読み込む
 エクセルファイル'file.xlsx'を読み込む
-エクセルファイル'file.xlsx'を[読み込んで|]データフレーム[にする|とする]
-エクセルファイル'file.xlsx'を[読み込んで|]データフレームに格納する
+エクセルファイル'file.xlsx'を[読み込んで|読み込み、|]データフレーム[にする|とする]
+エクセルファイル'file.xlsx'を[読み込んで|読み込み、|]データフレームに格納する
 'file.xlsx'という[名前の|]エクセルファイルを[データフレームとして|]読み込む
 
 pd.read_excel('file.xlsx', sheet_name=0)   @@let
 エクセルファイル'file.xlsx'の0番目のシートをデータフレーム[に|として]読み込む
 エクセルファイル'file.xlsx'の0番目のシートから[データフレームを|]読み込む
 エクセルファイル'file.xlsx'の0番目のシートを[指定して|]読み込む
-エクセルファイル'file.xlsx'の0番目のシートを[読み込んで|]データフレーム[にする|とする]
-エクセルファイル'file.xlsx'の0番目のシートを[読み込んで|]データフレームに格納する
+エクセルファイル'file.xlsx'の0番目のシートを[読み込んで|読み込み、|]データフレーム[にする|とする]
+エクセルファイル'file.xlsx'の0番目のシートを[読み込んで|読み込み、|]データフレームに格納する
 'file.xlsx'という[名前の|]エクセルファイルの0番目のシートを[データフレームとして|]読み込む
 
 # pd.read_excel('file.xlsx', sheet_name='sheet1')   @@let
 # エクセルファイル'file.xlsx'の@type('sheet1', シート名)をデータフレーム[に|として]読み込む
 # エクセルファイル'file.xlsx'の@type('sheet1')から[データフレームを|]読み込む
 # エクセルファイル'file.xlsx'の@type('sheet1')を[指定して|]読み込む
-# エクセルファイル'file.xlsx'の@type('sheet1')を[読み込んで|]データフレーム[にする|とする]
-# エクセルファイル'file.xlsx'の@type('sheet1')を[読み込んで|]データフレームに格納する
+# エクセルファイル'file.xlsx'の@type('sheet1')を[読み込んで|読み込み、|]データフレーム[にする|とする]
+# エクセルファイル'file.xlsx'の@type('sheet1')を[読み込んで|読み込み、|]データフレームに格納する
 # 'file.xlsx'という[名前の|]エクセルファイルの@type('sheet1')を[データフレームとして|]読み込む
 
 pd.read_excel('file.xlsx', sheet_name=None)   @@let
 エクセルファイル'file.xlsx'の[全てのシート|全部のシート|シート全部|シート全て]をデータフレーム[に|として]読み込む
 エクセルファイル'file.xlsx'の全てのシートから[データフレームを|]読み込む
 エクセルファイル'file.xlsx'の全てのシートを[指定して|]読み込む
-エクセルファイル'file.xlsx'の全てのシートを[読み込んで|]データフレーム[にする|とする]
-エクセルファイル'file.xlsx'の全てのシートを[読み込んで|]データフレームに格納する
+エクセルファイル'file.xlsx'の全てのシートを[読み込んで|読み込み、|]データフレーム[にする|とする]
+エクセルファイル'file.xlsx'の全てのシートを[読み込んで|読み込み、|]データフレームに格納する
 'file.xlsx'という[名前の|]エクセルファイルの全てのシートを[データフレームとして|]読み込む
 
 pd.read_csv('file.csv')   @@let
@@ -105,7 +105,7 @@ pd.read_csv('file.csv', encoding='shift_jis')   @@let
 # write
 
 df.to_excel('out.xlsx')
-@type(df, データフレーム)をエクセルファイル'out.xlsx'に[書き込む|書き出す]
+@type(df, データフレーム)をエクセルファイル'out.xlsx'に[書き込む|書き出す|入れる]
 @type(df)をエクセルファイル'out.xlsx'に変換する
 @type(df)をエクセルファイル'out.xlsx'という[ファイル名で|名前で|名前にして]書き込む
 @type(df)をエクセルファイル'out.xlsx'というファイル名で保存する
@@ -249,7 +249,7 @@ df.reset_index()   @@let @@let_self @@inplace @@it
 @type(df)のインデックスを[リセットする|振り直す|リセット]
 
 df.reset_index(drop=True)   @@let @@let_self @@inplace @@it
-@type(df)の元のインデックスをリセットする
+@type(df)の[元の|もともとの|元々あった|もともとあった]インデックスをリセットする
 
 @type(df)の[リセットして|振り直して]、元のインデックスを削除する
 元のインデックスを[削除し、|削除してから、]@type(df)のリセット
@@ -257,7 +257,7 @@ df.reset_index(drop=True)   @@let @@let_self @@inplace @@it
 # datetime
 
 pd.to_datetime(df['date'])
-@type(df)の@type('date', カラム)を[datetime型|年月日の形式|日付型]に変換する
+@type(df)の@type('date', カラム)を[datetime型|年月日の形式|日付型|日付の形|日付の型]に変換する
 
 pd.to_datetime(df['date'], format='%Y-%m-%d')
 フォーマットを指定して、@type(df)の@type('date')をdatetime型に変換する
@@ -302,7 +302,7 @@ df[['kcal', 'sales']].corr()   @@check
 # 行列操作
 
 df.T
-@type(df)の[行と列|行列]を入れ替える
+@type(df)の[行と列|行列]を[入れ替える|入れかえる]
 @type(df)を転置する
 
 
@@ -481,7 +481,7 @@ df.groupby(['week'])['soldout'].count()   @@calc
 df.sort_index()   @@let @@let_self @@inplace
 @type(df)[全体|]をインデックスで[昇順に|順に|順番になるように|小さい順に|値が小さい順に|][ソートする|ソート|並び替える]
 @type(df)[全体|]をインデックスを[軸に|元に][昇順で|小さい順で|小さい順に|小さい順で|小さい方から|]ソートする
-@type(df)[全体|]をインデックス[に基づいて|に沿って|にそって|通りに|どおりに]昇順でソートする
+@type(df)[全体|]をインデックス[に基づいて|に基づき|に沿って|にそって|通りに|どおりに]昇順でソートする
 
 df.sort_values(['sales', 'temperature'], ascending=False)   @@let @@let_self @@inplace
 @type(df)[全体|]を@type('sales', カラム)と@type('temperature', カラム)で[降順に|逆順に|値が大きい順に]ソートする
