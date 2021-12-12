@@ -4,7 +4,7 @@
 pd.set_option('display.max_columns', 160)
 160番目までの列を表示させる
 最大表示列数を160列に[設定する|セットする|変更する|指定する|する]
-160番[目|]まで列[を|が]表示できるように設定する
+160番[目|]まで列[を|が]表示[できるように設定する|するように設定する]
 
 # option
 
@@ -17,13 +17,13 @@ header = None
 ヘッダーを[指定しない|含まない]
 ヘッダー[は|][なし|無し]
 [先頭行|0行目]をヘッダー[として認識しない|としない]
-列名[なし|いらない|不要]
+列名[なし|いらない|不要|は不要]
 
 color = 'red'
-色を'red'とする
+色を['red'|赤]にする
 
 fontsize = 20
-[フォントサイズ|文字の大きさ]を20とする
+[フォントサイズ|文字の大きさ|文字サイズ]を20にする
 フォントサイズを20にする
 
 # read
@@ -32,32 +32,32 @@ pd.read_excel('file.xlsx')   @@let
 エクセル[ファイル|データ|]'file.xlsx'を[データフレーム|表|表データ][に|として][読み込む|読む]
 エクセルファイル'file.xlsx'から[データフレームを|]読み込む
 エクセルファイル'file.xlsx'を読み込む
-エクセルファイル'file.xlsx'を[読み込んで|]データフレーム[にする|とする]
-エクセルファイル'file.xlsx'を[読み込んで|]データフレームに格納する
+エクセルファイル'file.xlsx'を[読み込んで|読み込み、|]データフレーム[にする|とする]
+エクセルファイル'file.xlsx'を[読み込んで|読み込み、|]データフレームに格納する
 'file.xlsx'という[名前の|]エクセルファイルを[データフレームとして|]読み込む
 
 pd.read_excel('file.xlsx', sheet_name=0)   @@let
 エクセルファイル'file.xlsx'の0番目のシートをデータフレーム[に|として]読み込む
 エクセルファイル'file.xlsx'の0番目のシートから[データフレームを|]読み込む
 エクセルファイル'file.xlsx'の0番目のシートを[指定して|]読み込む
-エクセルファイル'file.xlsx'の0番目のシートを[読み込んで|]データフレーム[にする|とする]
-エクセルファイル'file.xlsx'の0番目のシートを[読み込んで|]データフレームに格納する
+エクセルファイル'file.xlsx'の0番目のシートを[読み込んで|読み込み、|]データフレーム[にする|とする]
+エクセルファイル'file.xlsx'の0番目のシートを[読み込んで|読み込み、|]データフレームに格納する
 'file.xlsx'という[名前の|]エクセルファイルの0番目のシートを[データフレームとして|]読み込む
 
 # pd.read_excel('file.xlsx', sheet_name='sheet1')   @@let
 # エクセルファイル'file.xlsx'の@type('sheet1', シート名)をデータフレーム[に|として]読み込む
 # エクセルファイル'file.xlsx'の@type('sheet1')から[データフレームを|]読み込む
 # エクセルファイル'file.xlsx'の@type('sheet1')を[指定して|]読み込む
-# エクセルファイル'file.xlsx'の@type('sheet1')を[読み込んで|]データフレーム[にする|とする]
-# エクセルファイル'file.xlsx'の@type('sheet1')を[読み込んで|]データフレームに格納する
+# エクセルファイル'file.xlsx'の@type('sheet1')を[読み込んで|読み込み、|]データフレーム[にする|とする]
+# エクセルファイル'file.xlsx'の@type('sheet1')を[読み込んで|読み込み、|]データフレームに格納する
 # 'file.xlsx'という[名前の|]エクセルファイルの@type('sheet1')を[データフレームとして|]読み込む
 
 pd.read_excel('file.xlsx', sheet_name=None)   @@let
 エクセルファイル'file.xlsx'の[全てのシート|全部のシート|シート全部|シート全て]をデータフレーム[に|として]読み込む
 エクセルファイル'file.xlsx'の全てのシートから[データフレームを|]読み込む
 エクセルファイル'file.xlsx'の全てのシートを[指定して|]読み込む
-エクセルファイル'file.xlsx'の全てのシートを[読み込んで|]データフレーム[にする|とする]
-エクセルファイル'file.xlsx'の全てのシートを[読み込んで|]データフレームに格納する
+エクセルファイル'file.xlsx'の全てのシートを[読み込んで|読み込み、|]データフレーム[にする|とする]
+エクセルファイル'file.xlsx'の全てのシートを[読み込んで|読み込み、|]データフレームに格納する
 'file.xlsx'という[名前の|]エクセルファイルの全てのシートを[データフレームとして|]読み込む
 
 pd.read_csv('file.csv')   @@let
@@ -98,14 +98,14 @@ pd.read_csv('file.csv', index_col=0)   @@let
 列番号0をインデックス[と|に]して、@type('file.csv')を[データフレームに|]格納する
 
 pd.read_csv('file.csv', encoding='shift_jis')   @@let
-エンコーディングをシフトJISとして、@type('file.csv')を読み込む
+エンコーディングを[シフトJISとして|シフトJISで]、@type('file.csv')を読み込む
 文字コードがシフトJISのファイル'file.csv'を読み込む
 
 
 # write
 
 df.to_excel('out.xlsx')
-@type(df, データフレーム)をエクセルファイル'out.xlsx'に[書き込む|書き出す]
+@type(df, データフレーム)をエクセルファイル'out.xlsx'に[書き込む|書き出す|入れる]
 @type(df)をエクセルファイル'out.xlsx'に変換する
 @type(df)をエクセルファイル'out.xlsx'という[ファイル名で|名前で|名前にして]書き込む
 @type(df)をエクセルファイル'out.xlsx'というファイル名で保存する
@@ -149,7 +149,7 @@ df[:100]   @@check @@then
 @type(df)の100行目[まで|より前]
 
 df['age']   @@check @@then
-@type(df)の@type('age', [カラム|コラム|列])を[抽出する|選択する]
+@type(df)の@type('age', [カラム|コラム|列])を[抽出する|選択する|選ぶ]
 
 df[['name','age']]   @@check @@then
 @type(df)の@type('name', カラム)[と|、]@type('age', カラム)を抽出する
@@ -161,27 +161,27 @@ df[['name','age','GPA', 'addr']]   @@check @@then
 @type(df)の@type('name', カラム)[と|、]@type('age', カラム)[と|、]@type('GPA', カラム)[と|、]@type('addr', カラム)を抽出する
 
 df.loc[100]   @@get @@it
-@type(df)[内|中|の中]のインデックスが100の行
+@type(df)[内|中|の中|]のインデックスが100の行
 
 df.iloc[[1,2,4],[0,2]]   @@get @@it
 @type(df)内の1,2,4行目の0,2列目
 
 df.info()   @@check @@it
-@type(df)の[データの詳細|データの性質]
+@type(df)の[データの詳細|データの性質|データの概要|データの内容|データ|要約情報|概要|要約][について知りたい|を知りたい|を表示|]
 
 df.describe()   @@check @@it
-@type(df)の[要約統計量|統計情報]
+@type(df)の[要約統計量|統計情報|統計的な情報|統計的情報]について知りたい
 
 df.describe(include='O')   @@check @@it
-@type(df)の[オブジェクトデータ|数値データ以外]の[要約統計量|統計情報]
+@type(df)の[オブジェクトデータ|数値データ以外]の要約統計量
 
 df['age'].describe()   @@check @@get @@it
 @type(df)の@type('age')についての要約統計量
 (df['age'])の要約統計量
 
 df['age'].mean()   @@check @@get @@it
-@type(df)の@type('age')についての平均値
-(df['age'])の[平均値|平均]
+@type(df)の@type('age')についての[平均値|平均]
+(df['age'])の平均値
 
 df['age'].median()   @@check @@get @@it
 @type(df)の@type('age')についての中央値
@@ -209,7 +209,7 @@ df.values   @@let @@check @@it
 @type(df)の[バリュー|要素]
 
 df['G3'].values   @@check
-@type(df)の@type('G3', カラム)の[バリュー]
+@type(df)の@type('G3', カラム)のバリュー
 
 df.dtypes  @@check @@it
 @type(df)のデータ型
@@ -230,7 +230,7 @@ df['remarks'].nunique()  @@check @@it
 # 設定系
 
 df.rename(columns={'sale': 'sales'})   @@let @@let_self @@inplace @@it
-@type(df)のカラム名を'sale'から'sales'に[リネームする|変更する]
+@type(df)のカラム名を'sale'から'sales'に[リネームする|変更する|変える]
 @type(df)の@type('sale', カラム)の名前を'sales'にリネームする
 
 df.rename(columns={'sale': 'sales', 'prof': 'profit'})   @@let @@let_self @@inplace @@it
@@ -243,19 +243,21 @@ df.rename(index={'ONE': 'Row_1'})   @@let @@let_self @@inplace @@it
 
 df.set_index('datetime')   @@let @@let_self @@inplace @@it
 @type(df)の@type('datetime', カラム)をインデックス[に|として]設定する
+@type(df)の@type('datetime', カラム)をインデックス[にする]
 
 df.reset_index()   @@let @@let_self @@inplace @@it
-@type(df)のインデックスを[リセットする|振り直す]
+@type(df)のインデックスを[リセットする|振り直す|リセット]
 
 df.reset_index(drop=True)   @@let @@let_self @@inplace @@it
-@type(df)の元のインデックスをリセットする
-@type(df)のインデックスを[リセットして|振り直して]、元のインデックスを削除する
+@type(df)の[元の|もともとの|元々あった|もともとあった]インデックスをリセットする
 
+@type(df)の[リセットして|振り直して]、元のインデックスを削除する
+元のインデックスを[削除し、|削除してから、]@type(df)のリセット
 
 # datetime
 
 pd.to_datetime(df['date'])
-@type(df)の@type('date', カラム)を[datetime型|年月日の形式|日付型]に変換する
+@type(df)の@type('date', カラム)を[datetime型|年月日の形式|日付型|日付の形|日付の型]に変換する
 
 pd.to_datetime(df['date'], format='%Y-%m-%d')
 フォーマットを指定して、@type(df)の@type('date')をdatetime型に変換する
@@ -300,7 +302,7 @@ df[['kcal', 'sales']].corr()   @@check
 # 行列操作
 
 df.T
-@type(df)の[行と列|行列]を入れ替える
+@type(df)の[行と列|行列]を[入れ替える|入れかえる]
 @type(df)を転置する
 
 
@@ -355,13 +357,13 @@ df.replace('?', np.nan).dropna()   @@let @@let_self @@inplace
 
 df.replace('?', np.nan)   @@let @@let_self @@inplace
 @type(df)内に存在する'?'を欠損値[に|で]置換する
-@type(df)内に存在する'?'を欠損値[で埋める|とする]
+@type(df)内に存在する'?'を欠損値[で埋める|とする|にする]
 
 
 # マージ
 
 pd.merge(df1, df2)   @@let
-@type(df1)と@type(df2)を[横方向に|横に|][マージする|結合する|一つにまとめる|くっつける]
+@type(df1)と@type(df2)を[横方向に|横に|][マージする|結合する|結合|一つにまとめる|1つにする|一つにする|1つにまとめる|くっつける|合わせる]
 
 pd.merge(df1, df2, on='id')   @@let
 @type('id', カラム)をキーとして、@type(df1)と@type(df2)をマージする
@@ -394,6 +396,7 @@ df.pivot_table(index='Pclass', columns='Sex', values='Age')   @@let
 
 df.stack()
 ピボット操作で@type(df)の列を行に[入れ替える|変更する]
+ピボット操作で@type(df)の列を行と逆にする
 
 df.unstack()
 ピボット操作で@type(df)の行を列に入れ替える
@@ -477,8 +480,8 @@ df.groupby(['week'])['soldout'].count()   @@calc
 
 df.sort_index()   @@let @@let_self @@inplace
 @type(df)[全体|]をインデックスで[昇順に|順に|順番になるように|小さい順に|値が小さい順に|][ソートする|ソート|並び替える]
-@type(df)[全体|]をインデックスを[軸に|元に][昇順で|小さい順で|]ソートする
-@type(df)[全体|]をインデックス[に基づいて|に沿って]昇順でソートする
+@type(df)[全体|]をインデックスを[軸に|元に][昇順で|小さい順で|小さい順に|小さい順で|小さい方から|]ソートする
+@type(df)[全体|]をインデックス[に基づいて|に基づき|に沿って|にそって|通りに|どおりに]昇順でソートする
 
 df.sort_values(['sales', 'temperature'], ascending=False)   @@let @@let_self @@inplace
 @type(df)[全体|]を@type('sales', カラム)と@type('temperature', カラム)で[降順に|逆順に|値が大きい順に]ソートする
@@ -488,7 +491,7 @@ df.sort_values(['sales', 'temperature'], ascending=False)   @@let @@let_self @@i
 
 df.sort_values('sales')   @@let @@let_self @@inplace
 @type(df)[全体|]を@type('sales')で昇順にソートする
-@type(df)[全体|]を@type('sales')を[軸に|元に]昇順でソートする
+@type(df)[全体|]を@type('sales')を[軸に|元に|使って]昇順でソートする
 @type(df)[全体|]を@type('sales')に基づいて昇順でソートする
 @type(df)の@type('sales', カラム)を昇順にソートする
 
@@ -497,17 +500,18 @@ df.sort_values('sales')   @@let @@let_self @@inplace
 
 df.isnull().sum()   @@check
 @type(df)内の欠損値の合計
-@type(df)内にいくつ欠損値が[あるのか|あるか][カウントする|確認する]
+@type(df)内にいくつ欠損値が[あるのか|あるか][カウントする|確認する|数える]
+@type(df)にある欠損値の個数
 
 df.isin(['?']).sum()   @@check
 @type(df)内のそれぞれのカラムに[存在する|ある]'?'の個数[の合計|]
 @type(df)内のカラム[それぞれ|]に存在する'?'の個数[の合計|]
-
+@type(df)内のそれぞれのカラムに存在する'?'の合計
 
 # ダミー処理
 
 pd.get_dummies(df)   @@let
-@type(df)内のカテゴリ変数を[ダミー変数化する|one-hot表現に変換する|one-hot表現にする|ダミー変数にする|ダミー変数に変換する|数値データで置き換える|数値データに変換する|数値データにする]
+@type(df)内の[カテゴリ変数|カテゴリー]を[ダミー変数化する|one-hot表現に変換する|one-hot表現にする|ダミー変数にする|ダミー変数に変換する|数値データで置き換える|数値データに変換する|数値データにする|数値にする|数値に変える]
 @type(df)についてダミー変数を[生成する|作成する|作る|つくる]
 @type(df)をダミー変数化する
 
