@@ -250,6 +250,7 @@ df.reset_index()   @@let @@let_self @@inplace @@it
 
 df.reset_index(drop=True)   @@let @@let_self @@inplace @@it
 @type(df)の元のインデックスをリセットする
+
 @type(df)の[リセットして|振り直して]、元のインデックスを削除する
 元のインデックスを[削除し、|削除してから、]@type(df)のリセット
 
