@@ -1,0 +1,91 @@
+sep = s
+@key(python, [セパレータ|区切り|分割記号], s) #セパレータとしてsを用いる
+
+sep = ','
+@use(カンマ区切り)
+
+sep = ''
+@no(セパレータ)
+
+end = s
+@key([終端文字|改行文字], s)
+@key(改行の代わり,s)
+
+end = ''
+@no(改行)
+
+file = x
+@key(出力先, x) #出力先としてxを用いる
+
+file = sys.stderr
+@use(標準エラー,出力する)
+
+maxsplit = x
+@key(分割,x回まで)
+@key(分割回数,xまで)
+@key([最大分割数|分割回数の最大],x)
+
+start = x
+@key([開始位置|開始|始まり],x)
+@adverb(xから)
+
+end = x
+@key([終了位置|終端|終わり],x)
+@adverb(xまで)
+
+start=x, end = y
+@adverb(xからyまで)
+
+step = x
+@key([間隔|ステップ],x)
+@adverb(x[ごと|毎]に)
+
+encoding = enc
+@key([エンコーディング|文字コード],enc)
+@use([エンコーディング|文字コード]enc)
+
+encoding = 'utf-8'
+@use([UTF8])
+
+encoding = "utf_8_sig"
+@use([BOM], 付ける)
+@adverb({[Excelで|]文字化けしない}ように)
+
+errors = x
+@key([エラー対応|エラー処理|エラー],x)
+
+errors = 'strict'
+@key(エラー対応, 厳密)
+@adverb(厳密に)
+
+errors = 'ignore'
+@no(エラー対応) #[は|を][無視する|しない]
+
+mode = 'b'
+@key(モード,'b')
+@use(バイナリモード)
+
+buffering = -1
+@no(バッファリング)
+
+buffering = x
+@key(バッファリング, xバイト)
+@key(バッファの大きさ, x)
+
+flush = False
+@no(フラッシュ)
+
+byteorder = 'big'
+@key(バイトオーダー,ビックエンディアン)
+@use(ビックエンディアン)
+
+byteorder = 'little'
+@key(バイトオーダー,リトルエンディアン)
+@use(リトルエンディアン)
+
+fillchar = c
+@key(パディング,c)
+@type(c,文字)で埋める
+
+tabsize = x
+@key(タブ, 空白x文字[分|])

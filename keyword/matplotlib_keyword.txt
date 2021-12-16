@@ -1,0 +1,66 @@
+
+# http://matplotlib.org/examples/color/colormaps_reference.html
+
+colormap='Accent'
+@key(matplotlib, カラーマップ, アクセント)
+
+# https://note.nkmk.me/python-pandas-plot/
+
+kind='line'
+@key([グラフの種類|グラフ|種類], [折れ線グラフ|線グラフ])
+@use(折れ線グラフ)
+
+kind='bar'
+@use([垂直棒グラフ|棒グラフ|縦棒グラフ|縦方向の棒グラフ])
+@key(グラフの種類, 垂直棒グラフ)
+
+kind='barh' 
+@use([水平棒グラフ|横方向の棒グラフ|横棒グラフ])
+@key(グラフの種類, 水平棒グラフ)
+
+kind='box'
+@use([箱ひげ図|箱髭図|ボックスチャート])
+@key(グラフの種類, 箱ひげ図)
+
+kind='hist'
+@use([ヒストグラム|度数分布図|柱状図|柱状グラフ])
+@key(グラフの種類, ヒストグラム)
+
+kind='kde' 
+@use([カーネル密度推定図|カーネル密度])
+@key(グラフの種類, カーネル密度推定図)
+
+
+kind='density'
+@use([密度推定図|密度推定])
+@key(グラフの種類, 密度推定図)
+
+kind='hexbin'
+@use([六角ビニング|六角ビニング図])
+@key(グラフの種類, 六角ビニング)
+
+kind='area'
+@use(面グラフ)
+@key(グラフの種類, 面グラフ)
+
+kind='scatter'
+@use(散布図)
+@key(グラフの種類, 散布図)
+
+kind='pie'
+@use(円グラフ)
+@key(グラフの種類, 円グラフ)
+
+stacked=True
+@use([積み上げグラフ|積み上げ])
+@key(グラフの種類, 積み上げグラフ)
+
+orientation='horizontal'
+@key(方向, [水平方向|水平])
+@use(水平方向)
+
+alpha=0.5
+@key([アルファ|透過率], 0.5)
+@use(半透明化)
+@adverb(半透明に)
+半分、透過させる
