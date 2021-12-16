@@ -195,10 +195,11 @@ def perform_let_self(pairs, option):
             pairs_let_self.append((sentence_let_self, code_let_self))
             sentence_let_self = sentence_and_then + alt('置き換える|再代入する')
             pairs_let_self.append((sentence_let_self, code_let_self))
-            sentence = transform_verb_and_noun(sentence)
+            noun = alt(option.get('action-with', '結果'))
+            sentence = transform_verb_and_noun(sentence) + noun
         sentence_let_self = sentence + 'を' + name + alt('にする|とする|に代入する')
         pairs_let_self.append((sentence_let_self, code_let_self))
-        sentence_let_self = sentence + alt('を置き換える|を再代入する')
+        sentence_let_self = sentence + alt('で置き換える|を再代入する')
         pairs_let_self.append((sentence_let_self, code_let_self))
     return pairs_let_self
 
@@ -216,7 +217,8 @@ def perform_inplace(pairs, option):
         if sentence_and_then:
             sentence_inplace = sentence_and_then + alt('インプレースする|置き換える|書き換える')
             pairs_inplace.append((sentence_inplace, code_inplace))
-            sentence = transform_verb_and_noun(sentence)
+            noun = alt(option.get('action-with', '結果'))
+            sentence = transform_verb_and_noun(sentence) + noun
         sentence_inplace = sentence + alt('でインプレースする|で置き換える|で書き換える')
         pairs_inplace.append((sentence_inplace, code_inplace))
     return pairs_inplace

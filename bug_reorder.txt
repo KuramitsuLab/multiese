@@ -1,0 +1,6 @@
+a % 2 == 0      @@not?.if @@not?.andor @@while
+aが偶数かどうか
+
+
+pd.cut(df['birth_year'], bins_num, label=False)   @@let
+ビン数をbins_num、ビンのラベルを[0始まりの連番|インデックス|整数値]として、@type(df)の@type('birth_year')をビン分割する
