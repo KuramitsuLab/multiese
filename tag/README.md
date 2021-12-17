@@ -1,7 +1,7 @@
 各ファイルについてメモ
 
 ## タグ付け前
-* hagemashi_corpus_Multiese.txt  
+### hagemashi_corpus_Multiese.txt  
 ー励まし文  
 ー入力文  
 形式の励ましコーパス。
