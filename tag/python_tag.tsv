@@ -1,0 +1,625 @@
+python: 160番目までの列を表示させる	pd.set_option('display.max_columns', 160)
+python: 最大表示列数を160列に指定する	pd.set_option('display.max_columns', 160)
+python: 最大表示列数を指定する	pd.set_option('display.max_columns', 160)
+python: 最大表示列数を160列にする	pd.set_option('display.max_columns', 160)
+python: 160番まで列を表示できるように設定する	pd.set_option('display.max_columns', 160)
+python: 160番まで列を表示できるようにセットする	pd.set_option('display.max_columns', 160)
+python: 160番目まで列を表示できるように設定する	pd.set_option('display.max_columns', 160)
+python: シフトJISを用いる	encoding = 'shift_jis'
+python: shift-jisを用いる	encoding = 'shift_jis'
+python: 文字コードはシフトJISを用いる	encoding = 'shift_jis'
+python: 文字コードはシフトJIS	encoding = 'shift_jis'
+python: 文字コードをシフトJISに設定する	encoding = 'shift_jis'
+python: 文字コードをシフトJISに変更する	encoding = 'shift_jis'
+python: シフトJISに文字コードを指定する	encoding = 'shift_jis'
+python: ヘッダーを含まない	header = None
+python: ヘッダーを指定しない	header = None
+python: ヘッダーはなし	header = None
+python: ヘッダーがなし	header = None
+python: ヘッダー無し	header = None
+python: 0行目をヘッダーとして認識しない	header = None
+python: 0行目をヘッダーとしない	header = None
+python: 先頭行をヘッダーとして認識しない	header = None
+python: 列名なし	header = None
+python: 列名いらない	header = None
+python: 色を'red'とする	color = 'red'
+python: フォントサイズを20とする	fontsize = 20
+python: 文字の大きさを20とする	fontsize = 20
+python: フォントサイズを20にする	fontsize = 20
+python: 文字の大きさを20にする	fontsize = 20
+python: 20に文字の大きさをする	fontsize = 20
+python: エクセルデータ'file.xlsx'を表データに読む	pd.read_excel('file.xlsx')
+python: エクセル'file.xlsx'を表データとして読む	pd.read_excel('file.xlsx')
+python: エクセルデータ'file.xlsx'を表として読む	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'からデータフレームを読み込む	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'から読み込む	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'から表を読む	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を読み込む	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を読む	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'をデータフレームにする	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を読み込んで表にする	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を読み込んで表データにする	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を読み込んでデータフレームに格納する	pd.read_excel('file.xlsx')
+python: 表にエクセルファイル'file.xlsx'を格納する	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'をデータフレームに格納する	pd.read_excel('file.xlsx')
+python: 表データとして読み込む	pd.read_excel('file.xlsx')
+python: 'file.xlsx'というエクセルファイルを読む	pd.read_excel('file.xlsx')
+python: 'file.xlsx'という名前のエクセルファイルを表データとして読み込む	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'の0番目のシートをデータフレームに読み込む	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを表に読む	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを表として読み込む	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートから表を読み込む	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートから読み込む	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートから表データを読む	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを指定して読み込む	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを読み込む	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを読む	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを読み込んでデータフレームにする	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを読み込んで表にする	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを表とする	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを読み込んでデータフレームに格納する	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを読み込んで表データに格納する	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを表に格納する	pd.read_excel('file.xlsx', sheet_name=0)
+python: 'file.xlsx'という名前のエクセルファイルの0番目のシートを表として読み込む	pd.read_excel('file.xlsx', sheet_name=0)
+python: 'file.xlsx'というエクセルファイルの0番目のシートを読む	pd.read_excel('file.xlsx', sheet_name=0)
+python: 'file.xlsx'という名前のエクセルファイルの0番目のシートをデータフレームとして読む	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の全てのシートをデータフレームに読み込む	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全部のシートを表に読み込む	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全部のシートを表に読む	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートから表を読み込む	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートからデータフレームを読み込む	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートから表を読む	pd.read_excel('file.xlsx', sheet_name=None)
+python: 読み込む	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを読み込む	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを読む	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートをデータフレームにする	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートをデータフレームとする	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを表データとする	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートをデータフレームに格納する	pd.read_excel('file.xlsx', sheet_name=None)
+python: データフレームにエクセルファイル'file.xlsx'の全てのシートを格納する	pd.read_excel('file.xlsx', sheet_name=None)
+python: 表にエクセルファイル'file.xlsx'の全てのシートを格納する	pd.read_excel('file.xlsx', sheet_name=None)
+python: 'file.xlsx'という名前のエクセルファイルの全てのシートを表データとして読み込む	pd.read_excel('file.xlsx', sheet_name=None)
+python: 'file.xlsx'というエクセルファイルの全てのシートを読む	pd.read_excel('file.xlsx', sheet_name=None)
+python: 'file.xlsx'というエクセルファイルの全てのシートを読み込む	pd.read_excel('file.xlsx', sheet_name=None)
+python: 'file.csv'を表として読み込む	pd.read_csv('file.csv')
+python: 'file.csv'から読む	pd.read_csv('file.csv')
+python: 'file.csv'ファイルから読む	pd.read_csv('file.csv')
+python: 'file.csv'から読み込む	pd.read_csv('file.csv')
+python: 表データをファイル'file.csv'から読む	pd.read_csv('file.csv')
+python: 表をファイル'file.csv'から読む	pd.read_csv('file.csv')
+python: CSVファイル'file.csv'を表データとして読み込む	pd.read_csv('file.csv')
+python: CSVデータ'file.csv'から読み込む	pd.read_csv('file.csv')
+python: CSV'file.csv'をデータフレームとして読む	pd.read_csv('file.csv')
+python: CSVファイル'file.csv'からデータフレームを読み込む	pd.read_csv('file.csv')
+python: CSVデータ'file.csv'から表を読む	pd.read_csv('file.csv')
+python: CSV'file.csv'から表データを読む	pd.read_csv('file.csv')
+python: 'file.csv'をデータフレームに格納する	pd.read_csv('file.csv')
+python: データフレームに'file.csv'ファイルを格納する	pd.read_csv('file.csv')
+python: 表データに'file.csv'ファイルを格納する	pd.read_csv('file.csv')
+python: CSVファイル'file.csv'をデータフレームに格納する	pd.read_csv('file.csv')
+python: CSVデータ'file.csv'を表に格納する	pd.read_csv('file.csv')
+python: CSV'file.csv'を表データに格納する	pd.read_csv('file.csv')
+python: 'file.csv'をカンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: 'file.csv'ファイルを','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: ','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: カンマ区切りで'file.csv'を読み込む	pd.read_csv('file.csv', sep=',')
+python: ','区切りでファイル'file.csv'を読む	pd.read_csv('file.csv', sep=',')
+python: ','区切りで'file.csv'を読む	pd.read_csv('file.csv', sep=',')
+python: 'file.csv'からデータフレームをカンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: ファイル'file.csv'から表データを','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: 'file.csv'ファイルから表をカンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: データフレームを'file.csv'からカンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: 表データをファイル'file.csv'から','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: データフレームをファイル'file.csv'からカンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: データフレームとして'file.csv'をカンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: 'file.csv'ファイルを','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: 表データとして'file.csv'を','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: CSVファイル'file.csv'をカンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: CSV'file.csv'を','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: カンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: データフレームをCSVファイル'file.csv'からカンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: 表データをCSV'file.csv'から','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: 表をCSVデータ'file.csv'から','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: データフレームとしてCSVファイル'file.csv'をカンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: CSV'file.csv'を表データとして','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: CSV'file.csv'を','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: 'file.csv'をタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: 'file.csv'ファイルをタブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: ファイル'file.csv'をタブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: タブ区切りで'file.csv'を読み込む	pd.read_csv('file.csv', sep='\t')
+python: タブ区切りで'file.csv'ファイルを読み込む	pd.read_csv('file.csv', sep='\t')
+python: タブ区切りでファイル'file.csv'を読む	pd.read_csv('file.csv', sep='\t')
+python: 'file.csv'からデータフレームをタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: 'file.csv'から表データをタブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: 'file.csv'から表をタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: データフレームを'file.csv'からタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: 表を'file.csv'からタブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: 表をファイル'file.csv'からタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: 表として'file.csv'をタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: データフレームとして'file.csv'ファイルをタブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: タブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: CSVファイル'file.csv'をタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: CSVデータ'file.csv'をタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: タブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: データフレームをCSVファイル'file.csv'からタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: 表をCSVデータ'file.csv'からタブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: 表データをCSV'file.csv'からタブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: データフレームとしてCSVファイル'file.csv'をタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: CSVデータ'file.csv'を表としてタブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: 表としてCSVデータ'file.csv'をタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: ヘッダーなしで'file.csv'を読み込む	pd.read_csv('file.csv', header=None)
+python: ヘッダーなしでファイル'file.csv'を読む	pd.read_csv('file.csv', header=None)
+python: ヘッダーなしで'file.csv'を読む	pd.read_csv('file.csv', header=None)
+python: 列名を読み込む	pd.read_csv('file.csv', header=None)
+python: 列名をなしで'file.csv'ファイルを読む	pd.read_csv('file.csv', header=None)
+python: 指定せずに'file.csv'ファイルをヘッダーを読む	pd.read_csv('file.csv', header=None)
+python: 一番左の列をインデックスと設定して、'file.csv'を表として読み込む	pd.read_csv('file.csv', index_col=0)
+python: 0番目の列をインデックスに指定して、ファイル'file.csv'を読み込む	pd.read_csv('file.csv', index_col=0)
+python: 一番左の列をインデックスにセットして、'file.csv'を読み込む	pd.read_csv('file.csv', index_col=0)
+python: 列番号0をインデックスとして'file.csv'から表を読み込む	pd.read_csv('file.csv', index_col=0)
+python: 列番号0をインデックスに設定してファイル'file.csv'から読み込む	pd.read_csv('file.csv', index_col=0)
+python: 列番号0をインデックスと設定して'file.csv'ファイルから表データを読み込む	pd.read_csv('file.csv', index_col=0)
+python: 列番号0をインデックスとして'file.csv'をデータフレームに格納する	pd.read_csv('file.csv', index_col=0)
+python: インデックスにファイル'file.csv'を列番号0を格納する	pd.read_csv('file.csv', index_col=0)
+python: インデックスにして'file.csv'ファイルを列番号0を格納する	pd.read_csv('file.csv', index_col=0)
+python: エンコーディングをシフトJISとして'file.csv'を読み込む	pd.read_csv('file.csv', encoding='shift_jis')
+python: ファイル'file.csv'をシフトJISとしてエンコーディングを読み込む	pd.read_csv('file.csv', encoding='shift_jis')
+python: シフトJISとして'file.csv'ファイルをエンコーディングを読む	pd.read_csv('file.csv', encoding='shift_jis')
+python: 文字コードがシフトJISのファイル'file.csv'を読み込む	pd.read_csv('file.csv', encoding='shift_jis')
+python: 文字コードがシフトJISの'file.csv'を読む	pd.read_csv('file.csv', encoding='shift_jis')
+python: 文字コードがシフトJISのデータ'file.csv'を読む	pd.read_csv('file.csv', encoding='shift_jis')
+python: dfをエクセルファイル'out.xlsx'に書き出す	df.to_excel('out.xlsx')
+python: エクセルファイル'out.xlsx'に表dfを書き出す	df.to_excel('out.xlsx')
+python: df表をエクセルファイル'out.xlsx'に書き込む	df.to_excel('out.xlsx')
+python: dfをエクセルファイル'out.xlsx'に変換する	df.to_excel('out.xlsx')
+python: エクセルファイル'out.xlsx'にdfを変換する	df.to_excel('out.xlsx')
+python: エクセルファイル'out.xlsx'にdf表を変換する	df.to_excel('out.xlsx')
+python: dfをエクセルファイル'out.xlsx'というファイル名で書き込む	df.to_excel('out.xlsx')
+python: dfをエクセルファイル'out.xlsx'という名前で書き出す	df.to_excel('out.xlsx')
+python: df表をエクセルファイル'out.xlsx'というファイル名で書き込む	df.to_excel('out.xlsx')
+python: dfをエクセルファイル'out.xlsx'というファイル名で保存する	df.to_excel('out.xlsx')
+python: 表dfをエクセルファイル'out.xlsx'というファイル名で保存する	df.to_excel('out.xlsx')
+python: df表をエクセルファイル'out.xlsx'というファイル名で保存する	df.to_excel('out.xlsx')
+python: dfを'out.xlsx'というファイル名でエクセル形式に書き込む	df.to_excel('out.xlsx')
+python: 'out.xlsx'というファイル名でエクセル形式にdf表を書き込む	df.to_excel('out.xlsx')
+python: 'out.xlsx'というファイル名でエクセルファイルに表dfを書き出す	df.to_excel('out.xlsx')
+python: dfを'out.xlsx'というファイル名でエクセル形式で保存する	df.to_excel('out.xlsx')
+python: 表dfを'out.xlsx'というファイル名でエクセル形式で保存する	df.to_excel('out.xlsx')
+python: df表を'out.xlsx'というファイル名でエクセル形式で保存する	df.to_excel('out.xlsx')
+python: dfから'out.xlsx'という名前でエクセルファイルに変換する	df.to_excel('out.xlsx')
+python: dfから'out.xlsx'という名前のエクセルファイルに変換する	df.to_excel('out.xlsx')
+python: 表dfから'out.xlsx'というエクセルファイルにする	df.to_excel('out.xlsx')
+python: dfを'out.csv'に書き込む	df.to_csv('out.csv')
+python: 'out.csv'にdf表を書き込む	df.to_csv('out.csv')
+python: dfを'out.csv'に書き出す	df.to_csv('out.csv')
+python: dfを'out.csv'に変換する	df.to_csv('out.csv')
+python: df表を'out.csv'にする	df.to_csv('out.csv')
+python: dfを'out.csv'にする	df.to_csv('out.csv')
+python: dfを'out.csv'というファイル名で	df.to_csv('out.csv')
+python: 表dfを'out.csv'というファイル名で	df.to_csv('out.csv')
+python: df表を'out.csv'というファイル名で	df.to_csv('out.csv')
+python: dfを'out.csv'というファイル名でCSVファイルに保存する	df.to_csv('out.csv')
+python: 表dfを'out.csv'という名前に設定して保存する	df.to_csv('out.csv')
+python: 表dfを'out.csv'という名前でCSVファイルに保存する	df.to_csv('out.csv')
+python: dfを'out.csv'にして保存する	df.to_csv('out.csv')
+python: 'out.csv'にdf表をして保存する	df.to_csv('out.csv')
+python: 'out.csv'にdf表をセットして保存する	df.to_csv('out.csv')
+python: dfから'out.csv'という名前でCSVファイルに変換する	df.to_csv('out.csv')
+python: 表dfから'out.csv'という名前でCSVファイルに変換する	df.to_csv('out.csv')
+python: dfから'out.csv'という名前でCSVデータにする	df.to_csv('out.csv')
+python: dfの先頭の5行	df.head()
+python: df表の先頭の5行	df.head()
+python: 表dfの上5行	df.head()
+python: とりあえずdfの内容をチェック	df.head()
+python: とりあえず表dfの内容をチェックする	df.head()
+python: dfの内容をチェック	df.head()
+python: dfの先頭の10行	df.head(10)
+python: 表dfの先頭の10行	df.head(10)
+python: df表の先頭の10行	df.head(10)
+python: dfの末尾の5行	df.tail()
+python: dfの末尾5行	df.tail()
+python: dfの最後の5行	df.tail()
+python: dfの末尾の10行	df.tail(10)
+python: df表の末尾の10行	df.tail(10)
+python: 表dfの末尾の10行	df.tail(10)
+python: dfの100行目から106行目まで	df[100:106]
+python: df表の100行目から106行目まで	df[100:106]
+python: 表dfの100行目から106行目まで	df[100:106]
+python: dfの100行目から最後まで	df[100:]
+python: 表dfの100行目から最後まで	df[100:]
+python: dfの100行目より後ろ	df[100:]
+python: 表dfの100行目より後ろ	df[100:]
+python: df表の100行目より後ろ	df[100:]
+python: dfの最初から100行目まで	df[:100]
+python: df表の最初から100行目まで	df[:100]
+python: df表の先頭から100行目まで	df[:100]
+python: dfの100行目まで	df[:100]
+python: df表の100行目まで	df[:100]
+python: df表の100行目より前	df[:100]
+python: dfの'age'を抽出する	df['age']
+python: 表dfのコラム'age'を抽出する	df['age']
+python: df表の'age'コラムを選択する	df['age']
+python: dfの'name'と'age'を抽出する	df[['name','age']]
+python: df表の'name'カラム、'age'コラムを抽出する	df[['name','age']]
+python: df表の'name'カラム、'age'コラムを選択する	df[['name','age']]
+python: dfの'name'と'age'と'GPA'を抽出する	df[['name','age','GPA']]
+python: 表dfのコラム'name'、コラム'age'、列'GPA'を抽出する	df[['name','age','GPA']]
+python: 表dfのコラム'name'とコラム'age'と列'GPA'を選択する	df[['name','age','GPA']]
+python: dfの'name'と'age'と'GPA'と'addr'を抽出する	df[['name','age','GPA', 'addr']]
+python: df表の'name'コラム、'age'コラム、'GPA'列、'addr'コラムを抽出する	df[['name','age','GPA', 'addr']]
+python: 表dfのコラム'name'とコラム'age'と列'GPA'とコラム'addr'を抽出する	df[['name','age','GPA', 'addr']]
+python: df中のインデックスが100の行	df.loc[100]
+python: dfの中のインデックスが100の行	df.loc[100]
+python: 表dfの中のインデックスが100の行	df.loc[100]
+python: df内の1,2,4行目の0,2列目	df.iloc[[1,2,4],[0,2]]
+python: dfの中の1,2,4行目の0,2列目	df.iloc[[1,2,4],[0,2]]
+python: 表df中の1,2,4行目の0,2列目	df.iloc[[1,2,4],[0,2]]
+python: dfのデータの詳細	df.info()
+python: dfのデータの性質	df.info()
+python: 表dfのデータの詳細	df.info()
+python: dfの要約統計量	df.describe()
+python: 表dfの統計情報	df.describe()
+python: 表dfの要約統計量	df.describe()
+python: dfの数値データ以外の統計情報	df.describe(include='O')
+python: 表dfの数値データ以外の統計情報	df.describe(include='O')
+python: dfのオブジェクトデータの要約統計量	df.describe(include='O')
+python: dfの'age'についての要約統計量	df['age'].describe()
+python: 表dfのコラム'age'についての要約統計量	df['age'].describe()
+python: df表の'age'コラムについての要約統計量	df['age'].describe()
+python: (df['age'])の要約統計量	df['age'].describe()
+python: (df['age'])の統計情報	df['age'].describe()
+python: dfの'age'についての平均値	df['age'].mean()
+python: 表dfのコラム'age'についての平均値	df['age'].mean()
+python: df表の'age'コラムについての平均値	df['age'].mean()
+python: (df['age'])の平均	df['age'].mean()
+python: dfの'age'についての中央値	df['age'].median()
+python: df表の'age'コラムについての中央値	df['age'].median()
+python: 表dfのコラム'age'についての中央値	df['age'].median()
+python: (df['age'])の中央値	df['age'].median()
+python: dfの'age'についての最頻値	df['age'].mode()
+python: df表の'age'コラムについての最頻値	df['age'].mode()
+python: 表dfのコラム'age'についての最頻値	df['age'].mode()
+python: (df['age'])の最頻値	df['age'].mode()
+python: dfの'age'についての標準偏差	df['age'].std()
+python: 表dfのコラム'age'についての標準偏差	df['age'].std()
+python: df表の'age'コラムについての標準偏差	df['age'].std()
+python: (df['age'])の標準偏差	df['age'].std()
+python: dfの'age'についての分散	df['age'].var()
+python: 表dfのコラム'age'についての分散	df['age'].var()
+python: df表の'age'コラムについての分散	df['age'].var()
+python: (df['age'])の分散	df['age'].var()
+python: dfの列名	df.columns
+python: 表dfの列の名前	df.columns
+python: 表dfの列名	df.columns
+python: dfのインデックス名	df.index
+python: df表の行名	df.index
+python: dfの行名	df.index
+python: dfのバリュー	df.values
+python: 表dfの要素	df.values
+python: df表の要素	df.values
+python: dfの'G3'のバリュー	df['G3'].values
+python: 表dfの列'G3'のバリュー	df['G3'].values
+python: df表の'G3'列のバリュー	df['G3'].values
+python: dfのデータ型	df.dtypes
+python: 表dfのデータ型	df.dtypes
+python: df表のデータ型	df.dtypes
+python: dfの行数や列数	df.shape
+python: df表の行数と列数	df.shape
+python: 表dfの形状	df.shape
+python: dfの'weather'の各要素の出現回数	df['weather'].value_counts()
+python: dfの'weather'のそれぞれのデータの出現回数	df['weather'].value_counts()
+python: df表の'weather'コラムのそれぞれのデータの出現回数	df['weather'].value_counts()
+python: dfの'remarks'の一意の値	df['remarks'].unique()
+python: df表の'remarks'カラムの一意の値	df['remarks'].unique()
+python: df表の'remarks'カラムのデータの種類	df['remarks'].unique()
+python: dfの'remarks'のユニークな要素の数	df['remarks'].nunique()
+python: 表dfの列'remarks'のユニークな要素の数	df['remarks'].nunique()
+python: 表dfの列'remarks'のデータの種類の数	df['remarks'].nunique()
+python: dfのカラム名を'sale'から'sales'にリネームする	df.rename(columns={'sale': 'sales'})
+python: 表dfのカラム名を'sale'から'sales'にリネームする	df.rename(columns={'sale': 'sales'})
+python: 表dfの列名を変更する	df.rename(columns={'sale': 'sales'})
+python: dfの'sale'の名前を'sales'に変更する	df.rename(columns={'sale': 'sales'})
+python: 表dfの列'sale'の名前を'sales'にリネームする	df.rename(columns={'sale': 'sales'})
+python: 'sales'にdfの'sale'の名前をリネームする	df.rename(columns={'sale': 'sales'})
+python: dfのカラム名を'sale'から'sales'に'prof'から'profit'にリネームする	df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'sale'から'sales'に表dfのカラム名を'prof'から'profit'にリネームする	df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'sale'から'sales'に'prof'から'profit'に表dfの列名をリネームする	df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfの'sale'の名前を'sales'に'prof'の名前を'profit'にリネームする	df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'sales'にdf表の'sale'列の名前を'profit'に'prof'カラムの名前をリネームする	df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'sales'に'prof'カラムの名前をdf表の'sale'列の名前を'profit'にリネームする	df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfのインデックス名を'ONE'から'Row_1'にリネームする	df.rename(index={'ONE': 'Row_1'})
+python: 'ONE'から'Row_1'にdfのインデックス名をリネームする	df.rename(index={'ONE': 'Row_1'})
+python: 表dfの行の名前を'ONE'から'Row_1'にリネームする	df.rename(index={'ONE': 'Row_1'})
+python: dfの'ONE'の名前を'Row_1'にリネームする	df.rename(index={'ONE': 'Row_1'})
+python: df表の'ONE'インデックスの名前を'Row_1'にリネームする	df.rename(index={'ONE': 'Row_1'})
+python: 'Row_1'に表dfのインデックス'ONE'の名前をリネームする	df.rename(index={'ONE': 'Row_1'})
+python: dfの'datetime'をインデックスに設定する	df.set_index('datetime')
+python: 表dfのカラム'datetime'をインデックスとして指定する	df.set_index('datetime')
+python: df表の'datetime'カラムをインデックスに指定する	df.set_index('datetime')
+python: リセットする	df.reset_index()
+python: 表dfのインデックスを振り直す	df.reset_index()
+python: df表のインデックスをリセットする	df.reset_index()
+python: dfの元のインデックスをリセットする	df.reset_index(drop=True)
+python: 表dfの元のインデックスをリセットする	df.reset_index(drop=True)
+python: df表の元のインデックスをリセットする	df.reset_index(drop=True)
+python: dfのリセットセットして、元のインデックスを削除する	df.reset_index(drop=True)
+python: 表dfの振り直して、元のインデックスを削除する	df.reset_index(drop=True)
+python: dfのリセット、元のインデックスを削除する	df.reset_index(drop=True)
+python: dfの'date'を日付型に変換する	pd.to_datetime(df['date'])
+python: 日付型に表dfのコラム'date'をする	pd.to_datetime(df['date'])
+python: 日付型に表dfのコラム'date'を変換する	pd.to_datetime(df['date'])
+python: フォーマットを指定してdfの'date'をdatetime型に変換する	pd.to_datetime(df['date'], format='%Y-%m-%d')
+python: 表dfのコラム'date'をフォーマットをdatetime型にする	pd.to_datetime(df['date'], format='%Y-%m-%d')
+python: 表dfのコラム'date'をdatetime型にフォーマットを変換する	pd.to_datetime(df['date'], format='%Y-%m-%d')
+python: dfの'date'の年	df['date'].dt.year
+python: 表dfのコラム'date'の年	df['date'].dt.year
+python: df表の'date'コラムの年	df['date'].dt.year
+python: dfの'date'の月	df['date'].dt.month
+python: df表の'date'コラムの月	df['date'].dt.month
+python: 表dfのコラム'date'の月	df['date'].dt.month
+python: dfの'date'の日にち	df['date'].dt.day
+python: df表の'date'コラムの日にち	df['date'].dt.day
+python: 表dfのコラム'date'の日にち	df['date'].dt.day
+python: dfの'date'の時間	df['date'].dt.hour
+python: df表の'date'コラムの時間	df['date'].dt.hour
+python: 表dfのコラム'date'の時間	df['date'].dt.hour
+python: dfの'date'の分	df['date'].dt.minute
+python: df表の'date'コラムの分	df['date'].dt.minute
+python: 表dfのコラム'date'の分	df['date'].dt.minute
+python: dfの'date'の秒	df['date'].dt.second
+python: 表dfのコラム'date'の秒	df['date'].dt.second
+python: df表の'date'コラムの秒	df['date'].dt.second
+python: dfの'date'の曜日	df['date'].dt.weekday_name
+python: df表の'date'コラムの曜日	df['date'].dt.weekday_name
+python: 表dfのコラム'date'の曜日	df['date'].dt.weekday_name
+python: dfの'date'の曜日の数値型	df['date'].dt.dayofweek
+python: df表の'date'コラムの曜日の数値型	df['date'].dt.dayofweek
+python: 表dfのコラム'date'の曜日の数値型	df['date'].dt.dayofweek
+python: dfの'temperature'内の前後の行の差分	df['temperature'].diff(periods=1)
+python: 表dfのコラム'temperature'中の前後の行の差分	df['temperature'].diff(periods=1)
+python: df表の'temperature'コラム内の前後の行の差分	df['temperature'].diff(periods=1)
+python: dfの相関	df.corr()
+python: 表dfの相関	df.corr()
+python: df表の相関	df.corr()
+python: dfの'kcal'と'sales'の相関係数	df[['kcal', 'sales']].corr()
+python: 表dfのコラム'kcal'とコラム'sales'の相関	df[['kcal', 'sales']].corr()
+python: dfの'kcal'と'sales'の相関	df[['kcal', 'sales']].corr()
+python: dfの行と列を入れ替える	df.T
+python: df表の行列を入れ替える	df.T
+python: 表dfの行列を入れ替える	df.T
+python: dfを転置する	df.T
+python: df表を転置する	df.T
+python: 表dfを転置する	df.T
+python: dfの'city'が'Tokyo'のデータ	df[df['city'] == 'Tokyo']
+python: 表dfの列'city'が'Tokyo'のデータ	df[df['city'] == 'Tokyo']
+python: df表の'city'列が'Tokyo'のデータ	df[df['city'] == 'Tokyo']
+python: dfの'year'が1990より大きいデータ	df[df['year'] > 1990]
+python: dfの'year'が1990より多いデータ	df[df['year'] > 1990]
+python: df表の'year'が1990より大きいデータ	df[df['year'] > 1990]
+python: dfの'year'が1990以上のデータ	df[df['year'] >= 1990]
+python: df表の'year'が1990以上のデータ	df[df['year'] >= 1990]
+python: 表dfの'year'が1990以上のデータ	df[df['year'] >= 1990]
+python: dfの'year'が1990より小さいデータ	df[df['year'] < 1990]
+python: 表dfの'year'が1990より少ないデータ	df[df['year'] < 1990]
+python: 1990よりdfの'year'が小さいデータ	df[df['year'] < 1990]
+python: dfの'year'が1990以下のデータ	df[df['year'] <= 1990]
+python: 表dfの'year'が1990以下のデータ	df[df['year'] <= 1990]
+python: 1990以下のデータ	df[df['year'] <= 1990]
+python: dfの'city'が'Tokyo'もしくは'Osaka'のデータ	df[df['city'].isin(['Tokyo', 'Osaka'])]
+python: dfの'city'が'Tokyo'か'Osaka'のデータ	df[df['city'].isin(['Tokyo', 'Osaka'])]
+python: dfの'city'が'Tokyo'または'Osaka'のデータ	df[df['city'].isin(['Tokyo', 'Osaka'])]
+python: dfの0行目を取り除く	df.drop(0)
+python: df表の0行目を削除する	df.drop(0)
+python: dfの0行目を消す	df.drop(0)
+python: dfの'price'をドロップする	df.drop('price', axis=1)
+python: dfの'price'を落とす	df.drop('price', axis=1)
+python: 削除する	df.drop('price', axis=1)
+python: dfの'price'と'year'をドロップする	df.drop(['price', 'year'], axis=1)
+python: df表の'price'カラムと'year'をドロップする	df.drop(['price', 'year'], axis=1)
+python: dfの'price'と'year'を取り除く	df.drop(['price', 'year'], axis=1)
+python: df内のNaNが存在する行をドロップする	df.dropna()
+python: 表df内のNaNが存在する行を削除する	df.dropna()
+python: 表dfの中の未入力の値がある行を取り除く	df.dropna()
+python: df内の欠損値を含む行をドロップする	df.dropna()
+python: 表dfの中の未記入の値を含む行を落とす	df.dropna()
+python: 表df中の未記入の値を落とす	df.dropna()
+python: df内の欠損値をsymbolに置換する	df.fillna(symbol)
+python: df表内の欠損値をsymbolに置換する	df.fillna(symbol)
+python: symbolで置き換える	df.fillna(symbol)
+python: df内の欠損値をsymbolで埋める	df.fillna(symbol)
+python: df中のNaNをsymbolで埋める	df.fillna(symbol)
+python: 表df内の欠損値をsymbolとする	df.fillna(symbol)
+python: df内の欠損値を直前の行の値で埋める	df.fillna(method='ffill')
+python: dfの中の未記入の値を直前の行の値で補う	df.fillna(method='ffill')
+python: dfの中の未入力の値を直前の行の値で補う	df.fillna(method='ffill')
+python: df内の欠損値をdfの平均値で埋める	df.fillna(df.mean())
+python: 表df内の欠損値を表dfの平均値で埋める	df.fillna(df.mean())
+python: df表内の欠損をdf表の平均値で埋める	df.fillna(df.mean())
+python: df内の'?'を欠損値に置換し欠損値が存在する行をドロップする	df.replace('?', np.nan).dropna()
+python: 置換しNaNがある行をNaNに表df中の'?'を消す	df.replace('?', np.nan).dropna()
+python: 置換し未記入の値がある行を表df中の'?'を未記入の値に落とす	df.replace('?', np.nan).dropna()
+python: df内に存在する'?'を欠損値に置換する	df.replace('?', np.nan)
+python: df中に存在する'?'を欠損で置換する	df.replace('?', np.nan)
+python: df内に存在する'?'を欠損値で置換する	df.replace('?', np.nan)
+python: df内に存在する'?'を欠損値で埋める	df.replace('?', np.nan)
+python: df中に存在する'?'をNaNで補う	df.replace('?', np.nan)
+python: ある'?'を表dfの中に未入力の値とする	df.replace('?', np.nan)
+python: df1とdf2を横方向にマージする	pd.merge(df1, df2)
+python: df1表とdf2表をくっつける	pd.merge(df1, df2)
+python: df1とdf2を一つにまとめる	pd.merge(df1, df2)
+python: 'id'をキーとしてdf1とdf2をマージする	pd.merge(df1, df2, on='id')
+python: 'id'列をキーとしてマージする	pd.merge(df1, df2, on='id')
+python: 'id'をdf1とdf2をキーとしてマージする	pd.merge(df1, df2, on='id')
+python: df1とdf2に対して'id'をキーとしてデータをマージする	pd.merge(df1, df2, on='id')
+python: df1表とdf2表に対して'id'列をキーとしてデータをマージする	pd.merge(df1, df2, on='id')
+python: データをキーとしてdf1表とdf2表に対して'id'列をマージする	pd.merge(df1, df2, on='id')
+python: 全結合でdf1とdf2をマージする	pd.merge(df1, df2, how='outer')
+python: 両方の列を使ってdf1とdf2をマージする	pd.merge(df1, df2, how='outer')
+python: 片方のテーブルにしかないデータも全て残してdf1表とdf2表をマージする	pd.merge(df1, df2, how='outer')
+python: 左側のデータのインデックスと右側のデータの'index_num'をキーとしてdf1とdf2をマージする	pd.merge(df1, df2, left_index=True, right_on='index_num')
+python: キーとして左側のデータのインデックスと'index_num'をdf1とdf2をマージする	pd.merge(df1, df2, left_index=True, right_on='index_num')
+python: 左側のデータのインデックスとカラム'index_num'をキーとして表df1と表df2をマージする	pd.merge(df1, df2, left_index=True, right_on='index_num')
+python: 左外部結合でdf1とdf2をマージする	pd.merge(df1, df2, how='left')
+python: 左側の表に合わせて表df1と表df2をマージする	pd.merge(df1, df2, how='left')
+python: 左側の表データに合わせてdf1表とdf2表をマージする	pd.merge(df1, df2, how='left')
+python: df1とdf2を縦方向にマージする	pd.concat([df1, df2])
+python: df1表とdf2表を縦向きにマージする	pd.concat([df1, df2])
+python: df1表とdf2表を縦向きでマージする	pd.concat([df1, df2])
+python: df1とdf2を結合する	pd.concat([df1, df2])
+python: 表df1と表df2を結合する	pd.concat([df1, df2])
+python: df1表とdf2表を結合する	pd.concat([df1, df2])
+python: dfの'Pclass'をインデックス'Sex'をカラムとしたピボットテーブルを作成する	df.pivot_table(index='Pclass', columns='Sex')
+python: インデックスカラム'Sex'をカラムとしたピボットテーブルを表dfの列'Pclass'を作成する	df.pivot_table(index='Pclass', columns='Sex')
+python: 列としたピボットテーブルをdfの'Pclass'をインデックス'Sex'を作成する	df.pivot_table(index='Pclass', columns='Sex')
+python: dfの'Age'について'Pclass'をインデックス'Sex'をカラムとしたピボットテーブルを作成する	df.pivot_table(index='Pclass', columns='Sex', values='Age')
+python: カラムとしたピボットテーブルをインデックス'Sex'をdfの'Age'について'Pclass'を作成する	df.pivot_table(index='Pclass', columns='Sex', values='Age')
+python: 表dfのカラム'Age'について列'Pclass'をインデックスカラム'Sex'を列としたピボットテーブルを作成する	df.pivot_table(index='Pclass', columns='Sex', values='Age')
+python: ピボット操作でdfの列を行にリネームする	df.stack()
+python: ピボット操作でdf表の列を行に変更する	df.stack()
+python: ピボット操作で表dfの列を行にリネームする	df.stack()
+python: ピボット操作でdfの行を列に入れ替える	df.unstack()
+python: 列にピボット操作で表dfの行をリネームする	df.unstack()
+python: 列にピボット操作でdf表の行をリネームする	df.unstack()
+python: df内に重複があるのかどうか判定する	df.duplicated()
+python: df表の中に重複はあるのか検出する	df.duplicated()
+python: 表df中に重複があるのかチェック	df.duplicated()
+python: df内の重複を判定する	df.duplicated()
+python: df表中の重複を確認	df.duplicated()
+python: 表df内の重複を判定する	df.duplicated()
+python: dfに重複があるのかどうか	df.duplicated()
+python: 重複があるのかどうdfにか	df.duplicated()
+python: 表dfに重複があるのかどうか	df.duplicated()
+python: dfに重複があるのかどうかをTFで返す	df.duplicated()
+python: 重複があるのかどうTFでかをdfに返す	df.duplicated()
+python: かを重複があるのかどう真偽値で返す	df.duplicated()
+python: dfの行の重複を判定する	df.duplicated()
+python: df表の行の重複を確認	df.duplicated()
+python: 表dfの重複行を検出する	df.duplicated()
+python: df内で重複した行数の合計	df.duplicated().sum()
+python: 表dfの中で重複した行の数の合計	df.duplicated().sum()
+python: dfの中で重複した行の数の合計	df.duplicated().sum()
+python: df内で重複しているデータ	df[df.duplicated()]
+python: dfの中の重複しているデータ	df[df.duplicated()]
+python: df表の中で重複しているデータ	df[df.duplicated()]
+python: df内の'state'に重複があるのかどうか判定する	df.duplicated(subset='state')
+python: 重複があるのかどう表df内のコラム'state'にか判定する	df.duplicated(subset='state')
+python: 重複があるのかどうdf内の'state'にか判定する	df.duplicated(subset='state')
+python: df内の'state'に重複があるのかどうか	df.duplicated(subset='state')
+python: df表内の'state'列に重複はあるのかどうか	df.duplicated(subset='state')
+python: df内の'state'に重複はあるのかどうか	df.duplicated(subset='state')
+python: df内の'state'と'point'にか判定する	df.duplicated(subset=['state', 'point'])
+python: 重複はあるのかどうdf表の中の'state'カラムと'point'コラムにか検出する	df.duplicated(subset=['state', 'point'])
+python: df表中の'state'カラムと'point'コラムに重複があるのかどうか確認	df.duplicated(subset=['state', 'point'])
+python: df内の'state'と'point'に重複があるのかどうか	df.duplicated(subset=['state', 'point'])
+python: df表内の'state'カラムと'point'コラムに重複があるのかどうか	df.duplicated(subset=['state', 'point'])
+python: 表df中のカラム'state'とコラム'point'に重複があるのかどうか	df.duplicated(subset=['state', 'point'])
+python: df内の重複した行をドロップする	df.drop_duplicates()
+python: 表df内の重複した行をドロップする	df.drop_duplicates()
+python: df表の中の重複する行を落とす	df.drop_duplicates()
+python: df内の重複要素がある行をドロップする	df.drop_duplicates()
+python: 表dfの中の重複要素がある行を取り除く	df.drop_duplicates()
+python: 消す	df.drop_duplicates()
+python: 重複した最後の行をドロップする	df.drop_duplicates(keep=False)
+python: 残して表df中の重複している行を重複している最後の行を削除する	df.drop_duplicates(keep=False)
+python: 重複する最後の行を残してdf表の中の重複している行を取り除く	df.drop_duplicates(keep=False)
+python: df内の'state'の重複した行をドロップする	df.drop_duplicates(subset='state')
+python: df中の'state'の重複している行を消す	df.drop_duplicates(subset='state')
+python: df表の中の'state'カラムの重複する行を取り除く	df.drop_duplicates(subset='state')
+python: df内の'state'に重複がある行をドロップする	df.drop_duplicates(subset='state')
+python: 重複がある行をdf表内の'state'カラムに削除する	df.drop_duplicates(subset='state')
+python: df中の'state'に重複がある行を落とす	df.drop_duplicates(subset='state')
+python: 境界値をdata_binsとしてdfの'birth_year'を分割する	pd.cut(df['birth_year'], data_bins)
+python: data_binsリストとしてdf表の'birth_year'列を境界値を分割する	pd.cut(df['birth_year'], data_bins)
+python: 境界値をdata_binsリストとしてdf表の'birth_year'列を分割する	pd.cut(df['birth_year'], data_bins)
+python: ビン数をbins_numとしてdfの'birth_year'を分割する	pd.cut(df['birth_year'], bins_num)
+python: 分割数を表dfの列'birth_year'をbins_numとして分割する	pd.cut(df['birth_year'], bins_num)
+python: bins_numとして分割数をdf表の'birth_year'列を分割する	pd.cut(df['birth_year'], bins_num)
+python: ビン数をbins_num、ビンの名前をgroup_namesとしてdfの'birth_year'を分割する	pd.cut(df['birth_year'], bins_num, label=group_names)
+python: bins_num、ビンの名前を表dfの列'birth_year'をリストgroup_namesとしてビン数を分割する	pd.cut(df['birth_year'], bins_num, label=group_names)
+python: df表の'birth_year'列をgroup_namesリストとしてbins_num、ビンのラベルをビン数を分割する	pd.cut(df['birth_year'], bins_num, label=group_names)
+python: ビン数をbins_num、ビンのラベルを0始まりの連番としてdfの'birth_year'を分割する	pd.cut(df['birth_year'], bins_num, label=False)
+python: 分割数をbins_num、ビンの名前を0始まりの連番として分割する	pd.cut(df['birth_year'], bins_num, label=False)
+python: 分割数をbins_num、ビンの名前を整数値として表dfの列'birth_year'を分割する	pd.cut(df['birth_year'], bins_num, label=False)
+python: dfの'birth_year'を中央値で分割する	pd.qcut(df['birth_year'], 2)
+python: df表の'birth_year'列を中央値で分割する	pd.qcut(df['birth_year'], 2)
+python: 表dfの列'birth_year'を中央値で分割する	pd.qcut(df['birth_year'], 2)
+python: dfの'birth_year'を四分位数ごとで分割する	pd.qcut(df['birth_year'], 4)
+python: 表dfの列'birth_year'を四分位数ごとで分割する	pd.qcut(df['birth_year'], 4)
+python: df表の'birth_year'列を四分位数ごとで分割する	pd.qcut(df['birth_year'], 4)
+python: ビン数をbins_numとしてdfの'birth_year'をビンに含まれる個数が等しくなるように分割する	pd.qcut(df['birth_year'], bins_num)
+python: ビンに含まれる個数が等しくなるようにビン数をbins_numとして表dfの列'birth_year'を分割する	pd.qcut(df['birth_year'], bins_num)
+python: ビン数をビンに含まれる個数が等しくなるようにbins_numとしてdf表の'birth_year'列を分割する	pd.qcut(df['birth_year'], bins_num)
+python: dfの'flg-50K'をグループ化したときの値ごとのデータ件数	df.groupby('flg-50K').size()
+python: df表の'flg-50K'列をグループ化したときの値ごとのデータの件数	df.groupby('flg-50K').size()
+python: df表の'flg-50K'列をグループ化したときの値ごとのデータ件数	df.groupby('flg-50K').size()
+python: dfの'month'と'period'ごとの'sales'の値の合計値	df.groupby(['month', 'period'])['sales'].sum()
+python: 表dfの列'month'とコラム'period'ごとの列'sales'の値の合計値	df.groupby(['month', 'period'])['sales'].sum()
+python: dfの'month'と'period'ごとの'sales'の値の和	df.groupby(['month', 'period'])['sales'].sum()
+python: dfの'weather'ごとの'temperature'の平均	df.groupby(['weather'])['temperature'].mean()
+python: 表dfの列'weather'ごとの列'temperature'の平均値	df.groupby(['weather'])['temperature'].mean()
+python: df表の'weather'列ごとの'temperature'列の平均	df.groupby(['weather'])['temperature'].mean()
+python: dfのtype('week', カラム)ごとの'soldout'の数	df.groupby(['week'])['soldout'].count()
+python: df表のtype('week', コラム)ごとの'soldout'カラムの数	df.groupby(['week'])['soldout'].count()
+python: df表のtype('week', 列)ごとの'soldout'カラムの数	df.groupby(['week'])['soldout'].count()
+python: 昇順に=順に	降順に=逆順に|大きい順に|大から小へと|値が大きい順に
+python: =順に昇順に	降順に=逆順に|大きい順に|大から小へと|値が大きい順に
+python: インデックスで昇順にソートする	df.sort_index()
+python: 表dfをインデックスでソート	df.sort_index()
+python: dfをインデックスで並び替える	df.sort_index()
+python: df全体をインデックスを軸に昇順でソートする	df.sort_index()
+python: インデックスをdf表全体を軸に昇順でソートする	df.sort_index()
+python: インデックスをdfを軸に昇順でソートする	df.sort_index()
+python: df全体をインデックスに基づいて昇順でソートする	df.sort_index()
+python: df表をインデックスに沿ってソートする	df.sort_index()
+python: df表をインデックスに基づいて昇順でソートする	df.sort_index()
+python: dfを'sales'と'temperature'で昇順にソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: 'sales'コラムと'temperature'カラムでdf表全体を昇順にソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: 表dfをコラム'sales'とカラム'temperature'で昇順にソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'を軸に昇順でソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: df表を'sales'コラムと'temperature'カラムを元にソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: 'sales'と'temperature'をdfを元にソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'に基づいて昇順でソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'に沿ってソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: df表全体を'sales'コラムと'temperature'カラムに基づいて昇順でソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfの'sales'と'temperature'を降順にソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfの'sales'と'temperature'を逆順にソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: 表dfのカラム'sales'とコラム'temperature'を降順にソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: df全体を'sales'で昇順にソートする	df.sort_values('sales')
+python: 'sales'でdfをソートする	df.sort_values('sales')
+python: 表dfをカラム'sales'でソートする	df.sort_values('sales')
+python: df全体を'sales'を軸に昇順でソートする	df.sort_values('sales')
+python: 表dfをカラム'sales'を元にソートする	df.sort_values('sales')
+python: 表df全体をカラム'sales'を軸に昇順でソートする	df.sort_values('sales')
+python: dfを'sales'に基づいて昇順でソートする	df.sort_values('sales')
+python: df全体を'sales'に基づいて昇順でソートする	df.sort_values('sales')
+python: df表を'sales'カラムに沿ってソートする	df.sort_values('sales')
+python: dfの'sales'を降順にソートする	df.sort_values('sales')
+python: dfの'sales'を逆順にソートする	df.sort_values('sales')
+python: df表の'sales'コラムを降順にソートする	df.sort_values('sales')
+python: df内の欠損値の合計	df.isnull().sum()
+python: 表df中のNaNの合計値	df.isnull().sum()
+python: 表df中のNaNの和	df.isnull().sum()
+python: df内にいくつ欠損値があるのかカウントする	df.isnull().sum()
+python: df内にいくつ欠損値があるか確認	df.isnull().sum()
+python: df表中にいくつ欠損値があるのかカウントする	df.isnull().sum()
+python: df内のそれぞれのカラムにある'?'の個数の和	df.isin(['?']).sum()
+python: dfの中のそれぞれの列にある'?'の数の数	df.isin(['?']).sum()
+python: df中のそれぞれのコラムにある'?'の個数	df.isin(['?']).sum()
+python: df内のカラムそれぞれに存在する'?'の個数の和	df.isin(['?']).sum()
+python: df表内のカラムそれぞれに存在する'?'の個数の合計	df.isin(['?']).sum()
+python: 表df内のカラムに存在する'?'の個数の合計	df.isin(['?']).sum()
+python: df内のカテゴリ変数をダミー変数化する	pd.get_dummies(df)
+python: df内のカテゴリ変数をダミー変数に変換する	pd.get_dummies(df)
+python: df中のカテゴリ変数をダミー変数にする	pd.get_dummies(df)
+python: dfについてダミー変数を作る	pd.get_dummies(df)
+python: 表dfについてダミー変数を作成する	pd.get_dummies(df)
+python: つくる	pd.get_dummies(df)
+python: dfをダミー変数化する	pd.get_dummies(df)
+python: 表dfをダミー変数化する	pd.get_dummies(df)
+python: df表をダミー変数化する	pd.get_dummies(df)
+python: dfの'sex'をダミー変数化する	pd.get_dummies(df['sex'])
+python: df表の'sex'列をダミー変数化する	pd.get_dummies(df['sex'])
+python: 表dfの列'sex'をダミー変数化する	pd.get_dummies(df['sex'])
+python: dfの'sex'についてダミー変数を生成する	pd.get_dummies(df['sex'])
+python: 表dfの列'sex'についてダミー変数を作成する	pd.get_dummies(df['sex'])
+python: 表dfの列'sex'についてダミー変数を作る	pd.get_dummies(df['sex'])
