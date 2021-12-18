@@ -1,14 +1,10 @@
 
 # 設定 
-# TODO : リセットも入れる？
 
 pd.set_option('display.max_columns', 160)
 160番目までの[カラム|コラム|列]を表示させる
-160列目までを見れるように[設定する|セットする|変更する|指定する|する]
-160列目まで表示するように設定する
+160列目までを[見れるように|表示するように][設定する|セットする|変更する|指定する|する]
 160列目までをデフォルトで表示する
-160列目までをデフォルトの設定とする
-160列目まで表示するようにする
 最大表示列数を160列に設定する
 最大列数を160列に設定する
 表示するカラム数を最大160に設定する
@@ -17,40 +13,32 @@ pd.set_option('display.max_columns', 160)
 
 pd.set_option('display.max_rows', 101)
 101番目までの行を表示させる
-101行目までを見れるように[設定する|セットする|変更する|指定する|する]
-101行目まで表示するように設定する
+101行目までを{見れるように設定する}
 101行目までをデフォルトで表示する
-101行目までをデフォルトの設定とする
-101行目まで表示するようにする
 最大表示行数を101行に設定する
 最大行数を101行に設定する
 表示する行数を最大101に設定する
 最大行数を101に設定する
 101番[目|]まで行[を|が]表示[できるように設定する|するように設定する]
 
-# TODO : 日本語
-# pd.set_option('max_r', 102)
-# pd.set_option('mode.sim_interactive', True)
-# pd.set_option('display.max_rows', 999)
-# pd.set_option('precision', 5)
-# pd.set_option('max_rows', 7)
-# pd.set_option('min_rows', 4)
+pd.set_option('precision', 5)
+小数点以下5桁まで表示するように設定する
+小数点以下5桁までデフォルトで表示する
 
-# pd.set_option('expand_frame_repr', True)
-# データフレームの表現をページ全体に拡大
+pd.set_option('expand_frame_repr', False)
+データフレームの折り返しを{オフに設定する}
 
-# pd.set_option('expand_frame_repr', False)
-# pd.set_option('large_repr', 'truncate')
-# pd.set_option('large_repr', 'info')
-# pd.set_option('max_colwidth', 40)
-# pd.set_option('max_info_columns', 11)
-# pd.set_option('max_info_rows', 11)
-# pd.set_option('chop_threshold', 0)
-# pd.set_option('colheader_justify', 'right')
-# pd.set_option('colheader_justify', 'left')
-# pd.set_option('display.unicode.east_asian_width', True)
-# pd.set_option('display.unicode.ambiguous_as_wide', True)
-# pd.set_option('display.html.table_schema', True)
+pd.set_option('max_colwidth', 40)
+列の最大表示幅を{40に設定する}
+
+pd.set_option('colheader_justify', 'right')
+ヘッダーを{右寄せにして表示する}
+ヘッダーの表示を右寄せに設定する
+
+pd.set_option('colheader_justify', 'left')
+ヘッダーを{左寄せにして表示する}
+ヘッダーの表示を左寄せに設定する
+
 
 # option
 
@@ -80,32 +68,32 @@ pd.read_excel('file.xlsx')   @@let
 エクセル[ファイル|データ|]'file.xlsx'を[データフレーム|表|表データ][に|として][読み込む|読む]
 エクセルファイル'file.xlsx'から[データフレームを|]読み込む
 エクセルファイル'file.xlsx'を読み込む
-エクセルファイル'file.xlsx'を[読み込んで|読み込み、|]データフレーム[にする|とする]
-エクセルファイル'file.xlsx'を[読み込んで|読み込み、|]データフレームに格納する
+{エクセルファイル'file.xlsx'を[読み込んで|読み込み、|]}データフレーム[にする|とする]
+{エクセルファイル'file.xlsx'を[読み込んで|読み込み、|]}データフレームに格納する
 'file.xlsx'という[名前の|]エクセルファイルを[データフレームとして|]読み込む
 
 pd.read_excel('file.xlsx', sheet_name=0)   @@let
 エクセルファイル'file.xlsx'の0番目のシートをデータフレーム[に|として]読み込む
 エクセルファイル'file.xlsx'の0番目のシートから[データフレームを|]読み込む
 エクセルファイル'file.xlsx'の0番目のシートを[指定して|]読み込む
-エクセルファイル'file.xlsx'の0番目のシートを[読み込んで|読み込み、|]データフレーム[にする|とする]
-エクセルファイル'file.xlsx'の0番目のシートを[読み込んで|読み込み、|]データフレームに格納する
+{エクセルファイル'file.xlsx'の0番目のシートを[読み込んで|読み込み、|]}データフレーム[にする|とする]
+{エクセルファイル'file.xlsx'の0番目のシートを[読み込んで|読み込み、|]}データフレームに格納する
 'file.xlsx'という[名前の|]エクセルファイルの0番目のシートを[データフレームとして|]読み込む
 
-# pd.read_excel('file.xlsx', sheet_name='sheet1')   @@let
-# エクセルファイル'file.xlsx'の@type('sheet1', シート名)をデータフレーム[に|として]読み込む
-# エクセルファイル'file.xlsx'の@type('sheet1')から[データフレームを|]読み込む
-# エクセルファイル'file.xlsx'の@type('sheet1')を[指定して|]読み込む
-# エクセルファイル'file.xlsx'の@type('sheet1')を[読み込んで|読み込み、|]データフレーム[にする|とする]
-# エクセルファイル'file.xlsx'の@type('sheet1')を[読み込んで|読み込み、|]データフレームに格納する
-# 'file.xlsx'という[名前の|]エクセルファイルの@type('sheet1')を[データフレームとして|]読み込む
+pd.read_excel('file.xlsx', sheet_name='sheet1')   @@let
+エクセルファイル'file.xlsx'の@type('sheet1', シート名)をデータフレーム[に|として]読み込む
+エクセルファイル'file.xlsx'の@type('sheet1')から[データフレームを|]読み込む
+エクセルファイル'file.xlsx'の@type('sheet1')を[指定して|]読み込む
+{エクセルファイル'file.xlsx'の@type('sheet1')を[読み込んで|読み込み、|]}データフレーム[にする|とする]
+{エクセルファイル'file.xlsx'の@type('sheet1')を[読み込んで|読み込み、|]}データフレームに格納する
+'file.xlsx'という[名前の|]エクセルファイルの@type('sheet1')を[データフレームとして|]読み込む
 
 pd.read_excel('file.xlsx', sheet_name=None)   @@let
 エクセルファイル'file.xlsx'の[全てのシート|全部のシート|シート全部|シート全て]をデータフレーム[に|として]読み込む
 エクセルファイル'file.xlsx'の全てのシートから[データフレームを|]読み込む
 エクセルファイル'file.xlsx'の全てのシートを[指定して|]読み込む
-エクセルファイル'file.xlsx'の全てのシートを[読み込んで|読み込み、|]データフレーム[にする|とする]
-エクセルファイル'file.xlsx'の全てのシートを[読み込んで|読み込み、|]データフレームに格納する
+{エクセルファイル'file.xlsx'の全てのシートを[読み込んで|読み込み、|]}データフレーム[にする|とする]
+{エクセルファイル'file.xlsx'の全てのシートを[読み込んで|読み込み、|]}データフレームに格納する
 'file.xlsx'という[名前の|]エクセルファイルの全てのシートを[データフレームとして|]読み込む
 
 pd.read_csv('file.csv')   @@let
@@ -138,15 +126,15 @@ CSVファイル'file.csv'をタブ区切りで読み込む
 
 pd.read_csv('file.csv', header=None)   @@let
 ヘッダーなしで@type('file.csv')を読み込む
-[ヘッダー|列名]を[なしで|指定せずに|設定せずに|セットせずに|指定しないで|設定しないで|セットしないで]@type('file.csv')を読み込む
+{[ヘッダー|列名]を[なしで|指定せずに|設定せずに|セットせずに|指定しないで|設定しないで|セットしないで]}@type('file.csv')を読み込む
 
 pd.read_csv('file.csv', index_col=0)   @@let
-[列番号0|先頭の列|0番目の列|一番左の列]をインデックス[と|に][して|設定して|指定して|セットして]、@type('file.csv')を[データフレームとして|]読み込む
-列番号0をインデックス[と|に]して、@type('file.csv')から[データフレームを|]読み込む
-列番号0をインデックス[と|に]して、@type('file.csv')を[データフレームに|]格納する
+{[列番号0|先頭の列|0番目の列|一番左の列]をインデックス[と|に][して|設定して|指定して|セットして]、}@type('file.csv')を[データフレームとして|]読み込む
+{列番号0をインデックス[と|に]して、}@type('file.csv')から[データフレームを|]読み込む
+{列番号0をインデックス[と|に]して、}@type('file.csv')を[データフレームに|]格納する
 
 pd.read_csv('file.csv', encoding='shift_jis')   @@let
-エンコーディングを[シフトJISとして|シフトJISで]、@type('file.csv')を読み込む
+{エンコーディングを[シフトJISとして|シフトJISで]、}@type('file.csv')を読み込む
 文字コードがシフトJISのファイル'file.csv'を読み込む
 
 
@@ -171,40 +159,32 @@ df.to_csv('out.csv')
 @type(df)から@type('out.csv')という名前でCSVファイルに[変換する|する]
 @type(df)を@type('out.csv')という[名前で|名前の|]CSVファイルとして保存する
 
+
 # 確認系
 
 df.head()   @@check @@then @@it
-@type(df)の[先頭の|先頭|最初の|上|]5行を[確認する|チェックする|確認|チェック|表示する|表示|見たい|見る]
-@type(df)の[先頭の|先頭|最初の|上|]5行
-[とりあえず|]@type(df)の内容を確認する
+@type(df)の[先頭の|先頭|最初の|上]5行
+[とりあえず|]@type(df)の中身
 
 df.head(10)   @@check @@then @@it
 @type(df)の先頭の10行
-@type(df)の先頭の10行を確認する
 
 df.tail()   @@check @@then @@it
 @type(df)の[末尾の|末尾|最後の|下]5行
-@type(df)の[末尾の|末尾|最後の|下]5行を確認する
 
 df.tail(10)   @@check @@then @@it
 @type(df)の末尾の10行
-@type(df)の末尾の10行を確認する
 
 df[100:106]   @@check @@then
 @type(df)の100行目から106行目まで
-@type(df)の100行目から106行目までを確認する
 
 df[100:]   @@check @@then
 @type(df)の100行目から[末尾|最後]まで
-@type(df)の100行目から[末尾|最後]までを確認する
 @type(df)の100行目[以降|より後ろ]
-@type(df)の100行目[以降|より後ろ]を確認する
 
 df[:100]   @@check @@then
 @type(df)の[先頭|最初]から100行目まで
-@type(df)の[先頭|最初]から100行目までを確認する
 @type(df)の100行目[まで|より前]
-@type(df)の100行目[まで|より前]を確認する
 
 df['age']   @@check @@then
 @type(df)の@type('age', カラム)を[抽出する|選択する|選ぶ]
@@ -225,10 +205,10 @@ df.iloc[[1,2,4],[0,2]]   @@get @@it
 @type(df)内の1,2,4行目の0,2列目
 
 df.info()   @@check @@it
-@type(df)の[データの詳細|データの性質|データの概要|データの内容|データ|要約情報|概要|要約][について知りたい|を知りたい|を表示|]
+@type(df)の[データの詳細|データの性質|データの概要|データの内容|データ|要約情報|概要|要約]
 
 df.describe()   @@check @@it
-@type(df)の[要約統計量|統計情報|統計的な情報|統計的情報]について知りたい
+@type(df)の[要約統計量|統計情報|統計的な情報|統計的情報]
 
 df.describe(include='O')   @@check @@it
 @type(df)の[オブジェクトデータ|数値データ以外]の要約統計量
@@ -289,11 +269,11 @@ df['remarks'].nunique()  @@check @@it
 
 df.rename(columns={'sale': 'sales'})   @@let @@let_self @@inplace @@it
 @type(df)のカラム名を'sale'から'sales'に[リネームする|変更する|変える]
-@type(df)の@type('sale', カラム)の名前を'sales'にリネームする
+@type(df)の@type('sale', カラム)の名前を{'sales'にリネームする}
 
 df.rename(columns={'sale': 'sales', 'prof': 'profit'})   @@let @@let_self @@inplace @@it
-@type(df)のカラム名を'sale'から'sales'に、'prof'から'profit'にリネームする
-@type(df)の@type('sale')の名前を'sales'に、@type('prof', カラム)の名前を'profit'にリネームする
+@type(df)のカラム名を{'sale'から'sales'に、'prof'から'profit'に}リネームする
+@type(df)の{{@type('sale')の名前を'sales'に、}{@type('prof', カラム)の名前を'profit'に}}リネームする
 
 df.rename(index={'ONE': 'Row_1'})   @@let @@let_self @@inplace @@it
 @type(df)のインデックス名を'ONE'から'Row_1'にリネームする
@@ -308,9 +288,9 @@ df.reset_index()   @@let @@let_self @@inplace @@it
 
 df.reset_index(drop=True)   @@let @@let_self @@inplace @@it
 @type(df)の[元の|もともとの|元々あった|もともとあった]インデックスをリセットする
+{@type(df)のインデックスを[リセットして|振り直して]、}元のインデックスを削除する
+{元のインデックスを[削除し、|削除してから、]}@type(df)のインデックスをリセットする
 
-@type(df)の[リセットして|振り直して]、元のインデックスを削除する
-元のインデックスを[削除し、|削除してから、]@type(df)のリセット
 
 # datetime
 
@@ -318,7 +298,7 @@ pd.to_datetime(df['date'])
 @type(df)の@type('date', カラム)を[datetime型|年月日の形式|日付型|日付の形|日付の型]に変換する
 
 pd.to_datetime(df['date'], format='%Y-%m-%d')
-フォーマットを指定して、@type(df)の@type('date')をdatetime型に変換する
+{フォーマットを指定して、}@type(df)の@type('date')をdatetime型に変換する
 
 df['date'].dt.year   @@check @@it @@let
 @type(df)の@type('date')の年
@@ -388,8 +368,8 @@ df[df['city'].isin(['Tokyo', 'Osaka'])]   @@get
 # ドロップ・欠損値処理
 
 df.style.highlight_null()
-@type(df)の欠損値に色をつける
-@type(df)の欠損値に色付けする
+@type(df)内の欠損値が[含まれる|ある][箇所|部分]に{色をつける}
+@type(df)内の欠損値が含まれる[箇所|部分]を色付けする
 
 df.drop(0)   @@let @@let_self @@inplace
 @type(df)の0行目を[ドロップする|削除する|消す|落とす|取り除く]
@@ -403,28 +383,28 @@ df.drop(['price', 'year'], axis=1)   @@let @@let_self @@inplace
 df.dropna()   @@let @@let_self @@inplace
 @type(df)内の[欠損値|欠損|NaN|未記入の値|未入力の値]が[存在する|ある]行をドロップする
 @type(df)内の欠損値[を含む行|]をドロップする
-@type(df)の欠損値がある行をドロップする
+{@type(df)の欠損値がある行を}ドロップする
 
 df.fillna(symbol)   @@let @@let_self @@inplace
-@type(df)内の欠損値をsymbol[に|で][置換する|置き換える]
-@type(df)内の欠損値をsymbol[で埋める|とする]
-@type(df)の欠損値をsymbolにする
-@type(df)の欠損値をsymbolに変える
+{@type(df)内の欠損値をsymbol}[に|で][置換する|置き換える]
+{@type(df)内の欠損値をsymbol}[で埋める|とする]
+{@type(df)の欠損値をsymbol}にする
+{@type(df)の欠損値をsymbol}に変える
 
 df.fillna(method='ffill')   @@let @@let_self @@inplace
 @type(df)内の欠損値を直前の行の値で[埋める|補う]
 
 df.fillna(df.mean())   @@let @@let_self @@inplace
 @type(df)内の欠損値を@type(df)の平均値で埋める
-@type(df)内の欠損値を@type(df)の平均をとって埋める
+@type(df)内の欠損値を{@type(df)の平均をとって}埋める
 
 df.replace('?', np.nan).dropna()   @@let @@let_self @@inplace
-@type(df)内の'?'を欠損値に[置換し|置き換え|変え]、欠損値が存在する行をドロップする
+@type(df)内の'?'を{欠損値に[置換し|置き換え|変え]}{欠損値が存在する行をドロップする}
 
 df.replace('?', np.nan)   @@let @@let_self @@inplace
-@type(df)内に存在する'?'を欠損値[に|で]置換する
+{@type(df)内に存在する'?'を}欠損値[に|で]置換する
 @type(df)の'?'を欠損値[に|で]置換する
-@type(df)内に存在する'?'を欠損値[で埋める|とする|にする]
+{@type(df)内に存在する'?'を}欠損値[で埋める|とする|にする]
 @type(df)の'?'を欠損値[で埋める|とする|にする]
 
 
@@ -434,14 +414,14 @@ pd.merge(df1, df2)   @@let
 @type(df1)と@type(df2)を[横方向に|横に|][マージする|結合する|結合|一つにまとめる|1つにする|一つにする|1つにまとめる|くっつける|合わせる]
 
 pd.merge(df1, df2, on='id')   @@let
-@type('id', カラム)をキーとして、@type(df1)と@type(df2)をマージする
-@type(df1)と@type(df2)に対して、@type('id')をキーとしてデータをマージする
+{@type('id', カラム)をキー}として、@type(df1)と@type(df2)をマージする
+@type(df1)と@type(df2)に対して、{@type('id')をキー}としてデータをマージする
 
 pd.merge(df1, df2, how='outer')   @@let
 [全結合で|両方の列を使って|片方のテーブルにしかないデータも全て残して]@type(df1)と@type(df2)をマージする
 
 pd.merge(df1, df2, left_index=True, right_on='index_num')   @@let
-左側のデータのインデックスと[右側のデータの|]@type('index_num', カラム)をキーとして、@type(df1)と@type(df2)をマージする
+{{左側のデータのインデックス}と{[右側のデータの|]@type('index_num', カラム)}をキー}として、@type(df1)と@type(df2)をマージする
 
 pd.merge(df1, df2, how='left')   @@let
 [左外部結合で|左側のデータフレームに合わせて]@type(df1)と@type(df2)をマージする
@@ -450,35 +430,37 @@ pd.concat([df1, df2])   @@let
 @type(df1)と@type(df2)を[縦方向|縦向き|縦][に|で][マージする|マージ|くっつける|結合する|結合]
 @type(df1)と@type(df2)を縦結合する
 
+
 # ピボットテーブル
 
 df.pivot_table(index='Pclass', columns='Sex')   @@let
-@type(df)の@type('Pclass', カラム)をインデックス、@type('Sex', カラム)をカラムとしたピボットテーブルを作成する
+@type(df)の{@type('Pclass', カラム)をインデックス}、{@type('Sex', カラム)をカラム}としたピボットテーブルを作成する
 
 df.pivot_table(index='Pclass', columns='Sex', values='Age')   @@let
-@type(df)の@type('Age', カラム)について、@type('Pclass')をインデックス、@type('Sex')をカラムとしたピボットテーブルを作成する
+@type(df)の@type('Age', カラム)について、{@type('Pclass')をインデックス}、{@type('Sex')をカラム}としたピボットテーブルを作成する
 
 
 # ピボット操作
 
 df.stack()
-ピボット操作で@type(df)の列を行に[入れ替える|変更する]
-ピボット操作で@type(df)の列を行と逆にする
+ピボット操作で@type(df)の{列を行に}[入れ替える|変更する]
+ピボット操作で@type(df)の{列を行と}逆にする
 
 df.unstack()
-ピボット操作で@type(df)の行を列に入れ替える
-ピボット操作で@type(df)の行を列と逆にする
+ピボット操作で@type(df)の{行を列に}入れ替える
+ピボット操作で@type(df)の{行を列と}逆にする
+
 
 # 重複
 
 df.duplicated()   @@check
-@type(df)内に重複[が|は][あるのかどうか|あるかどうか|あるのか|あるか|存在するのか][判定する|確認する|検出する|判定|確認|検出]
+@type(df)内に重複[が|は]{[あるのかどうか|あるかどうか|あるのか|あるか|存在するのか]}[判定する|確認する|検出する|判定|確認|検出]
 @type(df)内の重複を判定する
-@type(df)に重複があるのかどうか
-@type(df)に重複があるのかどうかを[真偽値|TF]で返す
+@type(df)に重複が{あるのかどうか}
+@type(df)に重複が{あるのかどうか}を[真偽値|TF]で返す
 @type(df)の[重複行|行の重複]を判定する
-@type(df)にダブりがあるかどうか確認する
-@type(df)でダブっているものがあるかどうか確認する
+@type(df)にダブりが{あるかどうか}確認する
+@type(df)でダブっているものが{あるかどうか}確認する
 
 df.duplicated().sum()    @@check
 @type(df)内[で|の]重複した[行数|行の数|行][の合計|]
@@ -487,38 +469,38 @@ df[df.duplicated()]    @@get
 @type(df)内[で|の][重複した|重複している|重複する|ダブる|ダブっている]データ
 
 df.duplicated(subset='state')     @@check
-@type(df)内の@type('state', カラム)に重複[が|は]あるのかどうか判定する
-@type(df)内の@type('state', カラム)に重複[が|は]あるのかどうか
+@type(df)内の@type('state', カラム)に重複[が|は]{あるのかどうか}判定する
+@type(df)内の@type('state', カラム)に重複[が|は]{あるのかどうか}
 
 df.duplicated(subset=['state', 'point'])     @@check
-@type(df)内の@type('state', カラム)と@type('point', カラム)に重複[が|は]あるのかどうか判定する
-@type(df)内の@type('state', カラム)と@type('point', カラム)に重複[が|は]あるのかどうか
+@type(df)内の@type('state', カラム)と@type('point', カラム)に重複[が|は]{あるのかどうか}判定する
+@type(df)内の@type('state', カラム)と@type('point', カラム)に重複[が|は]{あるのかどうか}
 
 df.drop_duplicates()   @@let @@let_self @@inplace
 @type(df)内の重複した行をドロップする
 @type(df)内の重複要素がある行をドロップする
 
 df.drop_duplicates(keep=False)   @@let @@let_self @@inplace
-重複した最後の行を残して@type(df)内の重複している行をドロップする
+{重複した最後の行を残して}@type(df)内の重複している行をドロップする
 
 df.drop_duplicates(subset='state')   @@let @@let_self @@inplace
-@type(df)内の@type('state')の重複した行をドロップする
-@type(df)内の@type('state')に重複がある行をドロップする
+@type(df)内の{@type('state')の重複した行}をドロップする
+@type(df)内の{@type('state')に重複がある行}をドロップする
 
 
 # ビン
 
 pd.cut(df['birth_year'], data_bins)   @@let
-境界値を@type(data_bins, リスト)として、@type(df)の@type('birth_year', カラム)を[ビン分割する|分割する|分割]
+{境界値を@type(data_bins, リスト)}として、@type(df)の@type('birth_year', カラム)を[ビン分割する|分割する]
 
 pd.cut(df['birth_year'], bins_num)   @@let
-[ビン数|分割数]をbins_numとして、@type(df)の@type('birth_year')をビン分割する
+{[ビン数|分割数]をbins_num}として、@type(df)の@type('birth_year')をビン分割する
 
 pd.cut(df['birth_year'], bins_num, label=group_names)   @@let
-ビン数をbins_num、ビンの[ラベル|名前]を@type(group_names, リスト)として、@type(df)の@type('birth_year')をビン分割する
+{ビン数をbins_num}、{ビンの[ラベル|名前]を@type(group_names, リスト)}として、@type(df)の@type('birth_year')をビン分割する
 
 pd.cut(df['birth_year'], bins_num, label=False)   @@let
-ビン数をbins_num、ビンのラベルを[0始まりの連番|インデックス|整数値]として、@type(df)の@type('birth_year')をビン分割する
+{ビン数をbins_num}、{ビンのラベルを[0始まりの連番|インデックス|整数値]}として、@type(df)の@type('birth_year')をビン分割する
 
 pd.qcut(df['birth_year'], 2)   @@let
 @type(df)の@type('birth_year')を中央値でビン分割する
@@ -527,7 +509,7 @@ pd.qcut(df['birth_year'], 4)   @@let
 @type(df)の@type('birth_year')を四分位数ごとでビン分割する
 
 pd.qcut(df['birth_year'], bins_num)   @@let
-ビン数をbins_numとして、@type(df)の@type('birth_year')を[ビンに含まれる個数|要素数|要素の数]が等しくなるようにビン分割する
+{ビン数をbins_num}として、@type(df)の@type('birth_year')を[ビンに含まれる個数|要素数|要素の数]が等しくなるようにビン分割する
 
 
 # グループ化
@@ -542,28 +524,29 @@ df.groupby(['weather'])['temperature'].mean()   @@calc
 @type(df)の@type('weather', カラム)ごとの@type('temperature', カラム)の[平均値|平均]
 
 df.groupby(['week'])['soldout'].count()   @@calc
-@type(df)のtype('week', カラム)ごとの@type('soldout', カラム)の[個数|数]
+@type(df)の@type('week', カラム)ごとの@type('soldout', カラム)の[個数|数]
 
 
 # ソート
 
 df.sort_index()   @@let @@let_self @@inplace
-@type(df)[全体|]をインデックスで[昇順に|順に|順番になるように|小さい順に|値が小さい順に|][ソートする|ソート|並び替える]
-@type(df)[全体|]をインデックスを[軸に|元に][昇順で|小さい順で|小さい順に|小さい順で|小さい方から|]ソートする
+@type(df)[全体|]をインデックスで[昇順に|順に|順番になるように|小さい順に|値が小さい順に|][ソートする|並び替える]
+@type(df)[全体|]を{インデックスを[軸|元]}に[昇順で|小さい順で|小さい順に|小さい順で|小さい方から|]ソートする
 @type(df)[全体|]をインデックス[に基づいて|に基づき|に沿って|にそって|通りに|どおりに]昇順でソートする
 
 df.sort_values(['sales', 'temperature'], ascending=False)   @@let @@let_self @@inplace
 @type(df)[全体|]を@type('sales', カラム)と@type('temperature', カラム)で[降順に|逆順に|値が大きい順に]ソートする
-@type(df)[全体|]を@type('sales')と@type('temperature')を軸に[降順で|逆順で|値が大きい順で]ソートする
-@type(df)[全体|]を@type('sales')と@type('temperature')に基づいて降順でソートする
+@type(df)[全体|]を{@type('sales')と@type('temperature')を軸}に[降順で|逆順で|値が大きい順で]ソートする
+@type(df)[全体|]を{@type('sales')と@type('temperature')に基づいて}降順でソートする
 @type(df)の@type('sales', カラム)と@type('temperature', カラム)を降順にソートする
+{{@type('sales', カラム)と@type('temperature', カラム)}が[降順に|逆順に|値の大きい順に]}なるように@type(df)[全体|]をソートする
 
 df.sort_values('sales')   @@let @@let_self @@inplace
 @type(df)[全体|]を@type('sales')で昇順にソートする
-@type(df)[全体|]を@type('sales')を[軸に|元に|使って]昇順でソートする
+@type(df)[全体|]を{@type('sales')を[軸に|元に|もとに|使って]}昇順でソートする
 @type(df)[全体|]を@type('sales')に基づいて昇順でソートする
 @type(df)の@type('sales', カラム)を昇順にソートする
-@type(df)[全体|]を@type('sales')をもとに昇順でソートする
+
 
 # null判定
 
@@ -573,10 +556,10 @@ df.isnull().sum()   @@check
 @type(df)にある欠損値の個数
 
 df.isin(['?']).sum()   @@check
-@type(df)内のそれぞれのカラムに[存在する|ある]'?'の個数[の合計|]
-@type(df)内のカラム[それぞれ|]に存在する'?'の個数[の合計|]
-@type(df)内のそれぞれのカラムに存在する'?'の合計
-@type(df)のカラムに存在する'?'をカウントする
+@type(df)内のそれぞれのカラムに[存在する|ある]{'?'の個数}[の合計|]
+@type(df)内のカラム[それぞれ|]に存在する{'?'の個数}[の合計|]
+@type(df)内のそれぞれのカラムに存在する{'?'の合計}
+{@type(df)のカラムに{存在する'?'}}をカウントする
 
 # ダミー処理
 
@@ -585,8 +568,8 @@ pd.get_dummies(df)   @@let
 @type(df)についてダミー変数を[生成する|作成する|作る|つくる]
 @type(df)をダミー変数化する
 @type(df)の数値以外のデータを数値で扱えるように処理する
-@type(df)の数値じゃないデータを数値データに変換する
-@type(df)の数値以外のデータを数値データにしたい
+@type(df)の{数値じゃないデータを数値データ}に変換する
+@type(df)の{数値以外のデータを数値データ}にする
 
 pd.get_dummies(df['sex'])   @@let
 @type(df)の@type('sex', カラム)をダミー変数化する
