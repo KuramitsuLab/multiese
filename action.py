@@ -93,7 +93,7 @@ def perform_while(pairs, option):
 
 def isGroup2Verb(s):
     if s.endswith(s) and len(s) > 2:
-        return s[-2] in 'えけせてねれえげべ得見'
+        return s[-2] in 'えけせてねめれえげべ得見'
     return False
 
 
@@ -265,7 +265,7 @@ def perform_check(pairs, option):
     for sentence, code in pairs:
         verb = transform_verb_and_then(sentence)
         if not verb:
-            sentence_check = sentence + alt('を表示する|を確認する|を調べる|を見る')
+            sentence_check = sentence + alt('を表示する|を確認する|を調べる|を見る|をチェックする')
             pairs_check.append((sentence_check, code))
     return pairs_check
 

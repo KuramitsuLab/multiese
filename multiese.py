@@ -94,8 +94,8 @@ if __name__ == '__main__':
     parser.add_argument('--task', default=None)
     parser.add_argument('--without-context', action='store_true')  # コンテストをつけない
     parser.add_argument('--without-reorder', action='store_true')  # 順序を入れ替えない
-    parser.add_argument('--drop-rate', type=float,
-                        default=0.1)  # 0.0 にするとドロップしない
+    # parser.add_argument('--drop-rate', type=float,
+    #                     default=0.0)  # 0.0 にするとドロップしない
 
     # parser.add_argument('--files', nargs='*')
     args = parser.parse_args()
