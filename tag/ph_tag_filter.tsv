@@ -1,0 +1,2501 @@
+python: 160番目までの列を表示させる	pd.set_option('display.max_columns', 160)
+python: 最大表示列数を160列にセットする	pd.set_option('display.max_columns', 160)
+python: 最大表示列数を160列に指定する	pd.set_option('display.max_columns', 160)
+python: 160列に最大表示列数を指定する	pd.set_option('display.max_columns', 160)
+python: 160番目まで列を表示できるように設定する	pd.set_option('display.max_columns', 160)
+python: 160番まで列を表示できるように指定する	pd.set_option('display.max_columns', 160)
+python: 160番目まで列を表示できるように変更する	pd.set_option('display.max_columns', 160)
+python: シフトJISを用いる	encoding = 'shift_jis'
+python: shift-jisを用いる	encoding = 'shift_jis'
+python: 文字コードはシフトJISを用いる	encoding = 'shift_jis'
+python: 文字コードはシフトJIS	encoding = 'shift_jis'
+python: 文字コードをシフトJISに設定する	encoding = 'shift_jis'
+python: シフトJISに文字コードをする	encoding = 'shift_jis'
+python: シフトJISに文字コードを指定する	encoding = 'shift_jis'
+python: ヘッダーを含まない	header = None
+python: ヘッダーを指定しない	header = None
+python: 含まない	header = None
+python: ヘッダーがなし	header = None
+python: ヘッダー無し	header = None
+python: ヘッダーはなし	header = None
+python: 先頭行をヘッダーとして認識しない	header = None
+python: 0行目をヘッダーとしない	header = None
+python: 0行目をヘッダーとして認識しない	header = None
+python: 列名なし	header = None
+python: 列名いらない	header = None
+python: 列名不要	header = None
+python: 色を'red'とする	color = 'red'
+python: フォントサイズを20とする	fontsize = 20
+python: 文字の大きさを20とする	fontsize = 20
+python: フォントサイズを20にする	fontsize = 20
+python: 20に文字の大きさをする	fontsize = 20
+python: 文字の大きさをする	fontsize = 20
+python: エクセルデータ'file.xlsx'を表に読み込む	pd.read_excel('file.xlsx')
+python: エクセルデータ'file.xlsx'を表データに読み込む	pd.read_excel('file.xlsx')
+python: エクセルデータ'file.xlsx'を表として読む	pd.read_excel('file.xlsx')
+python: エクセル'file.xlsx'を表に読んで、Xにする	X = pd.read_excel('file.xlsx')
+python: エクセル'file.xlsx'を表に読んだ結果をXに代入する	X = pd.read_excel('file.xlsx')
+python: エクセル'file.xlsx'を表データとして読んで、Xとする	X = pd.read_excel('file.xlsx')
+python: エクセル'file.xlsx'を表データとして読んだ結果をXに代入する	X = pd.read_excel('file.xlsx')
+python: エクセルデータ'file.xlsx'を表に読み、Xとする	X = pd.read_excel('file.xlsx')
+python: エクセルデータ'file.xlsx'を表に読んだ結果をXとする	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'から表を読み込む	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'から表データを読み込む	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'から読む	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'から表を読み込んで、Xに代入する	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'から表を読み込んだ結果をXに代入する	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'から読み、Xに代入する	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'から読んだ結果をXに代入する	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'から読み込んで、Xに代入する	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'から読み込まれた結果をXに代入する	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を読み込む	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を読む	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を読み込んで、Xにする	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を読み込んだ結果をXにする	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を読み、Xにする	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を読まれた結果をXに代入する	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'をデータフレームにする	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を読み込んで表にする	pd.read_excel('file.xlsx')
+python: データフレームにする	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'をデータフレームにして、Xに代入する	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'をデータフレームにした結果をXとする	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を読み込んで表データにし、Xとする	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を読み込んで表データにした結果をXに代入する	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を読み込んで表にし、Xとする	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を読み込んで表にした結果をXにする	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を読み込んでデータフレームに格納する	pd.read_excel('file.xlsx')
+python: 読み込んでデータフレームにエクセルファイル'file.xlsx'を格納する	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を表に格納する	pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'をデータフレームに格納して、Xとする	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'をデータフレームに格納された結果をXに代入する	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を表データに格納して、Xとする	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'を表データに格納された結果をXに代入する	X = pd.read_excel('file.xlsx')
+python: 表にエクセルファイル'file.xlsx'を格納し、Xとする	X = pd.read_excel('file.xlsx')
+python: 表にエクセルファイル'file.xlsx'を格納した結果をXとする	X = pd.read_excel('file.xlsx')
+python: 'file.xlsx'という名前のエクセルファイルを表として読み込む	pd.read_excel('file.xlsx')
+python: 'file.xlsx'という名前のエクセルファイルをデータフレームとして読み込む	pd.read_excel('file.xlsx')
+python: 読み込む	pd.read_excel('file.xlsx')
+python: 'file.xlsx'という名前のエクセルファイルを表データとして読み込んで、Xとする	X = pd.read_excel('file.xlsx')
+python: 'file.xlsx'という名前のエクセルファイルを表データとして読み込まれた結果をXに代入する	X = pd.read_excel('file.xlsx')
+python: 'file.xlsx'という名前のエクセルファイルを表データとして読み、Xに代入する	X = pd.read_excel('file.xlsx')
+python: 'file.xlsx'という名前のエクセルファイルを表データとして読んだ結果をXに代入する	X = pd.read_excel('file.xlsx')
+python: 'file.xlsx'というエクセルファイルを読み込み、Xに代入する	X = pd.read_excel('file.xlsx')
+python: 'file.xlsx'というエクセルファイルを読み込んだ結果をXに代入する	X = pd.read_excel('file.xlsx')
+python: エクセルファイル'file.xlsx'の0番目のシートをデータフレームに読み込む	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを表に読む	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを表データとして読む	pd.read_excel('file.xlsx', sheet_name=0)
+python: データフレームに読み込み、Xに代入する	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: データフレームに読み込まれた結果をXにする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを表として読み込んで、Xに代入する	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを表として読み込まれた結果をXとする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを表データに読み、Xにする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを表データに読んだ結果をXにする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートから表を読み込む	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートから読み込む	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートから読む	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートから表データを読み込み、Xにする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートから表データを読み込んだ結果をXに代入する	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートからデータフレームを読み込み、Xとする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートからデータフレームを読み込んだ結果をXとする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートからデータフレームを読んで、Xに代入する	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートからデータフレームを読まれた結果をXに代入する	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを読み込む	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを指定して読む	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを指定して読み込む	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを読み込み、Xにする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを読み込んだ結果をXとする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを指定して読んで、Xに代入する	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを指定して読まれた結果をXに代入する	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを読み、Xとする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを読んだ結果をXに代入する	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートをデータフレームにする	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを読み込んで表データにする	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートをデータフレームとする	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートをデータフレームにし、Xとする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートをデータフレームにされた結果をXにする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを表にして、Xにする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを表にした結果をXにする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを表データにして、Xとする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを表データにした結果をXにする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを格納する	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートをデータフレームに格納する	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを表に格納する	pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートをデータフレームに格納し、Xに代入する	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートをデータフレームに格納した結果をXに代入する	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: 表にエクセルファイル'file.xlsx'の0番目のシートを格納し、Xに代入する	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: 表にエクセルファイル'file.xlsx'の0番目のシートを格納した結果をXに代入する	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを表に格納し、Xにする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の0番目のシートを表に格納した結果をXとする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: 'file.xlsx'という名前のエクセルファイルの0番目のシートを表データとして読み込む	pd.read_excel('file.xlsx', sheet_name=0)
+python: 'file.xlsx'というエクセルファイルの0番目のシートを読む	pd.read_excel('file.xlsx', sheet_name=0)
+python: 'file.xlsx'というエクセルファイルの0番目のシートを読み込む	pd.read_excel('file.xlsx', sheet_name=0)
+python: 'file.xlsx'という名前のエクセルファイルの0番目のシートを表として読み込んで、Xにする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: 'file.xlsx'という名前のエクセルファイルの0番目のシートを表として読み込んだ結果をXとする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: 'file.xlsx'という名前のエクセルファイルの0番目のシートを表として読んで、Xにする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: 'file.xlsx'という名前のエクセルファイルの0番目のシートを表として読まれた結果をXに代入する	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: 'file.xlsx'というエクセルファイルの0番目のシートを読み込み、Xとする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: 'file.xlsx'というエクセルファイルの0番目のシートを読み込まれた結果をXとする	X = pd.read_excel('file.xlsx', sheet_name=0)
+python: エクセルファイル'file.xlsx'の全てのシートをデータフレームに読み込む	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを表データに読む	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全部のシートを表データに読む	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートをデータフレームに読み込み、Xとする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートをデータフレームに読み込んだ結果をXとする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全部のシートを表データに読み、Xとする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全部のシートを表データに読んだ結果をXとする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを表データに読み、Xに代入する	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを表データに読んだ結果をXとする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートから表データを読み込む	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートから表を読む	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートから読む	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートから表を読み込み、Xに代入する	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートから表を読み込んだ結果をXに代入する	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートから読み込んで、Xにする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートから読み込んだ結果をXにする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートからデータフレームを読み込み、Xとする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートからデータフレームを読み込まれた結果をXに代入する	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを読み込む	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを読む	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを指定して読み込む	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを指定して読み込み、Xにする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを指定して読み込んだ結果をXに代入する	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを読み、Xとする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを読んだ結果をXにする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを読み込み、Xにする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを読み込んだ結果をXとする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを読み込んでデータフレームにする	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートをデータフレームとする	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを読み込んで表にする	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートをデータフレームにし、Xに代入する	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートをデータフレームにした結果をXとする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを表とし、Xに代入する	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを表とした結果をXとする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートをデータフレームとして、Xにする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートをデータフレームとされた結果をXとする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートをデータフレームに格納する	pd.read_excel('file.xlsx', sheet_name=None)
+python: 表データにエクセルファイル'file.xlsx'の全てのシートを格納する	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを表に格納する	pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを読み込んでデータフレームに格納し、Xとする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを読み込んでデータフレームに格納した結果をXとする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: 読み込んでデータフレームにエクセルファイル'file.xlsx'の全てのシートを格納して、Xに代入する	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: 読み込んでデータフレームにエクセルファイル'file.xlsx'の全てのシートを格納された結果をXとする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを表に格納し、Xとする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: エクセルファイル'file.xlsx'の全てのシートを表に格納された結果をXに代入する	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: 'file.xlsx'という名前のエクセルファイルの全てのシートを表データとして読み込む	pd.read_excel('file.xlsx', sheet_name=None)
+python: 'file.xlsx'というエクセルファイルの全てのシートを読む	pd.read_excel('file.xlsx', sheet_name=None)
+python: 'file.xlsx'というエクセルファイルの全てのシートを読み込む	pd.read_excel('file.xlsx', sheet_name=None)
+python: 'file.xlsx'という名前のエクセルファイルの全てのシートをデータフレームとして読み込んで、Xとする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: 'file.xlsx'という名前のエクセルファイルの全てのシートをデータフレームとして読み込んだ結果をXにする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: 'file.xlsx'という名前のエクセルファイルの全てのシートを表データとして読んで、Xに代入する	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: 'file.xlsx'という名前のエクセルファイルの全てのシートを表データとして読んだ結果をXとする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: 'file.xlsx'というエクセルファイルの全てのシートを読んで、Xに代入する	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: 'file.xlsx'というエクセルファイルの全てのシートを読んだ結果をXとする	X = pd.read_excel('file.xlsx', sheet_name=None)
+python: 'file.csv'を表データとして読み込む	pd.read_csv('file.csv')
+python: 'file.csv'データをデータフレームとして読み込む	pd.read_csv('file.csv')
+python: 'file.csv'から読み込む	pd.read_csv('file.csv')
+python: 'file.csv'を表として読み込み、Xに代入する	X = pd.read_csv('file.csv')
+python: 'file.csv'を表として読み込まれた結果をXとする	X = pd.read_csv('file.csv')
+python: 'file.csv'データから読み、Xとする	X = pd.read_csv('file.csv')
+python: 'file.csv'データから読まれた結果をXとする	X = pd.read_csv('file.csv')
+python: データ'file.csv'から読み、Xにする	X = pd.read_csv('file.csv')
+python: データ'file.csv'から読んだ結果をXに代入する	X = pd.read_csv('file.csv')
+python: データフレームを'file.csv'から読み込む	pd.read_csv('file.csv')
+python: 表データを'file.csv'データから読む	pd.read_csv('file.csv')
+python: データフレームを'file.csv'データから読み込む	pd.read_csv('file.csv')
+python: 'file.csv'から読み込み、Xにする	X = pd.read_csv('file.csv')
+python: 'file.csv'から読み込んだ結果をXにする	X = pd.read_csv('file.csv')
+python: データフレームをデータ'file.csv'から読み込み、Xに代入する	X = pd.read_csv('file.csv')
+python: データフレームをデータ'file.csv'から読み込んだ結果をXとする	X = pd.read_csv('file.csv')
+python: 表データをデータ'file.csv'から読んで、Xにする	X = pd.read_csv('file.csv')
+python: 表データをデータ'file.csv'から読んだ結果をXとする	X = pd.read_csv('file.csv')
+python: CSVファイル'file.csv'を表として読み込む	pd.read_csv('file.csv')
+python: CSVファイル'file.csv'から読み込む	pd.read_csv('file.csv')
+python: CSVデータ'file.csv'から読み込む	pd.read_csv('file.csv')
+python: CSVファイル'file.csv'を表として読み込み、Xにする	X = pd.read_csv('file.csv')
+python: CSVファイル'file.csv'を表として読み込んだ結果をXに代入する	X = pd.read_csv('file.csv')
+python: CSVファイル'file.csv'から読み込み、Xとする	X = pd.read_csv('file.csv')
+python: CSVファイル'file.csv'から読み込んだ結果をXに代入する	X = pd.read_csv('file.csv')
+python: CSVデータ'file.csv'から読み込み、Xとする	X = pd.read_csv('file.csv')
+python: CSVデータ'file.csv'から読み込まれた結果をXに代入する	X = pd.read_csv('file.csv')
+python: CSVファイル'file.csv'からデータフレームを読み込む	pd.read_csv('file.csv')
+python: CSV'file.csv'から表データを読む	pd.read_csv('file.csv')
+python: CSVデータ'file.csv'から表を読む	pd.read_csv('file.csv')
+python: CSVファイル'file.csv'からデータフレームを読み込んで、Xに代入する	X = pd.read_csv('file.csv')
+python: CSVファイル'file.csv'からデータフレームを読み込んだ結果をXに代入する	X = pd.read_csv('file.csv')
+python: CSV'file.csv'から表データを読み、Xに代入する	X = pd.read_csv('file.csv')
+python: CSV'file.csv'から表データを読まれた結果をXにする	X = pd.read_csv('file.csv')
+python: 読んで、Xに代入する	X = pd.read_csv('file.csv')
+python: 読んだ結果をXに代入する	X = pd.read_csv('file.csv')
+python: 'file.csv'をデータフレームに格納する	pd.read_csv('file.csv')
+python: 'file.csv'を表に格納する	pd.read_csv('file.csv')
+python: データフレームにデータ'file.csv'を格納する	pd.read_csv('file.csv')
+python: 'file.csv'をデータフレームに格納して、Xとする	X = pd.read_csv('file.csv')
+python: 'file.csv'をデータフレームに格納した結果をXにする	X = pd.read_csv('file.csv')
+python: データフレームにデータ'file.csv'を格納して、Xとする	X = pd.read_csv('file.csv')
+python: データフレームにデータ'file.csv'を格納した結果をXにする	X = pd.read_csv('file.csv')
+python: 'file.csv'データを表に格納して、Xにする	X = pd.read_csv('file.csv')
+python: 'file.csv'データを表に格納された結果をXに代入する	X = pd.read_csv('file.csv')
+python: CSVファイル'file.csv'をデータフレームに格納する	pd.read_csv('file.csv')
+python: データフレームにCSVファイル'file.csv'を格納する	pd.read_csv('file.csv')
+python: 表データにCSV'file.csv'を格納する	pd.read_csv('file.csv')
+python: CSVファイル'file.csv'をデータフレームに格納して、Xにする	X = pd.read_csv('file.csv')
+python: CSVファイル'file.csv'をデータフレームに格納した結果をXとする	X = pd.read_csv('file.csv')
+python: 表にCSVデータ'file.csv'を格納して、Xに代入する	X = pd.read_csv('file.csv')
+python: 表にCSVデータ'file.csv'を格納した結果をXにする	X = pd.read_csv('file.csv')
+python: 表データにCSV'file.csv'を格納して、Xにする	X = pd.read_csv('file.csv')
+python: 表データにCSV'file.csv'を格納した結果をXとする	X = pd.read_csv('file.csv')
+python: 'file.csv'をカンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: ','区切りで'file.csv'データを読み込む	pd.read_csv('file.csv', sep=',')
+python: データ'file.csv'を','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: 'file.csv'をカンマ区切りで読み込み、Xとする	X = pd.read_csv('file.csv', sep=',')
+python: 'file.csv'をカンマ区切りで読み込まれた結果をXにする	X = pd.read_csv('file.csv', sep=',')
+python: 'file.csv'データを','区切りで読み、Xにする	X = pd.read_csv('file.csv', sep=',')
+python: 'file.csv'データを','区切りで読んだ結果をXに代入する	X = pd.read_csv('file.csv', sep=',')
+python: ','区切りで'file.csv'を読み込んで、Xとする	X = pd.read_csv('file.csv', sep=',')
+python: ','区切りで'file.csv'を読み込んだ結果をXとする	X = pd.read_csv('file.csv', sep=',')
+python: カンマ区切りで'file.csv'を読み込む	pd.read_csv('file.csv', sep=',')
+python: ','区切りで'file.csv'を読む	pd.read_csv('file.csv', sep=',')
+python: カンマ区切りでデータ'file.csv'を読み込む	pd.read_csv('file.csv', sep=',')
+python: カンマ区切りで'file.csv'を読み込んで、Xとする	X = pd.read_csv('file.csv', sep=',')
+python: カンマ区切りで'file.csv'を読み込まれた結果をXにする	X = pd.read_csv('file.csv', sep=',')
+python: ','区切りで'file.csv'データを読み、Xに代入する	X = pd.read_csv('file.csv', sep=',')
+python: ','区切りで'file.csv'データを読まれた結果をXとする	X = pd.read_csv('file.csv', sep=',')
+python: カンマ区切りで'file.csv'データを読み込み、Xにする	X = pd.read_csv('file.csv', sep=',')
+python: カンマ区切りで'file.csv'データを読み込まれた結果をXとする	X = pd.read_csv('file.csv', sep=',')
+python: 'file.csv'からデータフレームをカンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: データ'file.csv'から表をカンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: 'file.csv'データからデータフレームをカンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: カンマ区切りで読み込んで、Xとする	X = pd.read_csv('file.csv', sep=',')
+python: カンマ区切りで読み込まれた結果をXとする	X = pd.read_csv('file.csv', sep=',')
+python: データ'file.csv'から表データを','区切りで読んで、Xにする	X = pd.read_csv('file.csv', sep=',')
+python: データ'file.csv'から表データを','区切りで読んだ結果をXにする	X = pd.read_csv('file.csv', sep=',')
+python: 'file.csv'データからデータフレームをカンマ区切りで読み込み、Xとする	X = pd.read_csv('file.csv', sep=',')
+python: 'file.csv'データからデータフレームをカンマ区切りで読み込んだ結果をXとする	X = pd.read_csv('file.csv', sep=',')
+python: データフレームを'file.csv'からカンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: 表データをデータ'file.csv'から','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: 表をデータ'file.csv'から','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: データフレームを'file.csv'からカンマ区切りで読み込んで、Xとする	X = pd.read_csv('file.csv', sep=',')
+python: データフレームを'file.csv'からカンマ区切りで読み込んだ結果をXにする	X = pd.read_csv('file.csv', sep=',')
+python: 表を'file.csv'から','区切りで読み、Xにする	X = pd.read_csv('file.csv', sep=',')
+python: 表を'file.csv'から','区切りで読まれた結果をXにする	X = pd.read_csv('file.csv', sep=',')
+python: データフレームを'file.csv'データからカンマ区切りで読み込んで、Xにする	X = pd.read_csv('file.csv', sep=',')
+python: データフレームを'file.csv'データからカンマ区切りで読み込んだ結果をXにする	X = pd.read_csv('file.csv', sep=',')
+python: カンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: 表として'file.csv'を','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: データ'file.csv'を','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: 表として'file.csv'をカンマ区切りで読み込んで、Xにする	X = pd.read_csv('file.csv', sep=',')
+python: 表として'file.csv'をカンマ区切りで読み込まれた結果をXとする	X = pd.read_csv('file.csv', sep=',')
+python: データフレームとして'file.csv'を','区切りで読んで、Xとする	X = pd.read_csv('file.csv', sep=',')
+python: データフレームとして'file.csv'を','区切りで読まれた結果をXとする	X = pd.read_csv('file.csv', sep=',')
+python: データ'file.csv'をカンマ区切りで読み込み、Xにする	X = pd.read_csv('file.csv', sep=',')
+python: データ'file.csv'をカンマ区切りで読み込んだ結果をXに代入する	X = pd.read_csv('file.csv', sep=',')
+python: CSVファイル'file.csv'をカンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: CSV'file.csv'を','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: CSVデータ'file.csv'を','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: CSVファイル'file.csv'をカンマ区切りで読み込み、Xに代入する	X = pd.read_csv('file.csv', sep=',')
+python: CSVファイル'file.csv'をカンマ区切りで読み込んだ結果をXとする	X = pd.read_csv('file.csv', sep=',')
+python: CSV'file.csv'を','区切りで読んで、Xにする	X = pd.read_csv('file.csv', sep=',')
+python: CSV'file.csv'を','区切りで読まれた結果をXに代入する	X = pd.read_csv('file.csv', sep=',')
+python: CSVデータ'file.csv'を','区切りで読み、Xとする	X = pd.read_csv('file.csv', sep=',')
+python: CSVデータ'file.csv'を','区切りで読んだ結果をXに代入する	X = pd.read_csv('file.csv', sep=',')
+python: CSVファイル'file.csv'からカンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: 表をCSVデータ'file.csv'から','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: 表データをCSV'file.csv'から','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: データフレームをCSVファイル'file.csv'からカンマ区切りで読み込み、Xとする	X = pd.read_csv('file.csv', sep=',')
+python: データフレームをCSVファイル'file.csv'からカンマ区切りで読み込んだ結果をXとする	X = pd.read_csv('file.csv', sep=',')
+python: 表データをCSV'file.csv'から','区切りで読み、Xにする	X = pd.read_csv('file.csv', sep=',')
+python: 表データをCSV'file.csv'から','区切りで読まれた結果をXとする	X = pd.read_csv('file.csv', sep=',')
+python: 表をCSVデータ'file.csv'から','区切りで読んで、Xに代入する	X = pd.read_csv('file.csv', sep=',')
+python: 表をCSVデータ'file.csv'から','区切りで読んだ結果をXとする	X = pd.read_csv('file.csv', sep=',')
+python: データフレームとしてCSVファイル'file.csv'をカンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: CSVデータ'file.csv'を表として','区切りで読む	pd.read_csv('file.csv', sep=',')
+python: 表としてCSVデータ'file.csv'をカンマ区切りで読み込む	pd.read_csv('file.csv', sep=',')
+python: データフレームとしてCSVファイル'file.csv'をカンマ区切りで読み込んで、Xに代入する	X = pd.read_csv('file.csv', sep=',')
+python: データフレームとしてCSVファイル'file.csv'をカンマ区切りで読み込んだ結果をXにする	X = pd.read_csv('file.csv', sep=',')
+python: CSVファイル'file.csv'をデータフレームとしてカンマ区切りで読み込んで、Xに代入する	X = pd.read_csv('file.csv', sep=',')
+python: CSVファイル'file.csv'をデータフレームとしてカンマ区切りで読み込まれた結果をXに代入する	X = pd.read_csv('file.csv', sep=',')
+python: 表としてCSVデータ'file.csv'を','区切りで読み、Xに代入する	X = pd.read_csv('file.csv', sep=',')
+python: 表としてCSVデータ'file.csv'を','区切りで読んだ結果をXにする	X = pd.read_csv('file.csv', sep=',')
+python: 'file.csv'をタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: 'file.csv'データをタブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: データ'file.csv'をタブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: 'file.csv'をタブ区切りで読み込み、Xに代入する	X = pd.read_csv('file.csv', sep='\t')
+python: 'file.csv'をタブ区切りで読み込まれた結果をXに代入する	X = pd.read_csv('file.csv', sep='\t')
+python: データ'file.csv'をタブ区切りで読んで、Xとする	X = pd.read_csv('file.csv', sep='\t')
+python: データ'file.csv'をタブ区切りで読んだ結果をXに代入する	X = pd.read_csv('file.csv', sep='\t')
+python: 'file.csv'データをタブ区切りで読み込んで、Xにする	X = pd.read_csv('file.csv', sep='\t')
+python: 'file.csv'データをタブ区切りで読み込んだ結果をXにする	X = pd.read_csv('file.csv', sep='\t')
+python: 読み込む	pd.read_csv('file.csv', sep='\t')
+python: タブ区切りでデータ'file.csv'を読み込む	pd.read_csv('file.csv', sep='\t')
+python: タブ区切りで'file.csv'データを読む	pd.read_csv('file.csv', sep='\t')
+python: 読み込んで、Xにする	X = pd.read_csv('file.csv', sep='\t')
+python: 読み込んだ結果をXとする	X = pd.read_csv('file.csv', sep='\t')
+python: タブ区切りでデータ'file.csv'を読んで、Xに代入する	X = pd.read_csv('file.csv', sep='\t')
+python: タブ区切りでデータ'file.csv'を読まれた結果をXにする	X = pd.read_csv('file.csv', sep='\t')
+python: タブ区切りで'file.csv'を読み、Xにする	X = pd.read_csv('file.csv', sep='\t')
+python: タブ区切りで'file.csv'を読んだ結果をXにする	X = pd.read_csv('file.csv', sep='\t')
+python: 'file.csv'からデータフレームをタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: データ'file.csv'から表をタブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: 'file.csv'データから表をタブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: 'file.csv'からデータフレームをタブ区切りで読み込んで、Xにする	X = pd.read_csv('file.csv', sep='\t')
+python: 'file.csv'からデータフレームをタブ区切りで読み込んだ結果をXとする	X = pd.read_csv('file.csv', sep='\t')
+python: データ'file.csv'から表をタブ区切りで読み、Xとする	X = pd.read_csv('file.csv', sep='\t')
+python: データ'file.csv'から表をタブ区切りで読まれた結果をXにする	X = pd.read_csv('file.csv', sep='\t')
+python: 'file.csv'から表をタブ区切りで読み込んで、Xに代入する	X = pd.read_csv('file.csv', sep='\t')
+python: 'file.csv'から表をタブ区切りで読み込んだ結果をXとする	X = pd.read_csv('file.csv', sep='\t')
+python: データフレームを'file.csv'からタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: 表を'file.csv'データからタブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: 表を'file.csv'データからタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: 'file.csv'からタブ区切りで読み込んで、Xとする	X = pd.read_csv('file.csv', sep='\t')
+python: 'file.csv'からタブ区切りで読み込まれた結果をXにする	X = pd.read_csv('file.csv', sep='\t')
+python: データフレームを'file.csv'データからタブ区切りで読み込み、Xに代入する	X = pd.read_csv('file.csv', sep='\t')
+python: データフレームを'file.csv'データからタブ区切りで読み込んだ結果をXにする	X = pd.read_csv('file.csv', sep='\t')
+python: 表をデータ'file.csv'からタブ区切りで読み、Xとする	X = pd.read_csv('file.csv', sep='\t')
+python: 表をデータ'file.csv'からタブ区切りで読まれた結果をXにする	X = pd.read_csv('file.csv', sep='\t')
+python: 表として'file.csv'をタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: 表データとしてデータ'file.csv'をタブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: 表データとして'file.csv'をタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: データフレームとして'file.csv'をタブ区切りで読み込んで、Xとする	X = pd.read_csv('file.csv', sep='\t')
+python: データフレームとして'file.csv'をタブ区切りで読み込まれた結果をXにする	X = pd.read_csv('file.csv', sep='\t')
+python: 表データとして'file.csv'をタブ区切りで読んで、Xにする	X = pd.read_csv('file.csv', sep='\t')
+python: 表データとして'file.csv'をタブ区切りで読んだ結果をXに代入する	X = pd.read_csv('file.csv', sep='\t')
+python: データ'file.csv'をタブ区切りで読み、Xに代入する	X = pd.read_csv('file.csv', sep='\t')
+python: データ'file.csv'をタブ区切りで読んだ結果をXとする	X = pd.read_csv('file.csv', sep='\t')
+python: CSVファイル'file.csv'をタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: タブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: CSV'file.csv'をタブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: CSVファイル'file.csv'をタブ区切りで読み込んで、Xに代入する	X = pd.read_csv('file.csv', sep='\t')
+python: CSVファイル'file.csv'をタブ区切りで読み込んだ結果をXに代入する	X = pd.read_csv('file.csv', sep='\t')
+python: CSV'file.csv'をタブ区切りで読み、Xに代入する	X = pd.read_csv('file.csv', sep='\t')
+python: CSV'file.csv'をタブ区切りで読んだ結果をXに代入する	X = pd.read_csv('file.csv', sep='\t')
+python: CSVデータ'file.csv'をタブ区切りで読み込んで、Xにする	X = pd.read_csv('file.csv', sep='\t')
+python: CSVデータ'file.csv'をタブ区切りで読み込まれた結果をXにする	X = pd.read_csv('file.csv', sep='\t')
+python: データフレームをCSVファイル'file.csv'からタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: CSVデータ'file.csv'からタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: 表をCSVデータ'file.csv'からタブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: データフレームをCSVファイル'file.csv'からタブ区切りで読み込み、Xにする	X = pd.read_csv('file.csv', sep='\t')
+python: データフレームをCSVファイル'file.csv'からタブ区切りで読み込んだ結果をXに代入する	X = pd.read_csv('file.csv', sep='\t')
+python: 表データをCSV'file.csv'からタブ区切りで読み、Xとする	X = pd.read_csv('file.csv', sep='\t')
+python: 表データをCSV'file.csv'からタブ区切りで読まれた結果をXとする	X = pd.read_csv('file.csv', sep='\t')
+python: 表をCSVデータ'file.csv'からタブ区切りで読んで、Xにする	X = pd.read_csv('file.csv', sep='\t')
+python: 表をCSVデータ'file.csv'からタブ区切りで読まれた結果をXとする	X = pd.read_csv('file.csv', sep='\t')
+python: データフレームとしてCSVファイル'file.csv'をタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: 表データとしてCSV'file.csv'をタブ区切りで読む	pd.read_csv('file.csv', sep='\t')
+python: CSVファイル'file.csv'をデータフレームとしてタブ区切りで読み込む	pd.read_csv('file.csv', sep='\t')
+python: データフレームとしてCSVファイル'file.csv'をタブ区切りで読み込み、Xにする	X = pd.read_csv('file.csv', sep='\t')
+python: データフレームとしてCSVファイル'file.csv'をタブ区切りで読み込んだ結果をXに代入する	X = pd.read_csv('file.csv', sep='\t')
+python: CSV'file.csv'を表データとしてタブ区切りで読んで、Xとする	X = pd.read_csv('file.csv', sep='\t')
+python: CSV'file.csv'を表データとしてタブ区切りで読んだ結果をXにする	X = pd.read_csv('file.csv', sep='\t')
+python: 表データとしてCSV'file.csv'をタブ区切りで読み、Xに代入する	X = pd.read_csv('file.csv', sep='\t')
+python: 表データとしてCSV'file.csv'をタブ区切りで読んだ結果をXに代入する	X = pd.read_csv('file.csv', sep='\t')
+python: ヘッダーなしで'file.csv'を読み込む	pd.read_csv('file.csv', header=None)
+python: ヘッダーなしで'file.csv'を読む	pd.read_csv('file.csv', header=None)
+python: ヘッダーなしでデータ'file.csv'を読む	pd.read_csv('file.csv', header=None)
+python: ヘッダーなしで'file.csv'を読み込み、Xに代入する	X = pd.read_csv('file.csv', header=None)
+python: ヘッダーなしで'file.csv'を読み込んだ結果をXに代入する	X = pd.read_csv('file.csv', header=None)
+python: ヘッダーなしで'file.csv'データを読み込み、Xにする	X = pd.read_csv('file.csv', header=None)
+python: ヘッダーなしで'file.csv'データを読み込まれた結果をXにする	X = pd.read_csv('file.csv', header=None)
+python: ヘッダーなしで'file.csv'データを読んで、Xに代入する	X = pd.read_csv('file.csv', header=None)
+python: ヘッダーなしで'file.csv'データを読まれた結果をXに代入する	X = pd.read_csv('file.csv', header=None)
+python: ヘッダーをなしで'file.csv'を読み込む	pd.read_csv('file.csv', header=None)
+python: なしで'file.csv'データを列名を読み込む	pd.read_csv('file.csv', header=None)
+python: 指定しないで'file.csv'を列名を読む	pd.read_csv('file.csv', header=None)
+python: 列名をなしで'file.csv'を読み込み、Xに代入する	X = pd.read_csv('file.csv', header=None)
+python: 列名をなしで'file.csv'を読み込まれた結果をXに代入する	X = pd.read_csv('file.csv', header=None)
+python: セットしないでデータ'file.csv'を列名を読み込み、Xにする	X = pd.read_csv('file.csv', header=None)
+python: セットしないでデータ'file.csv'を列名を読み込んだ結果をXにする	X = pd.read_csv('file.csv', header=None)
+python: なしでデータ'file.csv'を列名を読み、Xとする	X = pd.read_csv('file.csv', header=None)
+python: なしでデータ'file.csv'を列名を読んだ結果をXに代入する	X = pd.read_csv('file.csv', header=None)
+python: 0番目の列をインデックスとして、'file.csv'を表データとして読み込む	pd.read_csv('file.csv', index_col=0)
+python: インデックスに、'file.csv'データを0番目の列を読む	pd.read_csv('file.csv', index_col=0)
+python: インデックスと設定して、'file.csv'データを先頭の列を表として読み込む	pd.read_csv('file.csv', index_col=0)
+python: 0番目の列をインデックスと設定して、'file.csv'を表として読み込み、Xとする	X = pd.read_csv('file.csv', index_col=0)
+python: 0番目の列をインデックスと設定して、'file.csv'を表として読み込まれた結果をXにする	X = pd.read_csv('file.csv', index_col=0)
+python: インデックスに指定して、'file.csv'データを0番目の列を読み、Xに代入する	X = pd.read_csv('file.csv', index_col=0)
+python: インデックスに指定して、'file.csv'データを0番目の列を読んだ結果をXとする	X = pd.read_csv('file.csv', index_col=0)
+python: インデックスとセットして、'file.csv'を先頭の列を表データとして読み込み、Xに代入する	X = pd.read_csv('file.csv', index_col=0)
+python: インデックスとセットして、'file.csv'を先頭の列を表データとして読み込んだ結果をXにする	X = pd.read_csv('file.csv', index_col=0)
+python: 列番号0をインデックスとして'file.csv'から表を読み込む	pd.read_csv('file.csv', index_col=0)
+python: インデックスと設定して'file.csv'データから表データを読み込む	pd.read_csv('file.csv', index_col=0)
+python: 列番号0をインデックスに設定してデータ'file.csv'から読み込む	pd.read_csv('file.csv', index_col=0)
+python: 列番号0をインデックスとして'file.csv'から表データを読み込み、Xに代入する	X = pd.read_csv('file.csv', index_col=0)
+python: 列番号0をインデックスとして'file.csv'から表データを読み込んだ結果をXとする	X = pd.read_csv('file.csv', index_col=0)
+python: 列番号0をインデックスとセットして'file.csv'データからデータフレームを読んで、Xに代入する	X = pd.read_csv('file.csv', index_col=0)
+python: 列番号0をインデックスとセットして'file.csv'データからデータフレームを読んだ結果をXに代入する	X = pd.read_csv('file.csv', index_col=0)
+python: 列番号0をインデックスにして'file.csv'から読み込んで、Xにする	X = pd.read_csv('file.csv', index_col=0)
+python: 列番号0をインデックスにして'file.csv'から読み込んだ結果をXとする	X = pd.read_csv('file.csv', index_col=0)
+python: 列番号0をインデックスとして'file.csv'を表に格納する	pd.read_csv('file.csv', index_col=0)
+python: インデックスにセットして'file.csv'を列番号0を格納する	pd.read_csv('file.csv', index_col=0)
+python: インデックスとして'file.csv'を列番号0をデータフレームに格納する	pd.read_csv('file.csv', index_col=0)
+python: 列番号0をインデックスとして'file.csv'をデータフレームに格納して、Xに代入する	X = pd.read_csv('file.csv', index_col=0)
+python: 列番号0をインデックスとして'file.csv'をデータフレームに格納した結果をXとする	X = pd.read_csv('file.csv', index_col=0)
+python: インデックスにセットして'file.csv'を列番号0を格納し、Xに代入する	X = pd.read_csv('file.csv', index_col=0)
+python: インデックスにセットして'file.csv'を列番号0を格納された結果をXとする	X = pd.read_csv('file.csv', index_col=0)
+python: インデックスと指定して'file.csv'データを列番号0をデータフレームに格納し、Xにする	X = pd.read_csv('file.csv', index_col=0)
+python: インデックスと指定して'file.csv'データを列番号0をデータフレームに格納した結果をXとする	X = pd.read_csv('file.csv', index_col=0)
+python: エンコーディングをシフトJISとして'file.csv'を読み込む	pd.read_csv('file.csv', encoding='shift_jis')
+python: 'file.csv'データをエンコーディングをシフトJISとして読む	pd.read_csv('file.csv', encoding='shift_jis')
+python: シフトJISとしてデータ'file.csv'をエンコーディングを読み込む	pd.read_csv('file.csv', encoding='shift_jis')
+python: エンコーディングをシフトJISとして'file.csv'を読み込み、Xとする	X = pd.read_csv('file.csv', encoding='shift_jis')
+python: エンコーディングをシフトJISとして'file.csv'を読み込んだ結果をXとする	X = pd.read_csv('file.csv', encoding='shift_jis')
+python: 'file.csv'をシフトJISとしてエンコーディングを読み込んで、Xとする	X = pd.read_csv('file.csv', encoding='shift_jis')
+python: 'file.csv'をシフトJISとしてエンコーディングを読み込まれた結果をXとする	X = pd.read_csv('file.csv', encoding='shift_jis')
+python: データ'file.csv'をエンコーディングをシフトJISとして読み込んで、Xに代入する	X = pd.read_csv('file.csv', encoding='shift_jis')
+python: データ'file.csv'をエンコーディングをシフトJISとして読み込まれた結果をXに代入する	X = pd.read_csv('file.csv', encoding='shift_jis')
+python: 文字コードがシフトJISのファイル'file.csv'を読み込む	pd.read_csv('file.csv', encoding='shift_jis')
+python: 文字コードがシフトJISの'file.csv'を読む	pd.read_csv('file.csv', encoding='shift_jis')
+python: 文字コードがシフトJISのデータ'file.csv'を読み込む	pd.read_csv('file.csv', encoding='shift_jis')
+python: 文字コードがシフトJISのファイル'file.csv'を読み込んで、Xにする	X = pd.read_csv('file.csv', encoding='shift_jis')
+python: 文字コードがシフトJISのファイル'file.csv'を読み込まれた結果をXとする	X = pd.read_csv('file.csv', encoding='shift_jis')
+python: 文字コードがシフトJISの'file.csv'を読んで、Xにする	X = pd.read_csv('file.csv', encoding='shift_jis')
+python: 文字コードがシフトJISの'file.csv'を読んだ結果をXにする	X = pd.read_csv('file.csv', encoding='shift_jis')
+python: 文字コードがシフトJISのデータ'file.csv'を読み、Xにする	X = pd.read_csv('file.csv', encoding='shift_jis')
+python: 文字コードがシフトJISのデータ'file.csv'を読んだ結果をXに代入する	X = pd.read_csv('file.csv', encoding='shift_jis')
+python: dfをエクセルファイル'out.xlsx'に書き込む	df.to_excel('out.xlsx')
+python: dfデータフレームをエクセルファイル'out.xlsx'に書き出す	df.to_excel('out.xlsx')
+python: エクセルファイル'out.xlsx'にdfを書き出す	df.to_excel('out.xlsx')
+python: dfをエクセルファイル'out.xlsx'に変換する	df.to_excel('out.xlsx')
+python: dfを変換する	df.to_excel('out.xlsx')
+python: エクセルファイル'out.xlsx'にdfデータフレームを変換する	df.to_excel('out.xlsx')
+python: dfをエクセルファイル'out.xlsx'というファイル名で書き込む	df.to_excel('out.xlsx')
+python: dfデータフレームをエクセルファイル'out.xlsx'という名前に指定して書き出す	df.to_excel('out.xlsx')
+python: dfをエクセルファイル'out.xlsx'という名前に設定して書き込む	df.to_excel('out.xlsx')
+python: dfをエクセルファイル'out.xlsx'というファイル名で保存する	df.to_excel('out.xlsx')
+python: データフレームdfをエクセルファイル'out.xlsx'というファイル名で保存する	df.to_excel('out.xlsx')
+python: dfデータフレームをエクセルファイル'out.xlsx'というファイル名で保存する	df.to_excel('out.xlsx')
+python: dfを'out.xlsx'というファイル名でエクセル形式に書き込む	df.to_excel('out.xlsx')
+python: dfデータフレームを'out.xlsx'というファイル名でエクセルファイルに書き出す	df.to_excel('out.xlsx')
+python: 'out.xlsx'というファイル名でエクセルファイルにdfを書き込む	df.to_excel('out.xlsx')
+python: dfを'out.xlsx'というファイル名でエクセル形式で保存する	df.to_excel('out.xlsx')
+python: dfデータフレームを'out.xlsx'というファイル名でエクセル形式で保存する	df.to_excel('out.xlsx')
+python: データフレームdfを'out.xlsx'というファイル名でエクセル形式で保存する	df.to_excel('out.xlsx')
+python: dfから'out.xlsx'という名前でエクセルファイルにする	df.to_excel('out.xlsx')
+python: データフレームdfから'out.xlsx'というエクセルファイルにする	df.to_excel('out.xlsx')
+python: dfから'out.xlsx'という名前でエクセルファイルに変換する	df.to_excel('out.xlsx')
+python: dfを'out.csv'に書き込む	df.to_csv('out.csv')
+python: 'out.csv'にdfを書き込む	df.to_csv('out.csv')
+python: データフレームdfをファイル'out.csv'に書き込む	df.to_csv('out.csv')
+python: dfを'out.csv'に変換する	df.to_csv('out.csv')
+python: dfを'out.csv'にする	df.to_csv('out.csv')
+python: dfを変換する	df.to_csv('out.csv')
+python: dfを'out.csv'というファイル名で	df.to_csv('out.csv')
+python: データフレームdfをファイル'out.csv'というファイル名で	df.to_csv('out.csv')
+python: dfデータフレームを'out.csv'ファイルというファイル名で	df.to_csv('out.csv')
+python: dfを'out.csv'というファイル名でCSVファイルに保存する	df.to_csv('out.csv')
+python: データフレームdfをファイル'out.csv'という名前でCSVファイルに保存する	df.to_csv('out.csv')
+python: dfデータフレームを'out.csv'ファイルという名前で保存する	df.to_csv('out.csv')
+python: dfを'out.csv'にして保存する	df.to_csv('out.csv')
+python: 'out.csv'にdfを指定して保存する	df.to_csv('out.csv')
+python: dfを'out.csv'にセットして保存する	df.to_csv('out.csv')
+python: dfから'out.csv'という名前でCSVファイルに変換する	df.to_csv('out.csv')
+python: データフレームdfからファイル'out.csv'という名前でCSVに変換する	df.to_csv('out.csv')
+python: データフレームdfからファイル'out.csv'という名前でCSVデータにする	df.to_csv('out.csv')
+python: dfの先頭の5行	df.head()
+python: dfの先頭5行	df.head()
+python: dfの上5行	df.head()
+python: dfの先頭の5行を見る	df.head()
+python: データフレームdfの先頭の5行を見る	df.head()
+python: dfデータフレームの5行を見る	df.head()
+python: とりあえずdfの内容を確認	df.head()
+python: dfの内容を確認	df.head()
+python: とりあえずデータフレームdfの内容を確認	df.head()
+python: データフレームdfの内容をチェックを表示する	df.head()
+python: とりあえずdfデータフレームの内容をチェックを確認する	df.head()
+python: dfの先頭の10行	df.head(10)
+python: データフレームdfの先頭の10行	df.head(10)
+python: dfデータフレームの先頭の10行	df.head(10)
+python: dfの先頭の10行を表示する	df.head(10)
+python: dfデータフレームの先頭の10行を調べる	df.head(10)
+python: データフレームdfの先頭の10行を調べる	df.head(10)
+python: dfの末尾の5行	df.tail()
+python: dfデータフレームの下5行	df.tail()
+python: dfの最後の5行	df.tail()
+python: dfの末尾の5行を確認する	df.tail()
+python: dfの最後の5行を確認する	df.tail()
+python: データフレームdfの下5行を表示する	df.tail()
+python: dfの末尾の10行	df.tail(10)
+python: データフレームdfの末尾の10行	df.tail(10)
+python: dfデータフレームの末尾の10行	df.tail(10)
+python: dfの末尾の10行を表示する	df.tail(10)
+python: dfデータフレームの末尾の10行を表示する	df.tail(10)
+python: データフレームdfの末尾の10行を確認する	df.tail(10)
+python: dfの100行目から106行目まで	df[100:106]
+python: dfデータフレームの100行目から106行目まで	df[100:106]
+python: dfの100行目から106行目までを確認する	df[100:106]
+python: dfデータフレームの100行目から106行目までを調べる	df[100:106]
+python: データフレームdfの100行目から106行目までを調べる	df[100:106]
+python: dfの100行目から末尾まで	df[100:]
+python: dfの100行目から最後まで	df[100:]
+python: データフレームdfの100行目から末尾まで	df[100:]
+python: dfの100行目から末尾までを確認する	df[100:]
+python: dfデータフレームの100行目から末尾までを表示する	df[100:]
+python: dfデータフレームの100行目から最後までを見る	df[100:]
+python: dfの100行目より後ろ	df[100:]
+python: dfデータフレームの100行目より後ろ	df[100:]
+python: データフレームdfの100行目より後ろ	df[100:]
+python: dfの100行目より後ろを確認する	df[100:]
+python: dfデータフレームの100行目より後ろを見る	df[100:]
+python: データフレームdfの100行目より後ろを調べる	df[100:]
+python: dfの最初から100行目まで	df[:100]
+python: dfデータフレームの最初から100行目まで	df[:100]
+python: dfの先頭から100行目まで	df[:100]
+python: dfの先頭から100行目までを確認する	df[:100]
+python: dfの最初から100行目までを調べる	df[:100]
+python: dfデータフレームの最初から100行目までを見る	df[:100]
+python: dfの100行目まで	df[:100]
+python: dfの100行目より前	df[:100]
+python: dfデータフレームの100行目より前	df[:100]
+python: dfの100行目までを調べる	df[:100]
+python: dfの100行目より前を確認する	df[:100]
+python: データフレームdfの100行目までを調べる	df[:100]
+python: dfの'age'を選択する	df['age']
+python: データフレームdfのカラム'age'を選択する	df['age']
+python: データフレームdfの列'age'を選択する	df['age']
+python: dfの'name'と'age'を抽出する	df[['name','age']]
+python: dfデータフレームの'name'カラム、'age'カラムを選択する	df[['name','age']]
+python: データフレームdfのカラム'name'とカラム'age'を抽出する	df[['name','age']]
+python: dfの'name'と'age'と'GPA'を抽出する	df[['name','age','GPA']]
+python: dfデータフレームの'name'列と'age'カラムと'GPA'列を抽出する	df[['name','age','GPA']]
+python: dfデータフレームの'name'列、'age'カラム、'GPA'列を抽出する	df[['name','age','GPA']]
+python: dfの'name'と'age'と'GPA'と'addr'を抽出する	df[['name','age','GPA', 'addr']]
+python: dfデータフレームの'name'列、'age'カラム、'GPA'コラム、'addr'カラムを抽出する	df[['name','age','GPA', 'addr']]
+python: dfデータフレームの'name'列と'age'カラムと'GPA'コラムと'addr'カラムを抽出する	df[['name','age','GPA', 'addr']]
+python: df中のインデックスが100の行	df.loc[100]
+python: データフレームdfの中のインデックスが100の行	df.loc[100]
+python: データフレームdf内のインデックスが100の行	df.loc[100]
+python: df内のインデックスが100の行を取得する	df.loc[100]
+python: df中のインデックスが100の行を抽出する	df.loc[100]
+python: dfの中のインデックスが100の行をえる	df.loc[100]
+python: df内の1,2,4行目の0,2列目	df.iloc[[1,2,4],[0,2]]
+python: dfデータフレームの中の1,2,4行目の0,2列目	df.iloc[[1,2,4],[0,2]]
+python: データフレームdf内の1,2,4行目の0,2列目	df.iloc[[1,2,4],[0,2]]
+python: df内の1,2,4行目の0,2列目を抽出する	df.iloc[[1,2,4],[0,2]]
+python: dfデータフレーム中の1,2,4行目の0,2列目を得る	df.iloc[[1,2,4],[0,2]]
+python: dfの中の1,2,4行目の0,2列目を抽出する	df.iloc[[1,2,4],[0,2]]
+python: dfのデータの詳細	df.info()
+python: dfデータフレームのデータの性質	df.info()
+python: データフレームdfのデータの詳細	df.info()
+python: dfのデータの詳細を確認する	df.info()
+python: データフレームdfのデータの性質を確認する	df.info()
+python: データフレームdfのデータの詳細を表示する	df.info()
+python: dfの統計情報	df.describe()
+python: dfデータフレームの統計情報	df.describe()
+python: データフレームdfの統計情報	df.describe()
+python: dfの統計情報を表示する	df.describe()
+python: データフレームdfの統計情報を調べる	df.describe()
+python: dfデータフレームの統計情報を確認する	df.describe()
+python: dfの数値データ以外の統計情報	df.describe(include='O')
+python: データフレームdfの数値データ以外の統計情報	df.describe(include='O')
+python: dfデータフレームの数値データ以外の統計情報	df.describe(include='O')
+python: dfの数値データ以外の統計情報を確認する	df.describe(include='O')
+python: データフレームdfの数値データ以外の統計情報を見る	df.describe(include='O')
+python: dfデータフレームの数値データ以外の統計情報を調べる	df.describe(include='O')
+python: dfの'age'についての要約統計量	df['age'].describe()
+python: データフレームdfのカラム'age'についての統計情報	df['age'].describe()
+python: dfの'age'についての統計情報	df['age'].describe()
+python: dfの'age'についての要約統計量を調べる	df['age'].describe()
+python: データフレームdfのカラム'age'についての要約統計量を見る	df['age'].describe()
+python: dfデータフレームの'age'カラムについての統計情報を見る	df['age'].describe()
+python: dfの'age'についての要約統計量を抽出する	df['age'].describe()
+python: dfデータフレームの'age'カラムについての統計情報を得る	df['age'].describe()
+python: データフレームdfのカラム'age'についての要約統計量を得る	df['age'].describe()
+python: (df['age'])の要約統計量	df['age'].describe()
+python: (df['age'])の統計情報	df['age'].describe()
+python: (df['age'])の要約統計量を調べる	df['age'].describe()
+python: (df['age'])の統計情報を調べる	df['age'].describe()
+python: (df['age'])の要約統計量を抽出する	df['age'].describe()
+python: (df['age'])の統計情報を取得する	df['age'].describe()
+python: dfの'age'についての平均値	df['age'].mean()
+python: dfデータフレームの'age'カラムについての平均値	df['age'].mean()
+python: データフレームdfのカラム'age'についての平均値	df['age'].mean()
+python: dfの'age'についての平均値を確認する	df['age'].mean()
+python: データフレームdfのカラム'age'についての平均値を見る	df['age'].mean()
+python: dfデータフレームの'age'カラムについての平均値を見る	df['age'].mean()
+python: dfの'age'についての平均値を得る	df['age'].mean()
+python: データフレームdfのカラム'age'についての平均値を取得する	df['age'].mean()
+python: dfデータフレームの'age'カラムについての平均値をえる	df['age'].mean()
+python: (df['age'])の平均値	df['age'].mean()
+python: (df['age'])の平均	df['age'].mean()
+python: (df['age'])の平均値を確認する	df['age'].mean()
+python: (df['age'])の平均を確認する	df['age'].mean()
+python: (df['age'])の平均を取得する	df['age'].mean()
+python: (df['age'])の平均値をえる	df['age'].mean()
+python: dfの'age'についての中央値	df['age'].median()
+python: データフレームdfのカラム'age'についての中央値	df['age'].median()
+python: dfデータフレームの'age'カラムについての中央値	df['age'].median()
+python: dfの'age'についての中央値を見る	df['age'].median()
+python: データフレームdfのカラム'age'についての中央値を確認する	df['age'].median()
+python: dfの'age'についての中央値を得る	df['age'].median()
+python: データフレームdfのカラム'age'についての中央値をえる	df['age'].median()
+python: dfデータフレームの'age'カラムについての中央値を取得する	df['age'].median()
+python: (df['age'])の中央値	df['age'].median()
+python: (df['age'])の中央値を確認する	df['age'].median()
+python: (df['age'])の中央値をえる	df['age'].median()
+python: dfの'age'についての最頻値	df['age'].mode()
+python: dfデータフレームの'age'カラムについての最頻値	df['age'].mode()
+python: データフレームdfのカラム'age'についての最頻値	df['age'].mode()
+python: dfの'age'についての最頻値を表示する	df['age'].mode()
+python: dfデータフレームの'age'カラムについての最頻値を確認する	df['age'].mode()
+python: データフレームdfのカラム'age'についての最頻値を確認する	df['age'].mode()
+python: dfの'age'についての最頻値をえる	df['age'].mode()
+python: データフレームdfのカラム'age'についての最頻値をえる	df['age'].mode()
+python: dfデータフレームの'age'カラムについての最頻値をえる	df['age'].mode()
+python: (df['age'])の最頻値	df['age'].mode()
+python: (df['age'])の最頻値を調べる	df['age'].mode()
+python: (df['age'])の最頻値を抽出する	df['age'].mode()
+python: dfの'age'についての標準偏差	df['age'].std()
+python: データフレームdfのカラム'age'についての標準偏差	df['age'].std()
+python: dfの'age'についての標準偏差を調べる	df['age'].std()
+python: データフレームdfのカラム'age'についての標準偏差を確認する	df['age'].std()
+python: dfデータフレームの'age'カラムについての標準偏差を表示する	df['age'].std()
+python: dfの'age'についての標準偏差をえる	df['age'].std()
+python: dfデータフレームの'age'カラムについての標準偏差を取得する	df['age'].std()
+python: データフレームdfのカラム'age'についての標準偏差を得る	df['age'].std()
+python: (df['age'])の標準偏差	df['age'].std()
+python: (df['age'])の標準偏差を表示する	df['age'].std()
+python: (df['age'])の標準偏差を得る	df['age'].std()
+python: dfの'age'についての分散	df['age'].var()
+python: データフレームdfのカラム'age'についての分散	df['age'].var()
+python: dfデータフレームの'age'カラムについての分散	df['age'].var()
+python: dfの'age'についての分散を確認する	df['age'].var()
+python: dfデータフレームの'age'カラムについての分散を見る	df['age'].var()
+python: データフレームdfのカラム'age'についての分散を見る	df['age'].var()
+python: dfの'age'についての分散を取得する	df['age'].var()
+python: データフレームdfのカラム'age'についての分散を取得する	df['age'].var()
+python: dfデータフレームの'age'カラムについての分散を取得する	df['age'].var()
+python: (df['age'])の分散	df['age'].var()
+python: (df['age'])の分散を調べる	df['age'].var()
+python: (df['age'])の分散をえる	df['age'].var()
+python: dfの列の名前	df.columns
+python: データフレームdfの列名	df.columns
+python: データフレームdfのカラム名	df.columns
+python: dfの列の名前をXとする	X = df.columns
+python: データフレームdfの列の名前をXに代入する	X = df.columns
+python: dfの列名をXにする	X = df.columns
+python: dfの列の名前を見る	df.columns
+python: データフレームdfの列名を調べる	df.columns
+python: データフレームdfの列の名前を確認する	df.columns
+python: dfのインデックス名	df.index
+python: dfデータフレームの行の名前	df.index
+python: データフレームdfの行の名前	df.index
+python: dfのインデックス名をXに代入する	X = df.index
+python: dfデータフレームの行の名前をXにする	X = df.index
+python: dfの行名をXとする	X = df.index
+python: dfのインデックス名を確認する	df.index
+python: データフレームdfの行名を見る	df.index
+python: dfデータフレームの行の名前を調べる	df.index
+python: dfの要素	df.values
+python: dfデータフレームの要素	df.values
+python: データフレームdfの要素	df.values
+python: dfのバリューをXに代入する	X = df.values
+python: データフレームdfの要素をXにする	X = df.values
+python: データフレームdfのバリューをXとする	X = df.values
+python: dfのバリューを調べる	df.values
+python: データフレームdfの要素を表示する	df.values
+python: データフレームdfのバリューを確認する	df.values
+python: dfの'G3'のバリュー	df['G3'].values
+python: データフレームdfのコラム'G3'の要素	df['G3'].values
+python: dfデータフレームの'G3'コラムのバリュー	df['G3'].values
+python: dfの'G3'のバリューを確認する	df['G3'].values
+python: dfの'G3'の要素を見る	df['G3'].values
+python: dfデータフレームの'G3'コラムのバリューを確認する	df['G3'].values
+python: dfのデータ型	df.dtypes
+python: データフレームdfのデータ型	df.dtypes
+python: dfデータフレームのデータ型	df.dtypes
+python: dfのデータ型を見る	df.dtypes
+python: データフレームdfのデータ型を見る	df.dtypes
+python: dfの行数や列数	df.shape
+python: dfデータフレームの形状	df.shape
+python: dfデータフレームの行数と列数	df.shape
+python: dfの行数や列数を見る	df.shape
+python: データフレームdfの行数と列数を表示する	df.shape
+python: dfの行数と列数を確認する	df.shape
+python: dfの'weather'の各要素の出現回数	df['weather'].value_counts()
+python: dfデータフレームの'weather'列の各要素の出現回数	df['weather'].value_counts()
+python: dfの'weather'のそれぞれのデータの出現回数	df['weather'].value_counts()
+python: dfの'weather'の各要素の出現頻度を見る	df['weather'].value_counts()
+python: データフレームdfの列'weather'の出現回数を確認する	df['weather'].value_counts()
+python: データフレームdfの列'weather'のそれぞれのデータの出現回数を調べる	df['weather'].value_counts()
+python: dfの'remarks'の一意の値	df['remarks'].unique()
+python: dfデータフレームの'remarks'列のデータの種類	df['remarks'].unique()
+python: dfの'remarks'のユニークな要素	df['remarks'].unique()
+python: dfの'remarks'のユニーク値を表示する	df['remarks'].unique()
+python: dfの'remarks'のユニークな要素を調べる	df['remarks'].unique()
+python: dfデータフレームの'remarks'列の一意の値を確認する	df['remarks'].unique()
+python: dfの'remarks'のユニークな要素の数	df['remarks'].nunique()
+python: データフレームdfのコラム'remarks'のデータの種類の数	df['remarks'].nunique()
+python: データフレームdfのコラム'remarks'のユニークな要素の数	df['remarks'].nunique()
+python: dfの'remarks'のユニークな要素の数を表示する	df['remarks'].nunique()
+python: dfデータフレームの'remarks'コラムのユニークな要素数を表示する	df['remarks'].nunique()
+python: dfの'remarks'のデータの種類の数を確認する	df['remarks'].nunique()
+python: dfのカラム名を'sale'から'sales'にリネームする	df.rename(columns={'sale': 'sales'})
+python: データフレームdfの列の名前を'sale'から'sales'にリネームする	df.rename(columns={'sale': 'sales'})
+python: データフレームdfの列名を'sale'から'sales'に変更する	df.rename(columns={'sale': 'sales'})
+python: dfのカラム名を'sale'から'sales'にリネームし、Xに代入する	X = df.rename(columns={'sale': 'sales'})
+python: dfのカラム名を'sale'から'sales'にリネームした結果をXにする	X = df.rename(columns={'sale': 'sales'})
+python: データフレームdfの列の名前を'sale'から'sales'にリネームし、Xにする	X = df.rename(columns={'sale': 'sales'})
+python: データフレームdfの列の名前を'sale'から'sales'にリネームした結果をXに代入する	X = df.rename(columns={'sale': 'sales'})
+python: 'sale'から'sales'にdfの列名をリネームし、Xにする	X = df.rename(columns={'sale': 'sales'})
+python: 'sale'から'sales'にdfの列名をリネームされた結果をXとする	X = df.rename(columns={'sale': 'sales'})
+python: dfのカラム名を'sale'から'sales'にリネームして、dfとする	df = df.rename(columns={'sale': 'sales'})
+python: dfのカラム名を'sale'から'sales'にリネームして、再代入する	df = df.rename(columns={'sale': 'sales'})
+python: dfのカラム名を'sale'から'sales'にリネームしたをdfに代入する	df = df.rename(columns={'sale': 'sales'})
+python: dfのカラム名を'sale'から'sales'にリネームしたを置き換える	df = df.rename(columns={'sale': 'sales'})
+python: 'sale'から'sales'にdfデータフレームの列の名前を変更して、dfに代入する	df = df.rename(columns={'sale': 'sales'})
+python: 'sale'から'sales'にdfデータフレームの列の名前を変更して、置き換える	df = df.rename(columns={'sale': 'sales'})
+python: 'sale'から'sales'にdfデータフレームの列の名前を変更したをdfにする	df = df.rename(columns={'sale': 'sales'})
+python: 'sale'から'sales'にdfデータフレームの列の名前を変更したを再代入する	df = df.rename(columns={'sale': 'sales'})
+python: データフレームdfの列の名前を'sale'から'sales'に変更して、dfに代入する	df = df.rename(columns={'sale': 'sales'})
+python: データフレームdfの列の名前を'sale'から'sales'に変更して、置き換える	df = df.rename(columns={'sale': 'sales'})
+python: データフレームdfの列の名前を'sale'から'sales'に変更したをdfに代入する	df = df.rename(columns={'sale': 'sales'})
+python: データフレームdfの列の名前を'sale'から'sales'に変更したを再代入する	df = df.rename(columns={'sale': 'sales'})
+python: dfのカラム名を'sale'から'sales'にリネームし、インプレースする	df.rename(columns={'sale': 'sales'}, inplace=True)
+python: dfのカラム名を'sale'から'sales'にリネームしたで置き換える	df.rename(columns={'sale': 'sales'}, inplace=True)
+python: dfデータフレームの列名を'sale'から'sales'に変更し、書き換える	df.rename(columns={'sale': 'sales'}, inplace=True)
+python: dfデータフレームの列名を'sale'から'sales'に変更されたで置き換える	df.rename(columns={'sale': 'sales'}, inplace=True)
+python: dfの列名を'sale'から'sales'に変更し、インプレースする	df.rename(columns={'sale': 'sales'}, inplace=True)
+python: dfの列名を'sale'から'sales'に変更したでインプレースする	df.rename(columns={'sale': 'sales'}, inplace=True)
+python: dfの'sale'の名前を'sales'にリネームする	df.rename(columns={'sale': 'sales'})
+python: 'sales'にdfデータフレームの'sale'カラムの名前をリネームする	df.rename(columns={'sale': 'sales'})
+python: dfデータフレームの'sale'カラムの名前を'sales'にリネームする	df.rename(columns={'sale': 'sales'})
+python: dfの'sale'の名前をリネームして、Xに代入する	X = df.rename(columns={'sale': 'sales'})
+python: dfの'sale'の名前をリネームした結果をXとする	X = df.rename(columns={'sale': 'sales'})
+python: 'sales'にdfの'sale'の名前をリネームして、Xに代入する	X = df.rename(columns={'sale': 'sales'})
+python: 'sales'にdfの'sale'の名前をリネームした結果をXにする	X = df.rename(columns={'sale': 'sales'})
+python: 'sales'にdfデータフレームの'sale'カラムの名前をリネームして、Xとする	X = df.rename(columns={'sale': 'sales'})
+python: 'sales'にdfデータフレームの'sale'カラムの名前をリネームした結果をXとする	X = df.rename(columns={'sale': 'sales'})
+python: dfの'sale'の名前を'sales'にリネームし、dfに代入する	df = df.rename(columns={'sale': 'sales'})
+python: dfの'sale'の名前を'sales'にリネームし、再代入する	df = df.rename(columns={'sale': 'sales'})
+python: dfの'sale'の名前を'sales'にリネームしたをdfに代入する	df = df.rename(columns={'sale': 'sales'})
+python: dfの'sale'の名前を'sales'にリネームしたを再代入する	df = df.rename(columns={'sale': 'sales'})
+python: 'sales'にdfデータフレームの'sale'カラムの名前をリネームして、dfに代入する	df = df.rename(columns={'sale': 'sales'})
+python: 'sales'にdfデータフレームの'sale'カラムの名前をリネームして、再代入する	df = df.rename(columns={'sale': 'sales'})
+python: 'sales'にdfデータフレームの'sale'カラムの名前をリネームされたをdfにする	df = df.rename(columns={'sale': 'sales'})
+python: 'sales'にdfデータフレームの'sale'カラムの名前をリネームされたを再代入する	df = df.rename(columns={'sale': 'sales'})
+python: 'sales'にdfの'sale'の名前をリネームし、dfに代入する	df = df.rename(columns={'sale': 'sales'})
+python: 'sales'にdfの'sale'の名前をリネームし、置き換える	df = df.rename(columns={'sale': 'sales'})
+python: 'sales'にdfの'sale'の名前をリネームされたをdfに代入する	df = df.rename(columns={'sale': 'sales'})
+python: 'sales'にdfの'sale'の名前をリネームされたを再代入する	df = df.rename(columns={'sale': 'sales'})
+python: dfの'sale'の名前を'sales'にリネームし、置き換える	df.rename(columns={'sale': 'sales'}, inplace=True)
+python: dfの'sale'の名前を'sales'にリネームされたで置き換える	df.rename(columns={'sale': 'sales'}, inplace=True)
+python: 'sales'にdfの'sale'の名前をリネームして、書き換える	df.rename(columns={'sale': 'sales'}, inplace=True)
+python: 'sales'にdfの'sale'の名前をリネームされたで書き換える	df.rename(columns={'sale': 'sales'}, inplace=True)
+python: データフレームdfのカラム'sale'の名前を'sales'にリネームして、インプレースする	df.rename(columns={'sale': 'sales'}, inplace=True)
+python: データフレームdfのカラム'sale'の名前を'sales'にリネームしたで置き換える	df.rename(columns={'sale': 'sales'}, inplace=True)
+python: dfのカラム名を'sale'から'sales'に'prof'から'profit'にリネームする	df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'prof'から'profit'に'sale'から'sales'にdfデータフレームの列名をリネームする	df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'sale'から'sales'に'prof'から'profit'にdfデータフレームの列名をリネームする	df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfのカラム名を'sale'から'sales'に'prof'から'profit'にリネームし、Xとする	X = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfのカラム名を'sale'から'sales'に'prof'から'profit'にリネームした結果をXに代入する	X = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: データフレームdfの列名を'prof'から'profit'に'sale'から'sales'にリネームして、Xに代入する	X = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: データフレームdfの列名を'prof'から'profit'に'sale'から'sales'にリネームした結果をXとする	X = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfの列名を'prof'から'profit'に'sale'から'sales'にリネームして、Xとする	X = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfの列名を'prof'から'profit'に'sale'から'sales'にリネームした結果をXに代入する	X = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfのカラム名を'sale'から'sales'に'prof'から'profit'にリネームして、dfに代入する	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfのカラム名を'sale'から'sales'に'prof'から'profit'にリネームして、再代入する	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfのカラム名を'sale'から'sales'に'prof'から'profit'にリネームされたをdfとする	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfのカラム名を'sale'から'sales'に'prof'から'profit'にリネームされたを置き換える	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfの列名を'prof'から'profit'に'sale'から'sales'にリネームして、dfにする	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfの列名を'prof'から'profit'に'sale'から'sales'にリネームして、置き換える	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfの列名を'prof'から'profit'に'sale'から'sales'にリネームしたをdfにする	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfの列名を'prof'から'profit'に'sale'から'sales'にリネームしたを再代入する	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'sale'から'sales'にデータフレームdfのカラム名を'prof'から'profit'にリネームし、dfにする	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'sale'から'sales'にデータフレームdfのカラム名を'prof'から'profit'にリネームし、再代入する	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'sale'から'sales'にデータフレームdfのカラム名を'prof'から'profit'にリネームしたをdfに代入する	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'sale'から'sales'にデータフレームdfのカラム名を'prof'から'profit'にリネームしたを置き換える	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfのカラム名を'sale'から'sales'に'prof'から'profit'にリネームし、書き換える	df.rename(columns={'sale': 'sales', 'prof': 'profit'}, inplace=True)
+python: dfのカラム名を'sale'から'sales'に'prof'から'profit'にリネームされたでインプレースする	df.rename(columns={'sale': 'sales', 'prof': 'profit'}, inplace=True)
+python: 'prof'から'profit'に'sale'から'sales'にデータフレームdfの列名をリネームして、置き換える	df.rename(columns={'sale': 'sales', 'prof': 'profit'}, inplace=True)
+python: 'prof'から'profit'に'sale'から'sales'にデータフレームdfの列名をリネームしたで書き換える	df.rename(columns={'sale': 'sales', 'prof': 'profit'}, inplace=True)
+python: 'sale'から'sales'に'prof'から'profit'にデータフレームdfの列の名前をリネームし、インプレースする	df.rename(columns={'sale': 'sales', 'prof': 'profit'}, inplace=True)
+python: 'sale'から'sales'に'prof'から'profit'にデータフレームdfの列の名前をリネームしたでインプレースする	df.rename(columns={'sale': 'sales', 'prof': 'profit'}, inplace=True)
+python: dfの'sale'の名前を'sales'に'prof'の名前を'profit'にリネームする	df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfの'sale'の名前を'profit'に'prof'の名前を'sales'にリネームする	df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'prof'の名前を'profit'にdfの'sale'の名前を'sales'にリネームする	df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfの'sale'の名前を'sales'に'prof'の名前を'profit'にリネームして、Xとする	X = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfの'sale'の名前を'sales'に'prof'の名前を'profit'にリネームした結果をXに代入する	X = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'profit'に'sales'にデータフレームdfのカラム'sale'の名前をカラム'prof'の名前をリネームして、Xにする	X = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'profit'に'sales'にデータフレームdfのカラム'sale'の名前をカラム'prof'の名前をリネームされた結果をXとする	X = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'profit'にカラム'prof'の名前を'sales'にデータフレームdfのカラム'sale'の名前をリネームして、Xにする	X = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'profit'にカラム'prof'の名前を'sales'にデータフレームdfのカラム'sale'の名前をリネームされた結果をXに代入する	X = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfの'sale'の名前を'sales'に'prof'の名前を'profit'にリネームして、dfに代入する	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfの'sale'の名前を'sales'に'prof'の名前を'profit'にリネームして、再代入する	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfの'sale'の名前を'sales'に'prof'の名前を'profit'にリネームしたをdfとする	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfの'sale'の名前を'sales'に'prof'の名前を'profit'にリネームしたを置き換える	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfデータフレームの'sale'カラムの名前を'prof'カラムの名前を'sales'に'profit'にリネームし、dfとする	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfデータフレームの'sale'カラムの名前を'prof'カラムの名前を'sales'に'profit'にリネームし、再代入する	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfデータフレームの'sale'カラムの名前を'prof'カラムの名前を'sales'に'profit'にリネームしたをdfとする	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfデータフレームの'sale'カラムの名前を'prof'カラムの名前を'sales'に'profit'にリネームしたを置き換える	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'profit'にデータフレームdfのカラム'sale'の名前をカラム'prof'の名前を'sales'にリネームして、dfとする	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'profit'にデータフレームdfのカラム'sale'の名前をカラム'prof'の名前を'sales'にリネームして、置き換える	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'profit'にデータフレームdfのカラム'sale'の名前をカラム'prof'の名前を'sales'にリネームしたをdfとする	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: 'profit'にデータフレームdfのカラム'sale'の名前をカラム'prof'の名前を'sales'にリネームしたを再代入する	df = df.rename(columns={'sale': 'sales', 'prof': 'profit'})
+python: dfの'sale'の名前を'sales'に'prof'の名前を'profit'にリネームし、インプレースする	df.rename(columns={'sale': 'sales', 'prof': 'profit'}, inplace=True)
+python: dfの'sale'の名前を'sales'に'prof'の名前を'profit'にリネームしたでインプレースする	df.rename(columns={'sale': 'sales', 'prof': 'profit'}, inplace=True)
+python: 'sales'に'prof'の名前を'profit'にdfの'sale'の名前をリネームして、インプレースする	df.rename(columns={'sale': 'sales', 'prof': 'profit'}, inplace=True)
+python: 'sales'に'prof'の名前を'profit'にdfの'sale'の名前をリネームされたで置き換える	df.rename(columns={'sale': 'sales', 'prof': 'profit'}, inplace=True)
+python: 'profit'にカラム'prof'の名前を'sales'にデータフレームdfのカラム'sale'の名前をリネームして、書き換える	df.rename(columns={'sale': 'sales', 'prof': 'profit'}, inplace=True)
+python: 'profit'にカラム'prof'の名前を'sales'にデータフレームdfのカラム'sale'の名前をリネームされたでインプレースする	df.rename(columns={'sale': 'sales', 'prof': 'profit'}, inplace=True)
+python: dfのインデックス名をリネームする	df.rename(index={'ONE': 'Row_1'})
+python: データフレームdfの行の名前を'ONE'から'Row_1'にリネームする	df.rename(index={'ONE': 'Row_1'})
+python: 'ONE'から'Row_1'にdfのインデックス名をリネームする	df.rename(index={'ONE': 'Row_1'})
+python: dfのインデックス名を'ONE'から'Row_1'にリネームし、Xとする	X = df.rename(index={'ONE': 'Row_1'})
+python: dfのインデックス名を'ONE'から'Row_1'にリネームされた結果をXに代入する	X = df.rename(index={'ONE': 'Row_1'})
+python: 'ONE'から'Row_1'にdfデータフレームの行名をリネームして、Xに代入する	X = df.rename(index={'ONE': 'Row_1'})
+python: 'ONE'から'Row_1'にdfデータフレームの行名をリネームされた結果をXにする	X = df.rename(index={'ONE': 'Row_1'})
+python: 'ONE'から'Row_1'にdfデータフレームの行の名前をリネームし、Xとする	X = df.rename(index={'ONE': 'Row_1'})
+python: 'ONE'から'Row_1'にdfデータフレームの行の名前をリネームした結果をXに代入する	X = df.rename(index={'ONE': 'Row_1'})
+python: dfのインデックス名を'ONE'から'Row_1'にリネームし、dfとする	df = df.rename(index={'ONE': 'Row_1'})
+python: dfのインデックス名を'ONE'から'Row_1'にリネームし、置き換える	df = df.rename(index={'ONE': 'Row_1'})
+python: dfのインデックス名を'ONE'から'Row_1'にリネームされたをdfに代入する	df = df.rename(index={'ONE': 'Row_1'})
+python: dfのインデックス名を'ONE'から'Row_1'にリネームされたを再代入する	df = df.rename(index={'ONE': 'Row_1'})
+python: 'ONE'から'Row_1'にdfの行名をリネームして、dfにする	df = df.rename(index={'ONE': 'Row_1'})
+python: 'ONE'から'Row_1'にdfの行名をリネームして、置き換える	df = df.rename(index={'ONE': 'Row_1'})
+python: 'ONE'から'Row_1'にdfの行名をリネームしたをdfとする	df = df.rename(index={'ONE': 'Row_1'})
+python: 'ONE'から'Row_1'にdfの行名をリネームしたを再代入する	df = df.rename(index={'ONE': 'Row_1'})
+python: 'ONE'から'Row_1'にデータフレームdfの行名をリネームし、dfに代入する	df = df.rename(index={'ONE': 'Row_1'})
+python: 'ONE'から'Row_1'にデータフレームdfの行名をリネームし、置き換える	df = df.rename(index={'ONE': 'Row_1'})
+python: 'ONE'から'Row_1'にデータフレームdfの行名をリネームしたをdfに代入する	df = df.rename(index={'ONE': 'Row_1'})
+python: 'ONE'から'Row_1'にデータフレームdfの行名をリネームしたを置き換える	df = df.rename(index={'ONE': 'Row_1'})
+python: dfのインデックス名を'ONE'から'Row_1'にリネームして、置き換える	df.rename(index={'ONE': 'Row_1'}, inplace=True)
+python: dfのインデックス名を'ONE'から'Row_1'にリネームされたでインプレースする	df.rename(index={'ONE': 'Row_1'}, inplace=True)
+python: データフレームdfの行名を'ONE'から'Row_1'にリネームして、書き換える	df.rename(index={'ONE': 'Row_1'}, inplace=True)
+python: データフレームdfの行名を'ONE'から'Row_1'にリネームしたで書き換える	df.rename(index={'ONE': 'Row_1'}, inplace=True)
+python: データフレームdfの行の名前を'ONE'から'Row_1'にリネームし、インプレースする	df.rename(index={'ONE': 'Row_1'}, inplace=True)
+python: データフレームdfの行の名前を'ONE'から'Row_1'にリネームしたで書き換える	df.rename(index={'ONE': 'Row_1'}, inplace=True)
+python: dfの'ONE'の名前を'Row_1'にリネームする	df.rename(index={'ONE': 'Row_1'})
+python: データフレームdfのインデックス'ONE'の名前を'Row_1'にリネームする	df.rename(index={'ONE': 'Row_1'})
+python: 'Row_1'にdfの'ONE'の名前をリネームする	df.rename(index={'ONE': 'Row_1'})
+python: dfの'ONE'の名前を'Row_1'にリネームして、Xに代入する	X = df.rename(index={'ONE': 'Row_1'})
+python: dfの'ONE'の名前を'Row_1'にリネームした結果をXにする	X = df.rename(index={'ONE': 'Row_1'})
+python: データフレームdfのインデックス'ONE'の名前を'Row_1'にリネームし、Xに代入する	X = df.rename(index={'ONE': 'Row_1'})
+python: データフレームdfのインデックス'ONE'の名前を'Row_1'にリネームした結果をXに代入する	X = df.rename(index={'ONE': 'Row_1'})
+python: dfデータフレームの'ONE'インデックスの名前を'Row_1'にリネームして、Xとする	X = df.rename(index={'ONE': 'Row_1'})
+python: dfデータフレームの'ONE'インデックスの名前を'Row_1'にリネームされた結果をXとする	X = df.rename(index={'ONE': 'Row_1'})
+python: dfの'ONE'の名前を'Row_1'にリネームして、dfとする	df = df.rename(index={'ONE': 'Row_1'})
+python: dfの'ONE'の名前を'Row_1'にリネームして、置き換える	df = df.rename(index={'ONE': 'Row_1'})
+python: dfの'ONE'の名前を'Row_1'にリネームされたをdfに代入する	df = df.rename(index={'ONE': 'Row_1'})
+python: dfの'ONE'の名前を'Row_1'にリネームされたを置き換える	df = df.rename(index={'ONE': 'Row_1'})
+python: データフレームdfのインデックス'ONE'の名前を'Row_1'にリネームして、dfに代入する	df = df.rename(index={'ONE': 'Row_1'})
+python: データフレームdfのインデックス'ONE'の名前を'Row_1'にリネームして、再代入する	df = df.rename(index={'ONE': 'Row_1'})
+python: データフレームdfのインデックス'ONE'の名前を'Row_1'にリネームされたをdfとする	df = df.rename(index={'ONE': 'Row_1'})
+python: データフレームdfのインデックス'ONE'の名前を'Row_1'にリネームされたを置き換える	df = df.rename(index={'ONE': 'Row_1'})
+python: dfデータフレームの'ONE'インデックスの名前を'Row_1'にリネームし、dfにする	df = df.rename(index={'ONE': 'Row_1'})
+python: dfデータフレームの'ONE'インデックスの名前を'Row_1'にリネームし、置き換える	df = df.rename(index={'ONE': 'Row_1'})
+python: dfデータフレームの'ONE'インデックスの名前を'Row_1'にリネームされたをdfにする	df = df.rename(index={'ONE': 'Row_1'})
+python: dfデータフレームの'ONE'インデックスの名前を'Row_1'にリネームされたを再代入する	df = df.rename(index={'ONE': 'Row_1'})
+python: dfの'ONE'の名前を'Row_1'にリネームし、置き換える	df.rename(index={'ONE': 'Row_1'}, inplace=True)
+python: dfの'ONE'の名前を'Row_1'にリネームされたで置き換える	df.rename(index={'ONE': 'Row_1'}, inplace=True)
+python: データフレームdfのインデックス'ONE'の名前を'Row_1'にリネームし、置き換える	df.rename(index={'ONE': 'Row_1'}, inplace=True)
+python: データフレームdfのインデックス'ONE'の名前を'Row_1'にリネームしたでインプレースする	df.rename(index={'ONE': 'Row_1'}, inplace=True)
+python: 'Row_1'にデータフレームdfのインデックス'ONE'の名前をリネームして、インプレースする	df.rename(index={'ONE': 'Row_1'}, inplace=True)
+python: 'Row_1'にデータフレームdfのインデックス'ONE'の名前をリネームしたで書き換える	df.rename(index={'ONE': 'Row_1'}, inplace=True)
+python: dfの'datetime'をインデックスに設定する	df.set_index('datetime')
+python: データフレームdfのコラム'datetime'をインデックスに変更する	df.set_index('datetime')
+python: データフレームdfのコラム'datetime'をインデックスにセットする	df.set_index('datetime')
+python: dfの'datetime'をインデックスに設定し、Xとする	X = df.set_index('datetime')
+python: dfの'datetime'をインデックスに設定された結果をXにする	X = df.set_index('datetime')
+python: dfデータフレームの'datetime'コラムをインデックスとして指定して、Xとする	X = df.set_index('datetime')
+python: dfデータフレームの'datetime'コラムをインデックスとして指定された結果をXにする	X = df.set_index('datetime')
+python: dfデータフレームの'datetime'コラムをインデックスに変更し、Xに代入する	X = df.set_index('datetime')
+python: dfデータフレームの'datetime'コラムをインデックスに変更した結果をXに代入する	X = df.set_index('datetime')
+python: dfの'datetime'をインデックスに設定して、dfにする	df = df.set_index('datetime')
+python: dfの'datetime'をインデックスに設定して、置き換える	df = df.set_index('datetime')
+python: dfの'datetime'をインデックスに設定したをdfに代入する	df = df.set_index('datetime')
+python: dfの'datetime'をインデックスに設定したを置き換える	df = df.set_index('datetime')
+python: dfデータフレームの'datetime'コラムをインデックスとして設定し、dfに代入する	df = df.set_index('datetime')
+python: dfデータフレームの'datetime'コラムをインデックスとして設定し、置き換える	df = df.set_index('datetime')
+python: dfデータフレームの'datetime'コラムをインデックスとして設定したをdfにする	df = df.set_index('datetime')
+python: dfデータフレームの'datetime'コラムをインデックスとして設定したを置き換える	df = df.set_index('datetime')
+python: dfデータフレームの'datetime'コラムをインデックスにして、dfに代入する	df = df.set_index('datetime')
+python: dfデータフレームの'datetime'コラムをインデックスにして、置き換える	df = df.set_index('datetime')
+python: dfデータフレームの'datetime'コラムをインデックスにしたをdfにする	df = df.set_index('datetime')
+python: dfデータフレームの'datetime'コラムをインデックスにしたを再代入する	df = df.set_index('datetime')
+python: インデックスに設定し、書き換える	df.set_index('datetime', inplace=True)
+python: インデックスに設定されたでインプレースする	df.set_index('datetime', inplace=True)
+python: データフレームdfのコラム'datetime'をインデックスに変更して、置き換える	df.set_index('datetime', inplace=True)
+python: データフレームdfのコラム'datetime'をインデックスに変更されたで置き換える	df.set_index('datetime', inplace=True)
+python: dfデータフレームの'datetime'コラムをインデックスとして設定し、書き換える	df.set_index('datetime', inplace=True)
+python: dfデータフレームの'datetime'コラムをインデックスとして設定されたでインプレースする	df.set_index('datetime', inplace=True)
+python: リセットする	df.reset_index()
+python: dfのインデックスを振り直す	df.reset_index()
+python: データフレームdfのインデックスをリセットする	df.reset_index()
+python: dfのインデックスをリセットし、Xとする	X = df.reset_index()
+python: dfのインデックスをリセットされた結果をXに代入する	X = df.reset_index()
+python: dfデータフレームのインデックスを振り直し、Xとする	X = df.reset_index()
+python: dfデータフレームのインデックスを振り直した結果をXに代入する	X = df.reset_index()
+python: dfデータフレームのインデックスをリセットして、Xに代入する	X = df.reset_index()
+python: dfデータフレームのインデックスをリセットした結果をXとする	X = df.reset_index()
+python: dfのインデックスをリセットして、dfに代入する	df = df.reset_index()
+python: dfのインデックスをリセットして、再代入する	df = df.reset_index()
+python: dfのインデックスをリセットしたをdfとする	df = df.reset_index()
+python: dfのインデックスをリセットしたを置き換える	df = df.reset_index()
+python: dfのインデックスを振り直して、dfにする	df = df.reset_index()
+python: dfのインデックスを振り直して、置き換える	df = df.reset_index()
+python: dfのインデックスを振り直されたをdfにする	df = df.reset_index()
+python: dfのインデックスを振り直されたを再代入する	df = df.reset_index()
+python: データフレームdfのインデックスをリセットし、dfに代入する	df = df.reset_index()
+python: データフレームdfのインデックスをリセットし、置き換える	df = df.reset_index()
+python: データフレームdfのインデックスをリセットされたをdfに代入する	df = df.reset_index()
+python: データフレームdfのインデックスをリセットされたを再代入する	df = df.reset_index()
+python: dfのインデックスをリセットして、書き換える	df.reset_index(inplace=True)
+python: dfのインデックスをリセットしたでインプレースする	df.reset_index(inplace=True)
+python: データフレームdfのインデックスを振り直して、インプレースする	df.reset_index(inplace=True)
+python: データフレームdfのインデックスを振り直したでインプレースする	df.reset_index(inplace=True)
+python: dfデータフレームのインデックスをリセットし、書き換える	df.reset_index(inplace=True)
+python: dfデータフレームのインデックスをリセットしたで置き換える	df.reset_index(inplace=True)
+python: リセットする	df.reset_index(drop=True)
+python: dfの元のインデックスをリセットする	df.reset_index(drop=True)
+python: データフレームdfの元のインデックスをリセットする	df.reset_index(drop=True)
+python: dfの元のインデックスをリセットして、Xとする	X = df.reset_index(drop=True)
+python: dfの元のインデックスをリセットされた結果をXとする	X = df.reset_index(drop=True)
+python: データフレームdfの元のインデックスをリセットして、Xにする	X = df.reset_index(drop=True)
+python: データフレームdfの元のインデックスをリセットした結果をXにする	X = df.reset_index(drop=True)
+python: dfデータフレームの元のインデックスをリセットして、Xに代入する	X = df.reset_index(drop=True)
+python: dfデータフレームの元のインデックスをリセットした結果をXとする	X = df.reset_index(drop=True)
+python: dfの元のインデックスをリセットし、dfに代入する	df = df.reset_index(drop=True)
+python: dfの元のインデックスをリセットし、再代入する	df = df.reset_index(drop=True)
+python: dfの元のインデックスをリセットされたをdfにする	df = df.reset_index(drop=True)
+python: dfの元のインデックスをリセットされたを置き換える	df = df.reset_index(drop=True)
+python: dfデータフレームの元のインデックスをリセットして、dfにする	df = df.reset_index(drop=True)
+python: dfデータフレームの元のインデックスをリセットして、置き換える	df = df.reset_index(drop=True)
+python: dfデータフレームの元のインデックスをリセットしたをdfに代入する	df = df.reset_index(drop=True)
+python: dfデータフレームの元のインデックスをリセットしたを再代入する	df = df.reset_index(drop=True)
+python: データフレームdfの元のインデックスをリセットし、dfにする	df = df.reset_index(drop=True)
+python: データフレームdfの元のインデックスをリセットし、再代入する	df = df.reset_index(drop=True)
+python: データフレームdfの元のインデックスをリセットされたをdfとする	df = df.reset_index(drop=True)
+python: データフレームdfの元のインデックスをリセットされたを置き換える	df = df.reset_index(drop=True)
+python: dfの元のインデックスをリセットして、置き換える	df.reset_index(drop=True, inplace=True)
+python: dfの元のインデックスをリセットしたで置き換える	df.reset_index(drop=True, inplace=True)
+python: データフレームdfの元のインデックスをリセットし、置き換える	df.reset_index(drop=True, inplace=True)
+python: データフレームdfの元のインデックスをリセットしたでインプレースする	df.reset_index(drop=True, inplace=True)
+python: dfデータフレームの元のインデックスをリセットして、インプレースする	df.reset_index(drop=True, inplace=True)
+python: dfデータフレームの元のインデックスをリセットしたでインプレースする	df.reset_index(drop=True, inplace=True)
+python: dfのリセットセットして、元のインデックスを削除する	df.reset_index(drop=True)
+python: dfの振り直して、元のインデックスを削除する	df.reset_index(drop=True)
+python: dfデータフレームの振り直して、元のインデックスを削除する	df.reset_index(drop=True)
+python: dfのリセット設定して、元のインデックスを削除して、Xとする	X = df.reset_index(drop=True)
+python: dfのリセット設定して、元のインデックスを削除した結果をXに代入する	X = df.reset_index(drop=True)
+python: dfデータフレームのリセット指定して、元のインデックスを削除し、Xに代入する	X = df.reset_index(drop=True)
+python: dfデータフレームのリセット指定して、元のインデックスを削除された結果をXとする	X = df.reset_index(drop=True)
+python: データフレームdfの振り直して、元のインデックスを削除して、Xにする	X = df.reset_index(drop=True)
+python: データフレームdfの振り直して、元のインデックスを削除した結果をXに代入する	X = df.reset_index(drop=True)
+python: dfのリセット設定して、元のインデックスを削除して、dfとする	df = df.reset_index(drop=True)
+python: dfのリセット設定して、元のインデックスを削除して、再代入する	df = df.reset_index(drop=True)
+python: dfのリセット設定して、元のインデックスを削除されたをdfにする	df = df.reset_index(drop=True)
+python: dfのリセット設定して、元のインデックスを削除されたを再代入する	df = df.reset_index(drop=True)
+python: dfデータフレームの振り直して、元のインデックスを削除して、dfとする	df = df.reset_index(drop=True)
+python: dfデータフレームの振り直して、元のインデックスを削除して、再代入する	df = df.reset_index(drop=True)
+python: dfデータフレームの振り直して、元のインデックスを削除されたをdfに代入する	df = df.reset_index(drop=True)
+python: dfデータフレームの振り直して、元のインデックスを削除されたを再代入する	df = df.reset_index(drop=True)
+python: データフレームdfのリセットして、元のインデックスを削除し、dfに代入する	df = df.reset_index(drop=True)
+python: データフレームdfのリセットして、元のインデックスを削除し、置き換える	df = df.reset_index(drop=True)
+python: データフレームdfのリセットして、元のインデックスを削除したをdfに代入する	df = df.reset_index(drop=True)
+python: データフレームdfのリセットして、元のインデックスを削除したを再代入する	df = df.reset_index(drop=True)
+python: dfのリセットして、元のインデックスを削除して、インプレースする	df.reset_index(drop=True, inplace=True)
+python: dfのリセットして、元のインデックスを削除したで書き換える	df.reset_index(drop=True, inplace=True)
+python: データフレームdfの振り直して、元のインデックスを削除し、書き換える	df.reset_index(drop=True, inplace=True)
+python: データフレームdfの振り直して、元のインデックスを削除したで置き換える	df.reset_index(drop=True, inplace=True)
+python: dfの振り直して、元のインデックスを削除し、置き換える	df.reset_index(drop=True, inplace=True)
+python: dfの振り直して、元のインデックスを削除したで書き換える	df.reset_index(drop=True, inplace=True)
+python: dfの'date'をdatetime型に変換する	pd.to_datetime(df['date'])
+python: データフレームdfのカラム'date'を年月日のファイルに変換する	pd.to_datetime(df['date'])
+python: dfの'date'を年月日の形式にする	pd.to_datetime(df['date'])
+python: フォーマットを指定してdfの'date'をdatetime型に変換する	pd.to_datetime(df['date'], format='%Y-%m-%d')
+python: フォーマットをdfの'date'をdatetime型にする	pd.to_datetime(df['date'], format='%Y-%m-%d')
+python: 指定してデータフレームdfのカラム'date'をdatetime型にフォーマットを変換する	pd.to_datetime(df['date'], format='%Y-%m-%d')
+python: dfの'date'の年	df['date'].dt.year
+python: dfデータフレームの'date'カラムの年	df['date'].dt.year
+python: データフレームdfのカラム'date'の年	df['date'].dt.year
+python: dfの'date'の年を見る	df['date'].dt.year
+python: データフレームdfのカラム'date'の年を調べる	df['date'].dt.year
+python: dfデータフレームの'date'カラムの年を確認する	df['date'].dt.year
+python: dfの'date'の年をXにする	X = df['date'].dt.year
+python: dfデータフレームの'date'カラムの年をXにする	X = df['date'].dt.year
+python: データフレームdfのカラム'date'の年をXとする	X = df['date'].dt.year
+python: dfの'date'の月	df['date'].dt.month
+python: データフレームdfのカラム'date'の月	df['date'].dt.month
+python: dfデータフレームの'date'カラムの月	df['date'].dt.month
+python: dfの'date'の月を調べる	df['date'].dt.month
+python: データフレームdfのカラム'date'の月を表示する	df['date'].dt.month
+python: dfデータフレームの'date'カラムの月を調べる	df['date'].dt.month
+python: dfの'date'の月をXにする	X = df['date'].dt.month
+python: dfデータフレームの'date'カラムの月をXとする	X = df['date'].dt.month
+python: dfの'date'の日にち	df['date'].dt.day
+python: データフレームdfのカラム'date'の日にち	df['date'].dt.day
+python: dfデータフレームの'date'カラムの日にち	df['date'].dt.day
+python: dfの'date'の日にちを見る	df['date'].dt.day
+python: データフレームdfのカラム'date'の日にちを確認する	df['date'].dt.day
+python: dfデータフレームの'date'カラムの日にちを見る	df['date'].dt.day
+python: dfの'date'の日にちをXとする	X = df['date'].dt.day
+python: dfデータフレームの'date'カラムの日にちをXにする	X = df['date'].dt.day
+python: データフレームdfのカラム'date'の日にちをXにする	X = df['date'].dt.day
+python: dfの'date'の時間	df['date'].dt.hour
+python: データフレームdfのカラム'date'の時間	df['date'].dt.hour
+python: dfデータフレームの'date'カラムの時間	df['date'].dt.hour
+python: dfの'date'の時間を見る	df['date'].dt.hour
+python: dfデータフレームの'date'カラムの時間を表示する	df['date'].dt.hour
+python: データフレームdfのカラム'date'の時間を調べる	df['date'].dt.hour
+python: dfの'date'の時間をXに代入する	X = df['date'].dt.hour
+python: データフレームdfのカラム'date'の時間をXにする	X = df['date'].dt.hour
+python: dfデータフレームの'date'カラムの時間をXとする	X = df['date'].dt.hour
+python: dfの'date'の分	df['date'].dt.minute
+python: データフレームdfのカラム'date'の分	df['date'].dt.minute
+python: dfデータフレームの'date'カラムの分	df['date'].dt.minute
+python: dfの'date'の分を確認する	df['date'].dt.minute
+python: dfデータフレームの'date'カラムの分を見る	df['date'].dt.minute
+python: データフレームdfのカラム'date'の分を調べる	df['date'].dt.minute
+python: dfの'date'の分をXに代入する	X = df['date'].dt.minute
+python: データフレームdfのカラム'date'の分をXとする	X = df['date'].dt.minute
+python: dfデータフレームの'date'カラムの分をXとする	X = df['date'].dt.minute
+python: dfの'date'の秒	df['date'].dt.second
+python: データフレームdfのカラム'date'の秒	df['date'].dt.second
+python: dfデータフレームの'date'カラムの秒	df['date'].dt.second
+python: dfの'date'の秒を表示する	df['date'].dt.second
+python: データフレームdfのカラム'date'の秒を見る	df['date'].dt.second
+python: dfデータフレームの'date'カラムの秒を見る	df['date'].dt.second
+python: dfの'date'の秒をXにする	X = df['date'].dt.second
+python: dfデータフレームの'date'カラムの秒をXにする	X = df['date'].dt.second
+python: データフレームdfのカラム'date'の秒をXとする	X = df['date'].dt.second
+python: dfの'date'の曜日	df['date'].dt.weekday_name
+python: dfデータフレームの'date'カラムの曜日	df['date'].dt.weekday_name
+python: データフレームdfのカラム'date'の曜日	df['date'].dt.weekday_name
+python: dfの'date'の曜日を確認する	df['date'].dt.weekday_name
+python: dfデータフレームの'date'カラムの曜日を表示する	df['date'].dt.weekday_name
+python: データフレームdfのカラム'date'の曜日を確認する	df['date'].dt.weekday_name
+python: dfの'date'の曜日をXにする	X = df['date'].dt.weekday_name
+python: dfデータフレームの'date'カラムの曜日をXにする	X = df['date'].dt.weekday_name
+python: データフレームdfのカラム'date'の曜日をXとする	X = df['date'].dt.weekday_name
+python: dfの'date'の曜日の数値型	df['date'].dt.dayofweek
+python: dfデータフレームの'date'カラムの曜日の数値型	df['date'].dt.dayofweek
+python: データフレームdfのカラム'date'の曜日の数値型	df['date'].dt.dayofweek
+python: dfの'date'の曜日の数値型を調べる	df['date'].dt.dayofweek
+python: データフレームdfのカラム'date'の曜日の数値型を見る	df['date'].dt.dayofweek
+python: dfデータフレームの'date'カラムの曜日の数値型を見る	df['date'].dt.dayofweek
+python: dfの'date'の曜日の数値型をXに代入する	X = df['date'].dt.dayofweek
+python: dfデータフレームの'date'カラムの曜日の数値型をXとする	X = df['date'].dt.dayofweek
+python: データフレームdfのカラム'date'の曜日の数値型をXにする	X = df['date'].dt.dayofweek
+python: dfの'temperature'内の前後の行の差分	df['temperature'].diff(periods=1)
+python: dfデータフレームの'temperature'コラム内の前後の行の差分	df['temperature'].diff(periods=1)
+python: dfの'temperature'中の前後の行の差分	df['temperature'].diff(periods=1)
+python: dfの'temperature'内の前後の行の差分をXにする	X = df['temperature'].diff(periods=1)
+python: データフレームdfのコラム'temperature'の中の前後の行の差分をXとする	X = df['temperature'].diff(periods=1)
+python: データフレームdfのコラム'temperature'内の前後の行の差分をXにする	X = df['temperature'].diff(periods=1)
+python: dfの'temperature'内の前後の行の差分を計算する	df['temperature'].diff(periods=1)
+python: データフレームdfのコラム'temperature'内の前後の行の差分を求める	df['temperature'].diff(periods=1)
+python: dfデータフレームの'temperature'コラムの中の前後の行の差分を求める	df['temperature'].diff(periods=1)
+python: dfの相関	df.corr()
+python: データフレームdfの相関	df.corr()
+python: dfデータフレームの相関係数	df.corr()
+python: dfの相関係数を確認する	df.corr()
+python: データフレームdfの相関を見る	df.corr()
+python: データフレームdfの相関係数を調べる	df.corr()
+python: dfの'kcal'と'sales'の相関係数	df[['kcal', 'sales']].corr()
+python: dfデータフレームの'kcal'列と'sales'列の相関	df[['kcal', 'sales']].corr()
+python: データフレームdfの列'kcal'と列'sales'の相関係数	df[['kcal', 'sales']].corr()
+python: dfの'kcal'と'sales'の相関係数を調べる	df[['kcal', 'sales']].corr()
+python: データフレームdfの列'kcal'と列'sales'の相関を見る	df[['kcal', 'sales']].corr()
+python: dfデータフレームの'kcal'列と'sales'列の相関を見る	df[['kcal', 'sales']].corr()
+python: dfの行列を入れ替える	df.T
+python: データフレームdfの行列を入れ替える	df.T
+python: 入れ替える	df.T
+python: dfを転置する	df.T
+python: dfデータフレームを転置する	df.T
+python: dfの'city'が'Tokyo'のデータ	df[df['city'] == 'Tokyo']
+python: データフレームdfの列'city'が'Tokyo'のデータ	df[df['city'] == 'Tokyo']
+python: dfの'city'が'Tokyo'のデータを得る	df[df['city'] == 'Tokyo']
+python: dfデータフレームの'city'列が'Tokyo'のデータを得る	df[df['city'] == 'Tokyo']
+python: データフレームdfの列'city'が'Tokyo'のデータを抽出する	df[df['city'] == 'Tokyo']
+python: dfの'year'が1990より大きいデータ	df[df['year'] > 1990]
+python: 1990よりdfデータフレームの'year'が多いデータ	df[df['year'] > 1990]
+python: dfの'year'が1990より多いデータ	df[df['year'] > 1990]
+python: dfの'year'が1990より大きいデータをえる	df[df['year'] > 1990]
+python: dfデータフレームの'year'が1990より大きいデータを抽出する	df[df['year'] > 1990]
+python: 1990よりdfの'year'が大きいデータを取得する	df[df['year'] > 1990]
+python: dfの'year'が1990以上のデータ	df[df['year'] >= 1990]
+python: データフレームdfの'year'が1990以上のデータ	df[df['year'] >= 1990]
+python: dfデータフレームの'year'が1990以上のデータ	df[df['year'] >= 1990]
+python: dfの'year'が1990以上のデータをえる	df[df['year'] >= 1990]
+python: データフレームdfの'year'が1990以上のデータをえる	df[df['year'] >= 1990]
+python: dfデータフレームの'year'が1990以上のデータを抽出する	df[df['year'] >= 1990]
+python: dfの'year'が1990より小さいデータ	df[df['year'] < 1990]
+python: 1990よりdfデータフレームの'year'が小さいデータ	df[df['year'] < 1990]
+python: 1990よりdfの'year'が少ないデータ	df[df['year'] < 1990]
+python: dfの'year'が1990より小さいデータをえる	df[df['year'] < 1990]
+python: 1990よりデータフレームdfの'year'が少ないデータを取得する	df[df['year'] < 1990]
+python: 1990よりdfの'year'が少ないデータを抽出する	df[df['year'] < 1990]
+python: dfの'year'が1990以下のデータ	df[df['year'] <= 1990]
+python: dfデータフレームの'year'が1990以下のデータ	df[df['year'] <= 1990]
+python: 1990以下のデータ	df[df['year'] <= 1990]
+python: dfの'year'が1990以下のデータを抽出する	df[df['year'] <= 1990]
+python: データフレームdfの'year'が1990以下のデータを得る	df[df['year'] <= 1990]
+python: dfデータフレームの'year'が1990以下のデータを取得する	df[df['year'] <= 1990]
+python: dfの'city'が'Tokyo'もしくは'Osaka'のデータ	df[df['city'].isin(['Tokyo', 'Osaka'])]
+python: dfの'city'が'Tokyo'または'Osaka'のデータ	df[df['city'].isin(['Tokyo', 'Osaka'])]
+python: データフレームdfの列'city'が'Tokyo'または'Osaka'のデータ	df[df['city'].isin(['Tokyo', 'Osaka'])]
+python: dfの'city'が'Tokyo'もしくは'Osaka'のデータを得る	df[df['city'].isin(['Tokyo', 'Osaka'])]
+python: データフレームdfの列'city'が'Tokyo'か'Osaka'のデータを得る	df[df['city'].isin(['Tokyo', 'Osaka'])]
+python: dfの'city'が'Tokyo'か'Osaka'のデータをえる	df[df['city'].isin(['Tokyo', 'Osaka'])]
+python: dfの0行目を取り除く	df.drop(0)
+python: dfデータフレームの0行目を取り除く	df.drop(0)
+python: dfの0行目を削除する	df.drop(0)
+python: dfの0行目を取り除き、Xとする	X = df.drop(0)
+python: dfの0行目を取り除いた結果をXとする	X = df.drop(0)
+python: データフレームdfの0行目を削除して、Xにする	X = df.drop(0)
+python: データフレームdfの0行目を削除された結果をXにする	X = df.drop(0)
+python: データフレームdfの0行目を消して、Xにする	X = df.drop(0)
+python: データフレームdfの0行目を消した結果をXにする	X = df.drop(0)
+python: dfの0行目を落とし、dfにする	df = df.drop(0)
+python: dfの0行目を落とし、置き換える	df = df.drop(0)
+python: dfの0行目を落としたをdfに代入する	df = df.drop(0)
+python: dfの0行目を落としたを置き換える	df = df.drop(0)
+python: dfデータフレームの0行目を落として、dfにする	df = df.drop(0)
+python: dfデータフレームの0行目を落として、再代入する	df = df.drop(0)
+python: dfデータフレームの0行目を落としたをdfに代入する	df = df.drop(0)
+python: dfデータフレームの0行目を落としたを置き換える	df = df.drop(0)
+python: dfの0行目を消して、dfにする	df = df.drop(0)
+python: dfの0行目を消して、再代入する	df = df.drop(0)
+python: dfの0行目を消したをdfにする	df = df.drop(0)
+python: dfの0行目を消したを置き換える	df = df.drop(0)
+python: dfの0行目を消し、インプレースする	df.drop(0, inplace=True)
+python: dfの0行目を消されたで置き換える	df.drop(0, inplace=True)
+python: 消して、書き換える	df.drop(0, inplace=True)
+python: 消されたで書き換える	df.drop(0, inplace=True)
+python: dfの0行目を落として、インプレースする	df.drop(0, inplace=True)
+python: dfの0行目を落としたで書き換える	df.drop(0, inplace=True)
+python: dfの'price'をドロップする	df.drop('price', axis=1)
+python: データフレームdfのコラム'price'を取り除く	df.drop('price', axis=1)
+python: dfデータフレームの'price'コラムを落とす	df.drop('price', axis=1)
+python: dfの'price'をドロップして、Xにする	X = df.drop('price', axis=1)
+python: dfの'price'をドロップされた結果をXに代入する	X = df.drop('price', axis=1)
+python: データフレームdfのコラム'price'を落とし、Xに代入する	X = df.drop('price', axis=1)
+python: データフレームdfのコラム'price'を落とした結果をXにする	X = df.drop('price', axis=1)
+python: dfの'price'を落とし、Xに代入する	X = df.drop('price', axis=1)
+python: dfの'price'を落とされた結果をXにする	X = df.drop('price', axis=1)
+python: dfの'price'をドロップし、dfとする	df = df.drop('price', axis=1)
+python: dfの'price'をドロップし、置き換える	df = df.drop('price', axis=1)
+python: dfの'price'をドロップされたをdfとする	df = df.drop('price', axis=1)
+python: dfの'price'をドロップされたを置き換える	df = df.drop('price', axis=1)
+python: データフレームdfのコラム'price'を削除して、dfにする	df = df.drop('price', axis=1)
+python: データフレームdfのコラム'price'を削除して、再代入する	df = df.drop('price', axis=1)
+python: データフレームdfのコラム'price'を削除されたをdfとする	df = df.drop('price', axis=1)
+python: データフレームdfのコラム'price'を削除されたを再代入する	df = df.drop('price', axis=1)
+python: dfデータフレームの'price'コラムを削除し、dfに代入する	df = df.drop('price', axis=1)
+python: dfデータフレームの'price'コラムを削除し、再代入する	df = df.drop('price', axis=1)
+python: dfデータフレームの'price'コラムを削除したをdfとする	df = df.drop('price', axis=1)
+python: dfデータフレームの'price'コラムを削除したを置き換える	df = df.drop('price', axis=1)
+python: ドロップして、書き換える	df.drop('price', axis=1, inplace=True)
+python: ドロップしたでインプレースする	df.drop('price', axis=1, inplace=True)
+python: dfデータフレームの'price'コラムを取り除いて、置き換える	df.drop('price', axis=1, inplace=True)
+python: dfデータフレームの'price'コラムを取り除かれたで書き換える	df.drop('price', axis=1, inplace=True)
+python: データフレームdfのコラム'price'を削除し、置き換える	df.drop('price', axis=1, inplace=True)
+python: データフレームdfのコラム'price'を削除したでインプレースする	df.drop('price', axis=1, inplace=True)
+python: dfの'price'と'year'をドロップする	df.drop(['price', 'year'], axis=1)
+python: データフレームdfのコラム'price'と'year'をドロップする	df.drop(['price', 'year'], axis=1)
+python: dfの'price'と'year'を削除する	df.drop(['price', 'year'], axis=1)
+python: dfの'price'と'year'をドロップして、Xとする	X = df.drop(['price', 'year'], axis=1)
+python: dfの'price'と'year'をドロップした結果をXとする	X = df.drop(['price', 'year'], axis=1)
+python: dfデータフレームの'price'コラムと'year'をドロップし、Xにする	X = df.drop(['price', 'year'], axis=1)
+python: dfデータフレームの'price'コラムと'year'をドロップした結果をXに代入する	X = df.drop(['price', 'year'], axis=1)
+python: dfの'price'と'year'を削除して、Xに代入する	X = df.drop(['price', 'year'], axis=1)
+python: dfの'price'と'year'を削除した結果をXとする	X = df.drop(['price', 'year'], axis=1)
+python: dfの'price'と'year'をドロップして、dfにする	df = df.drop(['price', 'year'], axis=1)
+python: dfの'price'と'year'をドロップして、再代入する	df = df.drop(['price', 'year'], axis=1)
+python: dfの'price'と'year'をドロップしたをdfに代入する	df = df.drop(['price', 'year'], axis=1)
+python: dfの'price'と'year'をドロップしたを置き換える	df = df.drop(['price', 'year'], axis=1)
+python: dfデータフレームの'price'コラムと'year'を取り除いて、dfとする	df = df.drop(['price', 'year'], axis=1)
+python: dfデータフレームの'price'コラムと'year'を取り除いて、置き換える	df = df.drop(['price', 'year'], axis=1)
+python: dfデータフレームの'price'コラムと'year'を取り除いたをdfに代入する	df = df.drop(['price', 'year'], axis=1)
+python: dfデータフレームの'price'コラムと'year'を取り除いたを再代入する	df = df.drop(['price', 'year'], axis=1)
+python: データフレームdfのコラム'price'と'year'を取り除いて、dfとする	df = df.drop(['price', 'year'], axis=1)
+python: データフレームdfのコラム'price'と'year'を取り除いて、置き換える	df = df.drop(['price', 'year'], axis=1)
+python: データフレームdfのコラム'price'と'year'を取り除かれたをdfにする	df = df.drop(['price', 'year'], axis=1)
+python: データフレームdfのコラム'price'と'year'を取り除かれたを再代入する	df = df.drop(['price', 'year'], axis=1)
+python: dfの'price'と'year'をドロップして、インプレースする	df.drop(['price', 'year'], axis=1, inplace=True)
+python: dfの'price'と'year'をドロップしたで置き換える	df.drop(['price', 'year'], axis=1, inplace=True)
+python: データフレームdfのコラム'price'と'year'を落として、置き換える	df.drop(['price', 'year'], axis=1, inplace=True)
+python: データフレームdfのコラム'price'と'year'を落としたでインプレースする	df.drop(['price', 'year'], axis=1, inplace=True)
+python: dfの'price'と'year'を削除し、書き換える	df.drop(['price', 'year'], axis=1, inplace=True)
+python: dfの'price'と'year'を削除したで置き換える	df.drop(['price', 'year'], axis=1, inplace=True)
+python: df内のNaNが存在する行をドロップする	df.dropna()
+python: dfデータフレーム中のNaNがある行を落とす	df.dropna()
+python: ある行をデータフレームdf中の未入力の値が削除する	df.dropna()
+python: df内の未記入の値がある行をドロップして、Xとする	X = df.dropna()
+python: df内の未記入の値がある行をドロップした結果をXに代入する	X = df.dropna()
+python: dfデータフレームの中のNaNが存在する行を落とし、Xとする	X = df.dropna()
+python: dfデータフレームの中のNaNが存在する行を落とした結果をXに代入する	X = df.dropna()
+python: ある行をdfデータフレーム内の未記入の値が削除して、Xにする	X = df.dropna()
+python: ある行をdfデータフレーム内の未記入の値が削除した結果をXにする	X = df.dropna()
+python: df内の未記入の値が存在する行をドロップして、dfにする	df = df.dropna()
+python: df内の未記入の値が存在する行をドロップして、置き換える	df = df.dropna()
+python: df内の未記入の値が存在する行をドロップしたをdfに代入する	df = df.dropna()
+python: df内の未記入の値が存在する行をドロップしたを再代入する	df = df.dropna()
+python: dfデータフレームの中の欠損が存在する行を落とし、dfとする	df = df.dropna()
+python: dfデータフレームの中の欠損が存在する行を落とし、再代入する	df = df.dropna()
+python: dfデータフレームの中の欠損が存在する行を落とされたをdfに代入する	df = df.dropna()
+python: dfデータフレームの中の欠損が存在する行を落とされたを置き換える	df = df.dropna()
+python: df内のNaNがある行をドロップして、dfにする	df = df.dropna()
+python: df内のNaNがある行をドロップして、再代入する	df = df.dropna()
+python: df内のNaNがある行をドロップしたをdfとする	df = df.dropna()
+python: df内のNaNがある行をドロップしたを置き換える	df = df.dropna()
+python: df内の欠損値がある行をドロップして、インプレースする	df.dropna(inplace=True)
+python: df内の欠損値がある行をドロップしたでインプレースする	df.dropna(inplace=True)
+python: ある行をデータフレームdf内のNaNがドロップして、書き換える	df.dropna(inplace=True)
+python: ある行をデータフレームdf内のNaNがドロップされたでインプレースする	df.dropna(inplace=True)
+python: データフレームdfの中のNaNがある行を取り除き、インプレースする	df.dropna(inplace=True)
+python: データフレームdfの中のNaNがある行を取り除かれたで置き換える	df.dropna(inplace=True)
+python: ドロップする	df.dropna()
+python: dfデータフレームの中の未記入の値を落とす	df.dropna()
+python: データフレームdfの中の未入力の値を取り除く	df.dropna()
+python: df内の欠損値を含む行をドロップし、Xにする	X = df.dropna()
+python: df内の欠損値を含む行をドロップされた結果をXに代入する	X = df.dropna()
+python: dfデータフレームの中の未入力の値を取り除いて、Xにする	X = df.dropna()
+python: dfデータフレームの中の未入力の値を取り除かれた結果をXにする	X = df.dropna()
+python: dfデータフレームの中の未記入の値を落とし、Xにする	X = df.dropna()
+python: dfデータフレームの中の未記入の値を落とされた結果をXとする	X = df.dropna()
+python: df内の欠損値を含む行をドロップし、dfにする	df = df.dropna()
+python: df内の欠損値を含む行をドロップし、置き換える	df = df.dropna()
+python: df内の欠損値を含む行をドロップしたをdfとする	df = df.dropna()
+python: df内の欠損値を含む行をドロップしたを置き換える	df = df.dropna()
+python: dfデータフレーム中のNaNを含む行を消して、dfとする	df = df.dropna()
+python: dfデータフレーム中のNaNを含む行を消して、置き換える	df = df.dropna()
+python: dfデータフレーム中のNaNを含む行を消されたをdfにする	df = df.dropna()
+python: dfデータフレーム中のNaNを含む行を消されたを再代入する	df = df.dropna()
+python: dfの中の未入力の値を取り除き、dfとする	df = df.dropna()
+python: dfの中の未入力の値を取り除き、置き換える	df = df.dropna()
+python: dfの中の未入力の値を取り除かれたをdfとする	df = df.dropna()
+python: dfの中の未入力の値を取り除かれたを再代入する	df = df.dropna()
+python: df内の欠損値を含む行をドロップして、置き換える	df.dropna(inplace=True)
+python: df内の欠損値を含む行をドロップされたで置き換える	df.dropna(inplace=True)
+python: データフレームdf内の欠損を削除して、置き換える	df.dropna(inplace=True)
+python: データフレームdf内の欠損を削除したで書き換える	df.dropna(inplace=True)
+python: dfデータフレーム内の欠損を含む行を削除し、書き換える	df.dropna(inplace=True)
+python: dfデータフレーム内の欠損を含む行を削除したでインプレースする	df.dropna(inplace=True)
+python: df内の欠損値をsymbolに置き換える	df.fillna(symbol)
+python: データフレームdfの中の未入力の値をsymbolで置き換える	df.fillna(symbol)
+python: dfデータフレーム中のNaNをsymbolで置き換える	df.fillna(symbol)
+python: df内の欠損値をsymbolに置き換え、Xに代入する	X = df.fillna(symbol)
+python: df内の欠損値をsymbolに置き換えられた結果をXに代入する	X = df.fillna(symbol)
+python: df中のNaNをsymbolに置換して、Xとする	X = df.fillna(symbol)
+python: df中のNaNをsymbolに置換した結果をXに代入する	X = df.fillna(symbol)
+python: データフレームdf内の欠損をsymbolに置き換えて、Xにする	X = df.fillna(symbol)
+python: データフレームdf内の欠損をsymbolに置き換えられた結果をXに代入する	X = df.fillna(symbol)
+python: df内の欠損値をsymbolに置換し、dfにする	df = df.fillna(symbol)
+python: df内の欠損値をsymbolに置換し、再代入する	df = df.fillna(symbol)
+python: df内の欠損値をsymbolに置換したをdfにする	df = df.fillna(symbol)
+python: df内の欠損値をsymbolに置換したを置き換える	df = df.fillna(symbol)
+python: データフレームdf中のNaNをsymbolで置き換え、dfにする	df = df.fillna(symbol)
+python: データフレームdf中のNaNをsymbolで置き換え、置き換える	df = df.fillna(symbol)
+python: データフレームdf中のNaNをsymbolで置き換えたをdfとする	df = df.fillna(symbol)
+python: データフレームdf中のNaNをsymbolで置き換えたを置き換える	df = df.fillna(symbol)
+python: データフレームdf中のNaNをsymbolに置き換えて、dfにする	df = df.fillna(symbol)
+python: データフレームdf中のNaNをsymbolに置き換えて、置き換える	df = df.fillna(symbol)
+python: データフレームdf中のNaNをsymbolに置き換えたをdfとする	df = df.fillna(symbol)
+python: データフレームdf中のNaNをsymbolに置き換えたを置き換える	df = df.fillna(symbol)
+python: df内の欠損値をsymbolに置換して、書き換える	df.fillna(symbol, inplace=True)
+python: df内の欠損値をsymbolに置換したで書き換える	df.fillna(symbol, inplace=True)
+python: df中の欠損をsymbolで置き換えて、書き換える	df.fillna(symbol, inplace=True)
+python: df中の欠損をsymbolで置き換えたで書き換える	df.fillna(symbol, inplace=True)
+python: dfデータフレームの中の未入力の値をsymbolに置換し、置き換える	df.fillna(symbol, inplace=True)
+python: dfデータフレームの中の未入力の値をsymbolに置換されたで置き換える	df.fillna(symbol, inplace=True)
+python: df内の欠損値をsymbolで埋める	df.fillna(symbol)
+python: df内の欠損値をsymbolとする	df.fillna(symbol)
+python: dfデータフレーム内の欠損値をsymbolとする	df.fillna(symbol)
+python: symbolで埋めり、Xにする	X = df.fillna(symbol)
+python: symbolで埋めった結果をXにする	X = df.fillna(symbol)
+python: dfの中の未入力の値をsymbolで埋めって、Xとする	X = df.fillna(symbol)
+python: dfの中の未入力の値をsymbolで埋められた結果をXにする	X = df.fillna(symbol)
+python: データフレームdfの中の未入力の値をsymbolで埋めり、Xにする	X = df.fillna(symbol)
+python: データフレームdfの中の未入力の値をsymbolで埋められた結果をXに代入する	X = df.fillna(symbol)
+python: df内の欠損値をsymbolで埋めり、dfに代入する	df = df.fillna(symbol)
+python: df内の欠損値をsymbolで埋めり、置き換える	df = df.fillna(symbol)
+python: df内の欠損値をsymbolで埋めったをdfにする	df = df.fillna(symbol)
+python: df内の欠損値をsymbolで埋めったを再代入する	df = df.fillna(symbol)
+python: df内の欠損をsymbolとして、dfにする	df = df.fillna(symbol)
+python: df内の欠損をsymbolとして、置き換える	df = df.fillna(symbol)
+python: df内の欠損をsymbolとされたをdfに代入する	df = df.fillna(symbol)
+python: df内の欠損をsymbolとされたを置き換える	df = df.fillna(symbol)
+python: dfデータフレーム中の欠損をsymbolとし、dfにする	df = df.fillna(symbol)
+python: dfデータフレーム中の欠損をsymbolとし、置き換える	df = df.fillna(symbol)
+python: dfデータフレーム中の欠損をsymbolとされたをdfに代入する	df = df.fillna(symbol)
+python: dfデータフレーム中の欠損をsymbolとされたを再代入する	df = df.fillna(symbol)
+python: df内の欠損値をsymbolで埋めって、書き換える	df.fillna(symbol, inplace=True)
+python: df内の欠損値をsymbolで埋めったで置き換える	df.fillna(symbol, inplace=True)
+python: symbolとして、書き換える	df.fillna(symbol, inplace=True)
+python: symbolとしたで置き換える	df.fillna(symbol, inplace=True)
+python: データフレームdfの中の未記入の値をsymbolとして、置き換える	df.fillna(symbol, inplace=True)
+python: データフレームdfの中の未記入の値をsymbolとされたで置き換える	df.fillna(symbol, inplace=True)
+python: df内の欠損値を直前の行の値で補う	df.fillna(method='ffill')
+python: 直前の行の値で埋める	df.fillna(method='ffill')
+python: df中の未記入の値を直前の行の値で補う	df.fillna(method='ffill')
+python: df内の欠損値を直前の行の値で補って、Xとする	X = df.fillna(method='ffill')
+python: df内の欠損値を直前の行の値で補われた、結果をXに代入する	X = df.fillna(method='ffill')
+python: dfの中の未入力の値を直前の行の値で補い、Xに代入する	X = df.fillna(method='ffill')
+python: dfの中の未入力の値を直前の行の値で補った結果をXにする	X = df.fillna(method='ffill')
+python: dfデータフレーム中のNaNを直前の行の値で補い、Xとする	X = df.fillna(method='ffill')
+python: dfデータフレーム中のNaNを直前の行の値で補った結果をXに代入する	X = df.fillna(method='ffill')
+python: df内の欠損値を直前の行の値で埋めって、dfとする	df = df.fillna(method='ffill')
+python: df内の欠損値を直前の行の値で埋めって、置き換える	df = df.fillna(method='ffill')
+python: df内の欠損値を直前の行の値で埋めったをdfとする	df = df.fillna(method='ffill')
+python: df内の欠損値を直前の行の値で埋めったを置き換える	df = df.fillna(method='ffill')
+python: dfデータフレーム中のNaNを直前の行の値で埋めって、dfにする	df = df.fillna(method='ffill')
+python: dfデータフレーム中のNaNを直前の行の値で埋めって、再代入する	df = df.fillna(method='ffill')
+python: dfデータフレーム中のNaNを直前の行の値で埋めったをdfにする	df = df.fillna(method='ffill')
+python: dfデータフレーム中のNaNを直前の行の値で埋めったを再代入する	df = df.fillna(method='ffill')
+python: df中の未記入の値を直前の行の値で補い、dfとする	df = df.fillna(method='ffill')
+python: df中の未記入の値を直前の行の値で補い、置き換える	df = df.fillna(method='ffill')
+python: df中の未記入の値を直前の行の値で補ったをdfにする	df = df.fillna(method='ffill')
+python: df中の未記入の値を直前の行の値で補ったを再代入する	df = df.fillna(method='ffill')
+python: df内の欠損値を直前の行の値で埋めり、書き換える	df.fillna(method='ffill', inplace=True)
+python: df内の欠損値を直前の行の値で埋めったで書き換える	df.fillna(method='ffill', inplace=True)
+python: df内の欠損値を直前の行の値で補い、書き換える	df.fillna(method='ffill', inplace=True)
+python: df内の欠損値を直前の行の値で補われた、で書き換える	df.fillna(method='ffill', inplace=True)
+python: 直前の行の値で補って、置き換える	df.fillna(method='ffill', inplace=True)
+python: 直前の行の値で補われた、でインプレースする	df.fillna(method='ffill', inplace=True)
+python: df内の欠損値をdfの平均値で埋める	df.fillna(df.mean())
+python: データフレームdfの中の未記入の値をデータフレームdfの平均で補う	df.fillna(df.mean())
+python: dfデータフレームの中の未記入の値をdfデータフレームの平均で補う	df.fillna(df.mean())
+python: df内の欠損値をdfの平均値で埋めって、Xにする	X = df.fillna(df.mean())
+python: df内の欠損値をdfの平均値で埋めった結果をXに代入する	X = df.fillna(df.mean())
+python: データフレームdf中の未記入の値をデータフレームdfの平均で補って、Xとする	X = df.fillna(df.mean())
+python: データフレームdf中の未記入の値をデータフレームdfの平均で補った結果をXに代入する	X = df.fillna(df.mean())
+python: dfデータフレーム内の欠損値をdfデータフレームの平均値で埋めり、Xにする	X = df.fillna(df.mean())
+python: dfデータフレーム内の欠損値をdfデータフレームの平均値で埋められた結果をXとする	X = df.fillna(df.mean())
+python: df内の欠損値をdfの平均値で埋めって、dfとする	df = df.fillna(df.mean())
+python: df内の欠損値をdfの平均値で埋めって、再代入する	df = df.fillna(df.mean())
+python: df内の欠損値をdfの平均値で埋めったをdfにする	df = df.fillna(df.mean())
+python: df内の欠損値をdfの平均値で埋めったを再代入する	df = df.fillna(df.mean())
+python: df中のNaNをdfの平均で補って、dfとする	df = df.fillna(df.mean())
+python: df中のNaNをdfの平均で補って、置き換える	df = df.fillna(df.mean())
+python: df中のNaNをdfの平均で補われた、をdfに代入する	df = df.fillna(df.mean())
+python: df中のNaNをdfの平均で補われた、を再代入する	df = df.fillna(df.mean())
+python: dfの平均値で埋めって、dfとする	df = df.fillna(df.mean())
+python: dfの平均値で埋めって、置き換える	df = df.fillna(df.mean())
+python: dfの平均値で埋めったをdfに代入する	df = df.fillna(df.mean())
+python: dfの平均値で埋めったを再代入する	df = df.fillna(df.mean())
+python: df内の欠損値をdfの平均値で埋めり、インプレースする	df.fillna(df.mean(), inplace=True)
+python: df内の欠損値をdfの平均値で埋められたで置き換える	df.fillna(df.mean(), inplace=True)
+python: データフレームdf内の欠損をデータフレームdfの平均値で埋めって、置き換える	df.fillna(df.mean(), inplace=True)
+python: データフレームdf内の欠損をデータフレームdfの平均値で埋められたで置き換える	df.fillna(df.mean(), inplace=True)
+python: dfの中の未記入の値をdfの平均で補い、インプレースする	df.fillna(df.mean(), inplace=True)
+python: dfの中の未記入の値をdfの平均で補われた、で書き換える	df.fillna(df.mean(), inplace=True)
+python: df内の'?'を欠損値にドロップする	df.replace('?', np.nan).dropna()
+python: dfデータフレーム中の'?'を置換しNaNがある行を消す	df.replace('?', np.nan).dropna()
+python: 置換し欠損値が存在する行をデータフレームdf内の'?'を欠損値にドロップする	df.replace('?', np.nan).dropna()
+python: df内の'?'を欠損値に置換し欠損値が存在する行をドロップし、Xとする	X = df.replace('?', np.nan).dropna()
+python: df内の'?'を欠損値に置換し欠損値が存在する行をドロップした結果をXに代入する	X = df.replace('?', np.nan).dropna()
+python: dfの中の'?'を置換し未記入の値がある行を未記入の値に落として、Xにする	X = df.replace('?', np.nan).dropna()
+python: dfの中の'?'を置換し未記入の値がある行を未記入の値に落とした結果をXとする	X = df.replace('?', np.nan).dropna()
+python: df内の'?'を欠損に置換し欠損が存在する行を削除し、Xにする	X = df.replace('?', np.nan).dropna()
+python: df内の'?'を欠損に置換し欠損が存在する行を削除された結果をXとする	X = df.replace('?', np.nan).dropna()
+python: df内の'?'を欠損値に置換し欠損値が存在する行をドロップし、dfに代入する	df = df.replace('?', np.nan).dropna()
+python: df内の'?'を欠損値に置換し欠損値が存在する行をドロップし、置き換える	df = df.replace('?', np.nan).dropna()
+python: df内の'?'を欠損値に置換し欠損値が存在する行をドロップしたをdfとする	df = df.replace('?', np.nan).dropna()
+python: df内の'?'を欠損値に置換し欠損値が存在する行をドロップしたを置き換える	df = df.replace('?', np.nan).dropna()
+python: 置換し未記入の値がある行を未記入の値にdfの中の'?'を落として、dfとする	df = df.replace('?', np.nan).dropna()
+python: 置換し未記入の値がある行を未記入の値にdfの中の'?'を落として、置き換える	df = df.replace('?', np.nan).dropna()
+python: 置換し未記入の値がある行を未記入の値にdfの中の'?'を落としたをdfに代入する	df = df.replace('?', np.nan).dropna()
+python: 置換し未記入の値がある行を未記入の値にdfの中の'?'を落としたを再代入する	df = df.replace('?', np.nan).dropna()
+python: 置換しNaNが存在する行をNaNにデータフレームdf中の'?'を消し、dfとする	df = df.replace('?', np.nan).dropna()
+python: 置換しNaNが存在する行をNaNにデータフレームdf中の'?'を消し、置き換える	df = df.replace('?', np.nan).dropna()
+python: 置換しNaNが存在する行をNaNにデータフレームdf中の'?'を消されたをdfとする	df = df.replace('?', np.nan).dropna()
+python: 置換しNaNが存在する行をNaNにデータフレームdf中の'?'を消されたを再代入する	df = df.replace('?', np.nan).dropna()
+python: df内の'?'を欠損値に置換し欠損値が存在する行をドロップして、置き換える	df.replace('?', np.nan).dropna(inplace=True)
+python: df内の'?'を欠損値に置換し欠損値が存在する行をドロップされたで書き換える	df.replace('?', np.nan).dropna(inplace=True)
+python: 置換し欠損が存在する行を欠損にdfデータフレーム中の'?'を削除し、置き換える	df.replace('?', np.nan).dropna(inplace=True)
+python: 置換し欠損が存在する行を欠損にdfデータフレーム中の'?'を削除したで書き換える	df.replace('?', np.nan).dropna(inplace=True)
+python: df内の'?'を欠損に削除し、置き換える	df.replace('?', np.nan).dropna(inplace=True)
+python: df内の'?'を欠損に削除したで置き換える	df.replace('?', np.nan).dropna(inplace=True)
+python: df内に存在する'?'を欠損値に置換する	df.replace('?', np.nan)
+python: ある'?'をdfデータフレームの中に未記入の値に置き換える	df.replace('?', np.nan)
+python: dfデータフレーム中に存在する'?'をNaNで置換する	df.replace('?', np.nan)
+python: df内に存在する'?'を欠損値に置換して、Xにする	X = df.replace('?', np.nan)
+python: df内に存在する'?'を欠損値に置換された結果をXとする	X = df.replace('?', np.nan)
+python: 存在する'?'をdf中に欠損で置換し、Xとする	X = df.replace('?', np.nan)
+python: 存在する'?'をdf中に欠損で置換した結果をXに代入する	X = df.replace('?', np.nan)
+python: ある'?'をdf中にNaNで置き換え、Xとする	X = df.replace('?', np.nan)
+python: ある'?'をdf中にNaNで置き換えた結果をXに代入する	X = df.replace('?', np.nan)
+python: df内に存在する'?'を欠損値に置換し、dfとする	df = df.replace('?', np.nan)
+python: df内に存在する'?'を欠損値に置換し、置き換える	df = df.replace('?', np.nan)
+python: df内に存在する'?'を欠損値に置換したをdfに代入する	df = df.replace('?', np.nan)
+python: df内に存在する'?'を欠損値に置換したを置き換える	df = df.replace('?', np.nan)
+python: dfデータフレームの中にある'?'を未入力の値で置き換え、dfとする	df = df.replace('?', np.nan)
+python: dfデータフレームの中にある'?'を未入力の値で置き換え、置き換える	df = df.replace('?', np.nan)
+python: dfデータフレームの中にある'?'を未入力の値で置き換えられたをdfにする	df = df.replace('?', np.nan)
+python: dfデータフレームの中にある'?'を未入力の値で置き換えられたを置き換える	df = df.replace('?', np.nan)
+python: df内に存在する'?'を欠損に置換し、dfとする	df = df.replace('?', np.nan)
+python: df内に存在する'?'を欠損に置換し、再代入する	df = df.replace('?', np.nan)
+python: df内に存在する'?'を欠損に置換したをdfに代入する	df = df.replace('?', np.nan)
+python: df内に存在する'?'を欠損に置換したを置き換える	df = df.replace('?', np.nan)
+python: df内に存在する'?'を欠損値に置換して、置き換える	df.replace('?', np.nan, inplace=True)
+python: df内に存在する'?'を欠損値に置換されたで書き換える	df.replace('?', np.nan, inplace=True)
+python: ある'?'をdfデータフレーム中にNaNに置き換え、書き換える	df.replace('?', np.nan, inplace=True)
+python: ある'?'をdfデータフレーム中にNaNに置き換えられたで置き換える	df.replace('?', np.nan, inplace=True)
+python: 存在する'?'をdfデータフレーム内に欠損値に置換して、インプレースする	df.replace('?', np.nan, inplace=True)
+python: 存在する'?'をdfデータフレーム内に欠損値に置換したでインプレースする	df.replace('?', np.nan, inplace=True)
+python: df内に欠損値で埋める	df.replace('?', np.nan)
+python: 存在する'?'をdf内に欠損で補う	df.replace('?', np.nan)
+python: dfの中にある'?'を未入力の値とする	df.replace('?', np.nan)
+python: df内に存在する'?'を欠損値で補って、Xにする	X = df.replace('?', np.nan)
+python: df内に存在する'?'を欠損値で補った結果をXにする	X = df.replace('?', np.nan)
+python: dfデータフレームの中にある'?'を未記入の値として、Xに代入する	X = df.replace('?', np.nan)
+python: dfデータフレームの中にある'?'を未記入の値とした結果をXに代入する	X = df.replace('?', np.nan)
+python: df内に存在する'?'を欠損値とし、Xにする	X = df.replace('?', np.nan)
+python: df内に存在する'?'を欠損値とした結果をXに代入する	X = df.replace('?', np.nan)
+python: df内に存在する'?'を欠損値で埋めり、dfとする	df = df.replace('?', np.nan)
+python: df内に存在する'?'を欠損値で埋めり、再代入する	df = df.replace('?', np.nan)
+python: df内に存在する'?'を欠損値で埋めったをdfにする	df = df.replace('?', np.nan)
+python: df内に存在する'?'を欠損値で埋めったを置き換える	df = df.replace('?', np.nan)
+python: dfデータフレーム中に存在する'?'を欠損で埋めり、dfとする	df = df.replace('?', np.nan)
+python: dfデータフレーム中に存在する'?'を欠損で埋めり、置き換える	df = df.replace('?', np.nan)
+python: dfデータフレーム中に存在する'?'を欠損で埋めったをdfにする	df = df.replace('?', np.nan)
+python: dfデータフレーム中に存在する'?'を欠損で埋めったを置き換える	df = df.replace('?', np.nan)
+python: 存在する'?'をデータフレームdf中にNaNとし、dfとする	df = df.replace('?', np.nan)
+python: 存在する'?'をデータフレームdf中にNaNとし、再代入する	df = df.replace('?', np.nan)
+python: 存在する'?'をデータフレームdf中にNaNとしたをdfとする	df = df.replace('?', np.nan)
+python: 存在する'?'をデータフレームdf中にNaNとしたを置き換える	df = df.replace('?', np.nan)
+python: df内に存在する'?'を欠損値で補い、書き換える	df.replace('?', np.nan, inplace=True)
+python: df内に存在する'?'を欠損値で補ったで置き換える	df.replace('?', np.nan, inplace=True)
+python: データフレームdf内に存在する'?'を欠損で埋めり、インプレースする	df.replace('?', np.nan, inplace=True)
+python: データフレームdf内に存在する'?'を欠損で埋めったでインプレースする	df.replace('?', np.nan, inplace=True)
+python: データフレームdf内に存在する'?'を欠損値とし、書き換える	df.replace('?', np.nan, inplace=True)
+python: データフレームdf内に存在する'?'を欠損値としたで書き換える	df.replace('?', np.nan, inplace=True)
+python: 横方向にマージする	pd.merge(df1, df2)
+python: データフレームdf1とデータフレームdf2を横に一つにまとめる	pd.merge(df1, df2)
+python: df1データフレームとdf2データフレームを横方向にマージする	pd.merge(df1, df2)
+python: df1とdf2を横方向にマージし、Xに代入する	X = pd.merge(df1, df2)
+python: df1とdf2を横方向にマージした結果をXにする	X = pd.merge(df1, df2)
+python: df1とdf2を一つにまとめって、Xとする	X = pd.merge(df1, df2)
+python: df1とdf2を一つにまとめった結果をXに代入する	X = pd.merge(df1, df2)
+python: データフレームdf1とデータフレームdf2を横に一つにまとめって、Xとする	X = pd.merge(df1, df2)
+python: データフレームdf1とデータフレームdf2を横に一つにまとめった結果をXに代入する	X = pd.merge(df1, df2)
+python: 'id'をキーとしてdf1とdf2をマージする	pd.merge(df1, df2, on='id')
+python: データフレームdf1とデータフレームdf2をコラム'id'をキーとしてマージする	pd.merge(df1, df2, on='id')
+python: df1データフレームとdf2データフレームを'id'コラムをキーとしてマージする	pd.merge(df1, df2, on='id')
+python: 'id'をキーとしてdf1とdf2をマージし、Xに代入する	X = pd.merge(df1, df2, on='id')
+python: 'id'をキーとしてdf1とdf2をマージした結果をXに代入する	X = pd.merge(df1, df2, on='id')
+python: データフレームdf1とデータフレームdf2をキーとしてコラム'id'をマージして、Xに代入する	X = pd.merge(df1, df2, on='id')
+python: データフレームdf1とデータフレームdf2をキーとしてコラム'id'をマージされた結果をXとする	X = pd.merge(df1, df2, on='id')
+python: キーとして'id'をdf1とdf2をマージし、Xにする	X = pd.merge(df1, df2, on='id')
+python: キーとして'id'をdf1とdf2をマージされた結果をXにする	X = pd.merge(df1, df2, on='id')
+python: df1とdf2に対して'id'をキーとしてデータをマージする	pd.merge(df1, df2, on='id')
+python: データをキーとしてデータフレームdf1とデータフレームdf2に対してコラム'id'をマージする	pd.merge(df1, df2, on='id')
+python: df1データフレームとdf2データフレームに対して'id'コラムをキーとしてデータをマージする	pd.merge(df1, df2, on='id')
+python: df1とdf2に対して'id'をキーとしてデータをマージし、Xに代入する	X = pd.merge(df1, df2, on='id')
+python: df1とdf2に対して'id'をキーとしてデータをマージした結果をXにする	X = pd.merge(df1, df2, on='id')
+python: データフレームdf1とデータフレームdf2に対してコラム'id'をデータをキーとしてマージし、Xとする	X = pd.merge(df1, df2, on='id')
+python: データフレームdf1とデータフレームdf2に対してコラム'id'をデータをキーとしてマージされた結果をXにする	X = pd.merge(df1, df2, on='id')
+python: キーとしてデータフレームdf1とデータフレームdf2に対してコラム'id'をデータをマージして、Xに代入する	X = pd.merge(df1, df2, on='id')
+python: キーとしてデータフレームdf1とデータフレームdf2に対してコラム'id'をデータをマージされた結果をXにする	X = pd.merge(df1, df2, on='id')
+python: 全結合でdf1とdf2をマージする	pd.merge(df1, df2, how='outer')
+python: 両方の列を使ってdf1データフレームとdf2データフレームをマージする	pd.merge(df1, df2, how='outer')
+python: 片方のテーブルにしかないデータも全て残してdf1とdf2をマージする	pd.merge(df1, df2, how='outer')
+python: 全結合でdf1とdf2をマージし、Xにする	X = pd.merge(df1, df2, how='outer')
+python: 全結合でdf1とdf2をマージされた結果をXとする	X = pd.merge(df1, df2, how='outer')
+python: 片方のテーブルにしかないデータも全て残してdf1とdf2をマージして、Xとする	X = pd.merge(df1, df2, how='outer')
+python: 片方のテーブルにしかないデータも全て残してdf1とdf2をマージした結果をXに代入する	X = pd.merge(df1, df2, how='outer')
+python: 両方の列を使ってデータフレームdf1とデータフレームdf2をマージして、Xに代入する	X = pd.merge(df1, df2, how='outer')
+python: 両方の列を使ってデータフレームdf1とデータフレームdf2をマージされた結果をXにする	X = pd.merge(df1, df2, how='outer')
+python: 左側のデータのインデックスと右側のデータの'index_num'をキーとしてdf1とdf2をマージする	pd.merge(df1, df2, left_index=True, right_on='index_num')
+python: 左側のデータのインデックスと右側のデータの'index_num'をdf1とdf2をキーとしてマージする	pd.merge(df1, df2, left_index=True, right_on='index_num')
+python: 左側のデータのインデックスと'index_num'をキーとしてdf1とdf2をマージする	pd.merge(df1, df2, left_index=True, right_on='index_num')
+python: 左側のデータのインデックスと右側のデータの'index_num'をキーとしてdf1とdf2をマージし、Xにする	X = pd.merge(df1, df2, left_index=True, right_on='index_num')
+python: 左側のデータのインデックスと右側のデータの'index_num'をキーとしてdf1とdf2をマージした結果をXにする	X = pd.merge(df1, df2, left_index=True, right_on='index_num')
+python: キーとしてdf1データフレームとdf2データフレームを左側のデータのインデックスと'index_num'列をマージして、Xとする	X = pd.merge(df1, df2, left_index=True, right_on='index_num')
+python: キーとしてdf1データフレームとdf2データフレームを左側のデータのインデックスと'index_num'列をマージした結果をXとする	X = pd.merge(df1, df2, left_index=True, right_on='index_num')
+python: 左側のデータのインデックスと右側のデータの'index_num'列をキーとしてdf1データフレームとdf2データフレームをマージして、Xに代入する	X = pd.merge(df1, df2, left_index=True, right_on='index_num')
+python: 左側のデータのインデックスと右側のデータの'index_num'列をキーとしてdf1データフレームとdf2データフレームをマージされた結果をXとする	X = pd.merge(df1, df2, left_index=True, right_on='index_num')
+python: 左外部結合でdf1とdf2をマージする	pd.merge(df1, df2, how='left')
+python: マージする	pd.merge(df1, df2, how='left')
+python: 左側の表に合わせてデータフレームdf1とデータフレームdf2をマージする	pd.merge(df1, df2, how='left')
+python: 左外部結合でdf1とdf2をマージし、Xに代入する	X = pd.merge(df1, df2, how='left')
+python: 左外部結合でdf1とdf2をマージした結果をXに代入する	X = pd.merge(df1, df2, how='left')
+python: マージして、Xにする	X = pd.merge(df1, df2, how='left')
+python: マージされた結果をXにする	X = pd.merge(df1, df2, how='left')
+python: 左側のデータフレームに合わせてdf1データフレームとdf2データフレームをマージして、Xにする	X = pd.merge(df1, df2, how='left')
+python: 左側のデータフレームに合わせてdf1データフレームとdf2データフレームをマージした結果をXに代入する	X = pd.merge(df1, df2, how='left')
+python: df1とdf2を縦方向にマージする	pd.concat([df1, df2])
+python: df1とdf2を縦向きでマージする	pd.concat([df1, df2])
+python: データフレームdf1とデータフレームdf2を縦でマージする	pd.concat([df1, df2])
+python: 縦にマージして、Xに代入する	X = pd.concat([df1, df2])
+python: 縦にマージした結果をXとする	X = pd.concat([df1, df2])
+python: df1とdf2を縦方向にマージし、Xにする	X = pd.concat([df1, df2])
+python: df1とdf2を縦方向にマージした結果をXにする	X = pd.concat([df1, df2])
+python: 縦方向にマージし、Xとする	X = pd.concat([df1, df2])
+python: 縦方向にマージした結果をXに代入する	X = pd.concat([df1, df2])
+python: df1とdf2を結合する	pd.concat([df1, df2])
+python: df1データフレームとdf2データフレームを結合する	pd.concat([df1, df2])
+python: データフレームdf1とデータフレームdf2を結合する	pd.concat([df1, df2])
+python: df1とdf2を結合し、Xに代入する	X = pd.concat([df1, df2])
+python: df1とdf2を結合した結果をXに代入する	X = pd.concat([df1, df2])
+python: 結合し、Xに代入する	X = pd.concat([df1, df2])
+python: 結合された結果をXに代入する	X = pd.concat([df1, df2])
+python: データフレームdf1とデータフレームdf2を結合して、Xとする	X = pd.concat([df1, df2])
+python: データフレームdf1とデータフレームdf2を結合された結果をXに代入する	X = pd.concat([df1, df2])
+python: dfの'Pclass'をインデックス'Sex'をカラムとしたピボットテーブルを作成する	df.pivot_table(index='Pclass', columns='Sex')
+python: カラムとしたピボットテーブルをインデックス列'Sex'をデータフレームdfのカラム'Pclass'を作成する	df.pivot_table(index='Pclass', columns='Sex')
+python: インデックス'Sex'列を列としたピボットテーブルをdfデータフレームの'Pclass'カラムを作成する	df.pivot_table(index='Pclass', columns='Sex')
+python: dfの'Pclass'をインデックス'Sex'をカラムとしたピボットテーブルを作成し、Xとする	X = df.pivot_table(index='Pclass', columns='Sex')
+python: dfの'Pclass'をインデックス'Sex'をカラムとしたピボットテーブルを作成された結果をXにする	X = df.pivot_table(index='Pclass', columns='Sex')
+python: データフレームdfのカラム'Pclass'をインデックス列'Sex'を列としたピボットテーブルを作成し、Xにする	X = df.pivot_table(index='Pclass', columns='Sex')
+python: データフレームdfのカラム'Pclass'をインデックス列'Sex'を列としたピボットテーブルを作成された結果をXに代入する	X = df.pivot_table(index='Pclass', columns='Sex')
+python: インデックス'Sex'列をdfデータフレームの'Pclass'カラムをコラムとしたピボットテーブルを作成し、Xにする	X = df.pivot_table(index='Pclass', columns='Sex')
+python: インデックス'Sex'列をdfデータフレームの'Pclass'カラムをコラムとしたピボットテーブルを作成された結果をXとする	X = df.pivot_table(index='Pclass', columns='Sex')
+python: dfの'Age'について'Pclass'をインデックス'Sex'をカラムとしたピボットテーブルを作成する	df.pivot_table(index='Pclass', columns='Sex', values='Age')
+python: dfデータフレームの'Age'コラムについて'Pclass'カラムをカラムとしたピボットテーブルをインデックス'Sex'列を作成する	df.pivot_table(index='Pclass', columns='Sex', values='Age')
+python: データフレームdfのコラム'Age'についてカラム'Pclass'をインデックス列'Sex'をコラムとしたピボットテーブルを作成する	df.pivot_table(index='Pclass', columns='Sex', values='Age')
+python: dfの'Age'について'Pclass'をインデックス'Sex'をカラムとしたピボットテーブルを作成して、Xとする	X = df.pivot_table(index='Pclass', columns='Sex', values='Age')
+python: dfの'Age'について'Pclass'をインデックス'Sex'をカラムとしたピボットテーブルを作成された結果をXにする	X = df.pivot_table(index='Pclass', columns='Sex', values='Age')
+python: コラムとしたピボットテーブルをdfデータフレームの'Age'コラムについて'Pclass'カラムをインデックス'Sex'列を作成し、Xに代入する	X = df.pivot_table(index='Pclass', columns='Sex', values='Age')
+python: コラムとしたピボットテーブルをdfデータフレームの'Age'コラムについて'Pclass'カラムをインデックス'Sex'列を作成した結果をXに代入する	X = df.pivot_table(index='Pclass', columns='Sex', values='Age')
+python: インデックス'Sex'をdfの'Age'について'Pclass'をカラムとしたピボットテーブルを作成し、Xにする	X = df.pivot_table(index='Pclass', columns='Sex', values='Age')
+python: インデックス'Sex'をdfの'Age'について'Pclass'をカラムとしたピボットテーブルを作成した結果をXに代入する	X = df.pivot_table(index='Pclass', columns='Sex', values='Age')
+python: ピボット操作でdfの列を行に変更する	df.stack()
+python: ピボット操作でデータフレームdfの列を行に入れ替える	df.stack()
+python: 行にピボット操作でdfデータフレームの列を変更する	df.stack()
+python: ピボット操作でdfの行を列に入れ替える	df.unstack()
+python: 列にピボット操作でデータフレームdfの行を入れ替える	df.unstack()
+python: 列にピボット操作でdfの行を入れ替える	df.unstack()
+python: 重複があるのかどうか判定する	df.duplicated()
+python: dfデータフレーム中に重複があるのか検出する	df.duplicated()
+python: データフレームdf中に重複があるかどうか判定する	df.duplicated()
+python: df中に重複があるのか確認を見る	df.duplicated()
+python: df内の重複を判定する	df.duplicated()
+python: データフレームdf内の重複を判定する	df.duplicated()
+python: 検出する	df.duplicated()
+python: dfに重複があるのかどうか	df.duplicated()
+python: 重複があるのかどうdfデータフレームにか	df.duplicated()
+python: データフレームdfに重複があるのかどうか	df.duplicated()
+python: dfに重複があるのかどうかを見る	df.duplicated()
+python: 重複があるのかどうdfデータフレームにかを確認する	df.duplicated()
+python: 重複があるのかどうdfにかを表示する	df.duplicated()
+python: dfに重複があるのかどうかをTFで返す	df.duplicated()
+python: TFでかを重複があるのかどうdfに返す	df.duplicated()
+python: dfにかを重複があるのかどう真偽値で返す	df.duplicated()
+python: dfの行の重複を判定する	df.duplicated()
+python: データフレームdfの重複行を検出する	df.duplicated()
+python: dfの重複行を確認する	df.duplicated()
+python: df内で重複した行の合計	df.duplicated().sum()
+python: データフレームdfの中で重複した行の数の合計	df.duplicated().sum()
+python: データフレームdf中の重複した行の数	df.duplicated().sum()
+python: df内で重複した行の合計を調べる	df.duplicated().sum()
+python: df中の重複した行を表示する	df.duplicated().sum()
+python: データフレームdf内の重複した行を見る	df.duplicated().sum()
+python: df内で重複したデータ	df[df.duplicated()]
+python: データフレームdf中で重複しているデータ	df[df.duplicated()]
+python: データフレームdf内で重複しているデータ	df[df.duplicated()]
+python: df内で重複するデータを得る	df[df.duplicated()]
+python: データフレームdf中の重複するデータを取得する	df[df.duplicated()]
+python: df中の重複するデータを取得する	df[df.duplicated()]
+python: df内の'state'に重複があるのかどうか判定する	df.duplicated(subset='state')
+python: 重複があるのかどうデータフレームdf内のコラム'state'にか判定する	df.duplicated(subset='state')
+python: df中の'state'に重複はあるのかどうか確認する	df.duplicated(subset='state')
+python: df内の'state'に重複があるのかどうか	df.duplicated(subset='state')
+python: 重複があるのかどうdfデータフレーム内の'state'コラムにか	df.duplicated(subset='state')
+python: データフレームdfの中のコラム'state'に重複があるのかどうか	df.duplicated(subset='state')
+python: df内の'state'にかを表示する	df.duplicated(subset='state')
+python: データフレームdf内のコラム'state'に重複があるのかどうかを表示する	df.duplicated(subset='state')
+python: dfの中の'state'にかを見る	df.duplicated(subset='state')
+python: df内の'state'と'point'に重複があるのかどうか判定する	df.duplicated(subset=['state', 'point'])
+python: 重複があるのかどうdf内の'state'と'point'にか判定する	df.duplicated(subset=['state', 'point'])
+python: dfデータフレームの中の'state'コラムと'point'列に重複があるのかどうか検出する	df.duplicated(subset=['state', 'point'])
+python: df内の'state'と'point'に重複があるのかどうか	df.duplicated(subset=['state', 'point'])
+python: df中の'state'と'point'に重複はあるのかどうか	df.duplicated(subset=['state', 'point'])
+python: 重複があるのかどうdfの中の'state'と'point'にか	df.duplicated(subset=['state', 'point'])
+python: df内の'state'と'point'に重複があるのかどうかを確認する	df.duplicated(subset=['state', 'point'])
+python: 重複があるのかどうデータフレームdfの中の列'state'と列'point'にかを確認する	df.duplicated(subset=['state', 'point'])
+python: データフレームdf中の列'state'と列'point'に重複があるのかどうかを調べる	df.duplicated(subset=['state', 'point'])
+python: df内の重複した行をドロップする	df.drop_duplicates()
+python: df中の重複している行を消す	df.drop_duplicates()
+python: dfの中の重複する行を取り除く	df.drop_duplicates()
+python: df内の重複した行をドロップし、Xに代入する	X = df.drop_duplicates()
+python: df内の重複した行をドロップされた結果をXにする	X = df.drop_duplicates()
+python: dfデータフレームの中の重複する行を取り除き、Xにする	X = df.drop_duplicates()
+python: dfデータフレームの中の重複する行を取り除かれた結果をXとする	X = df.drop_duplicates()
+python: データフレームdfの中の重複する行を落として、Xとする	X = df.drop_duplicates()
+python: データフレームdfの中の重複する行を落とされた結果をXにする	X = df.drop_duplicates()
+python: df内の重複した行をドロップし、dfにする	df = df.drop_duplicates()
+python: df内の重複した行をドロップし、再代入する	df = df.drop_duplicates()
+python: df内の重複した行をドロップされたをdfに代入する	df = df.drop_duplicates()
+python: df内の重複した行をドロップされたを再代入する	df = df.drop_duplicates()
+python: dfデータフレーム内の重複した行を削除して、dfにする	df = df.drop_duplicates()
+python: dfデータフレーム内の重複した行を削除して、置き換える	df = df.drop_duplicates()
+python: dfデータフレーム内の重複した行を削除されたをdfに代入する	df = df.drop_duplicates()
+python: dfデータフレーム内の重複した行を削除されたを置き換える	df = df.drop_duplicates()
+python: dfの中の重複する行を取り除き、dfとする	df = df.drop_duplicates()
+python: dfの中の重複する行を取り除き、置き換える	df = df.drop_duplicates()
+python: dfの中の重複する行を取り除かれたをdfとする	df = df.drop_duplicates()
+python: dfの中の重複する行を取り除かれたを再代入する	df = df.drop_duplicates()
+python: df内の重複した行をドロップし、書き換える	df.drop_duplicates(inplace=True)
+python: df内の重複した行をドロップしたでインプレースする	df.drop_duplicates(inplace=True)
+python: dfデータフレーム内の重複した行をドロップし、置き換える	df.drop_duplicates(inplace=True)
+python: dfデータフレーム内の重複した行をドロップしたで置き換える	df.drop_duplicates(inplace=True)
+python: データフレームdfの中の重複する行を取り除き、インプレースする	df.drop_duplicates(inplace=True)
+python: データフレームdfの中の重複する行を取り除いたでインプレースする	df.drop_duplicates(inplace=True)
+python: df内の重複要素がある行をドロップする	df.drop_duplicates()
+python: データフレームdf中の重複要素がある行を削除する	df.drop_duplicates()
+python: データフレームdf内の重複要素がある行をドロップする	df.drop_duplicates()
+python: df内の重複要素がある行をドロップし、Xとする	X = df.drop_duplicates()
+python: df内の重複要素がある行をドロップした結果をXにする	X = df.drop_duplicates()
+python: dfデータフレームの中の重複要素がある行を落として、Xにする	X = df.drop_duplicates()
+python: dfデータフレームの中の重複要素がある行を落とした結果をXにする	X = df.drop_duplicates()
+python: データフレームdf内の重複要素がある行をドロップし、Xに代入する	X = df.drop_duplicates()
+python: データフレームdf内の重複要素がある行をドロップした結果をXにする	X = df.drop_duplicates()
+python: df内の重複要素がある行をドロップして、dfにする	df = df.drop_duplicates()
+python: df内の重複要素がある行をドロップして、置き換える	df = df.drop_duplicates()
+python: df内の重複要素がある行をドロップされたをdfとする	df = df.drop_duplicates()
+python: df内の重複要素がある行をドロップされたを置き換える	df = df.drop_duplicates()
+python: dfの中の重複要素がある行を落として、dfにする	df = df.drop_duplicates()
+python: dfの中の重複要素がある行を落として、再代入する	df = df.drop_duplicates()
+python: dfの中の重複要素がある行を落としたをdfに代入する	df = df.drop_duplicates()
+python: dfの中の重複要素がある行を落としたを再代入する	df = df.drop_duplicates()
+python: データフレームdfの中の重複要素がある行を取り除いて、dfにする	df = df.drop_duplicates()
+python: データフレームdfの中の重複要素がある行を取り除いて、再代入する	df = df.drop_duplicates()
+python: データフレームdfの中の重複要素がある行を取り除かれたをdfとする	df = df.drop_duplicates()
+python: データフレームdfの中の重複要素がある行を取り除かれたを再代入する	df = df.drop_duplicates()
+python: df内の重複要素がある行をドロップし、書き換える	df.drop_duplicates(inplace=True)
+python: df内の重複要素がある行をドロップしたで書き換える	df.drop_duplicates(inplace=True)
+python: データフレームdf中の重複要素がある行を消し、インプレースする	df.drop_duplicates(inplace=True)
+python: データフレームdf中の重複要素がある行を消したで置き換える	df.drop_duplicates(inplace=True)
+python: データフレームdfの中の重複要素がある行を取り除いて、インプレースする	df.drop_duplicates(inplace=True)
+python: データフレームdfの中の重複要素がある行を取り除いたで書き換える	df.drop_duplicates(inplace=True)
+python: 重複した最後の行を残してdf内の重複している行をドロップする	df.drop_duplicates(keep=False)
+python: 重複している最後の行を残してデータフレームdf中の重複している行を消す	df.drop_duplicates(keep=False)
+python: 重複している最後の行を残してdfデータフレーム中の重複している行を削除する	df.drop_duplicates(keep=False)
+python: 重複した最後の行を残してdf内の重複している行をドロップして、Xとする	X = df.drop_duplicates(keep=False)
+python: 重複した最後の行を残してdf内の重複している行をドロップされた結果をXとする	X = df.drop_duplicates(keep=False)
+python: 重複する最後の行を残してデータフレームdfの中の重複している行を取り除いて、Xに代入する	X = df.drop_duplicates(keep=False)
+python: 重複する最後の行を残してデータフレームdfの中の重複している行を取り除いた結果をXに代入する	X = df.drop_duplicates(keep=False)
+python: 重複した最後の行を残してデータフレームdf内の重複している行を削除し、Xとする	X = df.drop_duplicates(keep=False)
+python: 重複した最後の行を残してデータフレームdf内の重複している行を削除した結果をXに代入する	X = df.drop_duplicates(keep=False)
+python: 重複した最後の行を残してdf内の重複している行をドロップして、dfとする	df = df.drop_duplicates(keep=False)
+python: 重複した最後の行を残してdf内の重複している行をドロップして、再代入する	df = df.drop_duplicates(keep=False)
+python: 重複した最後の行を残してdf内の重複している行をドロップされたをdfにする	df = df.drop_duplicates(keep=False)
+python: 重複した最後の行を残してdf内の重複している行をドロップされたを置き換える	df = df.drop_duplicates(keep=False)
+python: 重複する最後の行を残してdfデータフレームの中の重複している行を取り除いて、dfに代入する	df = df.drop_duplicates(keep=False)
+python: 重複する最後の行を残してdfデータフレームの中の重複している行を取り除いて、再代入する	df = df.drop_duplicates(keep=False)
+python: 重複する最後の行を残してdfデータフレームの中の重複している行を取り除いたをdfに代入する	df = df.drop_duplicates(keep=False)
+python: 重複する最後の行を残してdfデータフレームの中の重複している行を取り除いたを置き換える	df = df.drop_duplicates(keep=False)
+python: 残してdf内の重複している行を重複した最後の行をドロップして、dfとする	df = df.drop_duplicates(keep=False)
+python: 残してdf内の重複している行を重複した最後の行をドロップして、再代入する	df = df.drop_duplicates(keep=False)
+python: 残してdf内の重複している行を重複した最後の行をドロップされたをdfに代入する	df = df.drop_duplicates(keep=False)
+python: 残してdf内の重複している行を重複した最後の行をドロップされたを置き換える	df = df.drop_duplicates(keep=False)
+python: 重複した最後の行を残してdf内の重複している行をドロップして、書き換える	df.drop_duplicates(keep=False, inplace=True)
+python: 重複した最後の行を残してdf内の重複している行をドロップしたでインプレースする	df.drop_duplicates(keep=False, inplace=True)
+python: 残してデータフレームdfの中の重複している行を重複する最後の行を取り除いて、インプレースする	df.drop_duplicates(keep=False, inplace=True)
+python: 残してデータフレームdfの中の重複している行を重複する最後の行を取り除いたで書き換える	df.drop_duplicates(keep=False, inplace=True)
+python: 残してdfの中の重複している行を重複する最後の行を取り除き、置き換える	df.drop_duplicates(keep=False, inplace=True)
+python: 残してdfの中の重複している行を重複する最後の行を取り除いたで書き換える	df.drop_duplicates(keep=False, inplace=True)
+python: df内の'state'の重複した行をドロップする	df.drop_duplicates(subset='state')
+python: dfデータフレーム中の'state'列の重複している行を削除する	df.drop_duplicates(subset='state')
+python: dfデータフレームの中の'state'列の重複する行を落とす	df.drop_duplicates(subset='state')
+python: df内の'state'の重複した行をドロップし、Xに代入する	X = df.drop_duplicates(subset='state')
+python: df内の'state'の重複した行をドロップされた結果をXに代入する	X = df.drop_duplicates(subset='state')
+python: データフレームdfの中の列'state'の重複する行を取り除き、Xに代入する	X = df.drop_duplicates(subset='state')
+python: データフレームdfの中の列'state'の重複する行を取り除いた結果をXに代入する	X = df.drop_duplicates(subset='state')
+python: データフレームdf内の列'state'の重複した行をドロップして、Xに代入する	X = df.drop_duplicates(subset='state')
+python: データフレームdf内の列'state'の重複した行をドロップした結果をXとする	X = df.drop_duplicates(subset='state')
+python: ドロップして、dfにする	df = df.drop_duplicates(subset='state')
+python: ドロップして、再代入する	df = df.drop_duplicates(subset='state')
+python: ドロップされたをdfに代入する	df = df.drop_duplicates(subset='state')
+python: ドロップされたを置き換える	df = df.drop_duplicates(subset='state')
+python: データフレームdfの中の列'state'の重複する行を落として、dfにする	df = df.drop_duplicates(subset='state')
+python: データフレームdfの中の列'state'の重複する行を落として、置き換える	df = df.drop_duplicates(subset='state')
+python: データフレームdfの中の列'state'の重複する行を落とされたをdfにする	df = df.drop_duplicates(subset='state')
+python: データフレームdfの中の列'state'の重複する行を落とされたを置き換える	df = df.drop_duplicates(subset='state')
+python: データフレームdf中の列'state'の重複している行を消し、dfにする	df = df.drop_duplicates(subset='state')
+python: データフレームdf中の列'state'の重複している行を消し、再代入する	df = df.drop_duplicates(subset='state')
+python: データフレームdf中の列'state'の重複している行を消したをdfに代入する	df = df.drop_duplicates(subset='state')
+python: データフレームdf中の列'state'の重複している行を消したを置き換える	df = df.drop_duplicates(subset='state')
+python: df内の'state'の重複した行をドロップし、書き換える	df.drop_duplicates(subset='state', inplace=True)
+python: df内の'state'の重複した行をドロップされたで書き換える	df.drop_duplicates(subset='state', inplace=True)
+python: データフレームdf内の列'state'の重複した行をドロップし、書き換える	df.drop_duplicates(subset='state', inplace=True)
+python: データフレームdf内の列'state'の重複した行をドロップしたで置き換える	df.drop_duplicates(subset='state', inplace=True)
+python: dfデータフレーム内の'state'列の重複した行をドロップし、書き換える	df.drop_duplicates(subset='state', inplace=True)
+python: dfデータフレーム内の'state'列の重複した行をドロップしたで置き換える	df.drop_duplicates(subset='state', inplace=True)
+python: df内の'state'に重複がある行をドロップする	df.drop_duplicates(subset='state')
+python: df中の'state'に重複がある行を落とす	df.drop_duplicates(subset='state')
+python: df中の'state'に重複がある行を削除する	df.drop_duplicates(subset='state')
+python: df内の'state'に重複がある行をドロップし、Xとする	X = df.drop_duplicates(subset='state')
+python: df内の'state'に重複がある行をドロップされた結果をXとする	X = df.drop_duplicates(subset='state')
+python: データフレームdf内の列'state'に重複がある行をドロップして、Xとする	X = df.drop_duplicates(subset='state')
+python: データフレームdf内の列'state'に重複がある行をドロップした結果をXにする	X = df.drop_duplicates(subset='state')
+python: データフレームdf内の列'state'に重複がある行を削除して、Xとする	X = df.drop_duplicates(subset='state')
+python: データフレームdf内の列'state'に重複がある行を削除した結果をXにする	X = df.drop_duplicates(subset='state')
+python: df内の'state'に重複がある行をドロップして、dfに代入する	df = df.drop_duplicates(subset='state')
+python: df内の'state'に重複がある行をドロップして、置き換える	df = df.drop_duplicates(subset='state')
+python: df内の'state'に重複がある行をドロップされたをdfに代入する	df = df.drop_duplicates(subset='state')
+python: df内の'state'に重複がある行をドロップされたを再代入する	df = df.drop_duplicates(subset='state')
+python: 重複がある行をdfの中の'state'に取り除き、dfに代入する	df = df.drop_duplicates(subset='state')
+python: 重複がある行をdfの中の'state'に取り除き、再代入する	df = df.drop_duplicates(subset='state')
+python: 重複がある行をdfの中の'state'に取り除いたをdfに代入する	df = df.drop_duplicates(subset='state')
+python: 重複がある行をdfの中の'state'に取り除いたを置き換える	df = df.drop_duplicates(subset='state')
+python: データフレームdf中の列'state'に重複がある行を消し、dfに代入する	df = df.drop_duplicates(subset='state')
+python: データフレームdf中の列'state'に重複がある行を消し、置き換える	df = df.drop_duplicates(subset='state')
+python: データフレームdf中の列'state'に重複がある行を消したをdfとする	df = df.drop_duplicates(subset='state')
+python: データフレームdf中の列'state'に重複がある行を消したを再代入する	df = df.drop_duplicates(subset='state')
+python: df内の'state'に重複がある行をドロップし、インプレースする	df.drop_duplicates(subset='state', inplace=True)
+python: df内の'state'に重複がある行をドロップしたで置き換える	df.drop_duplicates(subset='state', inplace=True)
+python: dfデータフレームの中の'state'列に重複がある行を取り除いて、書き換える	df.drop_duplicates(subset='state', inplace=True)
+python: dfデータフレームの中の'state'列に重複がある行を取り除いたでインプレースする	df.drop_duplicates(subset='state', inplace=True)
+python: 重複がある行をdfデータフレームの中の'state'列に取り除き、置き換える	df.drop_duplicates(subset='state', inplace=True)
+python: 重複がある行をdfデータフレームの中の'state'列に取り除かれたで書き換える	df.drop_duplicates(subset='state', inplace=True)
+python: 境界値をdata_binsとしてdfの'birth_year'を分割する	pd.cut(df['birth_year'], data_bins)
+python: リストdata_binsとして境界値をデータフレームdfのカラム'birth_year'を分割する	pd.cut(df['birth_year'], data_bins)
+python: data_binsとして境界値をdfの'birth_year'を分割する	pd.cut(df['birth_year'], data_bins)
+python: 境界値をdata_binsとしてdfの'birth_year'を分割して、Xに代入する	X = pd.cut(df['birth_year'], data_bins)
+python: 境界値をdata_binsとしてdfの'birth_year'を分割した結果をXとする	X = pd.cut(df['birth_year'], data_bins)
+python: dfの'birth_year'を境界値をdata_binsとして分割して、Xにする	X = pd.cut(df['birth_year'], data_bins)
+python: dfの'birth_year'を境界値をdata_binsとして分割した結果をXに代入する	X = pd.cut(df['birth_year'], data_bins)
+python: data_binsリストとしてdfデータフレームの'birth_year'カラムを境界値を分割し、Xとする	X = pd.cut(df['birth_year'], data_bins)
+python: data_binsリストとしてdfデータフレームの'birth_year'カラムを境界値を分割された結果をXに代入する	X = pd.cut(df['birth_year'], data_bins)
+python: ビン数をbins_numとしてdfの'birth_year'を分割する	pd.cut(df['birth_year'], bins_num)
+python: データフレームdfのカラム'birth_year'を分割数をbins_numとして分割する	pd.cut(df['birth_year'], bins_num)
+python: 分割数をbins_numとしてdfデータフレームの'birth_year'カラムを分割する	pd.cut(df['birth_year'], bins_num)
+python: ビン数をbins_numとしてdfの'birth_year'を分割して、Xにする	X = pd.cut(df['birth_year'], bins_num)
+python: ビン数をbins_numとしてdfの'birth_year'を分割した結果をXとする	X = pd.cut(df['birth_year'], bins_num)
+python: 分割数をdfの'birth_year'をbins_numとして分割し、Xに代入する	X = pd.cut(df['birth_year'], bins_num)
+python: 分割数をdfの'birth_year'をbins_numとして分割した結果をXに代入する	X = pd.cut(df['birth_year'], bins_num)
+python: dfデータフレームの'birth_year'カラムをbins_numとして分割数を分割して、Xに代入する	X = pd.cut(df['birth_year'], bins_num)
+python: dfデータフレームの'birth_year'カラムをbins_numとして分割数を分割した結果をXとする	X = pd.cut(df['birth_year'], bins_num)
+python: ビン数をbins_num、ビンの名前をgroup_namesとしてdfの'birth_year'を分割する	pd.cut(df['birth_year'], bins_num, label=group_names)
+python: group_namesとしてbins_num、ビンのラベルをビン数をdfの'birth_year'を分割する	pd.cut(df['birth_year'], bins_num, label=group_names)
+python: dfデータフレームの'birth_year'カラムをビン数をgroup_namesリストとしてbins_num、ビンの名前を分割する	pd.cut(df['birth_year'], bins_num, label=group_names)
+python: ビン数をbins_num、ビンの名前をgroup_namesとしてdfの'birth_year'を分割し、Xに代入する	X = pd.cut(df['birth_year'], bins_num, label=group_names)
+python: ビン数をbins_num、ビンの名前をgroup_namesとしてdfの'birth_year'を分割した結果をXにする	X = pd.cut(df['birth_year'], bins_num, label=group_names)
+python: 分割数をbins_num、ビンの名前をgroup_namesとしてdfの'birth_year'を分割し、Xとする	X = pd.cut(df['birth_year'], bins_num, label=group_names)
+python: 分割数をbins_num、ビンの名前をgroup_namesとしてdfの'birth_year'を分割された結果をXにする	X = pd.cut(df['birth_year'], bins_num, label=group_names)
+python: ビン数をbins_num、ビンの名前をgroup_namesリストとしてdfデータフレームの'birth_year'カラムを分割し、Xに代入する	X = pd.cut(df['birth_year'], bins_num, label=group_names)
+python: ビン数をbins_num、ビンの名前をgroup_namesリストとしてdfデータフレームの'birth_year'カラムを分割した結果をXとする	X = pd.cut(df['birth_year'], bins_num, label=group_names)
+python: ビン数をbins_num、ビンのラベルを0始まりの連番としてdfの'birth_year'を分割する	pd.cut(df['birth_year'], bins_num, label=False)
+python: bins_num、ビンのラベルを0始まりの連番としてdfの'birth_year'をビン数を分割する	pd.cut(df['birth_year'], bins_num, label=False)
+python: bins_num、ビンのラベルをビン数を整数値としてdfデータフレームの'birth_year'カラムを分割する	pd.cut(df['birth_year'], bins_num, label=False)
+python: ビン数をbins_num、ビンのラベルを0始まりの連番としてdfの'birth_year'を分割し、Xとする	X = pd.cut(df['birth_year'], bins_num, label=False)
+python: ビン数をbins_num、ビンのラベルを0始まりの連番としてdfの'birth_year'を分割した結果をXにする	X = pd.cut(df['birth_year'], bins_num, label=False)
+python: 分割数をbins_num、ビンの名前をインデックスとしてdfデータフレームの'birth_year'カラムを分割して、Xにする	X = pd.cut(df['birth_year'], bins_num, label=False)
+python: 分割数をbins_num、ビンの名前をインデックスとしてdfデータフレームの'birth_year'カラムを分割された結果をXにする	X = pd.cut(df['birth_year'], bins_num, label=False)
+python: 分割数を整数値としてbins_num、ビンの名前をdfデータフレームの'birth_year'カラムを分割して、Xとする	X = pd.cut(df['birth_year'], bins_num, label=False)
+python: 分割数を整数値としてbins_num、ビンの名前をdfデータフレームの'birth_year'カラムを分割した結果をXに代入する	X = pd.cut(df['birth_year'], bins_num, label=False)
+python: dfの'birth_year'を中央値で分割する	pd.qcut(df['birth_year'], 2)
+python: データフレームdfのカラム'birth_year'を中央値で分割する	pd.qcut(df['birth_year'], 2)
+python: dfデータフレームの'birth_year'カラムを中央値で分割する	pd.qcut(df['birth_year'], 2)
+python: dfの'birth_year'を中央値で分割し、Xとする	X = pd.qcut(df['birth_year'], 2)
+python: dfの'birth_year'を中央値で分割された結果をXに代入する	X = pd.qcut(df['birth_year'], 2)
+python: データフレームdfのカラム'birth_year'を中央値で分割して、Xに代入する	X = pd.qcut(df['birth_year'], 2)
+python: データフレームdfのカラム'birth_year'を中央値で分割された結果をXに代入する	X = pd.qcut(df['birth_year'], 2)
+python: dfデータフレームの'birth_year'カラムを中央値で分割して、Xに代入する	X = pd.qcut(df['birth_year'], 2)
+python: dfデータフレームの'birth_year'カラムを中央値で分割した結果をXとする	X = pd.qcut(df['birth_year'], 2)
+python: dfの'birth_year'を四分位数ごとで分割する	pd.qcut(df['birth_year'], 4)
+python: データフレームdfのカラム'birth_year'を四分位数ごとで分割する	pd.qcut(df['birth_year'], 4)
+python: dfデータフレームの'birth_year'カラムを四分位数ごとで分割する	pd.qcut(df['birth_year'], 4)
+python: dfの'birth_year'を四分位数ごとで分割して、Xに代入する	X = pd.qcut(df['birth_year'], 4)
+python: dfの'birth_year'を四分位数ごとで分割した結果をXとする	X = pd.qcut(df['birth_year'], 4)
+python: データフレームdfのカラム'birth_year'を四分位数ごとで分割し、Xとする	X = pd.qcut(df['birth_year'], 4)
+python: データフレームdfのカラム'birth_year'を四分位数ごとで分割した結果をXに代入する	X = pd.qcut(df['birth_year'], 4)
+python: dfデータフレームの'birth_year'カラムを四分位数ごとで分割して、Xにする	X = pd.qcut(df['birth_year'], 4)
+python: dfデータフレームの'birth_year'カラムを四分位数ごとで分割した結果をXとする	X = pd.qcut(df['birth_year'], 4)
+python: ビン数をbins_numとしてdfの'birth_year'をビンに含まれる個数が等しくなるように分割する	pd.qcut(df['birth_year'], bins_num)
+python: bins_numとしてビン数を要素数が等しくなるようにdfデータフレームの'birth_year'カラムを分割する	pd.qcut(df['birth_year'], bins_num)
+python: 要素数が等しくなるように分割数をdfの'birth_year'をbins_numとして分割する	pd.qcut(df['birth_year'], bins_num)
+python: ビン数をbins_numとしてdfの'birth_year'をビンに含まれる個数が等しくなるように分割して、Xにする	X = pd.qcut(df['birth_year'], bins_num)
+python: ビン数をbins_numとしてdfの'birth_year'をビンに含まれる個数が等しくなるように分割された結果をXに代入する	X = pd.qcut(df['birth_year'], bins_num)
+python: bins_numとしてビン数をデータフレームdfのカラム'birth_year'を要素数が等しくなるように分割し、Xとする	X = pd.qcut(df['birth_year'], bins_num)
+python: bins_numとしてビン数をデータフレームdfのカラム'birth_year'を要素数が等しくなるように分割した結果をXとする	X = pd.qcut(df['birth_year'], bins_num)
+python: データフレームdfのカラム'birth_year'をbins_numとして分割数をビンに含まれる個数が等しくなるように分割して、Xにする	X = pd.qcut(df['birth_year'], bins_num)
+python: データフレームdfのカラム'birth_year'をbins_numとして分割数をビンに含まれる個数が等しくなるように分割された結果をXに代入する	X = pd.qcut(df['birth_year'], bins_num)
+python: dfの'flg-50K'をグループ化したときの値ごとのデータ数	df.groupby('flg-50K').size()
+python: dfデータフレームの'flg-50K'コラムをグループ化したときの値ごとのデータの件数	df.groupby('flg-50K').size()
+python: グループ化したときの値ごとのデータの件数	df.groupby('flg-50K').size()
+python: dfの'flg-50K'をグループ化したときの値ごとのデータ件数を計算する	df.groupby('flg-50K').size()
+python: dfデータフレームの'flg-50K'コラムをグループ化したときの値ごとのデータ件数を求める	df.groupby('flg-50K').size()
+python: データフレームdfのコラム'flg-50K'をグループ化したときの値ごとのデータ件数を計算する	df.groupby('flg-50K').size()
+python: dfの'month'と'period'ごとの'sales'の値の和	df.groupby(['month', 'period'])['sales'].sum()
+python: データフレームdfのカラム'month'と列'period'ごとのコラム'sales'の値の数	df.groupby(['month', 'period'])['sales'].sum()
+python: dfデータフレームの'month'カラムと'period'列ごとの'sales'コラムの値の和	df.groupby(['month', 'period'])['sales'].sum()
+python: dfの'month'と'period'ごとの'sales'の値の和を求める	df.groupby(['month', 'period'])['sales'].sum()
+python: データフレームdfのカラム'month'と列'period'ごとのコラム'sales'の値の数を求める	df.groupby(['month', 'period'])['sales'].sum()
+python: dfデータフレームの'month'カラムと'period'列ごとの'sales'コラムの値の数を求める	df.groupby(['month', 'period'])['sales'].sum()
+python: dfの'weather'ごとの'temperature'の平均	df.groupby(['weather'])['temperature'].mean()
+python: データフレームdfのカラム'weather'ごとのカラム'temperature'の平均	df.groupby(['weather'])['temperature'].mean()
+python: dfデータフレームの'weather'カラムごとの'temperature'カラムの平均値	df.groupby(['weather'])['temperature'].mean()
+python: dfの'weather'ごとの'temperature'の平均値を求める	df.groupby(['weather'])['temperature'].mean()
+python: データフレームdfのカラム'weather'ごとのカラム'temperature'の平均を計算する	df.groupby(['weather'])['temperature'].mean()
+python: データフレームdfのカラム'weather'ごとのカラム'temperature'の平均値を求める	df.groupby(['weather'])['temperature'].mean()
+python: dfのtype('week', カラム)ごとの'soldout'の個数	df.groupby(['week'])['soldout'].count()
+python: dfデータフレームのtype('week', 列)ごとの'soldout'列の個数	df.groupby(['week'])['soldout'].count()
+python: データフレームdfのtype('week', コラム)ごとの列'soldout'の数	df.groupby(['week'])['soldout'].count()
+python: dfのtype('week', カラム)ごとの'soldout'の数を算出する	df.groupby(['week'])['soldout'].count()
+python: dfのtype('week', 列)ごとの'soldout'の個数を求める	df.groupby(['week'])['soldout'].count()
+python: データフレームdfのtype('week', カラム)ごとの列'soldout'の数を求める	df.groupby(['week'])['soldout'].count()
+python: 昇順に=順に	降順に=逆順に|大きい順に|大から小へと|値が大きい順に
+python: =順に昇順に	降順に=逆順に|大きい順に|大から小へと|値が大きい順に
+python: dfをインデックスで昇順にソートする	df.sort_index()
+python: dfデータフレームをインデックスで並び替える	df.sort_index()
+python: データフレームdf全体をインデックスで昇順にソートする	df.sort_index()
+python: df全体をインデックスで昇順にソートし、Xにする	X = df.sort_index()
+python: df全体をインデックスで昇順にソートした結果をXに代入する	X = df.sort_index()
+python: dfをインデックスで並び替え、Xに代入する	X = df.sort_index()
+python: dfをインデックスで並び替えた結果をXとする	X = df.sort_index()
+python: インデックスで並び替えて、Xに代入する	X = df.sort_index()
+python: インデックスで並び替えた結果をXとする	X = df.sort_index()
+python: dfをインデックスで昇順にソートして、dfに代入する	df = df.sort_index()
+python: dfをインデックスで昇順にソートして、再代入する	df = df.sort_index()
+python: dfをインデックスで昇順にソートしたをdfに代入する	df = df.sort_index()
+python: dfをインデックスで昇順にソートしたを再代入する	df = df.sort_index()
+python: dfデータフレーム全体をインデックスで昇順にソートして、dfとする	df = df.sort_index()
+python: dfデータフレーム全体をインデックスで昇順にソートして、置き換える	df = df.sort_index()
+python: dfデータフレーム全体をインデックスで昇順にソートしたをdfに代入する	df = df.sort_index()
+python: dfデータフレーム全体をインデックスで昇順にソートしたを置き換える	df = df.sort_index()
+python: データフレームdf全体をインデックスで昇順にソートし、dfにする	df = df.sort_index()
+python: データフレームdf全体をインデックスで昇順にソートし、再代入する	df = df.sort_index()
+python: データフレームdf全体をインデックスで昇順にソートしたをdfに代入する	df = df.sort_index()
+python: データフレームdf全体をインデックスで昇順にソートしたを再代入する	df = df.sort_index()
+python: インデックスで昇順にソートして、書き換える	df.sort_index(inplace=True)
+python: インデックスで昇順にソートしたで置き換える	df.sort_index(inplace=True)
+python: dfをインデックスで昇順にソートで置き換える	df.sort_index(inplace=True)
+python: dfをインデックスで並び替えて、書き換える	df.sort_index(inplace=True)
+python: dfをインデックスで並び替えたで置き換える	df.sort_index(inplace=True)
+python: df全体をインデックスを軸に昇順でソートする	df.sort_index()
+python: dfをインデックスを元にソートする	df.sort_index()
+python: データフレームdfをインデックスを元にソートする	df.sort_index()
+python: df全体をインデックスを軸に昇順でソートし、Xに代入する	X = df.sort_index()
+python: df全体をインデックスを軸に昇順でソートした結果をXにする	X = df.sort_index()
+python: dfをインデックスを軸に昇順でソートし、Xにする	X = df.sort_index()
+python: dfをインデックスを軸に昇順でソートした結果をXに代入する	X = df.sort_index()
+python: インデックスをdfを元にソートして、Xにする	X = df.sort_index()
+python: インデックスをdfを元にソートした結果をXにする	X = df.sort_index()
+python: df全体をインデックスを軸に昇順でソートし、dfとする	df = df.sort_index()
+python: df全体をインデックスを軸に昇順でソートし、再代入する	df = df.sort_index()
+python: df全体をインデックスを軸に昇順でソートされたをdfとする	df = df.sort_index()
+python: df全体をインデックスを軸に昇順でソートされたを置き換える	df = df.sort_index()
+python: インデックスをdf全体を軸に昇順でソートして、dfに代入する	df = df.sort_index()
+python: インデックスをdf全体を軸に昇順でソートして、置き換える	df = df.sort_index()
+python: インデックスをdf全体を軸に昇順でソートしたをdfにする	df = df.sort_index()
+python: インデックスをdf全体を軸に昇順でソートしたを置き換える	df = df.sort_index()
+python: インデックスをデータフレームdf全体を軸に昇順でソートし、dfとする	df = df.sort_index()
+python: インデックスをデータフレームdf全体を軸に昇順でソートし、置き換える	df = df.sort_index()
+python: インデックスをデータフレームdf全体を軸に昇順でソートしたをdfとする	df = df.sort_index()
+python: インデックスをデータフレームdf全体を軸に昇順でソートしたを置き換える	df = df.sort_index()
+python: df全体をインデックスを軸に昇順でソートし、置き換える	df.sort_index(inplace=True)
+python: df全体をインデックスを軸に昇順でソートしたでインプレースする	df.sort_index(inplace=True)
+python: データフレームdfをインデックスを軸に昇順でソートし、置き換える	df.sort_index(inplace=True)
+python: データフレームdfをインデックスを軸に昇順でソートしたでインプレースする	df.sort_index(inplace=True)
+python: dfをインデックスを元にソートし、インプレースする	df.sort_index(inplace=True)
+python: dfをインデックスを元にソートしたで書き換える	df.sort_index(inplace=True)
+python: dfをインデックスに基づいて昇順でソートする	df.sort_index()
+python: データフレームdfをインデックスに基づいて昇順でソートする	df.sort_index()
+python: dfデータフレームをインデックスに沿ってソートする	df.sort_index()
+python: dfをインデックスに基づいて昇順でソートし、Xにする	X = df.sort_index()
+python: dfをインデックスに基づいて昇順でソートされた結果をXとする	X = df.sort_index()
+python: dfデータフレームをインデックスに沿ってソートして、Xにする	X = df.sort_index()
+python: dfデータフレームをインデックスに沿ってソートした結果をXとする	X = df.sort_index()
+python: dfをインデックスに沿ってソートし、Xに代入する	X = df.sort_index()
+python: dfをインデックスに沿ってソートした結果をXにする	X = df.sort_index()
+python: df全体をインデックスに基づいて昇順でソートして、dfとする	df = df.sort_index()
+python: df全体をインデックスに基づいて昇順でソートして、置き換える	df = df.sort_index()
+python: df全体をインデックスに基づいて昇順でソートされたをdfとする	df = df.sort_index()
+python: df全体をインデックスに基づいて昇順でソートされたを再代入する	df = df.sort_index()
+python: dfデータフレームをインデックスに基づいて昇順でソートし、dfに代入する	df = df.sort_index()
+python: dfデータフレームをインデックスに基づいて昇順でソートし、再代入する	df = df.sort_index()
+python: dfデータフレームをインデックスに基づいて昇順でソートされたをdfとする	df = df.sort_index()
+python: dfデータフレームをインデックスに基づいて昇順でソートされたを再代入する	df = df.sort_index()
+python: dfデータフレーム全体をインデックスに基づいて昇順でソートし、dfとする	df = df.sort_index()
+python: dfデータフレーム全体をインデックスに基づいて昇順でソートし、置き換える	df = df.sort_index()
+python: dfデータフレーム全体をインデックスに基づいて昇順でソートしたをdfとする	df = df.sort_index()
+python: dfデータフレーム全体をインデックスに基づいて昇順でソートしたを再代入する	df = df.sort_index()
+python: dfをインデックスに基づいて昇順でソートし、置き換える	df.sort_index(inplace=True)
+python: dfをインデックスに基づいて昇順でソートされたで書き換える	df.sort_index(inplace=True)
+python: df全体をインデックスに基づいて昇順でソートし、インプレースする	df.sort_index(inplace=True)
+python: df全体をインデックスに基づいて昇順でソートされたで書き換える	df.sort_index(inplace=True)
+python: dfデータフレームをインデックスに沿ってソートして、インプレースする	df.sort_index(inplace=True)
+python: dfデータフレームをインデックスに沿ってソートしたで置き換える	df.sort_index(inplace=True)
+python: df全体を'sales'と'temperature'で昇順にソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: 'sales'と'temperature'でdfをソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: 'sales'カラムと'temperature'カラムでdfデータフレームをソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: df全体を'sales'と'temperature'で昇順にソートして、Xとする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: df全体を'sales'と'temperature'で昇順にソートされた結果をXとする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdfをカラム'sales'とカラム'temperature'でソートして、Xにする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdfをカラム'sales'とカラム'temperature'でソートした結果をXにする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: 'sales'カラムと'temperature'カラムでdfデータフレーム全体を昇順にソートして、Xにする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: 'sales'カラムと'temperature'カラムでdfデータフレーム全体を昇順にソートした結果をXにする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'で昇順にソートして、dfとする	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'で昇順にソートして、置き換える	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'で昇順にソートしたをdfとする	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'で昇順にソートしたを置き換える	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdf全体をカラム'sales'とカラム'temperature'で昇順にソートし、dfとする	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdf全体をカラム'sales'とカラム'temperature'で昇順にソートし、再代入する	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdf全体をカラム'sales'とカラム'temperature'で昇順にソートしたをdfにする	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdf全体をカラム'sales'とカラム'temperature'で昇順にソートしたを再代入する	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: カラム'sales'とカラム'temperature'でデータフレームdfをソートし、dfとする	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: カラム'sales'とカラム'temperature'でデータフレームdfをソートし、置き換える	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: カラム'sales'とカラム'temperature'でデータフレームdfをソートしたをdfにする	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: カラム'sales'とカラム'temperature'でデータフレームdfをソートしたを再代入する	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'で昇順にソートし、置き換える	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: dfを'sales'と'temperature'で昇順にソートしたで書き換える	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: 'sales'カラムと'temperature'カラムでdfデータフレームをソートし、インプレースする	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: 'sales'カラムと'temperature'カラムでdfデータフレームをソートされたで置き換える	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: dfデータフレーム全体を'sales'カラムと'temperature'カラムで昇順にソートし、書き換える	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: dfデータフレーム全体を'sales'カラムと'temperature'カラムで昇順にソートしたで置き換える	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: dfを'sales'と'temperature'を軸に昇順でソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: 'sales'カラムと'temperature'カラムをdfデータフレームを元にソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: 'sales'カラムと'temperature'カラムをdfデータフレーム全体を軸に昇順でソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: df全体を'sales'と'temperature'を軸に昇順でソートし、Xにする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: df全体を'sales'と'temperature'を軸に昇順でソートされた結果をXにする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'を元にソートして、Xとする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'を元にソートされた結果をXに代入する	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdf全体をカラム'sales'とカラム'temperature'を軸に昇順でソートして、Xとする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdf全体をカラム'sales'とカラム'temperature'を軸に昇順でソートした結果をXに代入する	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'を軸に昇順でソートして、dfとする	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'を軸に昇順でソートして、置き換える	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'を軸に昇順でソートしたをdfに代入する	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'を軸に昇順でソートしたを置き換える	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdfをカラム'sales'とカラム'temperature'を元にソートし、dfとする	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdfをカラム'sales'とカラム'temperature'を元にソートし、置き換える	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdfをカラム'sales'とカラム'temperature'を元にソートされたをdfとする	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdfをカラム'sales'とカラム'temperature'を元にソートされたを再代入する	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: 'sales'カラムと'temperature'カラムをdfデータフレームを軸に昇順でソートし、dfに代入する	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: 'sales'カラムと'temperature'カラムをdfデータフレームを軸に昇順でソートし、再代入する	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: 'sales'カラムと'temperature'カラムをdfデータフレームを軸に昇順でソートしたをdfに代入する	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: 'sales'カラムと'temperature'カラムをdfデータフレームを軸に昇順でソートしたを置き換える	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: df全体を'sales'と'temperature'を軸に昇順でソートし、置き換える	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: df全体を'sales'と'temperature'を軸に昇順でソートしたで書き換える	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: dfデータフレームを'sales'カラムと'temperature'カラムを軸に昇順でソートし、置き換える	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: dfデータフレームを'sales'カラムと'temperature'カラムを軸に昇順でソートしたでインプレースする	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: 'sales'と'temperature'をdfを元にソートし、書き換える	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: 'sales'と'temperature'をdfを元にソートしたで書き換える	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: 'sales'と'temperature'に基づいて昇順でソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: df全体を'sales'と'temperature'に基づいて昇順でソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfデータフレームを'sales'カラムと'temperature'カラムに沿ってソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: df全体を'sales'と'temperature'に基づいて昇順でソートし、Xとする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: df全体を'sales'と'temperature'に基づいて昇順でソートした結果をXにする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfデータフレームを'sales'カラムと'temperature'カラムに沿ってソートし、Xとする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfデータフレームを'sales'カラムと'temperature'カラムに沿ってソートした結果をXにする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdf全体をカラム'sales'とカラム'temperature'に基づいて昇順でソートし、Xに代入する	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdf全体をカラム'sales'とカラム'temperature'に基づいて昇順でソートした結果をXにする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'に基づいて昇順でソートして、dfとする	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'に基づいて昇順でソートして、置き換える	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'に基づいて昇順でソートしたをdfにする	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'に基づいて昇順でソートしたを置き換える	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: df全体を'sales'と'temperature'に基づいて昇順でソートして、dfにする	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: df全体を'sales'と'temperature'に基づいて昇順でソートして、置き換える	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: df全体を'sales'と'temperature'に基づいて昇順でソートしたをdfに代入する	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: df全体を'sales'と'temperature'に基づいて昇順でソートしたを置き換える	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'に沿ってソートし、dfとする	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'に沿ってソートし、置き換える	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'に沿ってソートされたをdfとする	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfを'sales'と'temperature'に沿ってソートされたを置き換える	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: 'sales'と'temperature'に基づいて昇順でソートし、書き換える	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: 'sales'と'temperature'に基づいて昇順でソートしたで書き換える	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: dfデータフレームを'sales'カラムと'temperature'カラムに沿ってソートし、置き換える	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: dfデータフレームを'sales'カラムと'temperature'カラムに沿ってソートしたでインプレースする	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: データフレームdfをカラム'sales'とカラム'temperature'に基づいて昇順でソートして、置き換える	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: データフレームdfをカラム'sales'とカラム'temperature'に基づいて昇順でソートしたで置き換える	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: dfの'sales'と'temperature'を降順にソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfデータフレームの'sales'カラムと'temperature'コラムを降順にソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdfのカラム'sales'とコラム'temperature'を逆順にソートする	df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfの'sales'と'temperature'を降順にソートして、Xに代入する	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfの'sales'と'temperature'を降順にソートした結果をXにする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdfのカラム'sales'とコラム'temperature'を逆順にソートして、Xにする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdfのカラム'sales'とコラム'temperature'を逆順にソートした結果をXにする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfデータフレームの'sales'カラムと'temperature'コラムを降順にソートして、Xにする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfデータフレームの'sales'カラムと'temperature'コラムを降順にソートした結果をXにする	X = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfの'sales'と'temperature'を降順にソートし、dfに代入する	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfの'sales'と'temperature'を降順にソートし、再代入する	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfの'sales'と'temperature'を降順にソートしたをdfとする	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfの'sales'と'temperature'を降順にソートしたを置き換える	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdfのカラム'sales'とコラム'temperature'を逆順にソートし、dfに代入する	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdfのカラム'sales'とコラム'temperature'を逆順にソートし、再代入する	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdfのカラム'sales'とコラム'temperature'を逆順にソートしたをdfに代入する	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: データフレームdfのカラム'sales'とコラム'temperature'を逆順にソートしたを置き換える	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfデータフレームの'sales'カラムと'temperature'コラムを逆順にソートし、dfに代入する	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfデータフレームの'sales'カラムと'temperature'コラムを逆順にソートし、置き換える	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfデータフレームの'sales'カラムと'temperature'コラムを逆順にソートされたをdfにする	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfデータフレームの'sales'カラムと'temperature'コラムを逆順にソートされたを再代入する	df = df.sort_values(['sales', 'temperature'], ascending=False)
+python: dfの'sales'と'temperature'を降順にソートし、インプレースする	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: dfの'sales'と'temperature'を降順にソートされたで置き換える	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: dfデータフレームの'sales'カラムと'temperature'コラムを逆順にソートし、インプレースする	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: dfデータフレームの'sales'カラムと'temperature'コラムを逆順にソートしたでインプレースする	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: データフレームdfのカラム'sales'とコラム'temperature'を降順にソートし、書き換える	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: データフレームdfのカラム'sales'とコラム'temperature'を降順にソートしたで書き換える	df.sort_values(['sales', 'temperature'], ascending=False, inplace=True)
+python: dfを昇順にソートする	df.sort_values('sales')
+python: dfを'sales'で昇順にソートする	df.sort_values('sales')
+python: 'sales'カラムでdfデータフレーム全体を昇順にソートする	df.sort_values('sales')
+python: dfを昇順にソートし、Xとする	X = df.sort_values('sales')
+python: dfを昇順にソートされた結果をXとする	X = df.sort_values('sales')
+python: データフレームdf全体をカラム'sales'で昇順にソートして、Xに代入する	X = df.sort_values('sales')
+python: データフレームdf全体をカラム'sales'で昇順にソートした結果をXに代入する	X = df.sort_values('sales')
+python: dfデータフレームを'sales'カラムでソートして、Xに代入する	X = df.sort_values('sales')
+python: dfデータフレームを'sales'カラムでソートされた結果をXとする	X = df.sort_values('sales')
+python: df全体を'sales'で昇順にソートして、dfにする	df = df.sort_values('sales')
+python: df全体を'sales'で昇順にソートして、置き換える	df = df.sort_values('sales')
+python: df全体を'sales'で昇順にソートしたをdfに代入する	df = df.sort_values('sales')
+python: df全体を'sales'で昇順にソートしたを再代入する	df = df.sort_values('sales')
+python: dfデータフレームを'sales'カラムでソートして、dfにする	df = df.sort_values('sales')
+python: dfデータフレームを'sales'カラムでソートして、再代入する	df = df.sort_values('sales')
+python: dfデータフレームを'sales'カラムでソートされたをdfに代入する	df = df.sort_values('sales')
+python: dfデータフレームを'sales'カラムでソートされたを置き換える	df = df.sort_values('sales')
+python: 'sales'カラムでdfデータフレームをソートし、dfに代入する	df = df.sort_values('sales')
+python: 'sales'カラムでdfデータフレームをソートし、置き換える	df = df.sort_values('sales')
+python: 'sales'カラムでdfデータフレームをソートしたをdfとする	df = df.sort_values('sales')
+python: 'sales'カラムでdfデータフレームをソートしたを置き換える	df = df.sort_values('sales')
+python: dfを'sales'で昇順にソートして、書き換える	df.sort_values('sales', inplace=True)
+python: dfを'sales'で昇順にソートしたで置き換える	df.sort_values('sales', inplace=True)
+python: 'sales'でdfをソートし、インプレースする	df.sort_values('sales', inplace=True)
+python: 'sales'でdfをソートされたでインプレースする	df.sort_values('sales', inplace=True)
+python: データフレームdfをカラム'sales'でソートし、書き換える	df.sort_values('sales', inplace=True)
+python: データフレームdfをカラム'sales'でソートされたで書き換える	df.sort_values('sales', inplace=True)
+python: df全体を'sales'を軸に昇順でソートする	df.sort_values('sales')
+python: dfを'sales'を元にソートする	df.sort_values('sales')
+python: 'sales'カラムをdfデータフレームを元にソートする	df.sort_values('sales')
+python: df全体を'sales'を軸に昇順でソートして、Xとする	X = df.sort_values('sales')
+python: df全体を'sales'を軸に昇順でソートした結果をXとする	X = df.sort_values('sales')
+python: 'sales'をdfを元にソートし、Xに代入する	X = df.sort_values('sales')
+python: 'sales'をdfを元にソートした結果をXとする	X = df.sort_values('sales')
+python: 'sales'カラムをdfデータフレームを元にソートして、Xに代入する	X = df.sort_values('sales')
+python: 'sales'カラムをdfデータフレームを元にソートした結果をXに代入する	X = df.sort_values('sales')
+python: df全体を'sales'を軸に昇順でソートし、dfに代入する	df = df.sort_values('sales')
+python: df全体を'sales'を軸に昇順でソートし、再代入する	df = df.sort_values('sales')
+python: df全体を'sales'を軸に昇順でソートしたをdfとする	df = df.sort_values('sales')
+python: df全体を'sales'を軸に昇順でソートしたを置き換える	df = df.sort_values('sales')
+python: カラム'sales'をデータフレームdf全体を軸に昇順でソートして、dfとする	df = df.sort_values('sales')
+python: カラム'sales'をデータフレームdf全体を軸に昇順でソートして、再代入する	df = df.sort_values('sales')
+python: カラム'sales'をデータフレームdf全体を軸に昇順でソートしたをdfとする	df = df.sort_values('sales')
+python: カラム'sales'をデータフレームdf全体を軸に昇順でソートしたを置き換える	df = df.sort_values('sales')
+python: dfデータフレームを'sales'カラムを元にソートして、dfに代入する	df = df.sort_values('sales')
+python: dfデータフレームを'sales'カラムを元にソートして、再代入する	df = df.sort_values('sales')
+python: dfデータフレームを'sales'カラムを元にソートされたをdfとする	df = df.sort_values('sales')
+python: dfデータフレームを'sales'カラムを元にソートされたを再代入する	df = df.sort_values('sales')
+python: dfを'sales'を軸に昇順でソートして、インプレースする	df.sort_values('sales', inplace=True)
+python: dfを'sales'を軸に昇順でソートされたでインプレースする	df.sort_values('sales', inplace=True)
+python: データフレームdfをカラム'sales'を元にソートして、置き換える	df.sort_values('sales', inplace=True)
+python: データフレームdfをカラム'sales'を元にソートされたで置き換える	df.sort_values('sales', inplace=True)
+python: 'sales'をdfを元にソートし、インプレースする	df.sort_values('sales', inplace=True)
+python: 'sales'をdfを元にソートしたで書き換える	df.sort_values('sales', inplace=True)
+python: df全体を'sales'に基づいて昇順でソートする	df.sort_values('sales')
+python: dfを'sales'に沿ってソートする	df.sort_values('sales')
+python: dfを'sales'に基づいて昇順でソートする	df.sort_values('sales')
+python: df全体を'sales'に基づいて昇順でソートし、Xにする	X = df.sort_values('sales')
+python: df全体を'sales'に基づいて昇順でソートした結果をXにする	X = df.sort_values('sales')
+python: データフレームdf全体をカラム'sales'に基づいて昇順でソートし、Xにする	X = df.sort_values('sales')
+python: データフレームdf全体をカラム'sales'に基づいて昇順でソートした結果をXとする	X = df.sort_values('sales')
+python: dfデータフレームを'sales'カラムに沿ってソートして、Xとする	X = df.sort_values('sales')
+python: dfデータフレームを'sales'カラムに沿ってソートした結果をXに代入する	X = df.sort_values('sales')
+python: df全体を'sales'に基づいて昇順でソートし、dfに代入する	df = df.sort_values('sales')
+python: df全体を'sales'に基づいて昇順でソートし、置き換える	df = df.sort_values('sales')
+python: df全体を'sales'に基づいて昇順でソートしたをdfとする	df = df.sort_values('sales')
+python: df全体を'sales'に基づいて昇順でソートしたを置き換える	df = df.sort_values('sales')
+python: データフレームdf全体をカラム'sales'に基づいて昇順でソートして、dfとする	df = df.sort_values('sales')
+python: データフレームdf全体をカラム'sales'に基づいて昇順でソートして、置き換える	df = df.sort_values('sales')
+python: データフレームdf全体をカラム'sales'に基づいて昇順でソートされたをdfとする	df = df.sort_values('sales')
+python: データフレームdf全体をカラム'sales'に基づいて昇順でソートされたを置き換える	df = df.sort_values('sales')
+python: dfデータフレームを'sales'カラムに沿ってソートして、dfに代入する	df = df.sort_values('sales')
+python: dfデータフレームを'sales'カラムに沿ってソートして、再代入する	df = df.sort_values('sales')
+python: dfデータフレームを'sales'カラムに沿ってソートされたをdfにする	df = df.sort_values('sales')
+python: dfデータフレームを'sales'カラムに沿ってソートされたを置き換える	df = df.sort_values('sales')
+python: df全体を'sales'に基づいて昇順でソートし、書き換える	df.sort_values('sales', inplace=True)
+python: df全体を'sales'に基づいて昇順でソートされたでインプレースする	df.sort_values('sales', inplace=True)
+python: データフレームdf全体をカラム'sales'に基づいて昇順でソートして、インプレースする	df.sort_values('sales', inplace=True)
+python: データフレームdf全体をカラム'sales'に基づいて昇順でソートされたで書き換える	df.sort_values('sales', inplace=True)
+python: データフレームdfをカラム'sales'に基づいて昇順でソートし、インプレースする	df.sort_values('sales', inplace=True)
+python: データフレームdfをカラム'sales'に基づいて昇順でソートしたでインプレースする	df.sort_values('sales', inplace=True)
+python: dfの'sales'を降順にソートする	df.sort_values('sales')
+python: dfデータフレームの'sales'コラムを降順にソートする	df.sort_values('sales')
+python: dfデータフレームの'sales'コラムを逆順にソートする	df.sort_values('sales')
+python: dfの'sales'を降順にソートして、Xとする	X = df.sort_values('sales')
+python: dfの'sales'を降順にソートした結果をXとする	X = df.sort_values('sales')
+python: dfデータフレームの'sales'コラムを逆順にソートし、Xとする	X = df.sort_values('sales')
+python: dfデータフレームの'sales'コラムを逆順にソートした結果をXに代入する	X = df.sort_values('sales')
+python: データフレームdfのコラム'sales'を逆順にソートして、Xに代入する	X = df.sort_values('sales')
+python: データフレームdfのコラム'sales'を逆順にソートした結果をXに代入する	X = df.sort_values('sales')
+python: dfの'sales'を降順にソートして、dfとする	df = df.sort_values('sales')
+python: dfの'sales'を降順にソートして、置き換える	df = df.sort_values('sales')
+python: dfの'sales'を降順にソートしたをdfにする	df = df.sort_values('sales')
+python: dfの'sales'を降順にソートしたを置き換える	df = df.sort_values('sales')
+python: dfデータフレームの'sales'コラムを降順にソートして、dfとする	df = df.sort_values('sales')
+python: dfデータフレームの'sales'コラムを降順にソートして、再代入する	df = df.sort_values('sales')
+python: dfデータフレームの'sales'コラムを降順にソートされたをdfにする	df = df.sort_values('sales')
+python: dfデータフレームの'sales'コラムを降順にソートされたを置き換える	df = df.sort_values('sales')
+python: dfの'sales'を逆順にソートして、dfとする	df = df.sort_values('sales')
+python: dfの'sales'を逆順にソートして、再代入する	df = df.sort_values('sales')
+python: dfの'sales'を逆順にソートしたをdfとする	df = df.sort_values('sales')
+python: dfの'sales'を逆順にソートしたを再代入する	df = df.sort_values('sales')
+python: dfの'sales'を降順にソートして、置き換える	df.sort_values('sales', inplace=True)
+python: dfの'sales'を降順にソートされたで置き換える	df.sort_values('sales', inplace=True)
+python: データフレームdfのコラム'sales'を逆順にソートして、書き換える	df.sort_values('sales', inplace=True)
+python: データフレームdfのコラム'sales'を逆順にソートしたでインプレースする	df.sort_values('sales', inplace=True)
+python: 降順にソートし、書き換える	df.sort_values('sales', inplace=True)
+python: 降順にソートしたでインプレースする	df.sort_values('sales', inplace=True)
+python: df内の欠損値の合計	df.isnull().sum()
+python: dfの中の未記入の値の数	df.isnull().sum()
+python: データフレームdf中の欠損の合計値	df.isnull().sum()
+python: df内の欠損値の合計を確認する	df.isnull().sum()
+python: df中のNaNの合計値を見る	df.isnull().sum()
+python: dfデータフレームの中の未入力の値の数を確認する	df.isnull().sum()
+python: df内にいくつ欠損値があるのかチェックする	df.isnull().sum()
+python: dfデータフレーム中にいくつ欠損値があるかチェック	df.isnull().sum()
+python: df内にいくつ欠損値があるか確認	df.isnull().sum()
+python: 存在する'?'の個数の合計	df.isin(['?']).sum()
+python: df中のそれぞれのコラムに存在する'?'の数の数	df.isin(['?']).sum()
+python: データフレームdf中のそれぞれのコラムにある'?'の数	df.isin(['?']).sum()
+python: ある'?'の個数の合計値を見る	df.isin(['?']).sum()
+python: dfデータフレーム内のそれぞれのカラムに存在する'?'の個数の数を調べる	df.isin(['?']).sum()
+python: dfデータフレームの中のそれぞれの列にある'?'の数を表示する	df.isin(['?']).sum()
+python: df内のカラムに存在する'?'の個数の合計値	df.isin(['?']).sum()
+python: データフレームdf内のカラムに存在する'?'の個数	df.isin(['?']).sum()
+python: df中のコラムに存在する'?'の個数	df.isin(['?']).sum()
+python: df内のカラムそれぞれに存在する'?'の個数の和を表示する	df.isin(['?']).sum()
+python: データフレームdfの中の列にある'?'の数の数を確認する	df.isin(['?']).sum()
+python: データフレームdf内のカラムそれぞれに存在する'?'の個数の数を表示する	df.isin(['?']).sum()
+python: df内のカテゴリ変数をダミー変数化する	pd.get_dummies(df)
+python: データフレームdf中のカテゴリ変数をダミー変数に変換する	pd.get_dummies(df)
+python: dfデータフレームの中のカテゴリ変数を数値データにする	pd.get_dummies(df)
+python: df内のカテゴリ変数をダミー変数化して、Xに代入する	X = pd.get_dummies(df)
+python: df内のカテゴリ変数をダミー変数化した結果をXに代入する	X = pd.get_dummies(df)
+python: データフレームdf内のカテゴリ変数を数値データで置き換え、Xにする	X = pd.get_dummies(df)
+python: データフレームdf内のカテゴリ変数を数値データで置き換えた結果をXに代入する	X = pd.get_dummies(df)
+python: dfデータフレーム中のカテゴリ変数を数値データに変換して、Xにする	X = pd.get_dummies(df)
+python: dfデータフレーム中のカテゴリ変数を数値データに変換した結果をXにする	X = pd.get_dummies(df)
+python: dfについてダミー変数をつくる	pd.get_dummies(df)
+python: dfデータフレームについてダミー変数を作る	pd.get_dummies(df)
+python: データフレームdfについてダミー変数を作る	pd.get_dummies(df)
+python: dfについてダミー変数を生成して、Xに代入する	X = pd.get_dummies(df)
+python: dfについてダミー変数を生成した結果をXとする	X = pd.get_dummies(df)
+python: dfについてダミー変数を作って、Xにする	X = pd.get_dummies(df)
+python: dfについてダミー変数を作った結果をXにする	X = pd.get_dummies(df)
+python: dfデータフレームについてダミー変数を作成して、Xにする	X = pd.get_dummies(df)
+python: dfデータフレームについてダミー変数を作成した結果をXにする	X = pd.get_dummies(df)
+python: dfをダミー変数化する	pd.get_dummies(df)
+python: dfデータフレームをダミー変数化する	pd.get_dummies(df)
+python: データフレームdfをダミー変数化する	pd.get_dummies(df)
+python: dfをダミー変数化し、Xとする	X = pd.get_dummies(df)
+python: dfをダミー変数化した結果をXに代入する	X = pd.get_dummies(df)
+python: データフレームdfをダミー変数化して、Xに代入する	X = pd.get_dummies(df)
+python: データフレームdfをダミー変数化した結果をXに代入する	X = pd.get_dummies(df)
+python: dfデータフレームをダミー変数化して、Xとする	X = pd.get_dummies(df)
+python: dfデータフレームをダミー変数化された結果をXとする	X = pd.get_dummies(df)
+python: dfの'sex'をダミー変数化する	pd.get_dummies(df['sex'])
+python: データフレームdfのカラム'sex'をダミー変数化する	pd.get_dummies(df['sex'])
+python: dfデータフレームの'sex'カラムをダミー変数化する	pd.get_dummies(df['sex'])
+python: dfの'sex'をダミー変数化して、Xとする	X = pd.get_dummies(df['sex'])
+python: dfの'sex'をダミー変数化された結果をXに代入する	X = pd.get_dummies(df['sex'])
+python: dfデータフレームの'sex'カラムをダミー変数化して、Xに代入する	X = pd.get_dummies(df['sex'])
+python: dfデータフレームの'sex'カラムをダミー変数化した結果をXとする	X = pd.get_dummies(df['sex'])
+python: データフレームdfのカラム'sex'をダミー変数化し、Xに代入する	X = pd.get_dummies(df['sex'])
+python: データフレームdfのカラム'sex'をダミー変数化された結果をXにする	X = pd.get_dummies(df['sex'])
+python: dfの'sex'についてダミー変数を生成する	pd.get_dummies(df['sex'])
+python: dfデータフレームの'sex'カラムについてダミー変数をつくる	pd.get_dummies(df['sex'])
+python: dfデータフレームの'sex'カラムについてダミー変数を生成する	pd.get_dummies(df['sex'])
+python: 生成し、Xにする	X = pd.get_dummies(df['sex'])
+python: 生成した結果をXとする	X = pd.get_dummies(df['sex'])
+python: dfの'sex'についてダミー変数を作って、Xとする	X = pd.get_dummies(df['sex'])
+python: dfの'sex'についてダミー変数を作られた結果をXにする	X = pd.get_dummies(df['sex'])
+python: dfの'sex'についてダミー変数を作成して、Xに代入する	X = pd.get_dummies(df['sex'])
+python: dfの'sex'についてダミー変数を作成された結果をXにする	X = pd.get_dummies(df['sex'])
+encourage: 星集め差分の和にも挑戦したのですが分かりませんでした。	ナイスチャレンジです。
+encourage: 特に差分の和で入力する数(N)が毎回違うのが難しかったです。	焦らず頑張りましょう。
+encourage: 簡単ではありませんでした。	プログラミングは難しいですよね。
+encourage: 割と忘れていたことも多かったので難しく感じました。	人間は忘れる生き物です。復習を繰り返しましょう。
+encourage: 思っていたよりも1年でpythonの知識を忘れていて焦りました。	復習すればきっと思い出せます。
+encourage: ただその次の差の和の問題が難しいです。	難しいですよね。一度頭を休めてみてはいかがですか？
+encourage: どのようにアプローチすればよいか思いつきません。	相談してヒントをもらうことも時には大切です。
+encourage: 情報コースに進みたいと思っているほぼ決めているのですがプログラミングが正直得意な方ではありません。	最初から得意な人ばかりではないですよ。安心してください。
+encourage: 事前アンケートで「ネットのPythonの問は出来る」人が多いという事を聞いてとても焦っています。	あなたはあなたの良さがあります。
+encourage: 演習問題は差分の和で詰まってしまい悲しかったです。	時には休むことも大切ですよ。
+encourage: また慣れないアプリでの授業というのと春休みで全く触れなかったせいもありだいぶ苦労しています。	少しづつ慣れていきましょう。
+encourage: 本日のブレイクアウトルームも他の先生では行わない交流の機会を設けてくださりうれしいのですが友人が一人もおらずちきって入れませんでした。	みんなきっと優しいですよ。応援しています。
+encourage: 全く解けなかったです。	最初は難しいですよね。あなたのペースで学びましょう。
+encourage: 適当なブレイクアウトルームに入りましたが知っている子がいなくて他の子達は知り合いっぽくてついていけなかったので相談などはできませんでした。	これをきっかけに仲良くなってみてはいかがでしょう。きっとみんなあなたの味方です。
+encourage: 友達がほぼいないのでブレイクアウトルームが結構しんどいです。	これをきっかけに友達を作ってみてはいかがでしょう。きっとみんなあなたの味方です。
+encourage: ブレイクアウトルームで話しかけるのもかなり勇気がいるのでつらいです。	最初は勇気がいりますよね。応援しています。
+encourage: 先生の話が早くて全くついていけませんでした。	全て完璧でなくても大丈夫ですよ。後から振り返ることもできます。
+encourage: なかなか最初は難しいです。	みんな最初は同じです。あなたのペースで。
+encourage: Colaboratoryを初めて使ったのでどこに入力しどう実行すればいいのか分からず戸惑いました。	初めてのことはわからないですよね。でも初めての経験って面白いですよ！
+encourage: 思った以上にプログラミングのことを忘れていて少し苦労しました。	ゆっくり復習をしながら進めていってください！
+encourage: Atcordの演習問題はCircleの問題でつまずきそこで心折れました。	そんな時は、一旦昔の問題に取り組んでみてはいかがですか？
+encourage: ちなみにその次の直方体でもつまずきさらに心折れました。	大丈夫ですよ、ゆっくり考えてみましょう。
+encourage: でもできないので今は嫌いです。	ゆっくり取り組んでいけば、できるようになりますよ。
+encourage: 私はA+取りたいので頑張って問題解こうと思ったのですが一問解くのに時間がかかりすぎてすでにお先真っ暗です。	大丈夫ですよ、解いていくことでだんだん速くなりますよ。
+encourage: AtCorderが少し難しかったです。	ゆっくり取り組んでみてください。
+encourage: 1年のプログラミングの授業をオンラインだったのもあり途中からわからなくなったのを放置していたので全くわからない状態です。	そんな時は、一旦前に戻って復習していきましょう。
+encourage: 久しぶりにプログラミングをしたので最初は感覚や文法が思い出せずに苦戦してしまいました。	ゆっくり思い出していきましょう！
+encourage: 差分の和の問題から難しく感じました。	差分の和は難しいので、また復習してみてください。
+encourage: 出遅れている感があり焦っています。	大丈夫ですよ、焦らず自分のペースで進めていきましょう。
+encourage: 1年のプログラミング実習の成績が悪くまた理解力が遅いためなかなかついていくことができなかったので少し不安です。	大丈夫ですよ、ゆっくり取り組んで行きましょう。
+encourage: これだ!と思って打ち込み結果にREが出てくるとやっぱりへこみますね...(涙)	そういう時もあります。諦めずに頑張っていきましょう。
+encourage: ランタイムエラーが何回か出てしまって困りました。	そういう時は、ゆっくりプログラムを確認しましょう。
+encourage: 今週はいろいろ予定がたまりすぎて進みませんでした。	大丈夫ですよ、自分のペースで進めていきましょう。
+encourage: エラーになったときの原因が分からないともやもやします。	そういう時は、落ち着いて見直しをしてみましょう。
+encourage: (Sx,Sy)からx軸までの直線の傾きの符号を逆にするとx軸から(Gx,Gy)までの直線の傾きになるので方程式を立てて解きましたが方程式を立てて変形するのに時間がかかってしまいました。	大丈夫ですよ、だんだん速くなっていきますよ。
+encourage: その週ごとに進めていけばいいと思っていましたが友人はかなり進んでいたので不安です。	大丈夫ですよ、焦らず自分のペースで進めていきましょう。
+encourage: プログラムをやっているとこれでできたか?と思ってもエラーになってしまってなかなか苦戦しています。	そういう時は、ゆっくり見直しをしてみましょう。
+encourage: 差分の和とカエルの問題が難しいです。	難しい問題は、細かく分けて考えてみてはいかがですか？
+encourage: 全くついていけないです。	大丈夫ですよ、自分のペースで進めていきましょう。
+encourage: 去年は一人でプログラミングの授業を受けていたので不安だらけでした。	わからない部分は、声をかけてくださいね。
+encourage: ビリヤードと秒針の問題はプログラミングがどうこう以前に数学力が試され中高で習った数学の知識を過去に置いてきた私にはかなりの苦戦を強いられました。	そういう時は、細かく分けながら考えてみてください。
+encourage: 少しずつ慣れてきたいですPythonがすごく苦手で問題を解くスピードがかなり遅いのですが大丈夫でしょうか。	大丈夫ですよ、解いていけば速くなっていきますよ。
+encourage: AtCoderの課題リストの反映がたまにおかしい時があるのできちんと先生にも反映されているか心配になることがあります。	そういう時は、先生に声をかけてみてください。
+encourage: また自分の進め方が正しいのかなど不安になります。	大丈夫ですよ、自分のペースで進めていくことが大切です。
+encourage: アップルパイとディスカウントをやって心折れました。	そういう時は、一旦他のことに取り組むのはいかがですか？
+encourage: 何回もやり直しても正解にならないので大変だった。	そういう時は、細かく分けて考えてみてはいかがですか？
+encourage: 課題の78にある文字列の問題について3桁の整数をリストにして考えてみたのですがエラーになってしまいわかりませんでした。	そういう時は、先生に聞いてみてくださいね。
+encourage: 20日は休講で特にやっていないため何も進んでいません。	大丈夫ですよ、自分のペースで進めていきましょう。
+encourage: AtCoder演習問題はまだ進めていません。	大丈夫ですよ、焦らず自分のペースで進めていきましょう。
+encourage: ちょくちょく進めないとと思うのですがパソコンを開こうという気持ちにならないことが理由だと思います。	コツコツ進めていくことが大切ですよ！
+encourage: また最近気づいたどうでもいいことなのですがAtCoderユーザ名が明らかに自分すぎてAtCoder演習問題の進み具合がバレるかもと思い失敗したなと思いました。	大丈夫ですよ、自分のペースで進めていきましょう。
+encourage: colabでは「print」を使わずに実行することができるので使わずにそのままAtCoderで提出したら不正解になってしまっていたことになかなか気がつかなかった苦戦しました。	そういう時は、ゆっくりプログラムを確認しましょう。
+encourage: 第2回目の講義は進みませんでした。	大丈夫ですよ、ゆっくり取り組んで行きましょう。
+encourage: 苦手ということもありやろうと思うまでに時間がかかってしまいます。	少しでも取り組んでいくのが良いですよ。
+encourage: やっぱりプログラミング苦手で結構難しかったです。	大丈夫ですよ、自分のペースで進めていきましょう。
+encourage: 角度でradiansを入れ忘れたりプログラミングを短くしないとWAになり続けたりすごく大変でした。	そういう時は、ゆっくりプログラムを確認しましょう。
+encourage: でも頑張ったのでお腹がすきました!想像以上に授業の対面が始まったら忙しく進められる時間があまりありませんでした。	大丈夫ですよ、焦らず自分のペースで進めていきましょう。
+encourage: 慣れるまで少し時間がかかりそうです...	大丈夫ですよ、ゆっくり取り組んで行きましょう。
+encourage: 2回の演習問題はあと三つです!Colabではちゃんと出力できてもAtCoderではエラーになってしまうものもあり難しいなと感じた。	そういう時は、ゆっくりプログラムを確認しましょう。
+encourage: 例題はできるがAtCoderでの実践問題となると厳しい。	そういう時は、ゆっくりプログラムを確認しましょう。
+encourage: AtCoderにまだ慣れないです。	ゆっくり慣れていきましょう。
+encourage: 今週は全くすすんでないです。	大丈夫ですよ、焦らず自分のペースで進めていきましょう。
+encourage: 毎回結果がでるまでにやや時間があるので緊張してしまう。	緊張せず、気楽に取り組んでください！
+encourage: 空いた時間に演習問題を少しずつ進めようと思っていたのですが具体的な目標を定めていなかったので結局だらけてしまいほとんど進められませんでした。	取り組む気持ちが大切ですよ！
+encourage: 前回より少しだけ進んだ気がしますが応用になると難しくて解くことが難しいです。	だんだんと難しくなっているので、ゆっくり取り組んでいきましょう。
+encourage: atcorderのアカウントですが以前から作ってはいたもののログインすることができずまだ演習ができておりません。	そういう時は、先生に相談してみてください。
+encourage: 倉光先生は優しいので出席していれば単位は取れるだろうという安心感に甘えてしまい第1回目の授業からやらなければいけないことがたまっている状況です( ́;ω;`)やっと1週目の課題が終わりました...!長かったですね	コツコツ進めていきましょう！
+encourage: 今週は条件分岐の内容でしたが私は繰り返し文が苦手だったのでfor文やwhile文の違いがよくわかっていませんでした。	繰り返しは難しいので、また復習してみてください。
+encourage: 実行時エラーや不正解の連続で気が折れてしまいそうです。	そういう時は、一旦他のことに取り組むのはいかがですか？
+encourage: 初めの方は比較的スムーズに解き進めていましたが電源プラグなどで時間を取られてしまいました。	大丈夫ですよ、解いていくことでだんだん速くなりますよ。
+encourage: 今日はPCの調子がおかしくColaboratoryが動かなかったりカーソルが動かせなかったりで全然進みませんでした。	そういう時は、無理せずできることをやってみてください。
+encourage: わからない問題はどんどん飛ばしていってしまっているので前期終わり難しい問題しか残っていないのではと不安です。	大丈夫ですよ、だんだん解けるようになりますよ。
+encourage: 星集めはちょっと難しいですAtCoderは50(おつり)まで進みました。	星集めは難しいので、また復習してみてください。
+encourage: 最初の30問くらいよりも難しい問題が増えてきたように感じます。	だんだんと難しくなっているので、ゆっくり考えていきましょう。
+encourage: 周りに早い友人が多くて焦ってしまいました。	大丈夫ですよ、自分のペースで進めていきましょう。
+encourage: 第2回の範囲は行列までで両面印刷の途中で止まってしまっている状態です。	そんな時は、解ける問題から進めていきましょう。
+encourage: 一昨日のABC199に参加しましたが1問目しか解けず心が折れました。	大丈夫ですよ、だんだん解けるようになりますよ。
+encourage: 3.5の演習問題は消費税とソーシャルゲームに苦戦している。	消費税やソーシャルゲームは難しいので、ゆっくり考えてみてください。
+encourage: リストの扱いが苦手で第4回テキスト内の例題を丁寧に進めていたら授業中に演習問題にたどり着かなかった。	リストは難しいので、ゆっくり進めていってください！
+encourage: B問題になると時間が掛かってしまいます。	だんだん解いていくことで速くなっていきますよ！
+encourage: 預金が難しかったです。	預金は難しいので、また復習してみてください。
+encourage: B問題が多くてかなりつまずきました。	B問題は難しいので、細かく分けて考えてみてください。
+encourage: 今日は前回に比べて問題があまり進まなかった。	大丈夫ですよ、ゆっくり取り組んで行きましょう。
+encourage: 例題の入力をして出力例が合っていたにも関わらずソースコードは間違っている判定をされた時にどこが間違っているのかを見つけるのが大変でした。	そういう時は、落ち着いて見直していきましょう。
+encourage: 授業中に半分くらいしか進まないので毎回の課題が溜まってしまいます。	少しずつ進めていくと良いですよ。
+encourage: また1回目の課題でどうしてもわからないところなど前の授業でできなかったところをどう解決したら良いかわかりません。	そういう時は、先生に声をかけてくださいね！
+encourage: 今日であれば友達は3回目の授業内容から進めるので聞きづらいです。	そういう時は、先生に声をかけてくださいね！
+encourage: 大きい躓きというよりは小さいものなので先生にも対面ならいいですがオンラインだと聞きづらいです。	大丈夫ですよ、気にせず声をかけてみてください！
+encourage: また改めてwhile、for構文に苦手意識があるなあと思いました。	苦手な部分は、ゆっくり復習をしながら進めていきましょう。
+encourage: AtCoderは出力のYESとYesの違いで何回も弾かれて大変でした。	問題文を確認しながら解いてみてくださいね。
+encourage: 例題のお米の問題で問題の意味は分かったのですがプログラミングの内容でこのコードがこういう役割で何をやっているかというのがいまいちよく理解できておりません。	そういう時は、細かく分けて考えていきましょう。
+encourage: 今日のzoomで周りの生徒の進捗状況が自分よりもだいぶ早そうでとても焦りました。	大丈夫ですよ、焦らず自分のペースで進めていきましょう。
+encourage: 学校の遠隔用の教室でzoomを受講しているのだが全員静かに授業を聞いているのであまり声を出せる環境ではなくて困っている。	そういう時は、先生に相談してみてください。
+encourage: 第二回の講義の範囲となってしまいますがコンテストの開始時間の問題が難しくてかなりてこずってしまいました。	開始時間の問題は難しいので、また復習してみてください。
+encourage: 元々listが苦手なので他のものより進むのに時間がかかってます。	苦手な部分は、ゆっくり復習をしながら進めていきましょう。
+encourage: 今回の演習問題は前回よりは難易度が上がったと思いました。	だんだんと難しくなっているので、ゆっくり取り組んでいきましょう。
+encourage: シミュレーションを使う預金は難しいと思いました。	そういう時は、細かく分けて考えていきましょう。
+encourage: 今週の課題はなんだか難しくてあまりスムーズに進めることができませんでした。	大丈夫ですよ、ゆっくり取り組んで行きましょう。
+encourage: 今日の内容は30で詰まってしまったため25~31までしか進みませんでした。	大丈夫ですよ、自分のペースで進めていきましょう。
+encourage: 今までif、whileを使うときは問題に条件文で書いてある場合や使って解きなさいと書かれている状況下でしかなかったので電気プラグの問題でどのように考えれば上手くたどり着くのか自力では思いつきませんでした。	そういう時は細かく分けて考えてみましょう。
+encourage: 全体的に前回の問題よりも難しく感じました。	だんだんと難しくなっているので、ゆっくり取り組んでいきましょう。
+encourage: filterの使い方が少し難しく感じました。	filterbは難しいのでまた復習してみてください。
+encourage: Nが1000の場合も考えていたため式が少し複雑になってしまいました。	そんな時は、落ち着いて問題文を読んでみてくださいね。
+encourage: 今日はなかなか疲れましたね...REやWAが来るとへこみます。	大丈夫ですよ、ゆっくり取り組んで行きましょう。
+encourage: 難しくてかなり時間がかかってしまった。	大丈夫ですよ、自分のペースで進めていきましょう。
+encourage: ゴールデンウィークはサボってしまってあんまり全然進みませんでした。	そういう時もありますよ。ゆっくり進めていきましょう。
+encourage: 4の演習問題をやったのですがB問題が多く難しかったためいつもより進みが遅くなてしまいました。	大丈夫ですよ、解いていけば速くなっていきますよ。
+encourage: 演習問題がBやCばかりでいつもよりも難易度が高く難しかったです。	そういう時は、時間をかけて考えてみてください。
+encourage: 難しくて全然進みませんでした。	大丈夫ですよ、ゆっくり取り組んで行きましょう。
+encourage: ちょっと難しかったです。	そういう時は、細かく分けて考えていきましょう。
+encourage: 齋藤千種さんに1問助けてもらいました!リストをまだ使いこなせず難しく感じた。	リストは難しいので、また復習してみてください。
+encourage: 興味があったので授業時間外に使用したところ何度もエラーを連発しとても悲しかったです。	そういう時もあありますよ。ゆっくり問題文を読んでみてくださいね。
+encourage: わからない問題があった場合飛ばして解くのですがそうするとどのコードを使えばいいかわからなくなることがあります。	そういう時は、前後の問題の復習をしてみてはいかがですか？
+encourage: 少しペースが遅かったためゴールデンウィークの間に進めたのですが同じルームの子に追いついただけだったので悔しいです。	自分のペースで進めていけば大丈夫ですよ。
+encourage: リストが難しく友達に教えてもらわないと中々進めることができなかったです。	リストは難しいので、ゆっくり考えながら進めてみてください。
+encourage: 平均点難しかった。	平均点は難しいですね。また復習してみてください。
+encourage: AtCoderを始めてからPythonの理解度が上がった気がします!・「4.リストと繰り返し」の演習問題はとても難しかったです。	リストは難しいので、また復習してみてください。
+encourage: 特にfor文や演算系(+=など)を使うべき問題が難しかったです。	for文は難しいので、ゆっくり考えながら進めてみてください。
+encourage: 何回も不正解が出てしまい心が折れそうになりました	そういう時は、一旦他のことに取り組むのはいかがですか？
+encourage: 問題自体はクイズみたいでアルゴリズムを考えつくことは比較的容易なのですがコードで表現する部分に苦戦しています。	問題を重ねていけばコードで表現する力もついていきますよ！
+encourage: 思うようにすらすらいかずこの時間内で課題リスト4~5問ほどしか進みませんでした。	大丈夫ですよ、自分のペースで進めていきましょう。
+encourage: これが何をしているのかよくわからなかった。	そういう時は、落ち着いて問題文を見直してみてください。
+encourage: 友達はもう30問目に進んでいると聞き少し焦り始めてきました。	大丈夫ですよ、自分のペースで進めていきましょう。
+encourage: list使うの苦手です...。	listは難しいので、また復習してみてください。
+encourage: 一問あたりにかかる時間が長くなってきました。	大丈夫ですよ、解いていけば速くなっていきますよ。
+encourage: 周りに比べたらまだまだ進捗は遅いかもしれません。	大丈夫ですよ、自分のペースで進めていきましょう。
+encourage: リストのところをやっているのですがとても難しく感じました。	リストは難しいので、また復習してみてください。
+encourage: defを使うやり方を去年授業で確認してたはずなのですがあまり理解出来ていなかったらしく進みが遅くなりそうです。	そういう時は、時間をかけて復習してみてはいかがですか？
+encourage: 前よりも授業内に進むスピードが遅くなっていると感じます。	だんだん解いていくことで速くなっていきますよ！
+encourage: AはできるようになったけれどもまだBとCは難しいなと思うことが多いです。	難しい時は、細かく分けて考えてみてください。
+encourage: 1年生の時もそうでしたがリストやfor文の内容に入ったころから一気に分からなくなってきてしまいました。	そういう時は、ゆっくり時間をかけて考えてみてください。
+encourage: 例題は上手くできたがAtCoderで自分で考えるのが難しかった。	そういう時は、細かく分けて考えていきましょう。
+encourage: リストが苦手で今週の講義は自分には難しかったです。	リストは難しいので、また復習してみてください。
+encourage: 第6回の演習問題の後半は複雑に感じて提出までに時間がかかった。	大丈夫ですよ、自分のペースで進めていきましょう。
+encourage: 特にグリッド圧縮と755にはかなり時間をかけているがまだ解けていない。	そんな時は、一旦他の問題に取り組んでみてはいかがですか？
+encourage: テキストに載っていた再帰のプログラムは理解できたが演習問題へどう用いるかが分からず苦戦している。	そんな時は、細かく分けて考えてみてください。
+encourage: 少し話が難しくなってきました。	大丈夫ですよ、落ち着いて考えてみてください。
+encourage: 難しい問題がありひとつの問題に時間をかけてしまいあまり進められなかった。	大丈夫ですよ、ゆっくり取り組んで行きましょう。
+encourage: 今週は全然手をつけることができませんでした。	そういう時もありますよ。ゆっくり進めていきましょう。
+encourage: だんだん内容が難しくなってきて一人では全く進められなくなってきて焦っています。	大丈夫ですよ、焦らず細かく分けて考えてみてください。
+encourage: 友達に質問しずらくなってきた...。	先生に声をかけて大丈夫ですよ。
+encourage: WAが連発でなかなかてこずっており2問しかACが出ていません。	大丈夫ですよ、落ち着いて考えてみてください。
+encourage: c問題が増えてきて難しくなってきた。	c問題は難しいので、ゆっくり考えてみてください。
+encourage: 二重誤差が難しかったです。	二重誤差は難しいので、また復習してみてください。
+encourage: リストの範囲が難しく感じた。	リストは難しいので、また復習してみてください。
+encourage: でも授業時間以外に練習しようとアットコーダーを開くまでがすごい腰が重いです。	コツコツ進めていくことが大切ですよ！
+encourage: 他にもこんな人がいるのか気になります。	自分のペースで進めていけば大丈夫ですよ。
+encourage: 今週はAtCoderをそんな進めることができませんでした。	大丈夫ですよ、自分のペースで進めていきましょう。
+encourage: 見やすいように名前を入れたのですがどこがダメなのかよくわからないです。	そんな時は、落ち着いて見直してみましょう。
+encourage: 1年生の時に関数は触れる程度でしか学習していないので6の関数から難しく授業時間内ではあまり進みませんでした。	関数は難しいので、ゆっくり復習してみてください。
+encourage: 何度か考えたり手を動かしてみましたが難しくて正解することが出来ませんでした。	そういう時は一旦他の問題に取り組んでみるのも良いですよ。
+encourage: 最初のほうはスラスラ解ける問題もありましたが非常に難しいと感じる問題が増えてきました。	ゆっくり時間をかけて取り組んでみてください。
+encourage: 今は文字列に取り組んでいるのですが0から数えなくてはいけないことを忘れてしまったり組み合わせ方が難しいと思いました。	そういう時は問題を見直してから進めていきましょう！
+encourage: 先週はあまりやる気が出ず解いた量も少なかったので進んでいる人との差が開いてしまったように感じました。	大丈夫ですよ、自分のペースで進めていきましょう。
+encourage: 毎回あまり進まず時間がかかってしまうのを何とかしたいです。	コツコツ続けていけば、だんだん速くなっていきますよ。
+encourage: 感謝!!今週は体調が悪くてなかなか進めることができませんでした。	そういう時は、無理しないことが大切です。
+encourage: 文字列の置き換えの問題が難しかったです。	文字列の置き換えは難しいのでゆっくり考えてみてください。
+encourage: やはり例年通り最初のころのやる気がなくなってしまう...。	毎日少しでも取り組んで行きましょう！
+encourage: 内容が懐かしいものばかりで自分やらなすぎだなと感じました。	大丈夫ですよ、自分のペースで進めていきましょう。
+encourage: いつも難しいなと思っていましたが関数はやはりもっと難しくエラーをたくさん繰り返しました。	関数は難しいので、ゆっくり取り組んでみてください。
+encourage: 友達と話しながらやると面白いな解けるなと思うことがあり解けると次の問題に行こうと思えるのですが一人でやると1問で疲れてなかなか次の問題に進めない気がしました。	そういう時は、無理せず少しずつ進めていきましょう。
+encourage: しかし第6回はあまり数をこなせなかったことが影響しているのか以前までは複雑な問題でもすぐに解法がひらめいていたのですが第6回はひらめきが若干遅くなった気がしています。	だんだんと難しくなっているので、ゆっくり考えていきましょう。
+encourage: あまり進みませんでした。	大丈夫ですよ、自分のペースで進めていきましょう。
+encourage: だんだんと番号が大きくなるにつれ内容も重くなってきていると感じます。	だんだんと難しくなっているので、ゆっくり取り組んでいきましょう。
+encourage: また土曜日にABCに参加しましたがA問題しか解けませんでした...	大丈夫ですよ、ゆっくり取り組んで行きましょう。
+encourage: わからないところを飛ばしてどんどん進んでしまっているので進捗はあまりよくないと思います。	そんな時は、ぜひどこかで昔の問題に戻ってみてくださいね。
+encourage: 難しいです。	大丈夫ですよ、ゆっくり取り組んで行きましょう。
+encourage: 先週に比べかなり難しかったです。	だんだんと難しくなっているので、ゆっくり考えていきましょう。
+encourage: C問題は実行時間超過になってしまい悔しかったです。	時間をおいてまた取り組んでみてはいかがですか？
+encourage: 今週はあまりできませんでした。	大丈夫ですよ、自分のペースで進めていきましょう。
+encourage: 関数難しいです。	関数は難しいので、ゆっくり復習してみてください。
+encourage: わかったようで分からない	そういう時は、細かく分けて考えていきましょう。
+encourage: 最近自分一人で解ける問題が全然なくて焦っています。	大丈夫ですよ、取り組んでいけばだんだんできるようになりますよ。
+encourage: 関数難しかったです。	関数は難しいので、ゆっくり考えてみてください。
+encourage: 関数を使い慣れていないので難しかったです。	関数は難しいので、また取り組んでみてください。
+encourage: 関数難しいです。	関数は難しいので、また復習してみてください。
+encourage: 「こうやって解くのか!」という発見も学習であることは承知している重々承知のですが誰かの発想をほぼそのまま拝借するのもちょっと悔しいです。	色々な知識をつけることで自分の力になっていきますよ。
+encourage: 今日の関数はとても難しかったです。	関数は難しいので、また考えてみてください。
+encourage: すべての授業が終わってるまでに問題が解き終わる気がしないです。	自分のペースで進めていきましょう。
+encourage: だんだん問題が難しくなっていく中での正解問題数が38なのでペースが周りより遅いことはわかっていたのですが不安が大きくなってきました。	焦らず、コツコツ取り組んでみてください。
+encourage: 今までの範囲でも難しいなぁと感じていたのに関数という新たな強敵も出てきて世も末って感じです。	関数は難しいので、ゆっくり復習してみてください。
+encourage: 実際にやってみても難しくて鬱になりそうです。	そんな時は、時間をおいて取り組んでみてはいかがですか？
+encourage: 悔しいです。	大丈夫ですよ、ゆっくり取り組んで行きましょう。
+encourage: 内容が難しい。	そんな時は、細かく分けて取り組んでみてください。
+encourage: 今週の内容とても難しかったです。	そんな時は、落ち着いて少しずつ考えてみてください。
+encourage: ほかの科目の課題が多すぎて泣けます。	コツコツ進めていきましょう！
+encourage: 総まとめ復習みたいな問題が多いなと思ったのですがやはりリストとか文字列とかが苦手だなと感じてしまいました...	苦手な部分は、復習しながら進めていきましょう。
+encourage: 少し難しくなってきた。	ゆっくり取り組んでみてください。
+encourage: 難しいです。	そんな時は、細かく分けて考えてみてください。
+encourage: 次回からのアルゴリズムがとても不安です。	不安に思わず、落ち着いて取り組んでみてください。
+encourage: 今回の授業はAtCoder行き詰りました。	そんな時は、一旦他のことをやってみてはいかがですか？
+encourage: AtCoderのペースが難しくなって落ちてきました...。	ゆっくりでもコツコツ続けることが大切ですよ。
+encourage: 私には難しい。	そんな時は、細かく分けて取り組んでみてください。
+encourage: アンケートに目標が150問と書きましたが現在60問ほどしか進んでおらず来週からアルゴリズムになるのにまずいな、、と思いました。	焦らず、自分のペースで進めていきましょう。
+encourage: 毎週少しずつやっているつもりでも後れを取っているなという感じなので頑張ります!!!!!昨日中間アンケートに答えた後いつまでも鬱だ鬱だ言っててもよくないよなぁと思い夜にプログラミングに取り組みました。	毎日少ずつ進めるのがオススメですよ。
+encourage: 第8章から解説を見ながらでないと解けなくなってきていて焦ります。	焦らず、じっくり考えてみてください。
+encourage: 今後が心配です。	大丈夫ですよ、ゆっくり取り組んで行きましょう。
+encourage: 目標は100問ですがこれからもっと難しくなるだろうし目標を達成できるか心配です。	大丈夫ですよ、自分のペースで進めていきましょう。
+encourage: 難しい問題に1時間半くらい取り組んだが結局解けなくて悔しい。	一旦時間をおいて考えてみたら、解けるかもしれませんよ。
+encourage: また今回の範囲はB問題でも他の人の解答を見ないとわからないようなものがありまだまだ全然だなあと思った。	今回の範囲は難しかったので、また取り組んでみてください。
+encourage: AtCoderの方は最近進みが悪くなりました!!難しくなってきました、	時間をかけて問題を解いていくことも大切ですよ！
+encourage: 元々進捗が他の方よりもかなり遅いので心配です。	自分のペースで頑張っていきましょう！
+encourage: 達成できるか不安です...。	コツコツ進めていけば大丈夫ですよ！
+encourage: だんだん難しくなってきているとひしひしと感じています。	そんな時は、ゆっくりと取り組んでみてください。
+encourage: アルゴリズムについての内容に入り難しいな、、と感じています。	アルゴリズムは難しいので、時間をかけて考えてみてください。
+encourage: 論理式が難しくてなかなか解けないです。	論理式は難しいですよね、ゆっくり考えてみてください。
+encourage: AtCoderでは2問目からつまづいてしまいました。	そんな時は、一旦昔の問題を解いてみてはいかがですか？
+encourage: 二乗誤差で見事に沼りました。	二乗誤差は難しいですよね、ゆっくり考えてみてください。
+encourage: 次第に数学的にも難しい内容になってきているので難しいです。	そんな時は、細かく分けて考えてみてください。
+encourage: そこから自分なりにコードを記述するようになりましたが自分で問題を解いたわけではないのでそれを提出してACをもらってもいいのか少し不安になるときがあります。	大丈夫ですよ、一旦自分の中に落とし込んで解くことが大切です。
+encourage: 入力例を試して出力例が正しく出たとしても実際提出するとWAで返ってくることが今回の第9回の演習問題では特に多く苦戦しています。	そんな時は、ゆっくり問題を見直してみてください。
+encourage: 13日のABC、C問題まで解けたが振り返ってみるとびっくりするほどややこしいやり方で解いていて後悔した。	まずは解けたことが大切です。
+encourage: 今週先週と全然進みませんでした、心配です。	そんな時は、一旦前に戻って進めてみてください。
+encourage: 毎回割と苦労してます、。	地道に取り組むことが大切ですよ。
+encourage: 皆さん早く出来ているのかと思うと心配です。	自分のペースで進めていきましょう。
+encourage: その後そもそも余りが繰り返されることに気づいてなぜ気づかなかったのかとショックを受けました。	そういう時もありますよ。落ち着いて問題を見てみましょう。
+encourage: 解けていない問題を進めていこうとしていますが解ける問題がだんだんなくなってきていて焦っています。	そんな時は、少し離れてみてはいかがですか。
+encourage: ・198 POW?今回解いた問題の判定がTELばかりでメンタルがやられました。	そんな日もありますよ。落ち着いて考えてみてください。
+encourage: 周りの人が進んでいると思うと焦ってしまいます。	自分のペースで頑張っていきましょう！
+encourage: A問題はすらすら解けるようになったがB問題が全然解けないので焦ってます。	焦らず、じっくり考えてみてください。
+encourage: 関数が苦手なので理解するのが難しかったです。	関数は難しいので、また復習してみてください。
+encourage: すぐ解けそうな問題はおおよそ解いてしまったのでペースが落ちそうです...。	コツコツ続けていくことが大切ですよ。
+encourage: 最初の4問だけ解けましたがそれ以降は本当に難しくて歯が立ちませんでした。	そんな時は、一旦昔の問題を解いてみてはいかがですか？
+encourage: アルゴリズムはやっぱり難しいです。	アルゴリズムは難しいので、ゆっくり取り組んでみてくださいね。
+encourage: c問題はやることが多くて大変です	やることが多い時は細かく分けて考えてみてください。
+encourage: かなり遅れているので不安ですが頑張ります。	自分のペースで落ち着いてやっていきましょう。
+encourage: スマホ中毒を頑張って考えていたのですが考えるべき例外が多すぎて挫折しました。	一旦時間をおいてまた考えてみてください！
+encourage: 最近1問解くのに時間がかかってなかなか進みません。	粘り強く取り組めば、だんだん速くなりますよ。
+encourage: 時間を見つけて楽しく解いてはいますが目標のACの数に届くか心配になってきました。	楽しく解くことが一番なので、そのままコツコツ続けていきましょう！
+encourage: 簡単な並び替えなら簡単だが複雑になるとわからなくなる。	並び替えは難しいので、細かく分けて考えてみてください。
+encourage: 毎日AtCoderをやる習慣がせっかくついたのにくじけそうです。	くじけず、一日1問でも取り組んでみてください。
+encourage: 先週先々週に引き続き全然進んでなくてより腰が重くなっています。	そんな時は、一旦昔の問題に取り組んでみてはいかがですか？
+encourage: どうしても思いつかず他の人が解答したプログラムを見てprintで途中を表示しながらこういう流れだと理解することが増えていて自分の力になっているのかが不安です。	内容を理解することで自分の力にしていくことができますよ。
+encourage: 週に解くスピードもやる気も落ちてきてしまっているのが最近の悩みです。	そんな時は、一休みしてみてはいかがですか？
+encourage: どうすればまたやる気になれるのでしょうか。	一旦、他のことに取り組んでみるのもオススメですよ。
+encourage: だんだんとプログラミングの内容が複雑になってきて考えるのに苦労します。	複雑な問題は、細かく分けて解いてみてください。
+encourage: アルゴリズムに入ってから問題が難しくなりAtCoderに取り組むのに腰が重たくなってきました。	アルゴリズムは難しいので、とりあえず1問というように少しずつ取り組んでみてください。
+encourage: 第9回の問題がCが多くて苦戦し時間がかかってしまいました。	第9回は難しいので、大丈夫ですよ。
+encourage: 教わってようやく1問、という感じです。	1問ずつの積み重ねが大事ですよ
+encourage: 一つ一つにかける時間が増えてきてしまいあまり進めることが出来ないので最終どのくらい終わらせられることが出来るのか不安です。	積み重ねていけば、スピードも速くなっていきますよ。
+encourage: ・アルゴリズムになってからすごく問題が難しくなってきたと感じます。	アルゴリズムは難しいので、ゆっくり取り組んでみてくださいね。
+encourage: アルゴリズム難しいです。	アルゴリズムは難しいので、ゆっくり考えてみてください。
+encourage: 分からなくて他の人のコード参考にしようと思っても全然理解できなくてやばいって思ってます。	そういう時は、いろいろなコードを参考にしてみてください。
+encourage: ほかの中間試験が一通り終わったのでこの授業も本腰入れておこうと思います関数が入ってから全然進みますん。	関数は難しいので、ゆっくり考えてみてください。
+encourage: メンタルがやられそうですが頑張ります。	自分のペースで頑張っていきましょう！
+encourage: かなり難しかったですあきらめました。	そんな時は、一旦前に戻って復習してみてはいかがですか？
+encourage: 正直ここら辺からついていけるか心配です。	ゆっくり取り組めば、大丈夫です！
+encourage: すごく難しそうです。	やってみたらできるかもしれませんよ、チャレンジしてみてください。
+encourage: だんだん授業の解説時間が長くなっていき難しくなってきたなと思っております。	難しく感じたら、少し昔に戻って復習してみてください。
+encourage: 今日もAtCoderをやりましたがほとんど手詰まり状態でした。	そんな時は、昔の問題に戻ってみてはいかがですか？
+encourage: アルゴリズムになってからの演習問題はほぼ手が付けられなくて今まで飛ばしていた問題を解いていたのですがそれも難しくて思うように進みませんでした。	アルゴリズムは、難しいのでゆっくり向き合ってみてください。
+encourage: アルゴリズムが本当に難しいです。	アルゴリズムは難しいので、時間をあけて再度取り組んでみてください。
+encourage: 全然AtCoder進んでないです。	毎日少しでも取り組んでみてください。
+encourage: プログラミングが長く複雑になってきていて大変だと感じました。	長いときは、細かく分けてやってみてください。
+encourage: 今週も中々進まなくて辛いです、。	コツコツ続けていけば、いつか進む時が来ますよ。
+encourage: 後半に入ってやってる人とやってない人で差ができていてやばいなと思いました。	自分のペースで落ち着いてやっていきましょう。
+encourage: 難しいです	大丈夫ですよ、落ち着いて考えてみてください。
+encourage: 内容が難しくなって思うように進まなくなった。	そんなときには、一旦前に戻って考えてみてください。
+encourage: 暑くなってから夏バテ気味であまりやる気がなくなった。	夏バテには、睡眠、運動、食事ですよ！
+encourage: 一周間で10問ペースと考えると参ってしまいます。	細かく取り組んでいきましょう。
+encourage: 全然遅れが巻き返せないです。	コツコツ進めていきましょう。
+encourage: もう150問終わった人がいると知りへこみました。	大丈夫ですよ、自分のペースで進めてみてください。
+encourage: 今回の範囲は難しく進まなかった。	今回の範囲は難しかったので、復習してみてください。
+encourage: 段々難しくなっていくのと他の科目の期末が近づいてきたことも重なり自分のペースが落ちていることに焦りを感じます。	ペースが落ちても少しずつ進めていきましょう。
+encourage: やばいやばいと思いつつ全然進めない自分が嫌になります難しくて何から手を付けていいかわかりませんあと三回なので最後まで頑張っていきたいと思います。	そんな時は、一回前に戻ってみてください。
+encourage: 別の話になってしまうのですが後期の計算機数学は対面でやりますか?あと残り3回と知って焦っています。	焦らず、ゆっくり取り組んでみてください。
+encourage: python進めるやる気が出なくなったのですがそろそろテストも終わりまた期末が来てしまうので今のうちに頑張らなくてはならないなと思います。	やる気がなくなったときには、一旦甘いものなどをとって休んでみては？
+encourage: 初めのころと比べて問題が難しくなっていき進みが遅くなったことを実感しています。	難易度が上がったので、自分のペースで進めていってください。
+encourage: コンテンツのところに基準を示したものをあげて頂けませんか?今回も難しくなかなか進みませんでした。	ゆっくり自分のペースで進めていきましょう。
+encourage: 特に「81」と「ケーキとドーナッツ」の問題がなかなかうまくいかず悩みました	81もケーキとドーナッツも難しいので取り組んでいってえらいです！
+encourage: なかなかアルゴリズムになってから思うように進まないのですがゆっくり焦らずやろうと思いました。	いいことですね、ゆっくり焦らずやっていきましょう。
+encourage: ラストスパートなのに先週に引き続きやる気が起きなくて危機を感じてます。	とりあえず取り組んでみましょう！
+encourage: 次回以降も解けるか不安。	ゆっくり考えれば大丈夫です！
+encourage: Pythonもなかなか答えにたどり着けなくなってきて悔しいです。	悔しいという思いはいいことですね。ゆっくり解いていきましょう。
+encourage: もうだんだん追いつけてません。	大丈夫ですよ、ゆっくり進んでいきましょう。
+encourage: 数回前の授業から既に授業きついていけていませんでした。	そんな時はわからないところに戻って考えてみてください。
+encourage: 演習問題も2問目で早速つまづいてしまいこれが”挫折”か......と悟った。	大丈夫ですよ、落ち着いて考えてみてください。
+encourage: 頑張ればA、A+は必ず取れるので明確な基準設けてくれるのありがたいと思いましたA+取れるように頑張ります12回以降は難しすぎてやる気が出ません	一旦、他のことに取り組んでみるのも良いですよ。
+encourage: 焦りしかない今回の授業のブレイクアウトルームで個別にメッセージしてもらえそこから質問できたのでつまづいていたところをクリアできた。	質問をすることも良いですよね。
+encourage: 急に難しくなってきて全然理解できなくて落ち込みました。	そういう時は一旦他のことに取り組んでみるのも良いですよ。
+encourage: どこまで進められるか心配です。	ゆっくり進めれば意外と進んでいるものです。
+encourage: AtCoderの難易度にあわせたカウントがでましたがAは本来であれば0.2ということでAでも何回も間違えているので軽くショックを受けました。	簡単に見えても最初は難しいものです。
+encourage: 教職のために計算機数学IIも履修するつもりでいますが不安です。	大丈夫ですよ、計算機数学Ⅱもできるようになりますよ。
+encourage: アルゴリズムから難しくなかなか進まないです...。	アルゴリズムは難しいので、ゆっくり考えてみてください。
+encourage: 自分で考えたプログラミングが間違っていて他の方の回答をみてみるとそんなに簡単にできるのか!と思うほど短くやっていて自分は全然分かってないと落ち込みました。	大丈夫ですよ、取り組み続ければだんだん短くできるようになりますよ。
+encourage: アルゴリズムに入ってから授業内容に追いつけていないので焦っています。	アルゴリズムは難しいので、ゆっくり考えてみてください。
+encourage: 12回目難しいです。	そうですね、12回目は少し難しいのでゆっくり読んでみてください。
+encourage: とりあえず150問頑張ろうと思っていたのですが「無理では...」と思えてきました。	大丈夫ですよ、少しずつ取り組めば達成できますよ。
+encourage: 頭の中がごちゃごちゃになってものすごく時間がかかってしまいました	一旦、他のことに取り組んでみるのも良いですよ。
+encourage: 累積和とか全探索とかがまだあまり理解できず解けない問題がごろごろと出てきてしまっています	累積和や全探索は難しいですよね、落ち着いて考えてみてください。
+encourage: あまり進められてないので焦ってます。	大丈夫ですよ、少しずつ取り組んでみてください。
+encourage: 問題番号は70番くらいまで進んでるけど解けた数だと58問ということがわかったのでちょっと焦ってきました。	大丈夫ですよ、少しずつ取り組んでみてください。
+encourage: 進んでいなくてかなりまずいです。	落ち着いて少しずつ取り組んでみてください。
+encourage: 正直とても難しかった。	お疲れ様です。甘いものでリフレッシュも良いですよ。
+encourage: レポート問題考えましたが難しかったです。	取り組んでいて良いですね。また、時間をおいて考えてみてください。
+encourage: まだなんとかなると信じてます...ちょっとした打ち間違えや問題の読み取りミスが多くて参りました。	落ち着いて問題に取り組んでみましょう。
+encourage: すごく難しくなってきて困ってます。	他の人に聞いてみることも良いですよ。
+encourage: チャレンジ問題授業内で少しやろうかと思ったのですが難しくて一度断念。	一旦他のことをやることもいいですよね。
+encourage: でも書ける気がしません。	大丈夫です。書けますよ！
+encourage: レポート課題にも挑戦してみようとおもいます!授業の内容が難しくなり焦っています。	焦らず、取り組んでみてください。
+encourage: テストが落ち着いたらレポートにも取り組みます深さと幅優先探索がどんなものかはなんとなく理解できましたが果たしてこのコードを理解し更にかけるようになる日は来るのかと感じました。	使っていけば、理解できるようになる日が来ますよ。
+encourage: どんどん内容が難しくなっていてまた課題の正解数がとても少ないので焦っています。	焦らずできるところから取り組んでみてください。
+encourage: 先週と今週の講義はとても難しくてまだしっかりと理解できてません...。	ゆっくり見直してみてください。
+encourage: 難しくほとんどすすめることができませんでした。	一旦、気持ちを入れ替えてみてはいかがですか？
+encourage: がんばります...どんどん難しくなって進みもとても遅くなってます。	ゆっくり考えながら取り組めば大丈夫ですよ。
+encourage: 難しかったです。	お疲れ様です。
+encourage: 終わりに近づいてきてさらに難しくなったと思います。	もう少しです！頑張りましょう！
+encourage: 文字列圧縮と1時間くらい格闘しましたが負けました悔しいです!!!!!!前の部分を進めました。	時間をおいてまた取り組んでみてはいかがですか？
+encourage: 最近追いつけていなくて焦っています。	大丈夫です。自分のペースで頑張りましょう。
