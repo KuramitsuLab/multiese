@@ -88,7 +88,7 @@ autopct = '%.2f%%'
 # ラベル
 
 labels = label
-@key[凡例名|グラフのラベル|データ系列], label)
+@key([凡例名|グラフのラベル|データ系列], label)
 
 # 色
 
