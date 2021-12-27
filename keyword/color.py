@@ -1,11 +1,12 @@
 
-# color_dict.txtのブラックだけタブキーが2つあったので手動で削除
+# color_dict.txtのブラックだけタブが2つあったので手作業で削除
 
 import os
 
 DIR_PATH = os.path.dirname(__file__)
 FILE_PATH = DIR_PATH + '/color_dict.txt'
 NEW_FILE_PATH = DIR_PATH + '/color_keyword.txt'
+# NEW_FILE_PATH = DIR_PATH + '/color_keyword_single.txt'
 
 with open(FILE_PATH, 'r') as f:
     datalist = f.readlines()
@@ -16,7 +17,8 @@ with open(FILE_PATH, 'r') as f:
         name, id = item.split('\t')
         id = id.replace('\n', '')
         
-        ITEM = f"color = '{id}'\n@key(色, {name})\n@use('{name}')\n\n"
+        ITEM = f"color = '{id}'\n@key(色, {name})\n@use({name})\n\n"
+        # ITEM = f"color = '{id}'\n@key(色, '{name}')\n@use('{name}')\n\n"
         new_f.write(ITEM)
     
     new_f.close()
