@@ -1,8 +1,11 @@
 
 # color_dict.txtのブラックだけタブキーが2つあったので手動で削除
 
-FILE_PATH = './color_dict.txt'
-NEW_FILE_PATH = './color.txt'
+import os
+
+DIR_PATH = os.path.dirname(__file__)
+FILE_PATH = DIR_PATH + '/color_dict.txt'
+NEW_FILE_PATH = DIR_PATH + '/color_keyword.txt'
 
 with open(FILE_PATH, 'r') as f:
     datalist = f.readlines()
