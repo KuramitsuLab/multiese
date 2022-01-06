@@ -1,0 +1,29 @@
+advice: NameError: name 'IPython' is not defined	IPythonのインポートを忘れていませんか？
+advice: ModuleNotFoundError: No module named 'sentence_transformers'	pip でsentence_transformersをインストールしましょう
+advice: ModuleNotFoundError: No module named 'mathematics'	モジュール名が間違っていませんか？
+advice: ModuleNotFoundError: No module named 'math.pi'; 'math' is not a package	mathとpiを分けてインポートしましょう
+advice: ImportError: cannot import name 'COS' from 'math' (unknown location)	mathモジュールにCOSというオブジェクトはありません。名前が正しいか確認しましょう
+advice: AttributeError: module 'math' has no attribute 'COS'	mathモジュールにCOSというオブジェクトはありません。名前が正しいか確認しましょう
+advice: ImportError: cannot import name 'tan' from 're' (/usr/lib/python3.7/re.py)	reモジュールにtanというオブジェクトはありません。名前が正しいか確認しましょう
+advice: AttributeError: module 're' has no attribute 'tan'	reモジュールにtanというオブジェクトはありません。名前が正しいか確認しましょう
+advice: NameError: name 'AStudio' is not defined	AStudioを先に定義するか、名前が正しいか確認しましょう
+advice: NameError: name 'length' is not defined	lengthを先に定義するか、名前が正しいか確認しましょう
+advice: NameError: name 'text' is not defined	textを先に定義するか、名前が正しいか確認しましょう
+advice: NameError: name 'length' is not defined	lengthを先に定義するか、名前が正しいか確認しましょう
+advice: SyntaxError: EOL while scanning string literal	括弧や引用符を閉じ忘れていたり、コロンを忘れていたりしませんか？
+advice: AttributeError: 'int' object has no attribute 'append'	int型にappendは使えません。list型を使ってみてください
+advice: AttributeError: 'tuple' object has no attribute 'append'	tuple型にappendは使えません。list型を使ってみてください
+advice: AttributeError: 'str' object has no attribute 'sort'	str型にsortは使えません。list型を使ってみてください
+advice: TypeError: unsupported operand type(s) for +: 'int' and 'str'	int型とstr型は結合できません。どちらかに統一しましょう
+advice: TypeError: __init__() takes 4 positional arguments but 5 were given	4つの因数を求めている場所に5つの因数を渡しています
+advice: TypeError: myfunc() takes 4 positional arguments but 5 were given	4つの因数を求めている場所に5つの因数を渡しています
+advice: TypeError: 'tuple' object does not support item assignment	tuple型は要素の変更ができません。list型を使ってみてください
+advice: KeyError: 'a'	'a'というキーは見つかりません。キーが正しいか確認しましょう
+advice: KeyError: 'Name'	'Name'というキーは見つかりません。キーが正しいか確認しましょう
+advice: KeyError: '1234'	'1234'というキーは見つかりません。キーが正しいか確認しましょう
+advice: IndexError: list index out of range	範囲外のインデックスを指定していませんか？ 最大値は”要素数−1”です
+advice: IndentationError: unexpected indent	不要なインデントが入っていませんか？
+advice: ZeroDivisionError: integer division or modulo by zero	0で割っていませんか？
+advice: FileNotFoundError: Errno2No such file or directory: 'not_exist_file.txt'	指定した名前のファイルが見つかりません。ファイル名やパスが正しいか確認しましょう
+advice: FileNotFoundError: Errno2No such file or directory: 'content/test'	指定した名前のファイルが見つかりません。ファイル名やパスが正しいか確認しましょう
+advice: FileExistsError: Errno17File exists: 'data'	その名前のファイルは既に存在します。別の名前にしましょう

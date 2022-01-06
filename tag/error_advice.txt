@@ -1,0 +1,108 @@
+#https://oliversi.com/2019/01/11/python-error/
+#https://note.nkmk.me/python-error-message/
+
+
+
+#インポート不足
+
+IPythonのインポートを忘れていませんか？
+NameError: name 'IPython' is not defined
+
+pip でsentence_transformersをインストールしましょう
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+モジュール名が間違っていませんか？
+ModuleNotFoundError: No module named 'mathematics'
+
+mathとpiを分けてインポートしましょう
+ModuleNotFoundError: No module named 'math.pi'; 'math' is not a package
+
+mathモジュールにCOSというオブジェクトはありません。名前が正しいか確認しましょう
+ImportError: cannot import name 'COS' from 'math' (unknown location)
+AttributeError: module 'math' has no attribute 'COS'
+
+reモジュールにtanというオブジェクトはありません。名前が正しいか確認しましょう
+ImportError: cannot import name 'tan' from 're' (/usr/lib/python3.7/re.py)
+AttributeError: module 're' has no attribute 'tan'
+
+
+
+#変数の定義
+
+AStudioを先に定義するか、名前が正しいか確認しましょう
+NameError: name 'AStudio' is not defined
+
+lengthを先に定義するか、名前が正しいか確認しましょう
+NameError: name 'length' is not defined
+
+textを先に定義するか、名前が正しいか確認しましょう
+NameError: name 'text' is not defined
+
+lengthを先に定義するか、名前が正しいか確認しましょう
+NameError: name 'length' is not defined
+
+
+
+#
+
+括弧や引用符を閉じ忘れていたり、コロンを忘れていたりしませんか？
+SyntaxError: EOL while scanning string literal
+
+
+#AttributeError
+##listまでアドバイスすると汎用性がなくなる？list使えない同文エラーでもlist提案してしまいそう。
+
+int型にappendは使えません。list型を使ってみてください
+AttributeError: 'int' object has no attribute 'append'
+
+tuple型にappendは使えません。list型を使ってみてください
+AttributeError: 'tuple' object has no attribute 'append'
+
+str型にsortは使えません。list型を使ってみてください
+AttributeError: 'str' object has no attribute 'sort'
+
+
+
+#TypeError
+
+int型とstr型は結合できません。どちらかに統一しましょう
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+4つの因数を求めている場所に5つの因数を渡しています
+TypeError: __init__() takes 4 positional arguments but 5 were given
+TypeError: myfunc() takes 4 positional arguments but 5 were given
+
+tuple型は要素の変更ができません。list型を使ってみてください
+TypeError: 'tuple' object does not support item assignment
+
+
+#KeyError
+
+'a'というキーは見つかりません。キーが正しいか確認しましょう
+KeyError: 'a'
+
+'Name'というキーは見つかりません。キーが正しいか確認しましょう
+KeyError: 'Name'
+
+'1234'というキーは見つかりません。キーが正しいか確認しましょう
+KeyError: '1234'
+
+
+範囲外のインデックスを指定していませんか？ 最大値は”要素数−1”です
+IndexError: list index out of range
+
+不要なインデントが入っていませんか？
+IndentationError: unexpected indent
+
+0で割っていませんか？
+ZeroDivisionError: integer division or modulo by zero
+
+
+指定した名前のファイルが見つかりません。ファイル名やパスが正しいか確認しましょう
+FileNotFoundError: [Errno 2] No such file or directory: 'not_exist_file.txt'
+FileNotFoundError: [Errno 2] No such file or directory: 'content/test'
+
+その名前のファイルは既に存在します。別の名前にしましょう
+FileExistsError: [Errno 17] File exists: 'data'
+
+#ValueError: could not convert string to float: 'float number'
