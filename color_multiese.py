@@ -22,7 +22,12 @@ def read_multiese_file(filename: str, pairs: list = None):
                 code = None
                 sentences = []  # 自然言語文
                 continue
-            line = line.split('#')[0]  # #以降はコメントとして捨てる
+            if "#" in line:
+                if "= '#" in line:
+                    code = line
+                    continue
+                else:
+                    line = line.split('#')[0]  # #以降はコメントとして捨てる
             # if code is None and ord(line[0])>127 and '=' in line:
             #     key, value = [s.strip() for s in line.split('=')]
             #     tokibi.update_synonyms(synonyms, key, value)
@@ -94,8 +99,8 @@ if __name__ == '__main__':
     parser.add_argument('--task', default=None)
     parser.add_argument('--without-context', action='store_true')  # コンテストをつけない
     parser.add_argument('--without-reorder', action='store_true')  # 順序を入れ替えない
-    # parser.add_argument('--drop-rate', type=float,
-    #                     default=0.0)  # 0.0 にするとドロップしない
+    parser.add_argument('--drop-rate', type=float,
+                        default=0.1)  # 0.0 にするとドロップしない
 
     # parser.add_argument('--files', nargs='*')
     args = parser.parse_args()

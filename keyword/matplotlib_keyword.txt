@@ -1,0 +1,243 @@
+
+# http://matplotlib.org/examples/color/colormaps_reference.html
+
+colormap='Accent'
+@key(matplotlib, カラーマップ, アクセント)
+
+# https://note.nkmk.me/python-pandas-plot/
+
+kind='line'
+@key([グラフの種類|グラフ|種類], [折れ線グラフ|線グラフ])
+@use(折れ線グラフ)
+
+kind='bar'
+@use([垂直棒グラフ|棒グラフ|縦棒グラフ|縦方向の棒グラフ])
+@key(グラフの種類, 垂直棒グラフ)
+
+kind='barh' 
+@use([水平棒グラフ|横方向の棒グラフ|横棒グラフ])
+@key(グラフの種類, 水平棒グラフ)
+
+kind='box'
+@use([箱ひげ図|箱髭図|ボックスチャート])
+@key(グラフの種類, 箱ひげ図)
+
+kind='hist'
+@use([ヒストグラム|度数分布図|柱状図|柱状グラフ])
+@key(グラフの種類, ヒストグラム)
+
+kind='kde' 
+@use([カーネル密度推定図|カーネル密度])
+@key(グラフの種類, カーネル密度推定図)
+
+
+kind='density'
+@use([密度推定図|密度推定])
+@key(グラフの種類, 密度推定図)
+
+kind='hexbin'
+@use([六角ビニング|六角ビニング図])
+@key(グラフの種類, 六角ビニング)
+
+kind='area'
+@use(面グラフ)
+@key(グラフの種類, 面グラフ)
+
+kind='scatter'
+@use(散布図)
+@key(グラフの種類, 散布図)
+
+kind='pie'
+@use(円グラフ)
+@key(グラフの種類, 円グラフ)
+
+stacked=True
+@use([積み上げグラフ|積み上げ])
+@key(グラフの種類, 積み上げグラフ)
+
+orientation='horizontal'
+@key(方向, [水平方向|水平])
+@use(水平方向)
+
+alpha=0.5
+@key([アルファ|透過率], 0.5)
+@use(半透明化)
+@adverb(半透明に)
+
+
+###
+### まるさん
+###
+
+bins=60
+@key(ビン数,60)
+
+range = (20, 80)
+@key([区間|レンジ],20から80まで)
+
+align='center'
+@key(アライメント,中央寄せ)
+@use(中央寄せ) # -> 用いる
+
+autopct = '%.2f%%'
+@key(円グラフの[構成|]割合, [小数点以下2桁|小数点2位][まで|][の|][数値を|][パーセント|パーセント表記|百分率|%|%表記])
+@key(円グラフ[内|上|中|の中|], [小数点以下2桁|小数点2位][まで|][の|][数値を|][パーセント|パーセント表記|百分率|%|%表記])
+
+# ラベル
+
+labels = label
+@key([凡例名|グラフのラベル|データ系列], label)
+
+# 色
+
+color = 'red'
+@use([赤色|赤|レッド])
+@key([グラフの色|色], 赤色)
+
+color = 'blue'
+@use([青色|青|ブルー])
+@key([グラフの色|色], 青色)
+
+color = 'yellow'
+@use([黄色|黄|イエロー])
+@key([グラフの色|色], 黄色)
+
+color = 'gray'
+@use([灰色|灰|グレー])
+@key([グラフの色|色], 灰色)
+
+color = 'navy'
+@use([紺色|紺|ネイビー])
+@key([グラフの色|色], 紺色)
+
+color = 'greenyellow'
+@use([黄緑色|黄緑|グリーンイエロー])
+@key([グラフの色|色], 黄緑色)
+
+color = 'purple'
+@use([紫色|紫|パープル])
+@key([グラフの色|色], 紫色)
+
+color = 'cyan'
+@use([シアン|水色])
+@key([グラフの色|色], シアン)
+
+color = 'magenta'
+@use([マゼンタ|赤紫色|赤紫])
+@key([グラフの色|色], マゼンタ)
+
+# ラインスタイル
+
+linestyle = 'dashed'
+@key([ラインスタイル|線の見た目|線のスタイル|グラフ線のスタイル|グラフ線の見た目|線の形状|線の種類], 破線)
+@use(破線)
+
+linestyle = 'dashbot'
+@key(ラインスタイル, [一点鎖線|破線と点線|点と線])
+@use(一点鎖線)
+
+linestyle = 'dotted'
+@key(ラインスタイル, 点線)
+@use(点線)
+
+# マーカー
+
+marker = '.'
+@key([マーカー|マーカーの形状|マーカーの形|マーカーの種類|打点|目印], 点)
+@use(点[の|]マーカー)
+
+marker = 'o'
+@key(マーカー, [白丸|円|円形|丸|○])
+@use(白丸[の|]マーカー)
+
+marker = '*'
+@key(マーカー, [星|星形|星型|アスタリスク|五芒星|五角形|★|＊])
+@use(星型[の|]マーカー)
+
+marker = 'h'
+@key(マーカー, [六角形|六角])
+@use(六角[の|]マーカー)
+
+marker = 'x'
+@key(マーカー, [バツ|バツ印|十字|×|クロス])
+@use(バツ[の|]マーカー)
+
+marker = 'D'
+@key(マーカー, [ダイヤモンド|ひし形|菱形])
+@use(ダイヤモンド[の|]マーカー)
+
+marker = 's'
+@key(マーカー, [正方形|四角|四角形])
+@use(正方形[の|]マーカー)
+
+markersize = 16
+@key(マーカーの大きさ,16)
+
+markerfacecolor = x
+@key([マーカーの色|マーカー], x)
+
+markerfacecolor = 'red'
+@key(マーカーの色, [赤|赤色|赤い|レッド])
+@use(赤[の|]マーカー)
+
+markerfacecolor = 'blue'
+@key(マーカーの色, [青|青色|青い|ブルー])
+@use(青[の|]マーカー)
+
+markerfacecolor = 'yellow'
+@key(マーカーの色, [黄色|黄色い|黄|イエロー])
+@use(黄色[の|]マーカー)
+
+markerfacecolor = 'gray'
+@key(マーカーの色, [グレー|灰色|灰])
+@use(グレー[の|]マーカー)
+
+markerfacecolor = 'navy'
+@key(マーカーの色, [紺色|紺|ネイビー])
+@use(紺色[の|]マーカー)
+
+markerfacecolor = 'greenyellow'
+@key(マーカーの色, [黄緑色|黄緑|グリーンイエロー])
+@use(黄緑色[の|]マーカー)
+
+markerfacecolor = 'purple'
+@key(マーカーの色, [紫色|紫|パープル])
+@use(紫色[の|]マーカー)
+
+markerfacecolor = 'cyan'
+@key(マーカーの色, [シアン|水色])
+@use(シアン[の|]マーカー)
+
+markerfacecolor = 'magenta'
+@key(マーカーの色, [マゼンタ|赤紫色|赤紫])
+@use(マゼンタ[の|]マーカー)
+
+markeredgewidth = 4
+@key(マーカーの[エッジサイズ|エッジの大きさ|エッジの幅|輪郭線の幅], 4)
+
+markeredgecolor = 'red'
+@key(マーカーの[輪郭|エッジ][の|][色|カラー], 赤色)
+
+markeredgecolor = 'blue'
+@key(マーカーの輪郭[の|][色|カラー|], 青色)
+
+markeredgecolor = 'yellow'
+@key(マーカーの輪郭[の|][色|カラー|], 黄色)
+
+markeredgecolor = 'gray'
+@key(マーカーの輪郭[の|][色|カラー|], グレー)
+
+markeredgecolor = 'navy'
+@key(マーカーの輪郭[の|][色|カラー|], 紺色)
+
+markeredgecolor = 'greenyellow'
+@key(マーカーの輪郭[の|][色|カラー|], 黄緑色)
+
+markeredgecolor = 'purple'
+@key(マーカーの輪郭[の|][色|カラー|], 紫色)
+
+markeredgecolor = 'cyan'
+@key(マーカーの輪郭[の|][色|カラー|], シアン)
+
+markeredgecolor = 'magenta'
+@key(マーカーの輪郭[の|][色|カラー|], マゼンタ)

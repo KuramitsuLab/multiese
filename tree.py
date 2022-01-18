@@ -304,8 +304,7 @@ class Context(ノード):
     def emit(self, out, option):
         if option.get('without_context', True):
             return
-        if option['random'] < 0.5:
-            out.append('#' + self.name + ' ')
+        out.append('#' + self.name + ' ')
 
     def __repr__(self):  # repr
         return f"[{self.__class__.__name__} {self.name}]"
@@ -340,8 +339,8 @@ def reorder(ws, option):
     chunks.append(join_ws(chunk, option))
     if len(chunks_move) > 1 and option['random'] > 0.1:  # 必ず、オリジナルの語順は出力する
         random.shuffle(chunks_move)
-    if len(chunks_move) > 0 and option['random'] < 0.25 and random.random() < option.get('drop_rate', 0.5):
-        chunks_move.pop()  # 移動可能な要素はドロップもする
+    # if len(chunks_move) > 0 and option['random'] < 0.25 and random.random() < option.get('drop_rate', 0.5):
+    #     chunks_move.pop()  # 移動可能な要素はドロップもする
     if option.get('verbose', False):
         print('<reorder>', chunks_prefix, chunks_move, chunks_suffix)
     return chunks_prefix + chunks_move + chunks_suffix
@@ -360,10 +359,129 @@ class Move(系列):  # 移動可能な系列
         return True
 
 
+OptionContext = Context('option')
+
+
+class Key(ノード):  # 副詞的
+    lib: str
+    key: str
+    value: str
+
+    def __init__(self, lib, key, value):
+        self.lib = lib
+        self.key = key
+        self.value = value
+
+    def emit(self, out, option):
+        OptionContext.emit(out, option)
+        lib = option.get('lib', self.lib)
+        if lib != '':
+            out.append(f'#{lib} ')
+        self.key.emit(out, option)
+        suffix = alt('を|を|が|は|に')
+        if suffix == 'を':
+            out.append('を')
+            self.value.emit(out, option)
+            out.append(alt('にする|とする'))
+        elif suffix == 'に':
+            out.append('に')
+            self.value.emit(out, option)
+            out.append(alt('を用いる'))
+        elif suffix == 'は':
+            out.append('は')
+            self.value.emit(out, option)
+            out.append(alt('を用いる|にする|とする|'))
+        else:
+            out.append(suffix)
+            self.value.emit(out, option)
+            out.append(alt('である|||'))
+
+    def __repr__(self):  # repr
+        return f"[{self.__class__.__name__} {self.value.stringfy()}]"
+
+
+class Use(ノード):  #
+    lib: str
+    obj: str
+    verb: str
+
+    def __init__(self, lib, obj, verb=None):
+        self.lib = lib
+        self.obj = obj
+        self.verb = verb
+
+    def emit(self, out, option):
+        OptionContext.emit(out, option)
+        lib = option.get('lib', self.lib)
+        if lib != '':
+            out.append(f'#{lib} ')
+        self.obj.emit(out, option)
+        suffix = alt('を|を|で|', option, factor=-1)
+        if suffix == 'を':
+            out.append('を')
+            if self.verb:
+                self.verb.emit(out, option)
+            else:
+                verb = alt('用いる|使う')
+                out.append(verb)
+        elif suffix == 'で':
+            out.append('を')
+
+    def __repr__(self):  # repr
+        return f"[{self.__class__.__name__} {self.obj.stringfy()}]"
+
+
+class NoUse(ノード):  #
+    lib: str
+    obj: str
+
+    def __init__(self, lib, obj):
+        self.lib = lib
+        self.obj = obj
+
+    def emit(self, out, option):
+        OptionContext.emit(out, option)
+        lib = option.get('lib', self.lib)
+        if lib != '':
+            out.append(f'#{lib} ')
+        self.obj.emit(out, option)
+        suffix = alt('なし|しない|を|は')
+        out.append(suffix)
+        if suffix == 'を' or suffix == 'は':
+            verb = alt('しない|無視する|止める')
+            out.append(verb)
+
+    def __repr__(self):  # repr
+        return f"[{self.__class__.__name__} {self.obj.stringfy()}]"
+
+
+class Adverb(ノード):  # 副詞的
+    lib: str
+    adverb: str
+
+    def __init__(self, lib, adverb):
+        self.lib = lib
+        self.adverb = adverb
+
+    def emit(self, out, option):
+        OptionContext.emit(out, option)
+        lib = option.get('lib', self.lib)
+        if lib != '':
+            out.append(f'#{lib} ')
+        self.adverb.emit(out, option)
+
+    def __repr__(self):  # repr
+        return f"[{self.__class__.__name__} {self.adverb}]"
+
+
 # アノテーション
+
+lib = ''
 
 
 def annotation(name: str, nodes):
+    global lib
+    ss = [node.stringfy() for node in nodes]
     if name == 'type':
         if len(nodes) == 1:
             return 型情報(nodes[0].stringfy(), '')
@@ -373,8 +491,29 @@ def annotation(name: str, nodes):
     if name == 'context':
         return Context(nodes[0].stringfy())
     if name == 'move':
-        return Move(nodes)
-
+        return Move(nodes)  # 移動可能な要素
+    if name == 'key':   # オプション用のアノテーション
+        if len(ss) == 2:
+            return Key(lib, nodes[0], nodes[1])
+        lib = ss[0]
+        return Key(ss[0], nodes[1], nodes[2])
+    if name == 'use':
+        if len(ss) == 1:
+            return Use(lib, nodes[0])
+        if len(ss) == 2:
+            return Use(lib, nodes[0], nodes[1])
+        lib = ss[0]
+        return Use(lib, nodes[1], nodes[2])
+    if name == 'no':
+        if len(ss) == 1:
+            return NoUse(lib, nodes[0])
+        lib = ss[0]
+        return NoUse(lib, nodes[1])
+    if name == 'adverb':
+        if len(ss) == 1:
+            return Adverb(lib, nodes[0])
+        lib = ss[0]
+        return Adverb(ss[0], nodes[1])
     return Annotation(name, nodes)
 
 

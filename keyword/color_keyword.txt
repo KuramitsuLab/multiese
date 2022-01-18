@@ -1,0 +1,1227 @@
+
+# 色名に''なしver.
+
+color = '#fef4f4'
+@key(misc, 色, 桜色)
+@use(桜色)
+
+color = '#96514d'
+@key(色, 小豆色)
+@use(小豆色)
+
+color = '#e6b422'
+@key(色, 黄金)
+@use(黄金)
+
+color = '#fdeff2'
+@key(色, 薄桜)
+@use(薄桜)
+
+color = '#824880'
+@key(色, 茄子紺)
+@use(茄子紺)
+
+color = '#deb068'
+@key(色, 飴色)
+@use(飴色)
+
+color = '#38b48b'
+@key(色, 翡翠色)
+@use(翡翠色)
+
+color = '#bf794e'
+@key(色, 駱駝色)
+@use(駱駝色)
+
+color = '#c89932'
+@key(色, 山吹茶)
+@use(山吹茶)
+
+color = '#00a497'
+@key(色, 青緑)
+@use(青緑)
+
+color = '#f6bfbc'
+@key(色, 虹色)
+@use(虹色)
+
+color = '#bc763c'
+@key(色, 土色)
+@use(土色)
+
+color = '#d0af4c'
+@key(色, 芥子色)
+@use(芥子色)
+
+color = '#f5b1aa'
+@key(色, 珊瑚色)
+@use(珊瑚色)
+
+color = '#bc64a4'
+@key(色, 若紫)
+@use(若紫)
+
+color = '#b44c97'
+@key(色, 紅紫)
+@use(紅紫)
+
+color = '#f2a0a1'
+@key(色, 紅梅色)
+@use(紅梅色)
+
+color = '#cc7eb1'
+@key(色, 菖蒲色)
+@use(菖蒲色)
+
+color = '#f0908d'
+@key(色, 薄紅)
+@use(薄紅)
+
+color = '#cca6bf'
+@key(色, 紅藤色)
+@use(紅藤色)
+
+color = '#f09199'
+@key(色, 桃色)
+@use(桃色)
+
+color = '#ae7c4f'
+@key(色, 枇杷茶)
+@use(枇杷茶)
+
+color = '#eebbcb'
+@key(色, 撫子色)
+@use(撫子色)
+
+color = '#a86f4c'
+@key(色, 胡桃色)
+@use(胡桃色)
+
+color = '#d6c6af'
+@key(色, 亜麻色)
+@use(亜麻色)
+
+color = '#4d4c61'
+@key(色, 褐色)
+@use(褐色)
+
+color = '#c38743'
+@key(色, 狐色)
+@use(狐色)
+
+color = '#634950'
+@key(色, 濃色)
+@use(濃色)
+
+color = '#c39143'
+@key(色, 黄土色)
+@use(黄土色)
+
+color = '#bf783a'
+@key(色, 琥珀色)
+@use(琥珀色)
+
+color = '#bb5535'
+@key(色, 赤茶)
+@use(赤茶)
+
+color = '#dcd3b2'
+@key(色, 砂色)
+@use(砂色)
+
+color = '#bce2e8'
+@key(色, 水色)
+@use(水色)
+
+color = '#ec6d71'
+@key(色, 真朱)
+@use(真朱)
+
+color = '#b55233'
+@key(色, 煉瓦色)
+@use(煉瓦色)
+
+color = '#a19361'
+@key(色, 油色)
+@use(油色)
+
+color = '#eb6ea5'
+@key(色, 赤紫)
+@use(赤紫)
+
+color = '#aa4f37'
+@key(色, 雀茶)
+@use(雀茶)
+
+color = '#e95295'
+@key(色, 躑躅色)
+@use(躑躅色)
+
+color = '#a0d8ef'
+@key(色, 空色)
+@use(空色)
+
+color = '#e7609e'
+@key(色, 牡丹色)
+@use(牡丹色)
+
+color = '#9f563a'
+@key(色, 柿渋色)
+@use(柿渋色)
+
+color = '#e9546b'
+@key(色, 薔薇色)
+@use(薔薇色)
+
+color = '#965042'
+@key(色, 茶色)
+@use(茶色)
+
+color = '#e95464'
+@key(色, 韓紅)
+@use(韓紅)
+
+color = '#c53d43'
+@key(色, 赤紅)
+@use(赤紅)
+
+color = '#e60033'
+@key(色, 赤)
+@use(赤)
+
+color = '#928c36'
+@key(色, 鶯色)
+@use(鶯色)
+
+color = '#8a3b00'
+@key(色, 褐色)
+@use(褐色)
+
+color = '#dccb18'
+@key(色, 緑黄色)
+@use(緑黄色)
+
+color = '#d7003a'
+@key(色, 紅)
+@use(紅)
+
+color = '#c5c56a'
+@key(色, 抹茶色)
+@use(抹茶色)
+
+color = '#0095d9'
+@key(色, 青)
+@use(青)
+
+color = '#c3d825'
+@key(色, 若草色)
+@use(若草色)
+
+color = '#0094c8'
+@key(色, 薄藍)
+@use(薄藍)
+
+color = '#b8d200'
+@key(色, 黄緑)
+@use(黄緑)
+
+color = '#d9333f'
+@key(色, 紅赤)
+@use(紅赤)
+
+color = '#762f07'
+@key(色, 栗色)
+@use(栗色)
+
+color = '#007bbb'
+@key(色, 紺碧)
+@use(紺碧)
+
+color = '#752100'
+@key(色, 赤銅色)
+@use(赤銅色)
+
+color = '#d8e698'
+@key(色, 若菜色)
+@use(若菜色)
+
+color = '#5383c3'
+@key(色, 薄群青)
+@use(薄群青)
+
+color = '#6c3524'
+@key(色, 錆色)
+@use(錆色)
+
+color = '#b7282e'
+@key(色, 茜色)
+@use(茜色)
+
+color = '#683f36'
+@key(色, 赤褐色)
+@use(赤褐色)
+
+color = '#4c6cb3'
+@key(色, 群青色)
+@use(群青色)
+
+color = '#6f4b3e'
+@key(色, 焦茶)
+@use(焦茶)
+
+color = '#7b8d42'
+@key(色, 草色)
+@use(草色)
+
+color = '#69821b'
+@key(色, 苔色)
+@use(苔色)
+
+color = '#1e50a2'
+@key(色, 瑠璃色)
+@use(瑠璃色)
+
+color = '#b9d08b'
+@key(色, 若葉色)
+@use(若葉色)
+
+color = '#165e83'
+@key(色, 藍色)
+@use(藍色)
+
+color = '#ffffff'
+@key(色, 白)
+@use(白)
+
+color = '#f08300'
+@key(色, 蜜柑色)
+@use(蜜柑色)
+
+color = '#a8c97f'
+@key(色, 柳色)
+@use(柳色)
+
+color = '#223a70'
+@key(色, 紺色)
+@use(紺色)
+
+color = '#192f60'
+@key(色, 紺青)
+@use(紺青)
+
+color = '#ed6d3d'
+@key(色, 柿色)
+@use(柿色)
+
+color = '#fbfaf5'
+@key(色, 生成り色)
+@use(生成り色)
+
+color = '#a8bf93'
+@key(色, 山葵色)
+@use(山葵色)
+
+color = '#17184b'
+@key(色, 鉄紺)
+@use(鉄紺)
+
+color = '#f3f3f3'
+@key(色, 乳白色)
+@use(乳白色)
+
+color = '#ec6800'
+@key(色, 人参色)
+@use(人参色)
+
+color = '#ee7800'
+@key(色, 橙色)
+@use(橙色)
+
+color = '#fddea5'
+@key(色, 蜂蜜色)
+@use(蜂蜜色)
+
+color = '#eb6238'
+@key(色, 照柿)
+@use(照柿)
+
+color = '#bbbcde'
+@key(色, 藤色)
+@use(藤色)
+
+color = '#fce2c4'
+@key(色, 肌色)
+@use(肌色)
+
+color = '#e49e61'
+@key(色, 小麦色)
+@use(小麦色)
+
+color = '#98d98e'
+@key(色, 若緑)
+@use(若緑)
+
+color = '#4d5aaf'
+@key(色, 花色)
+@use(花色)
+
+color = '#69b076'
+@key(色, 薄緑)
+@use(薄緑)
+
+color = '#f1bf99'
+@key(色, 肉色)
+@use(肉色)
+
+color = '#5654a2'
+@key(色, 桔梗色)
+@use(桔梗色)
+
+color = '#9ea1a3'
+@key(色, 錫色)
+@use(錫色)
+
+color = '#949495'
+@key(色, 鼠色)
+@use(鼠色)
+
+color = '#ffd900'
+@key(色, 蒲公英色)
+@use(蒲公英色)
+
+color = '#ffd900'
+@key(色, 黄色)
+@use(黄色)
+
+color = '#7d7d7d'
+@key(色, 灰色)
+@use(灰色)
+
+color = '#a59aca'
+@key(色, 藤紫)
+@use(藤紫)
+
+color = '#7b7c7d'
+@key(色, 鉛色)
+@use(鉛色)
+
+color = '#ffec47'
+@key(色, 菜の花色)
+@use(菜の花色)
+
+color = '#7058a3'
+@key(色, 菫色)
+@use(菫色)
+
+color = '#3eb370'
+@key(色, 緑)
+@use(緑)
+
+color = '#674598'
+@key(色, 青紫)
+@use(青紫)
+
+color = '#595857'
+@key(色, 墨)
+@use(墨)
+
+color = '#f7b977'
+@key(色, 杏色)
+@use(杏色)
+
+color = '#fcd575'
+@key(色, 卵色)
+@use(卵色)
+
+color = '#674196'
+@key(色, 菖蒲色)
+@use(菖蒲色)
+
+color = '#eec362'
+@key(色, 玉蜀黍色)
+@use(玉蜀黍色)
+
+color = '#522f60'
+@key(色, 葡萄色)
+@use(葡萄色)
+
+color = '#493759'
+@key(色, 深紫)
+@use(深紫)
+
+color = '#2b2b2b'
+@key(色, 黒)
+@use(黒)
+
+color = '#fcc800'
+@key(色, 向日葵色)
+@use(向日葵色)
+
+color = '#884898'
+@key(色, 紫)
+@use(紫)
+
+color = '#f8b500'
+@key(色, 山吹色)
+@use(山吹色)
+
+color = '#460e44'
+@key(色, 紫紺)
+@use(紫紺)
+
+color = '#250d00'
+@key(色, 黒檀)
+@use(黒檀)
+
+color = '#00552e'
+@key(色, 深緑)
+@use(深緑)
+
+color = '#74325c'
+@key(色, 暗紅色)
+@use(暗紅色)
+
+color = '#e6b422'
+@key(色, 金色)
+@use(金色)
+
+color = '#005243'
+@key(色, 鉄色)
+@use(鉄色)
+
+color = '#16160e'
+@key(色, 暗黒色)
+@use(暗黒色)
+
+color = '#ef857d'
+@key(色, コーラルレッド)
+@use(コーラルレッド)
+
+color = '#ffedab'
+@key(色, サンシャインイエロー)
+@use(サンシャインイエロー)
+
+color = '#a3d6cc'
+@key(色, アイスグリーン)
+@use(アイスグリーン)
+
+color = '#e3acae'
+@key(色, ピンクアーモンド)
+@use(ピンクアーモンド)
+
+color = '#ea5550'
+@key(色, ポピーレッド)
+@use(ポピーレッド)
+
+color = '#fff3b8'
+@key(色, クリームイエロー)
+@use(クリームイエロー)
+
+color = '#00947a'
+@key(色, ターコイズグリーン)
+@use(ターコイズグリーン)
+
+color = '#a4a8d4'
+@key(色, ブルーラベンダー)
+@use(ブルーラベンダー)
+
+color = '#ea5550'
+@key(色, レッド)
+@use(レッド)
+
+color = '#4d4398'
+@key(色, パンジー)
+@use(パンジー)
+
+color = '#ffffff'
+@key(色, ホワイト)
+@use(ホワイト)
+
+color = '#ea5549'
+@key(色, トマトレッド)
+@use(トマトレッド)
+
+color = '#e9bc00'
+@key(色, トパーズ)
+@use(トパーズ)
+
+color = '#00ac9a'
+@key(色, ペパーミントグリーン)
+@use(ペパーミントグリーン)
+
+color = '#5a4498'
+@key(色, バイオレット)
+@use(バイオレット)
+
+color = '#fafdff'
+@key(色, スノーホワイト)
+@use(スノーホワイト)
+
+color = '#fef9fb'
+@key(色, ピンクホワイト)
+@use(ピンクホワイト)
+
+color = '#ea5532'
+@key(色, スカーレット)
+@use(スカーレット)
+
+color = '#e3d7a3'
+@key(色, クリーム)
+@use(クリーム)
+
+color = '#2cb4ad'
+@key(色, ナイルブルー)
+@use(ナイルブルー)
+
+color = '#fffff9'
+@key(色, ミルキーホワイト)
+@use(ミルキーホワイト)
+
+color = '#ed6d35'
+@key(色, キャロットオレンジ)
+@use(キャロットオレンジ)
+
+color = '#418b89'
+@key(色, サックスブルー)
+@use(サックスブルー)
+
+color = '#56256e'
+@key(色, グレープ)
+@use(グレープ)
+
+color = '#ed6d46'
+@key(色, チャイニーズレッド)
+@use(チャイニーズレッド)
+
+color = '#edde7b'
+@key(色, ジャスミンイエロー)
+@use(ジャスミンイエロー)
+
+color = '#3c7170'
+@key(色, スレートグリーン)
+@use(スレートグリーン)
+
+color = '#bd6856'
+@key(色, テラコッタ)
+@use(テラコッタ)
+
+color = '#c1ab05'
+@key(色, アンティックゴールド)
+@use(アンティックゴールド)
+
+color = '#c7a5cc'
+@key(色, アイリス)
+@use(アイリス)
+
+color = '#f7f6f5'
+@key(色, パールホワイト)
+@use(パールホワイト)
+
+color = '#98605e'
+@key(色, ココアブラウン)
+@use(ココアブラウン)
+
+color = '#72640c'
+@key(色, オリーブ)
+@use(オリーブ)
+
+color = '#88bfbf'
+@key(色, アクアグリーン)
+@use(アクアグリーン)
+
+color = '#f8f4e6'
+@key(色, アイボリー)
+@use(アイボリー)
+
+color = '#67b5b7'
+@key(色, アクアマリン)
+@use(アクアマリン)
+
+color = '#cab8d9'
+@key(色, ラベンダー)
+@use(ラベンダー)
+
+color = '#f5ecf4'
+@key(色, パウダーピンク)
+@use(パウダーピンク)
+
+color = '#6c3524'
+@key(色, チョコレート)
+@use(チョコレート)
+
+color = '#009e9f'
+@key(色, ピーコックブルー)
+@use(ピーコックブルー)
+
+color = '#b79fcb'
+@key(色, クロッカス)
+@use(クロッカス)
+
+color = '#efefef'
+@key(色, シルバーホワイト)
+@use(シルバーホワイト)
+
+color = '#ffdc00'
+@key(色, イエロー)
+@use(イエロー)
+
+color = '#009b9f'
+@key(色, ターコイズ)
+@use(ターコイズ)
+
+color = '#622d18'
+@key(色, セピア)
+@use(セピア)
+
+color = '#eddc44'
+@key(色, シトラス)
+@use(シトラス)
+
+color = '#9b72b0'
+@key(色, パープル)
+@use(パープル)
+
+color = '#7b5544'
+@key(色, コーヒー色)
+@use(コーヒー色)
+
+color = '#fff799'
+@key(色, ライムライト)
+@use(ライムライト)
+
+color = '#7f1184'
+@key(色, ロイヤルパープル)
+@use(ロイヤルパープル)
+
+color = '#8f6552'
+@key(色, ブラウン)
+@use(ブラウン)
+
+color = '#fff462'
+@key(色, カナリヤ)
+@use(カナリヤ)
+
+color = '#00afcc'
+@key(色, ターコイズブルー)
+@use(ターコイズブルー)
+
+color = '#6b395f'
+@key(色, レーズン)
+@use(レーズン)
+
+color = '#fff462'
+@key(色, ミモザ)
+@use(ミモザ)
+
+color = '#82cddd'
+@key(色, ホライズンブルー)
+@use(ホライズンブルー)
+
+color = '#6c2463'
+@key(色, プラム)
+@use(プラム)
+
+color = '#ede4e1'
+@key(色, ピンクベージュ)
+@use(ピンクベージュ)
+
+color = '#fff352'
+@key(色, レモンイエロー)
+@use(レモンイエロー)
+
+color = '#a1d8e2'
+@key(色, サマーシャワー)
+@use(サマーシャワー)
+
+color = '#841a75'
+@key(色, ラズベリー)
+@use(ラズベリー)
+
+color = '#e8d3ca'
+@key(色, ベージュローゼ)
+@use(ベージュローゼ)
+
+color = '#e0de94'
+@key(色, メロンイエロー)
+@use(メロンイエロー)
+
+color = '#a1d8e6'
+@key(色, ホリゾンブルー)
+@use(ホリゾンブルー)
+
+color = '#9a0d7c'
+@key(色, フランボワーズ)
+@use(フランボワーズ)
+
+color = '#f3a68c'
+@key(色, サーモンピンク)
+@use(サーモンピンク)
+
+color = '#008db7'
+@key(色, セルリアンブルー)
+@use(セルリアンブルー)
+
+color = '#a50082'
+@key(色, ダリアパープル)
+@use(ダリアパープル)
+
+color = '#eaeea2'
+@key(色, ライムイエロー)
+@use(ライムイエロー)
+
+color = '#d4d9df'
+@key(色, クラウド)
+@use(クラウド)
+
+color = '#e6bfab'
+@key(色, アッシュローズ)
+@use(アッシュローズ)
+
+color = '#e6eb94'
+@key(色, ライムグリーン)
+@use(ライムグリーン)
+
+color = '#006888'
+@key(色, マリンブルー)
+@use(マリンブルー)
+
+color = '#9f166a'
+@key(色, ラズベリーレッド)
+@use(ラズベリーレッド)
+
+color = '#d4d9dc'
+@key(色, ムーングレイ)
+@use(ムーングレイ)
+
+color = '#fbdac8'
+@key(色, シェルピンク)
+@use(シェルピンク)
+
+color = '#fdede4'
+@key(色, ベビーピンク)
+@use(ベビーピンク)
+
+color = '#d1de4c'
+@key(色, レタスグリーン)
+@use(レタスグリーン)
+
+color = '#dcd6d2'
+@key(色, サンドベージュ)
+@use(サンドベージュ)
+
+color = '#5f6527'
+@key(色, オリーブグリーン)
+@use(オリーブグリーン)
+
+color = '#bbe2f1'
+@key(色, ベビーブルー)
+@use(ベビーブルー)
+
+color = '#777e41'
+@key(色, モスグリーン)
+@use(モスグリーン)
+
+color = '#a0d8ef'
+@key(色, スカイブルー)
+@use(スカイブルー)
+
+color = '#bc611e'
+@key(色, キャラメル)
+@use(キャラメル)
+
+color = '#719bad'
+@key(色, シャドウブルー)
+@use(シャドウブルー)
+
+color = '#d04f97'
+@key(色, シクラメンピンク)
+@use(シクラメンピンク)
+
+color = '#f6b483'
+@key(色, サンセット)
+@use(サンセット)
+
+color = '#00a1e9'
+@key(色, シアン)
+@use(シアン)
+
+color = '#e4007f'
+@key(色, マゼンタ)
+@use(マゼンタ)
+
+color = '#bcbace'
+@key(色, ラベンダーグレイ)
+@use(ラベンダーグレイ)
+
+color = '#be8f68'
+@key(色, シナモン)
+@use(シナモン)
+
+color = '#9fc24d'
+@key(色, リーフグリーン)
+@use(リーフグリーン)
+
+color = '#409ecc'
+@key(色, ヨットブルー)
+@use(ヨットブルー)
+
+color = '#c9caca'
+@key(色, シルバー)
+@use(シルバー)
+
+color = '#f0f6da'
+@key(色, ホワイトリリー)
+@use(ホワイトリリー)
+
+color = '#68a9cf'
+@key(色, チョークブルー)
+@use(チョークブルー)
+
+color = '#c70067'
+@key(色, ルビー)
+@use(ルビー)
+
+color = '#c9c9c4'
+@key(色, パールグレイ)
+@use(パールグレイ)
+
+color = '#e9dacb'
+@key(色, シャンパン)
+@use(シャンパン)
+
+color = '#dbebc4'
+@key(色, アスパラガスグリーン)
+@use(アスパラガスグリーン)
+
+color = '#c9c9c2'
+@key(色, サンドグレイ)
+@use(サンドグレイ)
+
+color = '#fbd8b5'
+@key(色, ピーチ)
+@use(ピーチ)
+
+color = '#618e34'
+@key(色, シトロングリーン)
+@use(シトロングリーン)
+
+color = '#a4c1d7'
+@key(色, スモークブルー)
+@use(スモークブルー)
+
+color = '#c0c5c2'
+@key(色, マーブルグレイ)
+@use(マーブルグレイ)
+
+color = '#946c45'
+@key(色, カフェオレ)
+@use(カフェオレ)
+
+color = '#dc6b9a'
+@key(色, コスモス)
+@use(コスモス)
+
+color = '#bfbec5'
+@key(色, オパールグレイ)
+@use(オパールグレイ)
+
+color = '#ee7800'
+@key(色, オレンジ)
+@use(オレンジ)
+
+color = '#a7d28d'
+@key(色, アップルグリーン)
+@use(アップルグリーン)
+
+color = '#f7b977'
+@key(色, アプリコット)
+@use(アプリコット)
+
+color = '#0068b7'
+@key(色, コバルトブルー)
+@use(コバルトブルー)
+
+color = '#b4aeb1'
+@key(色, ミスト)
+@use(ミスト)
+
+color = '#417038'
+@key(色, スピナッチグリーン)
+@use(スピナッチグリーン)
+
+color = '#0068b7'
+@key(色, サファイアブルー)
+@use(サファイアブルー)
+
+color = '#ac6b25'
+@key(色, ブロンズ)
+@use(ブロンズ)
+
+color = '#abb1b5'
+@key(色, フォッグ)
+@use(フォッグ)
+
+color = '#e8c59c'
+@key(色, ヴァニラ)
+@use(ヴァニラ)
+
+color = '#bee0c2'
+@key(色, スカイグリーン)
+@use(スカイグリーン)
+
+color = '#0075c2'
+@key(色, ブルー)
+@use(ブルー)
+
+color = '#eb6ea0'
+@key(色, チェリーピンク)
+@use(チェリーピンク)
+
+color = '#b4ada9'
+@key(色, ベージュグレイ)
+@use(ベージュグレイ)
+
+color = '#c49a6a'
+@key(色, コルク)
+@use(コルク)
+
+color = '#79c06e'
+@key(色, スペアミント)
+@use(スペアミント)
+
+color = '#e95388'
+@key(色, オペラ)
+@use(オペラ)
+
+color = '#afafb0'
+@key(色, シルバーグレイ)
+@use(シルバーグレイ)
+
+color = '#89c997'
+@key(色, ミントグリーン)
+@use(ミントグリーン)
+
+color = '#ea618e'
+@key(色, ローズレッド)
+@use(ローズレッド)
+
+color = '#aaaab0'
+@key(色, ストームグレイ)
+@use(ストームグレイ)
+
+color = '#abb1ad'
+@key(色, グリーンフォッグ)
+@use(グリーンフォッグ)
+
+color = '#fad09e'
+@key(色, フレッシュ)
+@use(フレッシュ)
+
+color = '#009944'
+@key(色, サマーグリーン)
+@use(サマーグリーン)
+
+color = '#bccddb'
+@key(色, パウダーブルー)
+@use(パウダーブルー)
+
+color = '#6e4a55'
+@key(色, ココア色)
+@use(ココア色)
+
+color = '#9fa09e'
+@key(色, アッシュグレイ)
+@use(アッシュグレイ)
+
+color = '#f6ae54'
+@key(色, ゴールデンイエロー)
+@use(ゴールデンイエロー)
+
+color = '#bee0ce'
+@key(色, オパールグリーン)
+@use(オパールグリーン)
+
+color = '#b2cbe4'
+@key(色, ライトブルー)
+@use(ライトブルー)
+
+color = '#b33e5c'
+@key(色, ワインレッド)
+@use(ワインレッド)
+
+color = '#9d8e87'
+@key(色, ローズグレイ)
+@use(ローズグレイ)
+
+color = '#f3981d'
+@key(色, マンダリンオレンジ)
+@use(マンダリンオレンジ)
+
+color = '#a2c2e6'
+@key(色, ベイビーブルー)
+@use(ベイビーブルー)
+
+color = '#942343'
+@key(色, ガーネット)
+@use(ガーネット)
+
+color = '#9f9f98'
+@key(色, エレファントスキン)
+@use(エレファントスキン)
+
+color = '#f39800'
+@key(色, マリーゴールド)
+@use(マリーゴールド)
+
+color = '#f6e5cc'
+@key(色, エクルベージュ)
+@use(エクルベージュ)
+
+color = '#3cb37a'
+@key(色, コバルトグリーン)
+@use(コバルトグリーン)
+
+color = '#e73562'
+@key(色, ストロベリー)
+@use(ストロベリー)
+
+color = '#898880'
+@key(色, ストーングレイ)
+@use(ストーングレイ)
+
+color = '#7a99cf'
+@key(色, ヒヤシンスブルー)
+@use(ヒヤシンスブルー)
+
+color = '#e73562'
+@key(色, ルビーレッド)
+@use(ルビーレッド)
+
+color = '#7e837f'
+@key(色, モスグレイ)
+@use(モスグレイ)
+
+color = '#6c9bd2'
+@key(色, ヒヤシンス)
+@use(ヒヤシンス)
+
+color = '#c5a05a'
+@key(色, カーキー)
+@use(カーキー)
+
+color = '#00a960'
+@key(色, グリーン)
+@use(グリーン)
+
+color = '#001e43'
+@key(色, ミッドナイトブルー)
+@use(ミッドナイトブルー)
+
+color = '#7d7d7d'
+@key(色, グレイ)
+@use(グレイ)
+
+color = '#00a968'
+@key(色, エメラルドグリーン)
+@use(エメラルドグリーン)
+
+color = '#202f55'
+@key(色, ネービーブルー)
+@use(ネービーブルー)
+
+color = '#6c2735'
+@key(色, バーガンディー)
+@use(バーガンディー)
+
+color = '#736d71'
+@key(色, スチールグレイ)
+@use(スチールグレイ)
+
+color = '#fac559'
+@key(色, サフランイエロー)
+@use(サフランイエロー)
+
+color = '#288c66'
+@key(色, フォレストグリーン)
+@use(フォレストグリーン)
+
+color = '#192f60'
+@key(色, プルシャンブルー)
+@use(プルシャンブルー)
+
+color = '#6c272d'
+@key(色, ボルドー)
+@use(ボルドー)
+
+color = '#666c67'
+@key(色, アイビーグレイ)
+@use(アイビーグレイ)
+
+color = '#e5a323'
+@key(色, パンプキン)
+@use(パンプキン)
+
+color = '#da536e'
+@key(色, カメリア)
+@use(カメリア)
+
+color = '#043c78'
+@key(色, インディゴ)
+@use(インディゴ)
+
+color = '#e95464'
+@key(色, ローズ)
+@use(ローズ)
+
+color = '#594e52'
+@key(色, グラファイト)
+@use(グラファイト)
+
+color = '#f2d58a'
+@key(色, ブロンド)
+@use(ブロンド)
+
+color = '#003f8e'
+@key(色, インクブルー)
+@use(インクブルー)
+
+color = '#f19ca7'
+@key(色, ローズピンク)
+@use(ローズピンク)
+
+color = '#4e454a'
+@key(色, チャコールグレイ)
+@use(チャコールグレイ)
+
+color = '#eedcb3'
+@key(色, ベージュ)
+@use(ベージュ)
+
+color = '#26499d'
+@key(色, オリエンタルブルー)
+@use(オリエンタルブルー)
+
+color = '#f5b2b2'
+@key(色, ピンク)
+@use(ピンク)
+
+color = '#ead7a4'
+@key(色, ビスケット)
+@use(ビスケット)
+
+color = '#54917f'
+@key(色, アンティークグリーン)
+@use(アンティークグリーン)
+
+color = '#f5b2ac'
+@key(色, フラミンゴピンク)
+@use(フラミンゴピンク)
+
+color = '#e29399'
+@key(色, オールドローズ)
+@use(オールドローズ)
+
+color = '#000000'
+@key(色, ブラック)
+@use(ブラック)
+

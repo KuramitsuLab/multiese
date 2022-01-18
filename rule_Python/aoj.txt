@@ -1,0 +1,1210 @@
+
+sum = 0
+@type(sum)に0を[代入する|入れる|代入]
+@type(sum)を0とする
+@type(sum)イコール0
+@type(sum)イコール0とする
+
+x = y
+xにyを代入する
+yをxに代入する
+
+x + y   @@calc
+xにyを加えた値
+x[プラス|たす|足す]y
+xとyの和
+
+x - y   @@calc
+xからyを引いた値
+x[マイナス|ひく|引く]y
+xとyの差
+
+x * y   @@calc
+xにyをかけた値
+x[かける|掛ける]y
+xとyの積
+
+x / y   @@calc
+xをyでわった値
+x[わる|割る]y
+xとyの商
+y分のx
+
+x // y   @@calc
+xをyでわった値の整数部分
+
+x ** 2   @@calc
+xの[2乗|二乗]
+
+x % y   @@calc
+xをyで割った[余り|あまり]
+xをyで剰余
+xとyのmod
+xとyの割り算の余り
+
+(x + y - 1) // y   @@calc
+xをyで[割った|わった]結果の切り上げ
+x[割る|わる]yを切り上げる
+x[割る|わる]yの切り上げ
+xをyで[割った|わった]値を切り上げる
+
+x & y   @@calc
+xとyの論理積
+
+x | y   @@calc
+xとyの論理和
+
+x ^ y   @@calc
+aとyの排他的論理和
+
+x << y   @@calc
+xをyだけ左シフトした値
+
+x >> y   @@calc
+xをyだけ右シフトした値
+
+x += y
+xをyだけ[増加させる|大きくする|増やす]
+{xにyを足して}代入する
+{xとyの値を足して}xに代入する
+{x[足す|たす]yの値を}xに代入する
+
+x -= y
+xをyだけ[減少させる|小さくする|減らす]
+xから{y[の値|]を引いて}xに代入する
+{x[引く|ひく]yの値を}xに代入する
+
+x *= y
+xをy倍にする
+{xにyをかけた値}をxに代入する
+
+x **= y
+{xをy乗}する
+
+x /= y
+{xをy分の一}にする
+
+x //= y
+{xをy分の一}にする
+
+x %= y
+{xをyで割った余り}をxに代入する
+
+abs(x)   @@calc
+xの絶対値
+
+complex(x)   @@calc
+xの複素数
+
+complex(x, y)   @@calc
+xを実部、yを虚部とした複素数
+
+divmod(x, y)   @@calc
+xをyで割ったときの商と[剰余|余り]の組
+xとyの商と剰余の組
+
+hash(x)   @@calc
+xのハッシュ値
+
+pow(x, y)   @@calc
+xのy乗
+
+pow(x, y, z)   @@calc
+xのy乗に対するzの剰余
+xのy乗をzで割った余り
+
+round(x)   @@calc
+xの小数点を丸めた値
+xの整数値
+
+round(x, 1)   @@calc
+xを小数点第一位までに丸めた値
+
+round(x, -1)   @@calc
+xを十の位までに丸めた値
+
+max(x, y, z)   @@calc
+x、y、zの[中で|うち][一番大きい|もっとも大きい|最大の]値
+x、y、zの最大値
+
+min(x, y, z)   @@calc
+x、y、zの[中で|うち][一番小さい|もっとも小さい|最小の]値
+x、y、zの最小値
+
+del num
+numを[デリートする|削除する|消す]
+
+global num
+numをグローバル変数とする
+
+nonlocal num
+numを非ローカル変数とする
+
+float(x)   @@let
+xを[浮動小数点数型|浮動小数点数]に[変換する|直す|置き換える|する]
+xを変換した浮動小数点数
+xを浮動小数点数型として[取得する|得る]
+
+int(x)   @@let
+xを[整数型|整数]に[変換する|直す|置き換える|する]
+xを変換した整数
+xを整数型として[取得する|得る]
+
+str(x)   @@let
+xを[文字列型|文字列]に変換する
+xを変換した文字列
+xを文字列型として取得する
+
+list(x)   @@let
+xのリスト
+xを[リスト型|リスト]に変換する
+xをリスト型として取得する
+
+type(x)   @@get @@check
+xの[タイプ|型]
+
+
+# 論理演算
+
+a == b     @@not @@not?.andor @@not?.if @@not?.while
+{aとbが}{等しいかどうか}
+{aが}bと{等しいかどうか}
+{aが}b{かどうか}
+
+a > b     @@not @@not?.andor @@not?.if @@not?.while
+{aが}bより{大きいかどうか}
+{aが}bよりも{大きいかどうか}
+
+a < b     @@not @@not?.andor @@not?.if @@not?.while
+{aが}bより{小さいかどうか}
+{aが}bよりも{小さいかどうか}
+
+a >= b     @@not @@not?.andor @@not?.if @@not?.while
+{aが}b以上{かどうか}
+
+a <= b     @@not @@not?.andor @@not?.if @@not?.while
+{aが}b以下{かどうか}
+
+a % 2 == 0     @@not @@not?.andor @@not?.if
+aが偶数{かどうか}
+aが2で割った時の余りが0である{かどうか}
+
+a % 2 == 1     @@not @@not?.andor @@not?.if
+aが奇数{かどうか}
+aが2で割った時の余りが1{かどうか}
+
+a % n == 0     @@not @@not?.andor @@not?.if
+aがnの倍数{かどうか}
+aがnで割り切れる{かどうか}
+
+a and b     @@not @@not?.andor @@not?.if
+aかつb
+
+a or b     @@not @@not?.andor @@not?.if
+aまたはb
+
+not a     @@not @@not?.andor @@not?.if
+aではない
+
+True
+真
+
+False
+偽
+
+None
+未定値
+
+
+# 出力
+
+print()
+改行を[プリントする|表示する|出力する]
+空行を[プリントする|表示する|出力する]
+
+print(sum)
+sumを[プリントする|表示する|出力する]
+
+print(sum, end='')
+改行なしでsumをプリントする
+sumの出力を改行しないで行う
+
+print(sum, sep='')
+区切りなしでsumをプリントする
+sumの出力を区切らないで行う
+
+print(sum, sep=',')
+カンマ区切りでsumをプリントする
+','区切りでsumをプリントする
+sumの出力をカンマ区切りで行う
+
+print('Hello World')
+'Hello World'とプリントする
+「[ハローワールド|こんにちは世界]」とプリントする
+[試しに|]何か動かす
+最初のプログラム
+
+print('{:.5f}'.format(dist))
+@type(dist, 浮動小数点数)の小数点以下5桁までをプリントする
+@type(dist)の小数点以下を5桁までプリントする
+@type(dist)の小数点以下を5桁で[揃える|丸める]
+@type(dist)の小数部を5桁で[揃える|丸める]
+
+print(*l)
+@type(l, リスト)を展開してプリントする
+
+
+# 入力
+
+input()   @@let
+ユーザから入力を受け取る
+入力値を[受け取る|取得する]
+ユーザが入力した文字列
+ユーザから入力された文字列
+入力された文字列
+文字列を入力する
+データを入力する
+
+int(input())   @@let
+ユーザから入力を[整数値|数値|数字]として受け取る
+整数値を受け取る
+ユーザが入力した整数値
+ユーザから入力された整数値
+入力された整数値
+整数値を入力する
+数値データを入力する
+
+list(input())   @@let
+複数の入力値をリストとして受け取る
+[ユーザが入力した|ユーザから入力された|入力された][文字列|値|データ]を{リストに[格納する|入れる|突っ込む]}
+[ユーザが入力した|ユーザから入力された|入力された][文字列|値|データ]を{リストに変換する}
+[ユーザが入力した|ユーザから入力された|入力された][文字列|値|データ]をリスト化する
+
+list(map(int, input().split()))   @@let
+{[空白ごとに|空白で区切って|スペース区切りで|半角スペースで区切って|半角スペースごとに|半角スペース区切りで]入力された}複数の整数を{リストとして受け取る}
+{[ユーザが入力した|ユーザから入力された|入力された]整数値}を[空白|スペース|半角スペース]で区切って{リストとして受け取る}
+
+a, b, c = input().split()
+入力された文字列を{[空白|スペース|半角スペース]で分割}し、a、b、cとする
+[空白|スペース|半角スペース]ごとに入力文字列を受け取り、a、b、cとする
+{[空白|スペース|半角スペース]で区切って}入力文字列を受け取り、a、b、cとする
+
+a, b, c = map(int, input().split())
+入力された整数値を{[空白|スペース|半角スペース]で分割}し、a、b、cとする
+[空白|スペース|半角スペース]ごとに入力された整数値を受け取り、a、b、cとする
+
+
+# if
+
+if name == 'Taro':
+nameが'Taro'[ならば|のとき|だったら]
+もしnameが'Taro'ならば
+
+elif name == 'Hanako':
+[そうでなくて|そうでなく]nameが'Hanako'[ならば|のとき|だったら]
+
+else
+そうでなければ
+どれでもなければ
+それ以外のとき
+
+if age < 6 or age >= 60:
+ageが6未満、[または|もしくは|それか]60以上ならば
+もしageが6未満、[または|もしくは|それか]60以上ならば
+
+if age < 6 and age >= 60:
+ageが6未満、[かつ|加えて]60以上ならば
+もしageが6未満、[かつ|加えて]60以上ならば
+
+
+# for
+
+for i in range(10):
+[以降|以下|次]の[プログラム|処理|命令]を10回[ループする|繰り返す|回す|まわす]
+10回[ループする|繰り返す|回す|まわす]
+[iに[0から9を]代入して]、以降のプログラムを[ループする|繰り返す|回す|まわす]
+[iに[10未満の連続した数値を]代入して]、以降のプログラムを[ループする|繰り返す|回す|まわす]
+[iを]0から9まで1つずつ取り出しながら繰り返し処理を行う
+繰り返し処理を10回行う
+10回だけ繰り返し処理を行う
+
+for i in range(len(a)):
+以降のプログラムをaの[要素数分|長さだけ][ループする|繰り返す|回す|まわす]
+
+for i, ai in enumerate(a):
+aの{インデックスをi}、{要素をai}へ[順番に|順に]代入して、以降のプログラムを[ループする|繰り返す|回す|まわす]
+
+for ai, bi in zip(a, b):
+{aの要素をai}、{bの要素をbi}へ[順番に|順に]代入して、以降のプログラムを[ループする|繰り返す|回す|まわす]
+
+
+# while
+
+while True:
+以下の処理を[ずっと|無限に][ループする|繰り返す|回す|まわす]
+無限ループを行う
+
+pass
+何もしない
+何も行わない
+パスする
+
+break
+抜ける
+中断する
+[ループ処理|ループ|繰り返し処理]を[抜け出す|抜ける|終了する]
+[ループ処理|ループ|繰り返し処理]から[抜け出す|抜ける|終了する]
+
+continue
+先頭に戻ってやり直す
+最初から繰り返す
+
+
+# try/except
+
+try:
+[可能なら|可能であれば|できたら]以下のプログラムを[実行する|処理する]
+
+except:
+[もし|]何らかの例外が発生した[場合|時|とき]
+[もし|]tryの中のプログラムが実行できなかった[場合|時|とき]
+
+except ZeroDivisionError:
+[もし|]ZeroDivisionErrorが発生したとき
+
+finally:
+例外が発生してもしなくても
+
+
+# 関数
+
+def hoge(x):
+[xを引数に持つ][関数hogeを定義する]
+[xを引数に持つ関数]をhogeという名前で定義する
+
+return
+何も返さない
+
+return x
+xを[リターンする|返す]
+
+yield 1
+1を一旦リターンする
+
+
+# リスト
+
+[]   @@let
+空列
+空のリスト
+
+()   @@let
+空のタプル
+
+a[0]
+aの[0番目|先頭|最初][の要素|の値|]
+
+a[-1]
+aの末尾[の要素|の値|]
+
+a[:]
+aのコピー
+aがコピーされた列
+
+a[:-1]
+aの[末尾|最後]を除いた部分列
+
+a[1:]
+aの[0番目|先頭|最初]を除いた部分列
+
+a[start:end]
+aのstart番目からend番目の[要素|値]を[取り出す|抜き出す|取得する|得る]
+
+a[start:]
+aのstart番目から末尾までの[要素|値]を取り出す
+aのstart番目以降の[要素|値]を取り出す
+
+a[:end]
+aの0番目からend番目の[要素|値]を取り出す
+
+a[::-1]
+@type(a, リスト)の逆順
+@type(a)内の要素の順番を[逆転する|逆にする]
+
+len(a)   @@check @@calc
+aの[長さ|要素数|個数]
+
+sum(a)   @@check @@calc
+@type(a)の[合計値|合計|総和]
+
+min(a)   @@check @@calc
+@type(a)の[最小値|一番小さい値]
+
+max(a)   @check @calc
+@type(a)の[最大値|一番大きい値]
+
+sum(a)/len(a)   @@check @@calc
+@type(a)の[平均値|平均]
+
+range(n)
+0からn-1までの数列
+0からn-1の範囲の数列
+0からn-1の範囲で1ずつ増える数列
+0~n-1の範囲の数列
+0~n-1の範囲で1ずつ増える数列
+0以上n未満[の範囲|]で1ずつ増える数列
+0以上n未満の範囲の数列
+
+range(1, n+1)
+1からnまでの数列
+1からnの範囲の数列
+1からnの範囲で1ずつ増える数列
+1~nの範囲の数列
+1~nの範囲で1ずつ増える数列
+1以上n+1未満[の範囲|]で1ずつ増える数列
+
+range(1, n+1, 2)
+1からnまでの2つ飛ばしの数列
+1からnの範囲の2つ飛ばしの数列
+1からnの範囲で2つずつ増える数列
+1~nの範囲の2つ飛ばしの数列
+1~nの範囲で2ずつ増える数列
+1以上n+1未満[の範囲|]で2ずつ増える数列
+
+a.append(x)
+@type(a, リスト)にxを[追加する|加える|入れる|付加する]
+@type(a)の[最後に|末尾に|後ろに]xを[アペンドする|追加する|加える|入れる|付加する]
+
+a.extend(l)
+@type(a)に@type(l, リスト)を展開して[追加する|加える|入れる|付加する]
+@type(l)を追加して@type(a)を拡張する
+
+a.insert(i, x)
+@type(a)のi番目にxを追加する
+
+a.pop()
+@type(a)の[末尾|終わり|後ろ]から[要素|値]を[ポップする|取り出す|取り除く]
+
+a.pop(i)
+@type(a)のi番目から[要素|値]を[ポップする|取り出す|取り除く]
+
+a.clear()
+@type(a)の全ての要素を[取り除く|削除する|消す|消去する]
+
+a.remove(x)
+@type(a)[内の|の中の|の]xと[等しい|同じ]要素[の先頭|の最初|]を取り除く
+
+del a[0]
+@type(a)の0番目の要素を取り除く
+
+a.index(x)
+@type(a)[内の|の中の|の]xが存在する[先頭の|最初の|][場所|インデックス]を取得する
+
+a.sort()   @@let
+@type(a)を[昇順に|小さい順に|小さい方から順に][ソートする|並べる|並べ変える|並べ直す]
+
+a.sort(reverse=True)   @@let
+@type(a)を[降順に|大きい順に|逆順に|大きい方から順に][ソートする|並べる|並べ変える|並べ直す]
+
+a.reverse()   @@let
+@type(a)を[降順に|大きい順に|逆順に|大きい方から順に]する
+
+a.copy()   @@let
+@type(a)のコピー
+
+sorted(a)
+aを[昇順に|小さい順に|小さい方から順に][ソートする|並べる|並べ変える|並べ直す]
+aを昇順に[ソートした|並べた|並べ変えた|並べ直した]列
+
+sorted(a, reverse=True)
+aを[降順に|大きい順に|逆順に|大きい方から順に]ソートする
+aを降順にソートした列
+
+sorted(a, key=abs)
+aにabs関数を適用してソートする
+aを絶対値に直してソートする
+aを絶対値に直してソートした列
+aの各要素の絶対値でソートする
+
+reversed(a)
+aを[降順に|大きい順に|逆順に|大きい方から順に]する
+aを[リバースした|反転した|逆にした]列
+
+all(l)
+@type(l, リスト)[内の|に含まれる|の]全ての要素が真かどうか
+@type(l, リスト)[内の|に含まれる|の]要素が全て真かどうか
+
+any(l)
+@type(l, リスト)[内の|に含まれる|の][少なくともひとつ|どれか]の要素が真かどうか
+@type(l, リスト)[内の|に含まれる|の]要素が[少なくともひとつ|どれか]は真かどうか
+
+[0 for i in range(n)]   @@let
+n個の0が含まれるリスト
+
+[i for i in range(1, 101)]   @@let
+1から100までの数が並んだリスト
+1以上101未満の数が並んだリスト
+
+
+# 文字列
+
+''
+空文字
+
+'\n'
+改行文字
+改行
+
+'\t'
+タブ文字
+タブ
+
+' '
+空白文字
+空白
+
+chr(x)
+文字コードxの文字
+
+ord(x)
+xの文字コード
+
+bin(x)
+xの[2進数文字列|2進数表現|2進数表記]
+
+oct(x)
+xの[8進数文字列|8進数表現|8進数表記]
+
+hex(x)
+xの[16進数文字列|16進数表現|16進数表記]
+
+x.to_bytes()
+xのバイト列
+
+byteorder='big'
+ビッグエンディアンとして
+
+byteorder='little'
+リトルエンディアンとして
+
+x.from_bytes()
+バイト列xからの整数値
+
+x.is_integer()
+xが整数{かどうか}
+
+s.upper()   @@let
+@type(s, 文字列)を英大文字に変換した文字列
+@type(s)[内の|の中の|の]小文字を{大文字に[変換する|する|直す]}
+@type(s)を{全て大文字に変換する}
+
+s.lower()   @@let
+@type(s, 文字列)を英小文字に変換した文字列
+@type(s)[内の|の中の|の]大文字を{小文字に[変換する|する|直す]}
+@type(s)を{全て小文字に変換する}
+
+list(s)   @@let
+@type(s, 文字列)の文字リスト
+
+s.split()   @@let
+{@type(s)を{空白で分割した}}文字列のリスト
+{@type(s)を{空白で分割して}}リストを返す
+{空白を区切り文字[として|に設定して|に指定して]}{{@type(s)を分割した結果}をリスト型}[にして返す|にする]
+
+s.split(c)   @@let
+{@type(s)を{cで分割した}}文字列のリスト
+{@type(s)を{cで分割して}}リストを返す
+{cを区切り文字[として|に設定して|に指定して]}{{@type(s)を分割した結果}をリスト型}[にして返す|にする]
+
+s.split(c, 2)   @@let
+{@type(s)を{cで最大分割数2まで分割した}}文字列のリスト
+{@type(s)を{cで最大分割数2まで分割して}}リストを返す
+{cを区切り文字}、{{最大分割数を2[として|に設定して|に指定して]}{{@type(s)を分割した結果}をリスト型}}[にして返す|にする]
+
+s.rsplit()   @@let
+@type(s)を[末尾|最後]から空白で分割した文字列のリスト
+@type(s)を[末尾|最後]から空白で分割して{リストを返す}
+空白を区切り文字[として|に設定して|に指定して]@type(s)を[末尾|最後]から分割してリスト型[にして返す|にする]
+
+s.rsplit(c)   @@let
+@type(s)を[末尾|最後]からcで分割した文字列のリスト
+@type(s)を[末尾|最後]からcで分割して{リストを返す}
+cを区切り文字[として|に設定して|に指定して]@type(s)を[末尾|最後]から分割してリスト型[にして返す|にする]
+
+s.rsplit(c, 2)   @@let
+@type(s)を[末尾|最後]からcで最大分割数2まで分割した文字列のリスト
+@type(s)を[末尾|最後]からcで最大分割数2まで分割して{リストを返す}
+{cを区切り文字}、{最大分割数を2}[として|に設定して|に指定して]{@type(s)を[末尾|最後]から分割して}リスト型[にして返す|にする]
+
+s.replace(o, n)   @@let
+@type(s)内のoを{nに置き換えた}文字列
+
+s.strip()   @@let
+@type(s)の両端から空白改行を[取り除いた|除いた|抜いた]文字列
+
+s.strip('x')   @@let
+@type(s)の両端から'x'を[取り除いた|除いた|抜いた]文字列
+
+s.lstrip()   @@let
+@type(s)の[左側|先頭]から空白改行を取り除いた文字列
+
+s.lstrip('x')   @@let
+@type(s)の[左側|先頭]から'x'を取り除いた文字列
+
+s.rstrip()   @@let
+@type(s)の[末尾|右側]から空白改行を取り除いた文字列
+
+s.rstrip('x')   @@let
+@type(s)の[末尾|右側]から'x'を取り除いた文字
+
+s.zfill(n)   @@let
+@type(s)を{{{長さがn}になる}ように}{左を'0'で埋めた}文字列
+@type(s)を{{{長さがn}になる}ように}'0'で右寄せした文字列
+
+s.capitalize()   @@let
+{@type(s)の[先頭|最初]を英大文字}、{残りを全て英小文字}に[変換した|した]文字列
+
+s.strswap()   @@let
+@type(s)の英大小文字を[交換した|逆にした]文字列
+@type(s)の英大文字と英小文字を[交換した|逆にした]文字列
+
+s.find('x')   @@let
+@type(s)の[最初から|先頭から|左側から]'x'を探して見つかった位置
+@type(s)[内の|の中の]'x'がある位置
+
+s.find('x', 2)   @@let
+@type(s)の2番目から'x'を探して見つかった位置
+@type(s)[内の|の中の]2番目以降に'x'がある位置
+
+s.find('x', 2, 5)   @@let
+@type(s)の2番目から5番目の間で'x'を探して見つかった位置
+@type(s)[内の|の中の]2番目から5番目に'x'がある位置
+
+s.rfind('x')   @@let
+@type(s)の[後ろから|右側から]'x'を探して見つかった位置
+@type(s)[内の|の中の]'x'がある[後ろ側|右側]の位置
+
+s.rfind('x', 2)   @@let
+@type(s)の2番目から'x'を[後ろから|右側から|逆順に]探して見つかった位置
+@type(s)[内の|の中の]2番目以降に'x'がある[後ろ側|右側]の位置
+
+s.rfind('x', 2, 5)   @@let
+@type(s)の2番目から5番目の間で'x'を[後ろから|右側から|逆順に]探して見つかった位置
+@type(s)[内の|の中の]2番目から5番目に'x'がある[後ろ側|右側]の位置
+
+''.join(l)   @@let
+@type(l, リスト)[内の要素|の中の要素]を連結した文字列
+
+','.join(l)   @@let
+','を間に入れて@type(l, リスト)[内の要素|の中の要素]を連結した文字列
+
+s.count(x)   @@check
+@type(s, 文字列)[内の|の中の|の]xの[出現回数|登場回数]
+
+s.startswith(x)   @@if
+@type(s, 文字列)の先頭がxで[始まる{かどうか}|ある{かどうか}]
+@type(s, 文字列)がxで始まる{かどうか}
+
+s.startswith(x, 2)   @@if
+@type(s, 文字列)の2番目がxで[始まる{かどうか}|ある{かどうか}]
+
+s.endswith(x)   @@if
+@type(s, 文字列)[の末尾|]がxで終わる{かどうか}
+@type(s, 文字列)の[末尾|終わり]がxである{かどうか}
+
+s.endswith(x, 2)   @@if
+@type(s, 文字列)の2番目がxで終わる{かどうか}
+
+s.isupper()   @@if
+@type(s, 文字列)が英大文字{かどうか}
+@type(s, 文字列)中の全ての文字が英大文字{かどうか}
+@type(s, 文字列)中の全ての英字が大文字{かどうか}
+@type(s, 文字列)中の英字全てが大文字{かどうか}
+
+s.islower()   @@if
+@type(s, 文字列)が英小文字{かどうか}
+@type(s, 文字列)中の全ての文字が英小文字{かどうか}
+@type(s, 文字列)中の全ての英字が小文字{かどうか}
+@type(s, 文字列)中の英字全てが小文字{かどうか}
+
+s.isdigit()   @@if
+@type(s, 文字列)が数字{かどうか}
+@type(s, 文字列)中の全ての文字が数字{かどうか}
+@type(s, 文字列)全てが数字{かどうか}
+@type(s, 文字列)が数字である{かどうか}
+
+s.isalpha()   @@if
+@type(s, 文字列)が全てアルファベット{かどうか}
+
+s.isalnum()   @@if
+@type(s, 文字列)が全て英数字{かどうか}
+
+s.isascii()   @@if
+@type(s, 文字列)が全てASCII文字{かどうか}
+
+s.isdecimal()   @@if
+@type(s, 文字列)が全て数字{かどうか}
+
+s.isnumeric()   @@if
+@type(s, 文字列)が全て数字{かどうか}
+
+s.isidentifier()   @@if
+@type(s, 文字列)が識別子として利用可能{かどうか}
+
+s.isprintable()   @@if
+@type(s, 文字列)が[印字|プリント]可能{かどうか}
+
+
+# 集合
+
+set()   @@let
+空の[セット|集合]
+空集合
+
+set(l)   @@let
+@type(l, リスト)の[セット|集合]
+
+st.add(1)
+@type(st, [セット|集合])に1を追加する
+
+st.remove(1)
+@type(st, [セット|集合])から1を[取り除く|除去する]
+
+st1.union(st2)   @@calc @@get
+@type(st1, [セット|集合])と@type(st2, [セット|集合])の和集合
+
+st1.intersection(st2)   @@calc @@get
+@type(st1, [セット|集合])と@type(st2, [セット|集合])の[積集合|共通部分]
+
+st1.intersection(st2)   @@calc @@get
+@type(st1, [セット|集合])と@type(st2, [セット|集合])の[積集合|共通部分]
+
+st1.difference(st2)   @@calc @@get
+@type(st1, [セット|集合])と@type(st2, [セット|集合])の[差集合|差]
+
+st1.symmetric_difference(st2)   @@calc @@get
+@type(st1, [セット|集合])と@type(st2, [セット|集合])の[対称差集合|対称差]
+
+st1.issubset(st2)   @@if
+@type(st1, [セット|集合])が@type(st2, [セット|集合])の部分集合{かどうか}
+
+st1.issuperset(st2)   @@if
+@type(st1, [セット|集合])が@type(st2, [セット|集合])の上位集合{かどうか}
+
+st1.isdisjoint(st2)   @@if
+@type(st1, [セット|集合])が@type(st2, [セット|集合])と互いに素{かどうか}
+@type(st1, [セット|集合])と@type(st2, [セット|集合])が互いに素{かどうか}
+
+
+frozenset()  @@let
+イミュータブルな[セット|集合]
+
+frozenset(x)  @@let
+xのイミュータブルな[セット|集合]
+
+
+# etc...
+
+breakpoint()
+デバッガーを起動する
+
+globals
+グローバル変数の辞書
+
+locals
+ローカル変数の辞書
+
+
+# random
+
+import random
+randomモジュールを[インポートする|用いる|使う|使用する]
+
+random.random()
+0.0〜1.0の乱数
+0.0以上1.0未満の乱数
+
+random.randrange(10)   @@let
+0から10未満までの整数乱数
+10未満までの整数乱数
+
+random.randrange(100, 1000)   @@let
+100から1000未満までの整数乱数
+100以上1000未満までの整数乱数
+
+random.randint(1, 10)   @@let
+1以上10以下の整数乱数
+
+random.seed(0)
+乱数シードを0に固定する
+{乱数シードを0}として乱数生成器を初期化する
+
+random.choice(l)
+@type(l, リスト)からランダムに要素を[チョイスする|選択する|選ぶ]
+
+random.sample(l, 3)
+@type(l, リスト)からランダムに要素を3つチョイスする
+
+random.shuffle(l)
+@type(l, リスト)をランダムにシャッフルする
+
+
+# math
+
+import math
+[mathモジュール|算術用ライブラリ]を[インポートする|用いる|使う|使用する]
+
+math.sqrt(x)   @@check @@calc @@let
+xの平方根
+xのルート
+
+math.ceil(x)   @@check @@calc @@let
+xの[小数点以下|]切り上げ
+xを{最も近い}[整数|整数値]に切り上げ
+{xに{最も近い}[整数|整数値]}に切り上げ
+
+math.floor(x)   @@check @@calc @@let
+xの[小数点以下|]切り捨て
+xを{最も近い}整数に切り捨て
+{xに{最も近い}整数}に切り捨て
+
+math.gcd(x, y)   @@check @@calc @@let
+xとyの最大公約数
+
+math.lcm(x, y)   @@check @@calc @@let
+xとyの最小公倍数
+
+math.comb(x, y)   @@check @@calc @@let
+xとyの[コンビネーション|組み合わせ]
+
+math.copysign(x, y)   @@check @@calc @@let
+yの符号を持ったx
+xをyの符号にした値
+
+math.fabs(x)   @@check @@calc @@let
+xの絶対値
+
+math.factorial(x)   @@check @@calc @@let
+xの階乗
+
+math.frexp(x)   @@check @@calc
+xの仮数と指数
+
+math.isclose(x, y)   @@check @@calc @@if
+xとyが近い{かどうか}
+xとyが近似値{かどうか}
+
+math.isfinite(x)   @@check @@calc @@if
+xが有限{かどうか}
+
+math.isinf(x)   @@check @@calc @@if
+xが無限大{かどうか}
+
+math.isnan(x)   @@check @@calc @@if
+xがNaN{かどうか}
+
+math.modf(x)   @@check @@calc
+xの小数部と整数部
+
+math.perm(x)   @@check @@calc @@let
+xの順列の総数
+
+math.perm(x, y)   @@check @@calc @@let
+xからy個取り出した時の順列の総数
+
+math.prod(l)   @@check @@calc @@let
+@type(l, リスト)の要素積
+
+math.remainder(x, y)   @@check @@calc @@let
+xをyで割った剰余
+
+math.exp(x)   @@check @@calc @@let
+eのx乗
+
+math.log(x)   @@check @@calc @@let
+xの自然対数
+
+math.log(x, y)   @@check @@calc @@let
+yを底とするxの対数
+yに対するxの対数
+
+math.log1p(x)   @@check @@calc @@let
+1+xの自然対数
+
+math.log2(x)   @@check @@calc @@let
+2を底とするxの対数
+
+math.log10(x)   @@check @@calc @@let
+xの常用対数
+xの10を底とする対数
+
+math.cos(x)   @@check @@calc @@let
+xの余弦
+xのコサイン
+
+math.sin(x)   @@check @@calc @@let
+xの正弦
+xのサイン
+
+math.tan(x)   @@check @@calc @@let
+xの正接
+xのタンジェント
+
+math.acos(x)   @@check @@calc @@let
+xの逆余弦
+xのアークコサイン
+
+math.asin(x)   @@check @@calc @@let
+xの逆正弦
+xのアークサイン
+
+math.atan(x)   @@check @@calc @@let
+xの逆正接
+xのアークタンジェント
+
+math.degrees(x)   @@check @@calc @@let
+xの角度
+
+math.radians(x)   @@check @@calc @@let
+xのラジアン
+
+math.acosh(x)   @@check @@calc @@let
+xの逆双曲線余弦
+
+math.asinh(x)   @@check @@calc @@let
+xの逆双曲線正弦
+
+math.atanh(x)   @@check @@calc @@let
+xの逆双曲線正接
+
+math.cosh(x)   @@check @@calc @@let
+xの双曲線余弦
+
+math.sinh(x)   @@check @@calc @@let
+xの双曲線正弦
+
+math.tanh(x)   @@check @@calc @@let
+xの双曲線正接
+
+math.dist(x, y)   @@check @@calc @@let
+xとyのユークリッド距離
+
+math.hypot(x,y)   @@check @@calc @@let
+xとyのノルム
+原点からの(x, y)の距離
+
+math.gamma(x)   @@check @@calc @@let
+xのガンマ関数
+
+math.lgamma(x)   @@check @@calc @@let
+xのガンマ関数の絶対値の自然対数
+
+math.pi   @@check @@calc
+円周率
+
+math.e   @@check @@calc
+ネイピア数
+
+math.inf   @@check @@calc
+無限大
+
+math.nan   @@check @@calc
+NaN
+
+
+# copy
+
+import copy
+copyモジュールを[インポートする|用いる|使う|使用する]
+
+copy.copy(x)
+xをコピーした結果
+
+copy.deepcopy(x)
+xを深くコピーした結果
+
+
+# bisect
+
+import bisect
+bisectモジュールをインポートする
+
+bisect.bisect_left(b, x)
+{[ソートされた順序|並び順|並んでいる順序]を[保ったまま|そのままで]}xをbに挿入できる[位置|場所]
+
+bisect.bisect_right(b, x)
+{[ソートされた順序|並び順|並んでいる順序]を[保ったまま|そのままで]}xをbに挿入できる[最後の|一番後ろの][位置|場所]
+
+bisect.insort_left(b, x)
+xをbにソート順で挿入する
+
+bisect.insort_right(b, x)
+xをbにソート順で[最後に|一番後ろ]挿入する
+
+
+# itertools
+
+import itertools
+itertoolsモジュールをインポートする
+
+itertools.repeat(10)
+10の無限列
+
+itertools.repeat(10, 3)
+10の3回続く列
+
+itertools.count()
+無限にカウントアップする整数列
+
+itertools.count(2)
+2からカウントアップする無限の整数列
+
+itertools.count(2, 10)
+2から始まり10間隔でカウントアップする無限の整数列
+
+itertools.cycle(l)
+@type(l, リスト)を無限に繰り返した列
+
+itertools.product(l1, l2)
+@type(l1, リスト)と@type(l2, リスト)の直積
+
+itertools.permutations(l)
+@type(l, リスト)の順列
+
+itertools.permutations(l, 2)
+@type(l, リスト)のうち2個までの順列
+
+itertools.combinations(l, 2)
+@type(l, リスト)のうち2個までの[コンビネーション|組み合わせ]
+
+itertools.combinations_with_replacement(l, 2)
+@type(l, リスト)のうち2個までの[重複コンビネーション|重複組み合わせ]
+
+
+# collections
+
+import collections
+collectionsモジュールを用いる
+
+collections.deque()   @@let
+dequeオブジェクトを[生成する|作る|作成する]
+
+collections.deque(x)   @@let
+xからdequeオブジェクトを[生成する|作る|作成する]
+
+maxlen=5
+5を最大長として
+
+x.appendleft('l')
+xの[先頭|左側]に'l'を追加する
+
+x.appendleft('l')
+xの[先頭|左側]を'l'で拡張する
+
+x.popleft()
+xの先頭から取り除いた値
+
+x.rotate()
+xの要素を右にひとつ[ローテートする|回転する]
+
+x.rotate(2)
+xの要素を右に2つずつ[ローテートする|回転する]
+
+collections.Counter(l)   @@let
+@type(l, リスト)の辞書カウンタ
+
+c.most_common()
+cの[出現頻度順|出現回数順]の列
+
+c.most_common(3)
+cの[上位3個|上位3位まで]の[出現頻度順|出現回数順]の列
+
+
+# os
+
+import os
+osモジュールをインポートする
+
+os.sep
+ファイルパスのセパレータ記号
+
+os.getcwd
+現在の作業ディレクトリ
+
+os.system
+コマンド{}を実行する
+
+os.path.basename(p)
+[パス文字列|パス]pのファイル名
+
+os.path.dirname(p)
+[パス文字列|パス]pのディレクトリ名
+
+os.path.abspath(p)
+[パス文字列|パス]pの絶対ファイルパス
+
+os.path.split(p)
+[パス文字列|パス]pのディレクトリ名とファイル名
+
+os.path.join('dir', 'subdir', 'filename.ext')
+'dir'と'subdir'と'filename.ext'を連結したファイルパス
+
+os.path.splitext(p)
+[パス文字列|パス]pのファイル名と拡張子
+
+os.path.get_size(p)
+[パス文字列|パス]pのファイルの[サイズ|大きさ]
+
+
+# sys
+
+import sys
+sysモジュールをインポートする
+
+sys.exit()
+プログラムを正常終了する
+
+
+# datetime
+
+import datetime
+datetimeモジュールをインポートする
+
+datetime.datetime.now()
+現在の日時
+
+datetime.datetime(year, month, day)
+year年month月day日の日時
+
+datetime.datetime(year, month, day, hour, minute)
+year年month月day日hour時minute分の日時
+
+datetime.datetime(year, month, day, hour, minute, second)
+year年month月day日hour時minute分second秒の日時
+
+
+# re
+
+re.search(r, s)
+sにおいて正規表現rのパターンが最初にマッチする位置
+
+re.match(r, s)
+sの先頭に正規表現rのパターンをマッチさせた結果
+
+re.fullmatch(r, s)
+s全体において正規表現rのパターンをマッチさせた結果
+
+re.split(r, s)
+sを{正規表現rのパターンに{マッチした[部分|箇所]で}}分割した文字列リスト
+
+re.sub(r, t, s)
+s[内の|の中の|中の]{{正規表現rのパターンにマッチした箇所}を}tに置き換えた文字列
+
+re.subn(r, t, s)
+s[内の|の中の|中の]{{正規表現rのパターンにマッチした箇所}を}tに置き換えた文字列と[置き換えた箇所の数|置き換え箇所の個数|置換箇所数]
+
+re.findall(r, s)
+sが正規表現rのパターンにマッチした文字列のリスト
+
+re.compile(r)
+rを正規表現にコンパイルした結果
