@@ -1,0 +1,934 @@
+pd.set_option('display.max_columns', 160)	python: 160番目までの列を表示させる
+pd.set_option('display.max_columns', 160)	python: 最大表示列数を160列に指定する
+pd.set_option('display.max_columns', 160)	python: 最大表示列数を指定する
+pd.set_option('display.max_columns', 160)	python: 最大表示列数を160列にする
+pd.set_option('display.max_columns', 160)	python: 160番まで列を表示できるように設定する
+pd.set_option('display.max_columns', 160)	python: 160番まで列を表示できるようにセットする
+pd.set_option('display.max_columns', 160)	python: 160番目まで列を表示できるように設定する
+encoding = 'shift_jis'	python: シフトJISを用いる
+encoding = 'shift_jis'	python: shift-jisを用いる
+encoding = 'shift_jis'	python: 文字コードはシフトJISを用いる
+encoding = 'shift_jis'	python: 文字コードはシフトJIS
+encoding = 'shift_jis'	python: 文字コードをシフトJISに設定する
+encoding = 'shift_jis'	python: 文字コードをシフトJISに変更する
+encoding = 'shift_jis'	python: シフトJISに文字コードを指定する
+header = None	python: ヘッダーを含まない
+header = None	python: ヘッダーを指定しない
+header = None	python: ヘッダーはなし
+header = None	python: ヘッダーがなし
+header = None	python: ヘッダー無し
+header = None	python: 0行目をヘッダーとして認識しない
+header = None	python: 0行目をヘッダーとしない
+header = None	python: 先頭行をヘッダーとして認識しない
+header = None	python: 列名なし
+header = None	python: 列名いらない
+color = 'red'	python: 色を'red'とする
+fontsize = 20	python: フォントサイズを20とする
+fontsize = 20	python: 文字の大きさを20とする
+fontsize = 20	python: フォントサイズを20にする
+fontsize = 20	python: 文字の大きさを20にする
+fontsize = 20	python: 20に文字の大きさをする
+pd.read_excel('file.xlsx')	python: エクセルデータ'file.xlsx'を表データに読む
+pd.read_excel('file.xlsx')	python: エクセル'file.xlsx'を表データとして読む
+pd.read_excel('file.xlsx')	python: エクセルデータ'file.xlsx'を表として読む
+pd.read_excel('file.xlsx')	python: エクセルファイル'file.xlsx'からデータフレームを読み込む
+pd.read_excel('file.xlsx')	python: エクセルファイル'file.xlsx'から読み込む
+pd.read_excel('file.xlsx')	python: エクセルファイル'file.xlsx'から表を読む
+pd.read_excel('file.xlsx')	python: エクセルファイル'file.xlsx'を読み込む
+pd.read_excel('file.xlsx')	python: エクセルファイル'file.xlsx'を読む
+pd.read_excel('file.xlsx')	python: エクセルファイル'file.xlsx'をデータフレームにする
+pd.read_excel('file.xlsx')	python: エクセルファイル'file.xlsx'を読み込んで表にする
+pd.read_excel('file.xlsx')	python: エクセルファイル'file.xlsx'を読み込んで表データにする
+pd.read_excel('file.xlsx')	python: エクセルファイル'file.xlsx'を読み込んでデータフレームに格納する
+pd.read_excel('file.xlsx')	python: 表にエクセルファイル'file.xlsx'を格納する
+pd.read_excel('file.xlsx')	python: エクセルファイル'file.xlsx'をデータフレームに格納する
+pd.read_excel('file.xlsx')	python: 表データとして読み込む
+pd.read_excel('file.xlsx')	python: 'file.xlsx'というエクセルファイルを読む
+pd.read_excel('file.xlsx')	python: 'file.xlsx'という名前のエクセルファイルを表データとして読み込む
+pd.read_excel('file.xlsx', sheet_name=0)	python: エクセルファイル'file.xlsx'の0番目のシートをデータフレームに読み込む
+pd.read_excel('file.xlsx', sheet_name=0)	python: エクセルファイル'file.xlsx'の0番目のシートを表に読む
+pd.read_excel('file.xlsx', sheet_name=0)	python: エクセルファイル'file.xlsx'の0番目のシートを表として読み込む
+pd.read_excel('file.xlsx', sheet_name=0)	python: エクセルファイル'file.xlsx'の0番目のシートから表を読み込む
+pd.read_excel('file.xlsx', sheet_name=0)	python: エクセルファイル'file.xlsx'の0番目のシートから読み込む
+pd.read_excel('file.xlsx', sheet_name=0)	python: エクセルファイル'file.xlsx'の0番目のシートから表データを読む
+pd.read_excel('file.xlsx', sheet_name=0)	python: エクセルファイル'file.xlsx'の0番目のシートを指定して読み込む
+pd.read_excel('file.xlsx', sheet_name=0)	python: エクセルファイル'file.xlsx'の0番目のシートを読み込む
+pd.read_excel('file.xlsx', sheet_name=0)	python: エクセルファイル'file.xlsx'の0番目のシートを読む
+pd.read_excel('file.xlsx', sheet_name=0)	python: エクセルファイル'file.xlsx'の0番目のシートを読み込んでデータフレームにする
+pd.read_excel('file.xlsx', sheet_name=0)	python: エクセルファイル'file.xlsx'の0番目のシートを読み込んで表にする
+pd.read_excel('file.xlsx', sheet_name=0)	python: エクセルファイル'file.xlsx'の0番目のシートを表とする
+pd.read_excel('file.xlsx', sheet_name=0)	python: エクセルファイル'file.xlsx'の0番目のシートを読み込んでデータフレームに格納する
+pd.read_excel('file.xlsx', sheet_name=0)	python: エクセルファイル'file.xlsx'の0番目のシートを読み込んで表データに格納する
+pd.read_excel('file.xlsx', sheet_name=0)	python: エクセルファイル'file.xlsx'の0番目のシートを表に格納する
+pd.read_excel('file.xlsx', sheet_name=0)	python: 'file.xlsx'という名前のエクセルファイルの0番目のシートを表として読み込む
+pd.read_excel('file.xlsx', sheet_name=0)	python: 'file.xlsx'というエクセルファイルの0番目のシートを読む
+pd.read_excel('file.xlsx', sheet_name=0)	python: 'file.xlsx'という名前のエクセルファイルの0番目のシートをデータフレームとして読む
+pd.read_excel('file.xlsx', sheet_name=None)	python: エクセルファイル'file.xlsx'の全てのシートをデータフレームに読み込む
+pd.read_excel('file.xlsx', sheet_name=None)	python: エクセルファイル'file.xlsx'の全部のシートを表に読み込む
+pd.read_excel('file.xlsx', sheet_name=None)	python: エクセルファイル'file.xlsx'の全部のシートを表に読む
+pd.read_excel('file.xlsx', sheet_name=None)	python: エクセルファイル'file.xlsx'の全てのシートから表を読み込む
+pd.read_excel('file.xlsx', sheet_name=None)	python: エクセルファイル'file.xlsx'の全てのシートからデータフレームを読み込む
+pd.read_excel('file.xlsx', sheet_name=None)	python: エクセルファイル'file.xlsx'の全てのシートから表を読む
+pd.read_excel('file.xlsx', sheet_name=None)	python: 読み込む
+pd.read_excel('file.xlsx', sheet_name=None)	python: エクセルファイル'file.xlsx'の全てのシートを読み込む
+pd.read_excel('file.xlsx', sheet_name=None)	python: エクセルファイル'file.xlsx'の全てのシートを読む
+pd.read_excel('file.xlsx', sheet_name=None)	python: エクセルファイル'file.xlsx'の全てのシートをデータフレームにする
+pd.read_excel('file.xlsx', sheet_name=None)	python: エクセルファイル'file.xlsx'の全てのシートをデータフレームとする
+pd.read_excel('file.xlsx', sheet_name=None)	python: エクセルファイル'file.xlsx'の全てのシートを表データとする
+pd.read_excel('file.xlsx', sheet_name=None)	python: エクセルファイル'file.xlsx'の全てのシートをデータフレームに格納する
+pd.read_excel('file.xlsx', sheet_name=None)	python: データフレームにエクセルファイル'file.xlsx'の全てのシートを格納する
+pd.read_excel('file.xlsx', sheet_name=None)	python: 表にエクセルファイル'file.xlsx'の全てのシートを格納する
+pd.read_excel('file.xlsx', sheet_name=None)	python: 'file.xlsx'という名前のエクセルファイルの全てのシートを表データとして読み込む
+pd.read_excel('file.xlsx', sheet_name=None)	python: 'file.xlsx'というエクセルファイルの全てのシートを読む
+pd.read_excel('file.xlsx', sheet_name=None)	python: 'file.xlsx'というエクセルファイルの全てのシートを読み込む
+pd.read_csv('file.csv')	python: 'file.csv'を表として読み込む
+pd.read_csv('file.csv')	python: 'file.csv'から読む
+pd.read_csv('file.csv')	python: 'file.csv'ファイルから読む
+pd.read_csv('file.csv')	python: 'file.csv'から読み込む
+pd.read_csv('file.csv')	python: 表データをファイル'file.csv'から読む
+pd.read_csv('file.csv')	python: 表をファイル'file.csv'から読む
+pd.read_csv('file.csv')	python: CSVファイル'file.csv'を表データとして読み込む
+pd.read_csv('file.csv')	python: CSVデータ'file.csv'から読み込む
+pd.read_csv('file.csv')	python: CSV'file.csv'をデータフレームとして読む
+pd.read_csv('file.csv')	python: CSVファイル'file.csv'からデータフレームを読み込む
+pd.read_csv('file.csv')	python: CSVデータ'file.csv'から表を読む
+pd.read_csv('file.csv')	python: CSV'file.csv'から表データを読む
+pd.read_csv('file.csv')	python: 'file.csv'をデータフレームに格納する
+pd.read_csv('file.csv')	python: データフレームに'file.csv'ファイルを格納する
+pd.read_csv('file.csv')	python: 表データに'file.csv'ファイルを格納する
+pd.read_csv('file.csv')	python: CSVファイル'file.csv'をデータフレームに格納する
+pd.read_csv('file.csv')	python: CSVデータ'file.csv'を表に格納する
+pd.read_csv('file.csv')	python: CSV'file.csv'を表データに格納する
+pd.read_csv('file.csv', sep=',')	python: 'file.csv'をカンマ区切りで読み込む
+pd.read_csv('file.csv', sep=',')	python: 'file.csv'ファイルを','区切りで読む
+pd.read_csv('file.csv', sep=',')	python: ','区切りで読む
+pd.read_csv('file.csv', sep=',')	python: カンマ区切りで'file.csv'を読み込む
+pd.read_csv('file.csv', sep=',')	python: ','区切りでファイル'file.csv'を読む
+pd.read_csv('file.csv', sep=',')	python: ','区切りで'file.csv'を読む
+pd.read_csv('file.csv', sep=',')	python: 'file.csv'からデータフレームをカンマ区切りで読み込む
+pd.read_csv('file.csv', sep=',')	python: ファイル'file.csv'から表データを','区切りで読む
+pd.read_csv('file.csv', sep=',')	python: 'file.csv'ファイルから表をカンマ区切りで読み込む
+pd.read_csv('file.csv', sep=',')	python: データフレームを'file.csv'からカンマ区切りで読み込む
+pd.read_csv('file.csv', sep=',')	python: 表データをファイル'file.csv'から','区切りで読む
+pd.read_csv('file.csv', sep=',')	python: データフレームをファイル'file.csv'からカンマ区切りで読み込む
+pd.read_csv('file.csv', sep=',')	python: データフレームとして'file.csv'をカンマ区切りで読み込む
+pd.read_csv('file.csv', sep=',')	python: 'file.csv'ファイルを','区切りで読む
+pd.read_csv('file.csv', sep=',')	python: 表データとして'file.csv'を','区切りで読む
+pd.read_csv('file.csv', sep=',')	python: CSVファイル'file.csv'をカンマ区切りで読み込む
+pd.read_csv('file.csv', sep=',')	python: CSV'file.csv'を','区切りで読む
+pd.read_csv('file.csv', sep=',')	python: カンマ区切りで読み込む
+pd.read_csv('file.csv', sep=',')	python: データフレームをCSVファイル'file.csv'からカンマ区切りで読み込む
+pd.read_csv('file.csv', sep=',')	python: 表データをCSV'file.csv'から','区切りで読む
+pd.read_csv('file.csv', sep=',')	python: 表をCSVデータ'file.csv'から','区切りで読む
+pd.read_csv('file.csv', sep=',')	python: データフレームとしてCSVファイル'file.csv'をカンマ区切りで読み込む
+pd.read_csv('file.csv', sep=',')	python: CSV'file.csv'を表データとして','区切りで読む
+pd.read_csv('file.csv', sep=',')	python: CSV'file.csv'を','区切りで読む
+pd.read_csv('file.csv', sep='\t')	python: 'file.csv'をタブ区切りで読み込む
+pd.read_csv('file.csv', sep='\t')	python: 'file.csv'ファイルをタブ区切りで読む
+pd.read_csv('file.csv', sep='\t')	python: ファイル'file.csv'をタブ区切りで読む
+pd.read_csv('file.csv', sep='\t')	python: タブ区切りで'file.csv'を読み込む
+pd.read_csv('file.csv', sep='\t')	python: タブ区切りで'file.csv'ファイルを読み込む
+pd.read_csv('file.csv', sep='\t')	python: タブ区切りでファイル'file.csv'を読む
+pd.read_csv('file.csv', sep='\t')	python: 'file.csv'からデータフレームをタブ区切りで読み込む
+pd.read_csv('file.csv', sep='\t')	python: 'file.csv'から表データをタブ区切りで読む
+pd.read_csv('file.csv', sep='\t')	python: 'file.csv'から表をタブ区切りで読み込む
+pd.read_csv('file.csv', sep='\t')	python: データフレームを'file.csv'からタブ区切りで読み込む
+pd.read_csv('file.csv', sep='\t')	python: 表を'file.csv'からタブ区切りで読む
+pd.read_csv('file.csv', sep='\t')	python: 表をファイル'file.csv'からタブ区切りで読み込む
+pd.read_csv('file.csv', sep='\t')	python: 表として'file.csv'をタブ区切りで読み込む
+pd.read_csv('file.csv', sep='\t')	python: データフレームとして'file.csv'ファイルをタブ区切りで読む
+pd.read_csv('file.csv', sep='\t')	python: タブ区切りで読む
+pd.read_csv('file.csv', sep='\t')	python: CSVファイル'file.csv'をタブ区切りで読み込む
+pd.read_csv('file.csv', sep='\t')	python: CSVデータ'file.csv'をタブ区切りで読み込む
+pd.read_csv('file.csv', sep='\t')	python: タブ区切りで読む
+pd.read_csv('file.csv', sep='\t')	python: データフレームをCSVファイル'file.csv'からタブ区切りで読み込む
+pd.read_csv('file.csv', sep='\t')	python: 表をCSVデータ'file.csv'からタブ区切りで読む
+pd.read_csv('file.csv', sep='\t')	python: 表データをCSV'file.csv'からタブ区切りで読む
+pd.read_csv('file.csv', sep='\t')	python: データフレームとしてCSVファイル'file.csv'をタブ区切りで読み込む
+pd.read_csv('file.csv', sep='\t')	python: CSVデータ'file.csv'を表としてタブ区切りで読む
+pd.read_csv('file.csv', sep='\t')	python: 表としてCSVデータ'file.csv'をタブ区切りで読み込む
+pd.read_csv('file.csv', header=None)	python: ヘッダーなしで'file.csv'を読み込む
+pd.read_csv('file.csv', header=None)	python: ヘッダーなしでファイル'file.csv'を読む
+pd.read_csv('file.csv', header=None)	python: ヘッダーなしで'file.csv'を読む
+pd.read_csv('file.csv', header=None)	python: 列名を読み込む
+pd.read_csv('file.csv', header=None)	python: 列名をなしで'file.csv'ファイルを読む
+pd.read_csv('file.csv', header=None)	python: 指定せずに'file.csv'ファイルをヘッダーを読む
+pd.read_csv('file.csv', index_col=0)	python: 一番左の列をインデックスと設定して、'file.csv'を表として読み込む
+pd.read_csv('file.csv', index_col=0)	python: 0番目の列をインデックスに指定して、ファイル'file.csv'を読み込む
+pd.read_csv('file.csv', index_col=0)	python: 一番左の列をインデックスにセットして、'file.csv'を読み込む
+pd.read_csv('file.csv', index_col=0)	python: 列番号0をインデックスとして'file.csv'から表を読み込む
+pd.read_csv('file.csv', index_col=0)	python: 列番号0をインデックスに設定してファイル'file.csv'から読み込む
+pd.read_csv('file.csv', index_col=0)	python: 列番号0をインデックスと設定して'file.csv'ファイルから表データを読み込む
+pd.read_csv('file.csv', index_col=0)	python: 列番号0をインデックスとして'file.csv'をデータフレームに格納する
+pd.read_csv('file.csv', index_col=0)	python: インデックスにファイル'file.csv'を列番号0を格納する
+pd.read_csv('file.csv', index_col=0)	python: インデックスにして'file.csv'ファイルを列番号0を格納する
+pd.read_csv('file.csv', encoding='shift_jis')	python: エンコーディングをシフトJISとして'file.csv'を読み込む
+pd.read_csv('file.csv', encoding='shift_jis')	python: ファイル'file.csv'をシフトJISとしてエンコーディングを読み込む
+pd.read_csv('file.csv', encoding='shift_jis')	python: シフトJISとして'file.csv'ファイルをエンコーディングを読む
+pd.read_csv('file.csv', encoding='shift_jis')	python: 文字コードがシフトJISのファイル'file.csv'を読み込む
+pd.read_csv('file.csv', encoding='shift_jis')	python: 文字コードがシフトJISの'file.csv'を読む
+pd.read_csv('file.csv', encoding='shift_jis')	python: 文字コードがシフトJISのデータ'file.csv'を読む
+df.to_excel('out.xlsx')	python: dfをエクセルファイル'out.xlsx'に書き出す
+df.to_excel('out.xlsx')	python: エクセルファイル'out.xlsx'に表dfを書き出す
+df.to_excel('out.xlsx')	python: df表をエクセルファイル'out.xlsx'に書き込む
+df.to_excel('out.xlsx')	python: dfをエクセルファイル'out.xlsx'に変換する
+df.to_excel('out.xlsx')	python: エクセルファイル'out.xlsx'にdfを変換する
+df.to_excel('out.xlsx')	python: エクセルファイル'out.xlsx'にdf表を変換する
+df.to_excel('out.xlsx')	python: dfをエクセルファイル'out.xlsx'というファイル名で書き込む
+df.to_excel('out.xlsx')	python: dfをエクセルファイル'out.xlsx'という名前で書き出す
+df.to_excel('out.xlsx')	python: df表をエクセルファイル'out.xlsx'というファイル名で書き込む
+df.to_excel('out.xlsx')	python: dfをエクセルファイル'out.xlsx'というファイル名で保存する
+df.to_excel('out.xlsx')	python: 表dfをエクセルファイル'out.xlsx'というファイル名で保存する
+df.to_excel('out.xlsx')	python: df表をエクセルファイル'out.xlsx'というファイル名で保存する
+df.to_excel('out.xlsx')	python: dfを'out.xlsx'というファイル名でエクセル形式に書き込む
+df.to_excel('out.xlsx')	python: 'out.xlsx'というファイル名でエクセル形式にdf表を書き込む
+df.to_excel('out.xlsx')	python: 'out.xlsx'というファイル名でエクセルファイルに表dfを書き出す
+df.to_excel('out.xlsx')	python: dfを'out.xlsx'というファイル名でエクセル形式で保存する
+df.to_excel('out.xlsx')	python: 表dfを'out.xlsx'というファイル名でエクセル形式で保存する
+df.to_excel('out.xlsx')	python: df表を'out.xlsx'というファイル名でエクセル形式で保存する
+df.to_excel('out.xlsx')	python: dfから'out.xlsx'という名前でエクセルファイルに変換する
+df.to_excel('out.xlsx')	python: dfから'out.xlsx'という名前のエクセルファイルに変換する
+df.to_excel('out.xlsx')	python: 表dfから'out.xlsx'というエクセルファイルにする
+df.to_csv('out.csv')	python: dfを'out.csv'に書き込む
+df.to_csv('out.csv')	python: 'out.csv'にdf表を書き込む
+df.to_csv('out.csv')	python: dfを'out.csv'に書き出す
+df.to_csv('out.csv')	python: dfを'out.csv'に変換する
+df.to_csv('out.csv')	python: df表を'out.csv'にする
+df.to_csv('out.csv')	python: dfを'out.csv'にする
+df.to_csv('out.csv')	python: dfを'out.csv'というファイル名で
+df.to_csv('out.csv')	python: 表dfを'out.csv'というファイル名で
+df.to_csv('out.csv')	python: df表を'out.csv'というファイル名で
+df.to_csv('out.csv')	python: dfを'out.csv'というファイル名でCSVファイルに保存する
+df.to_csv('out.csv')	python: 表dfを'out.csv'という名前に設定して保存する
+df.to_csv('out.csv')	python: 表dfを'out.csv'という名前でCSVファイルに保存する
+df.to_csv('out.csv')	python: dfを'out.csv'にして保存する
+df.to_csv('out.csv')	python: 'out.csv'にdf表をして保存する
+df.to_csv('out.csv')	python: 'out.csv'にdf表をセットして保存する
+df.to_csv('out.csv')	python: dfから'out.csv'という名前でCSVファイルに変換する
+df.to_csv('out.csv')	python: 表dfから'out.csv'という名前でCSVファイルに変換する
+df.to_csv('out.csv')	python: dfから'out.csv'という名前でCSVデータにする
+df.head()	python: dfの先頭の5行
+df.head()	python: df表の先頭の5行
+df.head()	python: 表dfの上5行
+df.head()	python: とりあえずdfの内容をチェック
+df.head()	python: とりあえず表dfの内容をチェックする
+df.head()	python: dfの内容をチェック
+df.head(10)	python: dfの先頭の10行
+df.head(10)	python: 表dfの先頭の10行
+df.head(10)	python: df表の先頭の10行
+df.tail()	python: dfの末尾の5行
+df.tail()	python: dfの末尾5行
+df.tail()	python: dfの最後の5行
+df.tail(10)	python: dfの末尾の10行
+df.tail(10)	python: df表の末尾の10行
+df.tail(10)	python: 表dfの末尾の10行
+df[100:106]	python: dfの100行目から106行目まで
+df[100:106]	python: df表の100行目から106行目まで
+df[100:106]	python: 表dfの100行目から106行目まで
+df[100:]	python: dfの100行目から最後まで
+df[100:]	python: 表dfの100行目から最後まで
+df[100:]	python: dfの100行目より後ろ
+df[100:]	python: 表dfの100行目より後ろ
+df[100:]	python: df表の100行目より後ろ
+df[:100]	python: dfの最初から100行目まで
+df[:100]	python: df表の最初から100行目まで
+df[:100]	python: df表の先頭から100行目まで
+df[:100]	python: dfの100行目まで
+df[:100]	python: df表の100行目まで
+df[:100]	python: df表の100行目より前
+df['age']	python: dfの'age'を抽出する
+df['age']	python: 表dfのコラム'age'を抽出する
+df['age']	python: df表の'age'コラムを選択する
+df[['name','age']]	python: dfの'name'と'age'を抽出する
+df[['name','age']]	python: df表の'name'カラム、'age'コラムを抽出する
+df[['name','age']]	python: df表の'name'カラム、'age'コラムを選択する
+df[['name','age','GPA']]	python: dfの'name'と'age'と'GPA'を抽出する
+df[['name','age','GPA']]	python: 表dfのコラム'name'、コラム'age'、列'GPA'を抽出する
+df[['name','age','GPA']]	python: 表dfのコラム'name'とコラム'age'と列'GPA'を選択する
+df[['name','age','GPA', 'addr']]	python: dfの'name'と'age'と'GPA'と'addr'を抽出する
+df[['name','age','GPA', 'addr']]	python: df表の'name'コラム、'age'コラム、'GPA'列、'addr'コラムを抽出する
+df[['name','age','GPA', 'addr']]	python: 表dfのコラム'name'とコラム'age'と列'GPA'とコラム'addr'を抽出する
+df.loc[100]	python: df中のインデックスが100の行
+df.loc[100]	python: dfの中のインデックスが100の行
+df.loc[100]	python: 表dfの中のインデックスが100の行
+df.iloc[[1,2,4],[0,2]]	python: df内の1,2,4行目の0,2列目
+df.iloc[[1,2,4],[0,2]]	python: dfの中の1,2,4行目の0,2列目
+df.iloc[[1,2,4],[0,2]]	python: 表df中の1,2,4行目の0,2列目
+df.info()	python: dfのデータの詳細
+df.info()	python: dfのデータの性質
+df.info()	python: 表dfのデータの詳細
+df.describe()	python: dfの要約統計量
+df.describe()	python: 表dfの統計情報
+df.describe()	python: 表dfの要約統計量
+df.describe(include='O')	python: dfの数値データ以外の統計情報
+df.describe(include='O')	python: 表dfの数値データ以外の統計情報
+df.describe(include='O')	python: dfのオブジェクトデータの要約統計量
+df['age'].describe()	python: dfの'age'についての要約統計量
+df['age'].describe()	python: 表dfのコラム'age'についての要約統計量
+df['age'].describe()	python: df表の'age'コラムについての要約統計量
+df['age'].describe()	python: (df['age'])の要約統計量
+df['age'].describe()	python: (df['age'])の統計情報
+df['age'].mean()	python: dfの'age'についての平均値
+df['age'].mean()	python: 表dfのコラム'age'についての平均値
+df['age'].mean()	python: df表の'age'コラムについての平均値
+df['age'].mean()	python: (df['age'])の平均
+df['age'].median()	python: dfの'age'についての中央値
+df['age'].median()	python: df表の'age'コラムについての中央値
+df['age'].median()	python: 表dfのコラム'age'についての中央値
+df['age'].median()	python: (df['age'])の中央値
+df['age'].mode()	python: dfの'age'についての最頻値
+df['age'].mode()	python: df表の'age'コラムについての最頻値
+df['age'].mode()	python: 表dfのコラム'age'についての最頻値
+df['age'].mode()	python: (df['age'])の最頻値
+df['age'].std()	python: dfの'age'についての標準偏差
+df['age'].std()	python: 表dfのコラム'age'についての標準偏差
+df['age'].std()	python: df表の'age'コラムについての標準偏差
+df['age'].std()	python: (df['age'])の標準偏差
+df['age'].var()	python: dfの'age'についての分散
+df['age'].var()	python: 表dfのコラム'age'についての分散
+df['age'].var()	python: df表の'age'コラムについての分散
+df['age'].var()	python: (df['age'])の分散
+df.columns	python: dfの列名
+df.columns	python: 表dfの列の名前
+df.columns	python: 表dfの列名
+df.index	python: dfのインデックス名
+df.index	python: df表の行名
+df.index	python: dfの行名
+df.values	python: dfのバリュー
+df.values	python: 表dfの要素
+df.values	python: df表の要素
+df['G3'].values	python: dfの'G3'のバリュー
+df['G3'].values	python: 表dfの列'G3'のバリュー
+df['G3'].values	python: df表の'G3'列のバリュー
+df.dtypes	python: dfのデータ型
+df.dtypes	python: 表dfのデータ型
+df.dtypes	python: df表のデータ型
+df.shape	python: dfの行数や列数
+df.shape	python: df表の行数と列数
+df.shape	python: 表dfの形状
+df['weather'].value_counts()	python: dfの'weather'の各要素の出現回数
+df['weather'].value_counts()	python: dfの'weather'のそれぞれのデータの出現回数
+df['weather'].value_counts()	python: df表の'weather'コラムのそれぞれのデータの出現回数
+df['remarks'].unique()	python: dfの'remarks'の一意の値
+df['remarks'].unique()	python: df表の'remarks'カラムの一意の値
+df['remarks'].unique()	python: df表の'remarks'カラムのデータの種類
+df['remarks'].nunique()	python: dfの'remarks'のユニークな要素の数
+df['remarks'].nunique()	python: 表dfの列'remarks'のユニークな要素の数
+df['remarks'].nunique()	python: 表dfの列'remarks'のデータの種類の数
+df.rename(columns={'sale': 'sales'})	python: dfのカラム名を'sale'から'sales'にリネームする
+df.rename(columns={'sale': 'sales'})	python: 表dfのカラム名を'sale'から'sales'にリネームする
+df.rename(columns={'sale': 'sales'})	python: 表dfの列名を変更する
+df.rename(columns={'sale': 'sales'})	python: dfの'sale'の名前を'sales'に変更する
+df.rename(columns={'sale': 'sales'})	python: 表dfの列'sale'の名前を'sales'にリネームする
+df.rename(columns={'sale': 'sales'})	python: 'sales'にdfの'sale'の名前をリネームする
+df.rename(columns={'sale': 'sales', 'prof': 'profit'})	python: dfのカラム名を'sale'から'sales'に'prof'から'profit'にリネームする
+df.rename(columns={'sale': 'sales', 'prof': 'profit'})	python: 'sale'から'sales'に表dfのカラム名を'prof'から'profit'にリネームする
+df.rename(columns={'sale': 'sales', 'prof': 'profit'})	python: 'sale'から'sales'に'prof'から'profit'に表dfの列名をリネームする
+df.rename(columns={'sale': 'sales', 'prof': 'profit'})	python: dfの'sale'の名前を'sales'に'prof'の名前を'profit'にリネームする
+df.rename(columns={'sale': 'sales', 'prof': 'profit'})	python: 'sales'にdf表の'sale'列の名前を'profit'に'prof'カラムの名前をリネームする
+df.rename(columns={'sale': 'sales', 'prof': 'profit'})	python: 'sales'に'prof'カラムの名前をdf表の'sale'列の名前を'profit'にリネームする
+df.rename(index={'ONE': 'Row_1'})	python: dfのインデックス名を'ONE'から'Row_1'にリネームする
+df.rename(index={'ONE': 'Row_1'})	python: 'ONE'から'Row_1'にdfのインデックス名をリネームする
+df.rename(index={'ONE': 'Row_1'})	python: 表dfの行の名前を'ONE'から'Row_1'にリネームする
+df.rename(index={'ONE': 'Row_1'})	python: dfの'ONE'の名前を'Row_1'にリネームする
+df.rename(index={'ONE': 'Row_1'})	python: df表の'ONE'インデックスの名前を'Row_1'にリネームする
+df.rename(index={'ONE': 'Row_1'})	python: 'Row_1'に表dfのインデックス'ONE'の名前をリネームする
+df.set_index('datetime')	python: dfの'datetime'をインデックスに設定する
+df.set_index('datetime')	python: 表dfのカラム'datetime'をインデックスとして指定する
+df.set_index('datetime')	python: df表の'datetime'カラムをインデックスに指定する
+df.reset_index()	python: リセットする
+df.reset_index()	python: 表dfのインデックスを振り直す
+df.reset_index()	python: df表のインデックスをリセットする
+df.reset_index(drop=True)	python: dfの元のインデックスをリセットする
+df.reset_index(drop=True)	python: 表dfの元のインデックスをリセットする
+df.reset_index(drop=True)	python: df表の元のインデックスをリセットする
+df.reset_index(drop=True)	python: dfのリセットセットして、元のインデックスを削除する
+df.reset_index(drop=True)	python: 表dfの振り直して、元のインデックスを削除する
+df.reset_index(drop=True)	python: dfのリセット、元のインデックスを削除する
+pd.to_datetime(df['date'])	python: dfの'date'を日付型に変換する
+pd.to_datetime(df['date'])	python: 日付型に表dfのコラム'date'をする
+pd.to_datetime(df['date'])	python: 日付型に表dfのコラム'date'を変換する
+pd.to_datetime(df['date'], format='%Y-%m-%d')	python: フォーマットを指定してdfの'date'をdatetime型に変換する
+pd.to_datetime(df['date'], format='%Y-%m-%d')	python: 表dfのコラム'date'をフォーマットをdatetime型にする
+pd.to_datetime(df['date'], format='%Y-%m-%d')	python: 表dfのコラム'date'をdatetime型にフォーマットを変換する
+df['date'].dt.year	python: dfの'date'の年
+df['date'].dt.year	python: 表dfのコラム'date'の年
+df['date'].dt.year	python: df表の'date'コラムの年
+df['date'].dt.month	python: dfの'date'の月
+df['date'].dt.month	python: df表の'date'コラムの月
+df['date'].dt.month	python: 表dfのコラム'date'の月
+df['date'].dt.day	python: dfの'date'の日にち
+df['date'].dt.day	python: df表の'date'コラムの日にち
+df['date'].dt.day	python: 表dfのコラム'date'の日にち
+df['date'].dt.hour	python: dfの'date'の時間
+df['date'].dt.hour	python: df表の'date'コラムの時間
+df['date'].dt.hour	python: 表dfのコラム'date'の時間
+df['date'].dt.minute	python: dfの'date'の分
+df['date'].dt.minute	python: df表の'date'コラムの分
+df['date'].dt.minute	python: 表dfのコラム'date'の分
+df['date'].dt.second	python: dfの'date'の秒
+df['date'].dt.second	python: 表dfのコラム'date'の秒
+df['date'].dt.second	python: df表の'date'コラムの秒
+df['date'].dt.weekday_name	python: dfの'date'の曜日
+df['date'].dt.weekday_name	python: df表の'date'コラムの曜日
+df['date'].dt.weekday_name	python: 表dfのコラム'date'の曜日
+df['date'].dt.dayofweek	python: dfの'date'の曜日の数値型
+df['date'].dt.dayofweek	python: df表の'date'コラムの曜日の数値型
+df['date'].dt.dayofweek	python: 表dfのコラム'date'の曜日の数値型
+df['temperature'].diff(periods=1)	python: dfの'temperature'内の前後の行の差分
+df['temperature'].diff(periods=1)	python: 表dfのコラム'temperature'中の前後の行の差分
+df['temperature'].diff(periods=1)	python: df表の'temperature'コラム内の前後の行の差分
+df.corr()	python: dfの相関
+df.corr()	python: 表dfの相関
+df.corr()	python: df表の相関
+df[['kcal', 'sales']].corr()	python: dfの'kcal'と'sales'の相関係数
+df[['kcal', 'sales']].corr()	python: 表dfのコラム'kcal'とコラム'sales'の相関
+df[['kcal', 'sales']].corr()	python: dfの'kcal'と'sales'の相関
+df.T	python: dfの行と列を入れ替える
+df.T	python: df表の行列を入れ替える
+df.T	python: 表dfの行列を入れ替える
+df.T	python: dfを転置する
+df.T	python: df表を転置する
+df.T	python: 表dfを転置する
+df[df['city'] == 'Tokyo']	python: dfの'city'が'Tokyo'のデータ
+df[df['city'] == 'Tokyo']	python: 表dfの列'city'が'Tokyo'のデータ
+df[df['city'] == 'Tokyo']	python: df表の'city'列が'Tokyo'のデータ
+df[df['year'] > 1990]	python: dfの'year'が1990より大きいデータ
+df[df['year'] > 1990]	python: dfの'year'が1990より多いデータ
+df[df['year'] > 1990]	python: df表の'year'が1990より大きいデータ
+df[df['year'] >= 1990]	python: dfの'year'が1990以上のデータ
+df[df['year'] >= 1990]	python: df表の'year'が1990以上のデータ
+df[df['year'] >= 1990]	python: 表dfの'year'が1990以上のデータ
+df[df['year'] < 1990]	python: dfの'year'が1990より小さいデータ
+df[df['year'] < 1990]	python: 表dfの'year'が1990より少ないデータ
+df[df['year'] < 1990]	python: 1990よりdfの'year'が小さいデータ
+df[df['year'] <= 1990]	python: dfの'year'が1990以下のデータ
+df[df['year'] <= 1990]	python: 表dfの'year'が1990以下のデータ
+df[df['year'] <= 1990]	python: 1990以下のデータ
+df[df['city'].isin(['Tokyo', 'Osaka'])]	python: dfの'city'が'Tokyo'もしくは'Osaka'のデータ
+df[df['city'].isin(['Tokyo', 'Osaka'])]	python: dfの'city'が'Tokyo'か'Osaka'のデータ
+df[df['city'].isin(['Tokyo', 'Osaka'])]	python: dfの'city'が'Tokyo'または'Osaka'のデータ
+df.drop(0)	python: dfの0行目を取り除く
+df.drop(0)	python: df表の0行目を削除する
+df.drop(0)	python: dfの0行目を消す
+df.drop('price', axis=1)	python: dfの'price'をドロップする
+df.drop('price', axis=1)	python: dfの'price'を落とす
+df.drop('price', axis=1)	python: 削除する
+df.drop(['price', 'year'], axis=1)	python: dfの'price'と'year'をドロップする
+df.drop(['price', 'year'], axis=1)	python: df表の'price'カラムと'year'をドロップする
+df.drop(['price', 'year'], axis=1)	python: dfの'price'と'year'を取り除く
+df.dropna()	python: df内のNaNが存在する行をドロップする
+df.dropna()	python: 表df内のNaNが存在する行を削除する
+df.dropna()	python: 表dfの中の未入力の値がある行を取り除く
+df.dropna()	python: df内の欠損値を含む行をドロップする
+df.dropna()	python: 表dfの中の未記入の値を含む行を落とす
+df.dropna()	python: 表df中の未記入の値を落とす
+df.fillna(symbol)	python: df内の欠損値をsymbolに置換する
+df.fillna(symbol)	python: df表内の欠損値をsymbolに置換する
+df.fillna(symbol)	python: symbolで置き換える
+df.fillna(symbol)	python: df内の欠損値をsymbolで埋める
+df.fillna(symbol)	python: df中のNaNをsymbolで埋める
+df.fillna(symbol)	python: 表df内の欠損値をsymbolとする
+df.fillna(method='ffill')	python: df内の欠損値を直前の行の値で埋める
+df.fillna(method='ffill')	python: dfの中の未記入の値を直前の行の値で補う
+df.fillna(method='ffill')	python: dfの中の未入力の値を直前の行の値で補う
+df.fillna(df.mean())	python: df内の欠損値をdfの平均値で埋める
+df.fillna(df.mean())	python: 表df内の欠損値を表dfの平均値で埋める
+df.fillna(df.mean())	python: df表内の欠損をdf表の平均値で埋める
+df.replace('?', np.nan).dropna()	python: df内の'?'を欠損値に置換し欠損値が存在する行をドロップする
+df.replace('?', np.nan).dropna()	python: 置換しNaNがある行をNaNに表df中の'?'を消す
+df.replace('?', np.nan).dropna()	python: 置換し未記入の値がある行を表df中の'?'を未記入の値に落とす
+df.replace('?', np.nan)	python: df内に存在する'?'を欠損値に置換する
+df.replace('?', np.nan)	python: df中に存在する'?'を欠損で置換する
+df.replace('?', np.nan)	python: df内に存在する'?'を欠損値で置換する
+df.replace('?', np.nan)	python: df内に存在する'?'を欠損値で埋める
+df.replace('?', np.nan)	python: df中に存在する'?'をNaNで補う
+df.replace('?', np.nan)	python: ある'?'を表dfの中に未入力の値とする
+pd.merge(df1, df2)	python: df1とdf2を横方向にマージする
+pd.merge(df1, df2)	python: df1表とdf2表をくっつける
+pd.merge(df1, df2)	python: df1とdf2を一つにまとめる
+pd.merge(df1, df2, on='id')	python: 'id'をキーとしてdf1とdf2をマージする
+pd.merge(df1, df2, on='id')	python: 'id'列をキーとしてマージする
+pd.merge(df1, df2, on='id')	python: 'id'をdf1とdf2をキーとしてマージする
+pd.merge(df1, df2, on='id')	python: df1とdf2に対して'id'をキーとしてデータをマージする
+pd.merge(df1, df2, on='id')	python: df1表とdf2表に対して'id'列をキーとしてデータをマージする
+pd.merge(df1, df2, on='id')	python: データをキーとしてdf1表とdf2表に対して'id'列をマージする
+pd.merge(df1, df2, how='outer')	python: 全結合でdf1とdf2をマージする
+pd.merge(df1, df2, how='outer')	python: 両方の列を使ってdf1とdf2をマージする
+pd.merge(df1, df2, how='outer')	python: 片方のテーブルにしかないデータも全て残してdf1表とdf2表をマージする
+pd.merge(df1, df2, left_index=True, right_on='index_num')	python: 左側のデータのインデックスと右側のデータの'index_num'をキーとしてdf1とdf2をマージする
+pd.merge(df1, df2, left_index=True, right_on='index_num')	python: キーとして左側のデータのインデックスと'index_num'をdf1とdf2をマージする
+pd.merge(df1, df2, left_index=True, right_on='index_num')	python: 左側のデータのインデックスとカラム'index_num'をキーとして表df1と表df2をマージする
+pd.merge(df1, df2, how='left')	python: 左外部結合でdf1とdf2をマージする
+pd.merge(df1, df2, how='left')	python: 左側の表に合わせて表df1と表df2をマージする
+pd.merge(df1, df2, how='left')	python: 左側の表データに合わせてdf1表とdf2表をマージする
+pd.concat([df1, df2])	python: df1とdf2を縦方向にマージする
+pd.concat([df1, df2])	python: df1表とdf2表を縦向きにマージする
+pd.concat([df1, df2])	python: df1表とdf2表を縦向きでマージする
+pd.concat([df1, df2])	python: df1とdf2を結合する
+pd.concat([df1, df2])	python: 表df1と表df2を結合する
+pd.concat([df1, df2])	python: df1表とdf2表を結合する
+df.pivot_table(index='Pclass', columns='Sex')	python: dfの'Pclass'をインデックス'Sex'をカラムとしたピボットテーブルを作成する
+df.pivot_table(index='Pclass', columns='Sex')	python: インデックスカラム'Sex'をカラムとしたピボットテーブルを表dfの列'Pclass'を作成する
+df.pivot_table(index='Pclass', columns='Sex')	python: 列としたピボットテーブルをdfの'Pclass'をインデックス'Sex'を作成する
+df.pivot_table(index='Pclass', columns='Sex', values='Age')	python: dfの'Age'について'Pclass'をインデックス'Sex'をカラムとしたピボットテーブルを作成する
+df.pivot_table(index='Pclass', columns='Sex', values='Age')	python: カラムとしたピボットテーブルをインデックス'Sex'をdfの'Age'について'Pclass'を作成する
+df.pivot_table(index='Pclass', columns='Sex', values='Age')	python: 表dfのカラム'Age'について列'Pclass'をインデックスカラム'Sex'を列としたピボットテーブルを作成する
+df.stack()	python: ピボット操作でdfの列を行にリネームする
+df.stack()	python: ピボット操作でdf表の列を行に変更する
+df.stack()	python: ピボット操作で表dfの列を行にリネームする
+df.unstack()	python: ピボット操作でdfの行を列に入れ替える
+df.unstack()	python: 列にピボット操作で表dfの行をリネームする
+df.unstack()	python: 列にピボット操作でdf表の行をリネームする
+df.duplicated()	python: df内に重複があるのかどうか判定する
+df.duplicated()	python: df表の中に重複はあるのか検出する
+df.duplicated()	python: 表df中に重複があるのかチェック
+df.duplicated()	python: df内の重複を判定する
+df.duplicated()	python: df表中の重複を確認
+df.duplicated()	python: 表df内の重複を判定する
+df.duplicated()	python: dfに重複があるのかどうか
+df.duplicated()	python: 重複があるのかどうdfにか
+df.duplicated()	python: 表dfに重複があるのかどうか
+df.duplicated()	python: dfに重複があるのかどうかをTFで返す
+df.duplicated()	python: 重複があるのかどうTFでかをdfに返す
+df.duplicated()	python: かを重複があるのかどう真偽値で返す
+df.duplicated()	python: dfの行の重複を判定する
+df.duplicated()	python: df表の行の重複を確認
+df.duplicated()	python: 表dfの重複行を検出する
+df.duplicated().sum()	python: df内で重複した行数の合計
+df.duplicated().sum()	python: 表dfの中で重複した行の数の合計
+df.duplicated().sum()	python: dfの中で重複した行の数の合計
+df[df.duplicated()]	python: df内で重複しているデータ
+df[df.duplicated()]	python: dfの中の重複しているデータ
+df[df.duplicated()]	python: df表の中で重複しているデータ
+df.duplicated(subset='state')	python: df内の'state'に重複があるのかどうか判定する
+df.duplicated(subset='state')	python: 重複があるのかどう表df内のコラム'state'にか判定する
+df.duplicated(subset='state')	python: 重複があるのかどうdf内の'state'にか判定する
+df.duplicated(subset='state')	python: df内の'state'に重複があるのかどうか
+df.duplicated(subset='state')	python: df表内の'state'列に重複はあるのかどうか
+df.duplicated(subset='state')	python: df内の'state'に重複はあるのかどうか
+df.duplicated(subset=['state', 'point'])	python: df内の'state'と'point'にか判定する
+df.duplicated(subset=['state', 'point'])	python: 重複はあるのかどうdf表の中の'state'カラムと'point'コラムにか検出する
+df.duplicated(subset=['state', 'point'])	python: df表中の'state'カラムと'point'コラムに重複があるのかどうか確認
+df.duplicated(subset=['state', 'point'])	python: df内の'state'と'point'に重複があるのかどうか
+df.duplicated(subset=['state', 'point'])	python: df表内の'state'カラムと'point'コラムに重複があるのかどうか
+df.duplicated(subset=['state', 'point'])	python: 表df中のカラム'state'とコラム'point'に重複があるのかどうか
+df.drop_duplicates()	python: df内の重複した行をドロップする
+df.drop_duplicates()	python: 表df内の重複した行をドロップする
+df.drop_duplicates()	python: df表の中の重複する行を落とす
+df.drop_duplicates()	python: df内の重複要素がある行をドロップする
+df.drop_duplicates()	python: 表dfの中の重複要素がある行を取り除く
+df.drop_duplicates()	python: 消す
+df.drop_duplicates(keep=False)	python: 重複した最後の行をドロップする
+df.drop_duplicates(keep=False)	python: 残して表df中の重複している行を重複している最後の行を削除する
+df.drop_duplicates(keep=False)	python: 重複する最後の行を残してdf表の中の重複している行を取り除く
+df.drop_duplicates(subset='state')	python: df内の'state'の重複した行をドロップする
+df.drop_duplicates(subset='state')	python: df中の'state'の重複している行を消す
+df.drop_duplicates(subset='state')	python: df表の中の'state'カラムの重複する行を取り除く
+df.drop_duplicates(subset='state')	python: df内の'state'に重複がある行をドロップする
+df.drop_duplicates(subset='state')	python: 重複がある行をdf表内の'state'カラムに削除する
+df.drop_duplicates(subset='state')	python: df中の'state'に重複がある行を落とす
+pd.cut(df['birth_year'], data_bins)	python: 境界値をdata_binsとしてdfの'birth_year'を分割する
+pd.cut(df['birth_year'], data_bins)	python: data_binsリストとしてdf表の'birth_year'列を境界値を分割する
+pd.cut(df['birth_year'], data_bins)	python: 境界値をdata_binsリストとしてdf表の'birth_year'列を分割する
+pd.cut(df['birth_year'], bins_num)	python: ビン数をbins_numとしてdfの'birth_year'を分割する
+pd.cut(df['birth_year'], bins_num)	python: 分割数を表dfの列'birth_year'をbins_numとして分割する
+pd.cut(df['birth_year'], bins_num)	python: bins_numとして分割数をdf表の'birth_year'列を分割する
+pd.cut(df['birth_year'], bins_num, label=group_names)	python: ビン数をbins_num、ビンの名前をgroup_namesとしてdfの'birth_year'を分割する
+pd.cut(df['birth_year'], bins_num, label=group_names)	python: bins_num、ビンの名前を表dfの列'birth_year'をリストgroup_namesとしてビン数を分割する
+pd.cut(df['birth_year'], bins_num, label=group_names)	python: df表の'birth_year'列をgroup_namesリストとしてbins_num、ビンのラベルをビン数を分割する
+pd.cut(df['birth_year'], bins_num, label=False)	python: ビン数をbins_num、ビンのラベルを0始まりの連番としてdfの'birth_year'を分割する
+pd.cut(df['birth_year'], bins_num, label=False)	python: 分割数をbins_num、ビンの名前を0始まりの連番として分割する
+pd.cut(df['birth_year'], bins_num, label=False)	python: 分割数をbins_num、ビンの名前を整数値として表dfの列'birth_year'を分割する
+pd.qcut(df['birth_year'], 2)	python: dfの'birth_year'を中央値で分割する
+pd.qcut(df['birth_year'], 2)	python: df表の'birth_year'列を中央値で分割する
+pd.qcut(df['birth_year'], 2)	python: 表dfの列'birth_year'を中央値で分割する
+pd.qcut(df['birth_year'], 4)	python: dfの'birth_year'を四分位数ごとで分割する
+pd.qcut(df['birth_year'], 4)	python: 表dfの列'birth_year'を四分位数ごとで分割する
+pd.qcut(df['birth_year'], 4)	python: df表の'birth_year'列を四分位数ごとで分割する
+pd.qcut(df['birth_year'], bins_num)	python: ビン数をbins_numとしてdfの'birth_year'をビンに含まれる個数が等しくなるように分割する
+pd.qcut(df['birth_year'], bins_num)	python: ビンに含まれる個数が等しくなるようにビン数をbins_numとして表dfの列'birth_year'を分割する
+pd.qcut(df['birth_year'], bins_num)	python: ビン数をビンに含まれる個数が等しくなるようにbins_numとしてdf表の'birth_year'列を分割する
+df.groupby('flg-50K').size()	python: dfの'flg-50K'をグループ化したときの値ごとのデータ件数
+df.groupby('flg-50K').size()	python: df表の'flg-50K'列をグループ化したときの値ごとのデータの件数
+df.groupby('flg-50K').size()	python: df表の'flg-50K'列をグループ化したときの値ごとのデータ件数
+df.groupby(['month', 'period'])['sales'].sum()	python: dfの'month'と'period'ごとの'sales'の値の合計値
+df.groupby(['month', 'period'])['sales'].sum()	python: 表dfの列'month'とコラム'period'ごとの列'sales'の値の合計値
+df.groupby(['month', 'period'])['sales'].sum()	python: dfの'month'と'period'ごとの'sales'の値の和
+df.groupby(['weather'])['temperature'].mean()	python: dfの'weather'ごとの'temperature'の平均
+df.groupby(['weather'])['temperature'].mean()	python: 表dfの列'weather'ごとの列'temperature'の平均値
+df.groupby(['weather'])['temperature'].mean()	python: df表の'weather'列ごとの'temperature'列の平均
+df.groupby(['week'])['soldout'].count()	python: dfのtype('week', カラム)ごとの'soldout'の数
+df.groupby(['week'])['soldout'].count()	python: df表のtype('week', コラム)ごとの'soldout'カラムの数
+df.groupby(['week'])['soldout'].count()	python: df表のtype('week', 列)ごとの'soldout'カラムの数
+降順に=逆順に|大きい順に|大から小へと|値が大きい順に	python: 昇順に=順に
+降順に=逆順に|大きい順に|大から小へと|値が大きい順に	python: =順に昇順に
+df.sort_index()	python: インデックスで昇順にソートする
+df.sort_index()	python: 表dfをインデックスでソート
+df.sort_index()	python: dfをインデックスで並び替える
+df.sort_index()	python: df全体をインデックスを軸に昇順でソートする
+df.sort_index()	python: インデックスをdf表全体を軸に昇順でソートする
+df.sort_index()	python: インデックスをdfを軸に昇順でソートする
+df.sort_index()	python: df全体をインデックスに基づいて昇順でソートする
+df.sort_index()	python: df表をインデックスに沿ってソートする
+df.sort_index()	python: df表をインデックスに基づいて昇順でソートする
+df.sort_values(['sales', 'temperature'], ascending=False)	python: dfを'sales'と'temperature'で昇順にソートする
+df.sort_values(['sales', 'temperature'], ascending=False)	python: 'sales'コラムと'temperature'カラムでdf表全体を昇順にソートする
+df.sort_values(['sales', 'temperature'], ascending=False)	python: 表dfをコラム'sales'とカラム'temperature'で昇順にソートする
+df.sort_values(['sales', 'temperature'], ascending=False)	python: dfを'sales'と'temperature'を軸に昇順でソートする
+df.sort_values(['sales', 'temperature'], ascending=False)	python: df表を'sales'コラムと'temperature'カラムを元にソートする
+df.sort_values(['sales', 'temperature'], ascending=False)	python: 'sales'と'temperature'をdfを元にソートする
+df.sort_values(['sales', 'temperature'], ascending=False)	python: dfを'sales'と'temperature'に基づいて昇順でソートする
+df.sort_values(['sales', 'temperature'], ascending=False)	python: dfを'sales'と'temperature'に沿ってソートする
+df.sort_values(['sales', 'temperature'], ascending=False)	python: df表全体を'sales'コラムと'temperature'カラムに基づいて昇順でソートする
+df.sort_values(['sales', 'temperature'], ascending=False)	python: dfの'sales'と'temperature'を降順にソートする
+df.sort_values(['sales', 'temperature'], ascending=False)	python: dfの'sales'と'temperature'を逆順にソートする
+df.sort_values(['sales', 'temperature'], ascending=False)	python: 表dfのカラム'sales'とコラム'temperature'を降順にソートする
+df.sort_values('sales')	python: df全体を'sales'で昇順にソートする
+df.sort_values('sales')	python: 'sales'でdfをソートする
+df.sort_values('sales')	python: 表dfをカラム'sales'でソートする
+df.sort_values('sales')	python: df全体を'sales'を軸に昇順でソートする
+df.sort_values('sales')	python: 表dfをカラム'sales'を元にソートする
+df.sort_values('sales')	python: 表df全体をカラム'sales'を軸に昇順でソートする
+df.sort_values('sales')	python: dfを'sales'に基づいて昇順でソートする
+df.sort_values('sales')	python: df全体を'sales'に基づいて昇順でソートする
+df.sort_values('sales')	python: df表を'sales'カラムに沿ってソートする
+df.sort_values('sales')	python: dfの'sales'を降順にソートする
+df.sort_values('sales')	python: dfの'sales'を逆順にソートする
+df.sort_values('sales')	python: df表の'sales'コラムを降順にソートする
+df.isnull().sum()	python: df内の欠損値の合計
+df.isnull().sum()	python: 表df中のNaNの合計値
+df.isnull().sum()	python: 表df中のNaNの和
+df.isnull().sum()	python: df内にいくつ欠損値があるのかカウントする
+df.isnull().sum()	python: df内にいくつ欠損値があるか確認
+df.isnull().sum()	python: df表中にいくつ欠損値があるのかカウントする
+df.isin(['?']).sum()	python: df内のそれぞれのカラムにある'?'の個数の和
+df.isin(['?']).sum()	python: dfの中のそれぞれの列にある'?'の数の数
+df.isin(['?']).sum()	python: df中のそれぞれのコラムにある'?'の個数
+df.isin(['?']).sum()	python: df内のカラムそれぞれに存在する'?'の個数の和
+df.isin(['?']).sum()	python: df表内のカラムそれぞれに存在する'?'の個数の合計
+df.isin(['?']).sum()	python: 表df内のカラムに存在する'?'の個数の合計
+pd.get_dummies(df)	python: df内のカテゴリ変数をダミー変数化する
+pd.get_dummies(df)	python: df内のカテゴリ変数をダミー変数に変換する
+pd.get_dummies(df)	python: df中のカテゴリ変数をダミー変数にする
+pd.get_dummies(df)	python: dfについてダミー変数を作る
+pd.get_dummies(df)	python: 表dfについてダミー変数を作成する
+pd.get_dummies(df)	python: つくる
+pd.get_dummies(df)	python: dfをダミー変数化する
+pd.get_dummies(df)	python: 表dfをダミー変数化する
+pd.get_dummies(df)	python: df表をダミー変数化する
+pd.get_dummies(df['sex'])	python: dfの'sex'をダミー変数化する
+pd.get_dummies(df['sex'])	python: df表の'sex'列をダミー変数化する
+pd.get_dummies(df['sex'])	python: 表dfの列'sex'をダミー変数化する
+pd.get_dummies(df['sex'])	python: dfの'sex'についてダミー変数を生成する
+pd.get_dummies(df['sex'])	python: 表dfの列'sex'についてダミー変数を作成する
+pd.get_dummies(df['sex'])	python: 表dfの列'sex'についてダミー変数を作る
+ナイスチャレンジです。	encourage: 星集め差分の和にも挑戦したのですが分かりませんでした。
+焦らず頑張りましょう。	encourage: 特に差分の和で入力する数(N)が毎回違うのが難しかったです。
+プログラミングは難しいですよね。	encourage: 簡単ではありませんでした。
+人間は忘れる生き物です。復習を繰り返しましょう。	encourage: 割と忘れていたことも多かったので難しく感じました。
+復習すればきっと思い出せます。	encourage: 思っていたよりも1年でpythonの知識を忘れていて焦りました。
+難しいですよね。一度頭を休めてみてはいかがですか？	encourage: ただその次の差の和の問題が難しいです。
+相談してヒントをもらうことも時には大切です。	encourage: どのようにアプローチすればよいか思いつきません。
+最初から得意な人ばかりではないですよ。安心してください。	encourage: 情報コースに進みたいと思っているほぼ決めているのですがプログラミングが正直得意な方ではありません。
+あなたはあなたの良さがあります。	encourage: 事前アンケートで「ネットのPythonの問は出来る」人が多いという事を聞いてとても焦っています。
+時には休むことも大切ですよ。	encourage: 演習問題は差分の和で詰まってしまい悲しかったです。
+少しづつ慣れていきましょう。	encourage: また慣れないアプリでの授業というのと春休みで全く触れなかったせいもありだいぶ苦労しています。
+みんなきっと優しいですよ。応援しています。	encourage: 本日のブレイクアウトルームも他の先生では行わない交流の機会を設けてくださりうれしいのですが友人が一人もおらずちきって入れませんでした。
+最初は難しいですよね。あなたのペースで学びましょう。	encourage: 全く解けなかったです。
+これをきっかけに仲良くなってみてはいかがでしょう。きっとみんなあなたの味方です。	encourage: 適当なブレイクアウトルームに入りましたが知っている子がいなくて他の子達は知り合いっぽくてついていけなかったので相談などはできませんでした。
+これをきっかけに友達を作ってみてはいかがでしょう。きっとみんなあなたの味方です。	encourage: 友達がほぼいないのでブレイクアウトルームが結構しんどいです。
+最初は勇気がいりますよね。応援しています。	encourage: ブレイクアウトルームで話しかけるのもかなり勇気がいるのでつらいです。
+全て完璧でなくても大丈夫ですよ。後から振り返ることもできます。	encourage: 先生の話が早くて全くついていけませんでした。
+みんな最初は同じです。あなたのペースで。	encourage: なかなか最初は難しいです。
+初めてのことはわからないですよね。でも初めての経験って面白いですよ！	encourage: Colaboratoryを初めて使ったのでどこに入力しどう実行すればいいのか分からず戸惑いました。
+ゆっくり復習をしながら進めていってください！	encourage: 思った以上にプログラミングのことを忘れていて少し苦労しました。
+そんな時は、一旦昔の問題に取り組んでみてはいかがですか？	encourage: Atcordの演習問題はCircleの問題でつまずきそこで心折れました。
+大丈夫ですよ、ゆっくり考えてみましょう。	encourage: ちなみにその次の直方体でもつまずきさらに心折れました。
+ゆっくり取り組んでいけば、できるようになりますよ。	encourage: でもできないので今は嫌いです。
+大丈夫ですよ、解いていくことでだんだん速くなりますよ。	encourage: 私はA+取りたいので頑張って問題解こうと思ったのですが一問解くのに時間がかかりすぎてすでにお先真っ暗です。
+ゆっくり取り組んでみてください。	encourage: AtCorderが少し難しかったです。
+そんな時は、一旦前に戻って復習していきましょう。	encourage: 1年のプログラミングの授業をオンラインだったのもあり途中からわからなくなったのを放置していたので全くわからない状態です。
+ゆっくり思い出していきましょう！	encourage: 久しぶりにプログラミングをしたので最初は感覚や文法が思い出せずに苦戦してしまいました。
+差分の和は難しいので、また復習してみてください。	encourage: 差分の和の問題から難しく感じました。
+大丈夫ですよ、焦らず自分のペースで進めていきましょう。	encourage: 出遅れている感があり焦っています。
+大丈夫ですよ、ゆっくり取り組んで行きましょう。	encourage: 1年のプログラミング実習の成績が悪くまた理解力が遅いためなかなかついていくことができなかったので少し不安です。
+そういう時もあります。諦めずに頑張っていきましょう。	encourage: これだ!と思って打ち込み結果にREが出てくるとやっぱりへこみますね...(涙)
+そういう時は、ゆっくりプログラムを確認しましょう。	encourage: ランタイムエラーが何回か出てしまって困りました。
+大丈夫ですよ、自分のペースで進めていきましょう。	encourage: 今週はいろいろ予定がたまりすぎて進みませんでした。
+そういう時は、落ち着いて見直しをしてみましょう。	encourage: エラーになったときの原因が分からないともやもやします。
+大丈夫ですよ、だんだん速くなっていきますよ。	encourage: (Sx,Sy)からx軸までの直線の傾きの符号を逆にするとx軸から(Gx,Gy)までの直線の傾きになるので方程式を立てて解きましたが方程式を立てて変形するのに時間がかかってしまいました。
+大丈夫ですよ、焦らず自分のペースで進めていきましょう。	encourage: その週ごとに進めていけばいいと思っていましたが友人はかなり進んでいたので不安です。
+そういう時は、ゆっくり見直しをしてみましょう。	encourage: プログラムをやっているとこれでできたか?と思ってもエラーになってしまってなかなか苦戦しています。
+難しい問題は、細かく分けて考えてみてはいかがですか？	encourage: 差分の和とカエルの問題が難しいです。
+大丈夫ですよ、自分のペースで進めていきましょう。	encourage: 全くついていけないです。
+わからない部分は、声をかけてくださいね。	encourage: 去年は一人でプログラミングの授業を受けていたので不安だらけでした。
+そういう時は、細かく分けながら考えてみてください。	encourage: ビリヤードと秒針の問題はプログラミングがどうこう以前に数学力が試され中高で習った数学の知識を過去に置いてきた私にはかなりの苦戦を強いられました。
+大丈夫ですよ、解いていけば速くなっていきますよ。	encourage: 少しずつ慣れてきたいですPythonがすごく苦手で問題を解くスピードがかなり遅いのですが大丈夫でしょうか。
+そういう時は、先生に声をかけてみてください。	encourage: AtCoderの課題リストの反映がたまにおかしい時があるのできちんと先生にも反映されているか心配になることがあります。
+大丈夫ですよ、自分のペースで進めていくことが大切です。	encourage: また自分の進め方が正しいのかなど不安になります。
+そういう時は、一旦他のことに取り組むのはいかがですか？	encourage: アップルパイとディスカウントをやって心折れました。
+そういう時は、細かく分けて考えてみてはいかがですか？	encourage: 何回もやり直しても正解にならないので大変だった。
+そういう時は、先生に聞いてみてくださいね。	encourage: 課題の78にある文字列の問題について3桁の整数をリストにして考えてみたのですがエラーになってしまいわかりませんでした。
+大丈夫ですよ、自分のペースで進めていきましょう。	encourage: 20日は休講で特にやっていないため何も進んでいません。
+大丈夫ですよ、焦らず自分のペースで進めていきましょう。	encourage: AtCoder演習問題はまだ進めていません。
+コツコツ進めていくことが大切ですよ！	encourage: ちょくちょく進めないとと思うのですがパソコンを開こうという気持ちにならないことが理由だと思います。
+大丈夫ですよ、自分のペースで進めていきましょう。	encourage: また最近気づいたどうでもいいことなのですがAtCoderユーザ名が明らかに自分すぎてAtCoder演習問題の進み具合がバレるかもと思い失敗したなと思いました。
+そういう時は、ゆっくりプログラムを確認しましょう。	encourage: colabでは「print」を使わずに実行することができるので使わずにそのままAtCoderで提出したら不正解になってしまっていたことになかなか気がつかなかった苦戦しました。
+大丈夫ですよ、ゆっくり取り組んで行きましょう。	encourage: 第2回目の講義は進みませんでした。
+少しでも取り組んでいくのが良いですよ。	encourage: 苦手ということもありやろうと思うまでに時間がかかってしまいます。
+大丈夫ですよ、自分のペースで進めていきましょう。	encourage: やっぱりプログラミング苦手で結構難しかったです。
+そういう時は、ゆっくりプログラムを確認しましょう。	encourage: 角度でradiansを入れ忘れたりプログラミングを短くしないとWAになり続けたりすごく大変でした。
+大丈夫ですよ、焦らず自分のペースで進めていきましょう。	encourage: でも頑張ったのでお腹がすきました!想像以上に授業の対面が始まったら忙しく進められる時間があまりありませんでした。
+大丈夫ですよ、ゆっくり取り組んで行きましょう。	encourage: 慣れるまで少し時間がかかりそうです...
+そういう時は、ゆっくりプログラムを確認しましょう。	encourage: 2回の演習問題はあと三つです!Colabではちゃんと出力できてもAtCoderではエラーになってしまうものもあり難しいなと感じた。
+そういう時は、ゆっくりプログラムを確認しましょう。	encourage: 例題はできるがAtCoderでの実践問題となると厳しい。
+ゆっくり慣れていきましょう。	encourage: AtCoderにまだ慣れないです。
+大丈夫ですよ、焦らず自分のペースで進めていきましょう。	encourage: 今週は全くすすんでないです。
+緊張せず、気楽に取り組んでください！	encourage: 毎回結果がでるまでにやや時間があるので緊張してしまう。
+取り組む気持ちが大切ですよ！	encourage: 空いた時間に演習問題を少しずつ進めようと思っていたのですが具体的な目標を定めていなかったので結局だらけてしまいほとんど進められませんでした。
+だんだんと難しくなっているので、ゆっくり取り組んでいきましょう。	encourage: 前回より少しだけ進んだ気がしますが応用になると難しくて解くことが難しいです。
+そういう時は、先生に相談してみてください。	encourage: atcorderのアカウントですが以前から作ってはいたもののログインすることができずまだ演習ができておりません。
+コツコツ進めていきましょう！	encourage: 倉光先生は優しいので出席していれば単位は取れるだろうという安心感に甘えてしまい第1回目の授業からやらなければいけないことがたまっている状況です( ́;ω;`)やっと1週目の課題が終わりました...!長かったですね
+繰り返しは難しいので、また復習してみてください。	encourage: 今週は条件分岐の内容でしたが私は繰り返し文が苦手だったのでfor文やwhile文の違いがよくわかっていませんでした。
+そういう時は、一旦他のことに取り組むのはいかがですか？	encourage: 実行時エラーや不正解の連続で気が折れてしまいそうです。
+大丈夫ですよ、解いていくことでだんだん速くなりますよ。	encourage: 初めの方は比較的スムーズに解き進めていましたが電源プラグなどで時間を取られてしまいました。
+そういう時は、無理せずできることをやってみてください。	encourage: 今日はPCの調子がおかしくColaboratoryが動かなかったりカーソルが動かせなかったりで全然進みませんでした。
+大丈夫ですよ、だんだん解けるようになりますよ。	encourage: わからない問題はどんどん飛ばしていってしまっているので前期終わり難しい問題しか残っていないのではと不安です。
+星集めは難しいので、また復習してみてください。	encourage: 星集めはちょっと難しいですAtCoderは50(おつり)まで進みました。
+だんだんと難しくなっているので、ゆっくり考えていきましょう。	encourage: 最初の30問くらいよりも難しい問題が増えてきたように感じます。
+大丈夫ですよ、自分のペースで進めていきましょう。	encourage: 周りに早い友人が多くて焦ってしまいました。
+そんな時は、解ける問題から進めていきましょう。	encourage: 第2回の範囲は行列までで両面印刷の途中で止まってしまっている状態です。
+大丈夫ですよ、だんだん解けるようになりますよ。	encourage: 一昨日のABC199に参加しましたが1問目しか解けず心が折れました。
+消費税やソーシャルゲームは難しいので、ゆっくり考えてみてください。	encourage: 3.5の演習問題は消費税とソーシャルゲームに苦戦している。
+リストは難しいので、ゆっくり進めていってください！	encourage: リストの扱いが苦手で第4回テキスト内の例題を丁寧に進めていたら授業中に演習問題にたどり着かなかった。
+だんだん解いていくことで速くなっていきますよ！	encourage: B問題になると時間が掛かってしまいます。
+預金は難しいので、また復習してみてください。	encourage: 預金が難しかったです。
+B問題は難しいので、細かく分けて考えてみてください。	encourage: B問題が多くてかなりつまずきました。
+大丈夫ですよ、ゆっくり取り組んで行きましょう。	encourage: 今日は前回に比べて問題があまり進まなかった。
+そういう時は、落ち着いて見直していきましょう。	encourage: 例題の入力をして出力例が合っていたにも関わらずソースコードは間違っている判定をされた時にどこが間違っているのかを見つけるのが大変でした。
+少しずつ進めていくと良いですよ。	encourage: 授業中に半分くらいしか進まないので毎回の課題が溜まってしまいます。
+そういう時は、先生に声をかけてくださいね！	encourage: また1回目の課題でどうしてもわからないところなど前の授業でできなかったところをどう解決したら良いかわかりません。
+そういう時は、先生に声をかけてくださいね！	encourage: 今日であれば友達は3回目の授業内容から進めるので聞きづらいです。
+大丈夫ですよ、気にせず声をかけてみてください！	encourage: 大きい躓きというよりは小さいものなので先生にも対面ならいいですがオンラインだと聞きづらいです。
+苦手な部分は、ゆっくり復習をしながら進めていきましょう。	encourage: また改めてwhile、for構文に苦手意識があるなあと思いました。
+問題文を確認しながら解いてみてくださいね。	encourage: AtCoderは出力のYESとYesの違いで何回も弾かれて大変でした。
+そういう時は、細かく分けて考えていきましょう。	encourage: 例題のお米の問題で問題の意味は分かったのですがプログラミングの内容でこのコードがこういう役割で何をやっているかというのがいまいちよく理解できておりません。
+大丈夫ですよ、焦らず自分のペースで進めていきましょう。	encourage: 今日のzoomで周りの生徒の進捗状況が自分よりもだいぶ早そうでとても焦りました。
+そういう時は、先生に相談してみてください。	encourage: 学校の遠隔用の教室でzoomを受講しているのだが全員静かに授業を聞いているのであまり声を出せる環境ではなくて困っている。
+開始時間の問題は難しいので、また復習してみてください。	encourage: 第二回の講義の範囲となってしまいますがコンテストの開始時間の問題が難しくてかなりてこずってしまいました。
+苦手な部分は、ゆっくり復習をしながら進めていきましょう。	encourage: 元々listが苦手なので他のものより進むのに時間がかかってます。
+だんだんと難しくなっているので、ゆっくり取り組んでいきましょう。	encourage: 今回の演習問題は前回よりは難易度が上がったと思いました。
+そういう時は、細かく分けて考えていきましょう。	encourage: シミュレーションを使う預金は難しいと思いました。
+大丈夫ですよ、ゆっくり取り組んで行きましょう。	encourage: 今週の課題はなんだか難しくてあまりスムーズに進めることができませんでした。
+大丈夫ですよ、自分のペースで進めていきましょう。	encourage: 今日の内容は30で詰まってしまったため25~31までしか進みませんでした。
+そういう時は細かく分けて考えてみましょう。	encourage: 今までif、whileを使うときは問題に条件文で書いてある場合や使って解きなさいと書かれている状況下でしかなかったので電気プラグの問題でどのように考えれば上手くたどり着くのか自力では思いつきませんでした。
+だんだんと難しくなっているので、ゆっくり取り組んでいきましょう。	encourage: 全体的に前回の問題よりも難しく感じました。
+filterbは難しいのでまた復習してみてください。	encourage: filterの使い方が少し難しく感じました。
+そんな時は、落ち着いて問題文を読んでみてくださいね。	encourage: Nが1000の場合も考えていたため式が少し複雑になってしまいました。
+大丈夫ですよ、ゆっくり取り組んで行きましょう。	encourage: 今日はなかなか疲れましたね...REやWAが来るとへこみます。
+大丈夫ですよ、自分のペースで進めていきましょう。	encourage: 難しくてかなり時間がかかってしまった。
+そういう時もありますよ。ゆっくり進めていきましょう。	encourage: ゴールデンウィークはサボってしまってあんまり全然進みませんでした。
+大丈夫ですよ、解いていけば速くなっていきますよ。	encourage: 4の演習問題をやったのですがB問題が多く難しかったためいつもより進みが遅くなてしまいました。
+そういう時は、時間をかけて考えてみてください。	encourage: 演習問題がBやCばかりでいつもよりも難易度が高く難しかったです。
+大丈夫ですよ、ゆっくり取り組んで行きましょう。	encourage: 難しくて全然進みませんでした。
+そういう時は、細かく分けて考えていきましょう。	encourage: ちょっと難しかったです。
+リストは難しいので、また復習してみてください。	encourage: 齋藤千種さんに1問助けてもらいました!リストをまだ使いこなせず難しく感じた。
+そういう時もあありますよ。ゆっくり問題文を読んでみてくださいね。	encourage: 興味があったので授業時間外に使用したところ何度もエラーを連発しとても悲しかったです。
+そういう時は、前後の問題の復習をしてみてはいかがですか？	encourage: わからない問題があった場合飛ばして解くのですがそうするとどのコードを使えばいいかわからなくなることがあります。
+自分のペースで進めていけば大丈夫ですよ。	encourage: 少しペースが遅かったためゴールデンウィークの間に進めたのですが同じルームの子に追いついただけだったので悔しいです。
+リストは難しいので、ゆっくり考えながら進めてみてください。	encourage: リストが難しく友達に教えてもらわないと中々進めることができなかったです。
+平均点は難しいですね。また復習してみてください。	encourage: 平均点難しかった。
+リストは難しいので、また復習してみてください。	encourage: AtCoderを始めてからPythonの理解度が上がった気がします!・「4.リストと繰り返し」の演習問題はとても難しかったです。
+for文は難しいので、ゆっくり考えながら進めてみてください。	encourage: 特にfor文や演算系(+=など)を使うべき問題が難しかったです。
+そういう時は、一旦他のことに取り組むのはいかがですか？	encourage: 何回も不正解が出てしまい心が折れそうになりました
+問題を重ねていけばコードで表現する力もついていきますよ！	encourage: 問題自体はクイズみたいでアルゴリズムを考えつくことは比較的容易なのですがコードで表現する部分に苦戦しています。
+大丈夫ですよ、自分のペースで進めていきましょう。	encourage: 思うようにすらすらいかずこの時間内で課題リスト4~5問ほどしか進みませんでした。
+そういう時は、落ち着いて問題文を見直してみてください。	encourage: これが何をしているのかよくわからなかった。
+大丈夫ですよ、自分のペースで進めていきましょう。	encourage: 友達はもう30問目に進んでいると聞き少し焦り始めてきました。
+listは難しいので、また復習してみてください。	encourage: list使うの苦手です...。
+大丈夫ですよ、解いていけば速くなっていきますよ。	encourage: 一問あたりにかかる時間が長くなってきました。
+大丈夫ですよ、自分のペースで進めていきましょう。	encourage: 周りに比べたらまだまだ進捗は遅いかもしれません。
+リストは難しいので、また復習してみてください。	encourage: リストのところをやっているのですがとても難しく感じました。
+そういう時は、時間をかけて復習してみてはいかがですか？	encourage: defを使うやり方を去年授業で確認してたはずなのですがあまり理解出来ていなかったらしく進みが遅くなりそうです。
+だんだん解いていくことで速くなっていきますよ！	encourage: 前よりも授業内に進むスピードが遅くなっていると感じます。
+難しい時は、細かく分けて考えてみてください。	encourage: AはできるようになったけれどもまだBとCは難しいなと思うことが多いです。
+そういう時は、ゆっくり時間をかけて考えてみてください。	encourage: 1年生の時もそうでしたがリストやfor文の内容に入ったころから一気に分からなくなってきてしまいました。
+そういう時は、細かく分けて考えていきましょう。	encourage: 例題は上手くできたがAtCoderで自分で考えるのが難しかった。
+リストは難しいので、また復習してみてください。	encourage: リストが苦手で今週の講義は自分には難しかったです。
+大丈夫ですよ、自分のペースで進めていきましょう。	encourage: 第6回の演習問題の後半は複雑に感じて提出までに時間がかかった。
+そんな時は、一旦他の問題に取り組んでみてはいかがですか？	encourage: 特にグリッド圧縮と755にはかなり時間をかけているがまだ解けていない。
+そんな時は、細かく分けて考えてみてください。	encourage: テキストに載っていた再帰のプログラムは理解できたが演習問題へどう用いるかが分からず苦戦している。
+大丈夫ですよ、落ち着いて考えてみてください。	encourage: 少し話が難しくなってきました。
+大丈夫ですよ、ゆっくり取り組んで行きましょう。	encourage: 難しい問題がありひとつの問題に時間をかけてしまいあまり進められなかった。
+そういう時もありますよ。ゆっくり進めていきましょう。	encourage: 今週は全然手をつけることができませんでした。
+大丈夫ですよ、焦らず細かく分けて考えてみてください。	encourage: だんだん内容が難しくなってきて一人では全く進められなくなってきて焦っています。
+先生に声をかけて大丈夫ですよ。	encourage: 友達に質問しずらくなってきた...。
+大丈夫ですよ、落ち着いて考えてみてください。	encourage: WAが連発でなかなかてこずっており2問しかACが出ていません。
+c問題は難しいので、ゆっくり考えてみてください。	encourage: c問題が増えてきて難しくなってきた。
+二重誤差は難しいので、また復習してみてください。	encourage: 二重誤差が難しかったです。
+リストは難しいので、また復習してみてください。	encourage: リストの範囲が難しく感じた。
+コツコツ進めていくことが大切ですよ！	encourage: でも授業時間以外に練習しようとアットコーダーを開くまでがすごい腰が重いです。
+自分のペースで進めていけば大丈夫ですよ。	encourage: 他にもこんな人がいるのか気になります。
+大丈夫ですよ、自分のペースで進めていきましょう。	encourage: 今週はAtCoderをそんな進めることができませんでした。
+そんな時は、落ち着いて見直してみましょう。	encourage: 見やすいように名前を入れたのですがどこがダメなのかよくわからないです。
+関数は難しいので、ゆっくり復習してみてください。	encourage: 1年生の時に関数は触れる程度でしか学習していないので6の関数から難しく授業時間内ではあまり進みませんでした。
+そういう時は一旦他の問題に取り組んでみるのも良いですよ。	encourage: 何度か考えたり手を動かしてみましたが難しくて正解することが出来ませんでした。
+ゆっくり時間をかけて取り組んでみてください。	encourage: 最初のほうはスラスラ解ける問題もありましたが非常に難しいと感じる問題が増えてきました。
+そういう時は問題を見直してから進めていきましょう！	encourage: 今は文字列に取り組んでいるのですが0から数えなくてはいけないことを忘れてしまったり組み合わせ方が難しいと思いました。
+大丈夫ですよ、自分のペースで進めていきましょう。	encourage: 先週はあまりやる気が出ず解いた量も少なかったので進んでいる人との差が開いてしまったように感じました。
+コツコツ続けていけば、だんだん速くなっていきますよ。	encourage: 毎回あまり進まず時間がかかってしまうのを何とかしたいです。
+そういう時は、無理しないことが大切です。	encourage: 感謝!!今週は体調が悪くてなかなか進めることができませんでした。
+文字列の置き換えは難しいのでゆっくり考えてみてください。	encourage: 文字列の置き換えの問題が難しかったです。
+毎日少しでも取り組んで行きましょう！	encourage: やはり例年通り最初のころのやる気がなくなってしまう...。
+大丈夫ですよ、自分のペースで進めていきましょう。	encourage: 内容が懐かしいものばかりで自分やらなすぎだなと感じました。
+関数は難しいので、ゆっくり取り組んでみてください。	encourage: いつも難しいなと思っていましたが関数はやはりもっと難しくエラーをたくさん繰り返しました。
+そういう時は、無理せず少しずつ進めていきましょう。	encourage: 友達と話しながらやると面白いな解けるなと思うことがあり解けると次の問題に行こうと思えるのですが一人でやると1問で疲れてなかなか次の問題に進めない気がしました。
+だんだんと難しくなっているので、ゆっくり考えていきましょう。	encourage: しかし第6回はあまり数をこなせなかったことが影響しているのか以前までは複雑な問題でもすぐに解法がひらめいていたのですが第6回はひらめきが若干遅くなった気がしています。
+大丈夫ですよ、自分のペースで進めていきましょう。	encourage: あまり進みませんでした。
+だんだんと難しくなっているので、ゆっくり取り組んでいきましょう。	encourage: だんだんと番号が大きくなるにつれ内容も重くなってきていると感じます。
+大丈夫ですよ、ゆっくり取り組んで行きましょう。	encourage: また土曜日にABCに参加しましたがA問題しか解けませんでした...
+そんな時は、ぜひどこかで昔の問題に戻ってみてくださいね。	encourage: わからないところを飛ばしてどんどん進んでしまっているので進捗はあまりよくないと思います。
+大丈夫ですよ、ゆっくり取り組んで行きましょう。	encourage: 難しいです。
+だんだんと難しくなっているので、ゆっくり考えていきましょう。	encourage: 先週に比べかなり難しかったです。
+時間をおいてまた取り組んでみてはいかがですか？	encourage: C問題は実行時間超過になってしまい悔しかったです。
+大丈夫ですよ、自分のペースで進めていきましょう。	encourage: 今週はあまりできませんでした。
+関数は難しいので、ゆっくり復習してみてください。	encourage: 関数難しいです。
+そういう時は、細かく分けて考えていきましょう。	encourage: わかったようで分からない
+大丈夫ですよ、取り組んでいけばだんだんできるようになりますよ。	encourage: 最近自分一人で解ける問題が全然なくて焦っています。
+関数は難しいので、ゆっくり考えてみてください。	encourage: 関数難しかったです。
+関数は難しいので、また取り組んでみてください。	encourage: 関数を使い慣れていないので難しかったです。
+関数は難しいので、また復習してみてください。	encourage: 関数難しいです。
+色々な知識をつけることで自分の力になっていきますよ。	encourage: 「こうやって解くのか!」という発見も学習であることは承知している重々承知のですが誰かの発想をほぼそのまま拝借するのもちょっと悔しいです。
+関数は難しいので、また考えてみてください。	encourage: 今日の関数はとても難しかったです。
+自分のペースで進めていきましょう。	encourage: すべての授業が終わってるまでに問題が解き終わる気がしないです。
+焦らず、コツコツ取り組んでみてください。	encourage: だんだん問題が難しくなっていく中での正解問題数が38なのでペースが周りより遅いことはわかっていたのですが不安が大きくなってきました。
+関数は難しいので、ゆっくり復習してみてください。	encourage: 今までの範囲でも難しいなぁと感じていたのに関数という新たな強敵も出てきて世も末って感じです。
+そんな時は、時間をおいて取り組んでみてはいかがですか？	encourage: 実際にやってみても難しくて鬱になりそうです。
+大丈夫ですよ、ゆっくり取り組んで行きましょう。	encourage: 悔しいです。
+そんな時は、細かく分けて取り組んでみてください。	encourage: 内容が難しい。
+そんな時は、落ち着いて少しずつ考えてみてください。	encourage: 今週の内容とても難しかったです。
+コツコツ進めていきましょう！	encourage: ほかの科目の課題が多すぎて泣けます。
+苦手な部分は、復習しながら進めていきましょう。	encourage: 総まとめ復習みたいな問題が多いなと思ったのですがやはりリストとか文字列とかが苦手だなと感じてしまいました...
+ゆっくり取り組んでみてください。	encourage: 少し難しくなってきた。
+そんな時は、細かく分けて考えてみてください。	encourage: 難しいです。
+不安に思わず、落ち着いて取り組んでみてください。	encourage: 次回からのアルゴリズムがとても不安です。
+そんな時は、一旦他のことをやってみてはいかがですか？	encourage: 今回の授業はAtCoder行き詰りました。
+ゆっくりでもコツコツ続けることが大切ですよ。	encourage: AtCoderのペースが難しくなって落ちてきました...。
+そんな時は、細かく分けて取り組んでみてください。	encourage: 私には難しい。
+焦らず、自分のペースで進めていきましょう。	encourage: アンケートに目標が150問と書きましたが現在60問ほどしか進んでおらず来週からアルゴリズムになるのにまずいな、、と思いました。
+毎日少ずつ進めるのがオススメですよ。	encourage: 毎週少しずつやっているつもりでも後れを取っているなという感じなので頑張ります!!!!!昨日中間アンケートに答えた後いつまでも鬱だ鬱だ言っててもよくないよなぁと思い夜にプログラミングに取り組みました。
+焦らず、じっくり考えてみてください。	encourage: 第8章から解説を見ながらでないと解けなくなってきていて焦ります。
+大丈夫ですよ、ゆっくり取り組んで行きましょう。	encourage: 今後が心配です。
+大丈夫ですよ、自分のペースで進めていきましょう。	encourage: 目標は100問ですがこれからもっと難しくなるだろうし目標を達成できるか心配です。
+一旦時間をおいて考えてみたら、解けるかもしれませんよ。	encourage: 難しい問題に1時間半くらい取り組んだが結局解けなくて悔しい。
+今回の範囲は難しかったので、また取り組んでみてください。	encourage: また今回の範囲はB問題でも他の人の解答を見ないとわからないようなものがありまだまだ全然だなあと思った。
+時間をかけて問題を解いていくことも大切ですよ！	encourage: AtCoderの方は最近進みが悪くなりました!!難しくなってきました、
+自分のペースで頑張っていきましょう！	encourage: 元々進捗が他の方よりもかなり遅いので心配です。
+コツコツ進めていけば大丈夫ですよ！	encourage: 達成できるか不安です...。
+そんな時は、ゆっくりと取り組んでみてください。	encourage: だんだん難しくなってきているとひしひしと感じています。
+アルゴリズムは難しいので、時間をかけて考えてみてください。	encourage: アルゴリズムについての内容に入り難しいな、、と感じています。
+論理式は難しいですよね、ゆっくり考えてみてください。	encourage: 論理式が難しくてなかなか解けないです。
+そんな時は、一旦昔の問題を解いてみてはいかがですか？	encourage: AtCoderでは2問目からつまづいてしまいました。
+二乗誤差は難しいですよね、ゆっくり考えてみてください。	encourage: 二乗誤差で見事に沼りました。
+そんな時は、細かく分けて考えてみてください。	encourage: 次第に数学的にも難しい内容になってきているので難しいです。
+大丈夫ですよ、一旦自分の中に落とし込んで解くことが大切です。	encourage: そこから自分なりにコードを記述するようになりましたが自分で問題を解いたわけではないのでそれを提出してACをもらってもいいのか少し不安になるときがあります。
+そんな時は、ゆっくり問題を見直してみてください。	encourage: 入力例を試して出力例が正しく出たとしても実際提出するとWAで返ってくることが今回の第9回の演習問題では特に多く苦戦しています。
+まずは解けたことが大切です。	encourage: 13日のABC、C問題まで解けたが振り返ってみるとびっくりするほどややこしいやり方で解いていて後悔した。
+そんな時は、一旦前に戻って進めてみてください。	encourage: 今週先週と全然進みませんでした、心配です。
+地道に取り組むことが大切ですよ。	encourage: 毎回割と苦労してます、。
+自分のペースで進めていきましょう。	encourage: 皆さん早く出来ているのかと思うと心配です。
+そういう時もありますよ。落ち着いて問題を見てみましょう。	encourage: その後そもそも余りが繰り返されることに気づいてなぜ気づかなかったのかとショックを受けました。
+そんな時は、少し離れてみてはいかがですか。	encourage: 解けていない問題を進めていこうとしていますが解ける問題がだんだんなくなってきていて焦っています。
+そんな日もありますよ。落ち着いて考えてみてください。	encourage: ・198 POW?今回解いた問題の判定がTELばかりでメンタルがやられました。
+自分のペースで頑張っていきましょう！	encourage: 周りの人が進んでいると思うと焦ってしまいます。
+焦らず、じっくり考えてみてください。	encourage: A問題はすらすら解けるようになったがB問題が全然解けないので焦ってます。
+関数は難しいので、また復習してみてください。	encourage: 関数が苦手なので理解するのが難しかったです。
+コツコツ続けていくことが大切ですよ。	encourage: すぐ解けそうな問題はおおよそ解いてしまったのでペースが落ちそうです...。
+そんな時は、一旦昔の問題を解いてみてはいかがですか？	encourage: 最初の4問だけ解けましたがそれ以降は本当に難しくて歯が立ちませんでした。
+アルゴリズムは難しいので、ゆっくり取り組んでみてくださいね。	encourage: アルゴリズムはやっぱり難しいです。
+やることが多い時は細かく分けて考えてみてください。	encourage: c問題はやることが多くて大変です
+自分のペースで落ち着いてやっていきましょう。	encourage: かなり遅れているので不安ですが頑張ります。
+一旦時間をおいてまた考えてみてください！	encourage: スマホ中毒を頑張って考えていたのですが考えるべき例外が多すぎて挫折しました。
+粘り強く取り組めば、だんだん速くなりますよ。	encourage: 最近1問解くのに時間がかかってなかなか進みません。
+楽しく解くことが一番なので、そのままコツコツ続けていきましょう！	encourage: 時間を見つけて楽しく解いてはいますが目標のACの数に届くか心配になってきました。
+並び替えは難しいので、細かく分けて考えてみてください。	encourage: 簡単な並び替えなら簡単だが複雑になるとわからなくなる。
+くじけず、一日1問でも取り組んでみてください。	encourage: 毎日AtCoderをやる習慣がせっかくついたのにくじけそうです。
+そんな時は、一旦昔の問題に取り組んでみてはいかがですか？	encourage: 先週先々週に引き続き全然進んでなくてより腰が重くなっています。
+内容を理解することで自分の力にしていくことができますよ。	encourage: どうしても思いつかず他の人が解答したプログラムを見てprintで途中を表示しながらこういう流れだと理解することが増えていて自分の力になっているのかが不安です。
+そんな時は、一休みしてみてはいかがですか？	encourage: 週に解くスピードもやる気も落ちてきてしまっているのが最近の悩みです。
+一旦、他のことに取り組んでみるのもオススメですよ。	encourage: どうすればまたやる気になれるのでしょうか。
+複雑な問題は、細かく分けて解いてみてください。	encourage: だんだんとプログラミングの内容が複雑になってきて考えるのに苦労します。
+アルゴリズムは難しいので、とりあえず1問というように少しずつ取り組んでみてください。	encourage: アルゴリズムに入ってから問題が難しくなりAtCoderに取り組むのに腰が重たくなってきました。
+第9回は難しいので、大丈夫ですよ。	encourage: 第9回の問題がCが多くて苦戦し時間がかかってしまいました。
+1問ずつの積み重ねが大事ですよ	encourage: 教わってようやく1問、という感じです。
+積み重ねていけば、スピードも速くなっていきますよ。	encourage: 一つ一つにかける時間が増えてきてしまいあまり進めることが出来ないので最終どのくらい終わらせられることが出来るのか不安です。
+アルゴリズムは難しいので、ゆっくり取り組んでみてくださいね。	encourage: ・アルゴリズムになってからすごく問題が難しくなってきたと感じます。
+アルゴリズムは難しいので、ゆっくり考えてみてください。	encourage: アルゴリズム難しいです。
+そういう時は、いろいろなコードを参考にしてみてください。	encourage: 分からなくて他の人のコード参考にしようと思っても全然理解できなくてやばいって思ってます。
+関数は難しいので、ゆっくり考えてみてください。	encourage: ほかの中間試験が一通り終わったのでこの授業も本腰入れておこうと思います関数が入ってから全然進みますん。
+自分のペースで頑張っていきましょう！	encourage: メンタルがやられそうですが頑張ります。
+そんな時は、一旦前に戻って復習してみてはいかがですか？	encourage: かなり難しかったですあきらめました。
+ゆっくり取り組めば、大丈夫です！	encourage: 正直ここら辺からついていけるか心配です。
+やってみたらできるかもしれませんよ、チャレンジしてみてください。	encourage: すごく難しそうです。
+難しく感じたら、少し昔に戻って復習してみてください。	encourage: だんだん授業の解説時間が長くなっていき難しくなってきたなと思っております。
+そんな時は、昔の問題に戻ってみてはいかがですか？	encourage: 今日もAtCoderをやりましたがほとんど手詰まり状態でした。
+アルゴリズムは、難しいのでゆっくり向き合ってみてください。	encourage: アルゴリズムになってからの演習問題はほぼ手が付けられなくて今まで飛ばしていた問題を解いていたのですがそれも難しくて思うように進みませんでした。
+アルゴリズムは難しいので、時間をあけて再度取り組んでみてください。	encourage: アルゴリズムが本当に難しいです。
+毎日少しでも取り組んでみてください。	encourage: 全然AtCoder進んでないです。
+長いときは、細かく分けてやってみてください。	encourage: プログラミングが長く複雑になってきていて大変だと感じました。
+コツコツ続けていけば、いつか進む時が来ますよ。	encourage: 今週も中々進まなくて辛いです、。
+自分のペースで落ち着いてやっていきましょう。	encourage: 後半に入ってやってる人とやってない人で差ができていてやばいなと思いました。
+大丈夫ですよ、落ち着いて考えてみてください。	encourage: 難しいです
+そんなときには、一旦前に戻って考えてみてください。	encourage: 内容が難しくなって思うように進まなくなった。
+夏バテには、睡眠、運動、食事ですよ！	encourage: 暑くなってから夏バテ気味であまりやる気がなくなった。
+細かく取り組んでいきましょう。	encourage: 一周間で10問ペースと考えると参ってしまいます。
+コツコツ進めていきましょう。	encourage: 全然遅れが巻き返せないです。
+大丈夫ですよ、自分のペースで進めてみてください。	encourage: もう150問終わった人がいると知りへこみました。
+今回の範囲は難しかったので、復習してみてください。	encourage: 今回の範囲は難しく進まなかった。
+ペースが落ちても少しずつ進めていきましょう。	encourage: 段々難しくなっていくのと他の科目の期末が近づいてきたことも重なり自分のペースが落ちていることに焦りを感じます。
+そんな時は、一回前に戻ってみてください。	encourage: やばいやばいと思いつつ全然進めない自分が嫌になります難しくて何から手を付けていいかわかりませんあと三回なので最後まで頑張っていきたいと思います。
+焦らず、ゆっくり取り組んでみてください。	encourage: 別の話になってしまうのですが後期の計算機数学は対面でやりますか?あと残り3回と知って焦っています。
+やる気がなくなったときには、一旦甘いものなどをとって休んでみては？	encourage: python進めるやる気が出なくなったのですがそろそろテストも終わりまた期末が来てしまうので今のうちに頑張らなくてはならないなと思います。
+難易度が上がったので、自分のペースで進めていってください。	encourage: 初めのころと比べて問題が難しくなっていき進みが遅くなったことを実感しています。
+ゆっくり自分のペースで進めていきましょう。	encourage: コンテンツのところに基準を示したものをあげて頂けませんか?今回も難しくなかなか進みませんでした。
+81もケーキとドーナッツも難しいので取り組んでいってえらいです！	encourage: 特に「81」と「ケーキとドーナッツ」の問題がなかなかうまくいかず悩みました
+いいことですね、ゆっくり焦らずやっていきましょう。	encourage: なかなかアルゴリズムになってから思うように進まないのですがゆっくり焦らずやろうと思いました。
+とりあえず取り組んでみましょう！	encourage: ラストスパートなのに先週に引き続きやる気が起きなくて危機を感じてます。
+ゆっくり考えれば大丈夫です！	encourage: 次回以降も解けるか不安。
+悔しいという思いはいいことですね。ゆっくり解いていきましょう。	encourage: Pythonもなかなか答えにたどり着けなくなってきて悔しいです。
+大丈夫ですよ、ゆっくり進んでいきましょう。	encourage: もうだんだん追いつけてません。
+そんな時はわからないところに戻って考えてみてください。	encourage: 数回前の授業から既に授業きついていけていませんでした。
+大丈夫ですよ、落ち着いて考えてみてください。	encourage: 演習問題も2問目で早速つまづいてしまいこれが”挫折”か......と悟った。
+一旦、他のことに取り組んでみるのも良いですよ。	encourage: 頑張ればA、A+は必ず取れるので明確な基準設けてくれるのありがたいと思いましたA+取れるように頑張ります12回以降は難しすぎてやる気が出ません
+質問をすることも良いですよね。	encourage: 焦りしかない今回の授業のブレイクアウトルームで個別にメッセージしてもらえそこから質問できたのでつまづいていたところをクリアできた。
+そういう時は一旦他のことに取り組んでみるのも良いですよ。	encourage: 急に難しくなってきて全然理解できなくて落ち込みました。
+ゆっくり進めれば意外と進んでいるものです。	encourage: どこまで進められるか心配です。
+簡単に見えても最初は難しいものです。	encourage: AtCoderの難易度にあわせたカウントがでましたがAは本来であれば0.2ということでAでも何回も間違えているので軽くショックを受けました。
+大丈夫ですよ、計算機数学Ⅱもできるようになりますよ。	encourage: 教職のために計算機数学IIも履修するつもりでいますが不安です。
+アルゴリズムは難しいので、ゆっくり考えてみてください。	encourage: アルゴリズムから難しくなかなか進まないです...。
+大丈夫ですよ、取り組み続ければだんだん短くできるようになりますよ。	encourage: 自分で考えたプログラミングが間違っていて他の方の回答をみてみるとそんなに簡単にできるのか!と思うほど短くやっていて自分は全然分かってないと落ち込みました。
+アルゴリズムは難しいので、ゆっくり考えてみてください。	encourage: アルゴリズムに入ってから授業内容に追いつけていないので焦っています。
+そうですね、12回目は少し難しいのでゆっくり読んでみてください。	encourage: 12回目難しいです。
+大丈夫ですよ、少しずつ取り組めば達成できますよ。	encourage: とりあえず150問頑張ろうと思っていたのですが「無理では...」と思えてきました。
+一旦、他のことに取り組んでみるのも良いですよ。	encourage: 頭の中がごちゃごちゃになってものすごく時間がかかってしまいました
+累積和や全探索は難しいですよね、落ち着いて考えてみてください。	encourage: 累積和とか全探索とかがまだあまり理解できず解けない問題がごろごろと出てきてしまっています
+大丈夫ですよ、少しずつ取り組んでみてください。	encourage: あまり進められてないので焦ってます。
+大丈夫ですよ、少しずつ取り組んでみてください。	encourage: 問題番号は70番くらいまで進んでるけど解けた数だと58問ということがわかったのでちょっと焦ってきました。
+落ち着いて少しずつ取り組んでみてください。	encourage: 進んでいなくてかなりまずいです。
+お疲れ様です。甘いものでリフレッシュも良いですよ。	encourage: 正直とても難しかった。
+取り組んでいて良いですね。また、時間をおいて考えてみてください。	encourage: レポート問題考えましたが難しかったです。
+落ち着いて問題に取り組んでみましょう。	encourage: まだなんとかなると信じてます...ちょっとした打ち間違えや問題の読み取りミスが多くて参りました。
+他の人に聞いてみることも良いですよ。	encourage: すごく難しくなってきて困ってます。
+一旦他のことをやることもいいですよね。	encourage: チャレンジ問題授業内で少しやろうかと思ったのですが難しくて一度断念。
+大丈夫です。書けますよ！	encourage: でも書ける気がしません。
+焦らず、取り組んでみてください。	encourage: レポート課題にも挑戦してみようとおもいます!授業の内容が難しくなり焦っています。
+使っていけば、理解できるようになる日が来ますよ。	encourage: テストが落ち着いたらレポートにも取り組みます深さと幅優先探索がどんなものかはなんとなく理解できましたが果たしてこのコードを理解し更にかけるようになる日は来るのかと感じました。
+焦らずできるところから取り組んでみてください。	encourage: どんどん内容が難しくなっていてまた課題の正解数がとても少ないので焦っています。
+ゆっくり見直してみてください。	encourage: 先週と今週の講義はとても難しくてまだしっかりと理解できてません...。
+一旦、気持ちを入れ替えてみてはいかがですか？	encourage: 難しくほとんどすすめることができませんでした。
+ゆっくり考えながら取り組めば大丈夫ですよ。	encourage: がんばります...どんどん難しくなって進みもとても遅くなってます。
+お疲れ様です。	encourage: 難しかったです。
+もう少しです！頑張りましょう！	encourage: 終わりに近づいてきてさらに難しくなったと思います。
+時間をおいてまた取り組んでみてはいかがですか？	encourage: 文字列圧縮と1時間くらい格闘しましたが負けました悔しいです!!!!!!前の部分を進めました。
+大丈夫です。自分のペースで頑張りましょう。	encourage: 最近追いつけていなくて焦っています。
