@@ -5,8 +5,11 @@
 
 #インポート不足
 
-IPythonのインポートを忘れていませんか？
+"import IPython" を先に実行しましょう
 NameError: name 'IPython' is not defined
+
+"import math" を先に実行しましょう
+NameError: name 'math' is not defined
 
 pip でsentence_transformersをインストールしましょう
 ModuleNotFoundError: No module named 'sentence_transformers'
@@ -14,7 +17,7 @@ ModuleNotFoundError: No module named 'sentence_transformers'
 モジュール名が間違っていませんか？
 ModuleNotFoundError: No module named 'mathematics'
 
-mathとpiを分けてインポートしましょう
+"import math" で実行しましょう
 ModuleNotFoundError: No module named 'math.pi'; 'math' is not a package
 
 mathモジュールにCOSというオブジェクトはありません。名前が正しいか確認しましょう
@@ -52,13 +55,13 @@ SyntaxError: EOL while scanning string literal
 #AttributeError
 ##listまでアドバイスすると汎用性がなくなる？list使えない同文エラーでもlist提案してしまいそう。
 
-int型にappendは使えません。list型を使ってみてください
+int型にappendは使えません。別の型を使ってみてください
 AttributeError: 'int' object has no attribute 'append'
 
-tuple型にappendは使えません。list型を使ってみてください
+tuple型にappendは使えません。別の型を使ってみてください
 AttributeError: 'tuple' object has no attribute 'append'
 
-str型にsortは使えません。list型を使ってみてください
+str型にsortは使えません。別の型を使ってみてください
 AttributeError: 'str' object has no attribute 'sort'
 
 
@@ -68,11 +71,11 @@ AttributeError: 'str' object has no attribute 'sort'
 int型とstr型は結合できません。どちらかに統一しましょう
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
-4つの因数を求めている場所に5つの因数を渡しています
+因数の数を確認しましょう。1.2が1,2のように打ち間違えていませんか？
 TypeError: __init__() takes 4 positional arguments but 5 were given
 TypeError: myfunc() takes 4 positional arguments but 5 were given
 
-tuple型は要素の変更ができません。list型を使ってみてください
+tuple型は要素の変更ができません。別の型を使ってみてください
 TypeError: 'tuple' object does not support item assignment
 
 
@@ -96,6 +99,9 @@ IndentationError: unexpected indent
 
 0で割っていませんか？
 ZeroDivisionError: integer division or modulo by zero
+
+全角文字や全角空白などを使っていませんか？
+SyntaxError: invalid character in identifier
 
 
 指定した名前のファイルが見つかりません。ファイル名やパスが正しいか確認しましょう
