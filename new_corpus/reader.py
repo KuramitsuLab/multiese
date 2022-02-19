@@ -19,21 +19,50 @@ LF = '\\r'? '\\n' / !.
 
 '''
 
+
 parse_as_tree = pg.generate(pg.grammar(GRAMMAR))
 
-W = '([^A-Za-z0-9])'
-てにをは = r'([はがとをのに\[])'
+import re
+BEGIN = '([^A-Za-z0-9]|^)'
+END = ('(?![A-Za-z0-9]|$)')
+VARPAT = re.compile(BEGIN+r'([a-z]+)(\d?)'+END)
 
-VARPAT = re.compile(W+r'([a-z][a-z]?\d?)'+てにをは)
+def _replace_vars(s, oldnews):
+    s = re.sub(VARPAT, r'\1@\2\3@', s)  # @s@
+    for old, new in oldnews:
+        s = s.replace(f'@{old}@', f'{new}')
+    return s.replace('@', '')
+
+def _check_variables(doc, code):
+    names = [(x[1],x[2]) for x in VARPAT.findall(doc)]
+    ss=set(name[0] for name in names if names[1] != '')
+    if len(ss) == 0:
+        return doc, code
+    d={name: [] for name in ss}
+    for name in names:
+        if name[0] in ss:
+            d[name[0]].append(name[1])
+    oldnews = []
+    for key in d:
+        order_names = d[key]
+        sorted_names = list(sorted(order_names))
+        if order_names != sorted_names:
+            print('diff', key, order_names, sorted_names)
+            oldnews += [(key+s1, key+s2) for s1, s2 in zip(order_names, sorted_names) if s1 != s2]
+    doc = _replace_vars(doc, oldnews)
+    code = _replace_vars(code, oldnews)
+    return doc, code
+
+
 
 PATTERNS = [
-    (re.compile(W+r'(s\d?)'+てにをは), r'\1文字列\2\3'),
-    (re.compile(W+r'(ch\d?)'+てにをは), r'\1文字\2\3'),
-    (re.compile(W+r'(df\d?)'+てにをは), r'\1データフレーム\2\3'),
-    (re.compile(W+r'(ds\d?)'+てにをは), r'\1データシリーズ\2\3'),
-    (re.compile(W+r'(value\d?)'+てにをは), r'\1[|文字列|リスト]\2\3'),
-
-    #(re.compile(W+r'([xy]\d?)'+てにをは), r'\1[整数|浮動少数点数]\2\3'),
+    (re.compile(BEGIN+r'(s\d?)'+END), r'\1文字列\2'),
+    (re.compile(BEGIN+r'(iterable\d?)'+END), r'\1[イテラブル|リスト|タプル|[配|データ|]列]\2'),
+    (re.compile(BEGIN+r'(mapping\d?)'+END), r'\1[マッピング|辞書]\2'),
+    (re.compile(BEGIN+r'(func\d?)'+END), r'\1関数\2'),
+    (re.compile(BEGIN+r'(df\d?)'+END), r'\1データフレーム\2'),
+    (re.compile(BEGIN+r'(ds\d?)'+END), r'\1データ列\2'),
+    (re.compile(BEGIN+r'(value\d?)'+END), r'\1[|文字列|リスト]\2'),
 ]
 
 def read_settings(docs, settings):
@@ -59,14 +88,13 @@ def read_settings(docs, settings):
     return ss
 
 def replace_with_rules(s, altdic):
-    s = ' '+ s # 正規表現の都合
     for old, new in PATTERNS:
         s = re.sub(old, new, s)
     for old, new in altdic.items():
         if old in s:
-            print('=>', old, new)
+            #print('=>', old, new)
             s = s.replace(old, new)
-    return s[1:]
+    return s
 
 def augment_doc(code, docs, altdic):
     docs2=[]
@@ -103,6 +131,8 @@ def read_corpus(filename):
             scaleXY(ss, code, docs, settings)
             #print(code, docs)
             ##ss.append((code, tuple(docs)))
+    for s in ss:
+        print(s)
     return ss
 
-read_corpus('_pandas.py')
+read_corpus('_itertools.py')
