@@ -1,6 +1,10 @@
+import sys
 from nis import maps
 import re
+import itertools
 import pegtree as pg
+
+from naming import type_augmentation, test_code
 
 GRAMMAR = '''
 
@@ -22,48 +26,17 @@ LF = '\\r'? '\\n' / !.
 
 parse_as_tree = pg.generate(pg.grammar(GRAMMAR))
 
-import re
-BEGIN = '([^A-Za-z0-9]|^)'
-END = ('(?![A-Za-z0-9]|$)')
-VARPAT = re.compile(BEGIN+r'([a-z]+)(\d?)'+END)
 
-def _replace_vars(s, oldnews):
-    s = re.sub(VARPAT, r'\1@\2\3@', s)  # @s@
-    for old, new in oldnews:
-        s = s.replace(f'@{old}@', f'{new}')
-    return s.replace('@', '')
+# PATTERNS = [
+#     (re.compile(BEGIN+r'(s\d?)'+END), r'\1文字列\2'),
+#     (re.compile(BEGIN+r'(iterable\d?)'+END), r'\1[イテラブル|リスト|タプル|[配|データ|]列]\2'),
+#     (re.compile(BEGIN+r'(mapping\d?)'+END), r'\1[マッピング|辞書]\2'),
+#     (re.compile(BEGIN+r'(func\d?)'+END), r'\1関数\2'),
+#     (re.compile(BEGIN+r'(df\d?)'+END), r'\1データフレーム\2'),
+#     (re.compile(BEGIN+r'(ds\d?)'+END), r'\1データ列\2'),
+#     (re.compile(BEGIN+r'(value\d?)'+END), r'\1[|文字列|リスト]\2'),
+# ]
 
-def _check_variables(doc, code):
-    names = [(x[1],x[2]) for x in VARPAT.findall(doc)]
-    ss=set(name[0] for name in names if names[1] != '')
-    if len(ss) == 0:
-        return doc, code
-    d={name: [] for name in ss}
-    for name in names:
-        if name[0] in ss:
-            d[name[0]].append(name[1])
-    oldnews = []
-    for key in d:
-        order_names = d[key]
-        sorted_names = list(sorted(order_names))
-        if order_names != sorted_names:
-            print('diff', key, order_names, sorted_names)
-            oldnews += [(key+s1, key+s2) for s1, s2 in zip(order_names, sorted_names) if s1 != s2]
-    doc = _replace_vars(doc, oldnews)
-    code = _replace_vars(code, oldnews)
-    return doc, code
-
-
-
-PATTERNS = [
-    (re.compile(BEGIN+r'(s\d?)'+END), r'\1文字列\2'),
-    (re.compile(BEGIN+r'(iterable\d?)'+END), r'\1[イテラブル|リスト|タプル|[配|データ|]列]\2'),
-    (re.compile(BEGIN+r'(mapping\d?)'+END), r'\1[マッピング|辞書]\2'),
-    (re.compile(BEGIN+r'(func\d?)'+END), r'\1関数\2'),
-    (re.compile(BEGIN+r'(df\d?)'+END), r'\1データフレーム\2'),
-    (re.compile(BEGIN+r'(ds\d?)'+END), r'\1データ列\2'),
-    (re.compile(BEGIN+r'(value\d?)'+END), r'\1[|文字列|リスト]\2'),
-]
 
 def read_settings(docs, settings):
     ss = []
@@ -82,46 +55,61 @@ def read_settings(docs, settings):
             elif name == '@Y':
                 settings['Y'] = argument.split('|')
             else:
-                settings['option'][name]=argument
+                settings['option'][name] = argument
         else:
             ss.append(line)
     return ss
 
+
 def replace_with_rules(s, altdic):
-    for old, new in PATTERNS:
-        s = re.sub(old, new, s)
+    s = type_augmentation(s)
     for old, new in altdic.items():
         if old in s:
             #print('=>', old, new)
             s = s.replace(old, new)
     return s
 
+
 def augment_doc(code, docs, altdic):
-    docs2=[]
+    docs2 = []
     for i, doc in enumerate(docs):
-        if doc.endswith('に変換する'):
-            doc = doc.replace('に変換する', 'に[変換|]する')
         doc = replace_with_rules(doc, altdic)
         docs2.append(doc)
     return code, docs2
 
-def scaleXY(ss, code, docs, settings):
+
+def make_triple(ss, code, docs, settings):
     option = settings['option']
     altdic = settings['alt']
+    code, docs = augment_doc(code, docs, altdic)
+    test_with = option.get('@test_with', '_')
+    result = test_code(code, test_with)
+    for doc in docs:
+        ss.append((code, doc, test_with, result))
+
+
+def scaleXY(ss, code, docs, settings):
     if '__X__' not in code:
-        code, docs = augment_doc(code, docs, altdic)
-        ss.append((code, tuple(docs), option))
+        make_triple(ss, code, docs, settings)
         return
     for x, y in zip(settings['X'], settings['Y']):
         codeX = code.replace('__X__', x)
         docYs = [doc.replace('__Y__', y) for doc in docs]
-        codeX, docYs = augment_doc(codeX, docYs, altdic)
-        print(codeX, docYs)
-        ss.append((codeX, tuple(docYs), option))
+        make_triple(ss, codeX, docYs, settings)
+
+
+def new_altdic():
+    return {
+        'に変換する': 'に[変換|]する',
+        'かどうか': '[|か[|どうか]|とき|ならば]',
+        '求める': '[求める|計算する|算出する|得る]',
+        '見る': '[見る|確認する|調べる|得る]',
+    }
+
 
 def read_corpus(filename):
-    ss=[]
-    settings = { 'alt': {} }
+    ss = []
+    settings = {'alt': new_altdic()}
     with open(filename) as f:
         tree = parse_as_tree(f.read())
         for t in tree:
@@ -129,10 +117,16 @@ def read_corpus(filename):
             docs = str(t[1]).splitlines()
             docs = read_settings(docs, settings)
             scaleXY(ss, code, docs, settings)
-            #print(code, docs)
-            ##ss.append((code, tuple(docs)))
-    for s in ss:
-        print(s)
     return ss
 
-read_corpus('_itertools.py')
+
+def main():
+    ss = []
+    for file in sys.argv[1:]:
+        ss.extend(read_corpus(file))
+    for s in ss:
+        print(s)
+
+
+if __name__ == '__main__':
+    main()
