@@ -9,6 +9,8 @@ PREFIX = {
     's': ('文字列', ''),
     'alist': ('リスト', ''),
     'atuple': ('タプル', ''),
+    'element': ('[|文字列|[リスト|タプル|辞書|セット]]', ''),
+    'filename': ('[ファイル[名|パス]|文字列]', ''),
     'df': ('データフレーム', ''),
     'args': ('引数[|列|リスト]', ''),
     'colname': ('', '[行|カラム]'),
@@ -61,48 +63,6 @@ def _check_variables(doc, code):
     doc = _replace_vars(doc, oldnews)
     code = _replace_vars(code, oldnews)
     return doc, code
-
-
-VARS = dict(
-    s=' ABC abc 123あ',  # 文字列 s, s2, s3
-    s2='a',
-    s3='123',
-    s4='1101',
-    n=1,
-    n2=3,
-    n3=-1,
-    x=1.5,
-    x2=3.0,
-    # リスト
-    alist=[1, 2, 3],
-    alist2=[4, 5],
-    atuple=(1, 2, 3),
-    atuple2=(4, 5),
-    element=2,
-    func=lambda x: x,
-    filename='file.txt',
-    math=import_module('math'),
-    # str
-    keyword=import_module('keyword'),
-    re=import_module('re'),
-
-    operator=import_module('operator'),
-    itertools=import_module('itertools'),
-    iterable=[0, 1, 2, 4],
-    iterable2=[7, 8, 9],
-    predicatefunc=lambda x: True,
-)
-
-
-def test_code(code, test_with=''):
-    try:
-        if test_with != '':
-            code = test_with.replace('_', code)
-        v = eval(code, VARS)
-        return str(v).replace('\n', '\\n')
-    except Exception as e:
-        # print(repr(e))
-        return (e, test_with)
 
 
 def special_token(variable_name, d):

@@ -1,10 +1,13 @@
+import csv
 import sys
 from nis import maps
 import re
 import itertools
 import pegtree as pg
 
-from naming import type_augmentation, test_code
+from naming import type_augmentation
+from testing import test_code
+from parse import multiese_da
 
 GRAMMAR = '''
 
@@ -23,19 +26,7 @@ LF = '\\r'? '\\n' / !.
 
 '''
 
-
 parse_as_tree = pg.generate(pg.grammar(GRAMMAR))
-
-
-# PATTERNS = [
-#     (re.compile(BEGIN+r'(s\d?)'+END), r'\1文字列\2'),
-#     (re.compile(BEGIN+r'(iterable\d?)'+END), r'\1[イテラブル|リスト|タプル|[配|データ|]列]\2'),
-#     (re.compile(BEGIN+r'(mapping\d?)'+END), r'\1[マッピング|辞書]\2'),
-#     (re.compile(BEGIN+r'(func\d?)'+END), r'\1関数\2'),
-#     (re.compile(BEGIN+r'(df\d?)'+END), r'\1データフレーム\2'),
-#     (re.compile(BEGIN+r'(ds\d?)'+END), r'\1データ列\2'),
-#     (re.compile(BEGIN+r'(value\d?)'+END), r'\1[|文字列|リスト]\2'),
-# ]
 
 
 def read_settings(docs, settings):
@@ -43,7 +34,7 @@ def read_settings(docs, settings):
     settings['option'] = {}
     for line in docs:
         if line.startswith('@'):
-            name, sep, argument = line.strip().partition('(')
+            name, _, argument = line.strip().partition('(')
             if argument.endswith(')'):
                 argument = argument[:-1]
             if name == '@alt':
@@ -57,6 +48,8 @@ def read_settings(docs, settings):
             else:
                 settings['option'][name] = argument
         else:
+            if line.count('[') != line.count(']'):
+                print('syntax error', line)
             ss.append(line)
     return ss
 
@@ -78,6 +71,21 @@ def augment_doc(code, docs, altdic):
     return code, docs2
 
 
+ANDTHEN = [
+    ('読み込む', '読み込[んで|み、]'),
+    ('読む', '読[んで|み、]'),
+]
+
+
+def make_letdoc(doc):
+    found = False
+    for old, new in ANDTHEN:
+        if old in doc:
+            doc = doc.replace(old, new)
+            found = True
+    return doc + 'X[に|と]する' if found else None
+
+
 def make_triple(ss, code, docs, settings):
     option = settings['option']
     altdic = settings['alt']
@@ -85,7 +93,15 @@ def make_triple(ss, code, docs, settings):
     test_with = option.get('@test_with', '_')
     result = test_code(code, test_with)
     for doc in docs:
-        ss.append((code, doc, test_with, result))
+        ss.append((code, multiese_da(doc), doc, test_with, result))
+        if '@test_let' in option:
+            doc = make_letdoc(doc)
+            if doc is not None:
+                test_with = option['@test_let']
+                result = test_code(code, test_with)
+                ss.append((f'X = {code}', multiese_da(
+                    doc), doc, test_with, result))
+                print(f'[LET] X = {code}', doc, test_with, result)
 
 
 def scaleXY(ss, code, docs, settings):
@@ -101,9 +117,13 @@ def scaleXY(ss, code, docs, settings):
 def new_altdic():
     return {
         'に変換する': 'に[変換|]する',
-        'かどうか': '[|か[|どうか]|とき|ならば]',
+        'が_': '[が|は]',
+        'で_': '[で|として|を[用いて|使って]]',
+        'かどうか': '[|か[|どうか][|確認する|調べる|判定する|テストする]',
         '求める': '[求める|計算する|算出する|得る]',
         '見る': '[見る|確認する|調べる|得る]',
+        '使う': '[使う|[使用する|用いる]]',
+        'プリントする': '[表示する|出力する|プリントする]'
     }
 
 
@@ -121,11 +141,13 @@ def read_corpus(filename):
 
 
 def main():
-    ss = []
+    tuples = []
     for file in sys.argv[1:]:
-        ss.extend(read_corpus(file))
-    for s in ss:
-        print(s)
+        tuples.extend(read_corpus(file))
+    with open('new_corpus.tsv', 'w') as f:
+        f = csv.writer(f, delimiter="\t")
+        for tuple in tuples:
+            f.writerow(tuple)
 
 
 if __name__ == '__main__':

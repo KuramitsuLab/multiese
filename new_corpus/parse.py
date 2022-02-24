@@ -155,7 +155,7 @@ def multiese_da(s, choice=0.5, shuffle=0.5):
         tree = parse_as_tree(s)
         c = ParsedResult()
         c.result = _traverse_tree(tree, c)
-        print(repr(c.result), c.c, c.emit(choice=0.9))
+        #print(repr(c.result), c.c, c.emit(choice=0.9))
         return c.emit(shuffle=shuffle, choice=choice)
     return s
 

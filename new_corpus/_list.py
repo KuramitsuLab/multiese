@@ -41,6 +41,7 @@ atupleをミュータブルにする
 '''
 
 __X__ = alist
+__X__2 = alist2
 
 len(__X__)
 '''
@@ -139,6 +140,7 @@ __Y__の[合計値|合計|総和][|を求める]
 
 min(__X__)
 '''
+@alt(一番|最も)
 __Y__の[最小値|一番小さい値][|を求める]
 '''
 
@@ -155,7 +157,7 @@ __X__の[平均値|平均][|を求める]
 range(len(alist))
 '''
 @test_with(list(_))
-alistの長さだけ繰り返せるようにする
+alistの長さだけ繰り返す
 '''
 
 range(n)
@@ -200,14 +202,14 @@ nからn2までのひとつ飛ばしの数列
 
 alist.append(element)
 '''
-@test_with(None)
+@test_with(_;alist)
 @alt(追加する|加える)
 alist[に|の末尾に][element|要素]を追加する
 '''
 
 alist.extend(alist2)
 '''
-@test_with(None)
+@test_with(_;alist)
 alist[に|の末尾に]alist2を[追加する|展開する]
 alist[に|の末尾に]alist2を追加して、[拡張する|広げる]
 '''
@@ -215,52 +217,52 @@ alist[に|の末尾に]alist2を追加して、[拡張する|広げる]
 
 alist.insert(n, element)
 '''
-@test_with(None)
+@test_with(_;alist)
 @alt(挿入する|差し込む)
 alistのn番目にelementを挿入する
 '''
 
 alist.pop()
 '''
-@test_with(None)
+@test_with(_;alist)
 alistの末尾から[要素|値]を[ポップする|取り出す|取り除く]
 '''
 
 alist.pop(n)
 '''
-@test_with(None)
+@test_with(_;alist)
 alistn番目から[要素|値]を[ポップする|取り出す|取り除く]
 '''
 
 alist.clear()
 '''
-@test_with(None)
+@test_with(_;alist)
 @alt(消去する|消す)
 alistの[全ての|全|][要素|値]を[クリアにする|取り除く|消去する|空にする]
 '''
 
 alist.remove(element)
 '''
-@test_with(None)
-alistから[lement[|と等しい最初の要素]を取り除く
+@test_with(_;alist)
+alistから[element[|と等しい最初の要素]を取り除く
 '''
 
 del alist[n]
 '''
-@test_with(None)
+@test_with(_;alist)
 alistのn番目[の[要素|値]|]を[削除する|消す]
 '''
 
 element in __X__
 '''
-elementが__Y__の要素かどうか
-element[がは]__Y__に含まれるかどうか
+elementが___Y__の要素かどうか
+elementが___Y__に含まれるかどうか
 '''
 
 element not in __X__
 '''
-elementが__Y__の要素でないかどうか
-element[がは]__Y__に含まれないかどうか
+elementが___Y__の要素でないかどうか
+elementが___Y__に含まれないかどうか
 '''
 
 __X__.index(element)
@@ -313,18 +315,22 @@ __Y__を反転する
 
 all(__X__)
 '''
-__Y__[内の要素が]全て真かどうか
+__Y__[内の要素]が_全て真かどうか
 '''
 
 any(__X__)
 '''
-__Y__[内の要素が]少なくとも一つ真かどうか
+__Y__[内の要素]が_少なくとも一つ真かどうか
 '''
 
 print(*__X__)
 '''
-@test_with(None)
-__Y__を[引数として展開して|]プリントする
+__Y__を[引数として展開して|順に]プリントする
+'''
+
+print(*__X__, sep=',')
+'''
+__Y__を[引数として展開して|カンマ区切りで]プリントする
 '''
 
 sum(__X__)
