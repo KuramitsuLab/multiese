@@ -1,3 +1,5 @@
+import re
+from audioop import mul
 import random
 import pegtree as pg
 
@@ -150,7 +152,7 @@ def _traverse_tree(tree, c):
     return Text('')
 
 
-def multiese_da(s, choice=0.5, shuffle=0.5):
+def multiese_da(s, choice=0.1, shuffle=0.5):
     if '|' in s:
         tree = parse_as_tree(s)
         c = ParsedResult()
@@ -158,6 +160,32 @@ def multiese_da(s, choice=0.5, shuffle=0.5):
         #print(repr(c.result), c.c, c.emit(choice=0.9))
         return c.emit(shuffle=shuffle, choice=choice)
     return s
+
+
+BEGIN = '([^A-Za-z0-9]|^)'
+END = ('(?![A-Za-z0-9]|$)')
+VARPAT = re.compile(BEGIN+r'([a-z]+\d?)'+END)
+
+
+def _replace(doc, oldnews):
+    doc = re.sub(VARPAT, r'\1@\2@', doc)  # @s@
+    for old, new in oldnews:
+        doc = doc.replace(old, new)
+    return doc.replace('@', '')
+
+
+def encode_text_code(text, code, choice=0.1, shuffle=0.5):
+    text = multiese_da(text, choice=choice, shuffle=shuffle)
+    names = [x[1] for x in VARPAT.findall(text) if x[1] in code]
+    d = {}
+    oldnews = []
+    for name in names:
+        if name not in d:
+            d[name] = f'<e{len(d)}>'
+            oldnews.append((f'@{name}@', d[name]))
+    text = _replace(text, oldnews)
+    code = _replace(code+' ', oldnews).strip()
+    return text, code
 
 
 if __name__ == '__main__':

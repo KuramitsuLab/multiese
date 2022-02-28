@@ -11,6 +11,15 @@ def _input(s=None):
     return '123'
 
 
+class Person:
+    def __init__(self):
+        self.name = 'Konoha'
+        self.age = 17
+
+
+obj = Person()
+
+
 def _load_variables():
     return dict(
         n=1,
@@ -27,13 +36,14 @@ def _load_variables():
         text2='utf-8',
         text3='.txt',
         # リスト
-        alist=[1, 2, 3],
-        alist2=[4, 5],
-        atuple=(1, 2, 3),
-        atuple2=(4, 5),
+        alist=[1, 2, 3], alist2=[4, 5],
+        atuple=(1, 2, 3), atuple2=(4, 5),
         element=2,    # [|文字列|[リスト|タプル]]
         element2=-1,
         element3='A',
+        adict={'A': 1}, key='A',
+        adict2={'B': 2}, key2='B',
+        obj=obj, obj2=obj, Person=Person,
         print=_print,
         input=_input,
         func=lambda x: x,
@@ -43,7 +53,6 @@ def _load_variables():
         os=import_module('os'),
         sys=import_module('sys'),
         # str
-        keyword=import_module('keyword'),
         re=import_module('re'),
 
         operator=import_module('operator'),

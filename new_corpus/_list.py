@@ -27,6 +27,32 @@ n2 = 3
 [要素|element]一つの[タプル|組][|を作る]
 '''
 
+(x, x2)
+'''
+xとx2から成るペア[|を作る]
+'''
+
+[element]
+'''
+[要素|element]一つのりスト[|を作る]
+'''
+
+[element] * n
+'''
+n個の[要素|element]があるリスト[|を作る]
+'''
+
+[0] * n
+'''
+長さnのリスト[|を作る]
+'''
+
+[[0] * n for _ in range(n2)]
+'''
+n2行n列の２次元リスト[|を作る]
+n[×| x ]n2の２次元リスト[|を作る]
+'''
+
 tuple(alist)
 '''
 @alt(に変換する|[に|化]する)
@@ -57,28 +83,21 @@ len(alist) == 0
 alistが空かどうか
 '''
 
-len(alist) > 0
+len(alist) != 0
 '''
 alistが空でないかどうか
-'''
-
-
-[element] * n
-'''
-長さnのリスト[|を作る]
-n個の[要素|element]があるリスト[|を作る]
 '''
 
 __X__ + __X__2
 '''
 @alt(連結する|結合する|接続する|加える)
-__X__と__Y__2を連結する
+__Y__と__Y__2を連結する
 '''
 
 __X__ * n
 '''
 __Y__をn倍する
-__Y__をn個連結する
+__Y__をn回、連結する
 '''
 
 __X__[0]
@@ -88,9 +107,14 @@ __X__[0]
 __Y__の先頭[|の[要素|値]][|を得る]
 '''
 
-alist[-1]
+__X__[-1]
 '''
 __Y__の末尾[|の[要素|値]][|を得る]
+'''
+
+__X__[n]
+'''
+__Y__のn番目の[|の[要素|値]][|を得る]
 '''
 
 __X__[1:]
@@ -133,6 +157,22 @@ __X__[n:n2]
 __Y__のn番目からn2番目[まで][の部分][|を取り出す]
 '''
 
+slice(n)
+'''
+[0から|]nまでのスライス
+'''
+
+slice(n, n2)
+'''
+nからn2までのスライス
+'''
+
+slice(n, n2, n3)
+'''
+nからn2までのn3ごとによるスライス
+'''
+
+
 sum(__X__)
 '''
 __Y__の[合計値|合計|総和][|を求める]
@@ -141,35 +181,35 @@ __Y__の[合計値|合計|総和][|を求める]
 min(__X__)
 '''
 @alt(一番|最も)
-__Y__の[最小値|一番小さい値][|を求める]
+__Y__の中の[最小値|一番小さい値][|を求める]
 '''
 
 max(__X__)
 '''
-__Y__の[最大値|一番大きい値][|を求める]
+__Y__の中の[最大値|一番大きい値][|を求める]
 '''
 
 sum(__X__)/len(__X__)
 '''
-__X__の[平均値|平均][|を求める]
+__Y__の[平均値|平均][|を求める]
 '''
 
 range(len(alist))
 '''
-@test_with(list(_))
+@test(list(_))
 alistの長さだけ繰り返す
 '''
 
 range(n)
 '''
-@test_with(list(_))
+@test(list(_))
 n[個|回]の数値イテラブル[|を得る]
 0からnの範囲[|で|を得る]
 '''
 
 range(n, n2)
 '''
-@test_with(list(_))
+@test(list(_))
 nからn2の範囲[|で|を得る]
 '''
 
@@ -197,59 +237,70 @@ nからn2までの数列[|を得る|を作る]
 list(range(n, n2+1, 2))
 '''
 @alt(ひとつ飛ばし|一つ置き)
-nからn2までのひとつ飛ばしの数列
+nからn2までのひとつ飛ばしの数列[|を作る]
+'''
+
+list(range(2, n, 2))
+'''
+@alt(ひとつ飛ばし|一つ置き)
+nまでの偶数列[|を作る]
+'''
+
+list(range(1, n, 2))
+'''
+@alt(ひとつ飛ばし|一つ置き)
+nまでの奇数列[|を作る]
 '''
 
 alist.append(element)
 '''
-@test_with(_;alist)
+@test(_;alist)
 @alt(追加する|加える)
 alist[に|の末尾に][element|要素]を追加する
 '''
 
 alist.extend(alist2)
 '''
-@test_with(_;alist)
+@test(_;alist)
 alist[に|の末尾に]alist2を[追加する|展開する]
-alist[に|の末尾に]alist2を追加して、[拡張する|広げる]
+alist[に|の末尾に]alist2を追加して[拡張する|広げる]
 '''
-
 
 alist.insert(n, element)
 '''
-@test_with(_;alist)
+@test(_;alist)
 @alt(挿入する|差し込む)
 alistのn番目にelementを挿入する
 '''
 
 alist.pop()
 '''
-@test_with(_;alist)
+@test(_;alist)
 alistの末尾から[要素|値]を[ポップする|取り出す|取り除く]
 '''
 
 alist.pop(n)
 '''
-@test_with(_;alist)
+@test(_;alist)
 alistn番目から[要素|値]を[ポップする|取り出す|取り除く]
 '''
 
 alist.clear()
 '''
-@test_with(_;alist)
+@test(_;alist)
 @alt(消去する|消す)
 alistの[全ての|全|][要素|値]を[クリアにする|取り除く|消去する|空にする]
 '''
 
 alist.remove(element)
 '''
-@test_with(_;alist)
-alistから[element[|と等しい最初の要素]を取り除く
+@test(_;alist)
+alistからelement[|と等しい最初の要素]を取り除く
 '''
 
 del alist[n]
 '''
-@test_with(_;alist)
+@test(_;alist)
 alistのn番目[の[要素|値]|]を[削除する|消す]
 '''
 
@@ -292,6 +343,12 @@ sorted(__X__, reverse=True)
 '''
 
 
+alist.index(element) if element in alist else -1
+'''
+{alistのelementの位置を|エラーなく}得る
+'''
+
+
 def func(x): return x+1
 
 
@@ -308,7 +365,7 @@ alistを複製する
 
 reversed(__X__)
 '''
-@test_with(list(_))
+@test(list(_))
 @alt(反転する|逆順にする|リバースする|逆さにする)
 __Y__を反転する
 '''
@@ -336,17 +393,29 @@ __Y__を[引数として展開して|カンマ区切りで]プリントする
 sum(__X__)
 '''
 @alt(フラット化する|flattenする)
-__Y__をフラット化する
+２次元__Y__をフラット化する
 '''
 
 enumerate(__X__)
 '''
-@test_with(list(_))
+@test(list(_))
+@alt(ナンバリングする|番号付けする|順序付けする|順番付けする)
 __Y__をナンバリングする
 '''
 
 enumerate(__X__, start=n)
 '''
-@test_with(list(_))
+@test(list(_))
 __Y__をnからナンバリングする
+'''
+
+filter(func, iterable)
+'''
+@alt(のそれぞれ||の各要素)
+iterableのそれぞれをfuncでフィルタする
+'''
+
+map(func, iterable)
+'''
+iterableのそれぞれをpredicatefuncでフィルタする
 '''

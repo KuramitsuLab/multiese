@@ -1,13 +1,14 @@
+import re
 import csv
 import sys
-from nis import maps
-import re
-import itertools
 import pegtree as pg
 
 from naming import type_augmentation
 from testing import test_code
-from parse import multiese_da
+from parse import multiese_da, encode_text_code
+
+# naming
+
 
 GRAMMAR = '''
 
@@ -28,6 +29,54 @@ LF = '\\r'? '\\n' / !.
 
 parse_as_tree = pg.generate(pg.grammar(GRAMMAR))
 
+# prefix
+
+BEGIN = '([^A-Za-z0-9]|^)'
+END = ('(?![A-Za-z0-9]|$)')
+VARPAT = re.compile(BEGIN+r'([a-z]+)(\d?)'+END)
+
+PREFIX = {
+    's': ('文字列', ''),
+    'iterable': ('[[リスト|タプル|配列]|列|イテラブル|]', ''),
+    'element': ('[文字列|オブジェクト|]', ''),
+    'obj': ('[オブジェクト|]', ''),
+    # 'alist': ('リスト', ''),
+    # 'atuple': ('タプル', ''),
+    # 'adict': ('辞書', ''),
+
+    # 'aset': ('セット', ''),
+    # 'key': ('[キー|]', ''),
+    # 'filename': ('[ファイル[名|パス]|文字列]', ''),
+    # 'df': ('データフレーム', ''),
+    # 'args': ('引数[|列|リスト]', ''),
+    # 'colname': ('', '[行|カラム]'),
+}
+
+
+def _ta(name, number, prefixdic):
+    prefix, suffix = prefixdic.get(name, ('', ''))
+    if prefix == '' and suffix == '':
+        if name.endswith('func'):
+            prefix = '関数'
+    return f'{name}{number}', f'{prefix}{name}{number}{suffix}'
+
+
+def type_augmentation(doc, prefixdic):
+    names = [_ta(x[1], x[2], prefixdic) for x in VARPAT.findall(doc)]
+    doc = re.sub(VARPAT, r'\1@\2\3@', doc)  # @s@
+    for old, new in names:
+        if old != new:
+            doc = doc.replace(f'@{old}@', new)
+    return doc.replace('@', '')
+
+
+def _split(s):
+    if ',' in s and '|' not in s:
+        return [x.strip() for x in s.split(',')]
+    if ';' in s:
+        return s.split(';')
+    return s.split('|')
+
 
 def read_settings(docs, settings):
     ss = []
@@ -42,20 +91,26 @@ def read_settings(docs, settings):
                 argument = argument.replace('_', '')
                 settings['alt'][key] = f'[{argument}]'
             elif name == '@X':
-                settings['X'] = argument.split('|')
+                settings['X'] = _split(argument)
             elif name == '@Y':
-                settings['Y'] = argument.split('|')
+                settings['Y'] = _split(argument)
+            elif name == '@prefix':
+                t = _split(argument)
+                if len(t) == 2:
+                    t.append('')
+                settings['prefix'][t[0]] = tuple(t[1:])
+                print('@', settings['prefix'])
             else:
                 settings['option'][name] = argument
         else:
-            if line.count('[') != line.count(']'):
-                print('syntax error', line)
+            if line.count('[') != line.count(']') or line.count('{') != line.count('}'):
+                print('SyntaxError:', line)
             ss.append(line)
     return ss
 
 
-def replace_with_rules(s, altdic):
-    s = type_augmentation(s)
+def replace_with_rules(s, altdic, prefixdic):
+    s = type_augmentation(s, prefixdic)
     for old, new in altdic.items():
         if old in s:
             #print('=>', old, new)
@@ -63,10 +118,10 @@ def replace_with_rules(s, altdic):
     return s
 
 
-def augment_doc(code, docs, altdic):
+def augment_doc(code, docs, altdic, prefixdic):
     docs2 = []
     for i, doc in enumerate(docs):
-        doc = replace_with_rules(doc, altdic)
+        doc = replace_with_rules(doc, altdic, prefixdic)
         docs2.append(doc)
     return code, docs2
 
@@ -89,11 +144,14 @@ def make_letdoc(doc):
 def make_triple(ss, code, docs, settings):
     option = settings['option']
     altdic = settings['alt']
-    code, docs = augment_doc(code, docs, altdic)
-    test_with = option.get('@test_with', '_')
+    prefixdic = settings['prefix']
+    code, docs = augment_doc(code, docs, altdic, prefixdic)
+    test_with = option.get('@test', '_')
     result = test_code(code, test_with)
     for doc in docs:
-        ss.append((code, multiese_da(doc), doc, test_with, result))
+        text = multiese_da(doc)
+        ss.append((code, text, doc, test_with, result))
+        print(encode_text_code(doc, code))
         if '@test_let' in option:
             doc = make_letdoc(doc)
             if doc is not None:
@@ -119,17 +177,22 @@ def new_altdic():
         'に変換する': 'に[変換|]する',
         'が_': '[が|は]',
         'で_': '[で|として|を[用いて|使って]]',
-        'かどうか': '[|か[|どうか][|確認する|調べる|判定する|テストする]',
-        '求める': '[求める|計算する|算出する|得る]',
-        '見る': '[見る|確認する|調べる|得る]',
+        'の中': '[|の[中|内]]',
+        '一つ': '[ひとつ|一つ]', '二つ': '[ふたつ|二つ]',
+        '１': '[一|１|1]', '２': '[二|２|2]', '３': '[三|３|3]',
+        'かどうか': '[か[|どうか][調べる||[確認|判定|テスト]する]|]',
+        '、': '[、|]',
+        '求める': '[求める|計算する|算出する]',
+        '見る': '[見る|確認する|調べる]',
         '使う': '[使う|[使用する|用いる]]',
-        'プリントする': '[表示する|出力する|プリントする]'
+        'プリントする': '[表示する|出力する|プリントする]',
+        'コピーする': '[コピーする|複製する]'
     }
 
 
 def read_corpus(filename):
     ss = []
-    settings = {'alt': new_altdic()}
+    settings = {'alt': new_altdic(), 'prefix': PREFIX.copy()}
     with open(filename) as f:
         tree = parse_as_tree(f.read())
         for t in tree:
