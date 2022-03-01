@@ -1,4 +1,6 @@
 from importlib import import_module
+import numpy as np
+import pandas as pd
 
 
 def _print(*args, **kw):
@@ -21,6 +23,8 @@ obj = Person()
 
 
 def _load_variables():
+    df = pd.DataFrame(data=[[1, 2.2, 'a'], [4, 5.8, 'a']],
+                      columns=['A', 'B', 'C'])
     return dict(
         n=1,
         n2=3,
@@ -54,11 +58,14 @@ def _load_variables():
         sys=import_module('sys'),
         # str
         re=import_module('re'),
-
         operator=import_module('operator'),
         itertools=import_module('itertools'),
         iterable=[0, 1, 2, 4],
         iterable2=[7, 8, 9],
+        np=import_module('numpy'),
+        pd=import_module('pandas'),
+        sns=import_module('seaborn'),
+        df=df, df2=df, ds=df['A'], ds2=df['B'], col='A', col2='B',
     )
 
 

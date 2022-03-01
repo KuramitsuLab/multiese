@@ -40,11 +40,11 @@ PREFIX = {
     'iterable': ('[[リスト|タプル|配列]|列|イテラブル|]', ''),
     'element': ('[文字列|オブジェクト|]', ''),
     'obj': ('[オブジェクト|]', ''),
-    # 'alist': ('リスト', ''),
-    # 'atuple': ('タプル', ''),
-    # 'adict': ('辞書', ''),
+    'alist': ('リスト', ''),
+    'atuple': ('タプル', ''),
+    'aset': ('セット', ''),
+    'adict': ('辞書', ''),
 
-    # 'aset': ('セット', ''),
     # 'key': ('[キー|]', ''),
     # 'filename': ('[ファイル[名|パス]|文字列]', ''),
     # 'df': ('データフレーム', ''),
@@ -71,10 +71,10 @@ def type_augmentation(doc, prefixdic):
 
 
 def _split(s):
-    if ',' in s and '|' not in s:
-        return [x.strip() for x in s.split(',')]
     if ';' in s:
         return s.split(';')
+    if ',' in s and '|' not in s:
+        return [x.strip() for x in s.split(',')]
     return s.split('|')
 
 
@@ -175,6 +175,7 @@ def scaleXY(ss, code, docs, settings):
 def new_altdic():
     return {
         'に変換する': 'に[変換|]する',
+        'に設定する': '[に設定する|に変更する|に[セット|指定]する|にする]',
         'が_': '[が|は]',
         'で_': '[で|として|を[用いて|使って]]',
         'の中': '[|の[中|内]]',
