@@ -60,6 +60,7 @@ def _load_variables():
         re=import_module('re'),
         operator=import_module('operator'),
         itertools=import_module('itertools'),
+        collections=import_module('collections'),
         iterable=[0, 1, 2, 4],
         iterable2=[7, 8, 9],
         np=import_module('numpy'),

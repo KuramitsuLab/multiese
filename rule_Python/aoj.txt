@@ -1081,43 +1081,6 @@ itertools.combinations_with_replacement(l, 2)
 @type(l, リスト)のうち2個までの[重複コンビネーション|重複組み合わせ]
 
 
-# collections
-
-import collections
-collectionsモジュールを用いる
-
-collections.deque()   @@let
-dequeオブジェクトを[生成する|作る|作成する]
-
-collections.deque(x)   @@let
-xからdequeオブジェクトを[生成する|作る|作成する]
-
-maxlen=5
-5を最大長として
-
-x.appendleft('l')
-xの[先頭|左側]に'l'を追加する
-
-x.appendleft('l')
-xの[先頭|左側]を'l'で拡張する
-
-x.popleft()
-xの先頭から取り除いた値
-
-x.rotate()
-xの要素を右にひとつ[ローテートする|回転する]
-
-x.rotate(2)
-xの要素を右に2つずつ[ローテートする|回転する]
-
-collections.Counter(l)   @@let
-@type(l, リスト)の辞書カウンタ
-
-c.most_common()
-cの[出現頻度順|出現回数順]の列
-
-c.most_common(3)
-cの[上位3個|上位3位まで]の[出現頻度順|出現回数順]の列
 
 
 # os
