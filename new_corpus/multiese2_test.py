@@ -1,4 +1,6 @@
+from functools import partial
 from importlib import import_module
+import datetime
 import numpy as np
 import pandas as pd
 
@@ -19,13 +21,25 @@ class Person:
         self.age = 17
 
 
+class Missing:
+    def method_missing(self, name, *args, **kwargs):
+        if len(kwargs) == 0:
+            return (name, *args)
+        return (name, *args, dict(**kwargs))
+
+    def __getattr__(self, name):
+        return partial(self.method_missing, name)
+
+
 obj = Person()
+missing = Missing()
 
 
 def _load_variables():
     df = pd.DataFrame(data=[[1, 2.2, 'a'], [4, 5.8, 'a']],
                       columns=['A', 'B', 'C'])
     return dict(
+        missing=missing,
         n=1,
         n2=3,
         n3=-1,
@@ -59,6 +73,9 @@ def _load_variables():
         # str
         re=import_module('re'),
         operator=import_module('operator'),
+        datetime=import_module('datetime'),
+        dt=datetime.datetime(2022, 12, 12),
+        adate=datetime.date(2022, 12, 12),
         typing=import_module('typing'),
         itertools=import_module('itertools'),
         collections=import_module('collections'),

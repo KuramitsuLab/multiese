@@ -173,7 +173,7 @@ def _replace(doc, oldnews):
     return doc.replace('@', '')
 
 
-def encode_text_code(text, code, choice=0.1, shuffle=0.5):
+def encode_text_code(text, code, choice=0.5, shuffle=0.5):
     text = multiese_da(text, choice=choice, shuffle=shuffle) + ' '
     names = [x[1] for x in VARPAT.findall(text) if x[1] in code]
     d = {}

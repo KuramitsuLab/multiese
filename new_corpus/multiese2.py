@@ -120,7 +120,7 @@ def augment_doc(code, docs, altdic, prefixdic):
     return code, docs2
 
 
-T5PREFIX = 'translate: '
+T5PREFIX = 'trans: '
 
 
 def make_triple(ss, code, docs, settings):
@@ -132,7 +132,7 @@ def make_triple(ss, code, docs, settings):
     result = test_code(code, test_with)
     for doc in docs:
         text = multiese_da(doc)
-        ss.append((code, T5PREFIX + text, T5PREFIX + doc, test_with, result))
+        ss.append((T5PREFIX + doc, code, T5PREFIX + text, test_with, result))
         print(encode_text_code(doc, code))
 
 
@@ -186,7 +186,7 @@ def main():
     tuples = []
     for file in sys.argv[1:]:
         tuples.extend(read_corpus(file))
-    with open('new_corpus.tsv', 'w') as f:
+    with open('kogi_trans.tsv', 'w') as f:
         f = csv.writer(f, delimiter="\t")
         for tuple in tuples:
             f.writerow(tuple)
