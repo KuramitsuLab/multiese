@@ -2,7 +2,7 @@
 # 色名に''なしver.
 
 color = '#fef4f4'
-@key(色, 桜色)
+@key(misc, 色, 桜色)
 @use(桜色)
 
 color = '#96514d'
