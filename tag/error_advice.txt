@@ -78,6 +78,9 @@ TypeError: myfunc() takes 4 positional arguments but 5 were given
 tuple型は要素の変更ができません。別の型を使ってみてください
 TypeError: 'tuple' object does not support item assignment
 
+float型は使えません。整数を渡してください
+TypeError: 'float' object cannot be interpreted as an integer
+
 
 #KeyError
 
