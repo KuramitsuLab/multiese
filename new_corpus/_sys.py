@@ -36,13 +36,14 @@ sys.getrecursionlimit()
 
 sys.setrecursionlimit(1000000)
 '''
+@test(sys=missing;_)
 再帰エラーを[未然に|]防ぐ
 再帰数の[上限|最大[|値]]を[上げる|増やす]
 '''
 
 sys.setrecursionlimit(n)
 '''
-@test(n=5000;_)
+@test(sys=missing;n=5000;_)
 最大の再帰数をnに設定する
 再帰エラーを防ぐため[に|]、上限をnに設定する
 '''
@@ -51,6 +52,7 @@ s = 'A'
 
 sys.intern(s)
 '''
+@test(sys=missing;_)
 sを[隔離する|インターンする]
 '''
 
