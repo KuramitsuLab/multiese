@@ -32,6 +32,7 @@ parse_as_tree = pg.generate(pg.grammar(GRAMMAR))
 # prefix
 
 BEGIN = '([^A-Za-z0-9]|^)'
+#END = ('(?![A-Za-z0-9\\[\\{]|$)')
 END = ('(?![A-Za-z0-9]|$)')
 VARPAT = re.compile(BEGIN+r'([a-z]+)(\d?)'+END)
 
@@ -56,12 +57,12 @@ def _ta(name, number, prefixdic):
 
 
 def type_augmentation(doc, prefixdic):
-    names = [_ta(x[1], x[2], prefixdic) for x in VARPAT.findall(doc)]
-    doc = re.sub(VARPAT, r'\1@\2\3@', doc)  # @s@
+    names = [_ta(x[1], x[2], prefixdic) for x in VARPAT.findall(doc+ ' ')]
+    doc = re.sub(VARPAT, r'\1@\2\3@', doc+ ' ')  # @s@
     for old, new in names:
         if old != new:
             doc = doc.replace(f'@{old}@', new)
-    return doc.replace('@', '')
+    return doc.replace('@', '').strip()
 
 
 def _split(s):
@@ -93,7 +94,7 @@ def read_settings(docs, settings):
                 if len(t) == 2:
                     t.append('')
                 settings['prefix'][t[0]] = tuple(t[1:])
-                print('@', settings['prefix'])
+                #print('@', settings['prefix'])
             else:
                 settings['option'][name] = argument
         else:

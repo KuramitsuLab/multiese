@@ -22,6 +22,11 @@ class Person:
 
 
 class Missing:
+    def __call__(self, *args, **kwargs):
+        if len(kwargs) == 0:
+            return ('__call__', *args)
+        return ('__call__', *args, dict(**kwargs))
+
     def method_missing(self, name, *args, **kwargs):
         if len(kwargs) == 0:
             return (name, *args)
