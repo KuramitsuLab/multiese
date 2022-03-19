@@ -1,30 +1,58 @@
-trans: グラフを[描画する|[使う|[使用する|用いる]]]	import matplotlib.pyplot as plt	trans: グラフを描画する	_	(SyntaxError('invalid syntax', ('<string>', 1, 1, 'import matplotlib.pyplot as plt')), '_')
-trans: [綺麗な|キレイな]グラフを[描画する|[使う|[使用する|用いる]]]	import seaborn as sns	trans: 綺麗なグラフを描画する	_	(SyntaxError('invalid syntax', ('<string>', 1, 1, 'import seaborn as sns')), '_')
-trans: グラフを[綺麗|キレイ]にする	import seaborn as sns	trans: グラフを綺麗にする	_	(SyntaxError('invalid syntax', ('<string>', 1, 1, 'import seaborn as sns')), '_')
-trans: {グラフ[|の[中|内]]で|日本語[|フォント]を}[表示[できる|可能な]|使える]ようにする	sns.set(font='IPAexGothic')	trans: グラフで日本語を使えるようにする	sns=missing;_	('set', {'font': 'IPAexGothic'})
-trans: グラフ[|の[中|内]]の[日本語フォント|日本語表示]を[有効にする|利用可能にする]	sns.set(font='IPAexGothic')	trans: グラフの日本語フォントを有効にする	sns=missing;_	('set', {'font': 'IPAexGothic'})
-trans: [グラフ[|の[中|内]]の|]フォントを[日本語表示|日本語][に設定する|[に|と]する|にセットする|に変更する|変える]	sns.set(font='IPAexGothic')	trans: グラフのフォントを日本語表示に設定する	sns=missing;_	('set', {'font': 'IPAexGothic'})
-trans: [グラフ[|の[中|内]]の|]文字化けを防ぐ	sns.set(font='IPAexGothic')	trans: グラフの文字化けを防ぐ	sns=missing;_	('set', {'font': 'IPAexGothic'})
-trans: [グラフ[|の[中|内]]の|][タイトル|題名|名前]を文字列s[に設定する|[に|と]する|にセットする|に変更する|変える]	plt.title(s)	trans: グラフのタイトルを文字列sに設定する	plt=missing;_	('title', ' ABC abc 123あ')
-trans: [描画する|表示する|出力する|]グラフの[サイズ|大きさ]を[横n縦n2|縦n2横n|n×n2][に設定する|[に|と]する|にセットする|に変更する|変える]	plt.figure(figsize=(n, n2))	trans: 描画するグラフのサイズを横n縦n2に設定する	plt=missing;_	('figure', {'figsize': (1, 3)})
-trans: [グラフ[|の[中|内]]の|][横軸|x軸|x座標]の[軸ラベル|ラベル|ラベル|名[前|称]|軸名|説明]を文字列s[に設定する|[に|と]する|にセットする|に変更する|変える]	plt.xlabel(s)	trans: グラフの横軸の軸ラベルを文字列sに設定する	plt=missing;_	('xlabel', ' ABC abc 123あ')
-trans: [グラフ[|の[中|内]]の|][横軸|x軸|x座標]に文字列sという[軸ラベル|ラベル|ラベル|名[前|称]|軸名|説明]を[付ける|つける|設定する]]	plt.xlabel(s)	trans: グラフの横軸に文字列sという軸ラベルを付ける	plt=missing;_	('xlabel', ' ABC abc 123あ')
-trans: [グラフ[|の[中|内]]の|][縦軸|y軸|y座標]の[軸ラベル|ラベル|ラベル|名[前|称]|軸名|説明]を文字列s[に設定する|[に|と]する|にセットする|に変更する|変える]	plt.ylabel(s)	trans: グラフの縦軸の軸ラベルを文字列sに設定する	plt=missing;_	('ylabel', ' ABC abc 123あ')
-trans: [グラフ[|の[中|内]]の|][縦軸|y軸|y座標]に文字列sという[軸ラベル|ラベル|ラベル|名[前|称]|軸名|説明]を[付ける|つける|設定する]	plt.ylabel(s)	trans: グラフの縦軸に文字列sという軸ラベルを付ける	plt=missing;_	('ylabel', ' ABC abc 123あ')
-trans: {グラフに|[[グリッド|[グリッド|目盛り|メモリ]線|格子|格子線]]を}[入れる|付ける|加える|描画する|表示する]	plt.grid(True)	trans: グラフにを入れる	plt=missing;_	('grid', True)
-trans: {[グラフ[|の[中|内]]に|]|[凡例|凡例|データラベル|補足]を}[入れる|付ける|加える|描画する|表示する]	plt.legend()	trans: グラフに凡例を入れる	plt=missing;_	('legend',)
-trans: {[グラフ[|の[中|内]]に]|[凡例|凡例|データラベル|補足]を|文字列sと文字列s2と}[入れる|付ける|加える|描画する|表示する]	plt.legend([s, s2])	trans: 文字列sと文字列s2と凡例をグラフに入れる	plt=missing;_	('legend', [' ABC abc 123あ', 'a'])
-trans: {[グラフ[|の[中|内]]に|]|[凡例|凡例|データラベル|補足]を|(x, x2)の[位置|場所]に}[入れる|付ける|加える|描画する|表示する]	plt.legend(loc=(x, x2))	trans: グラフに(x, x2)の位置に凡例を入れる	plt=missing;_	('legend', {'loc': (1.5, 3.0)})
-trans: {グラフ中の(x, x2)の[位置|場所]に|[凡例|凡例|データラベル|補足]を|}[入れる|付ける|加える|描画する|表示する]	plt.legend(loc=(x, x2))	trans: グラフ中の(x, x2)の場所に凡例を入れる	plt=missing;_	('legend', {'loc': (1.5, 3.0)})
-trans: {[最適な|ベストな|最も適切な|グラフに被らない][位置|場所]に|[凡例|凡例|データラベル|補足]を}[入れる|付ける|加える|描画する|表示する]	plt.legend(loc='best')	trans: 最適な位置に凡例を入れる	plt=missing;_	('legend', {'loc': 'best'})
-trans: {[グラフ[|の[中|内]]に|]|枠なしの[凡例|凡例|データラベル|補足]を}[入れる|付ける|加える|描画する|表示する]	plt.legend(frameon=False)	trans: グラフに枠なしの補足を入れる	plt=missing;_	('legend', {'frameon': False})
-trans: [折れ線グラフ|線グラフ|グラフ|[ライン|線]]を[プロットする|描く|描画する]	plt.plot(X, Y)	trans: 折れ線グラフをプロットする	plt=missing;X=Y=alist;_	('plot', [1, 2, 3], [1, 2, 3])
-trans: XとYの[折れ線グラフ|線グラフ|グラフ|[ライン|線]]を[プロットする|描く|描画する]	plt.plot(X, Y)	trans: XとYの折れ線グラフをプロットする	plt=missing;X=Y=alist;_	('plot', [1, 2, 3], [1, 2, 3])
-trans: XとYを[折れ線グラフ|線グラフ|グラフ|[ライン|線]][で|に][プロットする|描く|描画する]	plt.plot(X, Y)	trans: XとYを折れ線グラフでプロットする	plt=missing;X=Y=alist;_	('plot', [1, 2, 3], [1, 2, 3])
-trans: Xを[縦軸|y軸|y座標][、|]Yを[横軸|x軸|x座標][と指定して|[と|に]して|[と|に]設定して][、|][折れ線グラフ|線グラフ|グラフ|[ライン|線]]を[プロットする|描く|描画する]	plt.plot(X, Y)	trans: Xを縦軸、Yを横軸と指定して、折れ線グラフをプロットする	plt=missing;X=Y=alist;_	('plot', [1, 2, 3], [1, 2, 3])
-trans: Xの[変化|変遷|移り変わり|推移]を[折れ線グラフ|線グラフ|グラフ|[ライン|線]][で|に][プロットする|描く|描画する]	plt.plot(range(len(X)), X)	trans: Xの変化を折れ線グラフでプロットする	plt=missing;X=Y=alist;_	('plot', range(0, 3), [1, 2, 3])
-trans: Xを[横軸|x軸|x座標][と指定して|[と|に]して|[と|に]設定して][、|][[折れ線グラフ|線グラフ|グラフ|[ライン|線]]|Xの[変化|変遷|移り変わり|推移]]を[プロットする|描く|描画する]	plt.plot(range(len(X)), X)	trans: Xを横軸と指定して、折れ線グラフを描く	plt=missing;X=Y=alist;_	('plot', range(0, 3), [1, 2, 3])
-trans: データフレームdfのカラムcolnameとカラムcolname2を[折れ線グラフ|線グラフ|グラフ|[ライン|線]][で|として|を[用いて|使って]][プロットする|描く|描画する]	plt.plot(df[col], df[col2])	trans: データフレームdfのカラムcolnameとカラムcolname2を折れ線グラフでプロットする	plt=missing;_	('plot', 0    1\n1    4\nName: A, dtype: int64, 0    2.2\n1    5.8\nName: B, dtype: float64)
-trans: [透明度|アルファ値]xの[折れ線グラフ|線グラフ|グラフ|[ライン|線]]を[プロットする|描く|描画する]	plt.plot(X, Y, alpha=x)	trans: 透明度xの折れ線グラフをプロットする	plt=missing;X=Y=alist;_	('plot', [1, 2, 3], [1, 2, 3], {'alpha': 1.5})
-trans: {XとYの[折れ線グラフ|線グラフ|グラフ|[ライン|線]]を|文字列sと[軸ラベル|ラベル|ラベル|名[前|称]|軸名|説明]付けして}[プロットする|描く|描画する]	plt.plot(X, Y, label=s)	trans: 文字列sと軸ラベル付けしてXとYの折れ線グラフを描く	_	"(NameError(""name 'plt' is not defined""), '_')"
-trans: {XとYを|文字列sと[軸ラベル|ラベル|ラベル|名[前|称]|軸名|説明]付けされた[折れ線グラフ|線グラフ|グラフ|[ライン|線]][で|として|を[用いて|使って]]}[プロットする|描く|描画する]	plt.plot(X, Y, label=s)	trans: XとYを文字列sと軸ラベル付けされた折れ線グラフでプロットする	_	"(NameError(""name 'plt' is not defined""), '_')"
+trans: [表データ|データフレーム]を[使う|用いる|使用する]	from torch import align_tensors	trans: データフレームを使う	_;type(pd)	<class 'module'>
+trans: [表データ|データフレーム]をインポートする	from torch import align_tensors	trans: 表データをインポートする	_;type(pd)	<class 'module'>
+trans: Pandasのバージョンを[表示する|出力する|プリントする]	print(pd.__version__)	trans: Pandasのバージョンを表示する	_	[31mname '_' is not defined[0m
+trans: Pandasのバージョンを[見る|確認する|参照する|調べる]	print(pd.__version__)	trans: Pandasのバージョンを見る	_	[31mname '_' is not defined[0m
+trans: [データフレームを表示するとき[、|]][[表示可能な|[表示できる|表示する|表示される]]|][最大|]列数を[変更する|増やす|減らす]	pd.set_option('display.max_columns', n)	trans: データフレームを表示するとき、表示可能な列数を変更する	pd=missing;_	.set_option('display.max_columns', 1)
+trans: [データフレームを表示するとき[、|]][[表示可能な|[表示できる|表示する|表示される]]|]列数の最大値を[|]n[に設定する|に[変更する|増やす|減らす]|に[セット|指定]する|にする]	pd.set_option('display.max_columns', n)	trans: データフレームを表示するとき表示可能な列数の最大値をnにセットする	pd=missing;_	.set_option('display.max_columns', 1)
+trans: [データフレームを表示するとき[、|]]{[|]n列まで|データフレームを}[表示可能な|[表示できる|表示する|表示される]]ようにする	pd.set_option('display.max_columns', n)	trans: データフレームを表示するとき、データフレームをn列まで表示可能なようにする	pd=missing;_	.set_option('display.max_columns', 1)
+trans: [データフレームを表示するとき[、|]|][[表示可能な|[表示できる|表示する|表示される]]|][最大|]行数を[変更する|増やす|減らす]	pd.set_option('display.max_rows', n)	trans: データフレームを表示するとき、表示可能な最大行数を増やす	pd=missing;_	.set_option('display.max_rows', 1)
+trans: [データフレームを表示するとき[、|]|][[表示可能な|[表示できる|表示する|表示される]]|][最大|]行数を[|]n[に設定する|に[変更する|増やす|減らす]|に[セット|指定]する|にする]	pd.set_option('display.max_rows', n)	trans: データフレームを表示するとき、表示可能な最大行数をnに設定する	pd=missing;_	.set_option('display.max_rows', 1)
+trans: [データフレームを表示するとき[、|]|]{[|]n行まで|データフレームを}表示できるようにする	pd.set_option('display.max_rows', n)	trans: データフレームを表示するとき、n行までデータフレームを表示できるようにする	pd=missing;_	.set_option('display.max_rows', 1)
+trans: [データフレームを表示するとき[、|]|]小数点以下の表示精度を設定する	pd.set_option('precision', n)	trans: データフレームを表示するとき、小数点以下の表示精度を設定する	pd=missing;_	.set_option('precision', 1)
+trans: [データフレームを表示するとき[、|]|]小数点以下[の表示精度|]を[|]n桁[に設定する|に[変更する|増やす|減らす]|に[セット|指定]する|にする]	pd.set_option('precision', n)	trans: データフレームを表示するとき、小数点以下の表示精度をn桁に設定する	pd=missing;_	.set_option('precision', 1)
+trans: [データフレームを表示するとき[、|]|]小数点以下[|]n桁まで[表示可能な|[表示できる|表示する|表示される]]ようにする	pd.set_option('precision', n)	trans: データフレームを表示するとき、小数点以下n桁まで表示可能なようにする	pd=missing;_	.set_option('precision', 1)
+trans: [データフレームを表示するとき[、|]|]折り返しをしない[|ようにする]	pd.set_option('expand_frame_repr', False)	trans: 折り返しをしない	pd=missing;_	.set_option('expand_frame_repr', False)
+trans: [データフレームを表示するとき[、|]|]折り返しを[オフ|無効][に設定する|に[変更する|増やす|減らす]|に[セット|指定]する|にする]	pd.set_option('expand_frame_repr', False)	trans: データフレームを表示するとき、折り返しをオフにする	pd=missing;_	.set_option('expand_frame_repr', False)
+trans: [データフレームを表示するとき[、|]|][カラム|列]の最大幅を[|]n[に設定する|に[変更する|増やす|減らす]|に[セット|指定]する|にする]	pd.set_option('max_colwidth', n)	trans: データフレームを表示するとき、カラムの最大幅をnに変更する	pd=missing;_	.set_option('max_colwidth', 1)
+trans: [データフレームを表示するとき[、|]|]ヘッダー行を右寄せ[に設定する|に[変更する|増やす|減らす]|に[セット|指定]する|にする]	pd.set_option('colheader_justify', 'right')	trans: データフレームを表示するとき、ヘッダー行を右寄せに設定する	pd=missing;_	.set_option('colheader_justify', 'right')
+trans: [データフレームを表示するとき[、|]|]ヘッダー行を左寄せ[に設定する|に[変更する|増やす|減らす]|に[セット|指定]する|にする]	pd.set_option('colheader_justify', 'left')	trans: ヘッダー行を左寄せに設定する	pd=missing;_	.set_option('colheader_justify', 'left')
+trans: [|Pandas[で|として|を[用いて|使って]]]{[エクセル|エクセル[ファイル|データ]]から|データフレームを}[読み込む|読む]	pd.read_excel(excelfile)	trans: エクセルからデータフレームを読み込む	pd=missing;excelfile='file.xlsx';_	.read_excel('file.xlsx',)
+trans: [|Pandas[で|として|を[用いて|使って]]]{[[エクセル|エクセル[ファイル|データ]]ファイル|]excelfileを|[データフレームとして|]}[読み込む|読む]	pd.read_excel(excelfile)	trans: データフレームとしてエクセルファイルexcelfileを読み込む	pd=missing;excelfile='file.xlsx';_	.read_excel('file.xlsx',)
+trans: [|Pandas[で|として|を[用いて|使って]]]{[[エクセル|エクセル[ファイル|データ]]ファイル|]excelfileから[エクセル|エクセル[ファイル|データ]]を[読み込む|読む]	pd.read_excel(excelfile)	trans: {エクセルファイルexcelfileからエクセルを読み込む	pd=missing;excelfile='file.xlsx';_	.read_excel('file.xlsx',)
+trans: [|Pandas[で|として|を[用いて|使って]]]{[[エクセル|エクセル[ファイル|データ]]ファイル|]excelfileから|[|]n番目のシートを}[データフレームとして|][読み込む|読む]	pd.read_excel(excelfile, sheet_name=n)	trans: n番目のシートをエクセルファイルexcelfileからデータフレームとして読み込む	pd=missing;excelfile='file.xlsx';_	.read_excel('file.xlsx', {'sheet_name': 1})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[[エクセル|エクセル[ファイル|データ]]ファイル|]excelfileから|[|]nという[名前の|]シートを}[データフレームとして|][読み込む|読む]	pd.read_excel(excelfile, sheet_name=n)	trans: nという名前のシートをexcelfileからデータフレームとして読み込む	pd=missing;excelfile='file.xlsx';_	.read_excel('file.xlsx', {'sheet_name': 1})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[[エクセル|エクセル[ファイル|データ]]ファイル|]excelfileの|[|]n番目のシートを}[データフレームとして|][読み込む|読む]	pd.read_excel(excelfile, sheet_name=n)	trans: エクセルファイルexcelfileのn番目のシートをデータフレームとして読み込む	pd=missing;excelfile='file.xlsx';_	.read_excel('file.xlsx', {'sheet_name': 1})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[[エクセル|エクセル[ファイル|データ]]ファイル|]excelfileから|複数のシートを}[読み込む|読む]	pd.read_excel(excelfile, sheet_name=[n, n2])	trans: エクセルファイルexcelfileから複数のシートを読み込む	pd=missing;excelfile='file.xlsx';_	.read_excel('file.xlsx', {'sheet_name': [1, 3]})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[[エクセル|エクセル[ファイル|データ]]ファイル|]excelfileから|[|]nと[|]n2のシートを}[読み込む|読む]	pd.read_excel(excelfile, sheet_name=[n, n2])	trans: エクセルファイルexcelfileからnとn2のシートを読み込む	pd=missing;excelfile='file.xlsx';_	.read_excel('file.xlsx', {'sheet_name': [1, 3]})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[[エクセル|エクセル[ファイル|データ]]ファイル|]excelfileから|[全ての|すべての|全]シートを}[読み込む|読む]	pd.read_excel(excelfile, sheet_name=None)	trans: エクセルファイルexcelfileから全てのシートを読み込む	pd=missing;excelfile='file.xlsx';_	.read_excel('file.xlsx', {'sheet_name': None})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[CSVファイル|CSV|カンマ区切りのファイル]から|データフレームを}[読み込む|読む]	pd.read_csv(csvfile, sep=',')	trans: CSVファイルからデータフレームを読む	pd=missing;csvfile='file.csv';_	.read_csv('file.csv', {'sep': ','})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[[CSVファイル|CSV|カンマ区切りのファイル]|]csvfileから|データフレームを}[読み込む|読む]	pd.read_csv(csvfile, sep=',')	trans: データフレームをCSVファイルcsvfileから読み込む	pd=missing;csvfile='file.csv';_	.read_csv('file.csv', {'sep': ','})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[[CSVファイル|CSV|カンマ区切りのファイル]|]csvfileを|[|データフレームとして]}[読み込む|読む]	pd.read_csv(csvfile, sep=',')	trans: CSVファイルcsvfileを読み込む	pd=missing;csvfile='file.csv';_	.read_csv('file.csv', {'sep': ','})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[TSVファイル|TSV|タブ区切りのファイル]から|データフレームを}[読み込む|読む]	pd.read_csv(tsvfile, sep='\t')	trans: PandasでTSVファイルからデータフレームを読み込む	pd=missing;tsvfile='file.tsv';_	.read_csv('file.tsv', {'sep': '\t'})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[[TSVファイル|TSV|タブ区切りのファイル]|]tsvfileから|データフレームを}[読み込む|読む]	pd.read_csv(tsvfile, sep='\t')	trans: データフレームをtsvfileから読み込む	pd=missing;tsvfile='file.tsv';_	.read_csv('file.tsv', {'sep': '\t'})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[[TSVファイル|TSV|タブ区切りのファイル]|]tsvfileを|[|データフレームとして]}[読み込む|読む]	pd.read_csv(tsvfile, sep='\t')	trans: TSVファイルtsvfileを読み込む	pd=missing;tsvfile='file.tsv';_	.read_csv('file.tsv', {'sep': '\t'})
+trans: オプションで[、|][[読み込む|読む]|[エクセル|エクセル[ファイル|データ]]の|]シート[の名前|名]を[リスト|]alist[に設定する|に[変更する|増やす|減らす]|に[セット|指定]する|にする]	sheet_name = alist	trans: オプションで、読み込むシートの名前をリストalistに設定する	_;sheet_name	[1, 2, 3]
+trans: オプションで[、|][先頭[の|]|最初の][カラム|列]を[インデックス|行][に設定する|に[変更する|増やす|減らす]|に[セット|指定]する|にする]	index_col = 0	trans: オプションで、先頭のカラムをインデックスに設定する	_;index_col	0
+trans: オプションで[、|][|]n番目の[カラム|列]を[インデックス|行][に設定する|に[変更する|増やす|減らす]|に[セット|指定]する|にする]	index_col = n	trans: オプションで、n番目のカラムをインデックスに設定する	_;index_col	1
+trans: オプションで[、|][インデックス|行]を[自動的な|]連番[に設定する|に[変更する|増やす|減らす]|に[セット|指定]する|にする]	index_col = None	trans: オプションで、インデックスを自動的な連番に変更する	_;index_col	None
+trans: オプションで[、|]どの[カラム|列]も[インデックス|行]に[設定|]しない	index_col = None	trans: オプションで、どのカラムもインデックスに設定しない	_;index_col	None
+trans: オプションで[、|][先頭の|最初の]行を[ヘッダ|カラムの名前][に設定する|に[変更する|増やす|減らす]|に[セット|指定]する|にする]	header = 0	trans: オプションで、先頭の行をヘッダに設定する	_;header	0
+trans: オプションで[、|][ヘッダ|カラムの名前]を[自動的な|]連番[に設定する|に[変更する|増やす|減らす]|に[セット|指定]する|にする]	header = None	trans: オプションで、ヘッダを自動的な連番に設定する	_;header	None
+trans: オプションで[、|]どの行も[ヘッダ|カラムの名前]に[|設定]しない	header = None	trans: オプションで、どの行もヘッダにしない	_;header	None
+trans: オプションで[、|][ヘッダ|カラムの名前]を[リスト|]alist[に設定する|に[変更する|増やす|減らす]|に[セット|指定]する|にする]	header = alist	trans: オプションで、ヘッダをリストalistにセットする	_;header	[1, 2, 3]
+trans: オプションで[、|][リスト|]alistを[カラム|列][の名前|名][に設定する|に[変更する|増やす|減らす]|に[セット|指定]する|にする]	names = alist	trans: オプションで、リストalistをカラムの名前に設定する	_;names	[1, 2, 3]
+trans: オプションで[、|][読み込む|読む]行番号を[リスト|]alistで指定する	usecols = alist	trans: オプションで、読み込む行番号をリストalistで指定する	_;usecols	[1, 2, 3]
+trans: オプションで[、|][読み込まない|スキップする|無視する]列番号を[リスト|]alistで指定する	skiprows = alist	trans: オプションで読み込まない列番号をリストalistで指定する	_;skiprows	[1, 2, 3]
+trans: オプションで[、|][読み込まない|スキップする|無視する]フッタを[|]n[に設定する|に[変更する|増やす|減らす]|に[セット|指定]する|にする]	skipfooter = n	trans: オプションで、読み込まないフッタをnに設定する	_;skipfooter	1
+trans: [|Pandas[で|として|を[用いて|使って]]]{[[CSVファイル|CSV|カンマ区切りのファイル]|]csvfileを|[ヘッダ|カラムの名前][を指定せず|なしで]}[読み込む|読む]	pd.read_csv(csvfile, header=None)	trans: CSVファイルcsvfileをヘッダを指定せず読み込む	pd=missing;csvfile='file.csv';_	.read_csv('file.csv', {'header': None})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[CSVファイル|CSV|カンマ区切りのファイル][|]filepathを|[|]n番目の[カラム|列]を[インデックス|行][と|に]して}[読み込む|読む]	pd.read_csv(csvfile, index_col=n)	trans: CSVファイルfilepathをn番目のカラムをインデックスとして読み込む	pd=missing;csvfile='file.csv';_	.read_csv('file.csv', {'index_col': 1})
+trans: [|Pandas[で|として|を[用いて|使って]]]文字列[|]filepathから{[CSVファイル|CSV|カンマ区切りのファイル]を|[|]n番目の[カラム|列]を[インデックス|行][と|に]して}[読み込む|読む]	pd.read_csv(csvfile, index_col=n)	trans: 文字列filepathからn番目のカラムを行としてCSVファイルを読み込む	pd=missing;csvfile='file.csv';_	.read_csv('file.csv', {'index_col': 1})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[[CSVファイル|CSV|カンマ区切りのファイル]|]csvfileを|[SJISで|文字化けしないように]}[読み込む|読む]	pd.read_csv(csvfile, encoding='shift_jis')	trans: カンマ区切りのファイルcsvfileをSJISで読み込む	pd=missing;csvfile='file.csv';_	.read_csv('file.csv', {'encoding': 'shift_jis'})
+trans: [|Pandas[で|として|を[用いて|使って]]][[CSVファイル|CSV|カンマ区切りのファイル]|]csvfileから{[CSVファイル|CSV|カンマ区切りのファイル]を|[SJISで|文字化けしないように]}[読み込む|読む]	pd.read_csv(csvfile, encoding='shift_jis')	trans: PandasでCSVファイルcsvfileからCSVファイルをSJISで読み込む	pd=missing;csvfile='file.csv';_	.read_csv('file.csv', {'encoding': 'shift_jis'})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[TSVファイル|TSV|タブ区切りのファイル]から|データフレームを}[読み込む|読む]	pd.read_csv(tsvfile, sep='\t', encoding='utf-8')	trans: タブ区切りのファイルからデータフレームを読み込む	pd=missing;tsvfile='file.tsv';_	.read_csv('file.tsv', {'sep': '\t', 'encoding': 'utf-8'})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[[TSVファイル|TSV|タブ区切りのファイル]|]tsvfileから|データフレームを}[読み込む|読む]	pd.read_csv(tsvfile, sep='\t', encoding='utf-8')	trans: TSVファイルtsvfileからデータフレームを読み込む	pd=missing;tsvfile='file.tsv';_	.read_csv('file.tsv', {'sep': '\t', 'encoding': 'utf-8'})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[[TSVファイル|TSV|タブ区切りのファイル]|]tsvfileを|[|データフレームとして]}[読み込む|読む]	pd.read_csv(tsvfile, sep='\t', encoding='utf-8')	trans: TSVファイルtsvfileを読み込む	pd=missing;tsvfile='file.tsv';_	.read_csv('file.tsv', {'sep': '\t', 'encoding': 'utf-8'})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[TSVファイル|TSV|タブ区切りのファイル]から|データフレームを}[読み込む|読む]	pd.read_csv(tsvfile, sep='\t', encoding='shift_jis')	trans: TSVファイルからデータフレームを読み込む	pd=missing;tsvfile='file.tsv';_	.read_csv('file.tsv', {'sep': '\t', 'encoding': 'shift_jis'})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[[TSVファイル|TSV|タブ区切りのファイル]|]tsvfileから|データフレームを}[読み込む|読む]	pd.read_csv(tsvfile, sep='\t', encoding='shift_jis')	trans: TSVファイルtsvfileからデータフレームを読み込む	pd=missing;tsvfile='file.tsv';_	.read_csv('file.tsv', {'sep': '\t', 'encoding': 'shift_jis'})
+trans: [|Pandas[で|として|を[用いて|使って]]]{[[TSVファイル|TSV|タブ区切りのファイル]|]tsvfileを|[|データフレームとして]}[読み込む|読む]	pd.read_csv(tsvfile, sep='\t', encoding='shift_jis')	trans: TSVファイルtsvfileを読み込む	pd=missing;tsvfile='file.tsv';_	.read_csv('file.tsv', {'sep': '\t', 'encoding': 'shift_jis'})
+trans: [アヤメ|アイリス]のデータセットを[データフレームとして|]ロードする	sns.load_dataset('iris')	trans: アヤメのデータセットをデータフレームとしてロードする	sns=missing;_	.load_dataset('iris',)
