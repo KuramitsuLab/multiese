@@ -9,6 +9,7 @@ osモジュールをインポートする
 
 print()
 '''
+@test(print=missing;_)
 空行をプリントする
 改行する
 '''
@@ -16,31 +17,55 @@ print()
 element = 1
 element2 = 2
 
-print(element)
+__X__ = element
+print(__X__)
 '''
-xをプリントする
+@test(print=missing;_)
+@X(s;n;alist;iterable;obj)
+@Y(s;n;alist;iterable;obj)
+__Y__をプリントする
 '''
 
-print(element, end='')
+print(__X__, end='')
 '''
 @alt(改行なしに|改行せず[|に]|改行しな[いで|くて])
-{改行なしに|elementを}プリントする
+{改行なしに|__Y__を}プリントする
 elementの出力を改行なしに行う
+'''
+
+end = ''
+'''
+@test(_;end)
+オプションで、改行しないように設定する
 '''
 
 __X__ = ','
 print(element, element2, sep=__X__)
 '''
+@test(print=missing;_)
 @X(','|'\t'|s)
 @Y(カンマ|タブ|s)
-{elementとelement2を|__Y__区切りで}プリントする
+{elementとelement2を|__Y__で区切って}プリントする
 '''
 
 print('Hello World')
 '''
+@test(print=missing;_)
 [ハローワールド|こんにちは世界][と|を]プリントする
 {試しに|何か}動か[す|してみる]
 [最初の|初めての]プログラムを書く
+'''
+
+print(f'\033[__X__m{s}\033[0m')
+'''
+@X(30;31;32;33;34;35;36;37;1;4)
+@Y(黒色;赤色;緑色;黄色;青色;[マゼンタ|紫色];[シアン|水色];白色;太[|文]字;[下線|アンダーライン]付き)
+{sを|__Y__で}プリントする
+'''
+
+f'\033[__X__m{s}\033[0m'
+'''
+sを__Y__[に|化]する
 '''
 
 x = 0.11
@@ -48,7 +73,7 @@ __X__ = ':.3f'
 print(__X__.format(x))
 '''
 @X(':.1f'|':.2f'|':.3f'|':.4f'|':.5f')
-@X('1'|'2'|'3'|'4'|'5')
+@Y('1'|'2'|'3'|'4'|'5')
 xの小数点以下__Y__桁まで[を|]プリントする
 '''
 
@@ -79,7 +104,7 @@ os.sep
 '''
 @alt(ファイルパス|パス|ファイル名)
 @alt(セパレータ|区切り)
-ファイルパスのセパレータ記号[|を使う]
+ファイルパスのセパレータ記号[|を使う|を見る]
 '''
 
 os.getcwd()
@@ -91,14 +116,14 @@ filename = '/etc/man.conf'
 
 os.chdir(os.dirname(filename))
 '''
-@test(None)
+@test(os=missing;_)
 {[[現在の|カレント|][作業|ワーキング]]ディレクトリを|filenameに}[変更する|[設定|]する]
 '''
 
 text = "echo 'A'"
 os.system(text)
 '''
-@test(text="echo 'A'";_)
+@test(os=missing;text="echo 'A'";_)
 [UNIX|]コマンドtextを実行する
 '''
 
@@ -194,113 +219,157 @@ os.path.join(os.path.dirname(os.path.abspath(__file__)), filename)
 
 open(filename)
 '''
+@test(open=missing;_)
 @alt(オープンする|開く]
-@alt(オープンして|開[いて|き]、]
+@alt(オープンして|開[いて|き]]
 @alt(からの|から|の)
 filenameをオープンする
 filenameからの[入力|読み込み|]ストリームを得る
 '''
 
-X = open(filename)
+file = open(filename)
 '''
-@test(_;type(X))
-filenameからストリームを読み込[み|んで]Xとする
-filenameからストリームをオープンしてXとする
+@test(open=missing;_;file)
+filenameからストリームを読み込[み|んで]、fileとする
+filenameからストリームをオープンして、fileとする
 '''
 
 __X__ = 'a'
 open(filename, mode=__X__)
 '''
-@test(type(_))
-@X('r'|'rb'|'w'|'a')
-@Y(読み込み|バイナリ|書き込み|追加)
+@test(open=missing;_)
+@X('r'|'rb'|'w'|'wb'|'a')
+@Y(読み込み|バイナリ|書き込み|バイナリ書き込み|追加)
 {filenameを|__Y__[モードで_|用に]}オープンする
-filenameから__Y__ストリームをオープンする
+{filenameを|__Y__できるように}オープンする
+filenameをオープンして、__Y__ストリームを得る
 '''
 
-X = open(filename, mode=__X__)
+f = open(filename, mode=__X__)
 '''
-@test(_;type(X))
-{filenameを|__Y__[モードで_|用に]}オープンしてXとする
-filenameから__Y__ストリームをオープンしてXとする
+@test(open=missing;_)
+{filenameを|__Y__[モードで_|用に]}オープンして、fとする
+filenameから__Y__ストリームをオープンして、fとする
 '''
+
+mode = __X__
+'''
+@test(_;mode)
+オプションで、__Y__[モード|用]に設定する
+オプションで、__Y__モードを使う
+'''
+
 
 __X__ = 'utf-8'
 open(filename, encoding=__X__)
 '''
-@test(type(_))
-@X('utf-8'|'shift_jis'|'euc_jp'|'utf_8_sig'|text2)
-@Y(UTF8|SJIS|EUC|BOM付き|文字コードtext2)
-{filenameを|__Y__で_|読み込み[用|できるよう]に}オープンする
+@test(open=missing;_)
+@alt(エンコーディング|文字コード)
+@X('utf-8'|'shift_jis'|'euc_jp'|'utf_8_sig'|text|s)
+@Y(UTF8|SJIS|EUC|BOM付き|文字コードtext|sの示すエンコーディング)
+{filenameを|__Y__で_}オープンする
 '''
 
 open(filename, mode='w', encoding=__X__)
 '''
-@test(type(_))
+@test(open=missing;_)
 {filenameを|__Y__で_|書き込み[用|できるよう]に}オープンする
 '''
 
 open(filename, mode='a', encoding=__X__)
 '''
-@test(type(_))
-{filenameを|__Y__で_|追加できるように}オープンする
+@test(open=missing;_)
+{[既存の|]filenameを|__Y__で_|追加できるように}オープンする
 '''
+
+encoding = __X__
+'''
+@test(_;encoding)
+オプションで、エンコーディングを__Y__に設定する
+オプションで、__Y__を使う
+'''
+
+buffering = 0
+'''
+@test(_;buffering)
+オプションで、バッファリングを無効にする
+'''
+
+buffering = n
+'''
+@test(_;buffering)
+オプションで、[バッファリング|バッファ]のサイズをnに設定する
+'''
+
+errors = 'strict'
+'''
+@test(_;errors)
+オプションで、[エンコーディング|]エラーがあるとき、例外を発生させる[ように設定する|]
+'''
+
+errors = 'ignore'
+'''
+@test(_;errors)
+オプションで、[エンコーディング|]エラーを無視する[ように設定する|]
+'''
+
+newline = __X__
+'''
+@X('\n';'\r';'\r\n';None)
+@Y(UNIX;旧Mac;Windows;動作環境依存)
+オプションで、改行コードを__Y__に設定する
+'''
+
 
 f = sys.stdin
 f.close()
 '''
+@test(f=missing;_)
 @alt(クローズする|閉じる|解放する)
 @prefix(f;[ファイル|[入力|出力|]ストリーム])
-@test(f=open('filer.txt');_)
 fをクローズする
 '''
 
 f.read()
 '''
+@test(f=missing;_)
 @alt(読み込む|読む)
-@prefix(f;[ファイル|[入力|]ストリーム])
-@test(f=open('filer.txt');_)
-@test_let(f=open('filer.txt');X = _; X)
-f全体を文字列として読み込む
+f全体を[文字列として|全て]読み込む
 '''
 
 f.read(1)
 '''
-@alt(読み込む|読む)
-@test(f=open('filer.txt');_)
-@test_let(f=open('filer.txt');X = _; X)
-fから１[文字|バイト]、読み込む
+@test(f=missing;_)
+fから1[文字|バイト]、読み込む
 '''
 
 f.read(n)
 '''
-@alt(読み込む|読む)
-@test(f=open('filer.txt');_)
-@test_let(f=open('filer.txt');X = _; X)
+@test(f=missing;_)
 fからn[文字|バイト]、読み込む
 '''
 
 f.readlines()
 '''
-@test(f=open('filer.txt');_)
+@test(f=missing;_)
 f全体を[行[単位で|]分割して|リストとして]読み込む
 '''
 
 [s.strip() for s in f.readlines()]
 '''
-@test(f=open('filer.txt');_)
+@test(None)
 f全体を[行[単位で|ごとに]分割して|]リストに変換する
 '''
 
 f.readline()
 '''
-@test(f=open('filer.txt');_)
+@test(f=missing;_)
 fを一行ずつ読み込む
 '''
 
 f.readline()
 '''
-@test(f=open('filer.txt');_)
+@test(f=missing;_)
 {fを|改行[を取り除いて|除外して|なしで]}一行ずつ読み込む
 '''
 
@@ -308,7 +377,7 @@ s = ''
 f.write(s)
 '''
 @prefix(f;[ファイル|[出力|]ストリーム])
-@test(f=open('filew.txt','w');_)
+@test(f=missing;_)
 @alt(書き込む|書く)
 {fに|sを}書き込む
 '''
@@ -316,7 +385,7 @@ f.write(s)
 x = 0
 f.write(str(x))
 '''
-@test(f=open('filew.txt','w');_)
+@test(f=missing;_)
 @alt(書き込む|書く)
 {fに|xを文字列に[変換|]して}書き込む
 '''

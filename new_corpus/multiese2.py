@@ -32,6 +32,7 @@ parse_as_tree = pg.generate(pg.grammar(GRAMMAR))
 # prefix
 
 BEGIN = '([^A-Za-z0-9]|^)'
+#END = ('(?![A-Za-z0-9\\[\\{]|$)')
 END = ('(?![A-Za-z0-9]|$)')
 VARPAT = re.compile(BEGIN+r'([a-z]+)(\d?)'+END)
 
@@ -43,6 +44,7 @@ PREFIX = {
     'atuple': ('タプル', ''),
     'aset': ('セット', ''),
     'adict': ('辞書', ''),
+    'ty': ('型', '型'),
     'iterable': ('[[リスト|タプル|配列]|列|イテラブル|]', ''),
 }
 
@@ -52,16 +54,24 @@ def _ta(name, number, prefixdic):
     if prefix == '' and suffix == '':
         if name.endswith('func'):
             prefix = '関数'
-    return f'{name}{number}', f'{prefix}{name}{number}{suffix}'
+            suffix = '関数'
+    if '|' not in prefix:
+        prefix = f'[{prefix}|]'
+    if suffix != '' and '|' not in suffix:
+        suffix = f'[{suffix}|]'
+    var = f'{name}{number}'
+    if suffix == '':
+        return var, f'{prefix}{var}'
+    return var, f'[{prefix}{var}|{var}{suffix}]'
 
 
 def type_augmentation(doc, prefixdic):
-    names = [_ta(x[1], x[2], prefixdic) for x in VARPAT.findall(doc)]
-    doc = re.sub(VARPAT, r'\1@\2\3@', doc)  # @s@
+    names = [_ta(x[1], x[2], prefixdic) for x in VARPAT.findall(doc + ' ')]
+    doc = re.sub(VARPAT, r'\1@\2\3@', doc + ' ')  # @s@
     for old, new in names:
         if old != new:
             doc = doc.replace(f'@{old}@', new)
-    return doc.replace('@', '')
+    return doc.replace('@', '').strip()
 
 
 def _split(s):
@@ -93,7 +103,7 @@ def read_settings(docs, settings):
                 if len(t) == 2:
                     t.append('')
                 settings['prefix'][t[0]] = tuple(t[1:])
-                print('@', settings['prefix'])
+                #print('@', settings['prefix'])
             else:
                 settings['option'][name] = argument
         else:
@@ -133,7 +143,7 @@ def make_triple(ss, code, docs, settings):
     for doc in docs:
         text = multiese_da(doc)
         ss.append((T5PREFIX + doc, code, T5PREFIX + text, test_with, result))
-        print(encode_text_code(doc, code))
+        print(encode_text_code(doc, code), result)
 
 
 def scaleXY(ss, code, docs, settings):
@@ -159,8 +169,9 @@ def new_altdic():
         'かどうか': '[か[|どうか][調べる||[確認|判定|テスト]する]|]',
         '、': '[、|]',
         '求める': '[求める|計算する|算出する]',
-        '見る': '[見る|確認する|調べる]',
-        '使う': '[使う|[使用する|用いる]]',
+        '見る': '[見る|確認する|参照する|調べる]',
+        '使う': '[使う|用いる|使用する]',
+        '得る': '[使う|見る|求める]',
         '新たに': '[新しく|新たに|]',
         '作る': '[[作る|作成する]|[|新規]生成する|[用意|準備]する]',
         '作って': '[[作って|作成して]|[|新規]生成して|[用意|準備]して]',

@@ -20,15 +20,36 @@ class Person:
         self.name = 'Konoha'
         self.age = 17
 
+    def __str__(self):
+        return repr((self.name, self.age))
+
 
 class Missing:
-    def method_missing(self, name, *args, **kwargs):
+
+    def __init__(self):
+        self.msg = ''
+
+    def __str__(self):
+        return self.msg
+
+    def __call__(self, *args, **kwargs):
         if len(kwargs) == 0:
-            return (name, *args)
-        return (name, *args, dict(**kwargs))
+            self.msg += repr((*args,))
+        else:
+            self.msg += repr((*args, dict(**kwargs)))
+        return self
 
     def __getattr__(self, name):
-        return partial(self.method_missing, name)
+        self.msg += f'.{name}'
+        return self
+
+    def __getitem__(self, index):
+        self.msg += f'[{index}]'
+        return self
+
+    def __sub__(self, index):
+        self.msg += f'__sub__({index})'
+        return self
 
 
 obj = Person()
@@ -39,7 +60,7 @@ def _load_variables():
     df = pd.DataFrame(data=[[1, 2.2, 'a'], [4, 5.8, 'a']],
                       columns=['A', 'B', 'C'])
     return dict(
-        missing=missing,
+        missing=Missing(),
         n=1,
         n2=3,
         n3=-1,
@@ -66,6 +87,7 @@ def _load_variables():
         input=_input,
         func=lambda x: x,
         predicatefunc=lambda x: True,
+        filepath='./file.txt',
         filename='/etc/man.conf',
         math=import_module('math'),
         os=import_module('os'),
@@ -95,7 +117,8 @@ def test_code(code, test_with='', reload=True):
     global VARS
     try:
         if test_with != '':
-            code = test_with.replace('_', code)
+            code = test_with.replace('(_', f'({code}').replace('_)', f'{code})').replace(
+                ';_', f';{code}').replace('_;', f'{code};')
         if ';' in code:
             statement, sep, code = code.rpartition(';')
             exec(statement, VARS)
@@ -104,5 +127,4 @@ def test_code(code, test_with='', reload=True):
             VARS = _load_variables()
         return str(v).replace('\n', '\\n')
     except Exception as e:
-        # print(repr(e))
-        return (e, test_with)
+        return f'\033[31m{e}\033[0m'

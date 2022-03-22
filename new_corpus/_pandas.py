@@ -1,72 +1,3 @@
-import numpy as np
-import pandas as pd
-'''
-@test(_;type(pd))
-@alt(データフレーム)
-@alt(カラム|列)
-@alt(インデックス|行)
-@prefix(df;データフレーム)
-@prefix(ds;データ列)
-@prefix(col;[カラム|文字列])
-@prefix(value;[文字列|日付|])
-[pandas|データフレーム|[表|表データ]]を[使う|インポートする]
-'''
-
-import seaborn as sns
-
-n = 1
-
-filepath = 'test.csv'
-col, col2, col3 = 'A', 'B', 'C'
-df = pd.DataFrame(data=[[1, 2, 3], [4, 5, 6]], columns=['A', 'B', 'C'])
-df2 = df
-ds, ds2 = df[col], df[col2]
-
-pd.set_option('display.max_columns', n)
-'''
-@alt(変更する|増やす|減らす)
-[表示できる|表示される|表示する]最大カラム数を変更する
-最大表示カラム数をnに設定する
-[表示できる|表示される|表示する|表示]カラム数を[最大|]nカラムに設定する
-データフレームが[最大|]nカラムまで表示できるようにする
-'''
-
-pd.set_option('display.max_rows', n)
-'''
-[表示できる|表示される|表示する]最大行数を変更する
-最大表示行数をnに設定する
-[表示できる|表示される|表示する|表示]行数を[最大|]n行に設定する
-データフレームが[最大|]n行まで表示できるようにする
-'''
-
-pd.set_option('precision', n)
-'''
-小数点以下の表示精度を設定する
-小数点以下[の表示精度|]をn桁に設定する
-小数点以下n桁まで表示するように設定する
-小数点以下n桁までデフォルトで表示する
-'''
-
-pd.set_option('expand_frame_repr', False)
-'''
-データフレームの折り返しをしないようにする
-データフレームの折り返しを[オフ|無効]に設定する
-'''
-
-pd.set_option('max_colwidth', n)
-'''
-カラムの最大[表示]幅をnに設定する
-'''
-
-pd.set_option('colheader_justify', 'right')
-'''
-[カラム[の]]ヘッダーを右寄せに設定する
-'''
-
-pd.set_option('colheader_justify', 'left')
-'''
-[カラム[の]]ヘッダーを左寄せに設定する
-'''
 
 # read
 
@@ -74,6 +5,7 @@ pd.set_option('colheader_justify', 'left')
 
 pd.read_excel(filepath)
 '''
+@test(pd=missing;_)
 @alt(読み込む|読む)
 @alt(読み込んで|読んで)
 {エクセルファイルfilepathを|[Pandasで|データフレームとして]}読み込む
@@ -82,6 +14,7 @@ pd.read_excel(filepath)
 
 pd.read_excel(filepath, sheet_name=n)
 '''
+@test(pd=missing;_)
 エクセルファイルfilepathを[Pandasで|データフレームとして|]読み込む
 {エクセルファイルfilepathから|n番目のシートを}[Pandasで|データフレームとして|]読み込む
 {エクセルファイルfilepathから|nという[名前の|]シートを}[Pandasで|データフレームとして|]読み込む
@@ -90,6 +23,7 @@ pd.read_excel(filepath, sheet_name=n)
 
 pd.read_csv(filepath, sep=',')
 '''
+@test(pd=missing;_)
 {テキストファイルfilepathを|カンマ区切りで|[Pandasで|データフレームとして|]}読み込む
 {CSVファイルfilepathを|[Pandasで|データフレームとして|]}読み込む
 文字列filepathから{CSVファイルを|[Pandasで|カンマ区切りで|データフレームとして|]}読み込む
@@ -97,6 +31,7 @@ pd.read_csv(filepath, sep=',')
 
 pd.read_csv(filepath, sep='\t')
 '''
+@test(pd=missing;_)
 {テキストファイルfilepathを|タブ区切りで|[Pandasで|データフレームとして|]}読み込む
 {TSVファイルfilepathを|[Pandasで|データフレームとして|]}読み込む
 文字列filepathから{TSVファイルを|[Pandasで|タブ区切りで|データフレームとして|]}読み込む
@@ -106,12 +41,14 @@ pd.read_csv(filepath, sep='\t')
 
 pd.read_csv(filepath, header=None)
 '''
+@test(pd=missing;_)
 {CSVファイルfilepathを|ヘッダ[を指定せず|なしで]}読み込む
 文字列filepathから{CSVファイルを|ヘッダ[を指定せず|なしで]}読み込む
 '''
 
 pd.read_csv(filepath, index_col=n)
 '''
+@test(pd=missing;_)
 {CSVファイルfilepathを|n番目のカラムをインデックス[と|に]して}読み込む
 文字列filepathから{CSVファイルを|n番目のカラムをインデックス[と|に]して}読み込む
 '''
@@ -120,12 +57,14 @@ pd.read_csv(filepath, index_col=n)
 
 pd.read_csv(filepath, encoding='shift_jis')
 '''
+@test(pd=missing;_)
 {CSVファイルfilepathを|[SJISで|文字化けしないように]}読み込む
 文字列filepathから{CSVファイルを|[SJISで|文字化けしないように]}読み込む
 '''
 
 sns.load_dataset('iris')
 '''
+@test(pd=missing;_)
 [アヤメ|アイリス]のデータセットを[データフレームとして|]ロードする
 '''
 
@@ -133,7 +72,7 @@ sns.load_dataset('iris')
 
 df.to_excel(filepath)
 '''
-@alt(書き出す|書き込む|保存する)
+@test(df=missing;_)
 @alt(ファイル名|名前)
 {dfを|エクセルファイルfilepathに}書き出す
 {dfを|文字列filepathというファイル名で|エクセル[ファイル|形式|]として}書き出す
@@ -141,12 +80,14 @@ df.to_excel(filepath)
 
 df.to_csv(filepath)
 '''
+@test(df=missing;_)
 {dfを|CSVファイルfilepathに}書き出す
 {dfを|文字列filepathというファイル名で|CSV[ファイル|形式|]として}書き出す
 '''
 
 df.to_csv(filepath, header=None)
 '''
+@test(df=missing;_)
 @alt(を付けずに|を付けないで|なしで|を無視して)
 {dfを|CSVファイルfilepathに|ヘッダを付けずに}書き出す
 {dfを|ヘッダを付けずに|文字列filepathというファイル名で|CSV[ファイル|形式|]として}書き出す
@@ -154,12 +95,14 @@ df.to_csv(filepath, header=None)
 
 df.to_csv(filepath, index=None)
 '''
+@test(df=missing;_)
 {dfを|CSVファイルfilepathに|インデックスを付けずに}書き出す
 {dfを|インデックスを付けずに|文字列filepathというファイル名で|CSV[ファイル|形式|]として}書き出す
 '''
 
 df.to_csv(filepath, encoding='utf_8_sig')
 '''
+@test(df=missing;_)
 @alt(を付けて|を付きで|ありで)
 [Excelで|]文字化けしないCSVファイルを書き出す
 {dfを|CSVファイルfilepathに|[BOMを付けて|文字化けしないように]}書き出す
@@ -168,6 +111,7 @@ df.to_csv(filepath, encoding='utf_8_sig')
 
 df.to_csv(filepath, encoding='shift_jis')
 '''
+@test(df=missing;_)
 {SJISで|CSVファイルを}書き出す
 {dfを|CSVファイルfilepathに|SJISで}書き出す
 {dfを|SJISで|文字列filepathに}書き出す
@@ -175,6 +119,7 @@ df.to_csv(filepath, encoding='shift_jis')
 
 df.to_csv(filepath, sep='\t')
 '''
+@test(df=missing;_)
 {タブ区切りで|TSVファイルを}書き出す
 {dfを|TSVファイルfilepathに}書き出す
 {dfを|タブ区切りで|文字列filepathに}書き出す
@@ -182,6 +127,7 @@ df.to_csv(filepath, sep='\t')
 
 df.to_csv(filepath, float_format='%.3f')
 '''
+@test(pd=missing;_)
 保存するCSVファイルの小数点以下の桁数を設定する
 {dfを|CSVファイルfilepathに|小数点以下3桁まで}書き出す
 {dfを|小数点以下3桁まで|文字列filepathに}書き出す
@@ -192,12 +138,12 @@ df.to_csv(filepath, float_format='%.3f')
 df.head()
 '''
 @alt(を見る|を[確認する|調べる])
+dfの内容を確認する
 dfの[先頭|最初][|を見る]
 '''
 
 df.head(n)
 '''
-@alt(抽出する|抽出[し|して]|取り出す|)
 dfの[先頭|最初|上]n行を抽出する
 '''
 
@@ -845,7 +791,6 @@ dfのcolとcol2をドロップする
 df.dropna()
 '''
 @alt(_の|[内|中]の|において)
-@alt(欠損値|NaN|欠損|[未記入|未入力]値)
 df_の欠損値が[ある|存在する]行をドロップする
 '''
 
@@ -1229,5 +1174,5 @@ dsとds2から重複を取り除く
 df[col] = df[col2].astype(ty)
 '''
 @alt(に代入する|[と|に]する)
-dfのcol2をty型に変換し、[|新たに|dfの]colに代入する
+dfのcol2をtyに変換し、[|新たに|dfの]colに代入する
 '''

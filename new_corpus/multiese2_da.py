@@ -162,6 +162,7 @@ def multiese_da(s, choice=0.1, shuffle=0.5):
 
 
 BEGIN = '([^A-Za-z0-9]|^)'
+#END = ('(?![A-Za-z0-9\\]\\}]|$)')
 END = ('(?![A-Za-z0-9]|$)')
 VARPAT = re.compile(BEGIN+r'([a-z]+\d?)'+END)
 
