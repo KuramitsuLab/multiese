@@ -1,0 +1,43 @@
+
+
+math をインポートしていない
+NameError: name 'math' is not defined
+
+IPython をインポートしていない
+NameError: name 'IPython' is not defined
+
+AStudio クラスが定義されていない
+NameError: name 'AStudio' is not defined
+
+read_csv が定義されていない
+NameError: name 'read_csv' is not defined
+
+length関数が定義されていない
+NameError: name 'length' is not defined
+
+sentence_transformersのモジュールがインストールされていない
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+変数にタプルが代入されている
+AttributeError: 'tuple' object has no attribute 'transform'
+
+appendしようとしたが、整数であった
+AttributeError: 'int' object has no attribute 'append'
+
+コンストラクタ(__init__)に引数を与え過ぎている
+TypeError: __init__() takes 4 positional arguments but 5 were given
+
+全角文字が変数名に使われている
+SyntaxError: invalid character in identifier
+
+括弧や""が正しく閉じていない
+SyntaxError: unexpected EOF while parsing
+
+コロンが足りないなど文法が正しくない
+SyntaxError: invalid syntax
+
+インデントが正しくない
+IndentationError: unindent does not match any outer indentation level
+
+mathモジュールには、COS関数はない
+ImportError: cannot import name 'COS' from 'math'

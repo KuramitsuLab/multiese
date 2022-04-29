@@ -4,7 +4,6 @@ import re
 import keyword
 import string
 
-from torch import align_tensors
 s = 'ABC abc 123'  # 文字列 s, s2, s3
 s2 = 'a'
 s3 = '123'
@@ -38,56 +37,56 @@ ss = ['A', 'B', 'C']  # 文字列(リスト|タプル)
 
 string.ascii_letters
 '''
-@test(import string;_)
+@test(import string;$$)
 @alt(全ての|全)
 全ての[アルファベット|英字][|を[得る|使う]]
 '''
 
 string.ascii_lowercase
 '''
-@test(import string;_)
+@test(import string;$$)
 全ての小文字[|を[得る|使う]]
 '''
 
 string.ascii_uppercase
 '''
-@test(import string;_)
+@test(import string;$$)
 全ての大文字[|を[得る|使う]]
 '''
 
 string.digits
 '''
-@test(import string;_)
+@test(import string;$$)
 全ての数字[|を[得る|使う]]
 '''
 
 string.hexdigits
 '''
-@test(import string;_)
+@test(import string;$$)
 全ての十六進数字[|を[得る|使う]]
 '''
 
 string.octdigits
 '''
-@test(import string;_)
+@test(import string;$$)
 全ての[８|八]進数字[|を[得る|使う]]
 '''
 
 string.punctuation
 '''
-@test(import string;repr(_))
+@test(import string;repr($$))
 全ての句読点文字[|を[得る|使う]]
 '''
 
 string.printable
 '''
-@test(import string;repr(_))
+@test(import string;repr($$))
 全ての印字[|可能な]文字[|を[得る|使う]]
 '''
 
 string.whitespace
 '''
-@test(import string;repr(_))
+@test(import string;repr($$))
 全ての空白文字[|を[得る|使う]]
 '''
 
@@ -541,7 +540,7 @@ s[は|が][全て|]識別子名かどうか
 
 keyword.iskeyword(s)
 '''
-@test(import keyword;_)
+@test(import keyword;$$)
 s[は|が]キーワードかどうか
 '''
 
@@ -587,7 +586,7 @@ s.encode(errors='ignore')
 args = []
 text.format(*alist)
 '''
-@test(text='<{}>';_)
+@test(text='<{}>';$$)
 @alt(フォーマットする|文字列整形する)
 書式textを{alistを|引数として}フォーマットする
 '''
@@ -595,7 +594,7 @@ text.format(*alist)
 mapping = {}
 text.format_map(mapping)
 '''
-@test(text='<{}>';mapping={};_)
+@test(text='<{}>';mapping={};$$)
 書式textをmappingでフォーマットする
 '''
 

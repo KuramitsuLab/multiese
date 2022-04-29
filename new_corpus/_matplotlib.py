@@ -2,7 +2,7 @@ import matplotlib
 from re import X
 import matplotlib.pyplot as plt
 '''
-@test(_;plt.__name__)
+@test($$;plt.__name__)
 @alt(描画する|描く|プロットする)
 @alt(グラフ|プロット|matplotlib)
 グラフを描画する
@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 import seaborn as sns
 '''
-@test(_;sns.__name__)
+@test($$;sns.__name__)
 [綺麗な|キレイな|見やすい]グラフを描画する
 [綺麗な|キレイな|見やすい]グラフを使う
 グラフを[綺麗|キレイ]にする
@@ -21,7 +21,7 @@ import seaborn as sns
 
 sns.set()
 '''
-@test(sns=missing;_)
+@test(sns=missing;$$)
 @alt(見た目|デザイン)
 [seabornの|]デフォルト[|スタイル|見た目]を適用する
 グラフ[の見た目]を[デフォルトで|][いい|イイ]感じに設定する
@@ -30,7 +30,7 @@ sns.set()
 __X__ = 'paper'
 sns.set(context=__X__)
 '''
-@test(sns=missing;_)
+@test(sns=missing;$$)
 @X('paper';'notebook';'talk';'poster')
 @Y(論文;画面;[スライド|プレゼン];ポスター)
 グラフ[の用途|の目的|]を__Y__[|用]に設定する
@@ -39,7 +39,7 @@ sns.set(context=__X__)
 __X__ = 'deep'
 sns.set(pallete=__X__)
 '''
-@test(sns=missing;_)
+@test(sns=missing;$$)
 @X('deep';'muted';'pastel';'dark';'bright';'colorblind')
 @Y(濃く;淡く;パステル調に;暗く;明るく;色差別なく)
 @alt(カラーパレット|色|パレット|[色|カラー|]テーマ|色[|調|使い])
@@ -49,7 +49,7 @@ sns.set(pallete=__X__)
 __X__ = 'deep'
 sns.set(pallete=__X__)
 '''
-@test(sns=missing;_)
+@test(sns=missing;$$)
 @X('deep';'muted';'pastel';'dark';'bright';'colorblind')
 @Y(濃い;淡い;パステル調の;暗い;明るい;色差別ない)
 {__X__カラーパレットを|グラフ[|全般]に}使う
@@ -57,7 +57,7 @@ sns.set(pallete=__X__)
 
 sns.set(pallete=s)
 '''
-@test(sns=missing;_)
+@test(sns=missing;$$)
 グラフ[の|で使う]カラーパレットをsで指定する
 グラフ[の|で使う]カラーパレットをsに設定する
 '''
@@ -65,14 +65,14 @@ sns.set(pallete=s)
 s = 'Yu Gothic'
 sns.set(font=s)
 '''
-@test(sns=missing;_)
+@test(sns=missing;$$)
 グラフで使うフォントをsに指定する
 グラフの中のフォントをsに設定する
 '''
 
 sns.set(font='IPAexGothic')
 '''
-@test(sns=missing;_)
+@test(sns=missing;$$)
 @alt(グラフの中|グラフ|グラフ[内|中|)
 @alt(できる|可能な)
 @alt(に設定する|[に|と]する|に[セット|指定]する|に変更する|変える)
@@ -84,7 +84,7 @@ sns.set(font='IPAexGothic')
 
 sns.set(style='darkgrid')
 '''
-@test(sns=missing;_)
+@test(sns=missing;$$)
 @alt(背景|背景色|グリッド)
 グラフの背景を暗くする
 グラフの背景を暗くする
@@ -92,21 +92,21 @@ sns.set(style='darkgrid')
 
 sns.set(style='whitegrid')
 '''
-@test(sns=missing;_)
+@test(sns=missing;$$)
 @alt(背景|背景色|グリッド)
 グラフの背景を白くする
 '''
 
 sns.set(palette=s)
 '''
-@test(sns=missing;_)
+@test(sns=missing;$$)
 グラフの[|描画で使う]パレットをsに設定する
 '''
 
 s = s2 = 'label'
 plt.title(s)
 '''
-@test(plt=missing;_)
+@test(plt=missing;$$)
 @alt(グラフ|プロット)
 @alt(タイトル|題名|名前)
 [グラフの中の|グラフで使う]タイトルをsに設定する
@@ -115,14 +115,14 @@ plt.title(s)
 n, n2 = 10, 6
 plt.figure(figsize=(n, n2))
 '''
-@test(plt=missing;_)
+@test(plt=missing;$$)
 @alt(サイズ|大きさ)
 [描画する|表示する|出力する|]グラフのサイズを[横n縦n2|縦n2横n|n×n2]に設定する
 '''
 
 plt.xlabel(s)
 '''
-@test(plt=missing;_)
+@test(plt=missing;$$)
 @alt(横軸|x軸|x座標)
 @alt(軸ラベル|ラベル|ラベル|名[前|称]|軸名|説明)
 @alt(付ける|つける|設定する)
@@ -132,7 +132,7 @@ plt.xlabel(s)
 
 plt.ylabel(s)
 '''
-@test(plt=missing;_)
+@test(plt=missing;$$)
 @alt(縦軸|y軸|y座標)
 [グラフの中の|グラフで使う|]縦軸の軸ラベルをsに設定する
 [グラフの中の|グラフで使う|]縦軸にsという軸ラベルを付ける
@@ -140,7 +140,7 @@ plt.ylabel(s)
 
 plt.grid(True)
 '''
-@test(plt=missing;_)
+@test(plt=missing;$$)
 @alt(入れる|付ける|加える|描画する|表示する)
 @alt(グリッド|[グリッド|目盛り|メモリ]線|格子|格子線)
 {グラフに|[グリッド]を}入れる
@@ -148,41 +148,41 @@ plt.grid(True)
 
 plt.legend()
 '''
-@test(plt=missing;_)
+@test(plt=missing;$$)
 @alt(凡例|凡例|データラベル|補足)
 {[グラフの中に|]|凡例を}入れる
 '''
 
 plt.legend([s, s2])
 '''
-@test(plt=missing;_)
+@test(plt=missing;$$)
 {[グラフの中に]|凡例を|sとs2と}入れる
 '''
 
 x, x2 = 0.5, 0.5
 plt.legend(loc=(x, x2))
 '''
-@test(plt=missing;_)
+@test(plt=missing;$$)
 {[グラフの中に|]|凡例を|(x, x2)の[位置|場所]に}入れる
 {グラフ中の(x, x2)の[位置|場所]に|凡例を|}入れる
 '''
 
 plt.legend(loc='best')
 '''
-@test(plt=missing;_)
+@test(plt=missing;$$)
 {[最適な|ベストな|最も適切な|グラフに被らない][位置|場所]に|凡例を}入れる
 '''
 
 plt.legend(frameon=False)
 '''
-@test(plt=missing;_)
+@test(plt=missing;$$)
 {[グラフの中に|]|枠なしの凡例を}入れる
 '''
 
 xdata = ydata = [1, 2, 3]
 plt.plot(xdata, ydata)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 @alt(グラフ|グラフ)
 @alt(折れ線グラフ|線グラフ|[ライン|線])
 @alt(と指定して|[と|に]して|[と|に]設定して)
@@ -196,7 +196,7 @@ xdataを縦軸、ydataを横軸と指定して、折れ線グラフを描画す�
 
 plt.plot(range(len(xdata)), xdata)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 @alt(変化|変遷|移り変わり|推移)
 xdataの変化を折れ線グラフ[で|に]描画する
 ydataを横軸と指定して、[折れ線グラフ|xdataの変化]を描画する
@@ -205,7 +205,7 @@ ydataを横軸と指定して、[折れ線グラフ|xdataの変化]を描画す�
 df, col, col2 = {}, 'A', 'B'
 plt.plot(df[col], df[col2])
 '''
-@test(plt=missing;_)
+@test(plt=missing;$$)
 @prefix(df;データフレーム)
 @prefix(col;カラム)
 {dfのcolとcol2を|折れ線グラフで_}描画する
@@ -213,7 +213,7 @@ plt.plot(df[col], df[col2])
 
 plt.plot(xdata, ydata, alpha=x)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 @alt(透明度|アルファ[|値])
 透明度xの折れ線グラフを描画する
 折れ線グラフの透明度をxに設定する
@@ -223,13 +223,13 @@ xdataとydataの折れ線グラフを描画して、透明度をxに設定する
 
 matplotlib.colors.cnames
 '''
-@test(import matplotlib;_)
+@test(import matplotlib;$$)
 グラフで使える色の一覧[|を得る|を知る]
 '''
 
 plt.plot(xdata, ydata, color=s)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 折れ線グラフの色をsに設定する
 {xdataとydataの折れ線グラフを|sの色で}描画する
 xdataとydataの折れ線グラフを描画して、色をsに設定する
@@ -238,7 +238,7 @@ xdataとydataの折れ線グラフを描画して、色をsに設定する
 rgb = '#fff'
 plt.plot(xdata, ydata, color=rgb)
 '''
-@test(plt=missing;xdata=ydata=alist;rgb='#fff';_)
+@test(plt=missing;xdata=ydata=alist;rgb='#fff';$$)
 @prefix(rgb;カラーコード)
 折れ線グラフの色をrgbに設定する
 {xdataとydataの折れ線グラフを|rgbで}描画する
@@ -250,7 +250,7 @@ xdataとydata[|について]の折れ線グラフを描画して、[その|]色�
 __X__ = 'r'
 plt.plot(xdata, ydata, color=__X__)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 @X('aliceblue';'antiquewhite';'aqua';'aquamarine';'azure';'beige';'bisque';'black';'blanchedalmond';'blue';'blueviolet';'brown';'burlywood';'cadetblue';'chartreuse';'chocolate';'coral';'cornflowerblue';'cornsilk';'crimson';'cyan';'darkblue';'darkcyan';'darkgoldenrod';'darkgray';'darkgreen';'darkgrey';'darkkhaki';'darkmagenta';'darkolivegreen';'darkorange';'darkorchid';'darkred';'darksalmon';'darkseagreen';'darkslateblue';'darkslategray';'darkslategrey';'darkturquoise';'darkviolet';'deeppink';'deepskyblue';'dimgray';'dimgrey';'dodgerblue';'firebrick';'floralwhite';'forestgreen';'fuchsia';'gainsboro';'ghostwhite';'gold';'goldenrod';'gray';'green';'greenyellow';'grey';'honeydew';'hotpink';'indianred';'indigo';'ivory';'khaki';'lavender';'lavenderblush';'lawngreen';'lemonchiffon';'lightblue';'lightcoral';'lightcyan';'lightgoldenrodyellow';'lightgray';'lightgreen';'lightgrey';'lightpink';'lightsalmon';'lightseagreen';'lightskyblue';'lightslategray';'lightslategrey';'lightsteelblue';'lightyellow';'lime';'limegreen';'linen';'magenta';'maroon';'mediumaquamarine';'mediumblue';'mediumorchid';'mediumpurple';'mediumseagreen';'mediumslateblue';'mediumspringgreen';'mediumturquoise';'mediumvioletred';'midnightblue';'mintcream';'mistyrose';'moccasin';'navajowhite';'navy';'oldlace';'olive';'olivedrab';'orange';'orangered';'orchid';'palegoldenrod';'palegreen';'paleturquoise';'palevioletred';'papayawhip';'peachpuff';'peru';'pink';'plum';'powderblue';'purple';'rebeccapurple';'red';'rosybrown';'royalblue';'saddlebrown';'salmon';'sandybrown';'seagreen';'seashell';'sienna';'silver';'skyblue';'slateblue';'slategray';'slategrey';'snow';'springgreen';'steelblue';'tan';'teal';'thistle';'tomato';'turquoise';'violet';'wheat';'white';'whitesmoke';'yellow';'yellowgreen')
 @Y(アリスブルー;アンティークホワイト;アクア;アクアマリン;紺碧;ベージュ;ビスク;ブラック;ブランチドアーモンド;青;ブルーバイオレット;ブラウン;ハリウッド;カデットブルー;シャルトルーズ;チョコレート;コーラル;コーンフラワーブルー;コーンズシルク;クリムゾン;シアン;ダークブルー;ダークシアン;ダークゴールデンロッド;ダークグレー;ダークグリーン;ダークグレー;ダークカーキ;ダークマゼンタ;ダークオリーブグリーン;ダークオレンジ;ダークオーキッド;ダークレッド;ダークサーモン;ダークシアグリーン;ダークスレートブルー;ダークスラテグレー;ダーク・スラテグレー;ダークターコイズ;ダークバイオレット;デピンク;ディープスカイブルー;ディムグレー;ディムグレー;ドジャーブルー;耐火レンガ;フローラルホワイト;フォレストグリーン;フクシア;ゲインズボロ;ゴーストホワイト;ゴールド;ゴールデンロッド;グレー;グリーン;グリーンイエロー;グレー;ハニーデュー;ホットピンク;インディアンレッド;インディゴ;アイボリー;カーキ;ラベンダー;ラベンダーブラッシュ;ローングリーン;レモンシフォン;ライトブルー;ライトコーラル;ライトシアン;ライトゴールドロディイエロー;ライトグレー;ライトグリーン;ライトグレー;淡いピンク色;ライトサーモン;ライトグリーン;ライトスカイブルー;ライトスレイグレー;ライトスレイグレー;ライトスチールブルー;ライトイエロー;ライム;ライムグリーン;リネン;マゼンタ;マルーン;ミディアムアクアマリン;ミディアムブルー;ミディアムオーキッド;ミディアムパープル;ミディアムシアグリーン;ミディアムスレートブルー;ミディアムスプリンググリーン;ミディアムターコイズ;ミディアムバイオレットレッド;ミッドナイトブルー;ミントクリーム;ミスティローズ;モカシン;ナバホホワイト;ネイビー;オールドレース;オリーブ;オリベドラブ;オレンジ;オレンジレッド;オーキッド;パールゴールデンロッド;ペールグリーン;パレットトルコイズ;パールバイオレットレッド;パパイヤウィップ;ピーチパフ;ペルー;ピンク;プラム;パウダーブルー;パープル;レベッカパープル;赤;ロージーブラウン;ロイヤルブルー;サドルブラウン;サーモン;サンディーブラウン;シーグリーン;貝殻;シエナ;シルバー;スカイブルー;スレートブルー;スラグレー;スラグレー;スノー;スプリンググリーン;スチールブルー;タン;ティール;アザミ;トマト;ターコイズ;バイオレット;小麦;ホワイト;ホワイトスモーク;黄色;イエローグリーン)
 折れ線グラフの色を__Y__に設定する
@@ -261,7 +261,7 @@ xdataとydata[について|の]折れ線グラフを描画して、[その|]色�
 __X__ = 'r'
 plt.plot(xdata, ydata, linestyle='dash', color=__X__)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 破線グラフの色を__Y__に設定する
 xdataとydata[について|の]破線グラフを描画して、[その|]色を__Y__に設定する
 '''
@@ -269,14 +269,14 @@ xdataとydata[について|の]破線グラフを描画して、[その|]色を_
 __X__ = 'r'
 plt.plot(xdata, ydata, linewidth=n, color=__X__)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 __Y__色の折れ線グラフを描画して、[その|]線幅をnに設定する
 xdataとydataについて__Y__色の折れ線グラフを描画して、[その|]線幅をnに設定する
 '''
 
 plt.plot(xdata, ydata, c=__X__)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 {散布図に|__Y__色のマーカーを}使う
 {__Y__色[のマーカー|]で_|散布図を}描画する
 {xdataとydata[について|]の散布図を|__Y__色で_}描画する
@@ -285,14 +285,14 @@ xdataとydata[について|の]散布図を描画して、[マーカーの|]色�
 
 plt.plot(xdata, ydata, c=__X__, alpha=0.5)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 {__Y__色[のマーカー|]で_|散布図を|重なりを見やすく}描画する
 {xdataとydata[について|]の散布図を|__Y__色で_|重なりを見やすく}描画する
 '''
 
 plt.hist(xdata, color=__X__)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 @alt(ヒストグラム|[柱状図|柱状グラフ|度数分布図])
 {__Y__[色|]で_|[xdataについての|]ヒストグラムを}描画する
 {xdataを|__Y__色のヒストグラムで_}描画する
@@ -303,7 +303,7 @@ plt.hist(xdata, color=__X__)
 __X__ = 'r'
 plt.plot(xdata, ydata, color=__X__)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 @X('r';'b';'k';'w';'y')
 @Y(赤く;青く;黒く;白く;黄色く)
 折れ線グラフの色を__Y__する
@@ -313,7 +313,7 @@ xdataとydataの折れ線グラフを描画して、色を__Y__する
 __X__ = 'r'
 plt.plot(xdata, ydata, color=__X__)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 @X('r';'b';'k';'w';'y')
 @Y(赤い;青い;黒い;白い;黄色い)
 __Y__折れ線グラフを描画する
@@ -322,7 +322,7 @@ xdataとydataの__Y__折れ線グラフを描画する
 
 plt.plot(xdata, ydata, label=s)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 折れ線グラフのラベルをsに設定する
 {xdataとydataの折れ線グラフを|sとラベル付けして}描画する
 xdataとydataの折れ線グラフを描画して、sとラベル付けする
@@ -331,7 +331,7 @@ xdataとydataの折れ線グラフを描画して、sとラベル付けする
 
 plt.plot(xdata, ydata, linestyle=__X__)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 @X('dashed';'dashbot';'dotted';'solid')
 @Y(破線;一点鎖線;点線;実線)
 [__Y__グラフ|__Y__の折れ線グラフ]を描画する
@@ -342,7 +342,7 @@ xdataとydataの折れ線グラフを描画して、__Y__に設定する
 
 plt.plot(xdata, ydata, linewidth=n)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 線幅nの折れ線グラフを描画する
 折れ線グラフの線幅をnに設定する
 xdataとydata[の|について]線幅nの折れ線グラフを描画する
@@ -351,7 +351,7 @@ xdataとydata[の|について]折れ線グラフを描画して、[その|]線�
 
 plt.plot(xdata, ydata, linestyle=__X__, linewidth=n)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 線幅nの__Y__グラフを描画する
 __Y__グラフの線幅をnに設定する
 xdataとydata[の|について]線幅nの__Y__グラフを描画する
@@ -360,7 +360,7 @@ xdataとydata[の|について]__Y__グラフを描画して、[その|]線幅�
 
 plt.plot(xdata, ydata, linestyle=__X__, color=rgb)
 '''
-@test(plt=missing;xdata=ydata=alist;rgb='#fff';_)
+@test(plt=missing;xdata=ydata=alist;rgb='#fff';$$)
 __Y__グラフの色をrgbに設定する
 __Y__グラフの色を[赤にする|赤くする|赤色に設定する]
 xdataとydata[の|について]rgbの__Y__グラフを描画する
@@ -369,7 +369,7 @@ xdataとydata[の|について]__Y__グラフを描画して、[その|]色をrg
 
 plt.plot(xdata, ydata, linestyle=__X__, color='r')
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 @alt(赤い|赤色の)
 赤い__Y__グラフを描画する
 __Y__グラフの色を[赤にする|赤くする|赤色に設定する]
@@ -379,7 +379,7 @@ xdataとydata[の|について]__Y__グラフを描画して、[その|]色を[�
 
 plt.plot(xdata, ydata, linestyle=__X__, color='b')
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 @alt(青い|青色の)
 青い__Y__グラフを描画する
 __Y__グラフの色を[青にする|青くする|青色に設定する]
@@ -389,7 +389,7 @@ xdataとydata[の|について]__Y__グラフを描画して、[その|]色を[�
 
 plt.plot(xdata, ydata, linestyle=__X__, color='k')
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 @alt(黒い|黒色の)
 黒い__Y__グラフを描画する
 __Y__グラフの色を[黒にする|黒くする|黒色に設定する]
@@ -399,7 +399,7 @@ xdataとydata[の|について]__Y__グラフを描画して、[その|]色を[�
 
 plt.plot(xdata, ydata, marker=__X__)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 @X('.';'o';'^';'v';'<';'>';'x';'X';'s';'D';'*')
 @Y(ポイント;丸;[[|上]三角|▲|△];[下三角|▽|▼];左三角;右三角;[バツ|クロス];大バツ;四角;[ダイアモンド|菱形];星)
 @alt(マーカー|印)
@@ -411,49 +411,49 @@ xdataとydataの折れ線グラフに__Y__マーカーを描画する
 
 plt.plot(xdata, ydata, marker=__X__, markerfacecolor='r')
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 xdataとydataの折れ線グラフに、赤い__Y__マーカーを描画する
 折れ線グラフの__Y__マーカーを[赤くする|赤色にする]
 '''
 
 plt.plot(xdata, ydata, marker=__X__, markerfacecolor='b')
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 xdataとydataの折れ線グラフに、青い__Y__マーカーを描画する
 折れ線グラフの__Y__マーカーを[青くする|青色に設定する]
 '''
 
 plt.plot(xdata, ydata, marker=__X__, markerfacecolor='k')
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 xdataとydataの折れ線グラフに、黒い__Y__マーカーを描画する
 折れ線グラフの__Y__マーカーを[黒くする|黒色に設定する]
 '''
 
 plt.plot(xdata, ydata, marker=__X__, markerfacecolor='y')
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 xdataとydataの折れ線グラフに、黄色い__Y__マーカーを描画する
 折れ線グラフの__Y__マーカーを[黄色くする|黄色に設定する]
 '''
 
 plt.plot(xdata, ydata, marker=__X__, markerfacecolor='g')
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 xdataとydataの折れ線グラフに、緑色の__Y__マーカーを描画する
 折れ線グラフの__Y__マーカーを緑色に設定する
 '''
 
 plt.plot(xdata, ydata, marker=__X__, markersize=n)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 xdataとydataの折れ線グラフに、[大きさ|サイズ]nの__Y__マーカーを描画する
 折れ線グラフの__Y__マーカーの[大きさ|サイズ]をnに設定する
 '''
 
 plt.plot(xdata, ydata, marker=__X__, markeredgewidth=n)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 xdataとydataの折れ線グラフに、線幅nの__Y__マーカーを描画する
 折れ線グラフの__Y__マーカーの線幅をnに設定する
 '''
@@ -475,7 +475,7 @@ xdataとydata[について|の]散布図を描画して、その大きさをnに
 
 plt.plot(xdata, ydata, marker=__X__)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 @X('.';'o';'^';'v';'<';'>';'x';'X';'s';'D';'*')
 @Y(ポイント;丸;[[|上]三角|▲|△];[下三角|▽|▼];左三角;右三角;[バツ|クロス];大バツ;四角;[ダイアモンド|菱形];星)
 {散布図に|__Y__マーカーを}使う
@@ -486,7 +486,7 @@ xdataとydata[について|]の散布図に__Y__マーカーを描画する
 
 plt.plot(xdata, ydata, marker=__X__, c=rgb)
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 {散布図に|rgbの__Y__マーカーを}使う
 {rgbの__Y__マーカーで_|散布図を}描画する
 {xdataとydata[について|]の散布図に|rgbの__Y__マーカーを}描画する
@@ -495,7 +495,7 @@ xdataとydata[について|の]散布図を描画して、__Y__マーカーの�
 
 plt.plot(xdata, ydata, marker=__X__, c='r')
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 {散布図に|赤い__Y__マーカーを}使う
 {赤い__Y__マーカーで_|散布図を}描画する
 {xdataとydata[について|]の散布図に|赤い__Y__マーカーを}描画する
@@ -503,7 +503,7 @@ plt.plot(xdata, ydata, marker=__X__, c='r')
 
 plt.plot(xdata, ydata, marker=__X__, c='k')
 '''
-@test(plt=missing;xdata=ydata=alist;_)
+@test(plt=missing;xdata=ydata=alist;$$)
 {散布図に|黒い__Y__マーカーを}使う
 {黒い__Y__マーカーで_|散布図を}描画する
 {xdataとydata[について|]の散布図に|黒い__Y__マーカーを}描画する

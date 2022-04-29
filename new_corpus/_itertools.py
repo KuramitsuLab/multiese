@@ -2,7 +2,7 @@
 
 import itertools
 '''
-@test(None)
+@test($$;type(itertools))
 itertoolsモジュールをインポートする
 '''
 

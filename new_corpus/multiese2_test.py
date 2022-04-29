@@ -32,6 +32,9 @@ class Missing:
     def __str__(self):
         return self.msg
 
+    def __repr__(self):
+        return '_'
+
     def __call__(self, *args, **kwargs):
         if len(kwargs) == 0:
             self.msg += repr((*args,))
@@ -47,8 +50,52 @@ class Missing:
         self.msg += f'[{index}]'
         return self
 
+    def __add__(self, index):
+        self.msg += f'__add__({index})'
+        return self
+
     def __sub__(self, index):
         self.msg += f'__sub__({index})'
+        return self
+
+    def __mul__(self, index):
+        self.msg += f'__mul__({index})'
+        return self
+
+    def __truediv__(self, index):
+        self.msg += f'__truediv__({index})'
+        return self
+
+    def __floordiv__(self, index):
+        self.msg += f'__floordiv__({index})'
+        return self
+
+    def __mod__(self, index):
+        self.msg += f'__mod__({index})'
+        return self
+
+    def __eq__(self, index):
+        self.msg += f'__eq__({index})'
+        return self
+
+    def __ne__(self, index):
+        self.msg += f'__ne__({index})'
+        return self
+
+    def __le__(self, index):
+        self.msg += f'__le__({index})'
+        return self
+
+    def __ge__(self, index):
+        self.msg += f'__ge__({index})'
+        return self
+
+    def __lt__(self, index):
+        self.msg += f'__lt__({index})'
+        return self
+
+    def __gt__(self, index):
+        self.msg += f'__gt__({index})'
         return self
 
 
@@ -56,36 +103,29 @@ obj = Person()
 missing = Missing()
 
 
+def function(x): return x
+
+
 def _load_variables():
     df = pd.DataFrame(data=[[1, 2.2, 'a'], [4, 5.8, 'a']],
                       columns=['A', 'B', 'C'])
     return dict(
         missing=Missing(),
-        n=1,
-        n2=3,
-        n3=-1,
-        x=1.5,
-        x2=3.0,
-        x3=0.19,
+        n=1, n2=3, n3=-1,
+        x=1.5, x2=3.0, x3=0.19,
         s=' ABC abc 123あ',  # [文字列]
-        s2='a',
-        s3='123',
-        s4='101',
-        text='/usr',  # [|文字列]
-        text2='utf-8',
-        text3='.txt',
+        s2='a', s3='123', s4='101',
+        text='/usr', text2='utf-8', text3='.txt',
         # リスト
-        alist=[1, 2, 3], alist2=[4, 5], alist3=['A', 'B'],
+        alist=[1, 2, 3], alist2=[4, 5], names=['A', 'B'],
         atuple=(1, 2, 3), atuple2=(4, 5), atuple3=('A', 'B'),
-        element=2,    # [|文字列|[リスト|タプル]]
-        element2=-1,
-        element3='A',
-        adict={'A': 1}, key='A',
-        adict2={'B': 2}, key2='B',
+        array=np.array([1, 2, 3]), array2=np.array([4, 5]),
+        element=2, element2=-1, element3='A',
+        adict={'A': 1}, key='A', adict2={'B': 2}, key2='B',
         obj=obj, obj2=obj, Person=Person,
         print=_print,
         input=_input,
-        func=lambda x: x,
+        func=function,
         predicatefunc=lambda x: True,
         filepath='./file.txt',
         filename='/etc/man.conf',
@@ -113,14 +153,12 @@ def _load_variables():
 VARS = _load_variables()
 
 
-def test_code(code, test_with='', reload=True):
+def test_code(code, test_with='$$', reload=True):
     global VARS
     try:
-        if test_with != '':
-            code = test_with.replace('(_', f'({code}').replace('_)', f'{code})').replace(
-                ';_', f';{code}').replace('_;', f'{code};')
+        code = test_with.replace('$$', code)
         if ';' in code:
-            statement, sep, code = code.rpartition(';')
+            statement, _, code = code.rpartition(';')
             exec(statement, VARS)
         v = eval(code, VARS)
         if reload == True:

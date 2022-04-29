@@ -5,7 +5,7 @@ import typing
 
 import collections
 '''
-@test(_;type(collections))
+@test($$;type(collections))
 @alt(両端キュー|[双方向キュー|デック]|[キュー|スタック]|deque[|オブジェクト])
 @alt(名前付きタプル|[構造体|簡易クラス])
 [コレクション|両端キュー|カウンタ|名前付きタプル]を使う
@@ -42,26 +42,26 @@ iterableのテイルフィルタを作る
 
 X = collections.deque()
 '''
-@test(_;X)
+@test($$;X)
 {[空の|]両端キューを|新たに}作って、Xに代入する
 '''
 
 X = collections.deque(iterable)
 '''
-@test(_;X)
+@test($$;X)
 {iterableから|両端キューを|新たに}作って、Xに代入する
 '''
 
 X = collections.deque(maxlen=n)
 '''
-@test(_;X)
+@test($$;X)
 {最大長をnに[|制限]して|両端キューを|新たに}作って、Xに代入する
 {最大長nの両端キューを|新たに}作る
 '''
 
 X = collections.deque(iterable, maxlen=n)
 '''
-@test(_;X)
+@test($$;X)
 {最大長をnに[|制限]して|iterableから|両端キューを|[|新たに]}作って、Xに代入する
 {最大長nの両端キューを|iterableから|[|新たに]}作って、Xに代入する
 '''
@@ -72,7 +72,7 @@ element = 5
 deq.appendleft(element)
 '''
 @prefix(deq;デック)
-@test(deq = collections.deque();_;deq)
+@test(deq = collections.deque();$$;deq)
 @alt(先頭|最初|左[|側])
 @alt(追加する|[付け|つけ]加える)
 @alt(エンキューする|enqueueする|データを入れる)
@@ -82,7 +82,7 @@ deq.appendleft(element)
 
 deq.append(element)
 '''
-@test(deq = collections.deque();_;deq)
+@test(deq = collections.deque();$$;deq)
 @alt(末尾|最後|右[|側])
 @alt(プッシュする|詰む|スタックする)
 {deqの末尾に|elementを}追加する
@@ -92,27 +92,27 @@ deq.append(element)
 deq.extendleft(iterable)
 '''
 @prefix(deq;デック)
-@test(deq = collections.deque();_;deq)
+@test(deq = collections.deque();$$;deq)
 @alt(要素|[値|データ])
 {deqの先頭に|iterableの[各|]要素を[|順に]}追加する
 '''
 
 deq.extend(iterable)
 '''
-@test(deq = collections.deque();_;deq)
+@test(deq = collections.deque();$$;deq)
 {deqの末尾に|iterableの[各|]要素を[|順に]}追加する
 '''
 
 deq.insert(n, element)
 '''
-@test(deq = collections.deque();_;deq)
+@test(deq = collections.deque();$$;deq)
 @alt(挿入する|[途中|]追加する)
 {deqのn番目に|elementを}挿入する
 '''
 
 deq.popleft()
 '''
-@test(deq = collections.deque([1,2]);_;deq)
+@test(deq = collections.deque([1,2]);$$;deq)
 @alt(取り除く|取り出す|削除する)
 @alt(デキューする|dequeue|要素を出す)
 {deqの先頭から|要素を}取り除く
@@ -121,27 +121,27 @@ deqをデキューする
 
 deq.pop()
 '''
-@test(deq = collections.deque([1,2]);_;deq)
+@test(deq = collections.deque([1,2]);$$;deq)
 {deqの末尾から|要素を}取り除く
 deq[を|から]ポップする
 '''
 
 deq.remove(element)
 '''
-@test(deq = collections.deque([1,2]);_;deq)
+@test(deq = collections.deque([1,2]);$$;deq)
 {deqから|最初のelementを}取り除く
 '''
 
 deq.clear()
 '''
-@test(deq = collections.deque([1,2]);_;deq)
+@test(deq = collections.deque([1,2]);$$;deq)
 @alt(空にする|クリアする|全て取り除く)
 deqを空にする
 '''
 
 deq.rotate()
 '''
-@test(deq = collections.deque([1,2]);_;deq)
+@test(deq = collections.deque([1,2]);$$;deq)
 @alt(ローテートする|[持ち|]回す|ローテーションする)
 @alt(順序|順[|番])
 {deqの[要素|順序]を|[右に|]|[|一つ]}ローテートする
@@ -149,103 +149,103 @@ deq.rotate()
 
 deq.rotate(n)
 '''
-@test(deq = collections.deque([1,2]);_;deq)
+@test(deq = collections.deque([1,2]);$$;deq)
 {deqの[要素|順序]を|[右に|]|n個分}ローテートする
 '''
 
 deq.rotate(-n)
 '''
-@test(deq = collections.deque([1,2]);_;deq)
+@test(deq = collections.deque([1,2]);$$;deq)
 {deqの[要素|順序]を|左に|n個分}ローテートする
 '''
 
 deq.maxlen
 '''
-@test(deq = collections.deque([1,2],maxlen=2);_)
+@test(deq = collections.deque([1,2],maxlen=2);$$)
 deqの最大長[|を得る]
 '''
 
 len(deq)
 '''
-@test(deq = collections.deque([1,2]);_)
+@test(deq = collections.deque([1,2]);$$)
 deqの[大きさ|要素数|サイズ|長さ][|を求める]
 '''
 
 len(deq) == 0
 '''
-@test(deq = collections.deque([1,2]);_)
+@test(deq = collections.deque([1,2]);$$)
 deqが_空[|である]かどうか
 '''
 
 len(deq) != 0
 '''
-@test(deq = collections.deque([1,2]);_)
+@test(deq = collections.deque([1,2]);$$)
 deqが_空でないかどうか
 '''
 
 element in deq
 '''
-@test(deq = collections.deque([1,2]);_)
+@test(deq = collections.deque([1,2]);$$)
 @alt(含まれてる|存在する|ある)
 deqの中にelementが_含まれてるかどうか
 '''
 
 deq[0]
 '''
-@test(deq = collections.deque([1,2]);_)
+@test(deq = collections.deque([1,2]);$$)
 deqの先頭[|の要素][|を得る]
 '''
 
 deq[-1]
 '''
-@test(deq = collections.deque([1,2]);_)
+@test(deq = collections.deque([1,2]);$$)
 deqの末尾[|の要素][|を得る]
 '''
 
 deq[n]
 '''
-@test(deq = collections.deque([1,2]);_)
+@test(deq = collections.deque([1,2]);$$)
 deqのn番目[|の要素][|を得る]
 '''
 
 collections.deque(itertools.islice(deq, n, n2))
 '''
-@test(deq = collections.deque([1,2,1,2,1,2]);_)
+@test(deq = collections.deque([1,2,1,2,1,2]);$$)
 deqのn〜n2の[部分|]要素[|を得る]
 deqのn番目からn2[番目[|まで]]の[部分|]要素[|を得る]
 '''
 
 deq.index(element)
 '''
-@test(deq = collections.deque([1,2]);_)
+@test(deq = collections.deque([1,2]);$$)
 @alt(インデックス|位置)
 deq中のelementのインデックス[|を得る]
 '''
 
 deq.count(element)
 '''
-@test(deq = collections.deque([1,2]);_)
+@test(deq = collections.deque([1,2]);$$)
 @alt(数える|数える)
 deq中のelement[の[数|出現数]を数える
 '''
 
 deq.reverse()
 '''
-@test(deq = collections.deque([1,2]);_;deq)
+@test(deq = collections.deque([1,2]);$$;deq)
 @alt(反転する|逆順にする|逆に並べ直す)
 {deqの要素を|[インプレースに|]}反転する
 '''
 
 reversed(deq)
 '''
-@test(deq = collections.deque([1,2]);list(_))
+@test(deq = collections.deque([1,2]);list($$))
 逆順のdeqを得る
 '''
 
 __X__ = list
 __X__(deq)
 '''
-@test(deq = collections.deque([1,2]);_)
+@test(deq = collections.deque([1,2]);$$)
 @X(list|tuple)
 @Y(リスト|タプル)
 deqを__Y__に変換する
@@ -268,33 +268,33 @@ collections.Counter(iterable)
 amap = {'red': 4, 'blue': 2}
 collections.Counter(amap)
 '''
-@test(amap={'A':2, 'B':1};_)
+@test(amap={'A':2, 'B':1};$$)
 @prefix(amap;[辞書|カウンタ|マッピング])
 {amapから|[|新しい]多重集合を|新規に}作る
 '''
 
 X = collections.Counter()
 '''
-@test(_;X)
+@test($$;X)
 {[|新しい][空の|]多重集合を|新たに}作って、Xに代入する
 '''
 
 X = collections.Counter(iterable)
 '''
-@test(_;X)
+@test($$;X)
 {iterableから|[|新しい]多重集合を|新規に}作って、Xに代入する
 '''
 
 X = collections.Counter(amap)
 '''
-@test(amap={'A':2, 'B':1};_;X)
+@test(amap={'A':2, 'B':1};$$;X)
 {amapから|[|新しい]多重集合を|新規に}作って、Xに代入する
 '''
 
 c = collections.Counter()
 c.elements()
 '''
-@test(c=collections.Counter(A=2,B=1);list(_))
+@test(c=collections.Counter(A=2,B=1);list($$))
 @prefix(c;カウンタ)
 @alt(それぞれの|各|)
 @alt(カウント|出現)
@@ -306,7 +306,7 @@ cのそれぞれの項目を[、その|]カウントの回数だけ列挙する
 
 c.most_common()
 '''
-@test(c=collections.Counter(A=2,B=1);_)
+@test(c=collections.Counter(A=2,B=1);$$)
 @alt(順に|順番に|方から)
 cをカウント[|の回数][が|の]多い順に列挙する
 cを高頻出[|な]順に列挙する
@@ -314,79 +314,79 @@ cを高頻出[|な]順に列挙する
 
 c.most_common()[::-1]
 '''
-@test(c=collections.Counter(A=2,B=1);_)
+@test(c=collections.Counter(A=2,B=1);$$)
 cをカウント[|の回数][が|の]少ない順に列挙する
 cを低頻出[|な]順に列挙する
 '''
 
 c.most_common(n)
 '''
-@test(c=collections.Counter(A=2,B=1);_)
+@test(c=collections.Counter(A=2,B=1);$$)
 cを[上位n個|上位n位まで]カウント[|の回数][が|の]多い順に列挙する
 cから高頻出[|な]項目をn個、リストとして得る
 '''
 
 c.most_common()[:-n-1:-1]
 '''
-@test(c=collections.Counter(A=2,B=1);_)
+@test(c=collections.Counter(A=2,B=1);$$)
 cを[下位n個|下位n位まで]カウント[|の回数][が|の]少ない順に列挙する
 cから低頻出[|な]項目をn個、リストとして得る
 '''
 
 c.most_common(0)[0]
 '''
-@test(c=collections.Counter(A=2,B=1);_)
+@test(c=collections.Counter(A=2,B=1);$$)
 @alt(最頻出|最も頻出|最もカウント数の多い)
 cから最頻出の項目を[得る|求める]
 '''
 
 c.most_common(0)[1]
 '''
-@test(c=collections.Counter(A=2,B=1);_)
+@test(c=collections.Counter(A=2,B=1);$$)
 cから最頻出の項目の回数を[得る|求める]
 '''
 
 c.update(iterable)
 '''
-@test(c=collections.Counter(iterable);_)
+@test(c=collections.Counter(iterable);$$)
 @alt(追加する|増やす)
 {cに|iterable[|のカウント[|の回数]]を}追加する
 '''
 
 c.update(amap)
 '''
-@test(c=collections.Counter(A=2,B=1);amap={'A':2, 'B':1};_)
+@test(c=collections.Counter(A=2,B=1);amap={'A':2, 'B':1};$$)
 {cに|amapを}追加する
 '''
 
 c.subtract(iterable)
 '''
-@test(c=collections.Counter(iterable);_)
+@test(c=collections.Counter(iterable);$$)
 @alt(引く|減らす)
 {cから|iterable[|のカウント[|の回数]]を}引く
 '''
 
 c.subtract(amap)
 '''
-@test(c=collections.Counter(A=2,B=1);amap={'A':2, 'B':1};_)
+@test(c=collections.Counter(A=2,B=1);amap={'A':2, 'B':1};$$)
 cからamapを引く
 '''
 
 c[element] += 1
 '''
-@test(c=collections.Counter(iterable);_;c[element])
+@test(c=collections.Counter(iterable);$$;c[element])
 c内のelement項目を[|一つ]増やす
 '''
 
 c[element]
 '''
-@test(c=collections.Counter(iterable);_)
+@test(c=collections.Counter(iterable);$$)
 c内のelement項目のカウント[|の回数][|を得る]
 '''
 
 c.total()
 '''
-@test(c=collections.Counter(A=2,B=1);_)
+@test(c=collections.Counter(A=2,B=1);$$)
 @alt(トータル|全)
 cのトータルカウント[|の回数][|を得る]
 cの全数[|を得る]
@@ -394,57 +394,57 @@ cの全数[|を得る]
 
 c.keys()
 '''
-@test(c=collections.Counter(A=2,B=1);_)
+@test(c=collections.Counter(A=2,B=1);$$)
 cの項目一覧[|を得る]
 '''
 
 len(c)
 '''
-@test(c=collections.Counter(A=2,B=1);_)
+@test(c=collections.Counter(A=2,B=1);$$)
 cの項目数[|を得る]
 '''
 
 c.clear()
 '''
-@test(c=collections.Counter(A=2,B=1);_;c)
+@test(c=collections.Counter(A=2,B=1);$$;c)
 cを[リセット|クリア|ゼロに]する
 '''
 
 list(c)
 '''
-@test(c=collections.Counter(A=2,B=1);_)
+@test(c=collections.Counter(A=2,B=1);$$)
 cのユニークな項目を列挙する
 cをリストに変換する
 '''
 
 set(c)
 '''
-@test(c=collections.Counter(A=2,B=1);_)
+@test(c=collections.Counter(A=2,B=1);$$)
 cを[集合|セット]に変換する
 '''
 
 dict(c)
 '''
-@test(c=collections.Counter(A=2,B=1);_)
+@test(c=collections.Counter(A=2,B=1);$$)
 cを辞書に変換する
 '''
 
 c.items()
 '''
-@test(c=collections.Counter(A=2,B=1);_)
+@test(c=collections.Counter(A=2,B=1);$$)
 cをペアリストに変換する
 '''
 
 pairs = [('A', 1)]
 collections.Counter(dict(pairs))
 '''
-@test(pairs=[('A',1)];_)
+@test(pairs=[('A',1)];$$)
 ペアリストpairsからカウンタを[作る|構築する]
 '''
 
 +c
 '''
-@test(c=collections.Counter(A=2,B=1);_)
+@test(c=collections.Counter(A=2,B=1);$$)
 cから0[以下の|]カウントを取り除く
 cの正の[数|カウント][のみ|だけ]残す
 '''
@@ -452,7 +452,7 @@ cの正の[数|カウント][のみ|だけ]残す
 c2 = c
 c & c2
 '''
-@test(c=collections.Counter(A=2,B=1);c2=c;_)
+@test(c=collections.Counter(A=2,B=1);c2=c;$$)
 @alt(インターセクション|積集合|共通部分|[交わり|交差]|インターセクション)
 cとc2のインターセクション[|を求める|を得る]
 cとc2に共通する要素からなる多重集合[|を求める|を得る]
@@ -461,7 +461,7 @@ c∩c2
 
 c | c2
 '''
-@test(c=collections.Counter(A=2,B=1);c2=c;_)
+@test(c=collections.Counter(A=2,B=1);c2=c;$$)
 @alt(ユニオン|和集合)
 cとc2のユニオン[|を求める|を得る]
 c∪c2 
@@ -481,13 +481,13 @@ sの名前を持ち、s2のプロパティ[を持った|のある]名前付き�
 C = collections.namedtuple('P', 'x y z', defaults=[0])
 issubclass(C, tuple)
 '''
-@test(C=collections.namedtuple('C', 'x y z w');_)
+@test(C=collections.namedtuple('C', 'x y z w');$$)
 クラスCが_名前付きタプルかどうか
 '''
 
 C._make(iterable)  # issubclass(C, tuple)
 '''
-@test(C=collections.namedtuple('C', 'x y z w');_)
+@test(C=collections.namedtuple('C', 'x y z w');$$)
 @alt(のインスタンス|[オブジェクト])
 {iterableから|クラスCのインスタンスを|新たに}作る
 iterableをクラスCのインスタンスに変換する
@@ -496,19 +496,19 @@ iterableをクラスCのインスタンスに変換する
 obj = C(1, 2, 3)
 hasattr(obj, '_asdict') and hasattr(obj, '_fields')
 '''
-@test(C=collections.namedtuple('C', 'x y');obj=C(1,2);_)
+@test(C=collections.namedtuple('C', 'x y');obj=C(1,2);$$)
 objが名前付きタプル[|型|のインスタンス]かどうか
 '''
 
 obj._asdict()  # isinstance(obj, NamedTuple)
 '''
-@test(C=collections.namedtuple('C', 'x y');obj=C(1,2);_)
+@test(C=collections.namedtuple('C', 'x y');obj=C(1,2);$$)
 [名前付きタプル|]objを辞書に変換する
 '''
 
 obj._fields  # isinstance(obj, NamedTuple)
 '''
-@test(C=collections.namedtuple('C', 'x y');obj=C(1,2);_)
+@test(C=collections.namedtuple('C', 'x y');obj=C(1,2);$$)
 [名前付きタプル|]objのフィールド名の一覧[|を得る]
 '''
 

@@ -103,7 +103,7 @@ element not in adict.values()
 
 adict[key] = element
 '''
-@test(_;adict)
+@test($$;adict)
 adictのkeyをelementに[設定|変更|]する
 adictにelementをkeyとして加える
 '''
@@ -116,14 +116,14 @@ adict.setdefault(key, element)
 
 adict.update(adict2)
 '''
-@test(_;adict)
+@test($$;adict)
 alt(追加更新する|追加する|加えて、更新する)
 adictにadict2のエントリを追加更新する
 '''
 
 adict.update(**kwargs)
 '''
-@test(kwargs={'B':2};_;adict)
+@test(kwargs={'B':2};$$;adict)
 adictにキーワード引数kwargsを追加更新する
 '''
 
@@ -164,6 +164,6 @@ adictのコピー[を[得る|作る]]
 
 {k: copy.copy(v) for k, v in adict.items()}
 '''
-@test(import copy;_)
+@test(import copy;$$)
 adictを値を含めてコピーする
 '''

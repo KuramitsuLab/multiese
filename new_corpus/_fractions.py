@@ -3,7 +3,7 @@ import typing
 
 import fractions
 '''
-@test(_;type(fractions))
+@test($$;type(fractions))
 @alt(有理数|分数)
 [有理数|分数]を使う
 '''

@@ -21,7 +21,7 @@ datetime.datetime.now()
 
 datetime.datetime(year=n, month=1, day=1)
 '''
-@test(n,n2,n3=2022,12,24;_)
+@test(n,n2,n3=2022,12,24;$$)
 @alt(オブジェクト化する|得る|作る)
 n年の日時[|をオブジェクト化する]
 n年を日時に変換する
@@ -29,14 +29,14 @@ n年を日時に変換する
 
 datetime.datetime(year=n, month=n2, day=1)
 '''
-@test(n,n2,n3=2022,12,24;_)
+@test(n,n2,n3=2022,12,24;$$)
 n年n2月の日時[|をオブジェクト化する]
 n年n2月を日時に変換する
 '''
 
 datetime.datetime(year=n, month=n2, day=n3)
 '''
-@test(n,n2,n3=2022,12,24;_)
+@test(n,n2,n3=2022,12,24;$$)
 n年n2月n3日の日時[|をオブジェクト化する]
 n年n2月n3日を日時に変換する
 '''
@@ -44,21 +44,21 @@ n年n2月n3日を日時に変換する
 n4, n5, n6 = 0, 0, 0
 datetime.datetime(year=n, month=n2, day=n3, hour=n4)
 '''
-@test(n,n2,n3,n4,n5,n6=2022,12,24,0,0,0;_)
+@test(n,n2,n3,n4,n5,n6=2022,12,24,0,0,0;$$)
 n年n2月n3日n4時の日時[|をオブジェクト化する]
 n年n2月n3日n4時を日時に変換する
 '''
 
 datetime.datetime(year=n, month=n2, day=n3, hour=n4, minite=n5)
 '''
-@test(n,n2,n3,n4,n5,n6=2022,12,24,0,0,0;_)
+@test(n,n2,n3,n4,n5,n6=2022,12,24,0,0,0;$$)
 n年n2月n3日n4時n5分の日時[|をオブジェクト化する]
 n年n2月n3日n4時n5分を日時に変換する
 '''
 
 datetime.datetime(year=n, month=n2, day=n3, hour=n4, minite=n5, second=n6)
 '''
-@test(n,n2,n3,n4,n5,n6=2022,12,24,0,0,0;_)
+@test(n,n2,n3,n4,n5,n6=2022,12,24,0,0,0;$$)
 n年n2月n3日n4時n5分n6秒の日時[|をオブジェクト化する]
 n年n2月n3日n4時n5分n6秒を日時に変換する
 '''
@@ -73,7 +73,7 @@ timestamp[を|から]日時に変換する
 s = '2011-11-04'
 datetime.datetime.fromisoformat(s)
 '''
-@test(s='2011-11-04';_)
+@test(s='2011-11-04';$$)
 @alt(ISO書式|ISO8601[|形式])
 ISO書式のs[を|から]日時に変換する
 s[を|から]ISO書式で_日時に変換する
@@ -83,7 +83,7 @@ s = '21/11/06 16:30'
 s2 = '%d/%m/%y %H:%M'
 datetime.datetime.strptime(s, s2)
 '''
-@test(s='21/11/06 16:30';s2='%d/%m/%y %H:%M';_)
+@test(s='21/11/06 16:30';s2='%d/%m/%y %H:%M';$$)
 sからs2のパターンで_日時に変換する
 s2パターンのsを日時に変換する
 '''
@@ -123,21 +123,21 @@ dtの時刻[|を得る]
 
 datetime.date(year=n, month=1, day=1)
 '''
-@test(n,n2,n3=2022,12,24;_)
+@test(n,n2,n3=2022,12,24;$$)
 n年の日付[|をオブジェクト化する]
 n年を日付に変換する
 '''
 
 datetime.date(year=n, month=n2, day=1)
 '''
-@test(n,n2,n3=2022,12,24;_)
+@test(n,n2,n3=2022,12,24;$$)
 n年n2月の日付[|をオブジェクト化する]
 n年n2月を日付に変換する
 '''
 
 datetime.date(year=n, month=n2, day=n3)
 '''
-@test(n,n2,n3=2022,12,24;_)
+@test(n,n2,n3=2022,12,24;$$)
 n年n2月n3日の日付[|をオブジェクト化する]
 n年n2月n3日を日付に変換する
 '''
@@ -162,7 +162,7 @@ datetime.date.today() - datetime.timedelta(days=1)
 
 datetime.date.strptime(s, s2)
 '''
-@test(s='21/11/06 16:30';s2='%d/%m/%y %H:%M';_)
+@test(s='21/11/06 16:30';s2='%d/%m/%y %H:%M';$$)
 sからs2のパターンで_日付に変換する
 '''
 
@@ -244,7 +244,7 @@ __Y__をISO[|8601][形式|書式]の文字列に変換する
 
 __X__.strftime()
 '''
-@test(s="%A, %d. %B %Y %I:%M%p";_)
+@test(s="%A, %d. %B %Y %I:%M%p";$$)
 {__Y__を|sでフォーマットして}文字列に変換する
 __Y__をsで_フォーマットする
 '''

@@ -45,6 +45,8 @@ PREFIX = {
     'aset': ('セット', ''),
     'adict': ('辞書', ''),
     'ty': ('型', '型'),
+    'fin': ('[ファイル[入力|]|入力[|ストリーム]]', ''),
+    'fout': ('[ファイル[出力|]|出力[|ストリーム]]', ''),
     'iterable': ('[[リスト|タプル|配列]|列|イテラブル|]', ''),
 }
 
@@ -91,7 +93,9 @@ def read_settings(docs, settings):
             if argument.endswith(')'):
                 argument = argument[:-1]
             if name == '@alt':
-                key, _, _ = argument.partition('|')
+                key, _, other = argument.partition('|')
+                if key in other:
+                    argument = other
                 argument = argument.replace('_', '')
                 settings['alt'][key] = f'[{argument}]'
             elif name == '@X':
@@ -138,7 +142,7 @@ def make_triple(ss, code, docs, settings):
     altdic = settings['alt']
     prefixdic = settings['prefix']
     code, docs = augment_doc(code, docs, altdic, prefixdic)
-    test_with = option.get('@test', '_')
+    test_with = option.get('@test', '$$')
     result = test_code(code, test_with)
     for doc in docs:
         text = multiese_da(doc)
@@ -163,13 +167,16 @@ def new_altdic():
         'に代入する': '[に[代入|]する|とする]',
         'が_': '[が|は]',
         'で_': '[で|として|を[用いて|使って]]',
-        'の中': '[|の[中|内]]',
+        'の中の': '[[|の][中|内]の|の]', 'の中に': '[[|の][中|内]に|に]', '中で': '[[の|][中|内]で|で]',
+        '全ての': '[全ての|すべての|全|]',
+        'の名前': '[名|の名前]',
+        'まとめて': '[まとめて|一度に|]',
         '一つ': '[ひとつ|一つ]', '二つ': '[ふたつ|二つ]',
         '１': '[一|１|1]', '２': '[二|２|2]', '３': '[三|３|3]',
         'かどうか': '[か[|どうか][調べる||[確認|判定|テスト]する]|]',
         '、': '[、|]',
         '求める': '[求める|計算する|算出する]',
-        '見る': '[見る|確認する|参照する|調べる]',
+        '見る': '[見る|確認する|調べる]',
         '使う': '[使う|用いる|使用する]',
         '得る': '[使う|見る|求める]',
         '新たに': '[新しく|新たに|]',

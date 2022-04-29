@@ -254,53 +254,53 @@ nまでの奇数列[|を作る]
 
 alist.append(element)
 '''
-@test(_;alist)
+@test($$;alist)
 @alt(追加する|加える)
 alist[に|の末尾に][element|要素]を追加する
 '''
 
 alist.extend(alist2)
 '''
-@test(_;alist)
+@test($$;alist)
 alist[に|の末尾に]alist2を[追加する|展開する]
 alist[に|の末尾に]alist2を追加して[拡張する|広げる]
 '''
 
 alist.insert(n, element)
 '''
-@test(_;alist)
+@test($$;alist)
 @alt(挿入する|差し込む)
 alistのn番目にelementを挿入する
 '''
 
 alist.pop()
 '''
-@test(_;alist)
+@test($$;alist)
 alistの末尾から[要素|値]を[ポップする|取り出す|取り除く]
 '''
 
 alist.pop(n)
 '''
-@test(_;alist)
+@test($$;alist)
 alistn番目から[要素|値]を[ポップする|取り出す|取り除く]
 '''
 
 alist.clear()
 '''
-@test(_;alist)
+@test($$;alist)
 @alt(消去する|消す)
 alistの[全ての|全|][要素|値]を[クリアにする|取り除く|消去する|空にする]
 '''
 
 alist.remove(element)
 '''
-@test(_;alist)
+@test($$;alist)
 alistからelement[|と等しい最初の要素]を取り除く
 '''
 
 del alist[n]
 '''
-@test(_;alist)
+@test($$;alist)
 alistのn番目[の[要素|値]|]を[削除する|消す]
 '''
 

@@ -86,20 +86,20 @@ delattr(obj, text)
 '''
 @alt(プロパティ|属性|フィールド)
 @alt(削除する|消す|取り除く)
-@test(text='age';_)
+@test(text='age';$$)
 objのtextプロパティを削除する
 '''
 
 getattr(obj, text)
 '''
 objのtextプロパティの値[|を得る]
-@test(text='age';_)
+@test(text='age';$$)
 '''
 
 getattr(obj, s)
 '''
 objのプロパティをsで指定して、その値を得る
-@test(s='age';_)
+@test(s='age';$$)
 '''
 
 hasattr(obj, text)
@@ -129,7 +129,7 @@ TYPE = Person
 isinstance(obj, TYPE)
 '''
 @alt(クラス|型)
-@alt(TYPE=Person;_)
+@alt(TYPE=Person;$$)
 objがTYPEクラス[|のインスタンス]かどうか
 '''
 
@@ -150,7 +150,7 @@ obj[は|が]__Y__かどうか
 
 issubclass(TYPE, TYPE2)
 '''
-@alt(TYPE=TYPE2=Person;_)
+@alt(TYPE=TYPE2=Person;$$)
 TYPEクラスが_TYPE2クラスのサブクラスかどうか
 '''
 

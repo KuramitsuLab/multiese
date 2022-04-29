@@ -1,0 +1,27 @@
+
+
+import IPython を先に実行するようにしよう
+NameError: name 'IPython' is not defined
+
+import math を先に実行するようにしよう
+NameError: name 'math' is not defined
+
+先にAStudioクラスの定義しよう
+NameError: name 'AStudio' is not defined
+
+名前が正しいか確認しよう
+NameError: name 'length' is not defined
+
+pip install sentence_transformers を実行しよう
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+変数にタプルを代入していないか調べよう
+AttributeError: 'tuple' object has no attribute 'transform'
+
+引数の数を確認しよう。1.0が1,2のように打ち間違えていませんか？
+TypeError: __init__() takes 4 positional arguments but 5 were given
+
+全角文字などを使っていませんか？
+SyntaxError: invalid character in identifier
+
+

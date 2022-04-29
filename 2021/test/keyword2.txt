@@ -1,0 +1,13 @@
+# キーワード引数
+
+sep=','
+@key(python,[セパレータ|区切り],カンマ)
+@use(python,カンマ区切り)
+@adverb(python,CSVのように)
+
+
+sep=','
+@key(セパレータ,カンマ)
+@use(カンマ区切り)
+@adverb(CSVのように)
+
