@@ -13,6 +13,10 @@ import collections
 
 n = 1
 iterable = [1, 2]
+element = 5
+deq = collections.deque()
+names = ['A', 'B']
+
 
 collections.deque()
 '''
@@ -65,9 +69,6 @@ X = collections.deque(iterable, maxlen=n)
 {最大長をnに[|制限]して|iterableから|両端キューを|[|新たに]}作って、Xに代入する
 {最大長nの両端キューを|iterableから|[|新たに]}作って、Xに代入する
 '''
-
-deq = collections.deque()
-element = 5
 
 deq.appendleft(element)
 '''
@@ -243,6 +244,7 @@ reversed(deq)
 '''
 
 __X__ = list
+
 __X__(deq)
 '''
 @test(deq = collections.deque([1,2]);$$)
@@ -252,7 +254,6 @@ deqを__Y__に変換する
 '''
 
 # カウンタ
-
 
 collections.Counter()
 '''
@@ -265,12 +266,12 @@ collections.Counter(iterable)
 {iterableから|[|新しい]多重集合を|新規に}作る
 '''
 
-amap = {'red': 4, 'blue': 2}
-collections.Counter(amap)
+adict = {'A': 4, 'B': 2}
+collections.Counter(adict)
 '''
-@test(amap={'A':2, 'B':1};$$)
-@prefix(amap;[辞書|カウンタ|マッピング])
-{amapから|[|新しい]多重集合を|新規に}作る
+@test(adict={'A':2, 'B':1};$$)
+@prefix(adict;[辞書|カウンタ|マッピング])
+{adictから|[|新しい]多重集合を|新規に}作る
 '''
 
 X = collections.Counter()
@@ -285,154 +286,155 @@ X = collections.Counter(iterable)
 {iterableから|[|新しい]多重集合を|新規に}作って、Xに代入する
 '''
 
-X = collections.Counter(amap)
+X = collections.Counter(adict)
 '''
-@test(amap={'A':2, 'B':1};$$;X)
-{amapから|[|新しい]多重集合を|新規に}作って、Xに代入する
+@test(adict={'A':2, 'B':1};$$;X)
+{adictから|[|新しい]多重集合を|新規に}作って、Xに代入する
 '''
 
-c = collections.Counter()
-c.elements()
+aCounter = collections.Counter()
+aCounter2 = aCounter
+aCounter.elements()
 '''
-@test(c=collections.Counter(A=2,B=1);list($$))
-@prefix(c;カウンタ)
+@test(aCounter=collections.Counter(A=2,B=1);list($$))
+@prefix(aCounter;カウンタ)
 @alt(それぞれの|各|)
 @alt(カウント|出現)
 @alt(の回数|[回|]数|分の回数)
 @alt(列挙する|リストとして得る)
 @alt(項目|[要素|キー]|[文字列|値])
-cのそれぞれの項目を[、その|]カウントの回数だけ列挙する
+aCounterのそれぞれの項目を[、その|]カウントの回数だけ列挙する
 '''
 
-c.most_common()
+aCounter.most_common()
 '''
-@test(c=collections.Counter(A=2,B=1);$$)
+@test(aCounter=collections.Counter(A=2,B=1);$$)
 @alt(順に|順番に|方から)
-cをカウント[|の回数][が|の]多い順に列挙する
-cを高頻出[|な]順に列挙する
+aCounterをカウント[|の回数][が|の]多い順に列挙する
+aCounterを高頻出[|な]順に列挙する
 '''
 
-c.most_common()[::-1]
+aCounter.most_common()[::-1]
 '''
-@test(c=collections.Counter(A=2,B=1);$$)
-cをカウント[|の回数][が|の]少ない順に列挙する
-cを低頻出[|な]順に列挙する
-'''
-
-c.most_common(n)
-'''
-@test(c=collections.Counter(A=2,B=1);$$)
-cを[上位n個|上位n位まで]カウント[|の回数][が|の]多い順に列挙する
-cから高頻出[|な]項目をn個、リストとして得る
+@test(aCounter=collections.Counter(A=2,B=1);$$)
+aCounterをカウント[|の回数][が|の]少ない順に列挙する
+aCounterを低頻出[|な]順に列挙する
 '''
 
-c.most_common()[:-n-1:-1]
+aCounter.most_common(n)
 '''
-@test(c=collections.Counter(A=2,B=1);$$)
-cを[下位n個|下位n位まで]カウント[|の回数][が|の]少ない順に列挙する
-cから低頻出[|な]項目をn個、リストとして得る
+@test(aCounter=collections.Counter(A=2,B=1);$$)
+aCounterを[上位n個|上位n位まで]カウント[|の回数][が|の]多い順に列挙する
+aCounterから高頻出[|な]項目をn個、リストとして得る
 '''
 
-c.most_common(0)[0]
+aCounter.most_common()[:-n-1:-1]
 '''
-@test(c=collections.Counter(A=2,B=1);$$)
+@test(aCounter=collections.Counter(A=2,B=1);$$)
+aCounterを[下位n個|下位n位まで]カウント[|の回数][が|の]少ない順に列挙する
+aCounterから低頻出[|な]項目をn個、リストとして得る
+'''
+
+aCounter.most_common(0)[0]
+'''
+@test(aCounter=collections.Counter(A=2,B=1);$$)
 @alt(最頻出|最も頻出|最もカウント数の多い)
-cから最頻出の項目を[得る|求める]
+aCounterから最頻出の項目を[得る|求める]
 '''
 
-c.most_common(0)[1]
+aCounter.most_common(0)[1]
 '''
-@test(c=collections.Counter(A=2,B=1);$$)
-cから最頻出の項目の回数を[得る|求める]
+@test(aCounter=collections.Counter(A=2,B=1);$$)
+aCounterから最頻出の項目の回数を[得る|求める]
 '''
 
-c.update(iterable)
+aCounter.update(iterable)
 '''
-@test(c=collections.Counter(iterable);$$)
+@test(aCounter=collections.Counter(iterable);$$)
 @alt(追加する|増やす)
-{cに|iterable[|のカウント[|の回数]]を}追加する
+{aCounterに|iterable[|のカウント[|の回数]]を}追加する
 '''
 
-c.update(amap)
+aCounter.update(adict)
 '''
-@test(c=collections.Counter(A=2,B=1);amap={'A':2, 'B':1};$$)
-{cに|amapを}追加する
+@test(aCounter=collections.Counter(A=2,B=1);adict={'A':2, 'B':1};$$)
+{cに|adictを}追加する
 '''
 
-c.subtract(iterable)
+aCounter.subtract(iterable)
 '''
-@test(c=collections.Counter(iterable);$$)
+@test(aCounter=collections.Counter(iterable);$$)
 @alt(引く|減らす)
 {cから|iterable[|のカウント[|の回数]]を}引く
 '''
 
-c.subtract(amap)
+aCounter.subtract(adict)
 '''
-@test(c=collections.Counter(A=2,B=1);amap={'A':2, 'B':1};$$)
-cからamapを引く
-'''
-
-c[element] += 1
-'''
-@test(c=collections.Counter(iterable);$$;c[element])
-c内のelement項目を[|一つ]増やす
+@test(aCounter=collections.Counter(A=2,B=1);adict={'A':2, 'B':1};$$)
+cからadictを引く
 '''
 
-c[element]
+aCounter[element] += 1
 '''
-@test(c=collections.Counter(iterable);$$)
-c内のelement項目のカウント[|の回数][|を得る]
+@test(aCounter=collections.Counter(iterable);$$;c[element])
+aCounter内のelement項目を[|一つ]増やす
 '''
 
-c.total()
+aCounter[element]
 '''
-@test(c=collections.Counter(A=2,B=1);$$)
+@test(aCounter=collections.Counter(iterable);$$)
+aCounter内のelement項目のカウント[|の回数][|を得る]
+'''
+
+aCounter.total()
+'''
+@test(aCounter=collections.Counter(A=2,B=1);$$)
 @alt(トータル|全)
-cのトータルカウント[|の回数][|を得る]
-cの全数[|を得る]
+aCounterのトータルカウント[|の回数][|を得る]
+aCounterの全数[|を得る]
 '''
 
-c.keys()
+aCounter.keys()
 '''
-@test(c=collections.Counter(A=2,B=1);$$)
-cの項目一覧[|を得る]
-'''
-
-len(c)
-'''
-@test(c=collections.Counter(A=2,B=1);$$)
-cの項目数[|を得る]
+@test(aCounter=collections.Counter(A=2,B=1);$$)
+aCounterの項目一覧[|を得る]
 '''
 
-c.clear()
+len(aCounter)
 '''
-@test(c=collections.Counter(A=2,B=1);$$;c)
-cを[リセット|クリア|ゼロに]する
-'''
-
-list(c)
-'''
-@test(c=collections.Counter(A=2,B=1);$$)
-cのユニークな項目を列挙する
-cをリストに変換する
+@test(aCounter=collections.Counter(A=2,B=1);$$)
+aCounterの項目数[|を得る]
 '''
 
-set(c)
+aCounter.clear()
 '''
-@test(c=collections.Counter(A=2,B=1);$$)
-cを[集合|セット]に変換する
-'''
-
-dict(c)
-'''
-@test(c=collections.Counter(A=2,B=1);$$)
-cを辞書に変換する
+@test(aCounter=collections.Counter(A=2,B=1);$$;aCounter)
+aCounterを[リセット|クリア|ゼロに]する
 '''
 
-c.items()
+list(aCounter)
 '''
-@test(c=collections.Counter(A=2,B=1);$$)
-cをペアリストに変換する
+@test(aCounter=collections.Counter(A=2,B=1);$$)
+aCounterのユニークな項目を列挙する
+aCounterをリストに変換する
+'''
+
+set(aCounter)
+'''
+@test(aCounter=collections.Counter(A=2,B=1);$$)
+aCounterを[集合|セット]に変換する
+'''
+
+dict(aCounter)
+'''
+@test(aCounter=collections.Counter(A=2,B=1);$$)
+aCounterを辞書に変換する
+'''
+
+aCounter.items()
+'''
+@test(aCounter=collections.Counter(A=2,B=1);$$)
+aCounterをペアリストに変換する
 '''
 
 pairs = [('A', 1)]
@@ -442,33 +444,31 @@ collections.Counter(dict(pairs))
 ペアリストpairsからカウンタを[作る|構築する]
 '''
 
-+c
++aCounter
 '''
-@test(c=collections.Counter(A=2,B=1);$$)
-cから0[以下の|]カウントを取り除く
-cの正の[数|カウント][のみ|だけ]残す
+@test(aCounter=collections.Counter(A=2,B=1);$$)
+aCounterから0[以下の|]カウントを取り除く
+aCounterの正の[数|カウント][のみ|だけ]残す
 '''
 
-c2 = c
-c & c2
+aCounter & aCounter2
 '''
-@test(c=collections.Counter(A=2,B=1);c2=c;$$)
+@test(aCounter=collections.Counter(A=2,B=1);aCounter2=c;$$)
 @alt(インターセクション|積集合|共通部分|[交わり|交差]|インターセクション)
-cとc2のインターセクション[|を求める|を得る]
-cとc2に共通する要素からなる多重集合[|を求める|を得る]
-c∩c2 
+aCounterとaCounter2のインターセクション[|を求める|を得る]
+aCounterとaCounter2に共通する要素からなる多重集合[|を求める|を得る]
+aCounter ∩ aCounter2 
 '''
 
-c | c2
+aCounter | aCounter2
 '''
-@test(c=collections.Counter(A=2,B=1);c2=c;$$)
+@test(aCounter=collections.Counter(A=2,B=1);aCounter2=c;$$)
 @alt(ユニオン|和集合)
-cとc2のユニオン[|を求める|を得る]
-c∪c2 
+aCounterとaCounter2のユニオン[|を求める|を得る]
+aCounter ∪ aCounter2 
 '''
 
-alist3 = ['A', 'B']
-collections.namedtuple(s, alist3)
+collections.namedtuple(s, names)
 '''
 sの名前を持ち、alist3のプロパティ[を持った|のある]名前付きタプルを[定義する|作る]
 '''
@@ -481,13 +481,13 @@ sの名前を持ち、s2のプロパティ[を持った|のある]名前付き�
 C = collections.namedtuple('P', 'x y z', defaults=[0])
 issubclass(C, tuple)
 '''
-@test(C=collections.namedtuple('C', 'x y z w');$$)
+@test(aCounter=collections.namedtuple('C', 'x y z w');$$)
 クラスCが_名前付きタプルかどうか
 '''
 
 C._make(iterable)  # issubclass(C, tuple)
 '''
-@test(C=collections.namedtuple('C', 'x y z w');$$)
+@test(aCounter=collections.namedtuple('C', 'x y z w');$$)
 @alt(のインスタンス|[オブジェクト])
 {iterableから|クラスCのインスタンスを|新たに}作る
 iterableをクラスCのインスタンスに変換する
@@ -496,20 +496,14 @@ iterableをクラスCのインスタンスに変換する
 obj = C(1, 2, 3)
 hasattr(obj, '_asdict') and hasattr(obj, '_fields')
 '''
-@test(C=collections.namedtuple('C', 'x y');obj=C(1,2);$$)
+@test(aCounter=collections.namedtuple('C', 'x y');obj=C(1,2);$$)
 objが名前付きタプル[|型|のインスタンス]かどうか
 '''
 
 obj._asdict()  # isinstance(obj, NamedTuple)
 '''
-@test(C=collections.namedtuple('C', 'x y');obj=C(1,2);$$)
+@test(aCounter=collections.namedtuple('C', 'x y');obj=C(1,2);$$)
 [名前付きタプル|]objを辞書に変換する
-'''
-
-obj._fields  # isinstance(obj, NamedTuple)
-'''
-@test(C=collections.namedtuple('C', 'x y');obj=C(1,2);$$)
-[名前付きタプル|]objのフィールド名の一覧[|を得る]
 '''
 
 collections.ChainMap()
@@ -530,4 +524,11 @@ collections.ChainMap(adict, adict2)
 '''
 @alt(チェーンする|階層的につなぐ|ネストする)
 adictとadict2をチェーンする
+'''
+
+if isinstance(obj, NamedTuple):
+    obj._fields
+'''
+@test(aCounter=collections.namedtuple('C', 'x y');obj=C(1,2);$$)
+[名前付きタプル|]objのフィールド名の一覧[|を得る]
 '''

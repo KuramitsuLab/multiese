@@ -1,6 +1,5 @@
 # 設定
 import operator
-from tkinter import b
 element = 10
 a, b, c = 1, 2, 3
 n = 2
