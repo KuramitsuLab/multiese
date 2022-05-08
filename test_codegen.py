@@ -187,21 +187,17 @@ class TestSuite:
         self.total += tcount
 
 
-def read_tsv(filename, index=1, index2=1):
+def read_tsv(filename, index=2, pred_index=1):
     ss = []
     with open(filename) as f:
         reader = csv.reader(f, delimiter="\t")
         for row in reader:
-            ss.append((row[index], row[index2]))
+            ss.append((row[index], row[pred_index]))
     return ss
-
-#print(test_code("math.sin(x)", "math.sin(x)"))
-#print(test_code("len(str(n))", "len(str(n))"))
-#print(test_code("print(str(n))", "print(str(n))"))
 
 
 def main():
-    ss = read_tsv('kogi_trans.tsv')
+    ss = read_tsv(sys.argv[1])
     suite = TestSuite()
     for code, code2 in ss:
         suite.test_code(code, code2)
