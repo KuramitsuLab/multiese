@@ -15,6 +15,13 @@ import warnings
 
 warnings.simplefilter('ignore')
 
+df = pd.DataFrame(data={'A': [1, 2, 3],
+                        'B': [1, 1, 0],
+                        'C': [1, 0, 1]})
+df2 = pd.DataFrame(data={'A': [1, 2, 3],
+                         'B': ["a", "b", "c"],
+                         'C': ["111", "01", "1"]})
+
 SAMPLE = dict(
     n=[1, 2, 3, 0, -1],
     s=['A B C', '1 2', '1 2 3', 'A', '1', ''],
@@ -28,18 +35,29 @@ SAMPLE = dict(
     aset=[set([1, 2, 3]), set([1, 2]), set([1]), set([])],
     array=[np.array([1, 2, 3]), np.array([1, 2])],
     element=[2, -1, 'A', True, []],
+    value=[2, -1, 'A'],
     adict=[{'A': 1}, {'B': 2}, {'A': 0, 'B': 1}, {}],
     key=['A', 'B', 'C'],
-    deq=[collections.deque(), collections.deque([1, 2]),
+    ty=[int, float, str, list],
+    deq=[collections.deque(),
+         collections.deque([1, 2]),
          collections.deque([1, 2, 3])],
-    df=[pd.DataFrame(data={'A': [1, 2, 3], 'B': [1, 1, 0], 'C': [1, 0, 1]})],
+    df=[df, df2],
     col=['A', 'B', 'C'],
+    xdata=[[1, 2, 3], np.array([1, 2, 3]), df['A']],
+    ydata=[[3, 2, 1], np.array([1, 1, 1]), df['B']],
+    names=[['A', 'B'], ['A', 'C'], ['A']],
+    pattern=['A+', 'A*', 'A|B'],
     # module
     math=import_module('math'),
     datetime=import_module('datetime'),
     collections=import_module('collections'),
     itertools=import_module('itertools'),
     np=import_module('numpy'),
+    operator=import_module('operator'),
+    keyword=import_module('keyword'),
+    string=import_module('string'),
+    sympy=import_module('sympy'),
 
     # func=function,
     # predicatefunc=lambda x: True,
@@ -185,6 +203,9 @@ class TestSuite:
                 break
         self.test_pass += tpass
         self.total += tcount
+        if tpass != tcount:
+            print('FAILED', f'{tpass}/{tcount}', code, code2)
+        return tpass == tcount
 
 
 def read_tsv(filename, index=2, pred_index=1):
