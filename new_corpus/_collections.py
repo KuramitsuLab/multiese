@@ -8,7 +8,7 @@ import collections
 @test($$;type(collections))
 @alt(両端キュー|[双方向キュー|デック]|[キュー|スタック]|deque[|オブジェクト])
 @alt(名前付きタプル|[構造体|簡易クラス])
-[コレクション|両端キュー|カウンタ|名前付きタプル]を使う
+[コレクション|データ構造|両端キュー|カウンタ|名前付きタプル]を使う
 '''
 
 n = 1
@@ -227,7 +227,7 @@ deq.count(element)
 '''
 @test(deq = collections.deque([1,2]);$$)
 @alt(数える|数える)
-deq中のelement[の[数|出現数]を数える
+deq中のelement[の[数|出現数]]を数える
 '''
 
 deq.reverse()
