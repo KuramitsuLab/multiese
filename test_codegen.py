@@ -289,7 +289,7 @@ def main():
     print(f'Test Count {suite.tested}')
     print(f' Syntax Error {suite.syntax_errors}')
     print(f' Untested {suite.notest} {suite.notest/suite.tested:.5f}')
-    print(f' Pass {suite.tested} {suite.testok/suite.tested:.5f} ')
+    print(f' Pass {suite.testok} {suite.testok/suite.tested:.5f} ')
     print(
         f' Missing {suite.missing} {suite.missing/suite.tested:.5f}')
 
