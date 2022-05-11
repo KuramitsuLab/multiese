@@ -8,6 +8,7 @@ import random
 import csv
 import copy
 import collections
+import datetime
 import builtins
 import pandas as pd
 import numpy as np
@@ -22,32 +23,51 @@ df2 = pd.DataFrame(data={'A': [1, 2, 3],
                          'B': ["a", "b", "c"],
                          'C': ["111", "01", "1"]})
 
+
+class P(object):
+    def __init__(self):
+        self.A = 1
+        self.B = 0
+
+
 SAMPLE = dict(
     n=[1, 2, 3, 0, -1],
+    k=[0, 1, 100],
+    i=(0, 1, 2),
     s=['A B C', '1 2', '1 2 3', 'A', '1', ''],
     x=(1.0, 2.0, 0.5, 0.0, -1.0),
+    y=(1.0, 2.0, 0.5, 0.0, -1.0),
+    obj=(P(), P()),
     iterable=[[1, 2], ['1', '2', '3'], [], range(10), '123'],
 
-    text='/usr', text2='utf-8', text3='.txt',
+    text=['/usr', 'utf-8', '.txt'],
+    filename=['file.txt', 'file.csv', 'file.c', 'file.tsv'],
     # リスト
     alist=[[1, 2, 3], [1, 2], [1, 1], [1], []],
     atuple=[(1, 2, 3), (1, 2), (1, 1), (1,)],
     aset=[set([1, 2, 3]), set([1, 2]), set([1]), set([])],
     array=[np.array([1, 2, 3]), np.array([1, 2])],
-    element=[2, -1, 'A', True, []],
-    value=[2, -1, 'A'],
+    element=[0, 1, -1, 'A', True, []],
+    value=[0, 1, -1, 'A'],
     adict=[{'A': 1}, {'B': 2}, {'A': 0, 'B': 1}, {}],
     key=['A', 'B', 'C'],
+    name=['A', 'B', 'C'],
     ty=[int, float, str, list],
     deq=[collections.deque(),
          collections.deque([1, 2]),
          collections.deque([1, 2, 3])],
+    aCounter=[collections.Counter(),
+              collections.Counter(['A', 'B']),
+              collections.Counter(['A', 'B', 'A'])],
     df=[df, df2],
     col=['A', 'B', 'C'],
+    ch=['A', 'a', 'あ'],
+    ds=[df['A'], df['B'], df2['A']],
     xdata=[[1, 2, 3], np.array([1, 2, 3]), df['A']],
     ydata=[[3, 2, 1], np.array([1, 1, 1]), df['B']],
     names=[['A', 'B'], ['A', 'C'], ['A']],
     pattern=['A+', 'A*', 'A|B'],
+    rgb=['#ffffff', '#000000', '#deadbe'],
     # module
     math=import_module('math'),
     datetime=import_module('datetime'),
@@ -58,24 +78,12 @@ SAMPLE = dict(
     keyword=import_module('keyword'),
     string=import_module('string'),
     sympy=import_module('sympy'),
-
-    # func=function,
-    # predicatefunc=lambda x: True,
-    # filepath='./file.txt',
-    # filename='/etc/man.conf',
-    # math=import_module('math'),
-    # # str
-    # re=import_module('re'),
-    # operator=import_module('operator'),
-    # dt=datetime.datetime(2022, 12, 12),
-    # adate=datetime.date(2022, 12, 12),
-    # typing=import_module('typing'),
-    # iterable=[0, 1, 2, 4],
-    # iterable2=[7, 8, 9],
-    # np=import_module('numpy'),
-    # pd=import_module('pandas'),
-    # sns=import_module('seaborn'),
-    # df=df, df2=df, ds=df['A'], ds2=df['B'], col='A', col2='B',
+    typing=import_module('typing'),
+    json=import_module('json'),
+    dt=[datetime.datetime(2022, 12, 12), datetime.datetime(
+        2021, 1, 1), datetime.datetime(2022, 1, 2)],
+    adate=[datetime.datetime(2022, 12, 12), datetime.datetime(
+        2021, 1, 1), datetime.datetime(2022, 1, 2)],
 )
 
 
@@ -99,6 +107,9 @@ class Missing:
         else:
             return Missing(f'{self.msg}{args}{dict(**kwargs)}')
 
+    # def __getitem__(self, index):
+    #     return self.msg[index]
+
 
 VALUE = set(['True', 'False', 'None'])
 
@@ -115,7 +126,7 @@ def parse_pyname(code):
         tokens = tokenize(BytesIO(code.encode('utf-8')).readline)
         prev = ''
         for toknum, tokval, _, _, _ in tokens:
-            #print(toknum, tokval)
+            # print(toknum, tokval)
             if toknum == token.NAME and not iskeyword(tokval) and prev != '.':
                 name = tokval[:-1] if tokval[-1].isdigit() else tokval
                 if tokval not in vars:
@@ -137,9 +148,9 @@ VARS = dict(
 
 def duplicate(v):
     try:
-        return copy.copy(v)
+        return copy.copy(v), copy.copy(v)
     except:
-        return v
+        return v, v
 
 
 MISSING_NAMES = set([])
@@ -151,16 +162,18 @@ def randomize_name(name, value):
     if name in SAMPLE:
         value = SAMPLE[name]
         if not isinstance(value, (list, tuple)):
-            return value
-        return random.choice(duplicate(value))
+            return value, value
+        return duplicate(random.choice(value))
     if name not in MISSING_NAMES:
         MISSING_NAMES.add(name)
-    return value
+    return value, value
 
 
 def randomize(vars):
+    vars2 = {}
     for name in vars:
-        vars[name] = randomize_name(name, vars[name])
+        vars[name], vars2[name] = randomize_name(name, vars[name])
+    return vars2
 
 
 def exec_code(code, vars):
@@ -175,45 +188,95 @@ def exec_code(code, vars):
         return e
 
 
+def match(value1, value2):
+    s1 = str(value1)
+    s2 = str(value2)
+    if 'at 0x' in s1 and 'at 0x' in s2:
+        s1, _, _ = s1.partition('at 0x')
+        s2, _, _ = s2.partition('at 0x')
+    return s1 == s2
+
+
 class TestSuite:
     def __init__(self):
+        self.tested = 0
         self.syntax_errors = 0
-        self.test_pass = 0
-        self.total = 0
+        self.notest = 0
+        self.testok = 0
+        self.missing = 0
 
-    def test_code(self, code, code2):
+    def test_code(self, code, code2, check_exact_match=True):
+        self.tested += 1
+        if code.startswith('import '):
+            self.test_import(code, code2)
+            return
+        let = code.find(' = ')
+        lpr = code.find('(')
+        left = ''
+        if let > 0 and (lpr == -1 or let < lpr):
+            left, _, _ = code.partition(' = ')
+            left = ';'+left
+        self.test_exec(code, code2, left)
+
+    def test_import(self, code, code2):
+        vars = {}
+        vars2 = {}
+        try:
+            global_vars = parse_pyname(code)
+            exec(code, global_vars, vars)
+            try:
+                exec(code2, global_vars, vars2)
+                if vars == vars2:
+                    self.testok += 1
+                return
+            except SyntaxError:
+                self.syntax_errors += 1
+                return
+        except Exception as e:
+            print('BAD', code, e)
+            self.notest += 1
+
+    def test_exec(self, code, code2, left=''):
         vars = parse_pyname(code)
         tcount = 0
         tpass = 0
+        result2 = None
         for i in range(1+len(vars)*3):
-            randomize(vars)
-            result = exec_code(code, vars)
+            vars2 = randomize(vars)
+            result = exec_code(code+left, vars)
             if isinstance(result, Exception):
-                #print(code, repr(result))
                 continue
             tcount += 1
-            result2 = exec_code(code2, vars)
-            if str(result) == str(result2):
-                tpass += 1
-            #print(result, result2)
-            if isinstance(result, Missing):
-                break
+            result2 = exec_code(code2+left, vars2)
             if isinstance(result2, SyntaxError):
                 self.syntax_errors += 1
                 break
-        self.test_pass += tpass
-        self.total += tcount
-        if tpass != tcount:
-            print('FAILED', f'{tpass}/{tcount}', code, code2)
-        return tpass == tcount
+            if match(result, result2):
+                tpass += 1
+            if isinstance(result, Missing):
+                self.missing += 1
+                break
+        if tcount == 0:
+            #print('NOTEST', f'{tpass}/{tcount}', code, code2, result)
+            self.notest += 1
+        elif tpass == tcount:
+            self.testok += 1
+        else:
+            print('FAILED', f'{tpass}/{tcount}', code, code2, result2)
 
 
 def read_tsv(filename, index=2, pred_index=1):
     ss = []
-    with open(filename) as f:
-        reader = csv.reader(f, delimiter="\t")
-        for row in reader:
-            ss.append((row[index], row[pred_index]))
+    try:
+        with open(filename) as f:
+            reader = csv.reader(f, delimiter="\t")
+            for row in reader:
+                ss.append((row[index], row[pred_index]))
+    except:
+        with open(filename) as f:
+            reader = csv.reader(f, delimiter="\t")
+            for row in reader:
+                ss.append((row[1], row[1]))
     return ss
 
 
@@ -222,9 +285,13 @@ def main():
     suite = TestSuite()
     for code, code2 in ss:
         suite.test_code(code, code2)
-    print(suite.test_pass, suite.total,
-          suite.test_pass / suite.total, suite.syntax_errors)
     print(MISSING_NAMES)
+    print(f'Test Count {suite.tested}')
+    print(f' Syntax Error {suite.syntax_errors}')
+    print(f' Untested {suite.notest} {suite.notest/suite.tested:.5f}')
+    print(f' Pass {suite.testok} {suite.testok/suite.tested:.5f} ')
+    print(
+        f' Missing {suite.missing} {suite.missing/suite.tested:.5f}')
 
 
 main()

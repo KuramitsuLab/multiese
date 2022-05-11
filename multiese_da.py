@@ -2,6 +2,7 @@ import re
 import random
 import pegtree as pg
 
+
 GRAMMAR = '''
 
 Sentense = { (Chunk/ Punc)* #Chunk }
@@ -70,6 +71,20 @@ class Text(object):
         return self.text
 
 
+def zipf(k, n):
+    return (1/(k+1)) / sum(1 / (i+1) for i in range(n))
+
+
+def random_rank(n):
+    acc = 0
+    r = random.random()
+    for i in range(n):
+        acc += zipf(i, n)
+        if r < acc:
+            return i
+    return n-1
+
+
 class Choice(object):
     chunks: tuple
 
@@ -82,12 +97,13 @@ class Choice(object):
 
     def emit(self, **kw):
         choice = kw.get('choice', 0.5)
+        if choice > 1.0 or choice < 0.0:
+            return self.chunks[-1].emit(**kw)
         r = random.random()
         if r < choice:
-            size = len(self.chunks)
-            index = int(size * (r / choice)) % size
-            #print(index, repr(self.chunks[index]))
-            return self.chunks[index].emit(**kw)
+            n = len(self.chunks)
+            n = random_rank(n)
+            return self.chunks[n].emit(**kw)
         return self.chunks[0].emit(**kw)
 
 
@@ -102,9 +118,12 @@ class Order(object):
         return '{'+(' | '.join(repr(x) for x in self.chunks))+'}'
 
     def emit(self, **kw):
-        shuffle = kw.get('shuffle', 0.3)
+        shuffle = kw.get('shuffle', 0.5)
         r = random.random()
-        if r < shuffle:
+        if shuffle > 1.0:
+            # 常にシャッフル
+            chunks = list(self.chunks[::-1])
+        elif r < shuffle:
             chunks = list(self.chunks)
             random.shuffle(chunks)
         else:
@@ -150,11 +169,11 @@ def _traverse_tree(tree, c):
     return Text('')
 
 
-def multiese_da(s, choice=0.1, shuffle=0.5, altdic=None):
+def multiese_da(s, choice=0.9, shuffle=0.5):
     tree = parse_as_tree(s)
     c = ParsedResult()
     c.result = _traverse_tree(tree, c)
-    print(repr(c.result))
+    # print(repr(c.result))
     return c.emit(shuffle=shuffle, choice=choice)
 
 
@@ -171,7 +190,7 @@ def _replace(doc, oldnews):
     return doc.replace('@', '')
 
 
-def encode_text_code(text, code, choice=0.5, shuffle=0.5):
+def encode_text_code(text, code, choice=0.9, shuffle=0.5):
     text = multiese_da(text, choice=choice, shuffle=shuffle) + ' '
     names = [x[1] for x in VARPAT.findall(text) if x[1] in code]
     d = {}
@@ -195,3 +214,5 @@ if __name__ == '__main__':
     print(multiese_da('{Aと|[||B]subを}探す'))
     print(multiese_da('[Aと|subを]探す'))
     print(multiese_da('sにおいて{startからend [|まで ] [|の間] で | subを } 探す'))
+    print(multiese_da(
+        'sにおいて{startからend [|まで ] [|の間] で | subを } 探す', choice=1.0, shuffle=1.0))
