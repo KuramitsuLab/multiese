@@ -36,9 +36,10 @@ def Exact_Match(ss):
     pred=line[1]
 
     try:
+      index_black=black.format_str(index,mode=black.Mode())[:-1]
       pred_black=black.format_str(pred,mode=black.Mode())[:-1]
 
-      if index==pred_black:
+      if index_black==pred_black:
         correct+=1
 
     except:
@@ -47,7 +48,7 @@ def Exact_Match(ss):
       #with open('BLACK_NG.txt',mode='a') as f:
         #f.writelines(line)
         #f.write('\n')
-      print(line)
+      #print(line)
 
   #誤答数
   no_correct=len(ss)-correct
