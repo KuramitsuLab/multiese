@@ -4,9 +4,7 @@ import black
 import Levenshtein
 import nltk
 nltk.download('punkt')
-from nltk import word_tokenize
 from nltk import bleu_score
-from rouge import Rouge
 from io import BytesIO
 from tokenize import tokenize, open
 import re
@@ -28,7 +26,7 @@ def read_tsv(filename):
 
 def Exact_Match(ss):
 
-  print("<BLACK_NG>")
+  #print("<BLACK_NG>")
   
   #正答数
   correct=0
@@ -107,8 +105,7 @@ def BLEU(ss):
     pred=line[1]
     sum_bleu += bleu_score.sentence_bleu([tokenize_pycode(index)],tokenize_pycode(pred))
 
-    #sum_bleu2 += bleu_score.sentence_bleu([word_tokenize(index)],word_tokenize(pred),smoothing_function=bleu_score.SmoothingFunction().method2)
-  #平均値
+     #平均値
   bleu = sum_bleu / len(ss)
 
   print("BLEU：",bleu)
@@ -131,7 +128,7 @@ def ROUGE_L(ss):
   #平均
   ROUGE_score=sum_ROUGE_score/len(ss)
 
-  print("ROUGE_score：",ROUGE_score)
+  print("ROUGE-L：",ROUGE_score)
 
 def arg():
   try:
@@ -145,10 +142,12 @@ def arg():
 def main():
   global index_id
   global pred_id
+
   index_id, pred_id = arg()
+  
   ss = read_tsv(sys.argv[1])
   print(sys.argv[1])
-  
+
   Exact_Match(ss)
   Levenstein(ss)
   BLEU(ss)
