@@ -132,7 +132,7 @@ def ROUGE_L(ss):
 
 def arg():
   try:
-    print("index = {sys.argv[2]}, pred = {sys.argv[3]}".format())
+    print(f"index = {sys.argv[2]}, pred = {sys.argv[3]}")
     return int(sys.argv[2]),int(sys.argv[3])
   except:
     print("index = 2, pred = 1")
