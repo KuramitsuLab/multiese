@@ -22,7 +22,7 @@ def read_tsv(filename):
     with open(filename) as f:
         reader = csv.reader(f, delimiter="\t")
         for row in reader:
-          ss.append((row[index], row[pred_index]))
+          ss.append((row[index_id], row[pred_id]))
     return ss
 
 
@@ -143,9 +143,9 @@ def arg():
     
 
 def main():
-  global index
-  global pred_index
-  index, pred_index = arg()
+  global index_id
+  global pred_id
+  index_id, pred_id = arg()
   ss = read_tsv(sys.argv[1])
   print(sys.argv[1])
   
