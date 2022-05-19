@@ -12,7 +12,12 @@ from tokenize import tokenize, open
 import re
 from sumeval.metrics.rouge import RougeCalculator
 
-def read_tsv(filename, index=2, pred_index=1):
+import warnings
+warnings.filterwarnings('ignore')
+
+
+
+def read_tsv(filename):
     ss = []
     with open(filename) as f:
         reader = csv.reader(f, delimiter="\t")
@@ -128,9 +133,19 @@ def ROUGE_L(ss):
 
   print("ROUGE_score：",ROUGE_score)
 
-
+def arg():
+  try:
+    print("index = {sys.argv[2]}, pred = {sys.argv[3]}".format())
+    return int(sys.argv[2]),int(sys.argv[3])
+  except:
+    print("index = 2, pred = 1")
+    return 2, 1
+    
 
 def main():
+  global index
+  global pred_index
+  index, pred_index = arg()
   ss = read_tsv(sys.argv[1])
   print(sys.argv[1])
   
@@ -140,3 +155,4 @@ def main():
   ROUGE_L(ss)
 
 main()
+
