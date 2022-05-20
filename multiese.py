@@ -3,6 +3,7 @@ import re
 import csv
 import sys
 import pegtree as pg
+import random
 from multiese_da import multiese_da
 
 ##
@@ -51,6 +52,7 @@ PREFIX = {
 }
 
 ALTDIC = {
+    '\n': '<NL>',
     'に変換する': 'に[変換|]する',
     'に設定する': '[に設定する|に変更する|に[セット|指定]する|にする]',
     'に代入する': '[に[代入|]する|とする]',
@@ -80,7 +82,7 @@ ALTDIC = {
 
 BEGIN = '([^A-Za-z0-9]|^)'
 END = ('(?![A-Za-z0-9]|$)')
-VARPAT = re.compile(BEGIN+r'([A-Za-z_]+)(\d?)'+END)
+VARPAT = re.compile(BEGIN+r'([A-Za-z][A-Za-z_]+)(\d?)'+END)
 
 
 def _ta(name, number, prefixdic):
@@ -133,12 +135,14 @@ class Corpus(object):
     def make_pair(self, code, docs):
         self.corpus.append((code, [self.extend_alt(doc) for doc in docs]))
 
-    def multiplex(self, code, docs):
+    def multiplex(self, code, docs, multi=True):
         if '__X__' in code:
             for x, y in zip(self.X, self.Y):
                 codeX = code.replace('__X__', x)
                 self.make_pair(codeX, [doc.replace('__Y__', y)
                                        for doc in docs])
+                if multi == False:
+                    break
         else:
             self.make_pair(code, docs)
 
@@ -179,9 +183,10 @@ class Corpus(object):
                 ss.append(line)
         return ss
 
-    def read(self, filename):
+    def read(self, filename, multi=True):
         #settings = {'alt': new_altdic(), 'prefix': PREFIX.copy()}
         self.altDic = ALTDIC.copy()
+        # print(self.altDic)
         self.prefixDic = PREFIX.copy()
         self.reading_filename = filename
         with open(filename) as f:
@@ -189,30 +194,36 @@ class Corpus(object):
             for t in tree:
                 code = str(t[0]).strip()
                 docs = self.parse_settings(str(t[1]).splitlines())
-                self.multiplex(code, docs)
+                self.multiplex(code, docs, multi=multi)
 
-    def generate(self, max_iter=3, shuffle=0.5):
+    def generate(self, max_iter=4, shuffle=0.5):
         self.train_data = []
         self.test_data = []
         for code, docs in self.corpus:
-            train_data = set()
-            test_data = set()
             for doc in docs:
-                doc2 = multiese_da(doc, choice=0.0, shuffle=0.0)
-                train_data.add(doc2)
+                train_test_data = set()
+                doc0 = multiese_da(doc, choice=0.0, shuffle=0.0)
+                self.train_data.append((doc0, code))
                 for _ in range(max_iter):
-                    doc2 = multiese_da(doc, choice=1.0, shuffle=shuffle)
-                    train_data.add(doc2)
-            for doc in docs:
-                doc = multiese_da(doc, choice=1.1, shuffle=1.1)
-                if doc not in train_data:
-                    test_data.add(doc)
-            for doc in train_data:
-                self.train_data.append((doc, code))
-            for doc in test_data:
-                self.test_data.append((doc, code))
+                    doc2 = multiese_da(doc, choice=0.99, shuffle=shuffle)
+                    if doc0 != doc2:
+                        train_test_data.add(doc2)
+                train_test_data = list(train_test_data)
+                if len(train_test_data) > 2:
+                    random.shuffle(train_test_data)
+                    for doc in train_test_data[:-1]:
+                        self.train_data.append((doc, code))
+                    self.test_data.append((train_test_data[-1], code))
+                else:
+                    for doc in train_test_data[:-1]:
+                        self.train_data.append((doc, code))
 
     def save_data(self, filename='kogi.tsv'):
+        if len(self.test_data) == 0:
+            random.shuffle(self.train_data)
+            train_size = (len(self.train_data) * 7) // 10
+            self.test_data = self.train_data[train_size:]
+            self.train_data = self.train_data[:train_size]
         filename = filename.replace('.tsv', '_train.tsv')
         with open(filename, 'w') as f:
             writter = csv.writer(f, delimiter="\t")
@@ -225,13 +236,21 @@ class Corpus(object):
                 writter.writerow(row)
 
 
-def main():
+def main_small():
+    corpus = Corpus()
+    for filename in sys.argv[1:]:
+        corpus.read(filename, multi=False)
+    corpus.generate(max_iter=0)
+    corpus.save_data('kogi0.tsv')
+
+
+def main(max_iter=5):
     corpus = Corpus()
     for filename in sys.argv[1:]:
         corpus.read(filename)
-    corpus.generate()
-    corpus.save_data('kogi.tsv')
+    corpus.generate(max_iter=max_iter)
+    corpus.save_data(f'kogi{max_iter}.tsv')
 
 
 if __name__ == '__main__':
-    main()
+    main(6)
