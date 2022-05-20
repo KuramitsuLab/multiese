@@ -265,7 +265,7 @@ class TestSuite:
             print('FAILED', f'{tpass}/{tcount}', code, code2, result2)
 
 
-def read_tsv(filename, index=2, pred_index=1):
+def read_tsv(filename, index=1, pred_index=2):
     ss = []
     try:
         with open(filename) as f:

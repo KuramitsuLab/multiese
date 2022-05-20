@@ -228,12 +228,14 @@ class Corpus(object):
         with open(filename, 'w') as f:
             writter = csv.writer(f, delimiter="\t")
             for row in self.train_data:
-                writter.writerow(row)
+                if '\n' not in row[1]:
+                    writter.writerow(row)
         filename = filename.replace('_train.tsv', '_test.tsv')
         with open(filename, 'w') as f:
             writter = csv.writer(f, delimiter="\t")
             for row in self.test_data:
-                writter.writerow(row)
+                if '\n' not in row[1]:
+                    writter.writerow(row)
 
 
 def main_small():
