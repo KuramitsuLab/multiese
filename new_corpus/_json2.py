@@ -1,3 +1,6 @@
+from importlib import import_module
+import io
+
 import json
 '''
 @test($$;type(json))
@@ -5,7 +8,15 @@ import json
 JSONを使う
 '''
 
-json.loads(s)
+json = import_module('json')
+jsonString = "{'A':1}"
+aDict = {'A': 0}
+fin = io.StringIO(jsonString)
+fout = io.StringIO(mode='w')
+n = 0
+
+
+json.loads(jsonString)
 '''
 @test(json=missing;$$)
 JSON[形式の|]sを辞書に変換する
@@ -34,28 +45,28 @@ data = json.load(fin)
 JSON[ファイル|形式]のfinを読み込んで、dataとする
 '''
 
-json.dumps(adict, ensure_ascii=False)
+json.dumps(aDict, ensure_ascii=False)
 '''
 @test(json=missing;$$)
-adictをJSON形式の文字列に変換する
+aDictをJSON形式の文字列に変換する
 '''
 
-json.dumps(adict, ensure_ascii=False, indent=n)
+json.dumps(aDict, ensure_ascii=False, indent=n)
 '''
 @test(json=missing;$$)
-{[インデント|改行]付きで|adictを}文字列に変換する
-adictを{インデント幅nの|JSON形式の}文字列に変換する
-インデント幅nで、adictをJSON形式の文字列に変換する
+{[インデント|改行]付きで|aDictを}文字列に変換する
+aDictを{インデント幅nの|JSON形式の}文字列に変換する
+インデント幅nで、aDictをJSON形式の文字列に変換する
 '''
 
-json.dumps(adict, ensure_ascii=False, sort_keys=True)
+json.dumps(aDict, ensure_ascii=False, sort_keys=True)
 '''
 @test(json=missing;$$)
-adictを[ソートして|並べ直して]JSON形式の文字列に変換する
+aDictを[ソートして|並べ直して]JSON形式の文字列に変換する
 '''
 
-json.dump(adict, fout, ensure_ascii=False)
+json.dump(aDict, fout, ensure_ascii=False)
 '''
 @test(json=missing;fout=sys.stdout;$$)
-adictをJSON形式でfoutに保存する
+aDictをJSON形式でfoutに保存する
 '''

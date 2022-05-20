@@ -1,6 +1,9 @@
-import string
+from importlib import import_module
 import random
 n, n2, n3 = 2, 3, 1
+
+
+string = import_module('string')
 
 random.seed()
 '''
@@ -14,7 +17,7 @@ random.seed(n)
 '''
 @test(random=missing;$$)
 {乱数シードを|nで}初期化する
-{乱数シードを|nで}固定化する
+{乱数シードを|nで}固定[|化]する
 '''
 
 random.randint(1, 6)
@@ -111,9 +114,9 @@ iterableからn[個|要素]、サンプリングする
 iterableから重複なく、n[個|要素][ランダムに]選ぶ
 '''
 
-alist = iterable
-random.shuffle(alist)
+aList = iterable
+random.shuffle(aList)
 '''
 @test(random=missing;$$)
-alistを[ランダムに|]シャッフルする
+aListを[ランダムに|]シャッフルする
 '''

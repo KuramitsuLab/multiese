@@ -1,12 +1,14 @@
 # list
 
-alist = [1, 2, 3]
-alist2 = [4, 5]
-atuple = (1, 2, 3)
-atuple2 = (4, 5)
+aList = [1, 2, 3]
+aList2 = [4, 5]
+aTuple = (1, 2, 3)
+aTuple2 = (4, 5)
 element = 2
 n = 1
 n2 = 3
+step = 2
+iterable = [1, 2, 3]
 
 # リスト
 
@@ -27,9 +29,9 @@ n2 = 3
 [要素|element]一つの[タプル|組][|を作る]
 '''
 
-(x, x2)
+(n, n2)
 '''
-xとx2から成るペア[|を作る]
+bとn2から成るペア[|を作る]
 '''
 
 [element]
@@ -53,39 +55,39 @@ n2行n列の２次元リスト[|を作る]
 n[×| x ]n2の２次元リスト[|を作る]
 '''
 
-tuple(alist)
+tuple(aList)
 '''
 @alt(に変換する|[に|化]する)
-alistを[タプル|組]に変換する
-alistをイミュータブルにする
+aListを[タプル|組]に変換する
+aListをイミュータブルにする
 '''
 
-list(atuple)
+list(aTuple)
 '''
-atupleをリストに変換する
-atupleをミュータブルにする
+aTupleをリストに変換する
+aTupleをミュータブルにする
 '''
 
-__X__ = alist
-__X__2 = alist2
+__X__ = aList
+__X__2 = aList2
 
 len(__X__)
 '''
 @alt(見る|調べる|知る|得る)
 @alt(長さ|要素数|個数)
-@X(alist|atuple)
-@Y(alist|atuple)
+@X(aList|aTuple)
+@Y(aList|aTuple)
 __Y__の長さ[|を見る]
 '''
 
-len(alist) == 0
+len(aList) == 0
 '''
-alistが空かどうか
+aListが空かどうか
 '''
 
-len(alist) != 0
+len(aList) != 0
 '''
-alistが空でないかどうか
+aListが空でないかどうか
 '''
 
 __X__ + __X__2
@@ -167,9 +169,9 @@ slice(n, n2)
 nからn2までのスライス
 '''
 
-slice(n, n2, n3)
+slice(n, n2, step)
 '''
-nからn2までのn3ごとによるスライス
+nからn2までのstepごとによるスライス
 '''
 
 
@@ -194,10 +196,10 @@ sum(__X__)/len(__X__)
 __Y__の[平均値|平均][|を求める]
 '''
 
-range(len(alist))
+range(len(aList))
 '''
 @test(list(_))
-alistの長さだけ繰り返す
+aListの長さだけ繰り返す
 '''
 
 range(n)
@@ -252,56 +254,56 @@ list(range(1, n, 2))
 nまでの奇数列[|を作る]
 '''
 
-alist.append(element)
+aList.append(element)
 '''
-@test($$;alist)
+@test($$;aList)
 @alt(追加する|加える)
-alist[に|の末尾に][element|要素]を追加する
+aList[に|の末尾に][element|要素]を追加する
 '''
 
-alist.extend(alist2)
+aList.extend(aList2)
 '''
-@test($$;alist)
-alist[に|の末尾に]alist2を[追加する|展開する]
-alist[に|の末尾に]alist2を追加して[拡張する|広げる]
+@test($$;aList)
+aList[に|の末尾に]aList2を[追加する|展開する]
+aList[に|の末尾に]aList2を追加して[拡張する|広げる]
 '''
 
-alist.insert(n, element)
+aList.insert(n, element)
 '''
-@test($$;alist)
+@test($$;aList)
 @alt(挿入する|差し込む)
-alistのn番目にelementを挿入する
+aListのn番目にelementを挿入する
 '''
 
-alist.pop()
+aList.pop()
 '''
-@test($$;alist)
-alistの末尾から[要素|値]を[ポップする|取り出す|取り除く]
-'''
-
-alist.pop(n)
-'''
-@test($$;alist)
-alistn番目から[要素|値]を[ポップする|取り出す|取り除く]
+@test($$;aList)
+aListの末尾から[要素|値]を[ポップする|取り出す|取り除く]
 '''
 
-alist.clear()
+aList.pop(n)
 '''
-@test($$;alist)
+@test($$;aList)
+aListn番目から[要素|値]を[ポップする|取り出す|取り除く]
+'''
+
+aList.clear()
+'''
+@test($$;aList)
 @alt(消去する|消す)
-alistの[全ての|全|][要素|値]を[クリアにする|取り除く|消去する|空にする]
+aListの[全ての|全|][要素|値]を[クリアにする|取り除く|消去する|空にする]
 '''
 
-alist.remove(element)
+aList.remove(element)
 '''
-@test($$;alist)
-alistからelement[|と等しい最初の要素]を取り除く
+@test($$;aList)
+aListからelement[|と等しい最初の要素]を取り除く
 '''
 
-del alist[n]
+del aList[n]
 '''
-@test($$;alist)
-alistのn番目[の[要素|値]|]を[削除する|消す]
+@test($$;aList)
+aListのn番目[の[要素|値]|]を[削除する|消す]
 '''
 
 element in __X__
@@ -343,9 +345,9 @@ sorted(__X__, reverse=True)
 '''
 
 
-alist.index(element) if element in alist else -1
+aList.index(element) if element in aList else -1
 '''
-{alistのelementの位置を|エラーなく}得る
+{aListのelementの位置を|エラーなく}得る
 '''
 
 
@@ -357,10 +359,10 @@ sorted(__X__, key=func)
 __Y__の[各|][要素|値]をfuncに適用した結果でソートする
 '''
 
-alist.copy()
+aList.copy()
 '''
 @alt(複製する|コピーする)
-alistを複製する
+aListを複製する
 '''
 
 reversed(__X__)

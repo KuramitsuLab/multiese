@@ -1,10 +1,14 @@
 # math
 
+from importlib import import_module
+
 import math
 '''
 @test($$;type(math))
 [math[|モジュール]|算術計算ライブラリ]を[インポートする|使う]
 '''
+
+math = import_module('math')
 
 x, x2 = 1.5, 3.1
 n, n2, n3 = 1, 3, 7
@@ -255,10 +259,15 @@ math.tanh(x)
 xの[双曲線正接|ハイパボリック・タンジェント][|を求める]
 '''
 
-math.dist(x, x2)
+
+point = (1, 2)
+point2 = (0, 1)
+
+math.dist(point, point2)
 '''
 @test(x=(1,0);x2=(0,1);$$)
-ベクトルxとx2のユークリッド距離[|を求める]
+@prefix(point;[点|ベクトル])
+pointとpoint2のユークリッド距離[|を求める]
 '''
 
 math.hypot(x, x2)

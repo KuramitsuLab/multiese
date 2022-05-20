@@ -1,8 +1,12 @@
 # 文字列
 
+from importlib import import_module
 import re
 import keyword
 import string
+
+string = import_module('string')
+keyword = import_module('keyword')
 
 s = 'ABC abc 123'  # 文字列 s, s2, s3
 s2 = 'a'
@@ -320,9 +324,9 @@ s.swapcase()
 sの大文字と小文字を[交換する|逆にする|入れ替える]
 '''
 
-s in alist
+s in aList
 '''
-sがalist内のいづれかどうか
+sがaList内のいづれかどうか
 '''
 
 
@@ -584,11 +588,11 @@ s.encode(errors='ignore')
 '''
 
 args = []
-text.format(*alist)
+text.format(*aList)
 '''
 @test(text='<{}>';$$)
 @alt(フォーマットする|文字列整形する)
-書式textを{alistを|引数として}フォーマットする
+書式textを{aListを|引数として}フォーマットする
 '''
 
 mapping = {}

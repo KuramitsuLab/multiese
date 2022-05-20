@@ -1,7 +1,5 @@
 # collections
-
-import itertools
-import typing
+from importlib import import_module
 
 import collections
 '''
@@ -10,6 +8,10 @@ import collections
 @alt(名前付きタプル|[構造体|簡易クラス])
 [コレクション|データ構造|両端キュー|カウンタ|名前付きタプル]を使う
 '''
+
+itertools = import_module('itertools')
+typing = import_module('typing')
+collections = import_module('collections')
 
 n = 1
 iterable = [1, 2]
@@ -42,32 +44,6 @@ collections.deque(iterable, maxlen=n)
 {最大長をnに[|制限]して|iterableから|両端キューを|[|新たに]}作る
 {最大長nの両端キューを|iterableから|[|新たに]}作る
 iterableのテイルフィルタを作る
-'''
-
-X = collections.deque()
-'''
-@test($$;X)
-{[空の|]両端キューを|新たに}作って、Xに代入する
-'''
-
-X = collections.deque(iterable)
-'''
-@test($$;X)
-{iterableから|両端キューを|新たに}作って、Xに代入する
-'''
-
-X = collections.deque(maxlen=n)
-'''
-@test($$;X)
-{最大長をnに[|制限]して|両端キューを|新たに}作って、Xに代入する
-{最大長nの両端キューを|新たに}作る
-'''
-
-X = collections.deque(iterable, maxlen=n)
-'''
-@test($$;X)
-{最大長をnに[|制限]して|iterableから|両端キューを|[|新たに]}作って、Xに代入する
-{最大長nの両端キューを|iterableから|[|新たに]}作って、Xに代入する
 '''
 
 deq.appendleft(element)
@@ -110,6 +86,8 @@ deq.insert(n, element)
 @alt(挿入する|[途中|]追加する)
 {deqのn番目に|elementを}挿入する
 '''
+
+deq = collections.deque([1, 2])
 
 deq.popleft()
 '''
@@ -183,6 +161,7 @@ len(deq) != 0
 @test(deq = collections.deque([1,2]);$$)
 deqが_空でないかどうか
 '''
+element = 1
 
 element in deq
 '''
@@ -209,11 +188,15 @@ deq[n]
 deqのn番目[|の要素][|を得る]
 '''
 
-collections.deque(itertools.islice(deq, n, n2))
+deq = collections.deque([1, 2, 1, 2, 1, 2])
+start = 1
+end = 3
+
+collections.deque(itertools.islice(deq, start, end))
 '''
 @test(deq = collections.deque([1,2,1,2,1,2]);$$)
-deqのn〜n2の[部分|]要素[|を得る]
-deqのn番目からn2[番目[|まで]]の[部分|]要素[|を得る]
+deqのstart〜endの[部分|]要素[|を得る]
+deqのstart番目からend[番目[|まで]]の[部分|]要素[|を得る]
 '''
 
 deq.index(element)
@@ -266,12 +249,12 @@ collections.Counter(iterable)
 {iterableから|[|新しい]多重集合を|新規に}作る
 '''
 
-adict = {'A': 4, 'B': 2}
-collections.Counter(adict)
+aDict = {'A': 0, 'B': 1}
+collections.Counter(aDict)
 '''
-@test(adict={'A':2, 'B':1};$$)
-@prefix(adict;[辞書|カウンタ|マッピング])
-{adictから|[|新しい]多重集合を|新規に}作る
+@test(aDict={'A':2, 'B':1};$$)
+@prefix(aDict;[辞書|カウンタ|マッピング])
+{aDictから|[|新しい]多重集合を|新規に}作る
 '''
 
 X = collections.Counter()
@@ -286,14 +269,15 @@ X = collections.Counter(iterable)
 {iterableから|[|新しい]多重集合を|新規に}作って、Xに代入する
 '''
 
-X = collections.Counter(adict)
+X = collections.Counter(aDict)
 '''
-@test(adict={'A':2, 'B':1};$$;X)
-{adictから|[|新しい]多重集合を|新規に}作って、Xに代入する
+@test(aDict={'A':2, 'B':1};$$;X)
+{aDictから|[|新しい]多重集合を|新規に}作って、Xに代入する
 '''
 
-aCounter = collections.Counter()
+aCounter = collections.Counter(A=2, B=1)
 aCounter2 = aCounter
+
 aCounter.elements()
 '''
 @test(aCounter=collections.Counter(A=2,B=1);list($$))
@@ -355,10 +339,10 @@ aCounter.update(iterable)
 {aCounterに|iterable[|のカウント[|の回数]]を}追加する
 '''
 
-aCounter.update(adict)
+aCounter.update(aDict)
 '''
-@test(aCounter=collections.Counter(A=2,B=1);adict={'A':2, 'B':1};$$)
-{cに|adictを}追加する
+@test(aCounter=collections.Counter(A=2,B=1);aDict={'A':2, 'B':1};$$)
+{cに|aDictを}追加する
 '''
 
 aCounter.subtract(iterable)
@@ -368,10 +352,10 @@ aCounter.subtract(iterable)
 {cから|iterable[|のカウント[|の回数]]を}引く
 '''
 
-aCounter.subtract(adict)
+aCounter.subtract(aDict)
 '''
-@test(aCounter=collections.Counter(A=2,B=1);adict={'A':2, 'B':1};$$)
-cからadictを引く
+@test(aCounter=collections.Counter(A=2,B=1);aDict={'A':2, 'B':1};$$)
+cからaDictを引く
 '''
 
 aCounter[element] += 1
@@ -444,12 +428,14 @@ collections.Counter(dict(pairs))
 ペアリストpairsからカウンタを[作る|構築する]
 '''
 
-+aCounter
++ aCounter
 '''
 @test(aCounter=collections.Counter(A=2,B=1);$$)
 aCounterから0[以下の|]カウントを取り除く
 aCounterの正の[数|カウント][のみ|だけ]残す
 '''
+
+aCounter2 = collections.Counter(A=1, B=1)
 
 aCounter & aCounter2
 '''
@@ -457,7 +443,7 @@ aCounter & aCounter2
 @alt(インターセクション|積集合|共通部分|[交わり|交差]|インターセクション)
 aCounterとaCounter2のインターセクション[|を求める|を得る]
 aCounterとaCounter2に共通する要素からなる多重集合[|を求める|を得る]
-aCounter ∩ aCounter2 
+aCounter ∩ aCounter2
 '''
 
 aCounter | aCounter2
@@ -465,20 +451,25 @@ aCounter | aCounter2
 @test(aCounter=collections.Counter(A=2,B=1);aCounter2=c;$$)
 @alt(ユニオン|和集合)
 aCounterとaCounter2のユニオン[|を求める|を得る]
-aCounter ∪ aCounter2 
+aCounter ∪ aCounter2
 '''
 
-collections.namedtuple(s, names)
+name = 'A'
+
+collections.namedtuple(name, names)
 '''
-sの名前を持ち、alist3のプロパティ[を持った|のある]名前付きタプルを[定義する|作る]
+nameの名前を持ち、namesのプロパティ[を持った|のある]名前付きタプルを[定義する|作る]
 '''
 
-collections.namedtuple(s, s2)
+name2 = 'B'
+
+collections.namedtuple(name, name2)
 '''
-sの名前を持ち、s2のプロパティ[を持った|のある]名前付きタプルを[定義する|作る]
+nameの名前を持ち、name2のプロパティ[を持った|のある]名前付きタプルを[定義する|作る]
 '''
 
 C = collections.namedtuple('P', 'x y z', defaults=[0])
+
 issubclass(C, tuple)
 '''
 @test(aCounter=collections.namedtuple('C', 'x y z w');$$)
@@ -494,6 +485,7 @@ iterableをクラスCのインスタンスに変換する
 '''
 
 obj = C(1, 2, 3)
+
 hasattr(obj, '_asdict') and hasattr(obj, '_fields')
 '''
 @test(aCounter=collections.namedtuple('C', 'x y');obj=C(1,2);$$)
@@ -512,23 +504,18 @@ collections.ChainMap()
 [空|ルート]のチェーンマップを作成する
 '''
 
-collections.ChainMap(adict)
+collections.ChainMap(aDict)
 '''
 @alt(チェーンマップ|[階層化された|ネストされた][マッピング|辞書])
 @alt(階層化する|ネスト化する)
-adictをチェーンマップに変換する
-adictを階層化する
+aDictをチェーンマップに変換する
+aDictを階層化する
 '''
 
-collections.ChainMap(adict, adict2)
+aDict2 = {'C': 3}
+
+collections.ChainMap(aDict, aDict2)
 '''
 @alt(チェーンする|階層的につなぐ|ネストする)
-adictとadict2をチェーンする
-'''
-
-if isinstance(obj, NamedTuple):
-    obj._fields
-'''
-@test(aCounter=collections.namedtuple('C', 'x y');obj=C(1,2);$$)
-[名前付きタプル|]objのフィールド名の一覧[|を得る]
+aDictとaDict2をチェーンする
 '''

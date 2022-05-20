@@ -21,8 +21,8 @@ __X__ = element
 print(__X__)
 '''
 @test(print=missing;$$)
-@X(s;n;alist;iterable;obj)
-@Y(s;n;alist;iterable;obj)
+@X(s;n;aList;iterable;obj)
+@Y(s;n;aList;iterable;obj)
 __Y__をプリントする
 '''
 
@@ -55,6 +55,8 @@ print('Hello World')
 {試しに|何か}動か[す|してみる]
 [最初の|初めての]プログラムを書く
 '''
+
+s = 'ABC'
 
 print(f'\033[__X__m{s}\033[0m')
 '''
@@ -112,12 +114,12 @@ os.getcwd()
 [[現在の|カレント|][作業|ワーキング]]ディレクトリ[|を得る]
 '''
 
-filename = '/etc/man.conf'
+filepath = '/etc/man.conf'
 
-os.chdir(os.dirname(filename))
+os.chdir(os.dirname(filepath))
 '''
 @test(os=missing;$$)
-{[[現在の|カレント|][作業|ワーキング]]ディレクトリを|filenameに}[変更する|[設定|]する]
+{[[現在の|カレント|][作業|ワーキング]]ディレクトリを|filepathに}[変更する|[設定|]する]
 '''
 
 text = "echo 'A'"
@@ -127,79 +129,79 @@ os.system(text)
 [UNIX|]コマンドtextを実行する
 '''
 
-filename = '/etc/man.conf'
+filepath = '/etc/man.conf'
 
-os.path.basename(filename)
+os.path.basename(filepath)
 '''
-@prefix(filename;ファイル[|パス];)
-filenameの[|拡張子付きの]ファイル名[|を得る]
-filenameから[|拡張子付きの]ファイル名を[得る|取り出す]
-'''
-
-os.path.splitext(os.path.basename(filename))[0]
-'''
-filenameの[拡張子なしの|ベース]ファイル名[を得る]
-filenameから[拡張子なしの|ベース]ファイル名を[得る|取り出す]
+@prefix(filepath;ファイル[|パス];)
+filepathの[|拡張子付きの]ファイル名[|を得る]
+filepathから[|拡張子付きの]ファイル名を[得る|取り出す]
 '''
 
-os.path.splitext(filename)[1].lstrip('.')
+os.path.splitext(os.path.basename(filepath))[0]
 '''
-filenameの拡張子[|を得る]
-'''
-
-os.path.splitext(filename)[0] + text
-'''
-filenameの拡張子をtextに変更する
+filepathの[拡張子なしの|ベース]ファイル名[を得る]
+filepathから[拡張子なしの|ベース]ファイル名を[得る|取り出す]
 '''
 
-os.path.dirname(filename)
+os.path.splitext(filepath)[1].lstrip('.')
+'''
+filepathの拡張子[|を得る]
+'''
+
+os.path.splitext(filepath)[0] + text
+'''
+filepathの拡張子をtextに変更する
+'''
+
+os.path.dirname(filepath)
 '''
 @alt(ディレクトリ|フォルダ)
-filenameのディレクトリ名[|を得る]
-filenameからディレクトリ名[を得る|取り出す]
+filepathのディレクトリ名[|を得る]
+filepathからディレクトリ名[を得る|取り出す]
 '''
 
-os.path.abspath(filename)
+os.path.abspath(filepath)
 '''
-filenameの絶対[|ファイル]パス[|を得る]
-filenameを絶対[|ファイル]パスに変換する
-'''
-
-os.path.split(filename)
-'''
-filenameをディレクトリ名とファイル名に分割する
+filepathの絶対[|ファイル]パス[|を得る]
+filepathを絶対[|ファイル]パスに変換する
 '''
 
-os.path.splitext(filename)
+os.path.split(filepath)
 '''
-filenameをベース名と拡張子に分割する
-'''
-
-os.path.join(text, text2)
-'''
-textとtext2をファイルパスとして結合する
+filepathをディレクトリ名とファイル名に分割する
 '''
 
-os.path.join(filename, text)
+os.path.splitext(filepath)
 '''
-filenameとtextを結合する
-'''
-
-os.path.exists(filename)
-'''
-filenameが[存在する|ある]かどうか
+filepathをベース名と拡張子に分割する
 '''
 
-not os.path.exists(filename)
+filepath = "../"
+filename = "file.txt"
+
+os.path.join(filepath, filename)
 '''
-filenameが[存在し|]ないかどうか
+filepathとfilenameを結合する
 '''
 
-os.path.get_size(filename)
+
+os.path.exists(filepath)
 '''
-filenameのファイルサイズ
+filepathが[存在する|ある]かどうか
 '''
 
+not os.path.exists(filepath)
+'''
+filepathが[存在し|]ないかどうか
+'''
+
+os.path.get_size(filepath)
+'''
+filepathのファイルサイズ
+'''
+
+__file__ = 'file.py'
 
 os.path.abspath(__file__)
 '''
@@ -211,45 +213,45 @@ os.path.dirname(os.path.abspath(__file__))
 スクリプトファイルのディレクトリ[名|パス][|を得る]
 '''
 
-os.path.join(os.path.dirname(os.path.abspath(__file__)), filename)
+os.path.join(os.path.dirname(os.path.abspath(__file__)), filepath)
 '''
-スクリプトファイルと同じディレクトリのfilenameのパス[|を得る]
+スクリプトファイルと同じディレクトリのfilepathのパス[|を得る]
 '''
 
 
-open(filename)
+open(filepath)
 '''
 @test(open=missing;$$)
 @alt(オープンする|開く]
 @alt(オープンして|開[いて|き]]
 @alt(からの|から|の)
-filenameをオープンする
-filenameからの[入力|読み込み|]ストリームを得る
+filepathをオープンする
+filepathからの[入力|読み込み|]ストリームを得る
 '''
 
-file = open(filename)
+file = open(filepath)
 '''
 @test(open=missing;$$;file)
-filenameからストリームを読み込[み|んで]、fileとする
-filenameからストリームをオープンして、fileとする
+filepathからストリームを読み込[み|んで]、fileとする
+filepathからストリームをオープンして、fileとする
 '''
 
 __X__ = 'a'
-open(filename, mode=__X__)
+open(filepath, mode=__X__)
 '''
 @test(open=missing;$$)
 @X('r'|'rb'|'w'|'wb'|'a')
 @Y(読み込み|バイナリ|書き込み|バイナリ書き込み|追加)
-{filenameを|__Y__[モードで_|用に]}オープンする
-{filenameを|__Y__できるように}オープンする
-filenameをオープンして、__Y__ストリームを得る
+{filepathを|__Y__[モードで_|用に]}オープンする
+{filepathを|__Y__できるように}オープンする
+filepathをオープンして、__Y__ストリームを得る
 '''
 
-f = open(filename, mode=__X__)
+f = open(filepath, mode=__X__)
 '''
 @test(open=missing;$$)
-{filenameを|__Y__[モードで_|用に]}オープンして、fとする
-filenameから__Y__ストリームをオープンして、fとする
+{filepathを|__Y__[モードで_|用に]}オープンして、fとする
+filepathから__Y__ストリームをオープンして、fとする
 '''
 
 mode = __X__
@@ -261,25 +263,25 @@ mode = __X__
 
 
 __X__ = 'utf-8'
-open(filename, encoding=__X__)
+open(filepath, encoding=__X__)
 '''
 @test(open=missing;$$)
 @alt(エンコーディング|文字コード)
 @X('utf-8'|'shift_jis'|'euc_jp'|'utf_8_sig'|text|s)
 @Y(UTF8|SJIS|EUC|BOM付き|文字コードtext|sの示すエンコーディング)
-{filenameを|__Y__で_}オープンする
+{filepathを|__Y__で_}オープンする
 '''
 
-open(filename, mode='w', encoding=__X__)
+open(filepath, mode='w', encoding=__X__)
 '''
 @test(open=missing;$$)
-{filenameを|__Y__で_|書き込み[用|できるよう]に}オープンする
+{filepathを|__Y__で_|書き込み[用|できるよう]に}オープンする
 '''
 
-open(filename, mode='a', encoding=__X__)
+open(filepath, mode='a', encoding=__X__)
 '''
 @test(open=missing;$$)
-{[既存の|]filenameを|__Y__で_|追加できるように}オープンする
+{[既存の|]filepathを|__Y__で_|追加できるように}オープンする
 '''
 
 encoding = __X__
@@ -294,6 +296,7 @@ buffering = 0
 @test($$;buffering)
 オプションで、バッファリングを無効にする
 '''
+n = 4096
 
 buffering = n
 '''
@@ -320,8 +323,6 @@ newline = __X__
 オプションで、改行コードを__Y__に設定する
 '''
 
-
-f = sys.stdin
 f.close()
 '''
 @test(f=missing;$$)

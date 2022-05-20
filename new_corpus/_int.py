@@ -397,8 +397,8 @@ __Y__の各桁の総和[|を求める]
 '''
 
 
-[i for i in range(1, int(n**0.5)+1) if n % i == 0] + [n//i for i in range(1,
-                                                                          int(n**0.5)+1) if n % i == 0 and i != n // i].reverse()
+[i for i in range(1, int(n**0.5)+1)
+    if n % i == 0] + [n//i for i in range(1, int(n**0.5)+1) if n % i == 0 and i != n // i].reverse()
 '''
 nの約数を列挙する
 '''

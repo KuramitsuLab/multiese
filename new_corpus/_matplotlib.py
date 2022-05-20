@@ -1,5 +1,4 @@
 import matplotlib
-from re import X
 import matplotlib.pyplot as plt
 '''
 @test($$;plt.__name__)
@@ -55,6 +54,8 @@ sns.set(pallete=__X__)
 {__X__カラーパレットを|グラフ[|全般]に}使う
 '''
 
+s = 'pastel'
+
 sns.set(pallete=s)
 '''
 @test(sns=missing;$$)
@@ -62,12 +63,12 @@ sns.set(pallete=s)
 グラフ[の|で使う]カラーパレットをsに設定する
 '''
 
-s = 'Yu Gothic'
-sns.set(font=s)
+fontName = 'Yu Gothic'
+sns.set(font=fontName)
 '''
 @test(sns=missing;$$)
-グラフで使うフォントをsに指定する
-グラフの中のフォントをsに設定する
+グラフで使うフォントをfontNameに指定する
+グラフの中のフォントをfontNameに設定する
 '''
 
 sns.set(font='IPAexGothic')
@@ -523,7 +524,7 @@ plt.axhline(y=0, linestyle=__X__)
 
 # https: // yyousuke.github.io/matplotlib/matplotlib.html
 
-plt.scatter(xdata, ydata, c=alist, cmap='Blues')
+plt.scatter(xdata, ydata, c=aList, cmap='Blues')
 '''
 alistに応じて、散布図の色を変える
 xdataとydata[について|]alist[の値|]に応じて、散布図の色を変える

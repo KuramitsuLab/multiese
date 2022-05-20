@@ -4,17 +4,27 @@ import typing
 import fractions
 '''
 @test($$;type(fractions))
+@prefix(q;有理数)
 @alt(有理数|分数)
-[有理数|分数]を使う
+有理数を使う
 '''
 
-fractions.Fraction(numerator=0, denominator=1)
-fractions.Fraction(other_fraction)
-fractions.Fraction(float)
-fractions.Fraction(decimal)
-fractions.Fraction(string)
+n = 1
+m = 1
+
+fractions.Fraction(numerator=n, denominator=m)
+'''
+分子n、分母mの有理数を作る
+n割るmの有理数表現
+'''
 
 q = fractions.Fraction(1, 2)
+
+# fractions.Fraction(q)
+# fractions.Fraction(float)
+# fractions.Fraction(decimal)
+# fractions.Fraction(string)
+
 
 q.numerator
 '''

@@ -255,4 +255,4 @@ def main(max_iter=5):
 
 
 if __name__ == '__main__':
-    main(6)
+    main(1)

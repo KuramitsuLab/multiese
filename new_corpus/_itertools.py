@@ -1,4 +1,5 @@
 # itertools
+from importlib import import_module
 
 import itertools
 '''
@@ -7,15 +8,21 @@ itertoolsモジュールをインポートする
 '''
 
 # 設定
-import operator
+operator = import_module('operator')
+itertools = import_module('itertools')
 element = 10  # [文字列]
 n = 2
 step = -1
 iterable = [0, 1, 2, 4]
 iterable2 = [7, 8, 9]
 selectors = [1, 0, 1, 0]
-def predicatefunc(x): return True
 
+
+def predicatefunc(x):
+    return True
+
+
+predicateFunc = predicatefunc
 
 itertools.repeat(n)
 '''
@@ -55,11 +62,12 @@ itertools.count(start=n)
 {nから|無限に}カウントアップする
 '''
 
-itertools.count(start=n, step=n2)
+step = 2
+itertools.count(start=n, step=step)
 '''
 @alt(バージョン|版)
 @test(type(_))
-{nからn間隔で|無限に}カウントアップする
+{nからstep間隔で|無限に}カウントアップする
 range[|関数]の無限バージョン
 '''
 
@@ -103,20 +111,20 @@ itertools.compress(iterable, selectors=iterable2)
 selectorsでマスクされたiterableの要素を取り出す
 '''
 
-itertools.takewhile(predicatefunc, iterable)
+itertools.takewhile(predicateFunc, iterable)
 '''
 @test(list(_))
 @alt(真|[T|t]rue)
 @alt(偽|[F|f]alse)
-iterableの各要素に対して、predicatefunc[|の適用]が真であれば、その要素を出力する
-predicatefuncが真[と|に]なるiterableの[要素|部分][|を得る|を取り出す]
+iterableの各要素に対して、predicateFunc[|の適用]が真であれば、その要素を出力する
+predicateFuncが真[と|に]なるiterableの[要素|部分][|を得る|を取り出す]
 '''
 
-itertools.dropwhile(predicatefunc, iterable)
+itertools.dropwhile(predicateFunc, iterable)
 '''
 @test(list(_))
-predicatefunc[が|を適用したとき]真とならないiterableの[要素|部分][|を得る|を取り出す]
-predicatefunc[が|を適用したとき]真[と|に]なるiterableの[要素|部分][|を取り除く|を消す|を除去する]
+predicateFunc[が|を適用したとき]真とならないiterableの[要素|部分][|を得る|を取り出す]
+predicateFunc[が|を適用したとき]真[と|に]なるiterableの[要素|部分][|を取り除く|を消す|を除去する]
 '''
 
 itertools.zip_longest(iterable, iterable2)

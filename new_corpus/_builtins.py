@@ -1,13 +1,23 @@
 # 設定
-import operator
+from importlib import import_module
+
+
+operator = import_module('operator')
+
 element = 10
 a, b, c = 1, 2, 3
 n = 2
+n2 = 3
+n3 = -1
 start = 1
 step = 10
 iterable = [0, 1, 2, 4]
 iterable2 = [7, 8, 9]
 selectors = [1, 0, 1, 0]
+x = 1.0
+x2 = 1.0
+
+
 def predicate(a): return a > 0
 
 ##

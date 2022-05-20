@@ -1,6 +1,12 @@
-import copy
-adict = {'A': 1}
+from importlib import import_module
+
+
+copy = import_module('copy')
+
+aDict = {'A': 1}
+aDict2 = {'B': 0}
 key = 'A'
+key2 = 'B'
 element = 1
 
 {}
@@ -13,157 +19,163 @@ dict(name=element)
 変数名をキーとして、辞書[|を作る]
 '''
 
-adict[key]
+aDict[key]
 '''
 @alt(得る|参照する|見る)
-adictのkeyの値[|を得る]
+aDictのkeyの値[|を得る]
 '''
 
-list(adict)
+list(aDict)
 '''
 @alt(キー|項目名)
-adictのキー一覧[|を得る]
+aDictのキー一覧[|を得る]
 '''
 
-len(adict)
+len(aDict)
 '''
 @alt(エントリ|項目)
-adictのエントリ数[|を得る]
+aDictのエントリ数[|を得る]
 '''
 
-adict.clear()
+aDict.clear()
 '''
 @alt(クリアする|消去する|空にする)
-adictの全[エントリ]をクリアする
+aDictの全[エントリ]をクリアする
 '''
 
-adict.copy()
+aDict.copy()
 '''
-adictを[|浅く]コピーする
-adictの[浅い|]コピーを行う
-'''
-
-adict.get(key)
-'''
-adictからkeyの値[|を得る]
-adictのkeyに対応した値[|を得る]
+aDictを[|浅く]コピーする
+aDictの[浅い|]コピーを行う
 '''
 
-adict.get(key, None)
+aDict.get(key)
 '''
-{adictからkeyの値を|エラーなく}得る
-'''
-
-adict.get(key, element)
-'''
-adictからkeyの値か、もしくはelementを得る
+aDictからkeyの値[|を得る]
+aDictのkeyに対応した値[|を得る]
 '''
 
-key in adict
+aDict.get(key, None)
+'''
+{aDictからkeyの値を|エラーなく}得る
+'''
+
+aDict.get(key, element)
+'''
+aDictからkeyの値か、もしくはelementを得る
+'''
+
+key in aDict
 '''
 @alt(存在する|ある|存在している)
 @alt(定義済み|[|既に]定義されている)
-{keyが|adictに}存在するかどうか
-{keyが|adict上で}定義済みかどうか
+{keyが|aDictに}存在するかどうか
+{keyが|aDict上で}定義済みかどうか
 '''
 
-key not in adict
+key not in aDict
 '''
 @alt(存在しない|ない|存在していない)
 @alt(未定義|[まだ|]定義されていない)
-{keyが|adictに}存在するかどうか
-{keyが|adict上で}未定義かどうか
+{keyが|aDictに}存在するかどうか
+{keyが|aDict上で}未定義かどうか
 '''
 
-adict.items()
+aDict.items()
 '''
 @alt(の一覧|一覧)
-adictの[エントリ|キーとその値]の一覧
+aDictの[エントリ|キーとその値]の一覧
 '''
 
-adict.keys()
+aDict.keys()
 '''
-adictのキーの一覧
-'''
-
-adict.values()
-'''
-adictの[値]の一覧
+aDictのキーの一覧
 '''
 
-element in adict.values()
+aDict.values()
 '''
-{elementが|adictの値に}含まれているかどうか
-'''
-
-element not in adict.values()
-'''
-{elementが|adictの値に}含まれていないかどうか
+aDictの[値]の一覧
 '''
 
-adict[key] = element
+element in aDict.values()
 '''
-@test($$;adict)
-adictのkeyをelementに[設定|変更|]する
-adictにelementをkeyとして加える
+{elementが|aDictの値に}含まれているかどうか
 '''
 
-adict.setdefault(key, element)
+element not in aDict.values()
+'''
+{elementが|aDictの値に}含まれていないかどうか
+'''
+
+aDict[key] = element
+'''
+@test($$;aDict)
+aDictのkeyをelementに[設定|変更|]する
+aDictにelementをkeyとして加える
+'''
+
+aDict.setdefault(key, element)
 '''
 @alt(とき|時|場合)
-{keyが|adictに}存在しないとき、elementを追加する
+{keyが|aDictに}存在しないとき、elementを追加する
 '''
 
-adict.update(adict2)
+
+aDict.update(aDict2)
 '''
-@test($$;adict)
+@test($$;aDict)
 alt(追加更新する|追加する|加えて、更新する)
-adictにadict2のエントリを追加更新する
+aDictにaDict2のエントリを追加更新する
 '''
 
-adict.update(**kwargs)
+kwargs = dict(A=1, B=2)
+
+aDict.update(**kwargs)
 '''
-@test(kwargs={'B':2};$$;adict)
-adictにキーワード引数kwargsを追加更新する
+@test(kwargs={'B':2};$$;aDict)
+aDictにキーワード引数kwargsを追加更新する
 '''
 
-adict | adict2
+aDict | aDict2
 '''
 @alt(合体する|結合する|マージする)
 ふたつの辞書を合体する
-adictとadict2を合体する
+aDictとaDict2を合体する
 '''
 
-adict.pop(key)
+aDict.pop(key)
 '''
-adictからkeyを取り除く
-'''
-
-adict.popitem()
-'''
-adictから最後に追加したエントリを取り出す
+aDictからkeyを取り除く
 '''
 
-
-{v: k for k, v in adict.items()}
+aDict.popitem()
 '''
-adictのキーと値を入れ替える
-'''
-
-dict(zip(alist, alist2))
-'''
-alistとalist2から辞書[|を作成する]
+aDictから最後に追加したエントリを取り出す
 '''
 
-dict(adict)
+
+{v: k for k, v in aDict.items()}
+'''
+aDictのキーと値を入れ替える
+'''
+
+aList = [1, 2, 3]
+aList2 = [4, 5, 6]
+
+dict(zip(aList, aList2))
+'''
+aListとaList2から辞書[|を作成する]
+'''
+
+dict(aDict)
 '''
 @alt(コピーする|複製する)
-adictを[浅く|]コピーする
-adictのコピー[を[得る|作る]]
+aDictを[浅く|]コピーする
+aDictのコピー[を[得る|作る]]
 '''
 
-{k: copy.copy(v) for k, v in adict.items()}
+{k: copy.copy(v) for k, v in aDict.items()}
 '''
 @test(import copy;$$)
-adictを値を含めてコピーする
+aDictを値を含めてコピーする
 '''

@@ -14,8 +14,8 @@ objがobj2かどうか
 obj is obj2
 '''
 @alt(同一|同じ)
-objがobj2と同一[オブジェクト |]かどうか
-objとobj2は同一[オブジェクト |]かどうか
+objがobj2と同一[オブジェクト|]かどうか
+objとobj2は同一[オブジェクト|]かどうか
 '''
 
 repr(obj)
@@ -115,6 +115,8 @@ objにsという[名前の|]プロパティが存在するかどうか
 objがsという[名前の|]プロパティを持つかどうか
 '''
 
+element = 'A'
+
 setattr(obj, text, element)
 '''
 objのtextプロパティ[の値|]をelementに設定する
@@ -147,6 +149,8 @@ isinstance(obj, __X__)
 @Y(数値|リストかタプル)
 obj[は|が]__Y__かどうか
 '''
+
+TYPE2 = object
 
 issubclass(TYPE, TYPE2)
 '''

@@ -102,7 +102,9 @@ x.hex()
 xを十六進文字列に変換する
 '''
 
-float.fromhex(s)
+hexString = 'deadbeaf'
+
+float.fromhex(hexString)
 '''
-sのHEXから浮動小数点数に変換する
+hexStringのHEXから浮動小数点数に変換する
 '''
