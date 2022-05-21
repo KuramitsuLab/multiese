@@ -18,7 +18,7 @@ year = 2022
 month = 12
 day = 24
 hour = 23
-minite = 59
+minute = 59
 second = 59
 
 datetime.datetime.now()
@@ -57,24 +57,24 @@ year年month月day日を日時に変換する
 
 datetime.datetime(year=year, month=month, day=day, hour=hour)
 '''
-@test(n,month,day,hour,minite,second=2022,12,24,0,0,0;$$)
+@test(n,month,day,hour,minute,second=2022,12,24,0,0,0;$$)
 year年month月day日hour時の日時[|をオブジェクト化する]
 year年month月day日hour時を日時に変換する
 '''
 
-datetime.datetime(year=year, month=month, day=day, hour=hour, minite=minite)
+datetime.datetime(year=year, month=month, day=day, hour=hour, minute=minute)
 '''
-@test(n,month,day,hour,minite,second=2022,12,24,0,0,0;$$)
-year年month月day日hour時minite分の日時[|をオブジェクト化する]
-year年month月day日hour時minite分を日時に変換する
+@test(n,month,day,hour,minute,second=2022,12,24,0,0,0;$$)
+year年month月day日hour時minute分の日時[|をオブジェクト化する]
+year年month月day日hour時minute分を日時に変換する
 '''
 
 datetime.datetime(year=year, month=month, day=day,
-                  hour=hour, minite=minite, second=second)
+                  hour=hour, minute=minute, second=second)
 '''
-@test(n,month,day,hour,minite,second=2022,12,24,0,0,0;$$)
-year年month月day日hour時minite分second秒の日時[|をオブジェクト化する]
-year年month月day日hour時minite分second秒を日時に変換する
+@test(n,month,day,hour,minute,second=2022,12,24,0,0,0;$$)
+year年month月day日hour時minute分second秒の日時[|をオブジェクト化する]
+year年month月day日hour時minute分second秒を日時に変換する
 '''
 
 timestamp = 0
@@ -97,6 +97,7 @@ dateString[を|から]ISO書式で_日時に変換する
 
 dateString = '21/11/06 16:30'
 format = '%d/%m/%y %H:%M'
+
 datetime.datetime.strptime(dateString, format)
 '''
 @test(s='21/11/06 16:30';s2='%d/%m/%y %H:%M';$$)
@@ -178,12 +179,6 @@ datetime.date.today() - datetime.timedelta(days=1)
 昨日の日付[|を得る]
 '''
 
-datetime.date.strptime(dateString, format)
-'''
-@test(s='21/11/06 16:30';s2='%d/%m/%y %H:%M';$$)
-dateStringからformatのパターンで_日付に変換する
-'''
-
 __X__, __X__2 = aDatetime, aDatetime
 
 __X__.year
@@ -260,7 +255,7 @@ __X__.isoformat()
 __Y__をISO[|8601][形式|書式]の文字列に変換する
 '''
 
-__X__.strftime()
+__X__.strftime("%d/%m/%y")
 '''
 @test(s="%A, %d. %B %Y %I:%M%p";$$)
 {__Y__を|sでフォーマットして}文字列に変換する
@@ -276,7 +271,7 @@ __Y__の時間数[|を得る]
 __Y__が_何時か知る
 '''
 
-__X__.minite
+__X__.minute
 '''
 @alt(分数|分)
 __Y__の分数[|を得る]
@@ -302,6 +297,9 @@ int(time.time())
 現在のタイムスタンプ
 '''
 
+aDatetime = datetime.datetime(2022, 1, 1, 12, 30)
+aDate = datetime.date(2022, 7, 4)
+
 n = 1
 
 __X__ + datetime.timedelta(weeks=n)
@@ -320,30 +318,6 @@ __X__ - datetime.timedelta(weeks=n)
 @alt(減算する|[減らす|引く])
 __Y__をn週間前に戻す
 __Y__からn週間[分、|を]減算する
-'''
-
-__X__ + datetime.timedelta(years=n)
-'''
-__Y__ををn年後に進める
-__Y__にn年[分、|を]加算する
-'''
-
-__X__ - datetime.timedelta(years=n)
-'''
-__Y__をn年前に戻す
-__Y__からn年[分、|を]減算する
-'''
-
-__X__ + datetime.timedelta(months=n)
-'''
-__Y__ををn[|ヶ]月後に進める
-__Y__にn[|ヶ]月[分、|を]加算する
-'''
-
-__X__ - datetime.timedelta(months=n)
-'''
-__Y__をn[|ヶ]月前に戻す
-__Y__からn[|ヶ]月[分、|を]減算する
 '''
 
 __X__ + datetime.timedelta(days=n)
@@ -426,104 +400,3 @@ __Y__と__Y__2の時間差が_何秒か知る
 __Y__と__Y__2の時間差を秒数で求める
 __Y__と__Y__2の時間差が_何分か知る
 '''
-
-
-"""
-logging.basicConfig(level=logging.DEBUG,
-                    format="%(asctime)s %(levelname)7s %(message)s")
-オススメのログ出力を設定する
-
-logging.basicConfig(filename="debug.log")
-ログファイルの[出力 | 保存]先を"debug.log"に設定する
-ログファイルの[出力 | 保存]先を設定する
-
-logger = logging.getLogger(__name__)
-ロッガーを初期化する
-ロッガーを初期化して、loggerとする
-
-ログ出力する = ログ出力する | 出力する | ダンプする | ロギングする
-
-logger.debug("message")
-デバッグ[メッセージ |]"message"をログ出力する
-
-logger.info("message")
-通知[メッセージ |]"message"をログ出力する
-
-logger.warning("message")
-警告[メッセージ |]"message"をログ出力する
-
-logger.error("message")
-エラー[メッセージ |]"message"をログ出力する
-
-except Exception as e:
-    logging.exception('message')
-[例外 | エラー]のスタックトレースを[ダンプする | 表示する | ログ出力する]
-
-if __name__ == '__main__':
-main関数を書きたい
-
-
-list(itertools.product(iterable, iterable2))
-'''
-iterableとiterable2の全組み合わせ
-'''
-
-for x, y in itertools.product(iterable, iterable2):
-    pass
-'''
-iterableとiterable2の全組み合わせを繰り返す
-AとBの二重ループを単ループにする
-'''
-
-for x, y in itertools.product(A, B, C):
-シーケンスA, B, Cの全組み合わせを繰り返す
-A, B, Cの三重ループを単ループにする
-
-for X in itertools.chain(A, B):
-'''
-イテレータAとBを[連続して]繰り返す
-B(イテレータ)をA(イテレータ)に続けて繰り返す
-'''
-
-list(itertools.chain.from_iterable(a))
-'''
-a(リスト)を[flattenする | 平らにする | 1次元にする]
-'''
-
-
-vars()
-ローカル変数の環境
-
-
-"".join([random.choice('abcdefghijklmnopqrstuvwxyz') for x in range(10)])
-ランダムに長さ10の文字列を生成する
-ランダムに/文字列を生成する
-
-シリアライズする = シリアライズする | 保存する
-デシリアライズする = デシリアライズする | 読み込む | ロードする
-
-with open("pickle.dump", "w") as f:
-    pickle.dump(x, f)
-オブジェクト(x)を"pickle.dump"(ファイル名)にシリアライズする
-
-with open("pickle.dump", "w") as f:
-    x = pickle.load(f)
-オブジェクト(x)を"pickle.dump"(ファイル名)からデシリアライズする
-
-with open("file") as f:
-    data = f.read()
-"file"(ファイル名)から[全 | ][テキスト|データ]を読み込む
-"file"(ファイル名)から[全 |][テキスト|データ]を読んでdataとする
-
-with open("file") as f:
-    data = [line.strip() for line in f.readlines()]
-"file"(ファイル名)から行単位でテキストを読み込む
-"""
-
-"""
-os.stat(filename).st_mtime
-filenameの[更新された|]タイムスタンプ
-
-datetime.datetime.fromtimestamp(os.stat('file').st_mtime)
-'file'(ファイル名)の更新された日付
-"""

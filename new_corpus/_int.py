@@ -1,7 +1,7 @@
 # 整数
 
-n = 1
-n2 = 3
+n = 2
+n2 = 4
 n3 = -1
 s = '1101'
 
@@ -33,29 +33,32 @@ int(s, 16)
 十六進[|数]sを整数に変換する
 '''
 
-int(s, n2).to_bytes(length=n2, byteorder='big')
+n = 2
+bytesize = 256
+
+int(s, n).to_bytes(length=bytesize, byteorder='big')
 '''
 @alt(バイト列|バイナリ)
 @text(s='1101';n=2;$$)
-n進[|数[|の]]sを[|n2バイトの]バイト列に変換する
+n進[|数[|の]]sを[|bytesizeバイトの]バイト列に変換する
 '''
 
-int(s, 2).to_bytes(length=2, byteorder='big')
+int(s, 2).to_bytes(length=bytesize, byteorder='big')
 '''
 @text(s='1101';$$)
-二進[|数[|の]]sを[|n2バイトの]バイト列に変換する
+二進[|数[|の]]sを[|bytesizeバイトの]バイト列に変換する
 '''
 
-int(s, 8).to_bytes(length=n2, byteorder='big')
+int(s, 8).to_bytes(length=bytesize, byteorder='big')
 '''
 @text(s='1101';$$)
-八進[|数[|の]]sを[|n2バイトの]バイト列に変換する
+八進[|数[|の]]sを[|bytesizeバイトの]バイト列に変換する
 '''
 
-int(s, 16).to_bytes(length=n, byteorder='big')
+int(s, 16).to_bytes(length=bytesize, byteorder='big')
 '''
 @text(s='1101';$$)
-十六進[|数[|の]]sを[|nバイトの]バイト列に変換する
+十六進[|数[|の]]sを[|bytesizeバイトの]バイト列に変換する
 '''
 
 __X__ = bin
@@ -94,12 +97,12 @@ n.to_bytes((n.bit_length() + 7) // 8, byteorder='big', signed=True)
 {[整数|]nを|符号付きで}バイト列に変換する
 '''
 
-n.to_bytes(length=n2, byteorder='big')
+n.to_bytes(length=bytesize, byteorder='big')
 '''
 {[整数|]nを|[|符号なしで]}バイト列に変換する
 '''
 
-n.to_bytes(length=n2, byteorder='big', signed=True)
+n.to_bytes(length=bytesize, byteorder='big', signed=True)
 '''
 {[整数|]nを|符号付きで}長さn2のバイト列に変換する
 '''
@@ -255,8 +258,8 @@ nをn2で割った余りをnに代入する
 n == n2
 '''
 nとn2が[等しい|同じ値]かどうか
-nが_n2と等しいかどうか
-nが_n2かどうか
+n[が|は]n2と等しいかどうか
+n[が|は]n2かどうか
 '''
 
 n > n2
@@ -356,14 +359,15 @@ nが-9以上、9以下かどうか
 
 0 <= n <= 9
 '''
-nが一桁の正の[数|整数]かどうか
+nが一桁の[数|整数]かどうか
 '''
 
+__X__ = [0, 1, 2]
 n in __X__
 '''
-@X(alist;aset;atuple)
-@Y(alist;aset;atuple)
-[整数|]nが_ __Y__の[どれか|いづれか|一つ[|である]]かどうか
+@X(aList;aSet;aTuple;aArray)
+@Y(aList;aSet;aTuple;aArray)
+[整数|]n[が|は] __Y__の[どれか|いづれか|一つ[|である]]かどうか
 '''
 
 n == 1 or n == 2
@@ -376,29 +380,15 @@ n == 1 or n == 2 or n == 3
 nが1、もしくは2、もしくは3に等しいかどうか
 '''
 
-__X__ = n
-len(str(__X__))
+len(str(n))
 '''
-@X(n;int(n))
-@Y(n;整数n)
-__Y__[の桁数|が_何桁か][|を求める]
+nの桁数[|を求める]
+n[が|は]何桁か
 '''
 
-sum(map(int, str(__X__)))
+n = 123
+sum(map(int, str(n)))
 '''
 @alt(総和|和)
-__Y__の各桁の総和[|を求める]
-'''
-
-sum(map(int, str(__X__)))
-'''
-@alt(総和|和)
-__Y__の各桁の総和[|を求める]
-'''
-
-
-[i for i in range(1, int(n**0.5)+1)
-    if n % i == 0] + [n//i for i in range(1, int(n**0.5)+1) if n % i == 0 and i != n // i].reverse()
-'''
-nの約数を列挙する
+nの各桁の総和[|を求める]
 '''

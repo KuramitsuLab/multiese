@@ -26,8 +26,12 @@ import pandas as pd
 データ列をインポートする
 '''
 
+df = pd.DataFrame(data={'A': [1, 2, 3], 'B': [2, 1, 0]})
+ds = df['A']
+col = 'A'
 
-__X__ = df
+
+__X__ = ds2 = pd.Series([1, 2, 3, 4])
 
 # ds の操作
 
@@ -35,20 +39,25 @@ __X__.value_counts()
 '''
 @X(ds;df[col])
 @Y(ds;dfのcol)
-@test(df=ds=missing;alist=['A','B'];$$)
 __Y__の各[データ|]値の出現[|回]数[|を求める]
-__Y__の各[データ|値]が_何回出現するか見る
+__Y__の各[データ|値][が|は]何回出現するか見る
+'''
+
+__X__.freq()
+'''
+@test(df=ds=missing;aList=['A','B'];$$)
+__Y__の最頻値の出現回数[|を求める]
 '''
 
 __X__.unique()
 '''
-@test(df=ds=missing;alist=['A','B'];$$)
+@test(df=ds=missing;aList=['A','B'];$$)
 __Y__の[ユニーク|一意]な[値|要素][|を見る]
 '''
 
 __X__.nunique()
 '''
-@test(df=ds=missing;alist=['A','B'];$$)
+@test(df=ds=missing;aList=['A','B'];$$)
 __Y__の[ユニーク|一意]な[値の個数|要素数][|を見る]
 '''
 
@@ -65,11 +74,6 @@ __X__.str.len()
 __Y__の文字列長を列として得る
 '''
 
-__X__.map({s: 1, s2: 0})
-'''
-__Y__を[0と1|1と0]に[マップする|変換する]
-'''
-
 __X__.unique().tolist()
 '''
 __Y__からユニークな[要素|値]を抽出し、リスト化する
@@ -80,19 +84,25 @@ set(ds.unique().tolist()+ds2.unique().tolist())
 dsとds2から重複を取り除く
 '''
 
-df[col] = df[col2].astype(ty)
+ty = int
+
+df[col] = df[col].astype(ty)
 '''
 @alt(に代入する|[と|に]する)
-dfのcol2をtyに変換し、[|新たに|dfの]colに代入する
+dfのcolをtyに変換する
 '''
 
 # ビン
 
+n = 2
+names = ['A', 'B']
+aList = [0, 4, 6]
+__X__ = [1, 2, 3, 4, 5, 6, 7, 8]
+
 pd.cut(__X__, n)
 '''
-@test(pd=df=ds=missing;$$)
-@X(ds;df[col];alist;array)
-@Y(ds;dfの中のcol;alist;array)
+@X(ds;df[col];aList;aArray)
+@Y(ds;dfの中のcol;aList;aArray)
 @alt(ビン分割する|分割する|ビ[|ン]ニングする)
 @alt(ビン数|分割数)
 @alt(等間隔で|)
@@ -100,16 +110,8 @@ pd.cut(__X__, n)
 {__Y__を|等間隔で|n個に|}ビン分割する
 '''
 
-pd.cut(__X__, alist)
-'''
-@test(pd=df=ds=missing;$$)
-__Y__をビン分割する
-{__Y__を|alistを境界値として}ビン分割する
-'''
-
 pd.cut(__X__, n, labels=names)
 '''
-@test(pd=df=ds=missing;$$)
 {__Y__を|ビン数nで_}ビン分割して、namesのラベルをつける
 {__Y__を|n個に|[|等間隔で]}ビン分割して、namesのラベルをつける
 '''
@@ -120,6 +122,12 @@ pd.qcut(__X__, n)
 @alt(等量で|等しい量になるように)
 {__Y__を|等量で|ビン数nで_}ビン分割する
 {__Y__を|等量で|n個に|}ビン分割する
+'''
+
+pd.cut(__X__, aList)
+'''
+__Y__をビン分割する
+{__Y__を|aListを境界値として}ビン分割する
 '''
 
 pd.qcut(__X__, 2)

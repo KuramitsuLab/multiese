@@ -32,7 +32,7 @@ jsonlfile = 'file.json'
 
 col, col2, col3 = 'A', 'B', 'C'
 df = pd.DataFrame(data=[[1, 2, 3], [4, 5, 6]], columns=['A', 'B', 'C'])
-df2 = df
+df2 = pd.DataFrame(data={'A': [1, 2], 'B': [2, 1]})
 ds, ds2 = df[col], df[col2]
 
 # 確認系
@@ -119,12 +119,12 @@ df[[col, col2, col3]]
 df[の|から]col、col2、col3[を|のみ|だけ]抽出する
 '''
 
-alist = ['A', 'B']
-df[alist]
+aList = ['A', 'B']
+df[aList]
 '''
-@test(alist=['A','B'];$$)
+@test(aList=['A','B'];$$)
 @alt(指定された|与えられた)
-df[の|から]alistで指定されたカラム[を|のみ|だけ]抽出する
+df[の|から]aListで指定されたカラム[を|のみ|だけ]抽出する
 '''
 
 df.loc[n]
@@ -174,16 +174,17 @@ df.dtypes
 dfのデータ型の一覧[|を得る]
 '''
 
-df.select_dtypes(include=alist)
+typeList = [int]
+
+df.select_dtypes(include=typeList)
 '''
-@test(alist=['object'];$$)
-dfからalist[で指定された|の]データ型のカラム[を|のみ|だけ]抽出する
+@prefix(typeList;[型リスト|])
+dfからtypeList[で指定された|の]データ型のカラム[を|のみ|だけ]抽出する
 '''
 
-df.select_dtypes(exclude=alist)
+df.select_dtypes(exclude=typeList)
 '''
-@test(alist=['object'];$$)
-dfからalist[で指定された|の]データ型のカラム[を|のみ|だけ]除外する
+dfからtypeList[で指定された|の]データ型のカラム[を|のみ|だけ]除外する
 '''
 
 __X__ = 'object'
@@ -208,44 +209,36 @@ dfの[行と列|行列]を[入れ替える|ひっくり返す]
 __X__ = df
 __X__.corr()
 '''
-@test(alist=['A', 'B'];$$)
-@X(df;df[[col, col2]];df[alist])
-@Y(df;dfのcolとcol2;dfのalist[|で指定された]カラム)
+@test(aList=['A', 'B'];$$)
+@X(df;df[[col, col2]];df[aList])
+@Y(df;dfのcolとcol2;dfのaList[|で指定された]カラム)
 __Y__の[相関行列|各列間の相関係数][|を求める]
 '''
 
 __X__.corr(method='pearson')
 '''
-@test(alist=['A', 'B'];$$)
+@test(aList=['A', 'B'];$$)
 {ピアソン[[|積率]相関係数]で_|__Y__の相関行列}[|を求める]
 '''
 
 __X__.corr(method='kendall')
 '''
-@test(alist=['A', 'B'];$$)
+@test(aList=['A', 'B'];$$)
 {ケンドール[[|順位]相関係数|]で_|__Y__の相関行列}[|を求める]
 '''
 
 __X__.corr(method='spearman')
 '''
-@test(alist=['A', 'B'];$$)
+@test(aList=['A', 'B'];$$)
 {スピアマン[[|順位]相関係数|]で_|__Y__の相関行列}[|を求める]
 '''
 
 sns.heatmap(__X__.corr())
 '''
-@test(alist=['A', 'B'];$$)
+@test(aList=['A', 'B'];$$)
 @alt(描画する|グラフ化する)
 {__Y__の相関行列を|ヒートマップで_}描画する
 __Y__のヒートマップを描画する
-'''
-
-
-df.describe(include='O')
-'''
-@alt(求める|[計算する|算出する]|[見る|確認する])
-@alt(要約統計量|[記述統計量|基本統計量|代表値])
-dfのカテゴリデータの要約統計量[|を求める]
 '''
 
 df.round()
@@ -253,6 +246,7 @@ df.round()
 @alt(丸める|四捨五入する)
 @alt(丸めて|四捨五入して)
 @alt[まとめて|全て|]
+@alt(インプレイスする|更新する|置き換える)
 df[の数値|]をまとめて[|整数に]丸める
 '''
 
@@ -261,21 +255,13 @@ df.round(n)
 df[の数値|]をまとめて小数点以下n桁で丸める
 '''
 
-df.round(inplace=True)
-'''
-@alt(インプレイスする|更新する|置き換える)
-df[の数値|]をまとめて[|整数に]丸めて、インプレイスする
-'''
-
-df.round(n, inplace=True)
-'''
-df[の数値|]をまとめて小数点以下n桁で丸めて、インプレイスする
-'''
-
 # 変更する
-s, s2 = 'A', 'a'
+name = 'A'
+name2 = 'B'
+s = 'A'
+s2 = 'a'
 
-df.rename(columns={col: s})
+df.rename(columns={col: name})
 '''
 @alt(リネームする|名前[|を]変更する)
 @alt(付け直す|変更する)
@@ -287,12 +273,12 @@ dfのcolをsにリネームする
 df.columns = [str(x).replace(s, s2) for x in df.columns]
 '''
 @alt(まとめて|一度に|)
-dfのカラムの名前をまとめて、sをs2に置換する
+{dfのカラムの名前を|まとめて}sをs2に置換する
 '''
 
-df.rename(index={s: s2})
+df.rename(index={name: name2})
 '''
-dfのインデックスの名前をまとめて、sからs2に付け直す
+dfのインデックスの名前をまとめて、nameからname2に付け直す
 '''
 
 df.set_index(col)
@@ -380,13 +366,15 @@ df[(x <= df[col]) & (df[col] < x2)]
 dfのcol[|の値]がx以上かつx2未満の[行|データ]を抽出する
 '''
 
-df[df[col].isin(alist)]
+df[df[col].isin(aList)]
 '''
 @test(df=missing;$$)
-dfのcol[|の値]がalistに含まれる[行|データ]を抽出する
+dfのcol[|の値]がaListに含まれる[行|データ]を抽出する
 '''
 
-s = 'A'
+df = pd.DataFrame(data={'A': ['A', 'B'], 'B': ['B', 'A']})
+col = 'A'
+col2 = 'B'
 
 df[df[col].str.contains(s)]
 '''
@@ -476,16 +464,25 @@ df.drop(col, axis=1, inplace=True)
 dfのcolをドロップして、更新する
 '''
 
+df = pd.DataFrame(data={'A': ['A', 'B'], 'B': ['B', 'A']})
+col = 'A'
+col2 = 'B'
+
 df.drop([col, col2], axis=1)
 '''
 @test(df=missing;$$)
 dfのcolとcol2をドロップする
 '''
 
-df.drop(alist, axis=1)
+df = pd.DataFrame(data={'A': ['A', 'B'], 'B': ['B', 'A']})
+col = 'A'
+col2 = 'B'
+columns = ['A', 'B']
+
+df.drop(columns, axis=1)
 '''
 @test(df=missing;$$)
-dfのalistで指定されたカラムをドロップする
+dfのcolumnsで指定されたカラムをドロップする
 '''
 
 df.dropna()
@@ -497,6 +494,12 @@ dfの中の欠損値が[ある|存在する]行をドロップする
 '''
 
 # 重複
+
+df = pd.DataFrame(data={'A': [1, 1], 'B': [1, 1]})
+col = 'A'
+col2 = 'B'
+columns = ['A', 'B']
+
 
 df.duplicated()
 '''
@@ -536,7 +539,7 @@ dfの中で、colに重複があるか見る
 dfのcolに重複があれば、マスクする
 '''
 
-df.duplicated(subset=[col1, col2])
+df.duplicated(subset=[col, col2])
 '''
 @test(pd=df=df2=missing;$$)
 dfの中で、colとcol2の重複を見る
@@ -660,52 +663,52 @@ pd.get_dummies(x, dummy_na=True)
 __X__ = col
 df.sort_values(by=col)
 '''
-@test(df=missing;alist=['A'];$$)
+@test(df=missing;aList=['A'];$$)
 @alt(ソートする|並べる|並べ直す|整列する)
 @alt(ソートして|並べて|並べ直して|整列して)
-@X(col;[col,col2];alist)
-@Y(col;colとcol2;alist[で指定された|の]カラム)
+@X(col;[col,col2];aList)
+@Y(col;colとcol2;aList[で指定された|の]カラム)
 @alt(によって|で|を用いて)
 {df[|全体]を|__Y__によって}ソートする
 '''
 
 df.sort_values(by=__X__, inplace=True)
 '''
-@test(df=missing;alist=['A'];$$)
+@test(df=missing;aList=['A'];$$)
 {df[|全体]を|__Y__によって}ソートして、更新する
 {df[|全体]を|__Y__によって|破壊的に}ソートする
 '''
 
 df.sort_values(by=__X__, ascending=True)
 '''
-@test(df=missing;alist=['A'];$$)
+@test(df=missing;aList=['A'];$$)
 @alt(昇順に|小さい順に)
 {df[|全体]を|__Y__によって|昇順に}ソートする
 '''
 
 df.sort_values(by=__X__, ascending=False)
 '''
-@test(df=missing;alist=['A'];$$)
+@test(df=missing;aList=['A'];$$)
 @alt(降順に|大きい順に)
 {df[|全体]を|__Y__によって|降順に}ソートする
 '''
 
 df.sort_values(by=__X__, ascending=True, inplace=True)
 '''
-@test(df=missing;alist=['A'];$$)
+@test(df=missing;aList=['A'];$$)
 {df[|全体]を|__Y__によって|昇順に}ソートして、更新する
 {df[|全体]を|__Y__によって|昇順に|破壊的に}ソートする
 '''
 
 df.sort_values(by=__X__, ascending=False, inplace=True)
 '''
-@test(df=missing;alist=['A'];$$)
+@test(df=missing;aList=['A'];$$)
 {df[|全体]を|__Y__によって|降順に|破壊的に}ソートする
 '''
 
 df.sort_values(by=__X__, na_position='first')
 '''
-@test(df=missing;alist=['A'];$$)
+@test(df=missing;aList=['A'];$$)
 {df[|全体]を|__Y__によって}ソートして、NaNを先頭に[|来るように]する
 '''
 
@@ -738,13 +741,13 @@ ascending = True
 
 df.sort_index()
 '''
-@test(df=missing;alist=['A'];$$)
+@test(df=missing;aList=['A'];$$)
 {df[|全体]を|インデックスによって}ソートする
 '''
 
 df.sort_index(ascending=False)
 '''
-@test(df=missing;alist=['A'];$$)
+@test(df=missing;aList=['A'];$$)
 {df[|全体]を|インデックスによって|降順で}ソートする
 '''
 

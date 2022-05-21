@@ -100,17 +100,17 @@ x[は|が]x2に[近い|ほぼ等しい]かどうか
 
 math.isfinite(x)
 '''
-xが_有限かどうか
+x[が|は]有限かどうか
 '''
 
 math.isinf(x)
 '''
-xが_無限大かどうか
+x[が|は]無限大かどうか
 '''
 
 math.isnan(x)
 '''
-xが_[NaN|非数]かどうか
+x[が|は][NaN|非数]かどうか
 '''
 
 math.modf(x)[0]
@@ -192,6 +192,7 @@ math.tan(x)
 xの[正接|タンジェント|tan][|を求める]
 '''
 
+x = 0.33
 math.acos(x)
 '''
 @test(x=0.33;$$)
@@ -213,12 +214,16 @@ xの[逆正接|アークタンジェント][|を求める]
 xの[正接|タンジェント|tan]の逆数[|を求める]
 '''
 
+x = math.pi/2
+
 math.degrees(x)
 '''
 xの角度[|を求める]
 '''
 
-math.radians(x)
+degree = 60
+
+math.radians(degree)
 '''
 xのラジアン[|を求める]
 '''

@@ -15,8 +15,8 @@ collections = import_module('collections')
 
 n = 1
 iterable = [1, 2]
-element = 5
-deq = collections.deque()
+element = 1
+deq = collections.deque([1, 2])
 names = ['A', 'B']
 
 
@@ -87,8 +87,6 @@ deq.insert(n, element)
 {deqのn番目に|elementを}挿入する
 '''
 
-deq = collections.deque([1, 2])
-
 deq.popleft()
 '''
 @test(deq = collections.deque([1,2]);$$;deq)
@@ -108,7 +106,7 @@ deq[を|から]ポップする
 deq.remove(element)
 '''
 @test(deq = collections.deque([1,2]);$$;deq)
-{deqから|最初のelementを}取り除く
+{deqから|[最初の|]elementを}取り除く
 '''
 
 deq.clear()
@@ -117,6 +115,8 @@ deq.clear()
 @alt(空にする|クリアする|全て取り除く)
 deqを空にする
 '''
+
+deq = collections.deque([1, 2, 3, 0], maxlen=5)
 
 deq.rotate()
 '''
@@ -153,21 +153,23 @@ deqの[大きさ|要素数|サイズ|長さ][|を求める]
 len(deq) == 0
 '''
 @test(deq = collections.deque([1,2]);$$)
-deqが_空[|である]かどうか
+deq[が|は]空[|である]かどうか
 '''
 
 len(deq) != 0
 '''
 @test(deq = collections.deque([1,2]);$$)
-deqが_空でないかどうか
+deq[が|は]空でないかどうか
 '''
+
 element = 1
+deq = collections.deque([1, 2, 3])
 
 element in deq
 '''
 @test(deq = collections.deque([1,2]);$$)
 @alt(含まれてる|存在する|ある)
-deqの中にelementが_含まれてるかどうか
+deqの中にelement[が|は]含まれてるかどうか
 '''
 
 deq[0]
@@ -257,24 +259,6 @@ collections.Counter(aDict)
 {aDictから|[|新しい]多重集合を|新規に}作る
 '''
 
-X = collections.Counter()
-'''
-@test($$;X)
-{[|新しい][空の|]多重集合を|新たに}作って、Xに代入する
-'''
-
-X = collections.Counter(iterable)
-'''
-@test($$;X)
-{iterableから|[|新しい]多重集合を|新規に}作って、Xに代入する
-'''
-
-X = collections.Counter(aDict)
-'''
-@test(aDict={'A':2, 'B':1};$$;X)
-{aDictから|[|新しい]多重集合を|新規に}作って、Xに代入する
-'''
-
 aCounter = collections.Counter(A=2, B=1)
 aCounter2 = aCounter
 
@@ -319,14 +303,16 @@ aCounterを[下位n個|下位n位まで]カウント[|の回数][が|の]少な�
 aCounterから低頻出[|な]項目をn個、リストとして得る
 '''
 
-aCounter.most_common(0)[0]
+aCounter = collections.Counter([1, 1, 1, 1, 2, 2, 2, 3, 3])
+
+aCounter.most_common()[0]
 '''
 @test(aCounter=collections.Counter(A=2,B=1);$$)
 @alt(最頻出|最も頻出|最もカウント数の多い)
 aCounterから最頻出の項目を[得る|求める]
 '''
 
-aCounter.most_common(0)[1]
+aCounter.most_common()[1]
 '''
 @test(aCounter=collections.Counter(A=2,B=1);$$)
 aCounterから最頻出の項目の回数を[得る|求める]
@@ -473,15 +459,16 @@ C = collections.namedtuple('P', 'x y z', defaults=[0])
 issubclass(C, tuple)
 '''
 @test(aCounter=collections.namedtuple('C', 'x y z w');$$)
-クラスCが_名前付きタプルかどうか
+クラスC[が|は]名前付きタプルかどうか
 '''
 
-C._make(iterable)  # issubclass(C, tuple)
+args = (1, 2, 3)
+C._make(args)
 '''
 @test(aCounter=collections.namedtuple('C', 'x y z w');$$)
 @alt(のインスタンス|[オブジェクト])
-{iterableから|クラスCのインスタンスを|新たに}作る
-iterableをクラスCのインスタンスに変換する
+{argsから|クラスCのインスタンスを|新たに}作る
+argsをクラスCのインスタンスに変換する
 '''
 
 obj = C(1, 2, 3)

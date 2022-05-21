@@ -7,21 +7,23 @@ import sympy
 '''
 
 s = 'z'
-sympy.symbol(s)
+sympy.Symbol(s)
 '''
 @test(sympy=missing;$$)
 数式として、sをシンボルに変換する
 '''
 
-z = sympy.symbol(s)
+z = sympy.Symbol(s)
 '''
 @test(sympy=missing;$$;z)
 @prefix(z;[変数|式])
 数式として、sを[シンボル|変数][に|化]して、zにする
 '''
 
-e = e2 = sympy.symbol(s)
+e = e2 = sympy.Symbol(s)
 n = 2
+oo = sympy.oo
+
 e.subs(z, n)
 '''
 @test(e=missing;e2='e2';z='x';$$)
@@ -138,6 +140,7 @@ sympy.integrate(e, z)
 数式として、zについてeの[積分|インテグラル]を[求める|行う]
 '''
 
+e = sympy.E
 float(e)
 '''
 @test(sympy=missing;e='3.14159';z='x';$$)

@@ -294,11 +294,16 @@ aList.clear()
 aListの[全ての|全|][要素|値]を[クリアにする|取り除く|消去する|空にする]
 '''
 
+aList = [1, 2, 1]
+element = 1
+
 aList.remove(element)
 '''
 @test($$;aList)
 aListからelement[|と等しい最初の要素]を取り除く
 '''
+aList = [1, 2, 1]
+n = 1
 
 del aList[n]
 '''

@@ -322,93 +322,113 @@ s.swapcase()
 '''
 @return(文字列)
 sの大文字と小文字を[交換する|逆にする|入れ替える]
+sのケースを[入れ替える|交換する|逆にする]
 '''
 
-s in aList
+aStringList = ['A', 'B', 'C']
+
+s in aStringList
 '''
-sがaList内のいづれかどうか
+@prefix(aStringList;[文字列リスト|])
+sがaStringList内のいづれかどうか
 '''
 
+s = 'ABCDEFG'
+sub = 'C'
+start = 1
+end = 3
 
-s2 in s
+
+sub in s
 '''
 @alt(含まれる|ある|存在する)
 @alt(の中|[|中|内])
-{sの中に|s2が}含まれるかどうか
+{sの中に|subが}含まれるかどうか
 '''
 
-s2 not in s
+sub not in s
 '''
 @alt(含まれない|ない|存在しない)
-{sの中に|s2が}含まれないかどうか
+{sの中に|subが}含まれないかどうか
 '''
 
-s.find(s2)
+s.find(sub)
 '''
 @alt(先頭|最初|左[側|端])
 @alt(末尾|最後|後ろ|右[側|端])
-{s[の中|]から|s2を}[探す|見つける]
-{sの先頭から|s2を}[探す|見つける]
+@prefix(sub;[部分文字列|文字列|])
+{s[の中|]から|subを}[探す|見つける]
+{sの先頭から|subを}[探す|見つける]
 '''
 
-s.find(s2, start=n) != -1
+s.find(sub, start) != -1
 '''
-{sのn[|番目][以降に|より後に|から先に]|s2が}含まれるかどうか
-'''
-
-s.find(s2, start=n) == -1
-'''
-{sのn番目[以降に|より後に|から先に]|s2が}含まれないかどうか
+{sのstart[|番目][以降に|より後に|から先に]|subが}含まれるかどうか
 '''
 
-s.find(s2, end=n) != -1
+s.find(sub, start) == -1
 '''
-{sのn番目[より前に|以前に]|s2が}含まれるかどうか
-'''
-
-s.find(s2, end=n) == -1
-'''
-{sのn番目[より前に|以前に]|s2が}含まれないかどうか
+{sのstart番目[以降に|より後に|から先に]|subが}含まれないかどうか
 '''
 
-s.find(s2, start=n, end=n2) != -1
+s.find(sub, 0, end) != -1
 '''
-{sのn番目とn2番目の間に|s2が}含まれるかどうか
-{sのn[|番目]からとn2[|番目]までの[間|範囲]に|s2が}含まれるかどうか
-'''
-
-s.find(s2, start=n, end=n2) == -1
-'''
-sのn番目とn2番目の間にs2が含まれないかどうか
-{sのn[|番目]からとn2[|番目]までの[間|範囲]に|s2が}含まれないかどうか
+{sのend番目[より前に|以前に]|subが}含まれるかどうか
 '''
 
-s.find(s2, start=n)
+s.find(sub, 0, end) == -1
 '''
-{sのn[番目|]から|s2を}探す
-'''
-
-s.find(s2, start=n, end=n2)
-'''
-{sのnからn2[まで|]の[間|範囲]で|s2を}探す
+{sのend番目[より前に|以前に]|subが}含まれないかどうか
 '''
 
-s.rfind(s2)
+
+s.find(sub, start, end) != -1
 '''
-@return(位置)
-{sの末尾から|s2を}[探す|見つける]
+{sのstart番目とend番目の間に|subが}含まれるかどうか
+{sのstart[|番目]からとend[|番目]までの[間|範囲]に|subが}含まれるかどうか
 '''
 
-''.join(ss)
+s.find(sub, start, end) == -1
 '''
-@alt(連結する|結合する|繋げる)
-ssを連結する
+sのstart番目とend番目の間にsubが含まれないかどうか
+{sのstart[|番目]からとend[|番目]までの[間|範囲]に|subが}含まれないかどうか
+'''
+
+s.find(sub, start)
+'''
+{sのstart[番目|]から|subを}探す
+'''
+
+s.find(sub, start, end)
+'''
+{sのnからn2[まで|]の[間|範囲]で|subを}探す
+'''
+
+s.rfind(sub)
+'''
+{sの末尾から|subを}[探す|見つける]
+'''
+
+''.join(aStringList)
+'''
+@alt(連結する|結合する|つなげる|一つにする)
+aStringListを連結する
+aStringListを[連結して|]一つの文字列にする
+'''
+
+sep = ','
+
+sep.join(aStringList)
+'''
+{aStringListを|sepを区切りとして}連結する
+{aStringListを|sepを区切りにして}一つの文字列にする
 '''
 
 iterable = [1, 1, 2]
 ''.join(map(str, iterable))
 '''
 {iterableを|文字列[に変換し|とし]て}連結する
+aStringListを[連結して|]一つの文字列にする
 '''
 
 ','.join(map(str, iterable))
@@ -418,22 +438,24 @@ iterable = [1, 1, 2]
 
 s.join(map(str, iterable))
 '''
-@return(文字列)
 {iterableを|sで}連結する
 '''
 
-s.count(s2)
+s.count(sub)
 '''
 @alt(カウントする|数える)
-sの_s2の[出現回数|登場回数][|をカウントする]
-sの_s2をカウントする
+@alt(出現数=出現[|回数]|登場[|回数])
+sの_subの出現数[をカウントする|]
+sの_subをカウントする
+s中にsubがいくつか含まれるか[調べる|カウントする]
 '''
 
-s.count(s2, start=n, end=n2)
+s.count(sub, start, end)
 '''
 @alt(までの範囲|の[範囲|間])
-sのnからn2までの範囲でs2の[出現回数|登場回数][|をカウントする]
-sのnからn2までの範囲でs2をカウントする
+sのstartからendまでの範囲でsubの出現数[をカウントする|]
+sのstartからendまでの範囲でsubをカウントする
+sののstartからendまでの間にsubがいくつか含まれるか[調べる|カウントする]
 '''
 
 s.startswith(s2)
@@ -469,9 +491,12 @@ s.removesuffix(s2)
 {[|安全に]|sの接尾辞から|s2を}取り除く
 '''
 
-filename.endswith('.csv')
+__X__ = '.csv'
+filename.endswith(__X__)
 '''
-{ファイル名filenameが|CSVファイル}かどうか
+@X('.csv';'.txt';'.tsv';'.json')
+@Y(CSV;テキスト;TSV;JSON)
+{ファイル名filenameが|__Y__ファイル}かどうか
 '''
 
 s.isupper()
@@ -576,7 +601,7 @@ s.encode(encoding='unicode_escape')
 
 encoding = 'utf-8'
 
-s.encode(encoding=name)
+s.encode(encoding=encoding)
 '''
 @alt(エンコーディング|文字コード)
 {sを|エンコーディングnameで}バイト列に変換する
@@ -588,18 +613,23 @@ s.encode(errors='ignore')
 '''
 
 args = []
-text.format(*aList)
+formatText = ''
+
+formatText.format(*args)
 '''
 @test(text='<{}>';$$)
 @alt(フォーマットする|文字列整形する)
-書式textを{aListを|引数として}フォーマットする
+@prefix(formatText;[書式|テンプレート])
+formatTextを{argsを|引数として}フォーマットする
 '''
 
-mapping = {}
-text.format_map(mapping)
+aDict = {'A': '1'}
+formatText = '{A}'
+
+formatText.format_map(aDict)
 '''
 @test(text='<{}>';mapping={};$$)
-書式textをmappingでフォーマットする
+formatTextをaDictでフォーマットする
 '''
 
 len(s)
@@ -626,12 +656,36 @@ s == s2
 '''
 sとs2を比較する
 sとs2[は|が][同じ|等しい]かどうか
-sが_s2と[同じ|等しい]か比較する
+s[が|は]s2と[同じ|等しい]か比較する
+'''
+
+s != s2
+'''
+sとs2[は|が][等しく|同じで]ないかどうか
+'''
+
+s < s2
+'''
+{s[が|は]s2より|辞書順で}前かどうか
+'''
+
+s > s2
+'''
+{s[が|は]s2より|辞書順で}後かどうか
 '''
 
 s.casefold() == s2.casefold()
 '''
-sとs2を[大文字小文字|ケース]を無視して比較する
+@alt(ケースを無視して|大文字小文字を無視して)
+{sとs2を|ケースを無視して}比較する
+{s[が|は]|を無視して|s2と}等しいかどうか
+{s[が|は]|を無視して|s2と}同じかどうか
+'''
+
+s.casefold() == s2.casefold()
+'''
+{s[が|は]|を無視して|s2と}等しくないかどうか
+{s[が|は]|を無視して|s2と}同じでないどうか
 '''
 
 # Tips
@@ -640,17 +694,17 @@ sとs2を[大文字小文字|ケース]を無視して比較する
 '''
 @alt(片仮名|カタカナ)
 @alt(平仮名|ひらがな)
-sが片仮名かどうか
+s[が|は]片仮名かどうか
 '''
 
 ('ぁ' <= s <= 'ん')
 '''
-sが平仮名かどうか
+s[が|は]平仮名かどうか
 '''
 
 ('一' <= s <= '鿐')
 '''
-sが漢字かどうか
+s[が|は]漢字かどうか
 '''
 
 re.search('[\u4E00-\u9FD0]', s)
@@ -677,45 +731,3 @@ s.translate(str.maketrans('０１２３４５６７８９', '0123456789'))
 '''
 sの全角数字を半角数字に変換する
 '''
-
-
-"""
-# 正規表現
-
-re.search(x, y)
-{y(文字列)にx(正規表現)がマッチする}最初の位置
-
-re.match(x, y)
-y(文字列)に/x(正規表現)がマッチするかどうか
-
-re.fullmatch(x, y)
-x(正規表現)が/y(文字列)全体にマッチするかどうか
-
-re.split(x, y)
-y(文字列)に[対し | おいて | ついて]、x(正規表現)でスプリットする
-x(正規表現)でy(文字列)をスプリットする
-
-箇所 = 部分 | 部分文字列 | 箇所
-
-re.sub(x, y, z)
-y(文字列)に[対し | おいて | ついて]、x(正規表現)でマッチした[箇所]をzにリプレースする
-x(正規表現)でy(文字列)のマッチした[箇所]をzにリプレースする
-{x(正規表現)にマッチした}{yの[箇所]}をzにリプレースする
-
-re.subn(x, y, z)
-y(文字列)に[対し | おいて | ついて]、x(正規表現)にマッチした[箇所]をzにリプレースする
-{x(正規表現)でマッチした}{yの[箇所]}をzにリプレースする
-
-re.findall(x, y)
-y(文字列)に[対し | おいて | ついて]、x(正規表現)でマッチした[箇所]を[リストにする | 抽出する]
-{x(正規表現)にマッチした}{yの[箇所]}を[リストにする | 抽出する]
-
-re.compile(x)
-x(正規表現)をコンパイルする
-
-# sys
-
-
-# os
-
-"""

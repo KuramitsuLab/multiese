@@ -18,8 +18,7 @@ iterable2 = [7, 8, 9]
 selectors = [1, 0, 1, 0]
 
 
-def predicatefunc(x):
-    return True
+def predicatefunc(x): return True
 
 
 predicateFunc = predicatefunc
