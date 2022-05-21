@@ -56,7 +56,7 @@ adict.get(key, None)
 
 adict.get(key, element)
 '''
-{adictからkeyの値か、もしくはelementを得る
+adictからkeyの値か、もしくはelementを得る
 '''
 
 key in adict

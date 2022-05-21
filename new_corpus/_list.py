@@ -354,7 +354,7 @@ def func(x): return x+1
 
 sorted(__X__, key=func)
 '''
-__Y__[の[各|][要素|値]をfuncに適用した結果でソートする
+__Y__の[各|][要素|値]をfuncに適用した結果でソートする
 '''
 
 alist.copy()
