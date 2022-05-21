@@ -63,7 +63,7 @@ def Exact_Match(ss):
   print("BLACK_NG：",black_NG)
   print("正答数：",correct)
   print("誤答数：",no_correct)
-  print("正答率：",correct_answer_rate)
+  print("正答率：",round(correct_answer_rate,4))
 
 
 def Levenstein(ss):
