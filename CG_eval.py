@@ -3,7 +3,7 @@ import sys
 import black
 import Levenshtein
 import nltk
-nltk.download('punkt')
+#nltk.download('punkt')
 from nltk import bleu_score
 from io import BytesIO
 from tokenize import tokenize, open
@@ -79,10 +79,11 @@ def Levenstein(ss):
   #平均値
   leven=sum_Levenstein/len(ss)
   
-  print("leven：",leven)
+  print("leven：",round(leven,4))
 
 
 def BLEU(ss):
+  # https://www.nltk.org/api/nltk.translate.bleu_score.html
 
   pattern = re.compile(r'[\(, .\+\-\)]')
 
@@ -108,7 +109,7 @@ def BLEU(ss):
      #平均値
   bleu = sum_bleu / len(ss)
 
-  print("BLEU：",bleu)
+  print("BLEU：",round(bleu,4))
 
 
 def ROUGE_L(ss):
@@ -128,7 +129,7 @@ def ROUGE_L(ss):
   #平均
   ROUGE_score=sum_ROUGE_score/len(ss)
 
-  print("ROUGE-L：",ROUGE_score)
+  print("ROUGE-L：",round(ROUGE_score,4))
 
 def arg():
   try:
