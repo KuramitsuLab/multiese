@@ -255,4 +255,10 @@ def main(max_iter=5):
 
 
 if __name__ == '__main__':
+    main(0)
     main(1)
+    main(2)
+    main(3)
+    main(4)
+    main(5)
+    main(8)
