@@ -318,7 +318,9 @@ def main():
         for code, code2 in ss:
             suite.test_code(code, code2)
     else:
-        suite.test_code('n<0', 'n<0')
+        #suite.test_code('n<0', 'n<0')
+        suite.test_code(
+            "print(f'\033[32m{s}\033[0m')", "print(f'\033[32m{s}\033[0m')")
 
     print(f'Test Count {suite.tested}')
     print(
@@ -331,14 +333,3 @@ def main():
 
 
 main()
-
-
-def test():
-    globals = {'print': Missing('print')}
-    locals = {}
-    vars = collections.ChainMap(locals, globals)
-    exec('import pandas as pd', None, vars)
-    exec('a=1', None, vars)
-    exec('b=1', None, vars)
-    exec('_ = c = print(a+b)', None, vars)
-    print(locals)

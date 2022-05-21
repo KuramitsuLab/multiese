@@ -117,23 +117,23 @@ aSetとaaSet2のいずれか一方だけの集合[|を求める|を得る]
 element in aSet
 '''
 @test(aSet=set([1,2]);$$)
-elementが_aSetの[メンバー|要素][|に含まれる]かどうか
-elementが_aSetに含まれるかどうか
+element[が|は]aSetの[メンバー|要素][|に含まれる]かどうか
+element[が|は]aSetに含まれるかどうか
 element ∈ aSet
 '''
 
 element not in aSet
 '''
 @test(aSet=set([1,2]);$$)
-elementが_aSetの[メンバー|要素][でない|に含まれない]かどうか
-elementが_aSetに含まれないかどうか
+element[が|は]aSetの[メンバー|要素][でない|に含まれない]かどうか
+element[が|は]aSetに含まれないかどうか
 element ∉ aSet
 '''
 
 aSet.issubset(aSet2)
 '''
 @test(aSet=set([1,2]);aSet2=set([1]);$$)
-aSetが_aSet2の[部分集合|下位集合|サブセット]かどうか
+aSet[が|は]aSet2の[部分集合|下位集合|サブセット]かどうか
 aSetの全ての要素がaSet2に含まれるかどうか
 aSet ⊆ aSet2
 '''
@@ -141,14 +141,14 @@ aSet ⊆ aSet2
 aSet < aSet2
 '''
 @test(aSet=set([1,2]);aSet2=set([1]);$$)
-aSetが_aSet2の真[部分集合|下位集合|サブセット]かどうか
+aSet[が|は]aSet2の真[部分集合|下位集合|サブセット]かどうか
 aSet ⊂ aSet2
 '''
 
 aSet.issuperset(aSet2)
 '''
 @test(aSet=set([1,2]);aSet2=set([1]);$$)
-aSetが_aSet2の[上位集合|スーパーセット]かどうか
+aSet[が|は]aSet2の[上位集合|スーパーセット]かどうか
 aSet ⊇ aSet2
 '''
 
@@ -162,10 +162,10 @@ aSet ⊃ aSet2
 aSet.isdisjoint(aSet2)
 '''
 @test(aSet=set([1,2]);aSet2=set([1]);$$)
-aSetが_aSet2と共通の要素を持たないかどうか
-aSetが_aSet2と交わりを持たないかどうか
-aSetが_aSet2と互いに素かどうか
-aSetとaSet2が_互いに素かどうか
+aSet[が|は]aSet2と共通の要素を持たないかどうか
+aSet[が|は]aSet2と交わりを持たないかどうか
+aSet[が|は]aSet2と互いに素かどうか
+aSetとaSet2[が|は]互いに素かどうか
 '''
 
 len(aSet)

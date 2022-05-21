@@ -56,7 +56,7 @@ objのメモリビュー[|を得る]
 
 callable(obj)
 '''
-objが_関数かどうか
+obj[が|は]関数かどうか
 '''
 
 eval(s)
@@ -155,7 +155,7 @@ TYPE2 = object
 issubclass(TYPE, TYPE2)
 '''
 @alt(TYPE=TYPE2=Person;$$)
-TYPEクラスが_TYPE2クラスのサブクラスかどうか
+TYPEクラス[が|は]TYPE2クラスのサブクラスかどうか
 '''
 
 id(obj)
