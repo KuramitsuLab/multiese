@@ -18,13 +18,6 @@ import warnings
 
 warnings.simplefilter('ignore')
 
-df = pd.DataFrame(data={'A': [1, 2, 3],
-                        'B': [1, 1, 0],
-                        'C': [1, 0, 1]})
-df2 = pd.DataFrame(data={'A': [1, 2, 3],
-                         'B': ["a", "b", "c"],
-                         'C': ["111", "01", "1"]})
-
 
 class P(object):
     def __init__(self):
@@ -200,6 +193,12 @@ def modify_code(code):
     return code
 
 
+modules = {
+    'sys': Missing('sys'), 'os': Missing('os'),
+    'plt': Missing('plt'), 'sns': Missing('sns'),
+}
+
+
 class TestSuite:
     def __init__(self, name_values):
         self.name_values = name_values
@@ -215,14 +214,19 @@ class TestSuite:
         code = modify_code(code)
         code2 = modify_code(code2)
         self.epoch_succ = 0
+        self.epoch_missing = False
         for _ in range(10):
             if self.try_test_code(code, code2) == False:
+                if self.epoch_missing:
+                    self.missing += 1
                 return
-            if self.epoch_succ > 2:
+            if self.epoch_succ > 3:
                 break
-        if self.epoch_succ > 0:
+        if self.epoch_missing:
+            self.missing += 1
+        if self.epoch_succ > 3:
             self.tested_ok += 1
-        if self.epoch_succ == 0:
+        if self.epoch_succ == 3:
             self.untested += 1
             print('untested', code)
 
@@ -235,6 +239,7 @@ class TestSuite:
         }
         locals = {}
         globals, globals2, useMissing = self.choose_vars(code, globals)
+        globals.update(modules)
         vars = collections.ChainMap(locals, globals)
         refFailed = False
         try:
@@ -245,7 +250,10 @@ class TestSuite:
         except Exception as e:
             locals['_'] = e
             refFailed = True
+        if useMissing:
+            self.epoch_missing = True
         locals2 = {}
+        globals2.update(modules)
         vars2 = collections.ChainMap(locals2, globals2)
         try:
             exec(code2, None, vars2)
@@ -254,14 +262,13 @@ class TestSuite:
             return False
         except Exception as e:
             locals2['_'] = e
-            if not refFailed:
-                print('FAILED', str(e), code2)
+            # if not refFailed:
+            #     print('FAILED', str(e), code2)
         if compare_vars(locals, locals2) == False:
             self.failed += 1
             return False
-        if useMissing:
+        if useMissing and refFailed:
             self.tested_ok += 1
-            self.missing += 1
             return False
         if not refFailed:
             self.epoch_succ += 1
@@ -287,7 +294,7 @@ class TestSuite:
         return vars, vars2, useMissing
 
 
-def read_tsv(filename, index=1, pred_index=2):
+def read_tsv(filename, index=2, pred_index=1):
     ss = []
     try:
         with open(filename) as f:
