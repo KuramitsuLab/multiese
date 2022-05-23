@@ -1,29 +1,29 @@
 import matplotlib
 import matplotlib.pyplot as plt
+from sympy import N
 '''
 @test($$;plt.__name__)
 @alt(描画する|描く|プロットする)
-@alt(グラフ|プロット|matplotlib)
-グラフを描画する
-グラフを使う
+@alt(グラフ|プロット)
+グラフを描画する[準備をする|]
+グラフを使う[準備をする|]
 '''
 
 import seaborn as sns
 '''
-@test($$;sns.__name__)
-[綺麗な|キレイな|見やすい]グラフを描画する
-[綺麗な|キレイな|見やすい]グラフを使う
-グラフを[綺麗|キレイ]にする
-グラフを見やすくする
-グラフの見た目を[良く|よく]する
+@alt(見栄え|見た目|デザイン)
+[綺麗な|見やすい]グラフを描画する[準備をする|]
+[綺麗な|見やすい]グラフを使う[準備をする|]
+グラフ[の見栄え|の描画|]を綺麗にする
+グラフ[の描画|]を見やすくする
+グラフの見栄えを[良く|よく]する
 '''
 
 sns.set()
 '''
 @test(sns=missing;$$)
-@alt(見た目|デザイン)
-[seabornの|]デフォルト[|スタイル|見た目]を適用する
-グラフ[の見た目]を[デフォルトで|][いい|イイ]感じに設定する
+[seabornの|]デフォルト[|スタイル|見栄え]を適用する
+{グラフ[の見栄え]を|[デフォルトで|]}[いい|イイ]感じに設定する
 '''
 
 __X__ = 'paper'
@@ -32,7 +32,8 @@ sns.set(context=__X__)
 @test(sns=missing;$$)
 @X('paper';'notebook';'talk';'poster')
 @Y(論文;画面;[スライド|プレゼン];ポスター)
-グラフ[の用途|の目的|]を__Y__[|用]に設定する
+{グラフ[の用途|の目的|]を|__Y__に}設定する
+{グラフを|__Y__用に}設定する
 '''
 
 __X__ = 'deep'
@@ -42,7 +43,8 @@ sns.set(pallete=__X__)
 @X('deep';'muted';'pastel';'dark';'bright';'colorblind')
 @Y(濃く;淡く;パステル調に;暗く;明るく;色差別なく)
 @alt(カラーパレット|色|パレット|[色|カラー|]テーマ|色[|調|使い])
-グラフ[[の|で使う]カラーパレット|]を[|全般的に]__Y__する
+グラフ[の[色|カラーパレット]]を[|全般的に]__Y__する
+[グラフの|]{カラーパレットを|[|全般的に]}__Y__する
 '''
 
 __X__ = 'deep'
@@ -51,16 +53,16 @@ sns.set(pallete=__X__)
 @test(sns=missing;$$)
 @X('deep';'muted';'pastel';'dark';'bright';'colorblind')
 @Y(濃い;淡い;パステル調の;暗い;明るい;色差別ない)
-{__Y__カラーパレットを|グラフ[|全般]に}使う
+{グラフの描画で|__Y__カラーパレットを}使う
 '''
 
-s = 'pastel'
+palleteName = 'pastel'
 
-sns.set(pallete=s)
+sns.set(pallete=palleteName)
 '''
 @test(sns=missing;$$)
-グラフ[の|で使う]カラーパレットをsで指定する
-グラフ[の|で使う]カラーパレットをsに設定する
+グラフ[の|で使う]カラーパレットをpalleteNameで指定する
+グラフ[の|で使う]カラーパレットをpalleteNameに設定する
 '''
 
 fontName = 'Yu Gothic'
@@ -77,10 +79,10 @@ sns.set(font='IPAexGothic')
 @alt(グラフの中|グラフ|グラフ[内|中|)
 @alt(できる|可能な)
 @alt(に設定する|[に|と]する|に[セット|指定]する|に変更する|変える)
-{グラフの中で|日本語[|フォント]を}[表示できる|使える]ようにする
+{グラフで|日本語[|フォント]を}[表示できる|使える]ようにする
 グラフの中の[日本語フォント|日本語表示]を[有効にする|利用可能にする]
-[グラフの中の|グラフで使う]フォントを[日本語表示|日本語]に設定する
-[グラフの中の|]文字化けを防ぐ
+[グラフの|グラフで使う]フォントを[日本語表示|日本語]に設定する
+[グラフの|]文字化けを防ぐ
 '''
 
 sns.set(style='darkgrid')
@@ -98,45 +100,42 @@ sns.set(style='whitegrid')
 グラフの背景を白くする
 '''
 
-sns.set(palette=s)
-'''
-@test(sns=missing;$$)
-グラフの[|描画で使う]パレットをsに設定する
-'''
+untitled = 'untitled'
 
-s = s2 = 'label'
-plt.title(s)
+plt.title(untitled)
 '''
 @test(plt=missing;$$)
-@alt(グラフ|プロット)
 @alt(タイトル|題名|名前)
-[グラフの中の|グラフで使う]タイトルをsに設定する
+[グラフの|グラフで使う]タイトルを[untitledに|]設定する
 '''
 
-n, n2 = 10, 6
-plt.figure(figsize=(n, n2))
+width = 8
+height = 6
+
+plt.figure(figsize=(width, height))
 '''
 @test(plt=missing;$$)
 @alt(サイズ|大きさ)
-[描画する|表示する|出力する|]グラフのサイズを[横n縦n2|縦n2横n|n×n2]に設定する
+グラフのサイズを[横width縦height|縦height横width]に設定する
+グラフのサイズを[設定する|指定する|変更する]
 '''
 
-plt.xlabel(s)
+plt.xlabel(untitled)
 '''
 @test(plt=missing;$$)
 @alt(横軸|x軸|x座標)
-@alt(軸ラベル|ラベル|ラベル|名[前|称]|軸名|説明)
+@alt(軸ラベル=ラベル|軸ラベル|名[前|称]|軸名|説明|キャプション)
 @alt(付ける|つける|設定する)
-[グラフの中の|グラフで使う|]横軸の軸ラベルをsに設定する
-[グラフの中の|グラフで使う|]横軸にsという軸ラベルを付ける
+[グラフの|グラフで使う|]横軸の軸ラベルをuntitledに設定する
+[グラフの|グラフで使う|]横軸に[untitledという|]軸ラベルを付ける
 '''
 
-plt.ylabel(s)
+plt.ylabel(untitled)
 '''
 @test(plt=missing;$$)
 @alt(縦軸|y軸|y座標)
-[グラフの中の|グラフで使う|]縦軸の軸ラベルをsに設定する
-[グラフの中の|グラフで使う|]縦軸にsという軸ラベルを付ける
+[グラフの中の|グラフで使う|]縦軸の軸ラベルをuntitledに設定する
+[グラフの中の|グラフで使う|]縦軸に[untitledという|]軸ラベルを付ける
 '''
 
 plt.grid(True)
@@ -151,27 +150,29 @@ plt.legend()
 '''
 @test(plt=missing;$$)
 @alt(凡例|凡例|データラベル|補足)
-{[グラフの中に|]|凡例を}入れる
+{[グラフに|]|凡例を}入れる
 '''
 
 plt.legend([s, s2])
 '''
 @test(plt=missing;$$)
-{[グラフの中に]|凡例を|sとs2と}入れる
+{[グラフに]|凡例を|sとs2と}入れる
 '''
 
-x, x2 = 0.5, 0.5
-plt.legend(loc=(x, x2))
+x, y = 0.5, 0.5
+plt.legend(loc=(x, y))
 '''
 @test(plt=missing;$$)
-{[グラフの中に|]|凡例を|(x, x2)の[位置|場所]に}入れる
-{グラフ中の(x, x2)の[位置|場所]に|凡例を|}入れる
+@alt(位置|場所)
+[グラフの|]凡例の位置を指定する
+[グラフの|]凡例の位置を(x, y)に設定する
+{グラフ中の(x, y)の位置に|凡例を}入れる
 '''
 
 plt.legend(loc='best')
 '''
 @test(plt=missing;$$)
-{[最適な|ベストな|最も適切な|グラフに被らない][位置|場所]に|凡例を}入れる
+{[最適な|ベストな|グラフに被らない]位置に|凡例を}入れる
 '''
 
 plt.legend(frameon=False)
@@ -214,20 +215,22 @@ plt.plot(df[col], df[col2])
 {dfのcolとcol2を|折れ線グラフで_}描画する
 '''
 
-plt.plot(xdata, ydata, alpha=x)
+alpha = 0.5
+
+plt.plot(xdata, ydata, alpha=alpha)
 '''
 @test(plt=missing;xdata=ydata=aList;$$)
 @alt(透明度|アルファ[|値])
-透明度xの折れ線グラフを描画する
-折れ線グラフの透明度をxに設定する
-{xdataとydataの折れ線グラフを|透明度xで}描画する
-xdataとydataの折れ線グラフを描画して、透明度をxに設定する
+透明度alphaの折れ線グラフを描画する
+折れ線グラフの透明度をalphaに設定する
+{xdataとydataの折れ線グラフを|透明度alphaで}描画する
+xdataとydataの折れ線グラフを描画して、透明度をalphaに設定する
 '''
 
 matplotlib.colors.cnames
 '''
 @test(import matplotlib;$$)
-グラフで使える色の一覧[|を得る|を知る]
+グラフで[使える|利用可能な]色[名|]の一覧[|を得る|を知る]
 '''
 
 plt.plot(xdata, ydata, color=s)
@@ -239,6 +242,7 @@ xdataとydataの折れ線グラフを描画して、色をsに設定する
 '''
 
 rgb = '#fff'
+
 plt.plot(xdata, ydata, color=rgb)
 '''
 @test(plt=missing;xdata=ydata=aList;rgb='#fff';$$)
@@ -323,12 +327,13 @@ __Y__折れ線グラフを描画する
 xdataとydataの__Y__折れ線グラフを描画する
 '''
 
-plt.plot(xdata, ydata, label=s)
+plt.plot(xdata, ydata, label=untitled)
 '''
 @test(plt=missing;xdata=ydata=aList;$$)
-折れ線グラフのラベルをsに設定する
-{xdataとydataの折れ線グラフを|sとラベル付けして}描画する
-xdataとydataの折れ線グラフを描画して、sとラベル付けする
+折れ線グラフにラベルを付ける
+折れ線グラフのラベルをuntitledに設定する
+{xdataとydataの折れ線グラフを|untitledとラベル付けして}描画する
+xdataとydataの折れ線グラフを描画して、untitledとラベル付けする
 '''
 
 plt.plot(xdata, ydata, linestyle=__X__)
@@ -336,52 +341,54 @@ plt.plot(xdata, ydata, linestyle=__X__)
 @test(plt=missing;xdata=ydata=aList;$$)
 @X('dashed';'dashbot';'dotted';'solid')
 @Y(破線;一点鎖線;点線;実線)
-[__Y__グラフ|__Y__の折れ線グラフ]を描画する
 折れ線グラフを__Y__に設定する
-xdataとydata[の|について][__Y__グラフ|__Y__[|による|の]折れ線グラフ]を描画する
-xdataとydataの折れ線グラフを描画して、__Y__に設定する
+__Y__の折れ線グラフを描画する
+折れ線グラフを__Y__で描画する
+'''
+
+linestyle = __X__
+'''
+[オプションで、|]グラフの種類を__Y__に設定する
+[オプションで、|][|グラフの]線種を__Y__に設定する
+'''
+
+linewidth = n
+'''
+[オプションで、|][|グラフの]線幅をnに設定する
 '''
 
 plt.plot(xdata, ydata, linewidth=n)
 '''
-@test(plt=missing;xdata=ydata=aList;$$)
-線幅nの折れ線グラフを描画する
+折れ線グラフの線幅を指定する
 折れ線グラフの線幅をnに設定する
-xdataとydata[の|について]線幅nの折れ線グラフを描画する
-xdataとydata[の|について]折れ線グラフを描画して、[その|]線幅をnに設定する
+線幅nの折れ線グラフを描画する
+{xdataとydataで_|折れ線グラフを}描画して、[その|]線幅をnに設定する
 '''
 
 plt.plot(xdata, ydata, linestyle=__X__, linewidth=n)
 '''
-@test(plt=missing;xdata=ydata=aList;$$)
-線幅nの__Y__グラフを描画する
-__Y__グラフの線幅をnに設定する
-xdataとydata[の|について]線幅nの__Y__グラフを描画する
-xdataとydata[の|について]__Y__グラフを描画して、[その|]線幅をnに設定する
+[__Y__グラフ|__Y__の折れ線グラフ]の線幅を指定する
+[__Y__グラフ|__Y__の折れ線グラフ]の線幅をnに設定する
+{[xdataとydataで_|]|[__Y__グラフ|__Y__の折れ線グラフ]を}描画して、[その|]線幅をnに設定する
 '''
 
 plt.plot(xdata, ydata, linestyle=__X__, color=rgb)
 '''
-@test(plt=missing;xdata=ydata=aList;rgb='#fff';$$)
-__Y__グラフの色をrgbに設定する
-__Y__グラフの色を[赤にする|赤くする|赤色に設定する]
+[__Y__グラフ|__Y__の折れ線グラフ]の色をrgbに設定する
 xdataとydata[の|について]rgbの__Y__グラフを描画する
-xdataとydata[の|について]__Y__グラフを描画して、[その|]色をrgbに設定する
+{[xdataとydataで_|]|[__Y__グラフ|__Y__の折れ線グラフ]を}描画して、[その|]線幅をnに設定する
 '''
 
 plt.plot(xdata, ydata, linestyle=__X__, color='r')
 '''
-@test(plt=missing;xdata=ydata=aList;$$)
 @alt(赤い|赤色の)
-赤い__Y__グラフを描画する
-__Y__グラフの色を[赤にする|赤くする|赤色に設定する]
-xdataとydata[の|について]赤い__Y__グラフを描画する
-xdataとydata[の|について]__Y__グラフを描画して、[その|]色を[赤にする|赤くする|赤色に設定する]
+赤い[__Y__グラフ|__Y__の折れ線グラフ]を描画する
+[__Y__グラフ|__Y__の折れ線グラフ]の色を[赤にする|赤くする|赤色に設定する]
+{[xdataとydataで_|]|[__Y__グラフ|__Y__の折れ線グラフ]を}描画して、[その|]線幅をnに設定する
 '''
 
 plt.plot(xdata, ydata, linestyle=__X__, color='b')
 '''
-@test(plt=missing;xdata=ydata=aList;$$)
 @alt(青い|青色の)
 青い__Y__グラフを描画する
 __Y__グラフの色を[青にする|青くする|青色に設定する]
@@ -464,12 +471,15 @@ xdataとydataの折れ線グラフに、線幅nの__Y__マーカーを描画す�
 
 plt.scatter(xdata, ydata)
 '''
-xdataを縦軸、ydataを横軸として、散布図を描画する
-xdataとydata[について|の]散布図を描画する
+[xdataとydata[について|の]|]散布図を描画する
+[xdataとydata[について|の]|][相関|散らばり]を可視化する
 '''
 
 plt.scatter(xdata, ydata, s=n)
 '''
+散布図のマーカーの大きさを指定する
+散布図のマーカーの大きさをnに設定する
+
 xdataを縦軸、ydataを横軸として、大きさnの散布図を描画する
 {xdataとydata[について|]の散布図を|大きさnで}描画する
 xdataとydata[について|の]散布図を描画して、その大きさをnに設定する

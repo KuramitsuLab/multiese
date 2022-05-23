@@ -1,19 +1,17 @@
+import pickle
 import re
 import keyword
 from io import BytesIO
-from operator import is_
 import token
-from tokenize import tokenize, open
+from tokenize import tokenize  # , open
 from importlib import import_module
 import sys
 import random
 import csv
 import copy
 import collections
-import datetime
 import builtins
 import pandas as pd
-import numpy as np
 import warnings
 
 warnings.simplefilter('ignore')
@@ -64,8 +62,13 @@ class Missing:
     #     return self.msg[index]
 
 
-MUTABLES = {type([]), type({}), type(set()), type(
-    bytearray()), type(pd.DataFrame())}
+MUTABLES = {
+    type([]),
+    type({}),
+    type(set()),
+    type(bytearray()),
+    type(pd.DataFrame())
+}
 
 
 def copy_mutable(o):
@@ -106,7 +109,8 @@ def extract_vars(globals, locals):
         #name = shorten_name(name)
         if name not in dir(builtins):
             values = globals.get(name, [])
-            values.append(value)
+            if value not in values:
+                values.append(value)
             globals[name] = values
 
 
@@ -172,7 +176,7 @@ def compare_vars(vars, vars2):
     if len(vars) != len(vars2):
         return False
     if '_' in vars and '_' in vars2:
-        return match(vars['_'], vars['_'])
+        return match(vars['_'], vars2['_'])
     for key in vars:
         if key not in vars2:
             return False
@@ -195,7 +199,7 @@ def modify_code(code):
 
 modules = {
     'sys': Missing('sys'), 'os': Missing('os'),
-    'plt': Missing('plt'), 'sns': Missing('sns'),
+    # 'plt': Missing('plt'), 'sns': Missing('sns'),
 }
 
 
@@ -205,6 +209,7 @@ class TestSuite:
         self.tested = 0
         self.syntax_errors = 0
         self.failed = 0
+        self.baddata = 0
         self.untested = 0
         self.tested_ok = 0
         self.missing = 0
@@ -214,21 +219,24 @@ class TestSuite:
         code = modify_code(code)
         code2 = modify_code(code2)
         self.epoch_succ = 0
+        self.epoch_refok = 0
         self.epoch_missing = False
         for _ in range(10):
             if self.try_test_code(code, code2) == False:
                 if self.epoch_missing:
                     self.missing += 1
                 return
-            if self.epoch_succ > 3:
+            if self.epoch_succ > 3 and self.epoch_refok > 2:
                 break
         if self.epoch_missing:
             self.missing += 1
-        if self.epoch_succ > 3:
+        if self.epoch_succ > 3 and self.epoch_refok > 2:
             self.tested_ok += 1
-        if self.epoch_succ == 3:
-            self.untested += 1
-            print('untested', code)
+            return
+        if self.epoch_refok == 0:
+            self.baddata += 1
+        self.untested += 1
+        print(f'untested({self.epoch_succ})', code)
 
     def try_test_code(self, code, code2):
         globals = {
@@ -244,6 +252,7 @@ class TestSuite:
         refFailed = False
         try:
             exec(code, None, vars)
+            self.epoch_refok += 1
         except SyntaxError:
             self.untested += 1
             return False
@@ -311,6 +320,33 @@ def read_tsv(filename, index=2, pred_index=1):
 # main()
 
 
+def save_vars(filename, data):
+    with open(filename, 'wb') as f:
+        for key, values in data.items():
+            for value in values:
+                try:
+                    if isinstance(value, type(sys)):
+                        pickle.dump((0, key, value.__name__), f)
+                    else:
+                        pickle.dump((1, key, value), f)
+                except Exception as e:
+                    print('PICKLE FAIL', key, value)
+
+
+def load_vars(filename, vars):
+    with open(filename, 'rb') as f:
+        try:
+            kind, key, value = pickle.load(f)
+            if kind == 0:
+                value = import_module(value)
+            values = vars.get(key, [])
+            if value not in values:
+                values.append(value)
+            vars[key] = values
+        except EOFError:
+            pass
+
+
 def main():
     vars = {}
     tsvfile = None
@@ -319,6 +355,10 @@ def main():
             read_vars(file, vars)
         if file.endswith('.tsv'):
             tsvfile = file
+        if file.endswith('.vars'):
+            load_vars(file, vars)
+    save_vars('multiese.vars', vars)
+
     suite = TestSuite(vars)
     if tsvfile is not None:
         ss = read_tsv(tsvfile)
@@ -335,8 +375,10 @@ def main():
     print(f' Pass {suite.tested_ok} {suite.tested_ok/suite.tested:.5f} ')
     print(f' Failed {suite.failed} {suite.failed/suite.tested:.5f} ')
     print(f' Untested {suite.untested} {suite.untested/suite.tested:.5f}')
+    print(f' Bad Data {suite.baddata} {suite.baddata/suite.tested:.5f}')
     print(
         f' Missing {suite.missing} {suite.missing/suite.tested:.5f}')
 
 
 main()
+# print(isinstance(sys, type(sys)))
