@@ -23,7 +23,7 @@ sns.set()
 '''
 @test(sns=missing;$$)
 [seabornの|]デフォルト[|スタイル|見栄え]を適用する
-{グラフ[の見栄え]を|[デフォルトで|]}[いい|イイ]感じに設定する
+{グラフ[の見栄え|]を|[デフォルトで|]}[いい|イイ]感じに設定する
 '''
 
 __X__ = 'paper'
@@ -254,16 +254,6 @@ xdataとydata[|について]の折れ線グラフを描画して、[その|]色�
 
 # https://own-search-and-study.xyz/2016/08/08/matplotlib-pyplotのplotの全引数を使いこなす/
 
-__X__ = 'r'
-plt.plot(xdata, ydata, color=__X__)
-'''
-@test(plt=missing;xdata=ydata=aList;$$)
-@X('aliceblue';'antiquewhite';'aqua';'aquamarine';'azure';'beige';'bisque';'black';'blanchedalmond';'blue';'blueviolet';'brown';'burlywood';'cadetblue';'chartreuse';'chocolate';'coral';'cornflowerblue';'cornsilk';'crimson';'cyan';'darkblue';'darkcyan';'darkgoldenrod';'darkgray';'darkgreen';'darkgrey';'darkkhaki';'darkmagenta';'darkolivegreen';'darkorange';'darkorchid';'darkred';'darksalmon';'darkseagreen';'darkslateblue';'darkslategray';'darkslategrey';'darkturquoise';'darkviolet';'deeppink';'deepskyblue';'dimgray';'dimgrey';'dodgerblue';'firebrick';'floralwhite';'forestgreen';'fuchsia';'gainsboro';'ghostwhite';'gold';'goldenrod';'gray';'green';'greenyellow';'grey';'honeydew';'hotpink';'indianred';'indigo';'ivory';'khaki';'lavender';'lavenderblush';'lawngreen';'lemonchiffon';'lightblue';'lightcoral';'lightcyan';'lightgoldenrodyellow';'lightgray';'lightgreen';'lightgrey';'lightpink';'lightsalmon';'lightseagreen';'lightskyblue';'lightslategray';'lightslategrey';'lightsteelblue';'lightyellow';'lime';'limegreen';'linen';'magenta';'maroon';'mediumaquamarine';'mediumblue';'mediumorchid';'mediumpurple';'mediumseagreen';'mediumslateblue';'mediumspringgreen';'mediumturquoise';'mediumvioletred';'midnightblue';'mintcream';'mistyrose';'moccasin';'navajowhite';'navy';'oldlace';'olive';'olivedrab';'orange';'orangered';'orchid';'palegoldenrod';'palegreen';'paleturquoise';'palevioletred';'papayawhip';'peachpuff';'peru';'pink';'plum';'powderblue';'purple';'rebeccapurple';'red';'rosybrown';'royalblue';'saddlebrown';'salmon';'sandybrown';'seagreen';'seashell';'sienna';'silver';'skyblue';'slateblue';'slategray';'slategrey';'snow';'springgreen';'steelblue';'tan';'teal';'thistle';'tomato';'turquoise';'violet';'wheat';'white';'whitesmoke';'yellow';'yellowgreen')
-@Y(アリスブルー;アンティークホワイト;アクア;アクアマリン;紺碧;ベージュ;ビスク;ブラック;ブランチドアーモンド;青;ブルーバイオレット;ブラウン;ハリウッド;カデットブルー;シャルトルーズ;チョコレート;コーラル;コーンフラワーブルー;コーンズシルク;クリムゾン;シアン;ダークブルー;ダークシアン;ダークゴールデンロッド;ダークグレー;ダークグリーン;ダークグレー;ダークカーキ;ダークマゼンタ;ダークオリーブグリーン;ダークオレンジ;ダークオーキッド;ダークレッド;ダークサーモン;ダークシアグリーン;ダークスレートブルー;ダークスラテグレー;ダーク・スラテグレー;ダークターコイズ;ダークバイオレット;デピンク;ディープスカイブルー;ディムグレー;ディムグレー;ドジャーブルー;耐火レンガ;フローラルホワイト;フォレストグリーン;フクシア;ゲインズボロ;ゴーストホワイト;ゴールド;ゴールデンロッド;グレー;グリーン;グリーンイエロー;グレー;ハニーデュー;ホットピンク;インディアンレッド;インディゴ;アイボリー;カーキ;ラベンダー;ラベンダーブラッシュ;ローングリーン;レモンシフォン;ライトブルー;ライトコーラル;ライトシアン;ライトゴールドロディイエロー;ライトグレー;ライトグリーン;ライトグレー;淡いピンク色;ライトサーモン;ライトグリーン;ライトスカイブルー;ライトスレイグレー;ライトスレイグレー;ライトスチールブルー;ライトイエロー;ライム;ライムグリーン;リネン;マゼンタ;マルーン;ミディアムアクアマリン;ミディアムブルー;ミディアムオーキッド;ミディアムパープル;ミディアムシアグリーン;ミディアムスレートブルー;ミディアムスプリンググリーン;ミディアムターコイズ;ミディアムバイオレットレッド;ミッドナイトブルー;ミントクリーム;ミスティローズ;モカシン;ナバホホワイト;ネイビー;オールドレース;オリーブ;オリベドラブ;オレンジ;オレンジレッド;オーキッド;パールゴールデンロッド;ペールグリーン;パレットトルコイズ;パールバイオレットレッド;パパイヤウィップ;ピーチパフ;ペルー;ピンク;プラム;パウダーブルー;パープル;レベッカパープル;赤;ロージーブラウン;ロイヤルブルー;サドルブラウン;サーモン;サンディーブラウン;シーグリーン;貝殻;シエナ;シルバー;スカイブルー;スレートブルー;スラグレー;スラグレー;スノー;スプリンググリーン;スチールブルー;タン;ティール;アザミ;トマト;ターコイズ;バイオレット;小麦;ホワイト;ホワイトスモーク;黄色;イエローグリーン)
-折れ線グラフの色を__Y__に設定する
-__Y__色の折れ線グラフを描画する
-xdataとydata[について|の]折れ線グラフを描画して、[その|]色を__Y__に設定する
-'''
 
 __X__ = 'r'
 plt.plot(xdata, ydata, linestyle='dash', color=__X__)
@@ -307,25 +297,6 @@ plt.hist(xdata, color=__X__)
 
 ###
 
-__X__ = 'r'
-plt.plot(xdata, ydata, color=__X__)
-'''
-@test(plt=missing;xdata=ydata=aList;$$)
-@X('r';'b';'k';'w';'y')
-@Y(赤く;青く;黒く;白く;黄色く)
-折れ線グラフの色を__Y__する
-xdataとydataの折れ線グラフを描画して、色を__Y__する
-'''
-
-__X__ = 'r'
-plt.plot(xdata, ydata, color=__X__)
-'''
-@test(plt=missing;xdata=ydata=aList;$$)
-@X('r';'b';'k';'w';'y')
-@Y(赤い;青い;黒い;白い;黄色い)
-__Y__折れ線グラフを描画する
-xdataとydataの__Y__折れ線グラフを描画する
-'''
 
 plt.plot(xdata, ydata, label=untitled)
 '''
@@ -334,22 +305,6 @@ plt.plot(xdata, ydata, label=untitled)
 折れ線グラフのラベルをuntitledに設定する
 {xdataとydataの折れ線グラフを|untitledとラベル付けして}描画する
 xdataとydataの折れ線グラフを描画して、untitledとラベル付けする
-'''
-
-plt.plot(xdata, ydata, linestyle=__X__)
-'''
-@test(plt=missing;xdata=ydata=aList;$$)
-@X('dashed';'dashbot';'dotted';'solid')
-@Y(破線;一点鎖線;点線;実線)
-折れ線グラフを__Y__に設定する
-__Y__の折れ線グラフを描画する
-折れ線グラフを__Y__で描画する
-'''
-
-linestyle = __X__
-'''
-[オプションで、|]グラフの種類を__Y__に設定する
-[オプションで、|][|グラフの]線種を__Y__に設定する
 '''
 
 linewidth = n
@@ -406,66 +361,8 @@ xdataとydata[の|について]黒い__Y__グラフを描画する
 xdataとydata[の|について]__Y__グラフを描画して、[その|]色を[黒にする|黒くする|黒色に設定する]
 '''
 
-plt.plot(xdata, ydata, marker=__X__)
-'''
-@test(plt=missing;xdata=ydata=aList;$$)
-@X('.';'o';'^';'v';'<';'>';'x';'X';'s';'D';'*')
-@Y(ポイント;丸;[[|上]三角|▲|△];[下三角|▽|▼];左三角;右三角;[バツ|クロス];大バツ;四角;[ダイアモンド|菱形];星)
-@alt(マーカー|印)
-折れ線グラフに__Y__マーカーを使う
-折れ線グラフのマーカーを__Y__に設定する
-xdataとydataの折れ線グラフを描画して、マーカーを__Y__に設定する
-xdataとydataの折れ線グラフに__Y__マーカーを描画する
-'''
 
-plt.plot(xdata, ydata, marker=__X__, markerfacecolor='r')
-'''
-@test(plt=missing;xdata=ydata=aList;$$)
-xdataとydataの折れ線グラフに、赤い__Y__マーカーを描画する
-折れ線グラフの__Y__マーカーを[赤くする|赤色にする]
-'''
 
-plt.plot(xdata, ydata, marker=__X__, markerfacecolor='b')
-'''
-@test(plt=missing;xdata=ydata=aList;$$)
-xdataとydataの折れ線グラフに、青い__Y__マーカーを描画する
-折れ線グラフの__Y__マーカーを[青くする|青色に設定する]
-'''
-
-plt.plot(xdata, ydata, marker=__X__, markerfacecolor='k')
-'''
-@test(plt=missing;xdata=ydata=aList;$$)
-xdataとydataの折れ線グラフに、黒い__Y__マーカーを描画する
-折れ線グラフの__Y__マーカーを[黒くする|黒色に設定する]
-'''
-
-plt.plot(xdata, ydata, marker=__X__, markerfacecolor='y')
-'''
-@test(plt=missing;xdata=ydata=aList;$$)
-xdataとydataの折れ線グラフに、黄色い__Y__マーカーを描画する
-折れ線グラフの__Y__マーカーを[黄色くする|黄色に設定する]
-'''
-
-plt.plot(xdata, ydata, marker=__X__, markerfacecolor='g')
-'''
-@test(plt=missing;xdata=ydata=aList;$$)
-xdataとydataの折れ線グラフに、緑色の__Y__マーカーを描画する
-折れ線グラフの__Y__マーカーを緑色に設定する
-'''
-
-plt.plot(xdata, ydata, marker=__X__, markersize=n)
-'''
-@test(plt=missing;xdata=ydata=aList;$$)
-xdataとydataの折れ線グラフに、[大きさ|サイズ]nの__Y__マーカーを描画する
-折れ線グラフの__Y__マーカーの[大きさ|サイズ]をnに設定する
-'''
-
-plt.plot(xdata, ydata, marker=__X__, markeredgewidth=n)
-'''
-@test(plt=missing;xdata=ydata=aList;$$)
-xdataとydataの折れ線グラフに、線幅nの__Y__マーカーを描画する
-折れ線グラフの__Y__マーカーの線幅をnに設定する
-'''
 
 # 散布図
 
@@ -563,60 +460,182 @@ xdataとydata[について|の]散布図を描画して、sという凡例用の
 
 # ヒストグラム
 
-plt.hist(xdata)
+データ列 = [1,2,2,1,1,1,1]
+
+plt.hist(データ列)
 '''
 @alt(ヒストグラム|[柱状図|柱状グラフ|度数分布図])
-xdataのヒストグラムを描画する
-{xdataを|ヒストグラムで_}描画する
-xdataをヒストグラムにする
+
+ヒストグラムを描画する
 '''
 
-plt.hist(df[col])
+__X__ = xdata
+
+plt.hist(__X__)
 '''
-dfのcol[について|の]ヒストグラムを描画する
-{dfのcolを|ヒストグラムで_}描画する
-{ヒストグラムを使って|dfのcolを}描画する
+@X(aList;aArray;df[column];ds)
+@Y(aList;aArray;[dfの|]column;ds)
+
+__Y__のヒストグラムを描画する
+{__Y__を|ヒストグラムで_}可視化する
+__Y__をヒストグラムにする
 '''
 
-plt.hist(xdata, alpha=0.5)
+
+plt.hist(データ列, alpha=0.5)
 '''
 ヒストグラムを半透明[に|化]する
-[xdata[について|]の|]ヒストグラムを描画する際に半透明[に|化]にする
-[xdata[について|]の|]ヒストグラムを描画して、半透明[に|化]にする
+ヒストグラムを描画して、半透明[に|化]にする
 '''
 
-plt.hist(xdata, alpha=x)
+plt.hist(データ列, alpha=x)
 '''
-ヒストグラムの透明度をxに設定する
-[xdata[について|]の|]ヒストグラムを描画する際に、透明度をxに設定する
-[xdata[について|]の|]ヒストグラムを描画して、透明度をxに設定する
+{ヒストグラムの透明度を|xに}設定する
+ヒストグラムを描画して、{透明度を|xに}設定する
 '''
 
-plt.hist(xdata, bins=n)
+
+plt.hist(データ列, bins=n)
 '''
 @alt(ビン数|ビン[|の数]|区間[数|の数|])
-{ビン数をnに設定して|xdataのヒストグラムを}描画する
-ビン数nのヒストグラムを[xdataについて|]描画する
-[xdata[について|]の|]ヒストグラムを描画する際にビン数をnに設定する
+
+ヒストグラムのビン数を設定する
+{ビン数を[nに|]設定して|ヒストグラムを}描画する
+ビン数nのヒストグラムを描画する
+ヒストグラムを描画して、{ビン数を|nに}設定する
 '''
 
-plt.hist(xdata, range=(n, n2))
+start=0
+end=100
+
+plt.hist(データ列, range=(start, end))
 '''
 @alt(範囲|区間|間)
-{xdataのヒストグラムを|nからn2の範囲で}描画する
-{nからn2の範囲のヒストグラムを用いて|xdataを}描画する
-xdataをnからn2の範囲でヒストグラムにする
+
+ヒストグラムの範囲を設定する
+{ヒストグラムを|startからend[まで|]の範囲で}描画する
+{startからendの範囲のヒストグラムを用いて|xdataを}描画する
+startからend[まで|の範囲で]ヒストグラムにする
 '''
 
-plt.hist(xdata, density=True)
+plt.hist(データ列, density=True)
 '''
-[xdata[について|]の|]ヒストグラムを描画する際に合計を1にする
+ヒストグラムの描画して、正規化する
+正規化されたヒストグラムを描画する
+ヒストグラムを描画し、合計を1にする
 '''
 
-plt.hist([xdata, ydata], color=['b', 'r'])
+データ列2 = データ列
+
+plt.hist([データ列, データ列2], color=['b', 'r'])
 '''
-{[xdataとydata[について|]の|]ヒストグラムを|[二つ|横に]並べて}描画する
+２つのデータ列を並べてヒストグラムにする
+{ヒストグラムを|[２つ|横に]並べて}描画する
 '''
+
+# 箱ヒゲ図
+
+plt.boxplot(データ列)
+'''
+@alt(箱ひげ図|箱[髭|ヒゲ]図|ボックスチャート)
+
+データ列を箱ひげ図で描画する
+データ列を箱ひげ図にする
+{箱ひげ図で_|データ列を}可視化する
+'''
+
+plt.boxplot([データ列, データ列2])
+'''
+２つのデータ列を並べて箱ひげ図にする
+{箱ひげ図を|[２つ|横に]並べて}描画する
+箱ひげ図を[２つ|横に]並べる
+'''
+
+column='A'
+column2='B'
+column3='C'
+
+plt.boxplot([df[column], df[column2]])
+'''
+２つの[カラム|列]を並べて箱ひげ図にする
+'''
+
+# 棒グラフ
+
+ラベル列=['A', 'B', 'C']
+データ列=[10,8,6]
+
+plt.bar(ラベル列, データ列)
+'''
+@alt(縦棒グラフ|縦[向き|方向の]棒グラフ|[鉛直|垂直][な|]棒グラフ])
+
+棒グラフを描画する
+データ列とラベルを指定して、棒グラフを描画する
+縦棒グラフを描画する
+データ列とラベルを指定して、縦棒グラフを描画する
+'''
+
+plt.barh(ラベル列, データ列)
+'''
+@alt(横棒グラフ|横[向き|方向の]棒グラフ|[水平|平行][な|]棒グラフ])
+
+横棒グラフを描画する
+データ列とラベル列を指定して、横棒グラフを描画する
+'''
+
+plt.bar(ラベル列, データ列, color=rgb)
+'''
+{棒グラフの色を|[rgbに|]}設定する
+'''
+
+plt.barh(ラベル列, データ列, color=rgb)
+'''
+{横棒グラフの色を|[rgbに|]}設定する
+'''
+
+plt.bar(ラベル列, データ列, bottom=データ列2, color="red")
+'''
+[棒グラフ|縦棒グラフ]を積み上げにする
+[データ列とラベル列を指定して、|]積み上げ棒グラフを描画する
+'''
+
+plt.barh(ラベル列, データ列, bottom=データ列2, color="red")
+'''
+横棒グラフを積み上げにする
+[データ列とラベル列を指定して、|]積み上げ横棒グラフを描画する
+'''
+
+
+plt.bar(ラベル列, データ列, width = x)
+'''
+棒グラフを描画して、{[グラフ|棒の|]幅を|xに}設定する
+{棒グラフの幅を|xに}設定する
+'''
+
+plt.barh(ラベル列, データ列, width = x)
+'''
+横棒グラフを描画して、{[グラフ|棒の|]幅を|xに}設定する
+{横棒グラフの幅を|xに}設定する
+'''
+
+plt.bar(ラベル列, データ列, align='center')
+'''
+棒グラフを描画して、中央寄せする
+縦棒グラフを描画して、中央寄せする
+'''
+
+plt.barh(ラベル列, データ列, align='center')
+'''
+横棒グラフを描画して、中央寄せする
+'''
+
+
+
+sns.pairplot(df[[column, column2, column3]])
+'''
+複数[カラム|列]の[散布図|ヒストグラム|関係性]を[一度に|まとめて]描画する
+'''
+
 
 '''
 plt.subplot(X, y, 2)
@@ -625,56 +644,17 @@ X行y列の2つ目のグラフ指定
 
 # 描画
 
-
-
-plt.boxplot(X)
-Xについての[箱ひげ図|箱髭図|ボックスチャート]を描画する
-Xを箱ひげ図で描画する
-Xを箱ひげ図にする
-{箱ひげ図を用いて}Xを描画する
-
-plt.boxplot([X, Y])
-XとYについての箱ひげ図を描画する
-XとYを箱ひげ図に描画する
-XとYを箱ひげ図にする
-{箱ひげ図を用いて}XとYを描画する
-
-plt.boxplot([X, Y, Z])
-XとYとZについての箱ひげ図を描画する
-XとYとZを箱ひげ図に描画する
-XとYとZを箱ひげ図にする
-{箱ひげ図を用いて}XとYとZを描画する
-
-plt.boxplot(df['age'])
-@type(df)において、@type('age')の箱ひげ図を描画する
-@type(df)の@type('age')についての箱ひげ図を描画する
-@type(df)の@type('age')を箱ひげ図に描画する
-{箱ひげ図を用いて}@type(df)の@type('age')を描画する
-
 plt.boxplot([df['G1'], df['G2'], df['G3']])
 @type(df)の@type('G1', カラム)と@type('G2', カラム)と@type('G3', カラム)についての箱ひげ図を描画する
 [同じグラフ内で|]@type(df)の@type('G1')と@type('G2')と@type('G3')を箱ひげ図で描画する
 @type(df)の@type('G1')と@type('G2')と@type('G3')の箱ひげ図を一枚のグラフで描画する
 
-sns.pairplot(df[['G1', 'G2', 'G3']])
-@type(df)において、@type('G1')と@type('G2')と@type('G3')の関係性を[一気に|一度に]描画する
-@type(df)の@type('G1')と@type('G2')と@type('G3')について関係性を一気に描画する
-
-plt.bar(X, Y)
-{横軸をX}としたYの[縦棒グラフ|縦向き棒グラフ|縦方向の棒グラフ|鉛直棒グラフ|垂直棒グラフ|棒グラフ]を描画する
-{横軸をX}として、Yの縦棒グラフを描画する
 
 plt.barh(X, Y)
 {縦軸をX}としたYの[横棒グラフ|横向き棒グラフ|横方向の棒グラフ|水平棒グラフ|棒グラフ]を描画する
 {縦軸をX}として、Yの横棒グラフを描画する
 
-plt.bar(x, y, width = 0.5)
-{グラフ幅を0.5}として、{横軸をx}としたyの[縦棒グラフ]を描画する
-{棒と棒の隙間を0.5}として、{横軸をx}としたyの[縦向きの|]棒グラフを描画する
 
-plt.bar(x, y, align='center')
-棒グラフの位置を[真ん中として|中心に設定して]、{横軸をx}としたyの縦棒グラフを描画する
-棒グラフの位置を真ん中として、xとyの縦棒グラフを描画する
 
 plt.xticks(x, ['A', 'B', 'C'])
 横軸のラベルをxから'A'、'B'、'C'[へ変更する|に変える]

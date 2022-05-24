@@ -39,13 +39,17 @@ parse_as_tree = pg.generate(pg.grammar(GRAMMAR))
 
 PREFIX = {
     's': ('文字列', ''),
-    'element': ('[文字列|オブジェクト|]', ''),
-    'obj': ('[オブジェクト|]', ''),
-    'alist': ('リスト', ''),
-    'atuple': ('タプル', ''),
-    'aset': ('セット', ''),
-    'adict': ('辞書', ''),
-    'ty': ('型', '型'),
+    'obj': ('[オブジェクト]', ''),
+    'element': ('[文字列|オブジェクト]', ''),
+    'aArray': ('配列', ''),
+    'aList': ('リスト', ''),
+    'aTuple': ('[タプル|組]', ''),
+    'aSet': ('[セット|集合]', ''),
+    'aDict': ('[辞書|マッピング|タプル]', ''),
+    'df': ('[データフレーム|表データ]', ''),
+    'column': ('', '[列|カラム]'),
+    'ds': ('データ列', ''),
+    'ty': ('', '型'),
     'fin': ('[ファイル[入力|]|入力[|ストリーム]]', ''),
     'fout': ('[ファイル[出力|]|出力[|ストリーム]]', ''),
     'iterable': ('[[リスト|タプル|配列]|列|イテラブル|]', ''),
@@ -53,10 +57,10 @@ PREFIX = {
 
 ALTDIC = {
     '\n': '<NL>',
-    'に変換する': 'に[変換|]する',
-    'に設定する': '[に設定する|に変更する|に[セット|指定]する|にする]',
+    '変換する': '[変換|]する',
+    '設定する': '[設定する|[指定|セット|]する|変更する]',
     'に代入する': '[に[代入|]する|とする]',
-    'が_': '[が|は]',
+#    'が_': '[が|は]',
     'で_': '[で|として|を[用いて|使って]]',
     'の中の': '[[|の][中|内]の|の]', 'の中に': '[[|の][中|内]に|に]', '中で': '[[の|][中|内]で|で]',
     '全ての': '[全ての|すべての|全|]',
@@ -77,6 +81,79 @@ ALTDIC = {
     'コピーする': '[コピーする|複製する]',
 }
 
+VERB = [
+    ('する', 'して', 'し'),
+    ('させる', 'させて', 'させ'),
+
+    ('作る', '作って', '作り'),
+    ('使う', '使って', '使い'),
+    ('見る', '見て', '見'),
+    ('得る', '得て', '得'),
+    ('求める', '求めて', '求め'),
+    ('変える', '変えて', '変え'),
+    ('替える', '替えて', '替え'),
+    ('換える', '換えて', '換え'),
+    ('分ける', '分けて', '分け'),
+    ('並べる', '並べて', '並べ'),
+    ('調べる', '調べて', '調べ'),
+    ('入れる', '入れて', '入れ'),
+
+    ('まとめる', 'まとめて', 'まとめ'),
+    ('付ける', '付けて', '付け'),
+    ('つける', 'つけて', 'つけ'),
+    ('止める', '止めて', '止め'),
+    ('終える', '終えて', '終え'),
+    ('加える', '加えて', '加え'),
+    ('数える', '数えて', '数え'),
+    ('閉じる', '閉じて', '閉じ'),
+
+    ('開く', '開いて', '開き'),
+    ('除く', '除いて', '除き'),
+    ('描く', '描いて', '描き'),
+    ('書く', '書いて', '書き'),
+    ('引く', '引いて', '引き'),
+    ('出す', '出して', '出し'),
+    ('残す', '残して', '残し'),
+    ('消す', '消して', '消し'),
+    ('増やす', '増やして', '増やし'),
+    ('減らす', '減らして', '減らし'),
+    ('直す', '直して', '直し'),
+    ('足す', '足して', '足し'),
+
+    ('切る', '切って', '切り'),
+    ('読む', '読んで', '読み'),
+    ('込む', '込んで', '込み'),
+    ('積む', '積んで', '積み'),
+    ('選ぶ', '選んで', '選び'),
+]
+
+def verb_then(verb, alt_form=False):
+    for suffix, then, then2 in VERB:
+        if verb.endswith(suffix):
+            then = verb.replace(suffix, then)
+            if alt_form:
+                then2 = verb.replace(suffix, then2)
+                return f'[{then}|{then2}]'
+            return then
+    return None
+
+def alter_all_verb_then(s):
+    alt = 0
+    for verb, then, then2 in VERB:
+        if verb in s:
+            alt+=1
+            s = s.replace(verb, f'[{then}|{then2}、]')
+    if alt == 0:
+        print('NON', verb)
+    return s
+
+def append_altdic(altdic, key, value):
+    altdic[key] = value
+    then = verb_then(key)
+    if then is not None:
+        value = alter_all_verb_then(value)
+        print('altDic', then, value)
+        altdic[then] = value
 
 # auto_augmentation
 
@@ -84,16 +161,15 @@ BEGIN = '([^A-Za-z0-9]|^)'
 END = ('(?![A-Za-z0-9]|$)')
 VARPAT = re.compile(BEGIN+r'([A-Za-z][A-Za-z_]+)(\d?)'+END)
 
-
 def _ta(name, number, prefixdic):
     prefix, suffix = prefixdic.get(name, ('', ''))
     if prefix == '' and suffix == '':
         if name.endswith('func'):
             prefix = '関数'
             suffix = '関数'
-    if '|' not in prefix:
+    if prefix != '':
         prefix = f'[{prefix}|]'
-    if suffix != '' and '|' not in suffix:
+    if suffix != '':
         suffix = f'[{suffix}|]'
     var = f'{name}{number}'
     if suffix == '':
@@ -157,7 +233,8 @@ class Corpus(object):
                 argument = argument.replace('_', '')
             if not argument.startswith('['):
                 argument = f'[{argument}]'
-            self.altDic[key] = argument
+            #self.altDic[key] = argument
+            append_altdic(self.altDic, key, argument)
         elif name == '@prefix':
             t = _split(argument)
             if len(t) == 2:
@@ -251,14 +328,8 @@ def main(max_iter=5):
     for filename in sys.argv[1:]:
         corpus.read(filename)
     corpus.generate(max_iter=max_iter)
-    corpus.save_data(f'kogi{max_iter}.tsv')
-
+    if max_iter >= 0:
+        corpus.save_data(f'kogi{max_iter}.tsv')
 
 if __name__ == '__main__':
-    main(0)
-    main(1)
-    main(2)
-    main(3)
-    main(4)
-    main(5)
-    main(8)
+    main(10)
