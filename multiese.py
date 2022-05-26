@@ -52,7 +52,7 @@ PREFIX = {
     'ty': ('', '型'),
     'fin': ('[ファイル[入力|]|入力[|ストリーム]]', ''),
     'fout': ('[ファイル[出力|]|出力[|ストリーム]]', ''),
-    'iterable': ('[[リスト|タプル|配列]|列|イテラブル|]', ''),
+    'iterable': ('[イテラブル|列|シーケンス|[リスト|タプル|配列]]', ''),
 }
 
 ALTDIC = {
@@ -60,11 +60,12 @@ ALTDIC = {
     '変換する': '[変換|]する',
     '設定する': '[設定する|[指定|セット|]する|変更する]',
     'に代入する': '[に[代入|]する|とする]',
-#    'が_': '[が|は]',
+    #    'が_': '[が|は]',
     'で_': '[で|として|を[用いて|使って]]',
     'の中の': '[[|の][中|内]の|の]', 'の中に': '[[|の][中|内]に|に]', '中で': '[[の|][中|内]で|で]',
     '全ての': '[全ての|すべての|全|]',
     'の名前': '[名|の名前]',
+    'された': '[された|された|した]',
     'まとめて': '[まとめて|一度に|]',
     '一つ': '[ひとつ|一つ]', '二つ': '[ふたつ|二つ]',
     '１': '[一|１|1]', '２': '[二|２|2]', '３': '[三|３|3]',
@@ -127,6 +128,7 @@ VERB = [
     ('選ぶ', '選んで', '選び'),
 ]
 
+
 def verb_then(verb, alt_form=False):
     for suffix, then, then2 in VERB:
         if verb.endswith(suffix):
@@ -137,15 +139,17 @@ def verb_then(verb, alt_form=False):
             return then
     return None
 
+
 def alter_all_verb_then(s):
     alt = 0
     for verb, then, then2 in VERB:
         if verb in s:
-            alt+=1
+            alt += 1
             s = s.replace(verb, f'[{then}|{then2}、]')
     if alt == 0:
         print('NON', verb)
     return s
+
 
 def append_altdic(altdic, key, value):
     altdic[key] = value
@@ -157,9 +161,11 @@ def append_altdic(altdic, key, value):
 
 # auto_augmentation
 
+
 BEGIN = '([^A-Za-z0-9]|^)'
 END = ('(?![A-Za-z0-9]|$)')
-VARPAT = re.compile(BEGIN+r'([A-Za-z][A-Za-z_]+)(\d?)'+END)
+VARPAT = re.compile(BEGIN+r'([A-Za-z][A-Za-z_]*)(\d?)'+END)
+
 
 def _ta(name, number, prefixdic):
     prefix, suffix = prefixdic.get(name, ('', ''))
@@ -167,14 +173,14 @@ def _ta(name, number, prefixdic):
         if name.endswith('func'):
             prefix = '関数'
             suffix = '関数'
-    if prefix != '':
-        prefix = f'[{prefix}|]'
-    if suffix != '':
-        suffix = f'[{suffix}|]'
     var = f'{name}{number}'
-    if suffix == '':
-        return var, f'{prefix}{var}'
-    return var, f'[{prefix}{var}|{var}{suffix}]'
+    if suffix != '':
+        if prefix != '':
+            return var, f'[{var}{suffix}|{prefix}{var}|{prefix}|{suffix}]'
+        return var, f'[{var}{suffix}|{suffix}]'
+    if prefix != '':
+        return var, f'[{prefix}|{prefix}{var}|{var}]'
+    return var, var
 
 
 def _split(s):
@@ -282,7 +288,7 @@ class Corpus(object):
                 doc0 = multiese_da(doc, choice=0.0, shuffle=0.0)
                 self.train_data.append((doc0, code))
                 for _ in range(max_iter):
-                    doc2 = multiese_da(doc, choice=0.99, shuffle=shuffle)
+                    doc2 = multiese_da(doc, choice=0.9, shuffle=shuffle)
                     if doc0 != doc2:
                         train_test_data.add(doc2)
                 train_test_data = list(train_test_data)
@@ -330,6 +336,7 @@ def main(max_iter=5):
     corpus.generate(max_iter=max_iter)
     if max_iter >= 0:
         corpus.save_data(f'kogi{max_iter}.tsv')
+
 
 if __name__ == '__main__':
     main(10)

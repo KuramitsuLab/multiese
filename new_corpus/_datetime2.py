@@ -8,6 +8,7 @@ import datetime
 import time
 '''
 @alt(タイムスタンプ|エポック[秒|タイム|]|UNIX[時間|時刻|タイム])
+
 [時間|タイムスタンプ]を[使う|インポートする]
 '''
 
@@ -25,7 +26,11 @@ datetime.datetime.now()
 '''
 @alt(本日|今日|現在)
 @alt(時刻|時間)
-@alt(日時|日付と時[間|刻])
+@alt(日時=[日付時刻|タイムスタンプ])
+@prefix(aDatetime;日時データ)
+@prefix(aDate;日付データ)
+@prefix(timestamp;エポック秒)
+
 本日の日時[|を求める]
 '''
 
@@ -35,36 +40,30 @@ day = 24
 
 datetime.datetime(year=year, month=1, day=1)
 '''
-@test(n,month,day=2022,12,24;$$)
-@alt(オブジェクト化する|得る|作る)
 year年の日時[|をオブジェクト化する]
 year年を日時に変換する
 '''
 
 datetime.datetime(year=year, month=month, day=1)
 '''
-@test(n,month,day=2022,12,24;$$)
 year年day月の日時[|をオブジェクト化する]
 year年day月を日時に変換する
 '''
 
 datetime.datetime(year=year, month=month, day=day)
 '''
-@test(n,month,day=2022,12,24;$$)
 year年month月day日の日時[|をオブジェクト化する]
 year年month月day日を日時に変換する
 '''
 
 datetime.datetime(year=year, month=month, day=day, hour=hour)
 '''
-@test(n,month,day,hour,minute,second=2022,12,24,0,0,0;$$)
 year年month月day日hour時の日時[|をオブジェクト化する]
 year年month月day日hour時を日時に変換する
 '''
 
 datetime.datetime(year=year, month=month, day=day, hour=hour, minute=minute)
 '''
-@test(n,month,day,hour,minute,second=2022,12,24,0,0,0;$$)
 year年month月day日hour時minute分の日時[|をオブジェクト化する]
 year年month月day日hour時minute分を日時に変換する
 '''
@@ -72,42 +71,51 @@ year年month月day日hour時minute分を日時に変換する
 datetime.datetime(year=year, month=month, day=day,
                   hour=hour, minute=minute, second=second)
 '''
-@test(n,month,day,hour,minute,second=2022,12,24,0,0,0;$$)
 year年month月day日hour時minute分second秒の日時[|をオブジェクト化する]
 year年month月day日hour時minute分second秒を日時に変換する
 '''
+
+年 = 2022
+月 = 12
+日 = 24
+時 = 0
+分 = 0
+秒 = 0
+
+datetime.datetime(年, 月, 日, 時, 分, 秒)
+'''
+[datetime|日時]をインスタンス化する
+[年月日|日付]と[時刻|時間]から日時[|を作る]
+'''
+
 
 timestamp = 0
 
 datetime.datetime.fromtimestamp(timestamp)
 '''
-@prefix(timestamp;エポック)
 timestamp[を|から]日時に変換する
 '''
 
-dateString = '2011-11-04'
+日付の書かれた文字列 = '2011-11-04'
 
-datetime.datetime.fromisoformat(dateString)
+datetime.datetime.fromisoformat(日付の書かれた文字列)
 '''
-@test(s='2011-11-04';$$)
 @alt(ISO書式|ISO8601[|形式])
-ISO書式のdateString[を|から]日時に変換する
-dateString[を|から]ISO書式で_日時に変換する
+[ISO書式の|]文字列[を|から]日時に変換する
+文字列[を|から][ISO書式で_|]日時に変換する
 '''
 
 dateString = '21/11/06 16:30'
 format = '%d/%m/%y %H:%M'
 
-datetime.datetime.strptime(dateString, format)
+datetime.datetime.strptime(日付の書かれた文字列, format)
 '''
-@test(s='21/11/06 16:30';s2='%d/%m/%y %H:%M';$$)
-dateStringからformatのパターンで_日時に変換する
-formatパターンのdateStringを日時に変換する
+{文字列から|formatのパターンで_}日時に変換する
+formatパターンの文字列を日時に変換する
 '''
 
 datetime.datetime.today()
 '''
-@test(type(_))
 本日の[|ローカルな]日時[|を得る]
 '''
 
@@ -116,9 +124,7 @@ aDate = datetime.date.fromisoformat('2022-12-24')
 
 aDatetime.timestamp()
 '''
-@prefix(aDatetime;日時)
-@prefix(aDate;日付)
-aDatetimeをタイムスタンプに変換する
+aDatetimeをエポック秒に変換する
 aDatetimeを[浮動小数点数|数値]に変換する
 '''
 
@@ -142,40 +148,34 @@ aDatetimeの時刻[|を得る]
 
 datetime.date(year=year, month=1, day=1)
 '''
-@test(n,month,day=2022,12,24;$$)
 year年の日付[|をオブジェクト化する]
 year年を日付に変換する
 '''
 
 datetime.date(year=year, month=month, day=1)
 '''
-@test(year,month,day=2022,12,24;$$)
 year年month月の日付[|をオブジェクト化する]
 year年month月を日付に変換する
 '''
 
 datetime.date(year=year, month=month, day=day)
 '''
-@test(n,month,day=2022,12,24;$$)
 year年month月day日の日付[|をオブジェクト化する]
 year年month月day日を日付に変換する
 '''
 
 datetime.date.today()
 '''
-@test(type(_))
 本日の[|ローカルな]日付[|を得る]
 '''
 
 datetime.date.today() + datetime.timedelta(days=1)
 '''
-@test(type(_))
 明日の日付[|を得る]
 '''
 
 datetime.date.today() - datetime.timedelta(days=1)
 '''
-@test(type(_))
 昨日の日付[|を得る]
 '''
 
@@ -371,17 +371,17 @@ __Y__からn秒[分、|を]減算する
 __X__2 = aDatetime
 __X__ < __X__2
 '''
-__Y__[が|は]_Y__2より[前|先|早い]かどうか
+__Y__[が|は]__Y__2より[前|先|早い]かどうか
 '''
 
 __X__ > __X__2
 '''
-__Y__[が|は]_Y__2より[後ろ|あと|遅い]かどうか
+__Y__[が|は]__Y__2より[後ろ|あと|遅い]かどうか
 '''
 
 __X__ == __X__2
 '''
-__Y__[が|は]_Y__2と同時かどうか
+__Y__[が|は]__Y__2と同時かどうか
 '''
 
 __X__ - __X__2
