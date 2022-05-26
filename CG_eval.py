@@ -63,7 +63,7 @@ def Exact_Match(ss):
   print("BLACK_NG：",black_NG)
   print("正答数：",correct)
   print("誤答数：",no_correct)
-  print("正答率：",correct_answer_rate)
+  print("正答率：",round(correct_answer_rate,5))
 
 
 def Levenstein(ss):
@@ -79,7 +79,7 @@ def Levenstein(ss):
   #平均値
   leven=sum_Levenstein/len(ss)
   
-  print("leven：",round(leven,4))
+  print("leven：",round(leven,5))
 
 
 def BLEU(ss):
@@ -109,7 +109,7 @@ def BLEU(ss):
      #平均値
   bleu = sum_bleu / len(ss)
 
-  print("BLEU：",round(bleu,4))
+  print("BLEU：",round(bleu,5))
 
 
 def ROUGE_L(ss):
@@ -129,7 +129,7 @@ def ROUGE_L(ss):
   #平均
   ROUGE_score=sum_ROUGE_score/len(ss)
 
-  print("ROUGE-L：",round(ROUGE_score,4))
+  print("ROUGE-L：",round(ROUGE_score,5))
 
 def arg():
   try:
@@ -150,9 +150,10 @@ def main():
   print(sys.argv[1])
 
   Exact_Match(ss)
-  Levenstein(ss)
   BLEU(ss)
   ROUGE_L(ss)
+  Levenstein(ss)
+  
 
 main()
 

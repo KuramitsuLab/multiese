@@ -11,15 +11,6 @@ element = 1
 
 {}
 '''
-@alt(辞書|辞書|[マップ|マッピング])
-@alt(キー|項目名)
-@alt(エントリ=[項目|エントリ|値])
-@alt(得る|参照する|見る)
-@alt(クリアする|消去する|空にする)
-
-@prefix(key;[キー|項目名])
-@prefix(element;要素)
-
 空の辞書[|を作る]
 '''
 
@@ -30,29 +21,32 @@ dict(name=element)
 
 aDict[key]
 '''
+@alt(得る|参照する|見る)
 aDictのkeyの値[|を得る]
 '''
 
 list(aDict)
 '''
-aDictのキーを列挙する
+@alt(キー|項目名)
 aDictのキー一覧[|を得る]
 '''
 
 len(aDict)
 '''
+@alt(エントリ|項目)
 aDictのエントリ数[|を得る]
 '''
 
 aDict.clear()
 '''
-aDict[の全[エントリ]|]をクリアする
+@alt(クリアする|消去する|空にする)
+aDictの全[エントリ]をクリアする
 '''
 
 aDict.copy()
 '''
 aDictを[|浅く]コピーする
-aDictの[浅い|]コピーを作る
+aDictの[浅い|]コピーを行う
 '''
 
 aDict.get(key)
@@ -75,7 +69,6 @@ key in aDict
 '''
 @alt(存在する|ある|存在している)
 @alt(定義済み|[|既に]定義されている)
-
 {keyが|aDictに}存在するかどうか
 {keyが|aDict上で}定義済みかどうか
 '''
@@ -84,37 +77,34 @@ key not in aDict
 '''
 @alt(存在しない|ない|存在していない)
 @alt(未定義|[まだ|]定義されていない)
-
 {keyが|aDictに}存在するかどうか
 {keyが|aDict上で}未定義かどうか
 '''
 
 aDict.items()
 '''
-aDictのキーとその[値|エントリ]を列挙する
-aDictのキーとその[値|エントリ]をペアとして取り出す
+@alt(の一覧|一覧)
+aDictの[エントリ|キーとその値]の一覧
 '''
 
 aDict.keys()
 '''
-aDictのキーを列挙する
-aDictのキーの一覧[|を得る]
+aDictのキーの一覧
 '''
 
 aDict.values()
 '''
-aDictの[値|エントリ]を列挙する
-aDictの[値]の一覧[|を得る]
+aDictの[値]の一覧
 '''
 
 element in aDict.values()
 '''
-{element[が|は]|aDictの値として}含まれているかどうか
+{elementが|aDictの値に}含まれているかどうか
 '''
 
 element not in aDict.values()
 '''
-{element[が|は]|aDictの値に}含まれていないかどうか
+{elementが|aDictの値に}含まれていないかどうか
 '''
 
 aDict[key] = element
@@ -133,35 +123,34 @@ aDict.setdefault(key, element)
 
 aDict.update(aDict2)
 '''
-@alt(追加更新する=[更新する|追加する|加えて、更新する])
-
-aDictに[|別の]aDict2のエントリを追加更新する
+@test($$;aDict)
+alt(追加更新する|追加する|加えて、更新する)
+aDictにaDict2のエントリを追加更新する
 '''
 
 kwargs = dict(A=1, B=2)
 
 aDict.update(**kwargs)
 '''
-{aDictに|キーワード引数で_}追加更新する
+@test(kwargs={'B':2};$$;aDict)
+aDictにキーワード引数kwargsを追加更新する
 '''
 
 aDict | aDict2
 '''
 @alt(合体する|結合する|マージする)
-
 ふたつの辞書を合体する
+aDictとaDict2を合体する
 '''
 
 aDict.pop(key)
 '''
-@alt(ポップする|取り出す)
-
-{aDictから|keyで指定されたエントリを}ポップする
+aDictからkeyを取り除く
 '''
 
 aDict.popitem()
 '''
-{aDictから|最後[の|に追加した]エントリを}ポップする
+aDictから最後に追加したエントリを取り出す
 '''
 
 
@@ -175,17 +164,18 @@ aList2 = [4, 5, 6]
 
 dict(zip(aList, aList2))
 '''
-２つのリストから辞書[|を作る]
+aListとaList2から辞書[|を作成する]
 '''
 
 dict(aDict)
 '''
 @alt(コピーする|複製する)
 aDictを[浅く|]コピーする
-aDictのコピー[|を作る]
+aDictのコピー[を[得る|作る]]
 '''
 
 {k: copy.copy(v) for k, v in aDict.items()}
 '''
-aDictの[内部|値]もコピーする
+@test(import copy;$$)
+aDictを値を含めてコピーする
 '''

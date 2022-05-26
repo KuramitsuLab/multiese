@@ -3,6 +3,7 @@ import re
 import csv
 import sys
 import pegtree as pg
+import random
 from multiese_da import multiese_da
 
 ##
@@ -38,27 +39,33 @@ parse_as_tree = pg.generate(pg.grammar(GRAMMAR))
 
 PREFIX = {
     's': ('文字列', ''),
-    'element': ('[文字列|オブジェクト|]', ''),
-    'obj': ('[オブジェクト|]', ''),
-    'alist': ('リスト', ''),
-    'atuple': ('タプル', ''),
-    'aset': ('セット', ''),
-    'adict': ('辞書', ''),
-    'ty': ('型', '型'),
+    'obj': ('[オブジェクト]', ''),
+    'element': ('[文字列|オブジェクト]', ''),
+    'aArray': ('配列', ''),
+    'aList': ('リスト', ''),
+    'aTuple': ('[タプル|組]', ''),
+    'aSet': ('[セット|集合]', ''),
+    'aDict': ('[辞書|マッピング|タプル]', ''),
+    'df': ('[データフレーム|表データ]', ''),
+    'column': ('', '[列|カラム]'),
+    'ds': ('データ列', ''),
+    'ty': ('', '型'),
     'fin': ('[ファイル[入力|]|入力[|ストリーム]]', ''),
     'fout': ('[ファイル[出力|]|出力[|ストリーム]]', ''),
-    'iterable': ('[[リスト|タプル|配列]|列|イテラブル|]', ''),
+    'iterable': ('[イテラブル|列|シーケンス|[リスト|タプル|配列]]', ''),
 }
 
 ALTDIC = {
-    'に変換する': 'に[変換|]する',
-    'に設定する': '[に設定する|に変更する|に[セット|指定]する|にする]',
+    '\n': '<NL>',
+    '変換する': '[変換|]する',
+    '設定する': '[設定する|[指定|セット|]する|変更する]',
     'に代入する': '[に[代入|]する|とする]',
-    'が_': '[が|は]',
+    #    'が_': '[が|は]',
     'で_': '[で|として|を[用いて|使って]]',
     'の中の': '[[|の][中|内]の|の]', 'の中に': '[[|の][中|内]に|に]', '中で': '[[の|][中|内]で|で]',
     '全ての': '[全ての|すべての|全|]',
     'の名前': '[名|の名前]',
+    'された': '[された|された|した]',
     'まとめて': '[まとめて|一度に|]',
     '一つ': '[ひとつ|一つ]', '二つ': '[ふたつ|二つ]',
     '１': '[一|１|1]', '２': '[二|２|2]', '３': '[三|３|3]',
@@ -75,12 +82,89 @@ ALTDIC = {
     'コピーする': '[コピーする|複製する]',
 }
 
+VERB = [
+    ('する', 'して', 'し'),
+    ('させる', 'させて', 'させ'),
+
+    ('作る', '作って', '作り'),
+    ('使う', '使って', '使い'),
+    ('見る', '見て', '見'),
+    ('得る', '得て', '得'),
+    ('求める', '求めて', '求め'),
+    ('変える', '変えて', '変え'),
+    ('替える', '替えて', '替え'),
+    ('換える', '換えて', '換え'),
+    ('分ける', '分けて', '分け'),
+    ('並べる', '並べて', '並べ'),
+    ('調べる', '調べて', '調べ'),
+    ('入れる', '入れて', '入れ'),
+
+    ('まとめる', 'まとめて', 'まとめ'),
+    ('付ける', '付けて', '付け'),
+    ('つける', 'つけて', 'つけ'),
+    ('止める', '止めて', '止め'),
+    ('終える', '終えて', '終え'),
+    ('加える', '加えて', '加え'),
+    ('数える', '数えて', '数え'),
+    ('閉じる', '閉じて', '閉じ'),
+
+    ('開く', '開いて', '開き'),
+    ('除く', '除いて', '除き'),
+    ('描く', '描いて', '描き'),
+    ('書く', '書いて', '書き'),
+    ('引く', '引いて', '引き'),
+    ('出す', '出して', '出し'),
+    ('残す', '残して', '残し'),
+    ('消す', '消して', '消し'),
+    ('増やす', '増やして', '増やし'),
+    ('減らす', '減らして', '減らし'),
+    ('直す', '直して', '直し'),
+    ('足す', '足して', '足し'),
+
+    ('切る', '切って', '切り'),
+    ('読む', '読んで', '読み'),
+    ('込む', '込んで', '込み'),
+    ('積む', '積んで', '積み'),
+    ('選ぶ', '選んで', '選び'),
+]
+
+
+def verb_then(verb, alt_form=False):
+    for suffix, then, then2 in VERB:
+        if verb.endswith(suffix):
+            then = verb.replace(suffix, then)
+            if alt_form:
+                then2 = verb.replace(suffix, then2)
+                return f'[{then}|{then2}]'
+            return then
+    return None
+
+
+def alter_all_verb_then(s):
+    alt = 0
+    for verb, then, then2 in VERB:
+        if verb in s:
+            alt += 1
+            s = s.replace(verb, f'[{then}|{then2}、]')
+    if alt == 0:
+        print('NON', verb)
+    return s
+
+
+def append_altdic(altdic, key, value):
+    altdic[key] = value
+    then = verb_then(key)
+    if then is not None:
+        value = alter_all_verb_then(value)
+        print('altDic', then, value)
+        altdic[then] = value
 
 # auto_augmentation
 
+
 BEGIN = '([^A-Za-z0-9]|^)'
 END = ('(?![A-Za-z0-9]|$)')
-VARPAT = re.compile(BEGIN+r'([A-Za-z_]+)(\d?)'+END)
+VARPAT = re.compile(BEGIN+r'([A-Za-z][A-Za-z_]*)(\d?)'+END)
 
 
 def _ta(name, number, prefixdic):
@@ -89,14 +173,14 @@ def _ta(name, number, prefixdic):
         if name.endswith('func'):
             prefix = '関数'
             suffix = '関数'
-    if '|' not in prefix:
-        prefix = f'[{prefix}|]'
-    if suffix != '' and '|' not in suffix:
-        suffix = f'[{suffix}|]'
     var = f'{name}{number}'
-    if suffix == '':
-        return var, f'{prefix}{var}'
-    return var, f'[{prefix}{var}|{var}{suffix}]'
+    if suffix != '':
+        if prefix != '':
+            return var, f'[{var}{suffix}|{prefix}{var}|{prefix}|{suffix}]'
+        return var, f'[{var}{suffix}|{suffix}]'
+    if prefix != '':
+        return var, f'[{prefix}|{prefix}{var}|{var}]'
+    return var, var
 
 
 def _split(s):
@@ -133,12 +217,14 @@ class Corpus(object):
     def make_pair(self, code, docs):
         self.corpus.append((code, [self.extend_alt(doc) for doc in docs]))
 
-    def multiplex(self, code, docs):
+    def multiplex(self, code, docs, multi=True):
         if '__X__' in code:
             for x, y in zip(self.X, self.Y):
                 codeX = code.replace('__X__', x)
                 self.make_pair(codeX, [doc.replace('__Y__', y)
                                        for doc in docs])
+                if multi == False:
+                    break
         else:
             self.make_pair(code, docs)
 
@@ -153,7 +239,8 @@ class Corpus(object):
                 argument = argument.replace('_', '')
             if not argument.startswith('['):
                 argument = f'[{argument}]'
-            self.altDic[key] = argument
+            #self.altDic[key] = argument
+            append_altdic(self.altDic, key, argument)
         elif name == '@prefix':
             t = _split(argument)
             if len(t) == 2:
@@ -179,9 +266,10 @@ class Corpus(object):
                 ss.append(line)
         return ss
 
-    def read(self, filename):
+    def read(self, filename, multi=True):
         #settings = {'alt': new_altdic(), 'prefix': PREFIX.copy()}
         self.altDic = ALTDIC.copy()
+        # print(self.altDic)
         self.prefixDic = PREFIX.copy()
         self.reading_filename = filename
         with open(filename) as f:
@@ -189,30 +277,36 @@ class Corpus(object):
             for t in tree:
                 code = str(t[0]).strip()
                 docs = self.parse_settings(str(t[1]).splitlines())
-                self.multiplex(code, docs)
+                self.multiplex(code, docs, multi=multi)
 
-    def generate(self, max_iter=3, shuffle=0.5):
+    def generate(self, max_iter=4, shuffle=0.5):
         self.train_data = []
         self.test_data = []
         for code, docs in self.corpus:
-            train_data = set()
-            test_data = set()
             for doc in docs:
-                doc2 = multiese_da(doc, choice=0.0, shuffle=0.0)
-                train_data.add(doc2)
+                train_test_data = set()
+                doc0 = multiese_da(doc, choice=0.0, shuffle=0.0)
+                self.train_data.append((doc0, code))
                 for _ in range(max_iter):
-                    doc2 = multiese_da(doc, choice=1.0, shuffle=shuffle)
-                    train_data.add(doc2)
-            for doc in docs:
-                doc = multiese_da(doc, choice=1.1, shuffle=1.1)
-                if doc not in train_data:
-                    test_data.add(doc)
-            for doc in train_data:
-                self.train_data.append((doc, code))
-            for doc in test_data:
-                self.test_data.append((doc, code))
+                    doc2 = multiese_da(doc, choice=0.9, shuffle=shuffle)
+                    if doc0 != doc2:
+                        train_test_data.add(doc2)
+                train_test_data = list(train_test_data)
+                if len(train_test_data) > 2:
+                    random.shuffle(train_test_data)
+                    for doc in train_test_data[:-1]:
+                        self.train_data.append((doc, code))
+                    self.test_data.append((train_test_data[-1], code))
+                else:
+                    for doc in train_test_data[:-1]:
+                        self.train_data.append((doc, code))
 
     def save_data(self, filename='kogi.tsv'):
+        if len(self.test_data) == 0:
+            random.shuffle(self.train_data)
+            train_size = (len(self.train_data) * 7) // 10
+            self.test_data = self.train_data[train_size:]
+            self.train_data = self.train_data[:train_size]
         filename = filename.replace('.tsv', '_train.tsv')
         with open(filename, 'w') as f:
             writter = csv.writer(f, delimiter="\t")
@@ -227,13 +321,22 @@ class Corpus(object):
                     writter.writerow(row)
 
 
-def main():
+def main_small():
+    corpus = Corpus()
+    for filename in sys.argv[1:]:
+        corpus.read(filename, multi=False)
+    corpus.generate(max_iter=0)
+    corpus.save_data('kogi0.tsv')
+
+
+def main(max_iter=5):
     corpus = Corpus()
     for filename in sys.argv[1:]:
         corpus.read(filename)
-    corpus.generate()
-    corpus.save_data('kogi.tsv')
+    corpus.generate(max_iter=max_iter)
+    if max_iter >= 0:
+        corpus.save_data(f'kogi{max_iter}.tsv')
 
 
 if __name__ == '__main__':
-    main()
+    main(10)

@@ -1,28 +1,20 @@
+import pickle
+import re
 import keyword
 from io import BytesIO
-from operator import is_
 import token
-from tokenize import tokenize, open
+from tokenize import tokenize  # , open
 from importlib import import_module
 import sys
 import random
 import csv
 import copy
 import collections
-import datetime
 import builtins
 import pandas as pd
-import numpy as np
 import warnings
 
 warnings.simplefilter('ignore')
-
-df = pd.DataFrame(data={'A': [1, 2, 3],
-                        'B': [1, 1, 0],
-                        'C': [1, 0, 1]})
-df2 = pd.DataFrame(data={'A': [1, 2, 3],
-                         'B': ["a", "b", "c"],
-                         'C': ["111", "01", "1"]})
 
 
 class P(object):
@@ -31,15 +23,12 @@ class P(object):
         self.B = 0
 
 
-from io import BytesIO
-from tokenize import tokenize, open
-import re
-
 pattern = re.compile(r'[\(, .\+\-\)]')
+
 
 def tokenize_pycode(code):
     try:
-        ss=[]
+        ss = []
         tokens = tokenize(BytesIO(code.encode('utf-8')).readline)
         for toknum, tokval, _, _, _ in tokens:
             if toknum != 62 and tokval != '' and tokval != 'utf-8':
@@ -73,7 +62,14 @@ class Missing:
     #     return self.msg[index]
 
 
-MUTABLES = {type([]), type({}), type(set()), type(bytearray()), type(pd.DataFrame())}
+MUTABLES = {
+    type([]),
+    type({}),
+    type(set()),
+    type(bytearray()),
+    type(pd.DataFrame())
+}
+
 
 def copy_mutable(o):
     t = type(o)
@@ -81,14 +77,16 @@ def copy_mutable(o):
         return copy.copy(o)
     return o
 
+
 def is_assignment(line):
     tokens = tokenize_pycode(line)
     for token in tokens:
         if token == '=':
             return True
-        if token == '(' or token== '[':
+        if token == '(' or token == '[':
             break
     return False
+
 
 def is_expression(line):
     tokens = tokenize_pycode(line)
@@ -101,16 +99,20 @@ def is_expression(line):
             break
     return True
 
+
 def shorten_name(name):
     return name[:-1] if name[-1].isdigit() else name
+
 
 def extract_vars(globals, locals):
     for name, value in locals.items():
         #name = shorten_name(name)
         if name not in dir(builtins):
             values = globals.get(name, [])
-            values.append(value)
+            if value not in values:
+                values.append(value)
             globals[name] = values
+
 
 def read_vars(filename, evars):
     globals = {'print': Missing('print')}
@@ -136,6 +138,7 @@ def read_vars(filename, evars):
 
 VALUE = set(['True', 'False', 'None'])
 
+
 def iskeyword(s):
     if s in VALUE or s in dir(builtins):
         return True
@@ -148,12 +151,14 @@ def extract_names(code):
         tokens = tokenize(BytesIO(code.encode('utf-8')).readline)
         prev = ''
         for toknum, tokval, _, _, _ in tokens:
-            # print(toknum, tokval)
+            #print(toknum, tokval, names, code)
             if toknum == token.NAME and not iskeyword(tokval) and prev != '.':
                 names.append(tokval)
-            if tokval == '=' and prev in vars:
+            if tokval == '=' and prev in names:
                 names.pop()
             prev = tokval
+    except Exception as e:
+        print('FIXME', e, code)
     finally:
         return names
 
@@ -166,11 +171,12 @@ def match(value1, value2):
         s2, _, _ = s2.partition('at 0x')
     return s1 == s2
 
+
 def compare_vars(vars, vars2):
     if len(vars) != len(vars2):
         return False
     if '_' in vars and '_' in vars2:
-        return match(vars['_'], vars['_'])
+        return match(vars['_'], vars2['_'])
     for key in vars:
         if key not in vars2:
             return False
@@ -178,24 +184,33 @@ def compare_vars(vars, vars2):
             return False
     return True
 
+
 def iskeyword(s):
     if s in VALUE or s in dir(builtins):
         return True
     return keyword.iskeyword(s)
 
+
 def modify_code(code):
     if is_expression(code):
         return '_ = ' + code
     return code
-    
+
+
+modules = {
+    'sys': Missing('sys'), 'os': Missing('os'),
+    # 'plt': Missing('plt'), 'sns': Missing('sns'),
+}
 
 
 class TestSuite:
     def __init__(self, name_values):
         self.name_values = name_values
         self.tested = 0
-        self.untested = 0
         self.syntax_errors = 0
+        self.failed = 0
+        self.baddata = 0
+        self.untested = 0
         self.tested_ok = 0
         self.missing = 0
 
@@ -204,25 +219,24 @@ class TestSuite:
         code = modify_code(code)
         code2 = modify_code(code2)
         self.epoch_succ = 0
-        for _ in range(4):
+        self.epoch_refok = 0
+        self.epoch_missing = False
+        for _ in range(10):
             if self.try_test_code(code, code2) == False:
-                return 
-        if self.epoch_succ == 4:
+                if self.epoch_missing:
+                    self.missing += 1
+                return
+            if self.epoch_succ > 3 and self.epoch_refok > 2:
+                break
+        if self.epoch_missing:
+            self.missing += 1
+        if self.epoch_succ > 3 and self.epoch_refok > 2:
             self.tested_ok += 1
-        # if self.epoch_succ == 0:
-
-    def choose_vars(self, code, vars):
-        names = extract_names(code)
-        for name in names:
-            if name in self.name_values:
-                value = random.sample(self.name_values[name], k=1)
-                vars[name] = copy_mutable(value)
-            else:
-                vars[name] = Missing(name)
-        vars2 = {}
-        for name, value in vars.items():
-            vars2[name] = copy_mutable(value)
-        return vars, vars2
+            return
+        if self.epoch_refok == 0:
+            self.baddata += 1
+        self.untested += 1
+        print(f'untested({self.epoch_succ})', code)
 
     def try_test_code(self, code, code2):
         globals = {
@@ -232,33 +246,64 @@ class TestSuite:
             'open': Missing('open'),
         }
         locals = {}
-        globals, globals2 = self.choose_vars(code, globals)
+        globals, globals2, useMissing = self.choose_vars(code, globals)
+        globals.update(modules)
         vars = collections.ChainMap(locals, globals)
+        refFailed = False
         try:
             exec(code, None, vars)
+            self.epoch_refok += 1
         except SyntaxError:
             self.untested += 1
             return False
         except Exception as e:
             locals['_'] = e
+            refFailed = True
+        if useMissing:
+            self.epoch_missing = True
         locals2 = {}
+        globals2.update(modules)
         vars2 = collections.ChainMap(locals2, globals2)
         try:
             exec(code2, None, vars2)
-            print(locals2)
         except SyntaxError:
             self.syntax_errors += 1
             return False
         except Exception as e:
             locals2['_'] = e
-            print('FAILED', str(e), code2)
-        if compare_vars(locals, locals2) == True:
+            # if not refFailed:
+            #     print('FAILED', str(e), code2)
+        if compare_vars(locals, locals2) == False:
+            self.failed += 1
+            return False
+        if useMissing and refFailed:
+            self.tested_ok += 1
+            return False
+        if not refFailed:
             self.epoch_succ += 1
         return True
 
+    def choose_vars(self, code, vars):
+        names = extract_names(code)
+        useMissing = False
+        for name in names:
+            if name == '_' or name in vars:
+                continue
+            if name in self.name_values:
+                values = self.name_values[name]
+                random.shuffle(values)
+                vars[name] = copy_mutable(values[0])
+            else:
+                #print('@Missing', name)
+                useMissing = True
+                vars[name] = Missing(name)
+        vars2 = {}
+        for name, value in vars.items():
+            vars2[name] = copy_mutable(value)
+        return vars, vars2, useMissing
 
 
-def read_tsv(filename, index=1, pred_index=2):
+def read_tsv(filename, index=2, pred_index=1):
     ss = []
     try:
         with open(filename) as f:
@@ -272,7 +317,35 @@ def read_tsv(filename, index=1, pred_index=2):
                 ss.append((row[1], row[1]))
     return ss
 
-#main()
+# main()
+
+
+def save_vars(filename, data):
+    with open(filename, 'wb') as f:
+        for key, values in data.items():
+            for value in values:
+                try:
+                    if isinstance(value, type(sys)):
+                        pickle.dump((0, key, value.__name__), f)
+                    else:
+                        pickle.dump((1, key, value), f)
+                except Exception as e:
+                    print('PICKLE FAIL', key, value)
+
+
+def load_vars(filename, vars):
+    with open(filename, 'rb') as f:
+        try:
+            kind, key, value = pickle.load(f)
+            if kind == 0:
+                value = import_module(value)
+            values = vars.get(key, [])
+            if value not in values:
+                values.append(value)
+            vars[key] = values
+        except EOFError:
+            pass
+
 
 def main():
     vars = {}
@@ -282,32 +355,30 @@ def main():
             read_vars(file, vars)
         if file.endswith('.tsv'):
             tsvfile = file
+        if file.endswith('.vars'):
+            load_vars(file, vars)
+    save_vars('multiese.vars', vars)
+
     suite = TestSuite(vars)
     if tsvfile is not None:
         ss = read_tsv(tsvfile)
         for code, code2 in ss:
             suite.test_code(code, code2)
     else:
-        suite.test_code('n + n1', 'n + n1')
-    
+        #suite.test_code('n<0', 'n<0')
+        suite.test_code(
+            "print(f'\033[32m{s}\033[0m')", "print(f'\033[32m{s}\033[0m')")
+
     print(f'Test Count {suite.tested}')
-    print(f' Syntax Error {suite.syntax_errors} {suite.syntax_errors/suite.tested:.5f}')
-    print(f' Untested {suite.untested} {suite.untested/suite.tested:.5f}')
-    print(f' Pass {suite.tested_ok} {suite.tested_ok/suite.tested:.5f} ')
     print(
-        f' Missing {suite.missing} {suite.missing/suite.tested:.5f}') 
+        f' Syntax Error {suite.syntax_errors} {suite.syntax_errors/suite.tested:.5f}')
+    print(f' Pass {suite.tested_ok} {suite.tested_ok/suite.tested:.5f} ')
+    print(f' Failed {suite.failed} {suite.failed/suite.tested:.5f} ')
+    print(f' Untested {suite.untested} {suite.untested/suite.tested:.5f}')
+    print(f' Bad Data {suite.baddata} {suite.baddata/suite.tested:.5f}')
+    print(
+        f' Missing {suite.missing} {suite.missing/suite.tested:.5f}')
 
 
 main()
-
-
-
-def test():
-    globals = {'print': Missing('print')}
-    locals = {}
-    vars = collections.ChainMap(locals, globals)
-    exec('import pandas as pd', None, vars)
-    exec('a=1', None, vars)
-    exec('b=1', None, vars)
-    exec('_ = c = print(a+b)', None, vars)
-    print(locals)
+# print(isinstance(sys, type(sys)))

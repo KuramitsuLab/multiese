@@ -1,211 +1,442 @@
 import numpy as np
 '''
+@alt(配列|行列|ベクトル)
+@alt(作る=[作る|作成する|初期化する])
+@prefix(aArray;[配列|行列|ベクトル])
+@prefix(aList;リスト)
+
+@alt(要素ごと|各要素)
+
 ベクトル[の|][演算|計算]を[する|行う]
 行列[の|][演算|計算]を[する|行う]
 numpyを[使う|入れる|インポートする]
 '''
 
-np.array(l)
+iterable = np.array([0, 1, 2, 3])
+aArray = np.array([1, 2, 3, 4])
+aArray2 = iterable
+aList = [1, 2]
+n = 3
+
+要素数 = 3
+行数 = 2
+列数 = 2
+初期値 = 0
+行番号 = 0
+列番号 = 0
+
+__X__ = np.int
+dtype = __X__
 '''
-@type(l,リスト)から配列を[作る|作成する|作成]
-'''
-np.array(t)
-'''
-@type(t,タプル)から配列を作る
+@X(np.int;np.int8;np.uint8;np.int16;np.int32;bool;complex)
+@Y(整数;８ビット整数;符号なし８ビット整数;３２ビット整数;[ブール|論理値];複素数)
+[オプションで、|]データ型を指定する
+[オプションで、|]__Y__型を使う
 '''
 
-a.shape()
+np.array(aList)
 '''
-@type(a,配列)の[形状|形]を調べる
-'''
-
-a.dtype()
-'''
-@type(a,配列)の[データ型|型]を調べる
+aListを配列に変換する
+{aListから|配列を}作る
 '''
 
-np.ndim(x)
+np.array(iterable)
 '''
-@type(x,配列)の[次元数|次元の数]を調べる
-'''
-
-np.arange(10)
-'''
-0から9までの配列を作る
+iterableを配列に変換する
+{iterableから|配列を}作る
 '''
 
-x.reshape(3,3)
+np.zeros(要素数)
 '''
-@type(x,配列)を3×3の多次元配列に変形する
-'''
-
-np.concatenate([a,b])
-'''
-@type(a,配列)と@type(b,配列)を[列方向|縦方向]に連結する
+{全要素を|0で}初期化された配列[|を作る]
+ゼロ埋めされた配列[|を作る]
 '''
 
-np.concatenate([a,b], axis=0)
+np.zeros(要素数, dtype=__X__)
 '''
-@type(a,配列)と@type(b,配列)を[列方向|縦方向]に連結する
-'''
-
-np.concatenate([a,b], axis=1)
-'''
-@type(a,配列)と@type(b,配列)を[行方向|横方向]に連結する
+{ゼロ埋めされた|__Y__型の}配列[|を作る]
 '''
 
-np.sum(x)
+np.zeros(行数, 列数)
 '''
-@type(x,配列)の[合計値|合計]を調べる
-'''
-
-np.sum(x, axis=0)
-'''
-@type(x,配列)の列ごとの[合計値|合計]を調べる
+{全要素を|０で}初期化された行列[|を作る]
+ゼロ埋めされた行列[|を作る]
 '''
 
-np.sum(x, axis=1)
+np.zeros(行数, 列数, dtype=__X__)
 '''
-@type(x,配列)の行ごとの[合計値|合計]を調べる
-'''
-
-np.mean(x)
-'''
-@type(x,配列)の[平均値|平均]を調べる
+{{全要素を|０で}初期化された|__Y__型の}行列[|を作る]
 '''
 
-np.mean(x, axis=0)
+
+np.ones(要素数, dtype=np.int)
 '''
-@type(x,配列)の列ごとの[平均値|平均]を調べる
+{全要素を|1で}初期化された配列[|を作る]
+要素が全て1の配列[|を作る]
 '''
 
-np.mean(x, axis=1)
+np.ones(行数, 列数, dtype=np.int)
 '''
-@type(x,配列)の行ごとの[平均値|平均]を調べる
-'''
-
-np.min(x)
-'''
-@type(x,配列)の[最小値|最小]を調べる
+{全要素を|1で}初期化された行列[|を作る]
+全要素が1の行列[|を作る]
 '''
 
-np.min(x, axis=0)
+np.full(要素数, 初期値, dtype=np.int)
 '''
-@type(x,配列)の列ごとの[最小値|最小]を調べる
-'''
-
-np.min(x, axis=1)
-'''
-@type(x,配列)の行ごとの[最小値|最小]を調べる
+{全要素を|初期値で}初期化された配列[|を作る]
+要素が全て初期値の配列[|を作る]
 '''
 
-np.max(x)
+np.full((行数, 列数), 初期値, dtype=np.int)
 '''
-@type(x,配列)の[最大値|最大]を調べる
-'''
-
-np.max(x, axis=0)
-'''
-@type(x,配列)の列ごとの[最大値|最大]を調べる
+{全要素を|初期値で}初期化された行列[|を作る]
+全要素が初期値の行列[|を作る]
 '''
 
-np.max(x, axis=1)
+np.eye(行数, 列数)
 '''
-@type(x,配列)の行ごとの[最大値|最大]を調べる
-'''
-
-np.std(x)
-'''
-@type(x,配列)の標準偏差を調べる
+単位行列[|を作る]
 '''
 
-np.std(x, axis=0)
+np.identity(N)
 '''
-@type(x,配列)の列ごとの標準偏差を調べる
-'''
-
-np.std(x, axis=1)
-'''
-@type(x,配列)の行ごとの標準偏差を調べる
+[単位正方行列|正方単位行列][|を作る]
 '''
 
-np.var(x)
+np.empty(要素数, dtype=np.int)
 '''
-@type(x,配列)の分散を調べる
-'''
-
-np.var(x, axis=0)
-'''
-@type(x,配列)の列ごとの分散を調べる
+未初期化の配列[|を作る]
 '''
 
-np.var(x, axis=1)
+np.empty((行数, 列数), dtype=np.int)
 '''
-@type(x,配列)の行ごとの分散を調べる
-'''
-
-np.eye(3)
-'''
-3×3の単位行列を作る
+未初期化の行列[|を作る]
 '''
 
-np.identity(3)
+
+np.empty_like(aArray)
 '''
-3×3の単位行列を作る
+aArrayと同じ大きさの[空配列|空の配列]を作る
 '''
 
-np.empty(5)
+N = 10
+開始値 = 0
+終端値 = 10
+等差 = 2
+
+np.arange(N)
 '''
-要素数5の[空配列|空の配列]を作る
+0からNまでの配列[|を作る]
 '''
 
-np.empty((2, 3))
+np.arange(1, N+1)
 '''
-2×3の[空配列|空の配列]を作る
-'''
-
-np.empty_like(x)
-'''
-@type(x,配列)と同じ大きさの[空配列|空の配列]を作る
+1からNまでの配列[|を作る]
 '''
 
-np.gcd(a,b)
+np.arange(開始値, 終端値, 等差)
 '''
-@type(a,配列)と@type(b,配列)の要素ごとの最大公約数を調べる
-'''
-
-np.lcm(a,b)
-'''
-@type(a,配列)と@type(b,配列)の要素ごとの最小公倍数を調べる
+等差数列を配列に変換する
 '''
 
-np.unique(x)
+aArray.reshape(行数, 列数)
 '''
-@type(x,配列)から重複を除いた配列を作る
-@type(x,配列)のユニークな要素を調べる
-'''
-
-u, counts = np.unique(a, return_counts=True)
-'''
-@type(x,配列)のユニークな要素とその個数を調べる
+aArray[の[次元|形状]|]を変形する
 '''
 
-u, indices = np.unique(x, return_index=True)
+aArray.reshape(-1, 1)
 '''
-@type(x,配列)のユニークな要素とその位置を調べる
-'''
-
-np.cumsum(x)
-'''
-@type(x,配列)の累積和を調べる
+aArrayを[2次元1列|縦ベクトル]に変形する
 '''
 
-np.cumprod(x)
+aArray.reshape(1, -1)
 '''
-@type(x,配列)の累積積を調べる
+aArrayを[2次元1行|横ベクトル]に変形する
 '''
 
-x.flatten()
+np.zeros_like(aArray)
 '''
-@type(x,配列)を[一次元にする|一次元化|平坦化]
+@alt(ベースに=[元に|ベースに][|して])
+
+[既存の|]aArrayをベースに全要素が0の配列[|を作る]
+'''
+
+np.ones_like(aArray)
+'''
+[既存の|]aArrayをベースに全要素が1の配列[|を作る]
+'''
+
+np.full_like(aArray, 初期値)
+'''
+[既存の|]aArrayをベースに全要素が初期値の配列[|を作る]
+'''
+
+指定の値 = 0
+
+aArray[:, :] = 指定の値
+'''
+aArrayの全要素の値を変更する
+aArrayの全要素を指定の値にする
+'''
+
+aArray[行番号, 列番号]
+'''
+[行列|aArray]の値[|を得る]
+'''
+
+aArray[行番号, 列番号] = 指定の値
+'''
+[行列|aArray]の値を変更する
+'''
+
+aArray[行番号]
+'''
+[行列|aArray]の行[|を選択する]
+'''
+
+aArray[:, 列番号]
+'''
+[行列|aArray]の列[|を選択する]
+'''
+
+# ユニーク
+
+np.unique(aArray)
+'''
+[|aArrayの]ユニークな値を要素とする配列[|を得る]
+'''
+
+np.unique(aArray, return_counts=True)
+'''
+[|aArrayの]ユニークな要素ごとの[頻度|出現回数][|を得る]
+'''
+
+
+# 転置行列
+
+[list(x) for x in list(zip(*aList))]
+'''
+２次元リストを転置する
+２次元リストの転置行列[|を求める]
+'''
+
+aArray.T
+'''
+aArrayを転置する
+[行列|aArray]の転置行列[|を求める]
+'''
+
+aArray + aArray2
+'''
+aArrayの和[|を求める]
+aArrayの要素ごとに加算する
+'''
+
+aArray - aArray2
+'''
+aArrayの差[|を求める]
+'''
+
+aArray * n
+'''
+aArrayのスカラー倍[|を求める]
+'''
+
+np.multiply(aArray, aArray2)
+'''
+aArrayの要素ごとの[積|アダマール積][|を求める]
+'''
+
+np.dot(aArray, aArray2)
+'''
+aArrayの内積[|を求める]
+'''
+
+np.matmul(aArray, aArray2)
+'''
+[[行列|aArray]の|]行列積[|を求める]
+'''
+
+np.linalg.inv(aArray)
+'''
+[[行列|aArray]の|]逆行列[|を求める]
+'''
+
+np.linalg.pinv(aArray)
+'''
+[[行列|aArray]の|]ムーア・ペンローズの擬似逆行列[|を求める]
+'''
+
+
+np.linalg.det(aArray)
+'''
+[[行列|aArray]の|]行列式[|を求める]
+'''
+
+np.linalg.eig(aArray)
+'''
+FIXME
+'''
+
+# ユニバーサル関数
+
+np.gcd(aArray, aArray2)
+'''
+aArray[間|]の要素ごとの最大公約数[|を求める]
+'''
+
+np.lcm(aArray, aArray2)
+'''
+aArray[間|]の要素ごとの最小公倍数[|を求める]
+'''
+
+
+aArray.shape
+'''
+aArrayの[形状|形][|を求める]
+'''
+
+aArray.dtype()
+'''
+aArrayの[データ型|型][|を求める]
+aArrayが何のデータ型か
+'''
+
+aArray.ndim
+'''
+aArrayの[次元数|次元の数][|を求める]
+aArrayが何次元か
+'''
+
+np.concatenate([aArray, aArray2], axis=0)
+'''
+配列を[列方向|縦方向]に連結する
+'''
+
+np.concatenate([aArray, aArray2], axis=1)
+'''
+配列を[行方向|横方向]に連結する
+'''
+
+np.sum(aArray)
+'''
+aArrayの[合計値|合計][|を求める]
+'''
+
+np.sum(aArray, axis=0)
+'''
+aArrayの列ごとの[合計値|合計][|を求める]
+'''
+
+np.sum(aArray, axis=1)
+'''
+aArrayの行ごとの[合計値|合計][|を求める]
+'''
+
+np.mean(aArray)
+'''
+aArrayの[平均値|平均][|を求める]
+'''
+
+np.mean(aArray, axis=0)
+'''
+aArrayの列ごとの[平均値|平均][|を求める]
+'''
+
+np.mean(aArray, axis=1)
+'''
+aArrayの行ごとの[平均値|平均][|を求める]
+'''
+
+np.min(aArray)
+'''
+aArrayの[最小値|最小][|を求める]
+'''
+
+np.min(aArray, axis=0)
+'''
+[行列|aArray]の列ごとの[最小値|最小][|を求める]
+'''
+
+np.min(aArray, axis=1)
+'''
+[行列|aArray]の行ごとの[最小値|最小][|を求める]
+'''
+
+np.max(aArray)
+'''
+aArrayの[最大値|最大][|を求める]
+'''
+
+np.max(aArray, axis=0)
+'''
+[行列|aArray]の列ごとの[最大値|最大][|を求める]
+'''
+
+np.max(aArray, axis=1)
+'''
+[行列|aArray]の行ごとの[最大値|最大][|を求める]
+'''
+
+np.std(aArray)
+'''
+aArrayの標準偏差[|を求める]
+'''
+
+np.std(aArray, axis=0)
+'''
+[行列|aArray]の列ごとの標準偏差[|を求める]
+'''
+
+np.std(aArray, axis=1)
+'''
+[行列|aArray]の行ごとの標準偏差[|を求める]
+'''
+
+np.var(aArray)
+'''
+aArrayの分散[|を求める]
+'''
+
+np.var(aArray, axis=0)
+'''
+[行列|aArray]の列ごとの分散[|を求める]
+'''
+
+np.var(aArray, axis=1)
+'''
+[行列|aArray]の行ごとの分散[|を求める]
+'''
+
+np.cumsum(aArray)
+'''
+aArrayの累積和[|を求める]
+'''
+
+np.cumprod(aArray)
+'''
+aArrayの累積積[|を求める]
+'''
+
+
+np.unique(aArray)
+'''
+aArrayから重複を除いた配列を作る
+aArrayのユニークな要素[|を求める]
+'''
+
+u, counts = np.unique(aArray, return_counts=True)
+'''
+aArrayのユニークな要素とその個数[|を求める]
+'''
+
+u, indices = np.unique(aArray, return_index=True)
+'''
+aArrayのユニークな要素とその位置[|を求める]
+'''
+
+aArray.flatten()
+'''
+aArrayを[平坦化|一次元化]する
+aArrayを[平坦|一次元]にする
 '''
