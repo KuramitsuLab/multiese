@@ -7,26 +7,25 @@ string = import_module('string')
 
 random.seed()
 '''
-@test(random=missing;$$)
 @alt(乱数シード|乱数生成系列|シード)
+
 乱数シードを初期化する
 [システム時刻で|毎回異なるように]乱数を初期化する
 '''
 
 random.seed(n)
 '''
-@test(random=missing;$$)
 {乱数シードを|nで}初期化する
 {乱数シードを|nで}固定[|化]する
 '''
 
 random.randint(1, 6)
 '''
-@test(random=missing;$$)
 @alt(整数乱数|ランダムな整数[|値])
 @alt(生成する|得る|発生させる)
+
 サイコロ[|を振る]
-サイコロと同じ乱数を生成する
+サイコロと同じ乱数[|を生成する]
 
 '''
 
