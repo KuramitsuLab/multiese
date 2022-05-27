@@ -340,3 +340,5 @@ def main(max_iter=5):
 
 if __name__ == '__main__':
     main(10)
+    # for i in range(7):
+    #     main(i)

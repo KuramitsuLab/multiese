@@ -22,6 +22,7 @@ import pandas as pd
 @prefix(ds;データ列;カラム)
 @prefix(col;カラム;カラム)
 @prefix(value;[文字列|日付|])
+
 データ列を使う
 データ列をインポートする
 '''
