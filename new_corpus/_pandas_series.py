@@ -18,10 +18,11 @@ import pandas as pd
 @alt(の名前|名)
 @alt(丸める|四捨五入する)
 @alt(丸めて|四捨五入して)
+
 @prefix(df;データフレーム)
-@prefix(ds;データ列;カラム)
-@prefix(col;カラム;カラム)
-@prefix(value;[文字列|日付|])
+@prefix(ds;[データ列|列])
+@prefix(col;[列|カラム])
+@prefix(value;[文字列|日付|値])
 
 データ列を使う
 データ列をインポートする
@@ -39,20 +40,15 @@ __X__ = ds2 = pd.Series([1, 2, 3, 4])
 __X__.value_counts()
 '''
 @X(ds;df[col])
-@Y(ds;dfのcol)
+@Y(ds;[dfの|]col)
+
 __Y__の各[データ|]値の出現[|回]数[|を求める]
 __Y__の各[データ|値][が|は]何回出現するか見る
 '''
 
-__X__.freq()
-'''
-@test(df=ds=missing;aList=['A','B'];$$)
-__Y__の最頻値の出現回数[|を求める]
-'''
 
 __X__.unique()
 '''
-@test(df=ds=missing;aList=['A','B'];$$)
 __Y__の[ユニーク|一意]な[値|要素][|を見る]
 '''
 

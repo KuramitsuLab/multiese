@@ -2,7 +2,6 @@ import numpy as np
 
 import pandas as pd
 '''
-@test($$;type(pd))
 @alt(表データ|データフレーム)
 @alt(カラム|列)
 @alt(インデックス|行)
@@ -14,10 +13,12 @@ import pandas as pd
 @alt(読み込んで|読んで)
 @alt(全ての|すべての|全)
 @alt(の名前|名)
+
 @prefix(df;データフレーム)
-@prefix(ds;データ列;カラム)
-@prefix(col;カラム;カラム)
-@prefix(value;[文字列|日付|])
+@prefix(ds;[データ列|カラム])
+@prefix(col;[列|カラム])
+@prefix(value;[文字列|日付|値])
+
 表データを使う
 表データをインポートする
 '''
@@ -104,30 +105,30 @@ pd.read_excel(filename)
 @test(pd=missing;filename='file.xlsx';$$)
 @prefix(filename;エクセルファイル)
 @alt(エクセル|エクセル[ファイル|データ])
-[|Pandasで_]{エクセルから|データフレームを}読み込む
-{[|Pandasで_]|filenameを|[データフレームとして|]}読み込む
-{[|Pandasで_]|filenameから|エクセルを}読み込む
+{エクセルから|データフレームを}読み込む
+{|filenameを|[データフレームとして|]}読み込む
+{|filenameから|エクセルを}読み込む
 '''
 
 pd.read_excel(filename, sheet_name=n)
 '''
 @test(pd=missing;filename='file.xlsx';$$)
-[|Pandasで_]{filenameから|n番目のシートを}[データフレームとして|]読み込む
-[|Pandasで_]{filenameから|nという[名前の|]シートを}[データフレームとして|]読み込む
-[|Pandasで_]{filenameの|n番目のシートを}[データフレームとして|]読み込む
+{filenameから|n番目のシートを}[データフレームとして|]読み込む
+{filenameから|nという[名前の|]シートを}[データフレームとして|]読み込む
+{filenameの|n番目のシートを}[データフレームとして|]読み込む
 '''
 
 pd.read_excel(filename, sheet_name=[n, n2])
 '''
 @test(pd=missing;filename='file.xlsx';$$)
-[|Pandasで_]{filenameから|複数のシートを}読み込む
-[|Pandasで_]{filenameから|nとn2のシートを}読み込む
+{filenameから|複数のシートを}読み込む
+{filenameから|nとn2のシートを}読み込む
 '''
 
 pd.read_excel(filename, sheet_name=None)
 '''
 @test(pd=missing;filename='file.xlsx';$$)
-[|Pandasで_]{filenameから|全てのシートを}読み込む
+{filenameから|全てのシートを}読み込む
 '''
 
 pd.read_csv(filename, sep=',')
@@ -135,9 +136,9 @@ pd.read_csv(filename, sep=',')
 @test(pd=missing;filename='file.csv';$$)
 @prefix(filename;CSVファイル)
 @alt(CSVファイル|CSV|カンマ区切りのファイル)
-[|Pandasで_]{CSVファイルから|データフレームを}読み込む
-[|Pandasで_]{filenameから|データフレームを}読み込む
-[|Pandasで_]{filenameを|[|データフレームとして]}読み込む
+{CSVファイルから|データフレームを}読み込む
+{filenameから|データフレームを}読み込む
+{filenameを|[|データフレームとして]}読み込む
 '''
 
 pd.read_csv(filename, sep='\t')
@@ -145,9 +146,9 @@ pd.read_csv(filename, sep='\t')
 @test(pd=missing;filename='file.tsv';$$)
 @prefix(filename;TSVファイル)
 @alt(TSVファイル|TSV|タブ区切りのファイル)
-[|Pandasで_]{TSVファイルから|データフレームを}読み込む
-[|Pandasで_]{filenameから|データフレームを}読み込む
-[|Pandasで_]{filenameを|[|データフレームとして]}読み込む
+{TSVファイルから|データフレームを}読み込む
+{filenameから|データフレームを}読み込む
+{filenameを|[|データフレームとして]}読み込む
 '''
 
 names = ['A', 'B']
@@ -224,21 +225,21 @@ skipfooter = n
 pd.read_csv(filename, header=None)
 '''
 @test(pd=missing;filename='file.csv';$$)
-[|Pandasで_]{filenameを|ヘッダ[を指定せず|なしで]}読み込む
+{filenameを|ヘッダ[を指定せず|なしで]}読み込む
 '''
 
 pd.read_csv(filename, index_col=n)
 '''
 @test(pd=missing;filename='file.csv';$$)
-[|Pandasで_]{CSVファイルfilenameを|n番目のカラムをインデックス[と|に]して}読み込む
-[|Pandasで_]文字列filenameから{CSVファイルを|n番目のカラムをインデックス[と|に]して}読み込む
+{CSVファイルfilenameを|n番目のカラムをインデックス[と|に]して}読み込む
+文字列filenameから{CSVファイルを|n番目のカラムをインデックス[と|に]して}読み込む
 '''
 
 pd.read_csv(filename, encoding='shift_jis')
 '''
 @test(pd=missing;filename='file.csv';$$)
-[|Pandasで_]{filenameを|[SJISで|文字化けしないように]}読み込む
-[|Pandasで_]filenameから{CSVファイルを|[SJISで|文字化けしないように]}読み込む
+{filenameを|[SJISで|文字化けしないように]}読み込む
+filenameから{CSVファイルを|[SJISで|文字化けしないように]}読み込む
 '''
 
 __X__ = 'utf-8'
@@ -247,18 +248,19 @@ pd.read_csv(filename, sep='\t', encoding=__X__)
 @test(pd=missing;filename='file.tsv';$$)
 @X('utf-8';'shift_jis')
 @Y('UTF8';シフトJIS)
-[|Pandasで_]{TSV[形式の|]ファイルから|データフレームを}読み込む
-[|Pandasで_]{filenameから|データフレームを}読み込む
-[|Pandasで_]{filenameを|[|データフレームとして]}読み込む
+
+{TSV[形式の|]ファイルから|データフレームを}読み込む
+{filenameから|データフレームを}読み込む
+{filenameを|[|データフレームとして]}読み込む
 '''
 
 pd.read_json(filename, orient='records', lines=True)
 '''
-@test(pd=missing;filename='file.jsonl';$$)
 @prefix(filename;JSONLファイル)
-[|Pandasで_]{JSONL[形式の|]ファイルから|データフレームを}読み込む
-[|Pandasで_]{filenameから|データフレームを}読み込む
-[|Pandasで_]{filenameを|[|データフレームとして]}読み込む
+
+{JSONL[形式の|]ファイルから|データフレームを}読み込む
+{filenameから|データフレームを}読み込む
+{filenameを|[|データフレームとして]}読み込む
 '''
 
 
@@ -268,22 +270,20 @@ pd.read_json(filename, orient='records', lines=True)
 
 df.to_excel(filename)
 '''
-@test(df=missing;filename='file.xsl';$$)
 @alt(ファイル名|名前)
+
 {dfを|filenameに}保存する
 {dfを|エクセル[ファイル|形式|]で_|filenameに}保存する
 '''
 
 df.to_csv(filename)
 '''
-@test(df=missing;filename='file.txt';$$)
 {dfを|filenameに}保存する
 {dfを|CSV[ファイル|形式|]で_|filenameに}保存する
 '''
 
 df.to_csv(filename, sep='\t')
 '''
-@test(df=missing;filename='file.tsv';$$)
 {dfを|filenameに}保存する
 {dfを|タブ区切りで_|filenameに}保存する
 {dfを|TSV[ファイル|形式|]で_|filenameに}保存する
@@ -291,14 +291,12 @@ df.to_csv(filename, sep='\t')
 
 df.to_csv(filename, header=None)
 '''
-@test(df=missing;filename='file.txt';$$)
 @alt(ヘッダを付けずに|ヘッダなしで)
 {dfを|filenameに|ヘッダを付けずに}保存する
 '''
 
 df.to_csv(filename, index=None)
 '''
-@test(df=missing;filename='file.txt';$$)
 @alt(インデックスを付けずに|インデックスなしで)
 {dfを|filenameに|インデックスを付けずに}保存する
 '''
