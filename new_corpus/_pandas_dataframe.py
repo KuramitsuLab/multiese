@@ -1,20 +1,21 @@
 import numpy as np
 import pandas as pd
 '''
-@test($$;type(pd))
-@alt(表データ|データフレーム)
-@alt(カラム|列)
+@alt(表データ=[データフレーム|データフレーム|表[データ|]])
+@alt(カラム=[列|列|カラム])
 @alt(インデックス|行)
 @alt(欠損値|NaN|未入力値)
-@prefix(df;データフレーム)
-@prefix(ds;データ列)
-@prefix(col;カラム;カラム)
 @alt(変更する|増やす|減らす)
 @alt(抽出する|取り出す|[選択する|選ぶ])
 @alt(全ての|すべての|全)
 @alt(の名前|名)
 @alt(の一覧|一覧|[|の]リスト)
+
+@prefix(df;[データフレーム|表データ])
+@prefix(ds;[データ列|データフレームの[列|カラム]])
+@prefix(column;[列|カラム];[列|カラム])
 @prefix(value;[文字列|日付|])
+
 表データを使う
 表データをインポートする
 '''
@@ -30,10 +31,10 @@ tsvfile = 'file.tsv'
 jsonfile = 'file.json'
 jsonlfile = 'file.json'
 
-col, col2, col3 = 'A', 'B', 'C'
+column, column2, column3 = 'A', 'B', 'C'
 df = pd.DataFrame(data=[[1, 2, 3], [4, 5, 6]], columns=['A', 'B', 'C'])
 df2 = pd.DataFrame(data={'A': [1, 2], 'B': [2, 1]})
-ds, ds2 = df[col], df[col2]
+ds, ds2 = df[column], df[column2]
 
 # 確認系
 
@@ -61,70 +62,94 @@ dfの[末尾|最後|下]n行を抽出する
 
 df.sample()
 '''
-dfからランダムに[|一行を]抽出する
-dfをサンプリングする
+{dfから|ランダムに|[|一行[を|、]]}抽出する
+dfを[|ランダム]サンプリングする
 '''
 
 df.sample(n)
 '''
-dfから{ランダムに|n行を}抽出する
-dfからn個、サンプリングする
+{dfから|ランダムに|n行を}抽出する
+dfからn行、[|ランダム]サンプリングする
 '''
 
 df.sample(n, replace=True)
 '''
 @alt(重複ありで|重複を認めて)
-dfから{重複ありで|ランダムに|n行を}抽出する
+
+{dfから|重複ありで|ランダムに|n行を}サンプリングする
 '''
 
-df[n:n2]
+start = 0
+end = 2
+
+df[start:end]
 '''
-dfのn行目からn2行目まで[を抽出する|]
+{dfの行を|[範囲指定して|]}抽出する
+dfのstart行目からend行目まで[|を]抽出する
 '''
 
 df[n:]
 '''
-dfのn行[|目][以降|より後ろ][を抽出する|]
+dfのn行[|目][以降|より後ろ][|を]抽出する
 '''
 
 df[:n]
 '''
-dfのn行[|目][まで|より前][を抽出する|]
+dfのn行[|目][まで|より前][|を]抽出する
 '''
 
-df[col]
+df[column]
 '''
-dfのcol[を抽出する|]
+@alt(指定された|与えられた|)
+
+dfの指定されたcolumn[を抽出する|]
 '''
 
-df[col].values
+df[column].values
 '''
-{df[の|から]colを|配列として}抽出する
-dfのcolを配列に変換する
-'''
-
-df[col].values.tolist()
-'''
-{df[の|から]colを|リストとして}抽出する
-dfのcolをリストに変換する
+[dfの指定された|]columnを配列に変換する
+{[dfの指定された|]columnを|配列として}抽出する
 '''
 
-df[[col, col2]]
+df[column].values.tolist()
 '''
-df[の|から]colとcol2[を|のみ|だけ]抽出する
-'''
-
-df[[col, col2, col3]]
-'''
-df[の|から]col、col2、col3[を|のみ|だけ]抽出する
+[dfの指定された|]columnをリストに変換する
+{[dfの指定された|]columnを|リストとして}抽出する
 '''
 
-aList = ['A', 'B']
-df[aList]
+df[[column]]
 '''
-@test(aList=['A','B'];$$)
-@alt(指定された|与えられた)
-df[の|から]aListで指定されたカラム[を|のみ|だけ]抽出する
+dfからカラムを１つ[|のみ|だけ]選択する
+df[から|の]指定された列[を|のみ|だけ]抽出する
+'''
+
+df[[column, column2]]
+'''
+dfからカラムを２つ[|のみ|だけ]選択する
+df[から|の]指定された２[つの|]列[を|のみ|だけ]抽出する
+'''
+
+df[[column, column2, column3]]
+'''
+dfからカラムを３つ[|のみ|だけ]選択する
+df[から|の]指定された３[つの|]列[を|のみ|だけ]抽出する
+'''
+
+column4 = 'A'
+
+df[[column, column2, column3, column4]]
+'''
+dfからカラムを４つ[|のみ|だけ]選択する
+df[から|の]指定された４[つの|]列[を|のみ|だけ]抽出する
+'''
+
+columns = ['A', 'B']
+df[columns]
+'''
+@prefix(columns;[[カラムの名前|列名]一覧|[名前|列名]リスト])
+
+dfから列名を複数指定して選択する
+df[の|から]指定されたcolumnsの列[を|のみ|だけ][抽出する|選択する]
 '''
 
 df.loc[n]
@@ -138,30 +163,40 @@ dfのインデックスがnの行を抽出する
 
 df.info()
 '''
-dfのカラム[一覧|概要][|を見る]
+[dfの|]カラム[の一覧|概要][|を見る]
+[dfの|]カラムの種類[|を見る]
 '''
 
 df.columns
 '''
-dfのカラムの名前の一覧[を得る|]
+[dfの|]カラムの名前の一覧[を得る|]
+[dfの|]カラムの名前を列挙する
+'''
+
+df.columns = columns
+'''
+[dfの|]カラム名を指定されたcolumnsに置き換える
 '''
 
 df.select_dtypes('object').columns
 '''
 @alt(カテゴリーデータ|[質的データ|数値データ以外])
-dfからカテゴリデータのカラムの名前の一覧[を得る|]
+
+dfからカテゴリデータのカラム名の一覧[を得る|]
+dfからカテゴリデータのカラム名を列挙する
 '''
 
-ty = int
-df.select_dtypes(ty).columns
+型 = int
+df.select_dtypes(型).columns
 '''
-@test(ty='object';$$)
-dfからtyのカラムの名前の一覧[|を得る]
+dfから指定されたデータ型のカラム名の一覧[|を得る]
+dfの指定されたデータ型のカラム名を列挙する
+カラム名の一覧をデータ型でフィルタする
 '''
 
 df.index
 '''
-dfのインデックスの名前の一覧[|を得る]
+dfのインデックス[|の名前]の一覧[|を得る]
 '''
 
 df.values
@@ -178,8 +213,9 @@ typeList = [int]
 
 df.select_dtypes(include=typeList)
 '''
-@prefix(typeList;[型リスト|])
-dfからtypeList[で指定された|の]データ型のカラム[を|のみ|だけ]抽出する
+@prefix(typeList;型リスト)
+
+dfからtypeList[で指定された]データ型のカラム[を|のみ|だけ]抽出する
 '''
 
 df.select_dtypes(exclude=typeList)
@@ -188,6 +224,7 @@ dfからtypeList[で指定された|の]データ型のカラム[を|のみ|だ�
 '''
 
 __X__ = 'object'
+
 df.select_dtypes(__X__)
 '''
 @X('object';'number';ty)
@@ -207,11 +244,13 @@ dfの[行と列|行列]を[入れ替える|ひっくり返す]
 '''
 
 __X__ = df
+
 __X__.corr()
 '''
 @test(aList=['A', 'B'];$$)
-@X(df;df[[col, col2]];df[aList])
-@Y(df;dfのcolとcol2;dfのaList[|で指定された]カラム)
+@X(df;df[[column, column2]];df[aList])
+@Y(df;dfのcolumnとcolumn2;dfのaList[|で指定された]カラム)
+
 __Y__の[相関行列|各列間の相関係数][|を求める]
 '''
 
@@ -261,13 +300,13 @@ name2 = 'B'
 s = 'A'
 s2 = 'a'
 
-df.rename(columns={col: name})
+df.rename(columns={column: name})
 '''
 @alt(リネームする|名前[|を]変更する)
 @alt(付け直す|変更する)
 dfのカラムの名前を付け直す
-dfのカラムの名前をcolからsに付け直す
-dfのcolをsにリネームする
+dfのカラムの名前をcolumnからsに付け直す
+dfのcolumnをsにリネームする
 '''
 
 df.columns = [str(x).replace(s, s2) for x in df.columns]
@@ -281,9 +320,9 @@ df.rename(index={name: name2})
 dfのインデックスの名前をまとめて、nameからname2に付け直す
 '''
 
-df.set_index(col)
+df.set_index(column)
 '''
-dfのcolをインデックスに設定する
+dfのcolumnをインデックスに設定する
 '''
 
 df.reset_index()
@@ -314,114 +353,114 @@ dfのインデックスを[リセットする|振り直す]
 x = 1.0
 x2 = 2.0
 
-df[df[col] == x]
+df[df[column] == x]
 '''
 @test(df=missing;$$)
 @alt(を抽出する|[のみ|だけ]残す|を選択する)
 @alt(フィルタする|消す|取り除く)
-dfのcol[|の値]がx[の|である][行|データ]を抽出する
-dfのcol[|の値]がxでない[行|データ]をフィルタする
+dfのcolumn[|の値]がx[の|である][行|データ]を抽出する
+dfのcolumn[|の値]がxでない[行|データ]をフィルタする
 '''
 
-df[(df[col] == x) & (df[col2] == x2)]
+df[(df[column] == x) & (df[column2] == x2)]
 '''
 @test(df=missing;$$)
 dfの[行|データ]を条件でフィルタするには
-dfのcol[|の値]がx、かつcol2がx2である[行|データ]を抽出する
+dfのcolumn[|の値]がx、かつcolumn2がx2である[行|データ]を抽出する
 '''
 
-df[df[col] < x]
+df[df[column] < x]
 '''
 @test(df=missing;$$)
-dfのcol[|の値]がx[より[小さい|少ない]|未満の][行|データ]を抽出する
+dfのcolumn[|の値]がx[より[小さい|少ない]|未満の][行|データ]を抽出する
 '''
 
-df[df[col] <= x]
+df[df[column] <= x]
 '''
 @test(df=missing;$$)
-dfのcol[|の値]がx以下の[行|データ]を抽出する
+dfのcolumn[|の値]がx以下の[行|データ]を抽出する
 '''
 
-df[df[col] > x]
+df[df[column] > x]
 '''
 @test(df=missing;$$)
-dfのcol[|の値]がxより[大きい|多い][行|データ]を抽出する
+dfのcolumn[|の値]がxより[大きい|多い][行|データ]を抽出する
 '''
 
-df[df[col] >= x]
+df[df[column] >= x]
 '''
 @test(df=missing;$$)
-dfのcol[|の値]がx以上の[行|データ]を抽出する
+dfのcolumn[|の値]がx以上の[行|データ]を抽出する
 '''
 
-df[(x < df[col]) & (df[col] < x2)]
+df[(x < df[column]) & (df[column] < x2)]
 '''
 @test(df=missing;$$)
-dfのcol[|の値]がxより[大きく|多く]x2より[小さい|少ない][行|データ]を抽出する
+dfのcolumn[|の値]がxより[大きく|多く]x2より[小さい|少ない][行|データ]を抽出する
 '''
 
-df[(x <= df[col]) & (df[col] < x2)]
+df[(x <= df[column]) & (df[column] < x2)]
 '''
 @test(df=missing;$$)
-dfのcol[|の値]がx以上かつx2未満の[行|データ]を抽出する
+dfのcolumn[|の値]がx以上かつx2未満の[行|データ]を抽出する
 '''
 
-df[df[col].isin(aList)]
+df[df[column].isin(aList)]
 '''
 @test(df=missing;$$)
-dfのcol[|の値]がaListに含まれる[行|データ]を抽出する
+dfのcolumn[|の値]がaListに含まれる[行|データ]を抽出する
 '''
 
 df = pd.DataFrame(data={'A': ['A', 'B'], 'B': ['B', 'A']})
-col = 'A'
-col2 = 'B'
+column = 'A'
+column2 = 'B'
 
-df[df[col].str.contains(s)]
+df[df[column].str.contains(s)]
 '''
 @test(df=missing;$$)
-dfのcol[|の文字列][が|で]sが含まれる[行|データ]を抽出する
+dfのcolumn[|の文字列][が|で]sが含まれる[行|データ]を抽出する
 '''
 
-df[not df[col].str.contains(s)]
+df[not df[column].str.contains(s)]
 '''
 @test(df=missing;$$)
-dfのcol[|の文字列][が|で]sが含まれない[行|データ]を抽出する
+dfのcolumn[|の文字列][が|で]sが含まれない[行|データ]を抽出する
 '''
 
-df[df[col].str.match(s)]
+df[df[column].str.match(s)]
 '''
 @test(df=missing;$$)
-dfのcol[|の文字列]が正規表現sにマッチする[行|データ]を抽出する
+dfのcolumn[|の文字列]が正規表現sにマッチする[行|データ]を抽出する
 '''
 
-df[not df[col].str.match(s)]
+df[not df[column].str.match(s)]
 '''
 @test(df=missing;$$)
-dfのcol[|の文字列]が正規表現sにマッチしない[行|データ]を抽出する
+dfのcolumn[|の文字列]が正規表現sにマッチしない[行|データ]を抽出する
 '''
 
-df[df[col].str.startswith(s)]
+df[df[column].str.startswith(s)]
 '''
 @test(df=missing;$$)
-dfのcol[|の文字列]がsで始まる[行|データ]を抽出する
+dfのcolumn[|の文字列]がsで始まる[行|データ]を抽出する
 '''
 
-df[not df[col].str.startswith(s)]
+df[not df[column].str.startswith(s)]
 '''
 @test(df=missing;$$)
-dfのcol[|の文字列]がsで始まらない[行|データ]を抽出する
+dfのcolumn[|の文字列]がsで始まらない[行|データ]を抽出する
 '''
 
-df[df[col].str.endswith(s)]
+df[df[column].str.endswith(s)]
 '''
 @test(df=missing;$$)
-dfのcol[|の文字列]がsで終わる[行|データ]を抽出する
+dfのcolumn[|の文字列]がsで終わる[行|データ]を抽出する
 '''
 
-df[not df[col].str.endswith(s)]
+df[not df[column].str.endswith(s)]
 '''
 @test(df=missing;$$)
-dfのcol[|の文字列]がsで終わらない[行|データ]を抽出する
+dfのcolumn[|の文字列]がsで終わらない[行|データ]を抽出する
 '''
 
 # ドロップ・欠損値処理
@@ -450,44 +489,42 @@ df.drop(n, axis=0, inplace=True)
 dfのn行目をドロップして、更新する
 '''
 
-df.drop(col, axis=1)
+df.drop(column, axis=1)
 '''
 @test(df=missing;$$)
-dfのcolをドロップする
+dfのcolumnをドロップする
 '''
 
-df.drop(col, axis=1, inplace=True)
+df.drop(column, axis=1, inplace=True)
 '''
 @test(df=missing;$$)
 @alt(_変更を反映する|入れ替える|更新する)
-{dfのcolを|破壊的に}ドロップする
-dfのcolをドロップして、更新する
+{dfのcolumnを|破壊的に}ドロップする
+dfのcolumnをドロップして、更新する
 '''
 
 df = pd.DataFrame(data={'A': ['A', 'B'], 'B': ['B', 'A']})
-col = 'A'
-col2 = 'B'
+column = 'A'
+column2 = 'B'
 
-df.drop([col, col2], axis=1)
+df.drop([column, column2], axis=1)
 '''
 @test(df=missing;$$)
-dfのcolとcol2をドロップする
+dfのcolumnとcolumn2をドロップする
 '''
 
 df = pd.DataFrame(data={'A': ['A', 'B'], 'B': ['B', 'A']})
-col = 'A'
-col2 = 'B'
+column = 'A'
+column2 = 'B'
 columns = ['A', 'B']
 
 df.drop(columns, axis=1)
 '''
-@test(df=missing;$$)
 dfのcolumnsで指定されたカラムをドロップする
 '''
 
 df.dropna()
 '''
-@test(df=missing;$$)
 @alt(の中||の内)
 dfの中の欠損値をドロップする
 dfの中の欠損値が[ある|存在する]行をドロップする
@@ -496,8 +533,8 @@ dfの中の欠損値が[ある|存在する]行をドロップする
 # 重複
 
 df = pd.DataFrame(data={'A': [1, 1], 'B': [1, 1]})
-col = 'A'
-col2 = 'B'
+column = 'A'
+column2 = 'B'
 columns = ['A', 'B']
 
 
@@ -531,20 +568,20 @@ df[not df.duplicated(keep=False)]
 [dfの|]重複していない行[のみ|だけ|][を抽出する|]
 '''
 
-df.duplicated(subset=col)
+df.duplicated(subset=column)
 '''
 @test(pd=df=df2=missing;$$)
-dfの中で、colの重複を見る
-dfの中で、colに重複があるか見る
-dfのcolに重複があれば、マスクする
+dfの中で、columnの重複を見る
+dfの中で、columnに重複があるか見る
+dfのcolumnに重複があれば、マスクする
 '''
 
-df.duplicated(subset=[col, col2])
+df.duplicated(subset=[column, column2])
 '''
 @test(pd=df=df2=missing;$$)
-dfの中で、colとcol2の重複を見る
-dfの中で、colとcol2に重複があるか見る
-dfの中のcolとcol2に重複があれば、マスクする
+dfの中で、columnとcolumn2の重複を見る
+dfの中で、columnとcolumn2に重複があるか見る
+dfの中のcolumnとcolumn2に重複があれば、マスクする
 '''
 
 df.drop_duplicates()
@@ -569,273 +606,16 @@ dfから重複を残さず、ドロップする
 dfから重複した[行|データ]を残さず、ドロップする
 '''
 
-df.drop_duplicates(subset=col)
+df.drop_duplicates(subset=column)
 '''
 @test(pd=df=df2=missing;$$)
-[dfの中で、|]colとcol2の重複をドロップする
-dfの中のcolとcol2に重複があれば、ドロップする
+[dfの中で、|]columnとcolumn2の重複をドロップする
+dfの中のcolumnとcolumn2に重複があれば、ドロップする
 '''
 
-df.drop_duplicates(subset=[col, col2])
+df.drop_duplicates(subset=[column, column2])
 '''
-@test(pd=df=df2=missing;$$)
-[dfの中で、|]colとcol2の重複をドロップする
-dfの中のcolとcol2に重複があれば、ドロップする
-'''
-
-# マージ
-
-pd.merge(df, df2)
-'''
-@test(pd=df=df2=missing;$$)
-@alt(マージする|[一つにする|一つにまとめる]|合体させる)
-@alt(結合する|ジョインする)
-@alt(横方向に|横[向き|]に)
-{dfとdf2を|横方向に}マージする
-dfとdf2を結合する
+[dfの中で、|]columnとcolumn2の重複をドロップする
+dfの中のcolumnとcolumn2に重複があれば、ドロップする
 '''
 
-pd.merge(df, df2, on=col)
-'''
-@test(pd=df=df2=missing;$$)
-dfとdf2をcolをキー[に|と]して結合する
-'''
-
-pd.merge(df, df2, left_on=col, right_on=col2)
-'''
-@test(pd=df=df2=missing;$$)
-dfのcolとdf2のcol2をキー[に|と]して結合する
-'''
-
-pd.merge(df, df2, on=col, how=__X__)
-'''
-@test(pd=df=df2=missing;$$)
-@X('outer';'left';'right';'inner')
-@Y([外部|全];左;右;内部)
-dfとdf2をcolをキー[に|と]して__Y__結合する
-'''
-
-pd.merge(df, df2, left_on=col, right_on=col2, how=__X__)
-'''
-@test(pd=df=df2=missing;$$)
-dfのcolとdf2のcol2をキー[に|と]して__Y__結合する
-'''
-
-pd.concat([df, df2])
-'''
-@test(pd=df=df2=missing;$$)
-@alt(縦方向に|縦[|向き]に|)
-{dfとdf2を|縦方向に}連結する
-{dfとdf2を|縦方向に}繋ぐ
-'''
-
-
-# ダミー処理
-
-pd.get_dummies(df)
-'''
-dfのカテゴリデータをダミー変数に変換する
-'''
-
-pd.get_dummies(df[col])
-'''
-dfのcolをダミー変数に変換する
-'''
-
-iterable = [1, 2, 1, 3]
-pd.get_dummies(iterable)
-'''
-iterableをダミー変数に変換する
-'''
-
-pd.get_dummies(x, drop_first=True)
-'''
-{最初のカテゴリーを除外し[て、]|xを}ダミー変数に変換する
-'''
-
-pd.get_dummies(x, dummy_na=True)
-'''
-{NaNも加えて|xを}ダミー変数に変換する
-'''
-
-# ソートする
-
-__X__ = col
-df.sort_values(by=col)
-'''
-@test(df=missing;aList=['A'];$$)
-@alt(ソートする|並べる|並べ直す|整列する)
-@alt(ソートして|並べて|並べ直して|整列して)
-@X(col;[col,col2];aList)
-@Y(col;colとcol2;aList[で指定された|の]カラム)
-@alt(によって|で|を用いて)
-{df[|全体]を|__Y__によって}ソートする
-'''
-
-df.sort_values(by=__X__, inplace=True)
-'''
-@test(df=missing;aList=['A'];$$)
-{df[|全体]を|__Y__によって}ソートして、更新する
-{df[|全体]を|__Y__によって|破壊的に}ソートする
-'''
-
-df.sort_values(by=__X__, ascending=True)
-'''
-@test(df=missing;aList=['A'];$$)
-@alt(昇順に|小さい順に)
-{df[|全体]を|__Y__によって|昇順に}ソートする
-'''
-
-df.sort_values(by=__X__, ascending=False)
-'''
-@test(df=missing;aList=['A'];$$)
-@alt(降順に|大きい順に)
-{df[|全体]を|__Y__によって|降順に}ソートする
-'''
-
-df.sort_values(by=__X__, ascending=True, inplace=True)
-'''
-@test(df=missing;aList=['A'];$$)
-{df[|全体]を|__Y__によって|昇順に}ソートして、更新する
-{df[|全体]を|__Y__によって|昇順に|破壊的に}ソートする
-'''
-
-df.sort_values(by=__X__, ascending=False, inplace=True)
-'''
-@test(df=missing;aList=['A'];$$)
-{df[|全体]を|__Y__によって|降順に|破壊的に}ソートする
-'''
-
-df.sort_values(by=__X__, na_position='first')
-'''
-@test(df=missing;aList=['A'];$$)
-{df[|全体]を|__Y__によって}ソートして、NaNを先頭に[|来るように]する
-'''
-
-inplace = True
-'''
-@test($$;inplace)
-オプションで、データ操作の結果を反映させる
-オプションで、破壊的に操作する
-'''
-
-na_position = 'first'
-'''
-@test($$;na_position)
-オプションで、欠損値を先頭に[|来るように]する
-'''
-
-ascending = False
-'''
-@test($$;ascending)
-オプションで、降順にする
-'''
-
-ascending = True
-'''
-@test($$;ascending)
-オプションで、昇順にする
-'''
-
-# ソート
-
-df.sort_index()
-'''
-@test(df=missing;aList=['A'];$$)
-{df[|全体]を|インデックスによって}ソートする
-'''
-
-df.sort_index(ascending=False)
-'''
-@test(df=missing;aList=['A'];$$)
-{df[|全体]を|インデックスによって|降順で}ソートする
-'''
-
-# グループ化
-
-df.groupby(col)
-'''
-@test(df=missing;$$)
-@alt(グループ化する|集[約|計]する|まとめる)
-@alt(グループ化した|集[約|計]した|まとめた)
-@alt(グループ化して|集[約|計]して|まとめて)
-@alt(毎に|ごとに|毎で|で)
-@alt(各||各)
-{dfを|各col毎に}グループ化する
-'''
-
-df.groupby(col, dropna=False)
-'''
-@test(df=missing;$$)
-{dfを|欠損値を含めて|各col毎に}グループ化する
-'''
-
-
-def func(x): return 'A'
-
-
-df.groupby(func)
-'''
-@test(df=missing;func=lamda x: 'A';$$)
-dfをfuncで_グループ化する
-'''
-
-[(name, group) for name, group in df.groupby(col)]
-'''
-@test(df=missing;$$)
-dfを各col毎にグループ化して、列挙する
-'''
-
-[(name, group) for name, group in df.groupby([col, col2])]
-'''
-@test(df=missing;$$)
-dfをcolとcol2の組み合わせ毎にグループ化して、列挙する
-'''
-
-df.groupby(col).get_group(s)
-'''
-@test(df=missing;$$)
-dfを各col毎にグループ化して、sという[|名前の]グループを得る
-'''
-
-df.groupby(col).size()
-'''
-@test(df=missing;$$)
-dfを各col毎にグループ化して、各グループの[個数|大きさ]を求める
-'''
-
-df.groupby(col).size()[s]
-'''
-@test(df=missing;$$)
-dfを各col毎にグループ化して、sというグループの[個数|大きさ]を求める
-'''
-
-
-df.groupby(col).__X__
-'''
-@test(df=missing;$$)
-@X(sum()|mean()|count()|max()|min()|var()|std()|agg(func))
-@Y(合計|平均値|個数|最大値|最小値|分散|標準偏差|関数適用した値)
-dfの各col毎の__Y__[|を求める]
-dfを各col毎に[グループ化して、|グループ化した]__Y__を求める
-'''
-
-df.groupby([col, col2], as_index=False).__X__
-'''
-@test(df=missing;$$)
-dfの各colとcol2毎の__Y__[|を求める]
-dfを各colとcol2の組み合わせ毎にグループ化して、__Y__[|を求める]
-'''
-
-
-df.groupby(col)[col2].__X__
-'''
-@test(df=missing;$$)
-{dfを|各col毎に}グループ化して、col2の__Y__を求める
-'''
-
-df.groupby(col).describe()[col2]
-'''
-@test(df=missing;$$)
-{dfを|各col毎に}グループ化して、col2の要約統計量を求める
-'''

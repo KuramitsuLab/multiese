@@ -309,7 +309,7 @@ xdataとydataの折れ線グラフを描画して、untitledとラベル付け�
 
 linewidth = n
 '''
-[オプションで、|][|グラフの]線幅をnに設定する
+＜オプション＞[|グラフの]線幅をnに設定する
 '''
 
 plt.plot(xdata, ydata, linewidth=n)
@@ -360,8 +360,6 @@ __Y__グラフの色を[黒にする|黒くする|黒色に設定する]
 xdataとydata[の|について]黒い__Y__グラフを描画する
 xdataとydata[の|について]__Y__グラフを描画して、[その|]色を[黒にする|黒くする|黒色に設定する]
 '''
-
-
 
 
 # 散布図
@@ -460,11 +458,11 @@ xdataとydata[について|の]散布図を描画して、sという凡例用の
 
 # ヒストグラム
 
-データ列 = [1,2,2,1,1,1,1]
+データ列 = [1, 2, 2, 1, 1, 1, 1]
 
 plt.hist(データ列)
 '''
-@alt(ヒストグラム|[柱状図|柱状グラフ|度数分布図])
+@alt(ヒストグラム|[度数分布図|柱状図|柱状グラフ])
 
 ヒストグラムを描画する
 '''
@@ -474,7 +472,7 @@ __X__ = xdata
 plt.hist(__X__)
 '''
 @X(aList;aArray;df[column];ds)
-@Y(aList;aArray;[dfの|]column;ds)
+@Y(aList;aArray;dfのcolumn;ds)
 
 __Y__のヒストグラムを描画する
 {__Y__を|ヒストグラムで_}可視化する
@@ -505,8 +503,8 @@ plt.hist(データ列, bins=n)
 ヒストグラムを描画して、{ビン数を|nに}設定する
 '''
 
-start=0
-end=100
+start = 0
+end = 100
 
 plt.hist(データ列, range=(start, end))
 '''
@@ -551,9 +549,9 @@ plt.boxplot([データ列, データ列2])
 箱ひげ図を[２つ|横に]並べる
 '''
 
-column='A'
-column2='B'
-column3='C'
+column = 'A'
+column2 = 'B'
+column3 = 'C'
 
 plt.boxplot([df[column], df[column2]])
 '''
@@ -562,8 +560,8 @@ plt.boxplot([df[column], df[column2]])
 
 # 棒グラフ
 
-ラベル列=['A', 'B', 'C']
-データ列=[10,8,6]
+ラベル列 = ['A', 'B', 'C']
+データ列 = [10, 8, 6]
 
 plt.bar(ラベル列, データ列)
 '''
@@ -606,13 +604,13 @@ plt.barh(ラベル列, データ列, bottom=データ列2, color="red")
 '''
 
 
-plt.bar(ラベル列, データ列, width = x)
+plt.bar(ラベル列, データ列, width=x)
 '''
 棒グラフを描画して、{[グラフ|棒の|]幅を|xに}設定する
 {棒グラフの幅を|xに}設定する
 '''
 
-plt.barh(ラベル列, データ列, width = x)
+plt.barh(ラベル列, データ列, width=x)
 '''
 横棒グラフを描画して、{[グラフ|棒の|]幅を|xに}設定する
 {横棒グラフの幅を|xに}設定する
@@ -628,7 +626,6 @@ plt.barh(ラベル列, データ列, align='center')
 '''
 横棒グラフを描画して、中央寄せする
 '''
-
 
 
 sns.pairplot(df[[column, column2, column3]])

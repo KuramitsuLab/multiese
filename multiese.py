@@ -57,13 +57,13 @@ PREFIX = {
 }
 
 ALTDIC = {
-    '\n': '<NL>',
+    '\n': '<nl>',
     '変換する': '[変換|]する',
     '設定する': '[設定する|[指定|セット|]する|変更する]',
     'に代入する': '[に[代入|]する|とする]',
     #    'が_': '[が|は]',
     'で_': '[で|として|を[用いて|使って]]',
-    'の中の': '[[|の][中|内]の|の]', 'の中に': '[[|の][中|内]に|に]', '中で': '[[の|][中|内]で|で]',
+    # 'の中の': '[[|の][中|内]の|の]', 'の中に': '[[|の][中|内]に|に]', '中で': '[[の|][中|内]で|で]',
     '全ての': '[全ての|すべての|全|]',
     'の名前': '[名|の名前]',
     'された': '[された|された|した]',
@@ -157,7 +157,7 @@ def append_altdic(altdic, key, value):
     then = verb_then(key)
     if then is not None:
         value = alter_all_verb_then(value)
-        print('altDic', then, value)
+        #print('altDic', then, value)
         altdic[then] = value
 
 # auto_augmentation
@@ -175,12 +175,19 @@ def _ta(name, number, prefixdic):
             prefix = '関数'
             suffix = '関数'
     var = f'{name}{number}'
+    # if suffix != '':
+    #     if prefix != '':
+    #         return var, f'[{prefix}|{suffix}|{var}{suffix}|{prefix}{var}]'
+    #     return var, f'[{suffix}|{var}{suffix}]'
+    # if prefix != '':
+    #     return var, f'[{prefix}|{prefix}{var}]'
+    # return var, var
     if suffix != '':
         if prefix != '':
-            return var, f'[{var}{suffix}|{prefix}{var}|{prefix}|{suffix}]'
-        return var, f'[{var}{suffix}|{suffix}]'
+            return var, f'[{prefix}|{suffix}]'
+        return var, f'{suffix}'
     if prefix != '':
-        return var, f'[{prefix}|{prefix}{var}|{var}]'
+        return var, f'{prefix}'
     return var, var
 
 
@@ -222,7 +229,7 @@ class Corpus(object):
         if '__X__' in code:
             for x, y in zip(self.X, self.Y):
                 codeX = code.replace('__X__', x)
-                self.make_pair(codeX, [doc.replace('__Y__', y)
+                self.make_pair(codeX, [doc.replace('__X__', '__Y__').replace('__Y__', y)
                                        for doc in docs])
                 if multi == False:
                     break
@@ -288,8 +295,8 @@ class Corpus(object):
                 train_test_data = set()
                 doc0 = multiese_da(doc, choice=0.0, shuffle=0.0)
                 self.train_data.append((doc0, code))
-                for _ in range(max_iter):
-                    doc2 = multiese_da(doc, choice=0.9, shuffle=shuffle)
+                for _ in range(max_iter+1):
+                    doc2 = multiese_da(doc, choice=0.8, shuffle=shuffle)
                     if doc0 != doc2:
                         train_test_data.add(doc2)
                 train_test_data = list(train_test_data)
@@ -302,6 +309,11 @@ class Corpus(object):
                     for doc in train_test_data[:-1]:
                         self.train_data.append((doc, code))
 
+    def check(self, intent, code):
+        if '{' in intent or '[' in intent or '_' in intent:
+            print(f'\033[33m エラー{(intent, code)}\033[0m')
+        return intent, code
+
     def save_data(self, filename='kogi.tsv'):
         if len(self.test_data) == 0:
             random.shuffle(self.train_data)
@@ -311,15 +323,17 @@ class Corpus(object):
         filename = filename.replace('.tsv', '_train.tsv')
         with open(filename, 'w') as f:
             writter = csv.writer(f, delimiter="\t")
-            for row in self.train_data:
-                if '\n' not in row[1]:
-                    writter.writerow(row)
+            for intent, code in self.train_data:
+                intent, code = self.check(intent, code)
+                if '\n' not in code:
+                    writter.writerow((intent, code))
         filename = filename.replace('_train.tsv', '_test.tsv')
         with open(filename, 'w') as f:
             writter = csv.writer(f, delimiter="\t")
-            for row in self.test_data:
-                if '\n' not in row[1]:
-                    writter.writerow(row)
+            for intent, code in self.test_data:
+                intent, code = self.check(intent, code)
+                if '\n' not in code:
+                    writter.writerow((intent, code))
 
 
 def main_small():
@@ -330,16 +344,20 @@ def main_small():
     corpus.save_data('kogi0.tsv')
 
 
-def main(max_iter=5):
+def main():
     corpus = Corpus()
     for filename in sys.argv[1:]:
         corpus.read(filename)
-    corpus.generate(max_iter=max_iter)
-    if max_iter >= 0:
-        corpus.save_data(f'kogi{max_iter}.tsv')
+    if len(sys.argv) == 2:
+        print('test')
+        corpus.generate(max_iter=10)
+        name = sys.argv[1].replace('.py', '').replace('/', '')
+        corpus.save_data(f'debug_{name}.tsv')
+    else:
+        for i in range(7):
+            corpus.generate(max_iter=i)
+            corpus.save_data(f'kogi{i}.tsv')
 
 
 if __name__ == '__main__':
-    main(10)
-    # for i in range(7):
-    #     main(i)
+    main()

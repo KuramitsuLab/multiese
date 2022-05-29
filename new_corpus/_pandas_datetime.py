@@ -7,9 +7,10 @@ import pandas as pd
 @alt(丸めて|四捨五入して)
 @prefix(df;データフレーム)
 @prefix(ds;データ列)
-@prefix(col;カラム;カラム)
+@prefix(col;カラム)
 @alt(日付データ|タイムスタンプ[型|]|Pandasの日付型|datetime64型)
 @prefix(value;[文字列|日付|])
+
 データ列を使う
 データ列をインポートする
 '''

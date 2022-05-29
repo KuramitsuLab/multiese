@@ -48,7 +48,6 @@ aSet.discard(element)
 
 aSet.clear()
 '''
-
 aSetから[全[ての|]要素を|要素を全て][取り除く|消す]
 aSetを[空|空集合]にする
 '''

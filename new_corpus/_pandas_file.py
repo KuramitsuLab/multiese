@@ -49,7 +49,6 @@ Pandasのバージョンを見る
 
 pd.set_option('display.max_columns', n)
 '''
-@test(pd=missing;$$)
 @alt(表示可能な|[表示できる|表示する|表示される])
 [データフレームを表示するとき、|][表示可能な|][最大|]列数を変更する
 [データフレームを表示するとき、|][表示可能な|]列数の最大値をnに設定する
@@ -58,7 +57,6 @@ pd.set_option('display.max_columns', n)
 
 pd.set_option('display.max_rows', n)
 '''
-@test(pd=missing;$$)
 [データフレームを表示するとき、|][表示可能な|][最大|]行数を変更する
 [データフレームを表示するとき、|][表示可能な|][最大|]行数をnに設定する
 [データフレームを表示するとき、|]{n行まで|データフレームを}表示できるようにする
@@ -66,7 +64,6 @@ pd.set_option('display.max_rows', n)
 
 pd.set_option('precision', n)
 '''
-@test(pd=missing;$$)
 [データフレームを表示するとき、|]小数点以下の表示精度を設定する
 [データフレームを表示するとき、|]小数点以下[の表示精度|]をn桁に設定する
 [データフレームを表示するとき、|]小数点以下n桁まで表示可能なようにする
@@ -74,26 +71,22 @@ pd.set_option('precision', n)
 
 pd.set_option('expand_frame_repr', False)
 '''
-@test(pd=missing;$$)
 [データフレームを表示するとき、|]折り返しをしない[|ようにする]
 [データフレームを表示するとき、|]折り返しを[オフ|無効]に設定する
 '''
 
 pd.set_option('max_colwidth', n)
 '''
-@test(pd=missing;$$)
 [データフレームを表示するとき、|]カラムの最大幅をnに設定する
 '''
 
 pd.set_option('colheader_justify', 'right')
 '''
-@test(pd=missing;$$)
 [データフレームを表示するとき、|]ヘッダー行を右寄せに設定する
 '''
 
 pd.set_option('colheader_justify', 'left')
 '''
-@test(pd=missing;$$)
 [データフレームを表示するとき、|]ヘッダー行を左寄せに設定する
 '''
 
@@ -102,9 +95,9 @@ pd.set_option('colheader_justify', 'left')
 filename = 'file.xlsx'
 pd.read_excel(filename)
 '''
-@test(pd=missing;filename='file.xlsx';$$)
 @prefix(filename;エクセルファイル)
 @alt(エクセル|エクセル[ファイル|データ])
+
 {エクセルから|データフレームを}読み込む
 {|filenameを|[データフレームとして|]}読み込む
 {|filenameから|エクセルを}読み込む
@@ -155,71 +148,68 @@ names = ['A', 'B']
 sheet_name = names
 '''
 @test($$;sheet_name)
-オプションで、[読み込む|エクセルの|]シートの名前をnamesに設定する
+＜オプション＞[読み込む|エクセルの|]シートの名前をnamesに設定する
 '''
 
 index_col = 0
 '''
 @test($$;index_col)
 @alt(の_|)
-オプションで、[先頭の_|最初の]カラムをインデックスに設定する
+＜オプション＞[先頭の_|最初の]カラムをインデックスに設定する
 '''
 
 index_col = n
 '''
-@test($$;index_col)
-オプションで、n番目のカラムをインデックスに設定する
+＜オプション＞n番目のカラムをインデックスに設定する
 '''
 
 index_col = None
 '''
-@test($$;index_col)
-オプションで、インデックスを[自動的な|]連番に設定する
-オプションで、どのカラムもインデックスに[設定|]しない
+＜オプション＞インデックスを[自動的な|]連番に設定する
+＜オプション＞どのカラムもインデックスに[設定|]しない
 '''
 
 header = 0
 '''
-@test($$;header)
 @alt(ヘッダ|カラムの名前)
-オプションで、[先頭の|最初の]行をヘッダに設定する
+＜オプション＞[先頭の|最初の]行をヘッダに設定する
 '''
 
 header = None
 '''
 @test($$;header)
-オプションで、ヘッダを[自動的な|]連番に設定する
-オプションで、どの行もヘッダに[|設定]しない
+＜オプション＞ヘッダを[自動的な|]連番に設定する
+＜オプション＞どの行もヘッダに[|設定]しない
 '''
 
 header = names
 '''
 @test($$;header)
-オプションで、ヘッダをnamesに設定する
+＜オプション＞ヘッダをnamesに設定する
 '''
 
 names = names
 '''
 @test($$;names)
-オプションで、namesをカラムの名前に設定する
+＜オプション＞namesをカラムの名前に設定する
 '''
 
 usecols = names
 '''
 @test($$;usecols)
-オプションで、読み込む行番号をnamesで指定する
+＜オプション＞読み込む行番号をnamesで指定する
 '''
 
 skiprows = names
 '''
 @test($$;skiprows)
-オプションで、[読み込まない|スキップする|無視する]列番号をnamesで指定する
+＜オプション＞[読み込まない|スキップする|無視する]列番号をnamesで指定する
 '''
 
 skipfooter = n
 '''
 @test($$;skipfooter)
-オプションで、[読み込まない|スキップする|無視する]フッタをnに設定する
+＜オプション＞[読み込まない|スキップする|無視する]フッタをnに設定する
 '''
 
 pd.read_csv(filename, header=None)

@@ -29,86 +29,65 @@ random.randint(1, 6)
 
 '''
 
-random.randint(n, n2)
+最小値, 最大値 = 0, 10
+
+random.randint(最小値, 最大値)
 '''
-@test(random=missing;$$)
-nからn2までの整数乱数[を生成する|を求める|]
-n〜n2の範囲の整数乱数[を生成する|を求める|]
+範囲を指定して[整数|]乱数[を生成する|を求める]
+最大値・最小値で_ [整数|]乱数[を生成する|を求める]
 '''
 
-random.randrange(n)
-'''
-@test(random=missing;$$)
-[0から|]n[未満]までの整数乱数[を生成する|を求める|]
-'''
+start, end, step = 0, 10, 2
 
-random.randrange(n, n2)
+random.randrange(start, end, step)
 '''
-@test(random=missing;$$)
-nからn2[未満|]までの整数乱数[を生成する|を求める|]
-'''
-
-random.randrange(n, n2, n3)
-'''
-@test(random=missing;$$)
-nからn2未満の間でn3ステップの整数群から整数乱数[を生成する|を求める|]
+等差数列から[整数|]乱数[を生成する|を求める]
 '''
 
 random.random()
 '''
-@test(random=missing;$$)
 [疑似|]乱数[を生成する|を求める|]
 '''
 
 x = 0.0
 x2 = 1.0
-random.uniform(x, x2)
+random.uniform(最小値, 最大値)
 '''
-@test(random=missing;$$)
-xからx2の間の一様な[疑似|]乱数[を生成する|を求める|]
+最大値・最小値の範囲で_ 一様な[疑似|]乱数[を生成する|を求める|]
 '''
+
+平均値 = 0.5
+標準偏差 = 0.2
 
 random.normalvariate(mu=0.5, sigma=0.2)
 '''
-@test(random=missing;$$)
-{正規分布で|[疑似|]乱数を}[生成する|求める]
-'''
-
-random.normalvariate(x, x2)
-'''
-@test(random=missing;$$)
-平均x、標準偏差x2の正規分布で[疑似|]乱数[を生成する|を求める|]
+{正規分布で_|[疑似|]乱数を}[生成する|求める]
+{平均[|値]と標準偏差から|[疑似|]乱数}[を生成する|を求める]
 '''
 
 iterable = [1, 2, 3, 3]
 random.choice(iterable)
 '''
-@test(random=missing;$$)
 iterableから[一つ|1個]ランダムに選ぶ
 '''
 
 random.choice(string.ascii_uppercase)
 '''
-@test(import string;random=missing;$$)
 [アルファベット|英文字]から[一つ|１文字]ランダムに選ぶ
 '''
 
 random.choices(iterable, k=n)
 '''
-@test(random=missing;$$)
-iterableからn個、ランダムに選ぶ
+iterableから[複数個|n個]、ランダムに選ぶ
 '''
 
 random.sample(iterable)
 '''
-@test(random=missing;$$)
-@alt(サンプリングする|ランダムに選ぶ)
 iterableからサンプリングする
 '''
 
 random.sample(iterable, k=n)
 '''
-@test(random=missing;$$)
 iterableからn[個|要素]、サンプリングする
 iterableから重複なく、n[個|要素][ランダムに]選ぶ
 '''
@@ -116,6 +95,5 @@ iterableから重複なく、n[個|要素][ランダムに]選ぶ
 aList = iterable
 random.shuffle(aList)
 '''
-@test(random=missing;$$)
 aListを[ランダムに|]シャッフルする
 '''

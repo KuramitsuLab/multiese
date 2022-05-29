@@ -7,15 +7,16 @@ obj2 = 'A'
 
 obj == obj2
 '''
-objがobj2に等しいかどうか
-objがobj2かどうか
+@prefix(obj;オブジェクト)
+
+２つのobj[が|は]等しいかどうか
 '''
 
 obj is obj2
 '''
 @alt(同一|同じ)
-objがobj2と同一[オブジェクト|]かどうか
-objとobj2は同一[オブジェクト|]かどうか
+
+２つのobj[が|は]同一[参照|]かどうか
 '''
 
 repr(obj)
@@ -25,7 +26,7 @@ objをデバッグ向けの文字列に変換する
 
 str(obj)
 '''
-objをユーザ向けの文字列に変換する
+objを[|ユーザ向けの]文字列に変換する
 '''
 
 # 組み込み関数（リスト）
@@ -33,9 +34,11 @@ objをユーザ向けの文字列に変換する
 iter(obj)
 '''
 objのイテレータ
+objを[イテラブル|イテレータ]に変換する
 '''
 
 # 組み込み関数（バイト列、IO）
+
 
 bytearray(s)
 '''
@@ -82,44 +85,34 @@ s = 'age'
 
 # 組み込み関数（オブジェクト）
 
-delattr(obj, text)
+プロパティ名 = 'age'
+
+delattr(obj, プロパティ名)
 '''
 @alt(プロパティ|属性|フィールド)
 @alt(削除する|消す|取り除く)
-@test(text='age';$$)
-objのtextプロパティを削除する
+
+obj[の|から]プロパティを削除する
 '''
 
-getattr(obj, text)
+getattr(obj, プロパティ名)
 '''
-objのtextプロパティの値[|を得る]
-@test(text='age';$$)
-'''
-
-getattr(obj, s)
-'''
-objのプロパティをsで指定して、その値を得る
-@test(s='age';$$)
+objのプロパティの値[|を得る]
 '''
 
-hasattr(obj, text)
+hasattr(obj, プロパティ名)
 '''
 @alt(存在する|ある)
-objにtextプロパティが存在するかどうか
-objがtextプロパティを持つかどうか
+objにプロパティが存在するかどうか
+objがプロパティを持つかどうか
 '''
 
-hasattr(obj, s)
-'''
-objにsという[名前の|]プロパティが存在するかどうか
-objがsという[名前の|]プロパティを持つかどうか
-'''
+値 = 'A'
 
-element = 'A'
-
-setattr(obj, text, element)
+setattr(obj, プロパティ名, 値)
 '''
-objのtextプロパティ[の値|]をelementに設定する
+objのプロパティ[の値|]を値に設定する
+objのプロパティの値を設定する
 '''
 
 hash(obj)
@@ -127,12 +120,13 @@ hash(obj)
 objのハッシュ値[|を求める]
 '''
 
-TYPE = Person
-isinstance(obj, TYPE)
+クラス = int
+
+isinstance(obj, クラス)
 '''
 @alt(クラス|型)
-@alt(TYPE=Person;$$)
-objがTYPEクラス[|のインスタンス]かどうか
+
+obj[が|は][ある|]クラス[|のインスタンス]かどうか
 '''
 
 __X__ = int
@@ -140,6 +134,7 @@ isinstance(obj, __X__)
 '''
 @X(int|float|str|bool|list|tuple|dict|set|bytes)
 @Y(整数|浮動小数点数|文字列|論理値|リスト|タプル|辞書|集合|バイト列)
+
 obj[は|が]__Y__[クラス[|のインスタンス]|]かどうか
 '''
 
@@ -150,17 +145,17 @@ isinstance(obj, __X__)
 obj[は|が]__Y__かどうか
 '''
 
-TYPE2 = object
+サブクラス = object
 
-issubclass(TYPE, TYPE2)
+issubclass(サブクラス, クラス)
 '''
-@alt(TYPE=TYPE2=Person;$$)
-TYPEクラス[が|は]TYPE2クラスのサブクラスかどうか
+[クラスの|]サブクラスかどうか
 '''
 
 id(obj)
 '''
 @alt(オブジェクト識別子|固有のID|ポインタ)
+
 objのオブジェクト識別子[|を得る]
 '''
 

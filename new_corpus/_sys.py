@@ -76,10 +76,11 @@ sys.platform
 
 __X__ = 'darwin'
 
-sys.platform.startswith('darwin')
+sys.platform.startswith(__X__)
 '''
 @X('darwin';'linux';'win32')
-@Y(MacOS;Linux;Windows)
+@Y([MacOS|マック];[Linux|リナックス];[Windows|ウィンドウズ])
+
 プラットホーム[が|は]__Y__かどうか
 '''
 

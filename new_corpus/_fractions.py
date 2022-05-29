@@ -4,18 +4,25 @@ import typing
 import fractions
 '''
 @test($$;type(fractions))
-@prefix(q;有理数)
+@prefix(q;[有理数|分数])
 @alt(有理数|分数)
-有理数を使う
+
+有理数[|モジュール]を[使う|インポートする]
 '''
 
-n = 1
-m = 1
+n, m = 1, 2
+分子, 分母 = 1, 2
 
 fractions.Fraction(numerator=n, denominator=m)
 '''
 分子n、分母mの有理数を作る
 n割るmの有理数表現
+'''
+
+fractions.Fraction(分子, 分母)
+'''
+分子と分母から有理数を作る
+分子割る分母
 '''
 
 q = fractions.Fraction(1, 2)
@@ -38,7 +45,7 @@ qの分母
 
 q.limit_denominator(max_denominator=1000000)
 '''
-分母の最大値を指定して近似したい
-分母が高々 max_denominator である、 self に最も近い Fraction を見付けて
-与えられた浮動小数点数の有理数近似
+@FIXME()
+qを分母の最大値を指定して近似する
+浮動小数点数の有理数近似
 '''
