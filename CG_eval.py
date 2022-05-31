@@ -13,7 +13,11 @@ from sumeval.metrics.rouge import RougeCalculator
 import warnings
 warnings.filterwarnings('ignore')
 
-
+# def install(module):
+#   try:
+#       import module
+#   except ModuleNotFoundError:
+#       os.system(f'pip install {module}}')
 
 def read_tsv(filename):
     ss = []
