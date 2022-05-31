@@ -10,6 +10,8 @@ from tokenize import tokenize, open
 import re
 from sumeval.metrics.rouge import RougeCalculator
 
+from slackweb import Slack
+
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -28,7 +30,7 @@ def read_tsv(filename):
     return ss
 
 
-def Exact_Match(ss):
+def Exact_Match(ss,textlist):
 
   #print("<BLACK_NG>")
   
@@ -63,14 +65,19 @@ def Exact_Match(ss):
   #正答率
   correct_answer_rate=correct/len(ss)
 
-  print("全体件数：",len(ss))
-  print("BLACK_NG：",black_NG)
-  print("正答数：",correct)
-  print("誤答数：",no_correct)
-  print("正答率：",round(correct_answer_rate,5))
+  textlist.append(f'全体件数：{len(ss)}')
+  textlist.append('\n')
+  textlist.append(f'BLACK_NG：{black_NG}')
+  textlist.append('\n')
+  textlist.append(f'正答数：{correct}')
+  textlist.append('\n')
+  textlist.append(f'誤答数：{no_correct}')
+  textlist.append('\n')
+  textlist.append(f'正答率：{round(correct_answer_rate,5)}')
+  textlist.append('\n')
 
 
-def Levenstein(ss):
+def Levenstein(ss,textlist):
 
   #合計
   sum_Levenstein=0
@@ -83,10 +90,10 @@ def Levenstein(ss):
   #平均値
   leven=sum_Levenstein/len(ss)
   
-  print("leven：",round(leven,5))
+  textlist.append(f'leven：{round(leven,5)}')
+  textlist.append('\n')
 
-
-def BLEU(ss):
+def BLEU(ss,textlist):
   # https://www.nltk.org/api/nltk.translate.bleu_score.html
 
   pattern = re.compile(r'[\(, .\+\-\)]')
@@ -113,10 +120,10 @@ def BLEU(ss):
      #平均値
   bleu = sum_bleu / len(ss)
 
-  print("BLEU：",round(bleu,5))
+  textlist.append(f'BLEU：{round(bleu,5)}')
+  textlist.append('\n')
 
-
-def ROUGE_L(ss):
+def ROUGE_L(ss,textlist):
 
   rouge = RougeCalculator()
   sum_ROUGE_score=0
@@ -133,14 +140,17 @@ def ROUGE_L(ss):
   #平均
   ROUGE_score=sum_ROUGE_score/len(ss)
 
-  print("ROUGE-L：",round(ROUGE_score,5))
+  textlist.append(f'ROUGE-L：{round(ROUGE_score,5)}')
+  textlist.append('\n')
 
-def arg():
+def arg(textlist):
   try:
-    print(f"index = {sys.argv[2]}, pred = {sys.argv[3]}")
+    textlist.append(f"index = {sys.argv[2]}, pred = {sys.argv[3]}")
+    textlist.append('\n')
     return int(sys.argv[2]),int(sys.argv[3])
   except:
-    print("index = 2, pred = 1")
+    textlist.append("index = 2, pred = 1")
+    textlist.append('\n')
     return 2, 1
     
 
@@ -148,16 +158,24 @@ def main():
   global index_id
   global pred_id
 
-  index_id, pred_id = arg()
-  
-  ss = read_tsv(sys.argv[1])
-  print(sys.argv[1])
+  textlist=[]
 
-  Exact_Match(ss)
-  BLEU(ss)
-  ROUGE_L(ss)
-  Levenstein(ss)
+  index_id, pred_id = arg(textlist)
+
+  ss = read_tsv(sys.argv[1])
+  textlist.append(sys.argv[1])
+  textlist.append('\n')
+
+  Exact_Match(ss,textlist)
+  BLEU(ss,textlist)
+  ROUGE_L(ss,textlist)
+  Levenstein(ss,textlist)
+
+  slack = Slack("https://hooks.slack.com/services/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")
   
+  text1=""
+  for textlist_line in textlist:
+    text1+=textlist_line
+  slack.notify(text=text1)
 
 main()
-
