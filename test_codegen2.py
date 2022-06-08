@@ -124,7 +124,7 @@ def read_vars(filename, evars):
                     exec(line, None, globals)
                 except:
                     print('Error', line)
-            if is_assignment(line):
+            if is_assignment(line) and 'sys' not in line:
                 locals = {}
                 vars = collections.ChainMap(locals, globals)
                 try:
@@ -133,7 +133,7 @@ def read_vars(filename, evars):
                     for name, value in locals.items():
                         globals[name] = value
                 except Exception as e:
-                    print('Error2', line, e)
+                    builtins.print('Error2', line, e)
 
 
 VALUE = set(['True', 'False', 'None'])
@@ -202,6 +202,14 @@ modules = {
     # 'plt': Missing('plt'), 'sns': Missing('sns'),
 }
 
+ERRLOG = set({})
+
+
+def dump_emsg():
+    with open('emsg.txt', 'w') as f:
+        for emsg in ERRLOG:
+            print(emsg, file=f)
+
 
 class TestSuite:
     def __init__(self, name_values):
@@ -253,11 +261,13 @@ class TestSuite:
         try:
             exec(code, None, vars)
             self.epoch_refok += 1
-        except SyntaxError:
+        except SyntaxError as e:
+            ERRLOG.add(f'{type(e).__name__}: {e}')
             self.untested += 1
             return False
         except Exception as e:
             locals['_'] = e
+            ERRLOG.add(f'{type(e).__name__}: {e}')
             refFailed = True
         if useMissing:
             self.epoch_missing = True
@@ -372,8 +382,9 @@ def main():
     print(f'Test Count {suite.tested}')
     print(
         f' Syntax Error {suite.syntax_errors} {suite.syntax_errors/suite.tested:.5f}')
-    print(f' Pass {suite.tested_ok} {suite.tested_ok/suite.tested:.5f} ')
-    print(f' Failed {suite.failed} {suite.failed/suite.tested:.5f} ')
+    print(
+        f' Pass {suite.tested_ok} {suite.tested_ok/suite.tested:.5f} {suite.tested_ok/(suite.tested-suite.untested):.5f}')
+    print(f' Failed {suite.failed} {suite.failed/suite.tested:.5f} {suite.tested_ok/(suite.failed-suite.untested):.5f}')
     print(f' Untested {suite.untested} {suite.untested/suite.tested:.5f}')
     print(f' Bad Data {suite.baddata} {suite.baddata/suite.tested:.5f}')
     print(
@@ -381,4 +392,5 @@ def main():
 
 
 main()
+dump_emsg()
 # print(isinstance(sys, type(sys)))

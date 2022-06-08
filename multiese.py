@@ -320,6 +320,9 @@ class Corpus(object):
             train_size = (len(self.train_data) * 7) // 10
             self.test_data = self.train_data[train_size:]
             self.train_data = self.train_data[:train_size]
+        else:
+            random.shuffle(self.train_data)
+            random.shuffle(self.test_data)
         filename = filename.replace('.tsv', '_train.tsv')
         with open(filename, 'w') as f:
             writter = csv.writer(f, delimiter="\t")
