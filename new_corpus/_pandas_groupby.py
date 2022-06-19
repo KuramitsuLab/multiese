@@ -60,12 +60,12 @@ df.groupby(column, dropna=False)
 
 dropna = True
 '''
-＜オプション＞欠損値[は無視する|を含めない]
+option: 欠損値[は無視する|を含めない]
 '''
 
 dropna = True
 '''
-＜オプション＞欠損値[も無視しない|[も|を]含める]
+option: 欠損値[も無視しない|[も|を]含める]
 '''
 
 [(name, group) for name, group in df.groupby(__X__)]

@@ -148,68 +148,68 @@ names = ['A', 'B']
 sheet_name = names
 '''
 @test($$;sheet_name)
-＜オプション＞[読み込む|エクセルの|]シートの名前をnamesに設定する
+option: [読み込む|エクセルの|]シートの名前をnamesに設定する
 '''
 
 index_col = 0
 '''
 @test($$;index_col)
 @alt(の_|)
-＜オプション＞[先頭の_|最初の]カラムをインデックスに設定する
+option: [先頭の_|最初の]カラムをインデックスに設定する
 '''
 
 index_col = n
 '''
-＜オプション＞n番目のカラムをインデックスに設定する
+option: n番目のカラムをインデックスに設定する
 '''
 
 index_col = None
 '''
-＜オプション＞インデックスを[自動的な|]連番に設定する
-＜オプション＞どのカラムもインデックスに[設定|]しない
+option: インデックスを[自動的な|]連番に設定する
+option: どのカラムもインデックスに[設定|]しない
 '''
 
 header = 0
 '''
 @alt(ヘッダ|カラムの名前)
-＜オプション＞[先頭の|最初の]行をヘッダに設定する
+option: [先頭の|最初の]行をヘッダに設定する
 '''
 
 header = None
 '''
 @test($$;header)
-＜オプション＞ヘッダを[自動的な|]連番に設定する
-＜オプション＞どの行もヘッダに[|設定]しない
+option: ヘッダを[自動的な|]連番に設定する
+option: どの行もヘッダに[|設定]しない
 '''
 
 header = names
 '''
 @test($$;header)
-＜オプション＞ヘッダをnamesに設定する
+option: ヘッダをnamesに設定する
 '''
 
 names = names
 '''
 @test($$;names)
-＜オプション＞namesをカラムの名前に設定する
+option: namesをカラムの名前に設定する
 '''
 
 usecols = names
 '''
 @test($$;usecols)
-＜オプション＞読み込む行番号をnamesで指定する
+option: 読み込む行番号をnamesで指定する
 '''
 
 skiprows = names
 '''
 @test($$;skiprows)
-＜オプション＞[読み込まない|スキップする|無視する]列番号をnamesで指定する
+option: [読み込まない|スキップする|無視する]列番号をnamesで指定する
 '''
 
 skipfooter = n
 '''
 @test($$;skipfooter)
-＜オプション＞[読み込まない|スキップする|無視する]フッタをnに設定する
+option: [読み込まない|スキップする|無視する]フッタをnに設定する
 '''
 
 pd.read_csv(filename, header=None)

@@ -352,9 +352,9 @@ def main():
     for filename in sys.argv[1:]:
         corpus.read(filename)
     if len(sys.argv) == 2:
-        print('test')
         corpus.generate(max_iter=10)
         name = sys.argv[1].replace('.py', '').replace('/', '')
+        print(f'test debug_{name}.tsv')
         corpus.save_data(f'debug_{name}.tsv')
     else:
         for i in range(7):

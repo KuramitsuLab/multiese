@@ -1,0 +1,362 @@
+black [黒|ブラック]
+blue [青|ブルー]
+red [赤|レッド]
+white [白|ホワイト]
+yellow [黄|イエロー]
+pink [ピンク]
+brown [茶|ブラウン]
+cyan [水色|シアン]
+gold [金色|ゴールド]
+gray [灰色|グレー]
+grey [灰色|グレー]
+green [緑|グリーン]
+purple [紫|パープル]
+silver [銀色|シルバー]
+skyblue [空色|スカイブルー]
+
+暗黒色 #16160e
+桜色 #fef4f4
+薄桜 #fdeff2
+虹色 #f6bfbc
+紅梅色 #f2a0a1
+薄紅 #f0908d
+撫子色 #eebbcb
+灰桜 #e8d3d1
+桃花色 #e198b4
+真朱 #ec6d71
+赤紫 #eb6ea5
+牡丹色 #e7609e
+薔薇色 #e9546b
+赤紅 #c53d43
+赤 #e60033
+紅赤 #d9333f
+紅 #d7003a
+緋色 #d3381c
+朱色 #eb6101
+象牙色 #f8f4e6
+灰白色 #e9e4d4
+枯草色 #e4dc8a
+淡黄 #f8e58c
+肌色 #fce2c4
+浅黄 #edd3a1
+山吹色 #f8b500
+金色 #e6b422
+黄色 #ffd900
+丹色 #e45e32
+小麦色 #e49e61
+橙色 #ee7800
+人参色 #ec6800
+柿色 #ed6d3d
+蜜柑色 #f08300
+葡萄色 #640125
+黒茶 #583822
+赤褐色 #683f36
+赤銅色 #752100
+栗色 #762f07
+褐色 #8a3b00
+茶色 #965042
+煉瓦色 #b55233
+赤茶 #bb5535
+琥珀色 #bf783a
+黄土色 #c39143
+国防色 #7b6c3e
+胡桃色 #a86f4c
+土色 #bc763c
+小豆色 #96514d
+黄金 #e6b422
+黒緑 #333631
+亜麻色 #d6c6af
+灰汁色 #9e9478
+砂色 #dcd3b2
+鶯色 #928c36
+緑黄色 #dccb18
+抹茶色 #c5c56a
+若草色 #c3d825
+黄緑 #b8d200
+萌黄 #aacf53
+若緑 #98d98e
+薄緑 #69b076
+緑青色 #47885e
+若竹色 #68be8d
+緑 #3eb370
+深緑 #00552e
+紫紺 #460e44
+紫 #884898
+紫黒 #2e2930
+深紫 #493759
+葡萄色 #522f60
+江戸紫 #745399
+青紫 #674598
+藤紫 #a59aca
+桔梗色 #5654a2
+藤色 #bbbcde
+濃藍 #0f2350
+紺青 #192f60
+紺色 #223a70
+藍色 #165e83
+瑠璃色 #1e50a2
+青 #0095d9
+天色 #2ca9e1
+浅葱色 #00a3af
+空色 #a0d8ef
+水色 #bce2e8
+藍白 #ebf6f7
+褐色 #4d4c61
+青緑 #00a497
+翡翠色 #38b48b
+萌葱色 #006e54
+古代紫 #895b8a
+京紫 #9d5b8b
+紅紫 #b44c97
+乳白色 #f3f3f3
+若紫 #bc64a4
+霞色 #c8c2c6
+濃色 #634950
+鼠色 #949495
+灰色 #7d7d7d
+鉛色 #7b7c7d
+墨 #595857
+黒 #2b2b2b
+黒檀 #250d00
+
+アリスブルー aliceblue
+アンティークホワイト antiquewhite
+アクア aqua
+アクアマリン aquamarine
+[アズール|アザレ] azure
+ベージュ beige
+ビスク bisque
+ブランシェッドアーモンド blanchedalmond
+ブルーバイオレット blueviolet
+バーリウッド burlywood
+cadetblue
+chartreuse
+チョコレート chocolate
+コーラルレッド coral
+コーンフラワーブルー cornflowerblue
+コーンシルク cornsilk
+[クリムゾン|]crimson
+deeppink
+deepskyblue
+dimgray
+dimgrey
+dodgerblue
+レンガ firebrick
+フローラルホワイト floralwhite
+forestgreen
+フクシア fuchsia
+ゲインズボロ gainsboro
+ゴーストホワイト ghostwhite
+[ゴールデンロッド|濃黄] goldenrod
+グリーンイエロー greenyellow
+ハニーデュー honeydew
+ホットピンク hotpink
+インディアンレッド indianred
+インディゴ indigo
+アイボリー ivory
+カーキ khaki
+ラベンダー lavender
+ラベンダーブラシ lavenderblush
+[ローングリーン|シャルトリューズ] lawngreen
+レモンシフォン lemonchiffon
+ライムライト lime
+ライムグリーン limegreen
+[リネン|薄桜] linen
+マゼンタ magenta
+マルーン maroon
+ミッドナイトブルー midnightblue
+ミントクリーム mintcream
+[ミスティローズ|桜色] mistyrose
+モカシン moccasin
+ナバホホワイト navajowhite
+ネービーブルー navy
+オールドレース oldlace
+オリーブ olive
+オリーブドラブ olivedrab
+[オレンジ] orange
+オレンジレッド orangered
+orchid
+[パパイヤホイップ|アンティークホワイト] papayawhip
+[ピーチパフ|肌色] peachpuff
+[ペルー|ビスケット] peru
+プラム plum
+パウダーブルー powderblue
+rebeccapurple
+[ロージーブラウン|紅鼠] rosybrown
+[ロイヤルブルー] royalblue
+[サドルブラウン|キャラメル|コーヒー] saddlebrown
+サーモンピンク salmon
+[サンディブラウン|柑子色] sandybrown
+シーグリーン seagreen
+シーシェル seashell
+シエナ sienna
+スノーホワイト snow
+スプリンググリーン springgreen
+スティールブルー steelblue
+タン tan
+ティール teal
+[シスル|オーキッド] thistle
+トマトレッド tomato
+ターコイズ turquoise
+バイオレット violet
+[ウィート|練色|乳黄色] wheat
+[ホワイトスモーク] whitesmoke
+[イエローグリーン|サラド] yellowgreen
+
+mediumaquamarine
+mediumblue
+mediumorchid
+mediumpurple
+mediumseagreen
+mediumslateblue
+mediumspringgreen
+mediumturquoise
+mediumvioletred
+
+
+lightblue
+lightcoral
+lightcyan
+lightgoldenrodyellow
+lightgray
+lightgreen
+lightgrey
+lightpink
+lightsalmon
+lightseagreen
+lightskyblue
+lightslategray
+lightslategrey
+lightsteelblue
+lightyellow
+
+darkblue
+darkcyan
+darkgoldenrod
+darkgray
+darkgreen
+darkgrey
+darkkhaki
+darkmagenta
+darkolivegreen
+darkorange
+darkorchid
+darkred
+darksalmon
+darkseagreen
+darkslateblue
+darkslategray
+darkslategrey
+darkturquoise
+darkviolet
+
+palegoldenrod
+palegreen
+paleturquoise
+palevioletred
+
+slateblue
+slategray
+slategrey
+
+アリスブルー
+アンティークホワイト
+アクア
+アクアマリン
+アズール
+ベージュ
+ビスク
+ブラック
+ブランシェッドアーモンド
+ブルー
+ブルーバイオレット
+ブラウン
+バーリウッド
+カデットブルー
+シャルトルーズ
+チョコレート
+コーラル
+コーンフラワーブルー
+コーンズシルク
+クリムゾン
+シアン
+デップピンク
+ディープスカイブルー
+ディムグレー
+ディムグレー
+ドジャーブルー
+ファイヤーブリック
+フローラルホワイト
+フォレストグリーン
+フクシア
+ゲインズボロ
+ゴーストホワイト
+ゴールド
+ゴールデンロッド
+グレー
+グリーン
+グリーンイエロー
+グレー
+ハニーデュー
+ホットピンク
+インディアンレッド
+インディゴ
+アイボリー
+カーキ
+ラベンダー
+ラベンダーブラッシュ
+ローングリーン
+レモンシフォン
+ライム
+ライムグリーン
+リネン
+マゼンタ
+マルーン
+ミッドナイトブルー
+ミントクリーム
+ミスティローズ
+モカシン
+ナバホホワイト
+ネイビー
+オールドレース
+オリーブ
+オリベドラブ
+オレンジ
+オレンジレッド
+オーキッド
+パパイヤウィップ
+ピーチパフ
+ペルー
+ピンク
+プラム
+パウダーブルー
+パープル
+レベッカパープル
+レッド
+ロージーブラウン
+ロイヤルブルー
+サドルブラウン
+サーモン
+サンディーブラウン
+シーグリーン
+シーシェル
+シエナ
+シルバー
+スカイブルー
+スノー
+スプリンググリーン
+スチールブルー
+タン
+ティール
+アザミ
+トマト
+ターコイズ
+バイオレット
+小麦
+ホワイト
+ホワイトスモーク
+イエロー
+イエローグリーン
+
+
+www.DeepL.com/Translator（無料版）で翻訳しました。

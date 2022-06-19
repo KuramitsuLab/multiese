@@ -71,23 +71,23 @@ df.sort_values(by=__X__, na_position='first')
 
 inplace = True
 '''
-＜オプション＞[値を置き換える|更新する]
-＜オプション＞破壊的に操作する
+option: [値を置き換える|更新する]
+option: 破壊的に操作する
 '''
 
 na_position = 'first'
 '''
-＜オプション＞欠損値を先頭に[|来るように]する
+option: 欠損値を先頭に[|来るように]する
 '''
 
 ascending = False
 '''
-＜オプション＞降順にする
+option: 降順にする
 '''
 
 ascending = True
 '''
-＜オプション＞昇順にする
+option: 昇順にする
 '''
 
 # 連携

@@ -19,17 +19,17 @@ re.compile(pattern)
 
 flag = re.ASCII
 '''
-＜オプション＞[ASCII|アスキー]文字に限定する
+option: [ASCII|アスキー]文字に限定する
 '''
 
 flag = re.IGNORECASE
 '''
-＜オプション＞[大文字・小文字|ケース]を無視する
+option: [大文字・小文字|ケース]を無視する
 '''
 
 flag = re.MULTILINE
 '''
-＜オプション＞複数行に対応する
+option: 複数行に対応する
 '''
 
 __X__ = 0
