@@ -100,6 +100,9 @@ class Choice(object):
         if choice > 1.0 or choice < 0.0:
             return self.chunks[-1].emit(**kw)
         r = random.random()
+        if len(self.chunks) > 9:
+            n = int(len(self.chunks) * r)
+            return self.chunks[n].emit(**kw)
         if r < choice:
             n = len(self.chunks)
             n = random_rank(n)

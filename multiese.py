@@ -295,8 +295,14 @@ class Corpus(object):
                 train_test_data = set()
                 doc0 = multiese_da(doc, choice=0.0, shuffle=0.0)
                 self.train_data.append((doc0, code))
+                _choice = 0.7
+                _shuffle = 0.3
                 for _ in range(max_iter+1):
-                    doc2 = multiese_da(doc, choice=0.8, shuffle=shuffle)
+                    doc2 = multiese_da(doc, choice=_choice, shuffle=_shuffle)
+                    _choice = min(_choice + 0.03, 0.999)
+                    _shuffle = _shuffle + 0.2
+                    if _shuffle > 0.95:
+                        _shuffle = 0.2
                     if doc0 != doc2:
                         train_test_data.add(doc2)
                 train_test_data = list(train_test_data)
@@ -312,6 +318,8 @@ class Corpus(object):
     def check(self, intent, code):
         if '{' in intent or '[' in intent or '_' in intent:
             print(f'\033[33m エラー{(intent, code)}\033[0m')
+        if intent.startswith('option:') or intent.startswith('keyword:'):
+            intent = intent.replace(':', ': ')
         return intent, code
 
     def save_data(self, filename='kogi.tsv'):
@@ -357,7 +365,8 @@ def main():
         print(f'test debug_{name}.tsv')
         corpus.save_data(f'debug_{name}.tsv')
     else:
-        for i in range(7):
+        for i in [0, 2, 3, 4, 5, 6, 9]:
+            print(f'kogi{i}.tsv')
             corpus.generate(max_iter=i)
             corpus.save_data(f'kogi{i}.tsv')
 

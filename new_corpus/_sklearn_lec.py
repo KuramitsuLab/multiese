@@ -4,6 +4,8 @@ import sklearn
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
+df = pd.DataFrame()
+
 
 説明変数 = df[['列名']]
 '''
