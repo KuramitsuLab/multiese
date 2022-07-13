@@ -1,6 +1,5 @@
 from importlib import import_module
 
-
 copy = import_module('copy')
 
 aDict = {'A': 1}

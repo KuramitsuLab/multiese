@@ -28,9 +28,9 @@ import pandas as pd
 データ列をインポートする
 '''
 
-df = pd.DataFrame(data={'A': [1, 2, 3], 'B': [2, 1, 0]})
-ds = df['A']
-col = 'A'
+df = pd.DataFrame(data={'列A': [1, 2, 3], '列B': [2, 1, 0]})
+ds = df['列A']
+col = '列A'
 
 
 __X__ = ds2 = pd.Series([1, 2, 3, 4])
@@ -54,7 +54,7 @@ __Y__の[ユニーク|一意]な[値|要素][|を見る]
 
 __X__.nunique()
 '''
-@test(df=ds=missing;aList=['A','B'];$$)
+@test(df=ds=missing;aList=['列A','列B'];$$)
 __Y__の[ユニーク|一意]な[値の個数|要素数][|を見る]
 '''
 
@@ -92,7 +92,7 @@ dfのcolをtyに変換する
 # ビン
 
 n = 2
-names = ['A', 'B']
+names = ['列A', '列B']
 aList = [0, 4, 6]
 __X__ = [1, 2, 3, 4, 5, 6, 7, 8]
 

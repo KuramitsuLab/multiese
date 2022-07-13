@@ -15,43 +15,37 @@ import pandas as pd
 @prefix(column;[列|カラム];[列|カラム])
 @prefix(value;[文字列|日付])
 '''
-columns = ['A', 'B', 'C']
-column, column2, column3 = 'A', 'B', 'C'
-df = pd.DataFrame(data=[[1, 2, 3], [4, 5, 6]], columns=['A', 'B', 'C'])
+columns = ['列A', '列B', '列C']
+column, column2, column3 = '列A', '列B', '列C'
+df = pd.DataFrame(data=[[1, 2, 3], [4, 5, 6]], columns=['列A', '列B', '列C'])
 
 # ソートする
 
-__X__ = column
+__X__ = '列A'
+'''
+@X('列A';['列A', '列B'])
+@Y([ある|指定した]カラム;[２つ|複数]のカラム)
+'''
 
 df.sort_values(by=__X__)
 '''
-@X(column;'A';['A', 'B'];column)
-@Y(列;'A'列;[２つの[列|列|カラム]|'A'列と'B'列];[複数の列|列名リスト])
-
 @alt(ソートする|並べる|並べ直す|整列する)
-@alt(によって|で|を用いて)
+@alt(によって|で|を用いて|をキーにして)
 
-{dfを|__Y__[によって|で|をキーにして]}ソートする
+{dfを|__Y__によって}ソートする
 '''
 
 df.sort_values(by=__X__, ascending=True)
 '''
 @alt(昇順に|小さい順に)
-{dfを|__Y__[によって|で]|昇順に}ソートする
+{dfを|__Y__によって|昇順に}ソートする
 '''
 
 df.sort_values(by=__X__, ascending=False)
 '''
 @alt(降順に|大きい順に)
-{dfを|__Y__によって[によって|で]|降順に}ソートする
+{dfを|__Y__によって|降順に}ソートする
 '''
-
-df.sort_values(by=__X__, inplace=True)
-'''
-{dfを|__Y__によって}ソートして、更新する
-{dfを|__Y__によって[によって|で]|破壊的に}ソートする
-'''
-
 
 df.sort_values(by=__X__, ascending=True, inplace=True)
 '''
@@ -93,28 +87,33 @@ option: 昇順にする
 # 連携
 n = 10
 
-df.sort_values(columns).head(n)
+df.sort_values('キーとなる列')
+'''
+dfをソートする
+'''
+
+df.sort_values('キーとなる列').head(n)
 '''
 @alt(上位|上の方)
 
-{dfを|列によって}ソートして、上位[n件|]を取り出す
+dfをソートして、上位[n件|]を取り出す
 '''
 
-df.sort_values(columns).tail(n)
+df.sort_values('キーとなる列').tail(n)
 '''
 @alt(下位|下の方)
 
-{dfを|列によって}ソートして、下位[n件|]を取り出す
+dfをソートして、下位[n件|]を取り出す
 '''
 
-df.sort_values(columns).reset_index()
+df.sort_values('キーとなる列').reset_index()
 '''
-{dfを|列によって}ソートして、新しいインデックスを[加える|振り直す]
+dfをソートして、新しいインデックスを[加える|振り直す]
 '''
 
-df.sort_values(columns).reset_index(drop=True)
+df.sort_values('キーとなる列').reset_index(drop=True)
 '''
-{dfを|列によって}ソートして、インデックスを振り直す
+dfをソートして、インデックスを振り直す
 '''
 
 # ソートインデックス
@@ -134,7 +133,7 @@ df.sort_index(ascending=False)
 {df[|全体]を|インデックスによって|降順で}ソートする
 '''
 
-df['A'].value_counts().sort_index().index
+df['列A'].value_counts().sort_index().index
 '''
 FIXME: カテゴリーデータを出現頻度順にソートする
 '''

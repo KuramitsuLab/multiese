@@ -33,8 +33,8 @@ filename = 'file.tsv'
 filename = 'file.json'
 filename = 'file.json'
 
-col, col2, col3 = 'A', 'B', 'C'
-df = pd.DataFrame(data=[[1, 2, 3], [4, 5, 6]], columns=['A', 'B', 'C'])
+col, col2, col3 = '列A', '列B', '列C'
+df = pd.DataFrame(data=[[1, 2, 3], [4, 5, 6]], columns=['列A', '列B', '列C'])
 df2 = df
 ds, ds2 = df[col], df[col2]
 
@@ -92,70 +92,59 @@ pd.set_option('colheader_justify', 'left')
 
 # 読み込み系
 
-filename = 'file.xlsx'
-pd.read_excel(filename)
+pd.read_excel('file.xlsx')
 '''
 @prefix(filename;エクセルファイル)
-@alt(エクセル|エクセル[ファイル|データ])
+@alt(エクセル|[エクセル|表計算|Excel][ファイル|])
+@alt(読み込む|読む|ロードする)
 
 {エクセルから|データフレームを}読み込む
-{|filenameを|[データフレームとして|]}読み込む
-{|filenameから|エクセルを}読み込む
+{エクセルを|[データフレームとして|]}読み込む
 '''
 
-pd.read_excel(filename, sheet_name=n)
+シート名 = 0
+
+pd.read_excel('file.xlsx', sheet_name=シート名)
 '''
-@test(pd=missing;filename='file.xlsx';$$)
-{filenameから|n番目のシートを}[データフレームとして|]読み込む
-{filenameから|nという[名前の|]シートを}[データフレームとして|]読み込む
-{filenameの|n番目のシートを}[データフレームとして|]読み込む
+{エクセルから|シート[の名前|]を指定して|[データフレームを|]}読み込む
+{エクセルのシートを|[データフレームとして|]}読み込む
 '''
 
-pd.read_excel(filename, sheet_name=[n, n2])
+pd.read_excel('file.xlsx', sheet_name=[0, 1])
 '''
-@test(pd=missing;filename='file.xlsx';$$)
-{filenameから|複数のシートを}読み込む
-{filenameから|nとn2のシートを}読み込む
-'''
-
-pd.read_excel(filename, sheet_name=None)
-'''
-@test(pd=missing;filename='file.xlsx';$$)
-{filenameから|全てのシートを}読み込む
+{エクセルから|複数のシートを[指定して|]|[データフレームとして|]}読み込む
+{エクセルから|複数のシートを}読み込む
 '''
 
-pd.read_csv(filename, sep=',')
+pd.read_excel('file.xlsx', sheet_name=None)
 '''
-@test(pd=missing;filename='file.csv';$$)
-@prefix(filename;CSVファイル)
+{エクセルから|全てのシートを}読み込む
+'''
+
+pd.read_csv('file.csv', sep=',')
+'''
 @alt(CSVファイル|CSV|カンマ区切りのファイル)
+
 {CSVファイルから|データフレームを}読み込む
-{filenameから|データフレームを}読み込む
-{filenameを|[|データフレームとして]}読み込む
+{CSVファイルを|[|データフレームとして]}読み込む
 '''
 
-pd.read_csv(filename, sep='\t')
+pd.read_csv('file.tsv', sep='\t')
 '''
-@test(pd=missing;filename='file.tsv';$$)
-@prefix(filename;TSVファイル)
 @alt(TSVファイル|TSV|タブ区切りのファイル)
+
 {TSVファイルから|データフレームを}読み込む
-{filenameから|データフレームを}読み込む
-{filenameを|[|データフレームとして]}読み込む
+{TSVファイルを|[|データフレームとして]}読み込む
 '''
 
-names = ['A', 'B']
-sheet_name = names
+sheet_name = ['A', 'B']
 '''
-@test($$;sheet_name)
-option: [読み込む|エクセルの|]シートの名前をnamesに設定する
+option: [エクセル|]シートの名前を設定する
 '''
 
 index_col = 0
 '''
-@test($$;index_col)
-@alt(の_|)
-option: [先頭の_|最初の]カラムをインデックスに設定する
+option: [先頭の|最初の]カラムをインデックスに設定する
 '''
 
 index_col = n
@@ -177,71 +166,56 @@ option: [先頭の|最初の]行をヘッダに設定する
 
 header = None
 '''
-@test($$;header)
 option: ヘッダを[自動的な|]連番に設定する
 option: どの行もヘッダに[|設定]しない
 '''
 
-header = names
-'''
-@test($$;header)
-option: ヘッダをnamesに設定する
-'''
+列名リスト = ['列A', '列B']
 
-names = names
+names = 列名リスト
 '''
-@test($$;names)
-option: namesをカラムの名前に設定する
+option: カラムの名前をリストで設定する
 '''
 
 usecols = names
 '''
-@test($$;usecols)
 option: 読み込む行番号をnamesで指定する
 '''
 
 skiprows = names
 '''
-@test($$;skiprows)
 option: [読み込まない|スキップする|無視する]列番号をnamesで指定する
 '''
 
 skipfooter = n
 '''
-@test($$;skipfooter)
 option: [読み込まない|スキップする|無視する]フッタをnに設定する
 '''
 
-pd.read_csv(filename, header=None)
+pd.read_csv('file.csv', header=None)
 '''
-@test(pd=missing;filename='file.csv';$$)
-{filenameを|ヘッダ[を指定せず|なしで]}読み込む
-'''
-
-pd.read_csv(filename, index_col=n)
-'''
-@test(pd=missing;filename='file.csv';$$)
-{CSVファイルfilenameを|n番目のカラムをインデックス[と|に]して}読み込む
-文字列filenameから{CSVファイルを|n番目のカラムをインデックス[と|に]して}読み込む
+{CSVファイルを|[ヘッダ|カラム名][を指定せず|なしで]}読み込む
 '''
 
-pd.read_csv(filename, encoding='shift_jis')
+pd.read_csv('file.csv', index_col=n)
 '''
-@test(pd=missing;filename='file.csv';$$)
+{CSVファイルのn行目を|インデックス[と|に]して}読み込む
+{CSVファイルを|n番目のカラムをインデックス[と|に]して}読み込む
+'''
+
+pd.read_csv('file.csv', encoding='shift_jis')
+'''
 {filenameを|[SJISで|文字化けしないように]}読み込む
 filenameから{CSVファイルを|[SJISで|文字化けしないように]}読み込む
 '''
 
-__X__ = 'utf-8'
-pd.read_csv(filename, sep='\t', encoding=__X__)
-'''
-@test(pd=missing;filename='file.tsv';$$)
-@X('utf-8';'shift_jis')
-@Y('UTF8';シフトJIS)
+文字エンコーディング = 'utf-8'
 
-{TSV[形式の|]ファイルから|データフレームを}読み込む
-{filenameから|データフレームを}読み込む
-{filenameを|[|データフレームとして]}読み込む
+pd.read_csv('file.tsv', sep='\t', encoding=文字エンコーディング)
+'''
+@alt(文字コード|文字エンコーディング)
+
+{TSVファイルから|文字コードを指定して}[データフレームを|]読み込む
 '''
 
 pd.read_json(filename, orient='records', lines=True)
@@ -258,55 +232,57 @@ pd.read_json(filename, orient='records', lines=True)
 
 # write
 
-df.to_excel(filename)
+df.to_excel('file.xlsx')
 '''
-@alt(ファイル名|名前)
+@alt(エクセルファイル|エクセル形式)
+@alt(保存する|出力する|書き出す)
 
-{dfを|filenameに}保存する
-{dfを|エクセル[ファイル|形式|]で_|filenameに}保存する
-'''
-
-df.to_csv(filename)
-'''
-{dfを|filenameに}保存する
-{dfを|CSV[ファイル|形式|]で_|filenameに}保存する
+{dfを|エクセルファイルで}保存する
 '''
 
-df.to_csv(filename, sep='\t')
+
+df.to_csv('file.csv')
 '''
-{dfを|filenameに}保存する
-{dfを|タブ区切りで_|filenameに}保存する
-{dfを|TSV[ファイル|形式|]で_|filenameに}保存する
+@alt(CSVファイル|[CSV|カンマ区切り]形式)
+
+dfを保存する
+{dfを|CSVファイルで_}保存する
 '''
 
-df.to_csv(filename, header=None)
+df.to_csv('file.tsv', sep='\t')
 '''
-@alt(ヘッダを付けずに|ヘッダなしで)
-{dfを|filenameに|ヘッダを付けずに}保存する
+@alt(TSVファイル|[CSV|タブ区切り]形式)
+
+{dfを|TSVファイルで_}保存する
 '''
 
-df.to_csv(filename, index=None)
+df.to_csv('file.csv', header=None)
 '''
-@alt(インデックスを付けずに|インデックスなしで)
-{dfを|filenameに|インデックスを付けずに}保存する
+@alt(ヘッダを付けず|[ヘッダ|カラム名]なしで)
+
+{dfを|[CSVファイルに|]|ヘッダを付けず}保存する
 '''
 
-df.to_csv(filename, encoding='utf_8_sig')
+df.to_csv('file.csv', index=None)
 '''
-@test(df=missing;filename='file.txt';$$)
+@alt(インデックスを付けず|インデックスなしで)
+{dfを|[CSVファイルに|]|インデックスを付けず}保存する
+'''
+
+df.to_csv('file.csv', encoding='utf_8_sig')
+'''
 @alt(BOM付きで|BOMを付けて|[Windowsで|]文字化けしないように)
-{dfを|filenameに|BOM付きで}保存する
+{dfを|[CSVファイルに|]|BOM付きで}保存する
 '''
 
-df.to_csv(filename, encoding='shift_jis')
+df.to_csv('file.csv', encoding='shift_jis')
 '''
 @test(df=missing;filename='file.txt';$$)
-{dfを|filenameに|SJISで}保存する
+{dfを|[CSVファイルに|]|SJISで}保存する
 '''
 
-df.to_csv(filename, float_format='%.3f')
+df.to_csv('file.csv', float_format='%.3f')
 '''
-@test(pd=missing;filename='file.txt';$$)
 保存するCSVファイルの小数点以下の桁数を設定する
-{dfを|filenameに|小数点以下3桁まで}保存する
+{dfを|[CSVファイルに|]|小数点以下3桁まで}保存する
 '''

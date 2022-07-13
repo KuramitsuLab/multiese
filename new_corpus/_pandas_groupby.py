@@ -15,26 +15,28 @@ import pandas as pd
 @prefix(column;[列|カラム];[列|カラム])
 @prefix(value;[文字列|日付])
 '''
-columns = ['A', 'B', 'C']
-column, column2, column3 = 'A', 'B', 'C'
-df = pd.DataFrame(data=[[1, 2, 3], [4, 5, 6]], columns=['A', 'B', 'C'])
-#df2 = pd.DataFrame(data={'A': [1, 2], 'B': [2, 1]})
+columns = ['列A', '列B', '列C']
+column, column2, column3 = '列A', '列B', '列C'
+df = pd.DataFrame(data=[[1, 2, 3], [4, 5, 6]], columns=['列A', '列B', '列C'])
+#df2 = pd.DataFrame(data={'列A': [1, 2], '列B': [2, 1]})
 #ds, ds2 = df[column], df[column2]
 
 
-def func(x): return 'A'
+def func(x): return '列A'
 
 
 関数 = func
 
 # グループ化
 
-__X__ = 'A'
+__X__ = '列A'
+'''
+@X('列A';['列A', '列B'];関数)
+@Y([ある|指定した|]カラム;２つの[列|列|カラム];関数)
+'''
 
 df.groupby(__X__)
 '''
-@X(column;'A';['A', 'B'];columns;関数)
-@Y(列;'A'列;[２つの[列|列|カラム]|'A'列と'B'列];[複数の列|列名リスト];関数)
 
 @alt(グループ化する=[グループ化する|集[約|計]する|[グループ分け|分類]する])
 @alt(グループ化した|集[約|計]した|まとめた)
@@ -43,19 +45,21 @@ df.groupby(__X__)
 @alt(ごと|毎|)
 @alt(それぞれの|各|)
 
-{dfを|__Y__[の値|][によって|で]}グループ化する
+{dfを|__Y__[の値|のカテゴリ|][によって|で]}グループ化する
 {dfを|__Y__[|の値][によって|で]}まとめた表グループ[|を得る]
 '''
 
 df.groupby(__X__).describe()
 '''
-{dfを|__Y__[の値|][によって|で]}グループ化し、[要約|記述|基本]統計量を求める
+@alt(要約統計量|記述統計量|[|基本]統計量)
+
+{dfを|__Y__[の値|][によって|で]}グループ化し、要約統計量を求める
 '''
 
 
-df.groupby(column, dropna=False)
+df.groupby('列A', dropna=False)
 '''
-{dfを|欠損値を含めて|column[の値|]で}グループ化する
+{dfを|欠損値を含めて|あるカラム[の値|]で}グループ化する
 '''
 
 dropna = True
@@ -68,19 +72,28 @@ dropna = True
 option: 欠損値[も無視しない|[も|を]含める]
 '''
 
-[(name, group) for name, group in df.groupby(__X__)]
+[(name, group_df) for name, group_df in df.groupby(__X__)]
 '''
 {dfを|__Y__[の値|][によって|ごとに|で]}グループ化して、列挙する
 '''
 
-df.groupby(column).get_group(s)
+[name for name, _ in df.groupby(__X__)]
 '''
-dfを各column毎にグループ化して、sという[|名前の]グループを得る
+{dfを|__Y__[によって|ごとに|で]}グループ化して、グループ名を列挙する
 '''
 
-df.groupby(column).size()
+グループ名 = 'A'
+
+df.groupby('列A').get_group(グループ名)
 '''
-{dfを|column[|の値]で_}グループ化して、それぞれのグループごとの件数を知る
+@alt(のカテゴリ|の値|)
+
+dfをあるカラムのカテゴリで_グループ化して、グループ名で取り出す
+'''
+
+df.groupby('列A').size()
+'''
+dfをあるカラムのカテゴリで_グループ化して、それぞれのグループごとの件数を知る
 '''
 
 df.groupby(column).size()[s]
@@ -88,29 +101,27 @@ df.groupby(column).size()[s]
 dfを各column毎にグループ化して、sというグループの[個数|大きさ]を求める
 '''
 
-df.groupby(column).__X__
+df.groupby('列A').__X__
 '''
 @X(sum()|mean()|count()|max()|min()|var()|std())
-@Y(合計|平均値|個数|最大値|最小値|分散|標準偏差)
+@Y(合計;平均値;個数;最大値;最小値;分散;標準偏差)
 
-dfのそれぞれのグループごとの__Y__[|を求める]
-{dfを|column[|の値][によって|ごとに|で]}グループ化して、[それぞれのグループごとの|]__Y__を求める
-'''
-
-df.groupby([column, column2], as_index=False).__X__
-'''
-@test(df=missing;$$)
-dfを各columnとcolumn2の組み合わせ毎にグループ化して、__Y__を求める
+指定したカラムのカテゴリで集計し、[それぞれの|]__Y__を求める
+dfをグループ化し、[それぞれの|]__Y__を求める
+あるカラムのカテゴリごとの__Y__[|を求める]
 '''
 
-df.groupby(column)[column2].__X__
+df.groupby(['列A', '列B'], as_index=False).__X__
 '''
-dfをグループ化し、それぞれの列に対し__Y__を求める
-
-{dfを|各column毎に}グループ化して、column2の__Y__を求める
+[ふたつ|２つ|複数]のカラム[から|を組み合わせて|で_]グループ化し、__Y__を求める
 '''
 
-df.groupby(column).describe()[column2]
+df.groupby('列A')['列B'].__X__
 '''
-{dfを|columnで}グループ化して、column2の要約統計量を求める
+dfをグループ化し、あるカラムに対し__Y__を求める
+'''
+
+df.groupby('列A').describe()['列B']
+'''
+dfをグループ化し、あるカラムの要約統計量を求める
 '''

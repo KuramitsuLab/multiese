@@ -297,7 +297,7 @@ class Corpus(object):
                 self.train_data.append((doc0, code))
                 _choice = 0.7
                 _shuffle = 0.3
-                for _ in range(max_iter+1):
+                for _ in range((max_iter*2)+1):
                     doc2 = multiese_da(doc, choice=_choice, shuffle=_shuffle)
                     _choice = min(_choice + 0.03, 0.999)
                     _shuffle = _shuffle + 0.2
@@ -306,14 +306,20 @@ class Corpus(object):
                     if doc0 != doc2:
                         train_test_data.add(doc2)
                 train_test_data = list(train_test_data)
-                if len(train_test_data) > 2:
-                    random.shuffle(train_test_data)
-                    for doc in train_test_data[:-1]:
-                        self.train_data.append((doc, code))
-                    self.test_data.append((train_test_data[-1], code))
-                else:
-                    for doc in train_test_data[:-1]:
-                        self.train_data.append((doc, code))
+                for doc in train_test_data:
+                    self.test_data.append((doc, code))
+        random.shuffle(self.test_data)
+        n_train = len(self.train_data)
+        n_test = len(self.test_data)
+        if max_iter == 0:
+            return
+        n_train2 = (n_train + n_test) * 8 // 10
+        if n_train2 > n_train:
+            diff = n_train2-n_train
+            self.train_data = self.train_data + self.test_data[:diff]
+            self.test_data = self.test_data[diff:]
+        random.shuffle(self.train_data)
+        print(n_train, n_test, len(self.train_data), len(self.test_data))
 
     def check(self, intent, code):
         if '{' in intent or '[' in intent or '_' in intent:
@@ -365,10 +371,10 @@ def main():
         print(f'test debug_{name}.tsv')
         corpus.save_data(f'debug_{name}.tsv')
     else:
-        for i in [0, 2, 3, 4, 5, 6, 9]:
-            print(f'kogi{i}.tsv')
+        for i in [0, 1, 2, 3, 5]:
+            print(f'codegen{i}.tsv')
             corpus.generate(max_iter=i)
-            corpus.save_data(f'kogi{i}.tsv')
+            corpus.save_data(f'codegen{i}.tsv')
 
 
 if __name__ == '__main__':

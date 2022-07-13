@@ -180,42 +180,64 @@ def multiese_da(s, choice=0.9, shuffle=0.5):
     return c.emit(shuffle=shuffle, choice=choice)
 
 
-BEGIN = '([^A-Za-z0-9]|^)'
-#END = ('(?![A-Za-z0-9\\]\\}]|$)')
-END = ('(?![A-Za-z0-9]|$)')
-VARPAT = re.compile(BEGIN+r'([a-z]+\d?)'+END)
+def read_tsv(filename, uniq):
+    with open(filename) as f:
+        for line in f.readlines():
+            line2 = multiese_da(line)
+            if '\t' in line2:
+                uniq.add(line2.replace('talk:', 'talk: ').strip())
+            line2 = multiese_da(line)
+            if '\t' in line2:
+                uniq.add(line2.replace('talk:', 'talk: ').strip())
 
-
-def _replace(doc, oldnews):
-    doc = re.sub(VARPAT, r'\1@\2@', doc)  # @s@
-    for old, new in oldnews:
-        doc = doc.replace(old, new)
-    return doc.replace('@', '')
-
-
-def encode_text_code(text, code, choice=0.9, shuffle=0.5):
-    text = multiese_da(text, choice=choice, shuffle=shuffle) + ' '
-    names = [x[1] for x in VARPAT.findall(text) if x[1] in code]
-    d = {}
-    oldnews = []
-    for name in names:
-        if name not in d:
-            d[name] = f'<e{len(d)}>'
-            oldnews.append((f'@{name}@', d[name]))
-    text = _replace(text, oldnews).strip()
-    code = _replace(code+' ', oldnews).strip()
-    return text, code
-
-
-VERBS = [
-    ('する', 'して', 'した', 'したい', 'します'),
-    ('探す', '探して', '探した', '探したい', '探します'),
-]
 
 if __name__ == '__main__':
-    print(multiese_da('[sub]を 探す'))
-    print(multiese_da('{Aと|[||B]subを}探す'))
-    print(multiese_da('[Aと|subを]探す'))
-    print(multiese_da('sにおいて{startからend [|まで ] [|の間] で | subを } 探す'))
-    print(multiese_da(
-        'sにおいて{startからend [|まで ] [|の間] で | subを } 探す', choice=1.0, shuffle=1.0))
+    import sys
+    uniq = set()
+    for file in sys.argv[1:]:
+        read_tsv(file, uniq)
+    lines = list(uniq)
+    random.shuffle(lines)
+    for line in lines:
+        print(line)
+
+
+# BEGIN = '([^A-Za-z0-9]|^)'
+# #END = ('(?![A-Za-z0-9\\]\\}]|$)')
+# END = ('(?![A-Za-z0-9]|$)')
+# VARPAT = re.compile(BEGIN+r'([a-z]+\d?)'+END)
+
+
+# def _replace(doc, oldnews):
+#     doc = re.sub(VARPAT, r'\1@\2@', doc)  # @s@
+#     for old, new in oldnews:
+#         doc = doc.replace(old, new)
+#     return doc.replace('@', '')
+
+
+# def encode_text_code(text, code, choice=0.9, shuffle=0.5):
+#     text = multiese_da(text, choice=choice, shuffle=shuffle) + ' '
+#     names = [x[1] for x in VARPAT.findall(text) if x[1] in code]
+#     d = {}
+#     oldnews = []
+#     for name in names:
+#         if name not in d:
+#             d[name] = f'<e{len(d)}>'
+#             oldnews.append((f'@{name}@', d[name]))
+#     text = _replace(text, oldnews).strip()
+#     code = _replace(code+' ', oldnews).strip()
+#     return text, code
+
+
+# VERBS = [
+#     ('する', 'して', 'した', 'したい', 'します'),
+#     ('探す', '探して', '探した', '探したい', '探します'),
+# # ]
+
+# if __name__ == '__main__':
+#     print(multiese_da('[sub]を 探す'))
+#     print(multiese_da('{Aと|[||B]subを}探す'))
+#     print(multiese_da('[Aと|subを]探す'))
+#     print(multiese_da('sにおいて{startからend [|まで ] [|の間] で | subを } 探す'))
+#     print(multiese_da(
+#         'sにおいて{startからend [|まで ] [|の間] で | subを } 探す', choice=1.0, shuffle=1.0))

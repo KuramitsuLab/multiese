@@ -34,7 +34,7 @@ jsonlfile = 'file.json'
 column, column2, column3 = 'A', 'B', 'C'
 df = pd.DataFrame(data=[[1, 2, 3], [4, 5, 6]], columns=['A', 'B', 'C'])
 df2 = pd.DataFrame(data={'A': [1, 2], 'B': [2, 1]})
-ds, ds2 = df[column], df[column2]
+ds, ds2 = df['列A'], df[column2]
 
 # 確認系
 
@@ -44,10 +44,16 @@ df[|の内容]を見る
 dfの[先頭|最初][|を見る]
 '''
 
-df.head(n)
+__X__ = n
 '''
-dfの[先頭|最初|上]n行[|を抽出する]
-dfの[先頭|最初|上]n行[|を見る]
+@X(n;5;10;100)
+@Y(n;5;10;100)
+'''
+
+df.head(__X__)
+'''
+dfの[先頭|最初|上]__Y__行[|を抽出する]
+dfの[先頭|最初|上]__Y__行[|を見る]
 '''
 
 df.tail()
@@ -55,9 +61,9 @@ df.tail()
 dfの[末尾|最後][|を見る]
 '''
 
-df.tail(n)
+df.tail(__X__)
 '''
-dfの[末尾|最後|下]n行を抽出する
+dfの[末尾|最後|下]__Y__行を抽出する
 '''
 
 df.sample()
@@ -66,17 +72,17 @@ df.sample()
 dfを[|ランダム]サンプリングする
 '''
 
-df.sample(n)
+df.sample(__X__)
 '''
-{dfから|ランダムに|n行を}抽出する
-dfからn行、[|ランダム]サンプリングする
+{dfから|ランダムに|__Y__行を}抽出する
+dfから__Y__行、[|ランダム]サンプリングする
 '''
 
-df.sample(n, replace=True)
+df.sample(__X__, replace=True)
 '''
 @alt(重複ありで|重複を認めて)
 
-{dfから|重複ありで|ランダムに|n行を}サンプリングする
+{dfから|重複ありで|ランダムに|__Y__行を}サンプリングする
 '''
 
 start = 0
@@ -98,58 +104,50 @@ df[:n]
 dfのn行[|目][まで|より前][|を]抽出する
 '''
 
-df[column]
+df['列A']
 '''
-@alt(指定された|与えられた|)
+@alt(あるカラム|[|指定した|与えられた]カラム)
 
-dfの指定されたcolumn[を抽出する|]
-'''
-
-df[column].values
-'''
-[dfの指定された|]columnを配列に変換する
-{[dfの指定された|]columnを|配列として}抽出する
+dfのあるカラム[を抽出する|]
 '''
 
-df[column].values.tolist()
+df['列A'].values
 '''
-[dfの指定された|]columnをリストに変換する
-{[dfの指定された|]columnを|リストとして}抽出する
+dfのあるカラムを配列に変換する
+{dfのあるカラムを|配列として}抽出する
 '''
 
-df[[column]]
+df['列A'].values.tolist()
+'''
+dfのあるカラムをリストに変換する
+{dfのあるカラムを|リストとして}抽出する
+'''
+
+df[['列A']]
 '''
 dfからカラムを１つ[|のみ|だけ]選択する
-df[から|の]指定された列[を|のみ|だけ]抽出する
+dfから１つのカラム[を|のみ|だけ]抽出する
 '''
 
-df[[column, column2]]
+df[['列A', '列B']]
 '''
 dfからカラムを２つ[|のみ|だけ]選択する
-df[から|の]指定された２[つの|]列[を|のみ|だけ]抽出する
+df[から|の]指定した２[つの|]カラム[を|のみ|だけ]抽出する
 '''
 
-df[[column, column2, column3]]
+df[['列A', '列B', '列C']]
 '''
 dfからカラムを３つ[|のみ|だけ]選択する
-df[から|の]指定された３[つの|]列[を|のみ|だけ]抽出する
+df[から|の]指定した３[つの|]カラム[を|のみ|だけ]抽出する
 '''
 
-column4 = 'A'
-
-df[[column, column2, column3, column4]]
-'''
-dfからカラムを４つ[|のみ|だけ]選択する
-df[から|の]指定された４[つの|]列[を|のみ|だけ]抽出する
-'''
-
-columns = ['A', 'B']
+columns = ['列A', '列B']
 df[columns]
 '''
 @prefix(columns;[[カラムの名前|列名]一覧|[名前|列名]リスト])
 
 dfから列名を複数指定して選択する
-df[の|から]指定されたcolumnsの列[を|のみ|だけ][抽出する|選択する]
+df[の|から]指定したcolumnsの列[を|のみ|だけ][抽出する|選択する]
 '''
 
 df.loc[n]
@@ -175,7 +173,7 @@ df.columns
 
 df.columns = columns
 '''
-[dfの|]カラム名を指定されたcolumnsに置き換える
+[dfの|]カラム名を[リストで|]置き換える
 '''
 
 df.select_dtypes('object').columns
@@ -187,10 +185,12 @@ dfからカテゴリデータのカラム名を列挙する
 '''
 
 型 = int
+
 df.select_dtypes(型).columns
 '''
-dfから指定されたデータ型のカラム名の一覧[|を得る]
-dfの指定されたデータ型のカラム名を列挙する
+dfから
+dfから指定したデータ型のカラム名の一覧[|を得る]
+dfの指定したデータ型のカラム名を列挙する
 カラム名の一覧をデータ型でフィルタする
 '''
 
@@ -215,26 +215,30 @@ df.select_dtypes(include=typeList)
 '''
 @prefix(typeList;型リスト)
 
-dfからtypeList[で指定された]データ型のカラム[を|のみ|だけ]抽出する
+dfからtypeList[で指定した]データ型のカラム[を|のみ|だけ]抽出する
 '''
 
 df.select_dtypes(exclude=typeList)
 '''
-dfからtypeList[で指定された|の]データ型のカラム[を|のみ|だけ]除外する
+dfからtypeList[で指定した|の]データ型のカラム[を|のみ|だけ]除外する
 '''
 
 __X__ = 'object'
-
-df.select_dtypes(__X__)
 '''
 @X('object';'number';ty)
 @Y(カテゴリデータ;数値データ;ty[|型])
+'''
+
+df.select_dtypes(__X__)
+'''
 dfから__Y__[のカラム][を|のみ|だけ]抽出する
 '''
 
 df.shape
 '''
-dfの[各次元の[大きさ|サイズ]|シェイプ][を見る]
+dfの[シェイプ|形状][|を見る]
+dfの[次元[の大きさ|数]|行数と列数][|を見る]
+
 '''
 
 df.T
@@ -244,40 +248,44 @@ dfの[行と列|行列]を[入れ替える|ひっくり返す]
 '''
 
 __X__ = df
+'''
+@X(df;df[['列A', '列B']])
+@Y(df;dfの選択したカラム)
+@alt(選択した|一部の)
+'''
+
+df.corr()
+'''
+@alt(まとめて|一度に|[全部、|全て])
+dfのカラム間の[相関行列|相関[係数|]]を[まとめて|]求める
+'''
 
 __X__.corr()
 '''
-@test(aList=['A', 'B'];$$)
-@X(df;df[[column, column2]];df[aList])
-@Y(df;dfのcolumnとcolumn2;dfのaList[|で指定された]カラム)
-
-__Y__の[相関行列|各列間の相関係数][|を求める]
+__Y__の相関行列[|を求める]
 '''
 
 __X__.corr(method='pearson')
 '''
-@test(aList=['A', 'B'];$$)
-{ピアソン[[|積率]相関係数]で_|__Y__の相関行列}[|を求める]
+{[ピアソン|[|積率]相関係数]で_|__Y__の相関行列を}求める
 '''
 
 __X__.corr(method='kendall')
 '''
-@test(aList=['A', 'B'];$$)
-{ケンドール[[|順位]相関係数|]で_|__Y__の相関行列}[|を求める]
+{[ケンドール[|順位]相関係数|]で_|__Y__の相関行列を}求める
 '''
 
 __X__.corr(method='spearman')
 '''
-@test(aList=['A', 'B'];$$)
-{スピアマン[[|順位]相関係数|]で_|__Y__の相関行列}[|を求める]
+{スピアマン[[|順位]相関係数|]で_|__Y__の相関行列を}求める
 '''
 
-sns.heatmap(__X__.corr())
+sns.heatmap(df.corr())
 '''
-@test(aList=['A', 'B'];$$)
 @alt(描画する|グラフ化する)
-{__Y__の相関行列を|ヒートマップで_}描画する
-__Y__のヒートマップを描画する
+
+{dfの相関行列を|[ヒートマップで_|]}描画する
+{dfの相関行列を|[ヒートマップで_|]}可視化する
 '''
 
 df.round()
@@ -295,34 +303,31 @@ df[の数値|]をまとめて小数点以下n桁で丸める
 '''
 
 # 変更する
-name = 'A'
-name2 = 'B'
-s = 'A'
-s2 = 'a'
 
-df.rename(columns={column: name})
+df.rename(columns={'列A': '列a', '列B': '列b'})
 '''
 @alt(リネームする|名前[|を]変更する)
 @alt(付け直す|変更する)
+
+dfのカラムをリネームする
 dfのカラムの名前を付け直す
-dfのカラムの名前をcolumnからsに付け直す
-dfのcolumnをsにリネームする
 '''
 
 df.columns = [str(x).replace(s, s2) for x in df.columns]
 '''
-@alt(まとめて|一度に|)
-{dfのカラムの名前を|まとめて}sをs2に置換する
+@alt(まとめて|一度に|全て)
+
+{dfのカラムの名前を|まとめて}[|文字列]置換する
 '''
 
-df.rename(index={name: name2})
+df.rename(index={x: y})
 '''
-dfのインデックスの名前をまとめて、nameからname2に付け直す
+dfのインデックスの名前をまとめて付け直す
 '''
 
-df.set_index(column)
+df.set_index('列A')
 '''
-dfのcolumnをインデックスに設定する
+dfのあるカラムをインデックスに設定する
 '''
 
 df.reset_index()
@@ -330,292 +335,256 @@ df.reset_index()
 dfのインデックスを[リセットする|振り直す]
 '''
 
-# df.reset_index(drop=True)
-# @type(df)の[元の|もともとの|元々あった|もともとあった]インデックスをリセットする
-# {@type(df)のインデックスを[リセットして|振り直して]、}元のインデックスを削除する
-# {元のインデックスを[削除し、|削除してから、]}@type(df)のインデックスをリセットする
-
-
 # datetime
 
-
-# 演算処理系
-
-# df['temperature'].diff(periods=1)   @ @let @ @calc
-
-# @type(df)の@type('temperature', カラム)内の前後の行の差分
-
-
-# 行列操作
-
+df[df['列A'] == x]
+'''
+'A'カラムの値がxに等しい[行|データ]を抽出する
+'''
 
 # フィルター
 x = 1.0
-x2 = 2.0
+y = 2.0
 
-df[df[column] == x]
+df[df['列A'] == x]
 '''
-@test(df=missing;$$)
 @alt(を抽出する|[のみ|だけ]残す|を選択する)
 @alt(フィルタする|消す|取り除く)
-dfのcolumn[|の値]がx[の|である][行|データ]を抽出する
-dfのcolumn[|の値]がxでない[行|データ]をフィルタする
+
+[dfの|]あるカラムの値がxに等しい[行|データ]を抽出する
 '''
 
-df[(df[column] == x) & (df[column2] == x2)]
+df[df['列A'] != x]
 '''
-@test(df=missing;$$)
-dfの[行|データ]を条件でフィルタするには
-dfのcolumn[|の値]がx、かつcolumn2がx2である[行|データ]を抽出する
+@alt(を抽出する|[のみ|だけ]残す|を選択する)
+@alt(フィルタする|消す|取り除く)
+
+[dfの|]あるカラムの値がxに等しくない[行|データ]を抽出する
 '''
 
-df[df[column] < x]
+df[(df['列A'] == x) & (df['列B'] == y)]
 '''
-@test(df=missing;$$)
-dfのcolumn[|の値]がx[より[小さい|少ない]|未満の][行|データ]を抽出する
-'''
-
-df[df[column] <= x]
-'''
-@test(df=missing;$$)
-dfのcolumn[|の値]がx以下の[行|データ]を抽出する
+dfの[行|データ]を条件でフィルタする
+あるカラムの値がxに等しく、[かつ|]別のカラムの値がyに等しい[行|データ]を抽出する
 '''
 
-df[df[column] > x]
+df[df['列A'] < x]
 '''
-@test(df=missing;$$)
-dfのcolumn[|の値]がxより[大きい|多い][行|データ]を抽出する
-'''
-
-df[df[column] >= x]
-'''
-@test(df=missing;$$)
-dfのcolumn[|の値]がx以上の[行|データ]を抽出する
+[dfの|]あるカラムの値がxより[小さい|少ない][行|データ]を抽出する
 '''
 
-df[(x < df[column]) & (df[column] < x2)]
+df[df['列A'] <= x]
 '''
-@test(df=missing;$$)
-dfのcolumn[|の値]がxより[大きく|多く]x2より[小さい|少ない][行|データ]を抽出する
-'''
-
-df[(x <= df[column]) & (df[column] < x2)]
-'''
-@test(df=missing;$$)
-dfのcolumn[|の値]がx以上かつx2未満の[行|データ]を抽出する
+[dfの|]あるカラムの値がx以下の[行|データ]を抽出する
 '''
 
-df[df[column].isin(aList)]
+df[df['列A'] > x]
 '''
-@test(df=missing;$$)
-dfのcolumn[|の値]がaListに含まれる[行|データ]を抽出する
-'''
-
-df = pd.DataFrame(data={'A': ['A', 'B'], 'B': ['B', 'A']})
-column = 'A'
-column2 = 'B'
-
-df[df[column].str.contains(s)]
-'''
-@test(df=missing;$$)
-dfのcolumn[|の文字列][が|で]sが含まれる[行|データ]を抽出する
+[dfの|]あるカラムの値がxより[大きい|多い][行|データ]を抽出する
 '''
 
-df[not df[column].str.contains(s)]
+df[df['列A'] >= x]
 '''
-@test(df=missing;$$)
-dfのcolumn[|の文字列][が|で]sが含まれない[行|データ]を抽出する
-'''
-
-df[df[column].str.match(s)]
-'''
-@test(df=missing;$$)
-dfのcolumn[|の文字列]が正規表現sにマッチする[行|データ]を抽出する
+[dfの|]あるカラムの値がx以上の[行|データ]を抽出する
 '''
 
-df[not df[column].str.match(s)]
+df[(x < df['列A']) & (df['列A'] < y)]
 '''
-@test(df=missing;$$)
-dfのcolumn[|の文字列]が正規表現sにマッチしない[行|データ]を抽出する
-'''
-
-df[df[column].str.startswith(s)]
-'''
-@test(df=missing;$$)
-dfのcolumn[|の文字列]がsで始まる[行|データ]を抽出する
+あるカラムの値がxより大きく、yより小さい[行|データ]を抽出する
 '''
 
-df[not df[column].str.startswith(s)]
+df[(x <= df['列A']) & (df['列A'] <= y)]
 '''
-@test(df=missing;$$)
-dfのcolumn[|の文字列]がsで始まらない[行|データ]を抽出する
-'''
-
-df[df[column].str.endswith(s)]
-'''
-@test(df=missing;$$)
-dfのcolumn[|の文字列]がsで終わる[行|データ]を抽出する
+あるカラムの値がx以上、y以下の[行|データ]を抽出する
 '''
 
-df[not df[column].str.endswith(s)]
+df[(x <= df['列A']) & (df['列A'] < y)]
 '''
-@test(df=missing;$$)
-dfのcolumn[|の文字列]がsで終わらない[行|データ]を抽出する
+あるカラムの値がx以上、y未満の[行|データ]を抽出する
 '''
+
+リスト = ['A', 'B']
+
+df[df['列A'].isin(リスト)]
+'''
+あるカラムにリストの値が含まれる[行|データ]を抽出する
+'''
+
+df = pd.DataFrame(data={'列A': ['A', 'B'], '列B': ['B', 'A']})
+
+部分文字列 = 'A'
+正規表現 = '.'
+
+df[df['列A'].str.contains(部分文字列)]
+'''
+あるカラムの文字列に部分文字列が[含まれる|ある|存在する][行|データ]を抽出する
+'''
+
+df[~df['列A'].str.contains(部分文字列)]
+'''
+あるカラムの文字列に部分文字列が[含まれない|ない|存在しない][行|データ]を抽出する
+'''
+
+df[df['列A'].str.match(正規表現)]
+'''
+あるカラムの文字列が正規表現にマッチする[行|データ]を抽出する
+'''
+
+df[~df['列A'].str.match(正規表現)]
+'''
+あるカラムの文字列が正規表現sにマッチしない[行|データ]を抽出する
+'''
+
+df[df['列A'].str.startswith(部分文字列)]
+'''
+あるカラムの文字列が部分文字列で始まる[行|データ]を抽出する
+'''
+
+df[~ df['列A'].str.startswith(部分文字列)]
+'''
+あるカラムの文字列が部分文字列で始まらない[行|データ]を抽出する
+'''
+
+df[df['列A'].str.endswith(部分文字列)]
+'''
+あるカラムの文字列が部分文字列で終わる[行|データ]を抽出する
+'''
+
+df[~ df['列A'].str.endswith(部分文字列)]
+'''
+あるカラムの文字列が部分文字列で終わらない[行|データ]を抽出する
+'''
+
 
 # ドロップ・欠損値処理
 
 df.style.highlight_null()
 '''
-@test(df=missing;$$)
 @alt(付け|つけ)
+
 dfの欠損値が[含まれる|ある][箇所|部分][に[色を付ける]|を[色付けする]]
 '''
 
 df.drop(n, axis=0)
 '''
-@test(df=missing;$$)
-@alt(ドロップする|削除する|消す|[落とす|取り除く]|ドロップする)
-@alt(ドロップして|[削除し|消し|取り除い][て|、])
-dfのn行目をドロップする
+@alt(ドロップする|[削除する|消す]|[除く|取り除く])
+
+dfのn行目をドロップしてみる
 '''
 
 df.drop(n, axis=0, inplace=True)
 '''
-@test(df=missing;$$)
-@alt(更新する|入れ替える|インプレイスする)
 @alt(破壊的に|インプレイスで)
-{dfのn行目を|破壊的に}ドロップする
-dfのn行目をドロップして、更新する
+
+dfのn行目を[|破壊的に]ドロップする
 '''
 
-df.drop(column, axis=1)
+df.drop('列A', axis=1)
 '''
-@test(df=missing;$$)
-dfのcolumnをドロップする
+[dfの|]あるカラムをドロップしてみる
 '''
 
-df.drop(column, axis=1, inplace=True)
+df.drop('列A', axis=1, inplace=True)
 '''
-@test(df=missing;$$)
 @alt(_変更を反映する|入れ替える|更新する)
-{dfのcolumnを|破壊的に}ドロップする
-dfのcolumnをドロップして、更新する
+
+[dfの|]あるカラムを[|破壊的に]ドロップする
 '''
 
 df = pd.DataFrame(data={'A': ['A', 'B'], 'B': ['B', 'A']})
-column = 'A'
-column2 = 'B'
 
-df.drop([column, column2], axis=1)
+df.drop(['列A', '列B'], axis=1)
 '''
-@test(df=missing;$$)
-dfのcolumnとcolumn2をドロップする
+dfの[複数の|二つの]カラムをドロップしてみる
 '''
 
-df = pd.DataFrame(data={'A': ['A', 'B'], 'B': ['B', 'A']})
-column = 'A'
-column2 = 'B'
-columns = ['A', 'B']
+df.drop(['列A', '列B'], axis=1, inplace=True)
+'''
+dfの[複数の|二つの]カラムをドロップする
+'''
 
-df.drop(columns, axis=1)
+df = pd.DataFrame(data={'列A': ['A', 'B'], '列B': ['B', 'A']})
+
+df.drop(columns, axis=1, inplace=True)
 '''
-dfのcolumnsで指定されたカラムをドロップする
+dfのcolumnsで指定したカラムをドロップする
 '''
+
+# 欠損値
 
 df.dropna()
 '''
-@alt(の中||の内)
-dfの中の欠損値をドロップする
-dfの中の欠損値が[ある|存在する]行をドロップする
+@alt(の中|の内)
+df[中|]の欠損値をドロップしてみる
+欠損値が[ある|存在する]行をドロップしてみる
+'''
+
+df.dropna(inplace=True)
+'''
+df[中|]の欠損値を[|破壊的に]ドロップする
+欠損値[が|の][ある|存在する]行を[|破壊的に]ドロップする
 '''
 
 # 重複
 
-df = pd.DataFrame(data={'A': [1, 1], 'B': [1, 1]})
-column = 'A'
-column2 = 'B'
-columns = ['A', 'B']
-
+df = pd.DataFrame(data={'列A': [1, 1], '列B': [1, 1]})
 
 df.duplicated()
 '''
-@test(pd=df=df2=missing;$$)
 @alt(重複した|重複する)
+
 dfの重複を見る
 dfに重複があるか見る
 dfが重複しているかどうか
 dfの重複した行をマスクする
-dfの重複した行数のマスク[|を得る]
 '''
 
 df.duplicated().sum()
 '''
-@test(pd=df=df2=missing;$$)
-dfの重複した行[|数]を数える
-dfの中で何行、重複するか見る
+dfの重複[した行|]を数える
+df[は|が]何行重複するか見る
 '''
 
 df[df.duplicated(keep=False)]
 '''
-@test(pd=df=df2=missing;$$)
 [dfの|]重複した行[のみ|だけ|][を抽出する|]
 '''
 
-df[not df.duplicated(keep=False)]
+df[~ df.duplicated(keep=False)]
 '''
-@test(pd=df=df2=missing;$$)
 [dfの|]重複していない行[のみ|だけ|][を抽出する|]
 '''
 
-df.duplicated(subset=column)
+df.duplicated(subset='列A')
 '''
-@test(pd=df=df2=missing;$$)
-dfの中で、columnの重複を見る
-dfの中で、columnに重複があるか見る
-dfのcolumnに重複があれば、マスクする
+指定したカラム[のみ|だけ|ついて]、dfの重複を見る
 '''
 
-df.duplicated(subset=[column, column2])
+df.duplicated(subset=['列A', '列B'])
 '''
-@test(pd=df=df2=missing;$$)
-dfの中で、columnとcolumn2の重複を見る
-dfの中で、columnとcolumn2に重複があるか見る
-dfの中のcolumnとcolumn2に重複があれば、マスクする
-'''
-
-df.drop_duplicates()
-'''
-@test(pd=df=df2=missing;$$)
-dfから重複をドロップする
-dfから重複した[行|データ]をドロップする
+指定したカラムリスト[のみ|だけ|ついて]、dfの重複を見る
 '''
 
 df.drop_duplicates(inplace=True)
 '''
-@test(pd=df=df2=missing;$$)
-{dfから|破壊的に|重複を}ドロップする
-dfから重複した[行|データ]をドロップして、更新する
-{dfから|破壊的に|重複した[行|データ]を}ドロップする
+dfから重複を[|破壊的に]ドロップする
+dfから同じ[内容の|][行|データ]を[|破壊的に]ドロップする
 '''
+
 
 df.drop_duplicates(keep=False)
 '''
-@test(pd=df=df2=missing;$$)
-dfから重複を残さず、ドロップする
-dfから重複した[行|データ]を残さず、ドロップする
+dfから重複を残さず重複をドロップする
+dfから重複した[行|データ]を残さずドロップする
 '''
 
-df.drop_duplicates(subset=column)
+df.drop_duplicates(subset='列A', inplace=True)
 '''
-@test(pd=df=df2=missing;$$)
-[dfの中で、|]columnとcolumn2の重複をドロップする
-dfの中のcolumnとcolumn2に重複があれば、ドロップする
+[dfの中で|]あるカラムに重複があれば、ドロップする
 '''
 
-df.drop_duplicates(subset=[column, column2])
+df.drop_duplicates(subset=['列A', '列B'], inplace=True)
 '''
-[dfの中で、|]columnとcolumn2の重複をドロップする
-dfの中のcolumnとcolumn2に重複があれば、ドロップする
+[|dfの]カラムを[指定して|選んで]重複をドロップする
+[dfの|]指定のカラムに重複があれば、ドロップする
 '''
-
