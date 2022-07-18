@@ -9,7 +9,7 @@ from multiese_da import multiese_da
 ##
 # Multiese Parser
 
-GRAMMAR = '''
+GRAMMAR0 = '''
 
 Sentense = { (Block / . )* }
 
@@ -21,6 +21,27 @@ Code = {
 
 Block = {
     Code LF
+    QUOTE LF
+    { (!QUOTE (!LF .)* LF)+ #Doc }
+    QUOTE LF
+    #Pair
+}
+
+QUOTE = '\\'\\'\\'' _ / '"""' _
+LF = '\\r'? '\\n' / !.
+
+'''
+
+GRAMMAR = '''
+
+Sentense = { (Block / . )* }
+
+Code = {
+    (!QUOTE (!LF .)+ LF)+ #Code
+}
+
+Block = {
+    Code
     QUOTE LF
     { (!QUOTE (!LF .)* LF)+ #Doc }
     QUOTE LF
@@ -66,6 +87,7 @@ ALTDIC = {
     # 'の中の': '[[|の][中|内]の|の]', 'の中に': '[[|の][中|内]に|に]', '中で': '[[の|][中|内]で|で]',
     '全ての': '[全ての|すべての|全|]',
     'の名前': '[名|の名前]',
+    '指定した': '[指定した|指定された|ある]',
     'された': '[された|された|した]',
     'まとめて': '[まとめて|一度に|]',
     '一つ': '[ひとつ|一つ]', '二つ': '[ふたつ|二つ]',
@@ -81,6 +103,7 @@ ALTDIC = {
     '作って': '[[作って|作成して]|[|新規]生成して|[用意|準備]して]',
     'プリントする': '[表示する|出力する|プリントする]',
     'コピーする': '[コピーする|複製する]',
+    'が欲しい': '[が[欲|ほ]しい|]',
 }
 
 VERB = [
@@ -175,13 +198,6 @@ def _ta(name, number, prefixdic):
             prefix = '関数'
             suffix = '関数'
     var = f'{name}{number}'
-    # if suffix != '':
-    #     if prefix != '':
-    #         return var, f'[{prefix}|{suffix}|{var}{suffix}|{prefix}{var}]'
-    #     return var, f'[{suffix}|{var}{suffix}]'
-    # if prefix != '':
-    #     return var, f'[{prefix}|{prefix}{var}]'
-    # return var, var
     if suffix != '':
         if prefix != '':
             return var, f'[{prefix}|{suffix}]'
@@ -326,7 +342,7 @@ class Corpus(object):
             print(f'\033[33m エラー{(intent, code)}\033[0m')
         if intent.startswith('option:') or intent.startswith('keyword:'):
             intent = intent.replace(':', ': ')
-        return intent, code
+        return intent, code.replace('\n', '<nl>').replace('    ', '<tab>')
 
     def save_data(self, filename='kogi.tsv'):
         if len(self.test_data) == 0:

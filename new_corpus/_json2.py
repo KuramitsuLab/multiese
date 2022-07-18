@@ -3,70 +3,83 @@ import io
 
 import json
 '''
-@test($$;type(json))
 @alt(形式|フォーマット)
 JSONを使う
 '''
 
 json = import_module('json')
-jsonString = "{'A':1}"
-aDict = {'A': 0}
-fin = io.StringIO(jsonString)
-fout = io.StringIO(mode='w')
+文字列 = "{'A':1}"
+バイト列 = b"{'A':1}"
+辞書 = {'A': 0}
+ファイル入力 = io.StringIO(文字列)
+ファイル出力 = io.StringIO(mode='w')
 n = 0
-
-
-json.loads(jsonString)
 '''
-@test(json=missing;$$)
-JSON[形式の|]sを辞書に変換する
-JSON[形式の|]sをデータに変換する
-JSON[形式の|]sを[読み込む|ロードする]
+@alt(ファイル入力|入力ストリーム|入力)
+@alt(ファイル出力|出力ストリーム|出力)
 '''
 
-json.loads(b.decode('unicode-escape'))
+with open('file.json') as f:
+    data = json.load(f)
 '''
-@test(json=missing;b=b'{}';$$)
-@prefix(b;バイト列;)
-JSON形式のbを辞書に変換する
-JSON[形式の|]sをデータに変換する
+@alt(読む|読み込む|ロードする)
+@alt(構文解析する|パースする)
+
+ファイルからJSON[形式のデータ|]を読む
+JSON[形式の|]ファイルを構文解析する
 '''
 
-json.load(fin)
+json.load(ファイル入力)
 '''
-@test(json=missing;fin=sys.stdin;$$)
-JSON[ファイル|形式]のfinを辞書に変換する
-JSON[ファイル|形式]のfをデータに変換する
-'''
-
-data = json.load(fin)
-'''
-@test(json=missing;fin=sys.stdin;$$;data)
-JSON[ファイル|形式]のfinを読み込んで、dataとする
+ファイル入力からJSON[形式のデータ|]を読む
+ファイル入力をJSONとして構文解析する
+JSON[形式の|]ファイル入力を辞書に変換する
 '''
 
-json.dumps(aDict, ensure_ascii=False)
+data = json.loads(文字列)
 '''
-@test(json=missing;$$)
-aDictをJSON形式の文字列に変換する
-'''
-
-json.dumps(aDict, ensure_ascii=False, indent=n)
-'''
-@test(json=missing;$$)
-{[インデント|改行]付きで|aDictを}文字列に変換する
-aDictを{インデント幅nの|JSON形式の}文字列に変換する
-インデント幅nで、aDictをJSON形式の文字列に変換する
+文字列からJSON[形式のデータ|]を読む
+JSON[形式の|]文字列を構文解析する
+JSON[形式の|]文字列を読む
+JSON[形式の|]文字列を[辞書|オブジェクト|データ]に変換する
 '''
 
-json.dumps(aDict, ensure_ascii=False, sort_keys=True)
+json.loads(バイト列.decode('unicode-escape'))
 '''
-@test(json=missing;$$)
-aDictを[ソートして|並べ直して]JSON形式の文字列に変換する
+バイト列からJSON[形式のデータ|]を読む
+JSON[形式の|]バイト列を構文解析する
 '''
 
-json.dump(aDict, fout, ensure_ascii=False)
+__X__ = 辞書
 '''
-@test(json=missing;fout=sys.stdout;$$)
-aDictをJSON形式でfoutに保存する
+@X(辞書|リスト|文字列|データ)
+@Y(辞書|リスト|文字列|データ)
+'''
+
+json.dumps(__X__, ensure_ascii=False)
+'''
+__Y__をJSON[形式の|]文字列に変換する
+__Y__をJSON[形式|]にエンコードする
+'''
+
+json.dumps(__X__, ensure_ascii=False, indent=n)
+'''
+{インデント[|幅]を指定して|__Y__を}JSON文字列に変換する
+{__Y__を|インデント[|幅]を指定して}JSON[形式|]にエンコードする
+'''
+
+json.dumps(__X__, ensure_ascii=False, sort_keys=True)
+'''
+{__Y__を|ソートして}JSON[形式|]にエンコードする
+'''
+
+json.dump(__X__, ファイル出力, ensure_ascii=False)
+'''
+{__Y__を|JSON形式で_}ファイル出力に[保存する|出力する|ダンプする]
+'''
+
+with open('file.json', 'w') as f:
+    json.dump(__X__, f, ensure_ascii=False)
+'''
+{__Y__を|JSON形式で_}[|指定した]ファイルに[保存する|出力する|ダンプする]
 '''

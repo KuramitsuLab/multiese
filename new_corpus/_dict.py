@@ -2,13 +2,13 @@ from importlib import import_module
 
 copy = import_module('copy')
 
-aDict = {'A': 1}
-aDict2 = {'B': 0}
-key = 'A'
-key2 = 'B'
+辞書 = {'A': 1}
+辞書2 = {'B': 0}
+キー = 'A'
+キー2 = 'B'
 element = 1
 
-{}
+辞書 = {}
 '''
 @alt(辞書|辞書|[マップ|マッピング])
 @alt(キー|項目名)
@@ -16,175 +16,221 @@ element = 1
 @alt(得る|参照する|見る)
 @alt(クリアする|消去する|空にする)
 
-@prefix(key;[キー|項目名])
+@prefix(キー;[キー|項目名])
 @prefix(element;要素)
 
 空の辞書[|を作る]
+[空の|]辞書が欲しい
 '''
 
-dict(name=element)
+dict(name='kogi', age=6)
 '''
 変数名をキーとして、辞書[|を作る]
 '''
 
-aDict[key]
+辞書[キー]
 '''
-aDictのkeyの値[|を得る]
-'''
-
-list(aDict)
-'''
-aDictのキーを列挙する
-aDictのキー一覧[|を得る]
+辞書のキーの値[|を得る]
+辞書のキーに対応した値[|を得る]
 '''
 
-len(aDict)
+list(辞書)
 '''
-aDictのエントリ数[|を得る]
-'''
-
-aDict.clear()
-'''
-aDict[の全[エントリ]|]をクリアする
+辞書のキーを列挙する
+辞書のキーの一覧[|を得る]
 '''
 
-aDict.copy()
+len(辞書)
 '''
-aDictを[|浅く]コピーする
-aDictの[浅い|]コピーを作る
-'''
-
-aDict.get(key)
-'''
-aDictからkeyの値[|を得る]
-aDictのkeyに対応した値[|を得る]
+辞書のエントリ数[|を得る]
 '''
 
-aDict.get(key, None)
+辞書.clear()
 '''
-{aDictからkeyの値を|エラーなく}得る
-'''
-
-aDict.get(key, element)
-'''
-aDictからkeyの値か、もしくはelementを得る
+辞書を空にする
+辞書[の全[エントリ]|]をクリアする
 '''
 
-key in aDict
+辞書.copy()
+'''
+辞書を[|浅く]コピーする
+辞書の[浅い|]コピーを作る
+'''
+
+見つからない場合の値 = None
+
+辞書.get(キー, 見つからない場合の値)
+'''
+{辞書から|エラーなく}キーの値[|を得る]
+辞書のキーに対応した値[|を得る]
+'''
+
+キー in 辞書
 '''
 @alt(存在する|ある|存在している)
 @alt(定義済み|[|既に]定義されている)
 
-{keyが|aDictに}存在するかどうか
-{keyが|aDict上で}定義済みかどうか
+{キーが|辞書に}存在するかどうか
+{キーが|辞書上で}定義済みかどうか
 '''
 
-key not in aDict
+キー not in 辞書
 '''
 @alt(存在しない|ない|存在していない)
 @alt(未定義|[まだ|]定義されていない)
 
-{keyが|aDictに}存在するかどうか
-{keyが|aDict上で}未定義かどうか
+{キーが|辞書に}存在するかどうか
+{キーが|辞書上で}未定義かどうか
 '''
 
-aDict.items()
+if キー in 辞書:
+    print(辞書[キー])  # FIXME
 '''
-aDictのキーとその[値|エントリ]を列挙する
-aDictのキーとその[値|エントリ]をペアとして取り出す
-'''
-
-aDict.keys()
-'''
-aDictのキーを列挙する
-aDictのキーの一覧[|を得る]
+辞書にキーが存在する[とき|場合|ならば]、処理する[ようにしたい|]
 '''
 
-aDict.values()
+if キー not in 辞書:
+    print(辞書[キー])  # FIXME
 '''
-aDictの[値|エントリ]を列挙する
-aDictの[値]の一覧[|を得る]
-'''
-
-element in aDict.values()
-'''
-{element[が|は]|aDictの値として}含まれているかどうか
+辞書にキーが存在しない[とき|場合|ならば]、処理する[ようにしたい|]
 '''
 
-element not in aDict.values()
+辞書.items()
 '''
-{element[が|は]|aDictの値に}含まれていないかどうか
-'''
-
-aDict[key] = element
-'''
-@test($$;aDict)
-aDictのkeyをelementに[設定|変更|]する
-aDictにelementをkeyとして加える
+辞書のキーとその[値|エントリ]を列挙する
+[辞書から|]キーとその[値|エントリ]を[ペア|組|タプル]として取り出す
 '''
 
-aDict.setdefault(key, element)
+for key, value in 辞書.items():
+    print(key, value)  # FIXME
+'''
+辞書からキーとバリュー[の[ペア|組]|]を取り出し、ひとつずつ処理する
+'''
+
+辞書.keys()
+'''
+辞書のキーを列挙する
+'''
+
+list(辞書.keys())
+'''
+辞書のキーをリストに変換する
+辞書のキーの一覧[|を得る]
+'''
+
+for key in 辞書.keys():
+    print(辞書[key])  # FIXME
+'''
+辞書のキーを[ひとつ|一つ]ずつ処理する
+'''
+
+辞書.values()
+'''
+辞書の[値|エントリ]を列挙する
+辞書の[値|エントリ]の一覧[|を得る]
+'''
+
+list(辞書.values())
+'''
+辞書の[値|エントリ]の一覧[|を得る]
+辞書内の値をリストとして[|得る]
+'''
+
+for value in 辞書.values():
+    print(value)  # FIXME
+'''
+辞書の[値|エントリ]を[ひとつ|一つ]ずつ処理する
+'''
+
+element in 辞書.values()
+'''
+{element[が|は]|辞書の値として}含まれているかどうか
+'''
+
+element not in 辞書.values()
+'''
+{element[が|は]|辞書の値に}含まれていないかどうか
+'''
+
+辞書[キー] = element
+'''
+辞書のキーをelementに[設定|変更|]する
+辞書にelementをキーとして加える
+'''
+
+辞書.setdefault(キー, element)
 '''
 @alt(とき|時|場合)
-{keyが|aDictに}存在しないとき、elementを追加する
+{キーが|辞書に}存在しないとき、elementを追加する
 '''
 
 
-aDict.update(aDict2)
+辞書.update(辞書2)
 '''
 @alt(追加更新する=[更新する|追加する|加えて、更新する])
 
-aDictに[|別の]aDict2のエントリを追加更新する
+辞書を[別の辞書で_|]更新する
+辞書に[|別の]辞書2のエントリを追加更新する
 '''
 
 kwargs = dict(A=1, B=2)
 
-aDict.update(**kwargs)
+辞書.update(**kwargs)
 '''
-{aDictに|キーワード引数で_}追加更新する
+{辞書に|キーワード引数で_}追加更新する
 '''
 
-aDict | aDict2
+辞書 | 辞書2
 '''
 @alt(合体する|結合する|マージする)
 
 ふたつの辞書を合体する
 '''
 
-aDict.pop(key)
+辞書.pop(キー)
 '''
-@alt(ポップする|取り出す)
+@alt(ポップする|取り除く)
 
-{aDictから|keyで指定されたエントリを}ポップする
-'''
-
-aDict.popitem()
-'''
-{aDictから|最後[の|に追加した]エントリを}ポップする
+{辞書から|キーで指定されたエントリを}ポップする
 '''
 
-
-{v: k for k, v in aDict.items()}
+辞書.popitem()
 '''
-aDictのキーと値を入れ替える
+{辞書から|最後[の|に追加した]エントリを}ポップする
 '''
 
-aList = [1, 2, 3]
-aList2 = [4, 5, 6]
 
-dict(zip(aList, aList2))
+{v: k for k, v in 辞書.items()}
+'''
+辞書のキーと値を入れ替える
+'''
+
+リスト = [1, 2, 3]
+リスト2 = [4, 5, 6]
+
+dict(zip(リスト, リスト2))
 '''
 ２つのリストから辞書[|を作る]
 '''
 
-dict(aDict)
+dict(辞書)
 '''
 @alt(コピーする|複製する)
-aDictを[浅く|]コピーする
-aDictのコピー[|を作る]
+辞書を[浅く|]コピーする
+辞書のコピー[|を作る]
 '''
 
-{k: copy.copy(v) for k, v in aDict.items()}
+{k: copy.copy(v) for k, v in 辞書.items()}
 '''
-aDictの[内部|値]もコピーする
+辞書の[内部|値]もコピーする
+'''
+
+文字列 = 'A'
+
+if 文字列 in 辞書:
+    辞書[文字列] += 1
+else:
+    辞書[文字列] = 1
+'''
+辞書で_文字列[|の数]を[数える|カウントする]
 '''

@@ -3,7 +3,6 @@ from importlib import import_module
 
 import collections
 '''
-@prefix(deq;[両端キュー|双方向キュー|[キュー|スタック|デック]])
 @alt(両端キュー=[両端キュー|双方向キュー|[キュー|スタック|デック]])
 
 [コレクション|データ構造|両端キュー|カウンタ|名前付きタプル]を使う
@@ -20,18 +19,15 @@ deq = collections.deque([1, 2])
 names = ['A', 'B']
 
 
-collections.deque()
+両端キュー = collections.deque()
 '''
 [空の|]両端キュー[|を作る]
+両端キュー[|が欲しい]
 '''
 
-collections.deque(iterable)
-'''
-{iterableから|両端キューを}作る
-iterableを両端キューに変換する
-'''
+最大長 = 10
 
-collections.deque(maxlen=n)
+collections.deque(maxlen=最大長)
 '''
 @alt(最大長|上限[|長||制限された長さ])
 
@@ -40,137 +36,122 @@ collections.deque(maxlen=n)
 最大長nの両端キューを作る
 '''
 
-collections.deque(iterable, maxlen=n)
+__X__ = 1
 '''
-iterableの長さを制限する
-{最大長nの両端キューを|iterableから}作る
+@X(要素;整数;文字列)
+@Y(要素;整数;文字列)
 '''
 
-deq.appendleft(element)
+両端キュー.appendleft(__X__)
 '''
-@prefix(element;[要素|値|数値|文字列])
 @alt(先頭|最初|左[|側])
 @alt(追加する|[付け|つけ]加える|入れる)
-@alt(エンキューする|enqueueする)
 
-{deqの先頭に|elementを}追加する
-{deqに|elementを}エンキューする
+{両端キューの先頭に|__Y__を}追加する
 '''
 
-deq.append(element)
+両端キュー.append(__X__)
 '''
 @alt(末尾|最後|右[|側])
 @alt(プッシュする|積む|スタックする)
+@alt(エンキューする|enqueueする)
 
-{deqの末尾に|elementを}追加する
-{deqに|elementを}プッシュする
+{両端キューの末尾に|__Y__を}追加する
+{両端キューに|__Y__を}エンキューする
+{両端キューに|__Y__を}プッシュする
 '''
 
-deq.extendleft(iterable)
-'''
-@alt(要素|[値|データ])
-
-{deqの先頭に|iterableの[各|]要素を[|順に]}追加する
-'''
-
-deq.extend(iterable)
-'''
-{deqの末尾に|iterableの[各|]要素を[|順に]}追加する
-'''
-
-deq.insert(n, element)
+両端キュー.insert(n, __X__)
 '''
 @alt(挿入する|差し込む|[途中|]追加する)
 
-{deqのn番目に|elementを}挿入する
+{両端キューのn番目に|__Y__を}挿入する
 '''
 
-deq.popleft()
+両端キュー.popleft()
 '''
-@alt(取り除く|取り出す|削除する)
 @alt(デキューする|dequeue|要素を出す)
 
-{deqの先頭から|要素を}取り除く
-deqをデキューする
+{両端キューの先頭から|要素を}取り出す
+両端キュー[を|から]デキューする
 '''
 
-deq.pop()
+両端キュー.pop()
+'''
+{両端キューの末尾から|要素を}取り出す
+両端キュー[を|から]ポップする
 '''
 
-{deqの末尾から|要素を}取り除く
-deq[を|から]ポップする
+両端キュー.remove(__X__)
+'''
+@alt(取り除く|削除する)
+
+{両端キューから|[最初の|]__Y__を}取り除く
 '''
 
-deq.remove(element)
-'''
-
-{deqから|[最初の|]elementを}取り除く
-'''
-
-deq.clear()
+両端キュー.clear()
 '''
 @alt(空にする|クリアする|全て取り除く)
 
-deqを空にする
+両端キューを空にする
 '''
 
 deq = collections.deque([1, 2, 3, 0], maxlen=5)
 
-deq.rotate(n)
+両端キュー.rotate(1)
 '''
-@alt(ローテンションする|回転させる|輪番で回す)
+@alt(ローテーションする|回転させる|輪番で回す)
 @alt(順序|順[|番])
 
-{deqの[要素|順序]を|[右に|]|n個分}ローテンションする
+{両端キューの[要素|順序]を|[右に|]}ローテーションする
 '''
 
-deq.rotate(-n)
+両端キュー.rotate(-1)
 '''
-{deqの[要素|順序]を|左に|n個分}ローテンションする
-'''
-
-deq.maxlen
-'''
-@test(deq = collections.deque([1,2],maxlen=2);$$)
-deqの最大長[|を得る]
+{両端キューの[要素|順序]を|左に}ローテーションする
 '''
 
-len(deq)
+両端キュー.maxlen
 '''
-deqの[大きさ|要素数|サイズ|長さ][|を求める]
-'''
-
-len(deq) == 0
-'''
-deq[が|は]空[|である]かどうか
+両端キューの最大長[|を得る]
 '''
 
-len(deq) != 0
+len(両端キュー)
 '''
-deq[が|は]空でないかどうか
+両端キューの[大きさ|要素数|サイズ|長さ][|を求める]
+'''
+
+len(両端キュー) == 0
+'''
+両端キュー[が|は]空[|である]かどうか
+'''
+
+len(両端キュー) != 0
+'''
+両端キュー[が|は]空でないかどうか
 '''
 
 element = 1
 deq = collections.deque([1, 2, 3])
 
-element in deq
+__X__ in 両端キュー
 '''
 @alt(含まれてる|存在する|ある)
 
-{deqの中に|element[が|は]}含まれてるかどうか
+{両端キューの中に|__Y__[が|は]}含まれてるかどうか
 '''
 
-deq[0]
+両端キュー[0]
 '''
-deqの先頭[|の要素][|を得る]
+両端キューの先頭[|の要素][|を得る]
 '''
 
-deq[-1]
+両端キュー[-1]
 '''
 deqの末尾[|の要素][|を得る]
 '''
 
-deq[n]
+両端キュー[n]
 '''
 deqのn番目[|の要素][|を得る]
 '''
@@ -186,40 +167,40 @@ deqのstart〜endの[部分|]要素[|を得る]
 deqのstart番目からend[番目[|まで]]の[部分|]要素[|を得る]
 '''
 
-deq.index(element)
+両端キュー.index(__X__)
 '''
 @alt(インデックス|位置)
 
-deq中のelementのインデックス[|を得る]
+両端キュー中の__Y__のインデックス[|を得る]
 '''
 
-deq.count(element)
+両端キュー.count(__X__)
 '''
 @alt(数える|カウントする)
 
-deq中のelement[の[数|出現数]]を数える
+両端キュー中の__X__[の[数|出現数]]を数える
 '''
 
-deq.reverse()
+両端キュー.reverse()
 '''
 @alt(反転する|逆順にする|逆に並べ直す)
 
-{deqの要素を|[インプレースに|]}反転する
+{両端キューの要素を|[インプレースに|]}反転する
 '''
 
-reversed(deq)
+reversed(両端キュー)
 '''
-逆順のdeq[|を得る]
+逆順の両端キュー[|を得る]
 '''
 
 __X__ = list
 
-__X__(deq)
+__X__(両端キュー)
 '''
-@X(list|tuple)
-@Y(リスト|タプル)
+@X(list|tuple|set)
+@Y(リスト|タプル|セット)
 
-deqを__Y__に変換する
+両端キューを__Y__に変換する
 '''
 
 # カウンタ

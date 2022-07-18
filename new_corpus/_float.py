@@ -1,9 +1,9 @@
 # float 関係
 
 import sys
+
 x, y = 0.0, 0.5
 n = 2
-
 
 x > 0
 '''

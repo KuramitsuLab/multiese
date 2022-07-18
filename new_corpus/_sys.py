@@ -1,7 +1,7 @@
 import os
 import sys
 
-obj = 1.0
+オブジェクト = 1.0
 n = 1
 
 sys.byteorder
@@ -19,18 +19,17 @@ sys.getdefaultencoding()
 [|デフォルトの|プラットホームの]エンコーディング[|を知る|を得る]
 '''
 
-sys.getrefcount(obj)
+sys.getrefcount(オブジェクト)
 '''
-@prefix(obj;オブジェクト)
-
-objの参照カウント[|を知る|を得る]
+@alt(ガベージコレクション|ゴミ集め|GC)
+[オブジェクトの|ガベージコレクションの]参照カウント[|を知る|を得る]
 '''
 
-sys.getsizeof(obj)
+sys.getsizeof(オブジェクト)
 '''
 @alt(バイトサイズ|バイト長|大きさ)
 
-objのバイトサイズ[|を知る]
+オブジェクトのバイトサイズ[|を知る]
 '''
 
 sys.getrecursionlimit()
@@ -48,11 +47,11 @@ sys.setrecursionlimit(1000000)
 再帰の[上限|最大回数]を[上げる|増やす]
 '''
 
-s = 'A'
+文字列 = 'A'
 
-sys.intern(s)
+sys.intern(文字列)
 '''
-sを[隔離する|インターンする]
+文字列を[隔離する|インターンする]
 '''
 
 sys.maxsize
@@ -75,23 +74,26 @@ sys.platform
 '''
 
 __X__ = 'darwin'
-
-sys.platform.startswith(__X__)
 '''
 @X('darwin';'linux';'win32')
 @Y([MacOS|マック];[Linux|リナックス];[Windows|ウィンドウズ])
+'''
 
+sys.platform.startswith(__X__)
+'''
 プラットホーム[が|は]__Y__かどうか
 '''
 
 sys.argv
 '''
-コマンドライン引数[|を列挙する]
+@alt(コマンド引数|コマンドライン)
+
+コマンド引数[|を列挙する]
+コマンド引数のリスト
 '''
 
 sys.argv[0]
 '''
-@alt(得る)
 @alt(スクリプト名|[スクリプト|プログラム]ファイル名|プログラム名)
 
 スクリプトの名前[|を知る]
@@ -105,20 +107,23 @@ sys.argv[1]
 第一引数[で指定された|の]ファイルの名前
 '''
 
-sys.argv[1]
-'''
-第２コマンド引数[|を知る]
-コマンドの第２引数[を知る]
-第２引数[で指定された|の]ファイルの名前
-'''
-
 sys.argv[1:]
 '''
-@test(sys=missing;$$)
-@alt(一覧|リスト)
-
 コマンド引数の一覧[|を得る]
 コマンド引数を[列挙する|一覧として得る]
+'''
+
+if len(sys.argv) > 1:
+    print(sys.argv[1])  # 具体的な処理にする
+'''
+もしコマンド引数が[与えられた|指定された]なら、処理する
+'''
+
+
+for file in sys.argv[1:]:
+    print(file)  # 具体的な処理にする
+'''
+コマンド引数で[与えられた|指定された]ファイル[名|]を一つずつ処理する
 '''
 
 sys.flags
@@ -132,21 +137,23 @@ sys.path
 Pythonパス[の一覧][|を知る]
 '''
 
-sys.path.append(dir)
+ディレクトリ名 = '.'
+
+sys.path.append(ディレクトリ名)
 '''
-@prefix(dir;[ディレクトリ|])
-{モジュールを検索するパスに|dirを}追加する
-{Pythonパスに|dirを}追加する
+{モジュール[を検索する|の検索]パスに|ディレクトリを}追加する
+{Pythonパスに|ディレクトリを}追加する
 '''
 
-sys.path.append(os.path.join(os.path.dirname(__file__), dir))
+sys.path.append(os.path.join(os.path.dirname(__file__), ディレクトリ名))
 '''
-{dirを|Pythonパスに}加える
+{スクリプトのサブディレクトリを|Pythonパスに}加える
 '''
 
 sys.modules
 '''
 [|既に]ロードされたモジュール[の一覧[|を知る]|を列挙する]
+モジュールを列挙する
 '''
 
 sys.modules[__name__]
@@ -155,49 +162,11 @@ sys.modules[__name__]
 {自分自身を|モジュールとして}[|を得る]
 '''
 
-sys.exc_info()
+etype, evalue, traceback = sys.exc_info()
 '''
-[現在|][処理|実行]中の例外を情報[|を知る]
+[現在|][処理|実行]中の[例外|エラー]情報[|を知る]
+[例外|エラー]の[種類|メッセージ|トレースバック][|を得る|を知る]
 '''
-
-sys.stdout.isatty()
-'''
-[実行時の|]標準出力の出力先がターミナルかどうか
-'''
-
-os.isatty(sys.stdin.fileno())
-'''
-[実行時の|]標準出力の出力先がターミナルかどうか
-'''
-
-not sys.stdout.isatty()
-'''
-[実行時に|]標準出力がパイプかどうか
-'''
-
-_, exception, tb = sys.exc_info()
-sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
-sys.path.insert(0, '..')
-sys.path.insert(0, os.path.abspath('/my/source/lives/here'))
-os.path.dirname(sys.modules['__main__'].__file__)
-sys.path.append(os.path.join(os.environ['SPARK_HOME'], 'bin'))
-os.path.realpath(os.path.dirname(sys.argv[0]))
-sys.stdout.isatty()
-os.path.dirname(sys.executable)
-getattr(sys.modules[__name__], 'A')
-os.isatty(sys.stdin.fileno())
-sys.stdout = sys.stdout.detach()
-caller = sys._getframe(1)
-calling_frame = sys._getframe().f_back
-current_frame = sys._getframe(0)
-cur_version = sys.version_info
-f = sys.exc_info()[2].tb_frame
-sys.stdin.fileno()
-inspect.getmembers()
-func_name = sys._getframe().f_code.co_name
-if not sys.stdin.isatty():
-sys.version_info >= (3, 2):
-sys._getframe().f_code.co_name
 
 sys.executable
 '''
@@ -212,13 +181,13 @@ sys.stdin
 
 file = sys.__X__
 '''
-@X(stdout;stderr;open(filename, 'w'))
+@X(stdout;stderr;open('file.txt', 'w'))
 @Y(標準出力;標準エラー;ファイル)
 
-オプションで、出力先を__Y__に設定する
-オプションで、__Y__に出力する
-オプションで、__Y__を使う
-オプションで、__Y__を出力[|先]にする
+option: 出力先を__Y__に設定する
+option: __Y__に出力する
+option: __Y__を使う
+option: __Y__を出力[|先]にする
 '''
 
 sys.stdout
@@ -256,6 +225,51 @@ sys.stdout.flush()
 @alt(フラッシュする|強制表示する|即時表示する)
 標準出力[のバッファ|]をフラッシュする
 '''
+
+sys.stdout.isatty()
+'''
+[実行時の|]標準出力[の出力先|先|]がターミナルかどうか
+標準出力がターミナル出力かどうか
+'''
+
+not sys.stdout.isatty()
+'''
+[実行時に|]標準出力がパイプかどうか
+'''
+
+os.isatty(sys.stdin.fileno())
+'''
+[実行時の|]標準入力[の入力元|のソース]がターミナルかどうか
+'''
+
+# sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
+# sys.path.insert(0, '..')
+# sys.path.insert(0, os.path.abspath('/my/source/lives/here'))
+# os.path.dirname(sys.modules['__main__'].__file__)
+# sys.path.append(os.path.join(os.environ['SPARK_HOME'], 'bin'))
+# os.path.realpath(os.path.dirname(sys.argv[0]))
+# sys.stdout.isatty()
+# os.path.dirname(sys.executable)
+# getattr(sys.modules[__name__], 'A')
+# os.isatty(sys.stdin.fileno())
+# sys.stdout = sys.stdout.detach()
+# caller = sys._getframe(1)
+# calling_frame = sys._getframe().f_back
+# current_frame = sys._getframe(0)
+# cur_version = sys.version_info
+# f = sys.exc_info()[2].tb_frame
+# sys.stdin.fileno()
+# inspect.getmembers()
+# func_name = sys._getframe().f_code.co_name
+# if not sys.stdin.isatty():
+# sys._getframe().f_code.co_name
+
+if sys.version_info >= (3, 4):
+    print(sys.version_info)
+'''
+Pythonのバージョン[を確認する|を知る]
+'''
+
 
 sys.exit()
 '''

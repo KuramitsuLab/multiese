@@ -3,7 +3,6 @@ from importlib import import_module
 
 import itertools
 '''
-@test($$;type(itertools))
 itertoolsモジュールをインポートする
 '''
 
@@ -27,7 +26,7 @@ itertools.repeat(n)
 '''
 @alt(数列|[|整数]リスト|[|整数]イテラブル)
 @alt(得る|求める)
-@test(type(_))
+
 nの無限[|な|の]数列[|を得る]
 nが無限に続く数列[|を得る]
 '''
@@ -43,29 +42,25 @@ elementの無限[|な|の]イテラブル[|を得る]
 
 itertools.repeat(element, n)
 '''
-@test(type(_))
 {element[が|を]|n回}[繰り返す|続く]イテラブル[|を得る]
 '''
 
 itertools.count()
 '''
-@alt(カウントアップ|数え上げる)
-@test(type(_))
+@alt(カウントアップする|数え上げる)
 無限にカウントアップする
 [0から始まる|]無限[|な|の]数列[|を得る]
 '''
 
 itertools.count(start=n)
 '''
-@test(type(_))
-{nから|無限に}カウントアップする
+nから始まる無限[|な|の]数列[|を得る|が欲しい]
 '''
 
 step = 2
+
 itertools.count(start=n, step=step)
 '''
-@alt(バージョン|版)
-@test(type(_))
 {nからstep間隔で|無限に}カウントアップする
 range[|関数]の無限バージョン
 '''
@@ -137,7 +132,6 @@ iterableとiterable2をペアリングする
 
 itertools.product(iterable, iterable2)
 '''
-@test(list(_))
 iterableとiterable2の[直積|デカルト積][|を[得る|求める]]
 '''
 

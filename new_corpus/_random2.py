@@ -65,35 +65,58 @@ random.normalvariate(mu=0.5, sigma=0.2)
 {平均[|値]と標準偏差から|[疑似|]乱数}[を生成する|を求める]
 '''
 
-iterable = [1, 2, 3, 3]
-random.choice(iterable)
+リスト = [1, 2, 3, 3]
+
+random.choice(リスト)
 '''
-iterableから[一つ|1個]ランダムに選ぶ
+リストから{[一つ|1個]|ランダムに}選ぶ
 '''
 
 random.choice(string.ascii_uppercase)
 '''
-[アルファベット|英文字]から[一つ|１文字]ランダムに選ぶ
+[アルファベット|英大文字]から{[一つ|１文字]|ランダムに}選ぶ
 '''
 
-random.choices(iterable, k=n)
+random.choices(リスト, k=n)
 '''
-iterableから[複数個|n個]、ランダムに選ぶ
-'''
-
-random.sample(iterable)
-'''
-iterableからサンプリングする
+リストから[複数個|n個]、ランダムに[選ぶ|抽出する]
 '''
 
-random.sample(iterable, k=n)
+抽出したい個数 = 2
+
+random.sample(リスト, 抽出したい個数)
 '''
-iterableからn[個|要素]、サンプリングする
-iterableから重複なく、n[個|要素][ランダムに]選ぶ
+リストから[サンプリング|標本抽出]する
 '''
 
-aList = iterable
-random.shuffle(aList)
+random.sample(リスト, k=n)
 '''
-aListを[ランダムに|]シャッフルする
+リストから複数の要素をランダムに[重複なく|][抽出する|選ぶ]
+リストからn[個|要素]、サンプリングする
+リストから重複なく、n[個|要素][ランダムに][選ぶ|抽出する]
+'''
+
+random.sample(range(100), 10)
+'''
+ランダムな整数のリスト[が欲しい|を得る|]
+'''
+
+リスト = [1, 2]
+
+random.shuffle(リスト)  # 破壊的操作
+'''
+リスト[|の要素|順番]を[ランダムに|]シャッフルする
+'''
+
+文字列 = 'ABC'
+タプル = tuple('A', 'B')
+
+''.join(random.sample(文字列, len(文字列)))
+'''
+文字列の[順序|順番]を[|ランダムに]シャッフルする
+'''
+
+tuple(random.sample(タプル, len(タプル)))
+'''
+タプルの[順序|順番]を[|ランダムに]シャッフルする
 '''
