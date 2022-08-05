@@ -49,10 +49,6 @@ inspect.isgenerator(__X__)
 __Y__[が|は]ジェネレータかどうか
 '''
 
-'''
-__Y__[が|は][コルーチン|async]関数かどうか
-'''
-
 inspect.iscoroutine(__X__)
 '''
 __Y__[が|は]コルーチンかどうか
